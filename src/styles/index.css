@@ -1,0 +1,19 @@
+h1 {
+    text-align: center;
+}
+
+.counter {
+	display: grid;
+	font-size: 2em;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	margin-top: 0.5em;
+	place-items: center;
+}
+
+.counter-message, .logos {
+	text-align: center;
+}
+
+.logos img {
+	width: 150px;
+}
