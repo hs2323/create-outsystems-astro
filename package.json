@@ -2,24 +2,20 @@
   "name": "create-outsystems-astro",
   "type": "module",
   "version": "0.0.0",
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "output": "astro build && ts-node ./output.ts",
-    "preview": "astro preview",
-    "astro": "astro"
+  "description": "Create an OutSystems Astro Island project to import as a component into your OutSystems application",
+  "bin": {
+    "create-outsystems-astro": "bin/cli.js"
   },
+  "files": [
+    "bin",
+    "template"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": ["astro", "outsystems", "starter", "create", "template"],
+  "license": "MIT",
   "dependencies": {
-    "@astrojs/react": "^4.4.0",
-    "@types/react": "^19.2.2",
-    "@types/react-dom": "^19.2.2",
-    "astro": "^5.14.6",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0"
-  },
-  "devDependencies": {
-    "@types/js-beautify": "^1.14.3",
-    "js-beautify": "^1.15.4",
-    "ts-node": "^10.9.2"
+    "prompts": "^2.4.2"
   }
 }
