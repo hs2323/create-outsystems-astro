@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "output": "astro build && ts-node ./output.ts",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -15,5 +16,10 @@
     "astro": "^5.14.6",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/js-beautify": "^1.14.3",
+    "js-beautify": "^1.15.4",
+    "ts-node": "^10.9.2"
   }
 }
