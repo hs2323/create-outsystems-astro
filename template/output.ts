@@ -1,6 +1,8 @@
 import * as fs from "fs";
 import * as path from "path";
 import beautify from "js-beautify";
+import dotenv from 'dotenv';
+dotenv.config();
 
 const { html: beautifyHtml } = beautify;
 
@@ -171,10 +173,36 @@ function copyAllJSFiles(inputDir: string, outputDir: string): void {
   }
 }
 
+function prefixAssetPathsInFile(filePath: string) {
+  const ASSET_PATH = process.env.ASSET_PATH || "";
+  let content = fs.readFileSync(filePath, "utf-8");
+
+  // Replace "/assets/..." inside string literals with prefixed path
+  // Match quotes + /assets/ at start of string
+  content = content.replace(/(["'`])\/assets\//g, `$1${ASSET_PATH}/`);
+
+  fs.writeFileSync(filePath, content, "utf-8");
+  console.log(`Prefixed asset paths in ${filePath}`);
+}
+
+function processAllJsFiles(dir: string) {
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+
+  for (const entry of entries) {
+    const fullPath = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      processAllJsFiles(fullPath);
+    } else if (entry.name.endsWith(".js")) {
+      prefixAssetPathsInFile(fullPath);
+    }
+  }
+}
+
+
 /**
  * Main function
  */
-function process() {
+function processOutput() {
   const inputDir = path.resolve("dist");
   const outputDir = path.resolve("output");
   const assetsSrc = path.join(inputDir, "assets");
@@ -202,7 +230,10 @@ function process() {
   console.log("📜 Copying JavaScript files...");
   copyAllJSFiles(inputDir, outputDir);
 
+  console.log("📜 Processing asset paths...");
+  processAllJsFiles("output");
+
   console.log("✅ Done!");
 }
 
-process();
+processOutput();
