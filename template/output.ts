@@ -179,7 +179,7 @@ function prefixAssetPathsInFile(filePath: string) {
 
   // Replace "/assets/..." inside string literals with prefixed path
   // Match quotes + /assets/ at start of string
-  content = content.replace(/(["'`])\/assets\//g, `$1${ASSET_PATH}/`);
+  content = content.replace(/(["'`])\/assets\//g, `$1/${ASSET_PATH}/`);
 
   fs.writeFileSync(filePath, content, "utf-8");
   console.log(`Prefixed asset paths in ${filePath}`);

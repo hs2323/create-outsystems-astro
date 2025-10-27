@@ -1,24 +1,54 @@
-# Create OutSystems Astro
-Generator for AstroOSKit. This leverages the Astro Islands Architecture to provide a way to bring in modules (React, Vue, etc) or custom components into OutSystems.
+# OutSystems Astro Islands
+Generates [Astro Islands](https://docs.astro.build/en/concepts/islands/) for use in OutSystems that can create self contained interactive code elements from different frameworks. It allows an extension of the front-end with these dynamic libraries.
+
+## When to use this library
+- Custom interactive elements that would not be difficult/not possible to build directly in OutSystems.
+- Wrappers around interactive elements built in other front-end frameworks.
+- Direct migration of traditional code.
+
+## When NOT to use this library
+- You will most likely not need to use this library for most of the front-end development. This is similar in use to the custom code development in for the back-end in [O11](https://success.outsystems.com/documentation/11/integration_with_external_systems/extend_logic_with_your_own_code/) and [ODC](https://success.outsystems.com/documentation/outsystems_developer_cloud/building_apps/extend_your_apps_with_custom_code/).
+- If the functionality is easily buidable in Service Studio.
+- Loading performance of component must be instant. The Astro Island will load after the page/screen has loaded since the initializer and tag will be loaded after.
+
+## Current supported frameworks
+- [React](https://docs.astro.build/en/guides/integrations-guide/react/).
+
+## Getting started
+Run the Create OutSystems Astro generator:
+```bash
+npx create-outsystems-astro
+```
+This will create the generated files as well as an example component.
 
 ## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
 
 ```text
 /
 ├── public/
 ├── src/
+│   └── components/
+│       └── Counter.tsx
+│   └── images/
+│       └── image.png
 │   └── pages/
-│       └── index.astro
+│       └── counter.astro
+│   └── styles/
+│       └── index.css
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### Pages
+Each page inside of the pages file should represent an Island that will be imported into OutSystems.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### Components
+The location of the component code.
 
-Any static assets, like images, can be placed in the `public/` directory.
+### Images
+Any image assets.
+
+### Styles
+Stylesheets that may apply to the component.
 
 ## 🧞 Commands
 
@@ -28,11 +58,18 @@ All commands are run from the root of the project, from a terminal:
 | :------------------------ | :----------------------------------------------- |
 | `npm install`             | Installs dependencies                            |
 | `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run build`           | Build distribution to `./dist/`                  |
+| `npm run output`          | Build OutSystems production site to `./output/`  |
+| `npm run preview`         | Preview build locally, before creating output    |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Converting to OutSystems
+
+Once development is complete, run:
+```bash
+npm run output
+```
+
+This will create a set of files that will then need to be coverted to OutSystems components.

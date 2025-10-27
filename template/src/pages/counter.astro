@@ -1,11 +1,11 @@
 ---
 import CounterComponent from '../components/Counter';
 import styles from "../styles/index.css?url";
-const count = 0
-const message =  "";
+const initialCount = 5;
+const showMessage = "showMessage";
 ---
 <link rel="stylesheet" href={styles} />
 <script is:inline>
-    document.counter_showmessage = (count) => console.log( "The count is " + count);
+    document.showMessage = (count) => console.log( "The count is " + count);
 </script>
-<CounterComponent count={count} message={message} client:only="react" />
+<CounterComponent InitialCount={initialCount} ShowMessage={showMessage} client:only="react" />

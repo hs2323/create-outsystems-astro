@@ -26,6 +26,13 @@ async function main() {
   console.log("📦 Copying template...");
   copyDir(templateDir, targetDir);
 
+  const readmeSrc = path.resolve(__dirname, "../README.md");
+  const readmeDest = path.join(targetDir, "README.md");
+
+  if (fs.existsSync(readmeSrc)) {
+    fs.copyFileSync(readmeSrc, readmeDest);
+  }
+
   // Install dependencies
   console.log("📦 Installing dependencies...");
   try {

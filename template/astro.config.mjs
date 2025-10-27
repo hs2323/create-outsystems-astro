@@ -19,9 +19,9 @@ export default defineConfig({
             }
             return 'app.js';
           },
-          entryFileNames: `[name].js`,
-          chunkFileNames: `[name].js`,
-          assetFileNames: `assets/[name].[ext]`,
+          entryFileNames: `[name]_[hash].js`,
+          chunkFileNames: `[name]_[hash].js`,
+          assetFileNames: `assets/[name]_[hash].[ext]`,
         },
       },
     },

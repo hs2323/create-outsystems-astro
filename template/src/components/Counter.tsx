@@ -4,30 +4,29 @@ import OutSystemsLogo from '../images/outsystems.png?url';
 import AstroLogo from '../images/astro.png?url';
 
 export default function Counter({
-	count: initialCount,
-	message,
+	InitialCount,
+	ShowMessage,
 }: {
-	count: number;
-	message: string;
+	InitialCount: number;
+	ShowMessage: string;
 }) {
-	const [count, setCount] = useState(initialCount);
+	const [count, setCount] = useState(InitialCount);
 	const add = () => setCount((i) => i + 1);
 	const subtract = () => setCount((i) => i - 1);
-	const showParentMessage = () => document.counter_showmessage(count);
+	const showParentMessage = () => document[ShowMessage](count);
 
 	return (
 		<>
-            <div><h1>Counter</h1></div>
-			<div className="counter">
+            <div className="counter-title">Counter</div>
+			<div className="counter-controls">
 				<button onClick={subtract}>-</button>
 				<pre>{count}</pre>
 				<button onClick={add}>+</button>
 			</div>
 			<div className="counter-message">
-                <button onClick={showParentMessage}>Console Message</button>
-                <p>{message}</p>
+                <button onClick={showParentMessage}>Page Message</button>
             </div>
-            <div className="logos">
+            <div className="counter-logos">
                 <img src={OutSystemsLogo} alt="OutSystems logo" />
                 <img src={AstroLogo} alt="Astro logo" />
             </div>
