@@ -4,6 +4,8 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://hs2323.github.io',
+  	base: '/create-outsystems-astro',
 	integrations: [
 		starlight({
 			title: 'OutSystems Astro Islands',
