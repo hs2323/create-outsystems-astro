@@ -20,13 +20,18 @@ function formatAstroIslandAttributes(html: string): string {
   return html.replace(
     /<astro-island\b([^>]*)>/gi,
     (match, attrs) => {
-      // Split attributes by space (ignoring extra whitespace)
-      const formattedAttrs = attrs
+
+      // 🔥 Convert HTML-encoded quotes to actual quotes
+      const decoded = attrs.replace(/&quot;/g, '""');
+
+      // Split attributes by whitespace
+      const formattedAttrs = decoded
         .trim()
         .split(/\s+/)
         .filter(Boolean)
         .map(attr => `  ${attr}`) // indent each attr
         .join("\n");
+
       return `<astro-island\n${formattedAttrs}>`;
     }
   );
