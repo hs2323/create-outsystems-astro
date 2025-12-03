@@ -61,9 +61,16 @@ All commands are run from the root of the project, from a terminal:
 
 ## Converting to OutSystems
 
-Once development is complete, run:
-```bash
-npm run output
-```
+- Copy the environment template file to ```.env```.
+    ```bash
+    cp .env.template .env
+    ```
+
+- Update the ```.env``` file and modify the ```ASSET_PATH``` value to be the application/library/core widget module name in OutSystems.
+
+- Once development is complete, run:
+    ```bash
+    npm run output
+    ```
 
 This will create a set of files that will then need to be coverted to OutSystems components.

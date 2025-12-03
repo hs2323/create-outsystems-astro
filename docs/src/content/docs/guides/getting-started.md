@@ -12,6 +12,19 @@ Generates [Astro Islands](https://docs.astro.build/en/concepts/islands/) for use
 
 ## When NOT to use this library
 - You will most likely not need to use this library for most of the front-end development. This is similar in use to the custom code development in for the back-end in [O11](https://success.outsystems.com/documentation/11/integration_with_external_systems/extend_logic_with_your_own_code/) and [ODC](https://success.outsystems.com/documentation/outsystems_developer_cloud/building_apps/extend_your_apps_with_custom_code/).
-- If the functionality is easily buidable in Service Studio.
+- If the functionality is easily buildable in Service Studio.
 - Loading performance of component must be instant. The Astro Island will load after the page/screen has loaded since the initializer and tag will be loaded after.
 
+
+## Developing
+### Astro
+Create your application inside of Astro. Its recommeneded to keep one component/set of functionality to a single project. Learn more about Astro development in the [Astro docs](https://docs.astro.build/en/getting-started/). Once you have completed development, you can generate the output in the [Astro](../astro/).
+
+The following frameworks are currently compatible with the OutSystems Astro Islands library:
+- [React](https://docs.astro.build/en/guides/integrations-guide/react/)
+
+### OutSystems
+Once your output for Astro is generated, you can begin the creation and migration of the component to OutSystems. Currently supported platform versions
+
+- [011](../outsystems/o11)
+- [ODC](../outsystems/odc) - Coming Soon!
