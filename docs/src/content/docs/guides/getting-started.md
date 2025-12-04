@@ -18,7 +18,15 @@ Generates [Astro Islands](https://docs.astro.build/en/concepts/islands/) for use
 
 ## Developing
 ### Astro
-Create your application inside of Astro. Its recommeneded to keep one component/set of functionality to a single project. Learn more about Astro development in the [Astro docs](https://docs.astro.build/en/getting-started/). Once you have completed development, you can generate the output in the [Astro](../astro/).
+
+Initialize the project:
+```bash
+npx create-outsystems-astro
+```
+
+Create your application inside of Astro. Its recommeneded to keep one component/set of functionality to a single project. Learn more about Astro development in the [Astro docs](https://docs.astro.build/en/getting-started/). Once you have completed development, you can generate the output. 
+
+Read the [OutSystems Astro docs](../astro/).
 
 The following frameworks are currently compatible with the OutSystems Astro Islands library:
 - [React](https://docs.astro.build/en/guides/integrations-guide/react/)
