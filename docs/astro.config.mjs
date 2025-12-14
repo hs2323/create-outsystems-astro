@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import starlightVersions from 'starlight-versions'
 
 // https://astro.build/config
 export default defineConfig({
@@ -8,6 +9,11 @@ export default defineConfig({
   	base: '/create-outsystems-astro',
 	integrations: [
 		starlight({
+			plugins: [
+				starlightVersions({
+				versions: [{ slug: '0.1' }],
+				}),
+			],
 			title: 'OutSystems Astro Islands',
 			customCss: [
         		'./src/styles/custom.css',
