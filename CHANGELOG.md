@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Added
+- Added Vue integration.
+
 ### Changed
 - Updated docs dependency astro to 5.16.5.
 - Updated docs dependency @astrojs/starlight to 0.37.1.
