@@ -79,7 +79,7 @@ jobs:
         run: npm audit
 
   security-template:
-    needs: cache-node-modules-docs
+    needs: cache-node-modules-template
     runs-on: ubuntu-latest
 
     steps:  
