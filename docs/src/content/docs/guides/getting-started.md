@@ -24,12 +24,15 @@ Initialize the project:
 npx create-outsystems-astro
 ```
 
+You can delete the demo examples and keep the structure for your own component/application.
+
 Create your application inside of Astro. Its recommeneded to keep one component/set of functionality to a single project. Learn more about Astro development in the [Astro docs](https://docs.astro.build/en/getting-started/). Once you have completed development, you can generate the output. 
 
 Read the [OutSystems Astro docs](../astro/).
 
 The following frameworks are currently compatible with the OutSystems Astro Islands library:
 - [React](https://docs.astro.build/en/guides/integrations-guide/react/)
+- [Vue](https://docs.astro.build/en/guides/integrations-guide/vue/)
 
 ### OutSystems
 Once your output for Astro is generated, you can begin the creation and migration of the component to OutSystems. Currently supported platform versions

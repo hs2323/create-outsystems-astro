@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-import OutSystemsLogo from '../images/outsystems.png?url';
-import AstroLogo from '../images/astro.png?url';
+import OutSystemsLogo from '../../images/outsystems.png?url';
+import AstroLogo from '../../images/astro.png?url';
 
 export default function Counter({
 	InitialCount,
@@ -24,7 +24,7 @@ export default function Counter({
 				<button onClick={add}>+</button>
 			</div>
 			<div className="counter-message">
-                <button onClick={showParentMessage}>Page Message</button>
+                <button onClick={showParentMessage}>Send value</button>
             </div>
             <div className="counter-logos">
                 <img src={OutSystemsLogo} alt="OutSystems logo" />
