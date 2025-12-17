@@ -12,7 +12,8 @@ Generates [Astro Islands](https://docs.astro.build/en/concepts/islands/) for use
 - Loading performance of component must be instant. The Astro Island will load after the page/screen has loaded since the initializer and tag will be loaded after.
 
 ## Current supported frameworks
-- [React](https://docs.astro.build/en/guides/integrations-guide/react/).
+- [React](https://docs.astro.build/en/guides/integrations-guide/react/)
+- [Vue](https://docs.astro.build/en/guides/integrations-guide/vue/)
 
 ## Getting started
 Run the Create OutSystems Astro generator:
@@ -64,6 +65,9 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
+
+## Getting Started
+Delete the demo application under the ```src``` flder and choose your framework(s) to build the components in.
 
 ## Converting to OutSystems
 
