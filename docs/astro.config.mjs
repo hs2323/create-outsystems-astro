@@ -11,7 +11,10 @@ export default defineConfig({
 		starlight({
 			plugins: [
 				starlightVersions({
-				versions: [{ slug: '0.1' }],
+					versions: [
+						{ slug: '0.1' },
+						{ slug: '0.2' }
+					],
 				}),
 			],
 			title: 'OutSystems Astro Islands',
