@@ -1,0 +1,35 @@
+{
+  "sidebar": [
+    {
+      "label": "Guides",
+      "items": [
+        {
+          "label": "Getting Started",
+          "slug": "guides/getting-started"
+        },
+        {
+          "label": "Client",
+          "items": [
+            {
+              "label": "Astro",
+              "slug": "guides/astro"
+            }
+          ]
+        },
+        {
+          "label": "OutSystems",
+          "items": [
+            {
+              "label": "O11",
+              "slug": "guides/outsystems/o11"
+            },
+            {
+              "label": "ODC",
+              "slug": "guides/outsystems/odc"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

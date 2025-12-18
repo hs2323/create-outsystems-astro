@@ -1,0 +1,16 @@
+.astro/
+.DS_Store
+.env
+.env.production
+.github
+.idea/
+.vscode/
+CHANGELOG.md
+docs/
+node_modules/
+npm-debug.log*
+pnpm-debug.log*
+template/dist/
+template/output/
+yarn-debug.log*
+yarn-error.log*

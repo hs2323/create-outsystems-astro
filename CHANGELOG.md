@@ -7,17 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
-### Added
+### [0.2.0] - 2025-12-18
 - Added Vue integration.
 
 ### Changed
+- Changed folder structure of demo components.
 - Updated docs dependency astro to 5.16.5.
 - Updated docs dependency @astrojs/starlight to 0.37.1.
 - Updated template dependency astro to 5.16.5.
 - Updated template dependency react to 19.2.3.
 - Updated template dependency react-dom to 19.2.3.
 
-## [v0.1.0] - 2025-12-03
+## [0.1.0] - 2025-12-03
 
 ### Added
 - Added Starlight docs.
