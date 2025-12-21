@@ -10,5 +10,12 @@ const showMessage = "showMessage";
         document.getElementById("counter").textContent = count;
     };
 </script>
-<CounterComponent InitialCount={initialCount} ShowMessage={showMessage} client:only="vue" />
+<CounterComponent InitialCount={initialCount} ShowMessage={showMessage} client:only="vue">
+    <div class="counter-title" slot="header">
+        Counter
+    </div>
+    <div style="text-align: center;">
+        <p>Slot content!</p>
+    </div>
+</CounterComponent>
 <div style="text-align: center; margin-top: 20px;">Counter value: <span id="counter"></span></div>

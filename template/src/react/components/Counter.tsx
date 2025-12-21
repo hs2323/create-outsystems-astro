@@ -4,24 +4,31 @@ import OutSystemsLogo from '../../images/outsystems.png?url';
 import AstroLogo from '../../images/astro.png?url';
 
 export default function Counter({
+	children,
+	header,
 	InitialCount,
 	ShowMessage,
 }: {
+	children: React.ReactNode;
+	header: React.ReactNode;
 	InitialCount: number;
 	ShowMessage: string;
 }) {
 	const [count, setCount] = useState(InitialCount);
 	const add = () => setCount((i) => i + 1);
 	const subtract = () => setCount((i) => i - 1);
-	const showParentMessage = () => document[ShowMessage](count);
+	const showParentMessage = () => (document as any)[ShowMessage](count);
 
 	return (
 		<>
-            <div className="counter-title">Counter</div>
+            {header}
 			<div className="counter-controls">
 				<button onClick={subtract}>-</button>
 				<pre>{count}</pre>
 				<button onClick={add}>+</button>
+			</div>
+			<div>
+				{children}
 			</div>
 			<div className="counter-message">
                 <button onClick={showParentMessage}>Send value</button>
