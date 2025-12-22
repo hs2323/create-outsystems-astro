@@ -61,6 +61,9 @@ All commands are run from the root of the project, from a terminal:
 ## Parameters
 Since OutSystems does not have a concept of [NULL](https://success.outsystems.com/documentation/11/reference/outsystems_language/data/data_types/available_data_types/#default-and-null-values), you may have to code around NULL/undefined in your library.
 
+### Slots
+[Slots](https://docs.astro.build/en/basics/astro-components/#slots) are an optional HTML that can be passed into a component.  They are then able to be picked up and used by the Astro Island component.
+
 ## Using OutSystems handlers
 Since OutSystems cannot pass in a function handler, it has to be bound to the document. Usually, this is passed in as a name, and that name is a handler for the document function.  On the Astro library side, you have to call the following (replace functionName):
 ```js
