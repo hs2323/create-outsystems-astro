@@ -20,20 +20,21 @@ const subtract = () => {
 };
 
 const showParentMessage = () => {
-  // Same behavior as document[ShowMessage](count) in React
   (document as any)[props.ShowMessage]?.(count.value);
 };
 </script>
 
 <template>
   <div>
-    <div class="counter-title">Counter</div>
+    <slot name="header" />
 
     <div class="counter-controls">
       <button @click="subtract">-</button>
       <pre>{{ count }}</pre>
       <button @click="add">+</button>
     </div>
+
+    <slot />
 
     <div class="counter-message">
       <button @click="showParentMessage">Send value</button>

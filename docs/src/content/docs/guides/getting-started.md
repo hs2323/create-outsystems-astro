@@ -38,4 +38,4 @@ The following frameworks are currently compatible with the OutSystems Astro Isla
 Once your output for Astro is generated, you can begin the creation and migration of the component to OutSystems. Currently supported platform versions
 
 - [011](../outsystems/o11)
-- [ODC](../outsystems/odc) - Coming Soon!
+- [ODC](../outsystems/odc)
