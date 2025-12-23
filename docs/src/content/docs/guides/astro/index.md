@@ -62,7 +62,69 @@ All commands are run from the root of the project, from a terminal:
 Since OutSystems does not have a concept of [NULL](https://success.outsystems.com/documentation/11/reference/outsystems_language/data/data_types/available_data_types/#default-and-null-values), you may have to code around NULL/undefined in your library.
 
 ### Slots
-[Slots](https://docs.astro.build/en/basics/astro-components/#slots) are an optional HTML that can be passed into a component.  They are then able to be picked up and used by the Astro Island component.
+[Slots](https://docs.astro.build/en/basics/astro-components/#slots) are an optional HTML that can be passed into a component.  They are then able to be picked up and used by the Astro Island component. You can use either default slot or named slots (or both).
+
+#### React
+The default slot (no name) will go into a React component as the ```children``` prop name.  A named slot will go in as a parameter with the name.
+
+- Astro example:
+    ```jsx
+    ...
+    <Component client:only="react">
+        <div slot="header">
+            <p>Slot header</p>
+        </div>
+        <div>
+            <p>Slot content</p>
+        </div>
+    </CounterComponent>
+    ```
+
+- React example:
+    ```js
+    export default function Component({
+        children,
+        header,
+    }: {
+        children: React.ReactNode;
+        header: React.ReactNode;
+    }) {
+        return (
+            <>
+                {header}
+                <div>
+                    {children}
+                </div>
+            </>
+        );
+    }
+    ```
+
+#### Vue
+The default slot (no name) will go into a React component as the ```<slot />``` name.  A named slot will go in as a parameter with the name.
+
+- Astro example:
+    ```jsx
+    ...
+    <Component client:only="react">
+        <div slot="header">
+            <p>Slot header</p>
+        </div>
+        <div>
+            <p>Slot content</p>
+        </div>
+    </CounterComponent>
+    ```
+
+- Vue example:
+    ```vue
+    <template>
+        <slot name="header" />
+        <div>
+            <slot />
+        </div>
+    </template>
+    ```
 
 ## Using OutSystems handlers
 Since OutSystems cannot pass in a function handler, it has to be bound to the document. Usually, this is passed in as a name, and that name is a handler for the document function.  On the Astro library side, you have to call the following (replace functionName):
