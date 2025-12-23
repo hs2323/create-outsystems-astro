@@ -6,36 +6,46 @@ description: Setup Astro JavaScript project
 # Astro setup
 
 ## Current supported frameworks
-- [React](https://docs.astro.build/en/guides/integrations-guide/react/).
+- [React](https://docs.astro.build/en/guides/integrations-guide/react/)
+- [Vue](https://docs.astro.build/en/guides/integrations-guide/vue/)
 
 ## Getting started
 Run the Create OutSystems Astro generator:
 ```bash
 npx create-outsystems-astro
 ```
+
+Select the framework(s) that you would like to include as part of your project.
+
 This will create the generated files as well as an example component.
 
 ## 🚀 Project Structure
 
 ```text
 /
-├── public/
 ├── src/
-│   └── components/
-│       └── Counter.tsx
+│   └── framework/
+│       └── react/
+│           └── Counter.tsx
+│       └── vue/
+│           └── Counter.vue
 │   └── images/
 │       └── image.png
 │   └── pages/
-│       └── counter.astro
+│       └── react/
+│           └── react-counter.astro
+│   └── pages/
+│       └── vue/
+│           └── vue-counter.astro
 │   └── styles/
 │       └── index.css
 └── package.json
 ```
 
 ### Pages
-Each page inside of the pages file should represent an Island that will be imported into OutSystems.
+Each page inside of the pages file should represent an Island that will be imported into OutSystems. The example has them separated by framework name, but you can name them anything you would like. The output script will flatten the index.html to the root of the ```output``` folder with the name of the folder.
 
-### Components
+### Framework
 The location of the component code.
 
 ### Images
