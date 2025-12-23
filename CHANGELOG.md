@@ -7,7 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
-### [0.2.0] - 2025-12-18
+### Added
+- Added slot processing for output into OutSystems.
+
+### Changed
+- Changed CLI generation to include only requested frameworks.
+
+## [0.2.0] - 2025-12-18
+
+### Added
 - Added Vue integration.
 
 ### Changed
