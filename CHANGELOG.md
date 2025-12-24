@@ -13,6 +13,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added slot processing for output into OutSystems.
 
 ### Changed
+- Updated docs dependency astro to 5.16.6.
+- Updated template dependency vue to 3.25.6.
+- Updated template dependency astro to 5.16.6.
 - Changed CLI generation to include only requested frameworks.
 
 ## [0.2.0] - 2025-12-18
