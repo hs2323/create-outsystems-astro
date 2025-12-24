@@ -17,9 +17,33 @@ Generates [Astro Islands](https://docs.astro.build/en/concepts/islands/) for use
 
 ## Getting started
 Run the Create OutSystems Astro generator:
+
+### npm
 ```bash
 npx create-outsystems-astro
 ```
+
+### Yarn
+```bash
+yarn create outsystems-astro
+```
+
+### pnpm
+```bash
+pnpm dlx create-outsystems-astro
+```
+
+### Bun
+```bash
+bunx create-outsystems-astro
+```
+
+### Deno
+The Deno DX command is available in [Deno 2.6](https://deno.com/blog/v2.6).
+```bash
+dx create-outsystems-astro
+```
+
 This will create the generated files as well as an example component.
 
 ## 🚀 Project Structure
@@ -55,6 +79,8 @@ Stylesheets that may apply to the component.
 
 All commands are run from the root of the project, from a terminal:
 
+### npm
+
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
 | `npm install`             | Installs dependencies                            |
@@ -65,15 +91,84 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
+### Yarn
+
+| Command                   | Action                                            |
+| :------------------------ | :-----------------------------------------------  |
+| `yarn install`             | Installs dependencies                            |
+| `yarn run dev`             | Starts local dev server at `localhost:4321`      |
+| `yarn run build`           | Build distribution to `./dist/`                  |
+| `yarn run output`          | Build OutSystems production site to `./output/`  |
+| `yarn run preview`         | Preview build locally, before creating output    |
+| `yarn run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `yarn run astro -- --help` | Get help using the Astro CLI                     |
+
+### pnpm
+
+| Command                   | Action                                            |
+| :------------------------ | :-----------------------------------------------  |
+| `pnpm install`             | Installs dependencies                            |
+| `pnpm run dev`             | Starts local dev server at `localhost:4321`      |
+| `pnpm run build`           | Build distribution to `./dist/`                  |
+| `pnpm run output`          | Build OutSystems production site to `./output/`  |
+| `pnpm run preview`         | Preview build locally, before creating output    |
+| `pnpm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `pnpm run astro -- --help` | Get help using the Astro CLI                     |
+
+### Bun
+
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `bun install`             | Installs dependencies                            |
+| `bun run dev`             | Starts local dev server at `localhost:4321`      |
+| `bun run build`           | Build distribution to `./dist/`                  |
+| `bun run output`          | Build OutSystems production site to `./output/`  |
+| `bun run preview`         | Preview build locally, before creating output    |
+| `bun run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `bun run astro -- --help` | Get help using the Astro CLI                     |
+
+### Deno
+
+| Command                   | Action                                            |
+| :------------------------ | :-----------------------------------------------  |
+| `deno install`             | Installs dependencies                            |
+| `deno run dev`             | Starts local dev server at `localhost:4321`      |
+| `deno run build`           | Build distribution to `./dist/`                  |
+| `deno run output`          | Build OutSystems production site to `./output/`  |
+| `deno run preview`         | Preview build locally, before creating output    |
+| `deno run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `deno run astro -- --help` | Get help using the Astro CLI                     |
 
 ## Getting Started
-Delete the demo application under the ```src``` flder and choose your framework(s) to build the components in.
+Delete the demo application under the ```src``` folder and being to build your own application. 
 
 ## Converting to OutSystems
 
-Once development is complete, run:
+Once development is complete, run the output generation command:
+
+### npm
 ```bash
 npm run output
+```
+
+### Yarn
+```bash
+yarn run output
+```
+
+### pnpm
+```bash
+pnpm run output
+```
+
+### Bun
+```bash
+bun run output
+```
+
+### Deno
+```bash
+deno run output
 ```
 
 This will create a set of files that will then need to be coverted to OutSystems components.

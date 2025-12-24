@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Unreleased
 
 ### Added
+- Added ability to use package managers npm, Yarn, pnpm, Bun and Deno for initialization.
 - Added slot processing for output into OutSystems.
 
 ### Changed

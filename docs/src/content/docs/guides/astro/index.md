@@ -56,8 +56,9 @@ Stylesheets that may apply to the component.
 
 ## 🧞 Commands
 
-All commands are run from the root of the project, from a terminal:
+All commands are run from the root of the project, from a terminal, based on your package manager:
 
+### npm
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
 | `npm install`             | Installs dependencies                            |
@@ -67,6 +68,50 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview`         | Preview build locally, before creating output    |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
+
+### Yarn
+| Command                   | Action                                            |
+| :------------------------ | :-----------------------------------------------  |
+| `yarn install`             | Installs dependencies                            |
+| `yarn run dev`             | Starts local dev server at `localhost:4321`      |
+| `yarn run build`           | Build distribution to `./dist/`                  |
+| `yarn run output`          | Build OutSystems production site to `./output/`  |
+| `yarn run preview`         | Preview build locally, before creating output    |
+| `yarn run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `yarn run astro -- --help` | Get help using the Astro CLI                     |
+
+### pnpm
+| Command                   | Action                                            |
+| :------------------------ | :-----------------------------------------------  |
+| `pnpm install`             | Installs dependencies                            |
+| `pnpm run dev`             | Starts local dev server at `localhost:4321`      |
+| `pnpm run build`           | Build distribution to `./dist/`                  |
+| `pnpm run output`          | Build OutSystems production site to `./output/`  |
+| `pnpm run preview`         | Preview build locally, before creating output    |
+| `pnpm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `pnpm run astro -- --help` | Get help using the Astro CLI                     |
+
+### Bun
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `bun install`             | Installs dependencies                            |
+| `bun run dev`             | Starts local dev server at `localhost:4321`      |
+| `bun run build`           | Build distribution to `./dist/`                  |
+| `bun run output`          | Build OutSystems production site to `./output/`  |
+| `bun run preview`         | Preview build locally, before creating output    |
+| `bun run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `bun run astro -- --help` | Get help using the Astro CLI                     |
+
+### Deno
+| Command                   | Action                                            |
+| :------------------------ | :-----------------------------------------------  |
+| `deno install`             | Installs dependencies                            |
+| `deno run dev`             | Starts local dev server at `localhost:4321`      |
+| `deno run build`           | Build distribution to `./dist/`                  |
+| `deno run output`          | Build OutSystems production site to `./output/`  |
+| `deno run preview`         | Preview build locally, before creating output    |
+| `deno run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `deno run astro -- --help` | Get help using the Astro CLI                     |
 
 ## Parameters
 Since OutSystems does not have a concept of [NULL](https://success.outsystems.com/documentation/11/reference/outsystems_language/data/data_types/available_data_types/#default-and-null-values), you may have to code around NULL/undefined in your library.
