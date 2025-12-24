@@ -13,7 +13,8 @@ export default defineConfig({
 				starlightVersions({
 					versions: [
 						{ slug: '0.1' },
-						{ slug: '0.2' }
+						{ slug: '0.2' },
+						{ slug: '0.3' },
 					],
 				}),
 			],
