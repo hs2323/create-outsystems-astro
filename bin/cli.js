@@ -13,6 +13,13 @@ const FRAMEWORKS = [
   { title: "Vue", value: "vue" }
 ];
 
+const LOCKFILES = {
+  npm: ["package-lock.json"],
+  yarn: ["yarn.lock"],
+  pnpm: ["pnpm-lock.yaml"],
+  bun: ["bun.lock"],
+  deno: ["deno.lock"]
+};
 
 async function main() {
   console.log("🚀 Welcome to create-outsystems-astro!");
@@ -27,6 +34,12 @@ async function main() {
 
   const targetDir = path.resolve(process.cwd(), response.projectName);
   const templateDir = path.join(__dirname, "..", "template");
+
+  // Copy files
+  console.log("📦 Copying template...");
+  copyDir(templateDir, targetDir);
+
+  const packageManager = packageInstall(targetDir);
 
   let selectedFrameworks = [];
 
@@ -44,10 +57,6 @@ async function main() {
     selectedFrameworks = frameworkResponse.frameworks || [];
   }
 
-  // Copy files
-  console.log("📦 Copying template...");
-  copyDir(templateDir, targetDir);
-
   deleteUnselectedFrameworkFolders(targetDir, selectedFrameworks);
 
   updateAstroConfig(targetDir, selectedFrameworks);
@@ -59,20 +68,14 @@ async function main() {
     fs.copyFileSync(readmeSrc, readmeDest);
   }
 
-  // Install dependencies
-  console.log("📦 Installing dependencies...");
-  try {
-    execSync("npm install", { cwd: targetDir, stdio: "inherit" });
-  } catch {
-    console.warn("⚠️ Failed to automatically install dependencies.");
-  }
+
 
   console.log(`
 ✅ All done!
 
 Next steps:
   cd ${response.projectName}
-  npm run dev
+  ${packageManager} run dev
 `);
 }
 
@@ -154,6 +157,65 @@ function updateAstroConfig(projectDir, selectedFrameworks) {
 
   fs.writeFileSync(configPath, content, "utf-8");
   console.log("🛠️ Updated astro.config.mjs integrations");
+}
+
+function detectPackageManager() {
+  if (typeof Deno !== "undefined") return "deno";
+
+  const ua = process.env.npm_config_user_agent || "";
+
+  if (ua.startsWith("npm/")) return "npm";
+  if (ua.startsWith("yarn/")) return "yarn";
+  if (ua.startsWith("pnpm/")) return "pnpm";
+  if (ua.startsWith("bun/")) return "bun";
+
+  return "unknown";
+}
+
+function cleanupLockfiles(projectDir, activePackageManager) {
+  for (const [packageManager, files] of Object.entries(LOCKFILES)) {
+    if (packageManager === activePackageManager) continue;
+
+    for (const file of files) {
+      const filePath = path.join(projectDir, file);
+      if (fs.existsSync(filePath)) {
+        fs.rmSync(filePath, { force: true });
+        console.log(`🗑️ Removed ${file}`);
+      }
+    }
+  }
+}
+
+function packageInstall(targetDir) {
+   try {
+      const packageManager = detectPackageManager();
+      console.log(`🧰 Detected package manager: ${packageManager}`);
+      
+      if (packageManager === "unknown") {
+        console.warn("⚠️ Could not detect package manager — keeping all lockfiles.");
+      } else {
+        cleanupLockfiles(targetDir, packageManager);
+      }
+
+      const installCmd = {
+        npm: "npm install",
+        yarn: "yarn",
+        pnpm: "pnpm install",
+        bun: "bun install",
+        deno: "deno install",
+        unknown: "npm install"
+      }[packageManager];
+
+      console.log(`📦 Installing dependencies using ${packageManager}...`);
+      execSync(installCmd, {
+        cwd: targetDir,
+        stdio: "inherit"
+      });
+
+      return packageManager
+   } catch {
+      console.warn("⚠️ Failed to automatically install dependencies.");
+    }
 }
 
 main().catch(err => {

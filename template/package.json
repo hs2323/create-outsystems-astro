@@ -22,6 +22,7 @@
     "@types/js-beautify": "^1.14.3",
     "dotenv": "^17.2.3",
     "js-beautify": "^1.15.4",
-    "ts-node": "^10.9.2"
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
   }
 }
