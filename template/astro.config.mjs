@@ -6,9 +6,18 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [angular(), react(), vue()],
+  integrations: [
+    angular({
+      vite: {
+        transformFilter: (_code, id) => {
+          return id.includes('src/framework/angular');
+        },
+      },
+    }), 
+    react(), 
+    vue()],
   build: {
-        inlineStylesheets: 'always'
+    inlineStylesheets: 'always'
   },
   vite: {
     build: {
