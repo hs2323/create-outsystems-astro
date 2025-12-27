@@ -257,8 +257,8 @@ Since this is a JavaScript rendered element, nothing will appear in OutSystems S
 - If you have any images you want shown in the visual representation, you have to import them in to the images folder (even if you previously imported them as resources). Right click on the Images folder and say Add Image.  Then select and upload your images.
 ![Visual representation add images](../../../../assets/odc/visual-images.png)
 
-### Publish
-Make sure to publish your component.
+## Publish
+Make sure to publish your component. Click the green 1 click Publish button at the top.
 
-### Import the component into your application
+## Import the component into your application
 If you have created a library you can now import it into your application.
