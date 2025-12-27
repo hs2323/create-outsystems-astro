@@ -46,6 +46,8 @@ dx create-outsystems-astro
 
 This will create the generated files as well as an example component.
 
+[View the full documentation](https://hs2323.github.io/create-outsystems-astro/guides/getting-started/).
+
 ## 🚀 Project Structure
 
 ```text
