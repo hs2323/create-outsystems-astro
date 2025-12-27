@@ -6,6 +6,7 @@ description: Setup Astro JavaScript project
 # Astro setup
 
 ## Current supported frameworks
+- [Angular](https://analogjs.org/docs/packages/astro-angular/overview)
 - [React](https://docs.astro.build/en/guides/integrations-guide/react/)
 - [Vue](https://docs.astro.build/en/guides/integrations-guide/vue/)
 
@@ -17,7 +18,7 @@ npx create-outsystems-astro
 
 Select the framework(s) that you would like to include as part of your project.
 
-This will create the generated files as well as an example component.
+This will create the generated files as well as an example component. You can delete the example component resources before starting on your project.
 
 ## 🚀 Project Structure
 
@@ -41,6 +42,10 @@ This will create the generated files as well as an example component.
 │       └── index.css
 └── package.json
 ```
+
+It is recommended not to mix different frameworks on a single Astro page (.astro file) page. Having multiple Astro islands on an OutSystems page should be fine. 
+
+For Angular, keep the framework/angular structure in place or update the ```astro.config.mjs``` file's transformFilter section. This is the location that Astro will use to modify the Angular files.
 
 ### Pages
 Each page inside of the pages file should represent an Island that will be imported into OutSystems. The example has them separated by framework name, but you can name them anything you would like. The output script will flatten the index.html to the root of the ```output``` folder with the name of the folder.
@@ -180,6 +185,9 @@ The default slot (no name) will go into a React component as the ```<slot />``` 
         </div>
     </template>
     ```
+
+#### Angular
+Angular does not support the use of slots.
 
 ## Using OutSystems handlers
 Since OutSystems cannot pass in a function handler, it has to be bound to the document. Usually, this is passed in as a name, and that name is a handler for the document function.  On the Astro library side, you have to call the following (replace functionName):

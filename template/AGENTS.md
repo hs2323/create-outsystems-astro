@@ -4,9 +4,11 @@
 - This is not an Astro project that will be deployed on its own. It is only used for the output generation.
 - The output generation will be only client side. No server side rendering or server side components will be used.
 - The Astro Islands can be used generated with the following frameworks:
-    - React
-    - Vue
+    - Angular - Documentation available at https://analogjs.org/docs/packages/astro-angular/overview
+    - React - Documentation available at https://docs.astro.build/en/guides/integrations-guide/react/
+    - Vue - https://docs.astro.build/en/guides/integrations-guide/vue/
 - Prefer to use TypeScript when possible.
+
 
 ## OutSystems
 - This project works for OutSystems 11 (O11) Reactive and OutSystems Developer Cloud (ODC). It does not work with OutSystems 11 Traditional projects.
@@ -16,6 +18,7 @@
 ## Development
 
 ### Starting project
+- Documentation about usage of the generator is located at: https://hs2323.github.io/create-outsystems-astro/guides/astro/.
 - The project can intialized from the Create OutSystems Astro package (https://www.npmjs.com/package/create-outsystems-astro).
 - In this document, for any reference to running package manager script, the ```PM``` attribute should be replaced with whatever package manager the user is using.
 
@@ -24,9 +27,10 @@
 - When importing a component, the component must have the attribute of the client:only= + the framework name.
     - React: ```client:only="react"```.
     - Vue: ```client:only="vue"```.
+    - Angular: ```client:visible```.
 
 ### Components
-- The components live in the folder framework/[NAME]/ (src/framework/react, src/framework/vue, etc)) with each framework having its own folder. This is recommended but can be renamed to something else.
+- The components live in the folder framework/[NAME]/ (src/framework/react, src/framework/vue, etc)) with each framework having its own folder. The framework folder should stay in place as the components will be rendered from there.  The Angular components will only be transformed by Astro if they are in the framework/angular folder.
 
 ### Parameters
 - Parameters are assigned as attributes on the component. Each framework will then handle them as incoming parameters.
@@ -55,7 +59,7 @@ import CounterComponent from '../../framework/react/Counter';
     </div>
 </CounterComponent>
 ```
-the slots will render as:
+the slots can be used as:
 ```js
 export default function Counter({
 	children,
@@ -74,11 +78,35 @@ export default function Counter({
 		</>
 	);
 }
-
 ```
 
 ##### Vue
 - In Vue, slots are handled as by using the <slot /> tag.  The default slot is the is just <slot />. A named slot will have the name of its slot as an attribute such as <slot name="header" />. Placement of the slot will determine where the slot will render.
+```js
+---
+import CounterComponent from '../../framework/react/Counter';
+---
+<CounterComponent client:only="vue">
+    <div slot="header">
+        Counter
+    </div>
+    <div style="text-align: center;">
+        <p>Slot content!</p>
+    </div>
+</CounterComponent>
+```
+the slots can be used as:
+```js
+<template>
+  <div>
+    <slot name="header" />
+    <slot />
+  </div>
+</template>
+```
+
+##### Angular
+Angular does not support the use of slots.  Any use of slots with Angular should be discouraged.
 
 ### Testing
 - No testing is built into this generator.  It is recommended to use best practices for each framework. For example, in React, use Vitest for unit testing, React Testing Library for integration testing of components and PlayWright for end-to-end testing.

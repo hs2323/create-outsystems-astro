@@ -9,6 +9,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const FRAMEWORKS = [
+  { title: "Angular", value: "angular" },
   { title: "React", value: "react" },
   { title: "Vue", value: "vue" }
 ];
@@ -128,6 +129,10 @@ function updateAstroConfig(projectDir, selectedFrameworks) {
   let content = fs.readFileSync(configPath, "utf-8");
 
   const allFrameworks = {
+    angular: {
+      import: /import\s+angular\s+from\s+['"]@analogjs\/astro-angular['"];\s*\n?/,
+      integration: /angular\(\)\s*,?\s*/
+    },
     react: {
       import: /import\s+react\s+from\s+['"]@astrojs\/react['"];\s*\n?/,
       integration: /react\(\)\s*,?\s*/

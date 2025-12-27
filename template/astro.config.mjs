@@ -1,13 +1,23 @@
 // @ts-check
+import angular from '@analogjs/astro-angular';
 import react from '@astrojs/react';
 import vue from '@astrojs/vue';
 import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), vue()],
+  integrations: [
+    angular({
+      vite: {
+        transformFilter: (_code, id) => {
+          return id.includes('src/framework/angular');
+        },
+      },
+    }), 
+    react(), 
+    vue()],
   build: {
-        inlineStylesheets: 'always'
+    inlineStylesheets: 'always'
   },
   vite: {
     build: {
