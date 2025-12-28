@@ -1,0 +1,13 @@
+diff --git a/node_modules/@analogjs/astro-angular/src/index.js b/node_modules/@analogjs/astro-angular/src/index.js
+index 905312a..84b45d8 100644
+--- a/node_modules/@analogjs/astro-angular/src/index.js
++++ b/node_modules/@analogjs/astro-angular/src/index.js
+@@ -10,7 +10,7 @@ function getRenderer() {
+ function getViteConfiguration(vite) {
+     return {
+         esbuild: {
+-            jsxDev: true,
++            jsxDev: false,
+         },
+         optimizeDeps: {
+             include: [
