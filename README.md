@@ -12,6 +12,7 @@ Generates [Astro Islands](https://docs.astro.build/en/concepts/islands/) for use
 - Loading performance of component must be instant. The Astro Island will load after the page/screen has loaded since the initializer and tag will be loaded after.
 
 ## Current supported frameworks
+- [Angular](https://analogjs.org/docs/packages/astro-angular/overview)
 - [React](https://docs.astro.build/en/guides/integrations-guide/react/)
 - [Vue](https://docs.astro.build/en/guides/integrations-guide/vue/)
 
@@ -124,7 +125,7 @@ All commands are run from the root of the project, from a terminal:
 | `bun install`             | Installs dependencies                            |
 | `bun run dev`             | Starts local dev server at `localhost:4321`      |
 | `bun run build`           | Build distribution to `./dist/`                  |
-| `bun run output:bun`          | Build OutSystems production site to `./output/`  |
+| `bun run output:bun`      | Build OutSystems production site to `./output/`  |
 | `bun run preview`         | Preview build locally, before creating output    |
 | `bun run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `bun run astro -- --help` | Get help using the Astro CLI                     |
@@ -136,7 +137,7 @@ All commands are run from the root of the project, from a terminal:
 | `deno install`             | Installs dependencies                            |
 | `deno run dev`             | Starts local dev server at `localhost:4321`      |
 | `deno run build`           | Build distribution to `./dist/`                  |
-| `deno run output`          | Build OutSystems production site to `./output/`  |
+| `deno run output:deno`     | Build OutSystems production site to `./output/`  |
 | `deno run preview`         | Preview build locally, before creating output    |
 | `deno run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `deno run astro -- --help` | Get help using the Astro CLI                     |
@@ -170,7 +171,7 @@ bun run output:bun
 
 ### Deno
 ```bash
-deno run output
+deno run output:deno
 ```
 
 This will create a set of files that will then need to be coverted to OutSystems components.
