@@ -2,11 +2,13 @@
   "name": "create-outsystems-astro",
   "type": "module",
   "scripts": {
-    "dev": "astro dev",
+    "astro": "astro",
     "build": "astro build",
+    "dev": "astro dev",
     "output": "astro build && ts-node ./output.ts",
-    "preview": "astro preview",
-    "astro": "astro"
+    "output:bun": "astro build && bun run ./output.ts",
+    "postinstall": "patch-package",
+    "preview": "astro preview"
   },
   "dependencies": {
     "@analogjs/astro-angular": "^2.2.0",

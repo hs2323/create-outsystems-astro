@@ -24,10 +24,9 @@ export default defineConfig({
       rollupOptions: {
         output: {
           manualChunks: (id) => {
-            if (id.includes('node_modules') || id.includes('src')) {
+            if (id.includes('node_modules')) {
               return 'app.js';
             }
-            return 'app.js';
           },
           entryFileNames: `[name]_[hash].js`,
           chunkFileNames: `[name]_[hash].js`,
@@ -35,5 +34,9 @@ export default defineConfig({
         },
       },
     },
+  },
+  server: {
+    host: true,
+    port: 4321,
   },
 });
