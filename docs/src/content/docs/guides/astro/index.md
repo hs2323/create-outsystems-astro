@@ -113,7 +113,7 @@ All commands are run from the root of the project, from a terminal, based on you
 | `deno install`             | Installs dependencies                            |
 | `deno run dev`             | Starts local dev server at `localhost:4321`      |
 | `deno run build`           | Build distribution to `./dist/`                  |
-| `deno run output`          | Build OutSystems production site to `./output/`  |
+| `deno run output:deno`     | Build OutSystems production site to `./output/`  |
 | `deno run preview`         | Preview build locally, before creating output    |
 | `deno run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `deno run astro -- --help` | Get help using the Astro CLI                     |

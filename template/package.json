@@ -7,6 +7,7 @@
     "dev": "astro dev",
     "output": "astro build && ts-node ./output.ts",
     "output:bun": "astro build && bun run ./output.ts",
+    "output:deno": "astro build && deno run -A ./output.ts",
     "postinstall": "patch-package",
     "preview": "astro preview"
   },

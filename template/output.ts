@@ -1,5 +1,5 @@
-import * as fs from "fs";
-import * as path from "path";
+import * as fs from "node:fs";
+import * as path from "node:path";
 import beautify from "js-beautify";
 import dotenv from 'dotenv';
 dotenv.config();

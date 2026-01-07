@@ -20,6 +20,16 @@ export default defineConfig({
     inlineStylesheets: 'always'
   },
   vite: {
+    resolve: {
+      alias: {
+        'url': 'node:url',
+        'path': 'node:path',
+        'fs': 'node:fs',
+        'os': 'node:os',
+        'http': 'node:http',
+        'https': 'node:https'
+      },
+    },
     build: {
       rollupOptions: {
         output: {
