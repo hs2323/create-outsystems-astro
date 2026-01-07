@@ -102,7 +102,7 @@ All commands are run from the root of the project, from a terminal, based on you
 | `bun install`             | Installs dependencies                            |
 | `bun run dev`             | Starts local dev server at `localhost:4321`      |
 | `bun run build`           | Build distribution to `./dist/`                  |
-| `bun run output`          | Build OutSystems production site to `./output/`  |
+| `bun run output:bun`      | Build OutSystems production site to `./output/`  |
 | `bun run preview`         | Preview build locally, before creating output    |
 | `bun run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `bun run astro -- --help` | Get help using the Astro CLI                     |
