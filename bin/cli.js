@@ -131,7 +131,7 @@ function updateAstroConfig(projectDir, selectedFrameworks) {
   const allFrameworks = {
     angular: {
       import: /import\s+angular\s+from\s+['"]@analogjs\/astro-angular['"];\s*\n?/,
-      integration: /angular\(\)\s*,?\s*/
+      integration: /angular\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
     },
     react: {
       import: /import\s+react\s+from\s+['"]@astrojs\/react['"];\s*\n?/,
