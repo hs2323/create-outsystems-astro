@@ -1,9 +1,15 @@
 #!/usr/bin/env node
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import prompts from "prompts";
-import { execSync } from "child_process";
+import yargs from "yargs";
+import { hideBin } from 'yargs/helpers';
+import { execSync } from "node:child_process";
+
+prompts.override(
+  yargs(hideBin(process.argv)).parse()
+);
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -131,7 +137,7 @@ function updateAstroConfig(projectDir, selectedFrameworks) {
   const allFrameworks = {
     angular: {
       import: /import\s+angular\s+from\s+['"]@analogjs\/astro-angular['"];\s*\n?/,
-      integration: /angular\(\)\s*,?\s*/
+      integration: /angular\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
     },
     react: {
       import: /import\s+react\s+from\s+['"]@astrojs\/react['"];\s*\n?/,
