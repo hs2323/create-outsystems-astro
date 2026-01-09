@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import OutSystemsLogo from '../../images/outsystems.png?url';
 import AstroLogo from '../../images/astro.png?url';
+import { Operation, setCounterCount } from '../../lib/setCounterCount';
 
 export default function Counter({
 	children,
@@ -15,8 +16,8 @@ export default function Counter({
 	ShowMessage: string;
 }) {
 	const [count, setCount] = useState(InitialCount);
-	const add = () => setCount((i) => i + 1);
-	const subtract = () => setCount((i) => i - 1);
+	const add = () => setCount((i) => setCounterCount(i, Operation.Add));
+	const subtract = () => setCount((i) => setCounterCount(i, Operation.Subtract));
 	const showParentMessage = () => (document as any)[ShowMessage](count);
 
 	return (

@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Added Angular integration.
 - Added patch-package to remove jsxDev from Angular build.
+- Added Vitest unit testing.
 
 ### Fixed
 - Fixed Bun build and output.

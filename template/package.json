@@ -9,7 +9,9 @@
     "output:bun": "astro build && bun run ./output.ts",
     "output:deno": "astro build && deno run -A ./output.ts",
     "postinstall": "patch-package",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "test": "vitest",
+    "test:run": "vitest run"
   },
   "dependencies": {
     "@analogjs/astro-angular": "^2.2.0",
@@ -39,6 +41,7 @@
     "js-beautify": "^1.15.4",
     "patch-package": "^8.0.1",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.16"
   }
 }
