@@ -111,7 +111,9 @@ function deleteUnselectedFrameworkFolders(projectDir, selectedFrameworks) {
   for (const framework of frameworksToDelete) {
     const pageDir = path.join(projectDir, "src", "pages", framework);
     const componentDir = path.join(projectDir, "src", "framework", framework);
-
+    const testDir = path.join(projectDir, "test", "integration", framework);
+    const testE2EDir = path.join(projectDir, "test", "e2e", framework);
+    
     if (fs.existsSync(pageDir)) {
       console.log(`🗑️ Removing ${path.relative(projectDir, pageDir)}`);
       fs.rmSync(pageDir, { recursive: true, force: true });
@@ -121,6 +123,17 @@ function deleteUnselectedFrameworkFolders(projectDir, selectedFrameworks) {
       console.log(`🗑️ Removing ${path.relative(projectDir, componentDir)}`);
       fs.rmSync(componentDir, { recursive: true, force: true });
     }
+      
+    if (fs.existsSync(testDir)) {
+      console.log(`🗑️ Removing ${path.relative(projectDir, testDir)}`);
+      fs.rmSync(testDir, { recursive: true, force: true });
+    }
+
+    if (fs.existsSync(testE2EDir)) {
+      console.log(`🗑️ Removing ${path.relative(projectDir, testE2EDir)}`);
+      fs.rmSync(testE2EDir, { recursive: true, force: true });
+    }
+
   }
 }
 

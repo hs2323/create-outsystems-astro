@@ -1,6 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/vue';
-import Counter from '../../../../src/framework/vue/Counter.vue';
-import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
+import Counter from '../../../src/framework/vue/Counter.vue';
 
 describe('Counter', () => {
   const defaultProps = {

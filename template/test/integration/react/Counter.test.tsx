@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import Counter from '../../../../src/framework/react/Counter';
+import Counter from '../../../src/framework/react/Counter';
 
 describe('Counter', () => {
   const defaultProps = {
