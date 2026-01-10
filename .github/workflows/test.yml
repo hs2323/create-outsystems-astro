@@ -11,7 +11,6 @@ env:
 jobs:
 
   cli-bun:
-
     runs-on: ubuntu-latest
 
     steps:  
@@ -42,14 +41,14 @@ jobs:
         uses: denoland/setup-deno@v2.0.3
 
       - name: Install dependencies
-        run: deno install
+        run: deno install && deno run postinsall
 
       - name: Run CLI
         run: deno --allow-env --allow-read --allow-write --allow-run bin/cli.js --projectName test-islands --frameworks react
 
       - name: Run output
         working-directory: test-islands
-        run: deno install && deno run output:deno
+        run: deno install && deno run postinsall && deno run output:deno
 
   cli-npm:
     runs-on: ubuntu-latest

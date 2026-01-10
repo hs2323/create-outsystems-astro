@@ -213,7 +213,7 @@ function packageInstall(targetDir) {
         yarn: "yarn",
         pnpm: "pnpm install",
         bun: "bun install",
-        deno: "deno install",
+        deno: "deno install && deno run postinsall",
         unknown: "npm install"
       }[packageManager];
 
