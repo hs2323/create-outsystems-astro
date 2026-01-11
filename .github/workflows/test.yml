@@ -143,7 +143,7 @@ jobs:
         working-directory: template
         run: bun install --frozen-lockfile
 
-      - name: Run CLI
+      - name: Run format
         working-directory: template
         run: bun run format
 
@@ -161,10 +161,30 @@ jobs:
         working-directory: template
         run: deno install --frozen && deno run postinstall
 
-      - name: Run CLI
+      - name: Run format
         working-directory: template
         run: deno run format
   
+  format-docs:
+    runs-on: ubuntu-latest
+
+    steps:  
+      - name: Checkout code
+        uses: actions/checkout@v6.0.1
+
+      - name: Use Node.js
+        uses: actions/setup-node@v6.1.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install dependencies
+        working-directory: docs
+        run: npm ci
+
+      - name: Run format
+        working-directory: docs
+        run: npm run format
+
   format-npm:
     runs-on: ubuntu-latest
 
@@ -181,7 +201,7 @@ jobs:
         working-directory: template
         run: npm ci
 
-      - name: Run tests
+      - name: Run format
         working-directory: template
         run: npm run format
 
@@ -206,7 +226,7 @@ jobs:
         working-directory: template
         run: pnpm install --frozen-lockfile
       
-      - name: Run tests
+      - name: Run format
         working-directory: template
         run: pnpm run format
 
@@ -226,7 +246,7 @@ jobs:
         working-directory: template
         run: yarn install --frozen-lockfile
 
-      - name: Run output
+      - name: Run format
         working-directory: template
         run: yarn format
 

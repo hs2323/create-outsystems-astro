@@ -8,7 +8,7 @@ slug: 0.2/guides/astro
 
 ## Current supported frameworks
 
-* [React](https://docs.astro.build/en/guides/integrations-guide/react/).
+- [React](https://docs.astro.build/en/guides/integrations-guide/react/).
 
 ## Getting started
 
@@ -73,30 +73,31 @@ Since OutSystems does not have a concept of [NULL](https://success.outsystems.co
 
 ## Using OutSystems handlers
 
-Since OutSystems cannot pass in a function handler, it has to be bound to the document. Usually, this is passed in as a name, and that name is a handler for the document function.  On the Astro library side, you have to call the following (replace functionName):
+Since OutSystems cannot pass in a function handler, it has to be bound to the document. Usually, this is passed in as a name, and that name is a handler for the document function. On the Astro library side, you have to call the following (replace functionName):
 
 ```js
- document[functionName](value);
+document[functionName](value);
 ```
 
 To pass back an array or object, you must `JSON.stringify` it first. The object must then be deserialized on the OutSystems side.
 
 ```js
- document[onSelectChange](JSON.stringify(newValues));
+document[onSelectChange](JSON.stringify(newValues));
 ```
 
 You cannot send Union types (such as either an array or object) due to OutSystems being strongly typed. For example, if you have instances where you send either 0, 1 or multiple items back to the handler, it is important to have an array for that. If only expecting 0-1 items, an object should be fine.
 
 ## Converting to OutSystems
 
-* Copy the environment template file to `.env`.
+- Copy the environment template file to `.env`.
+
   ```bash
   cp .env.template .env
   ```
 
-* Update the `.env` file and modify the `ASSET_PATH` value to be the application/library/core widget module name in OutSystems.
+- Update the `.env` file and modify the `ASSET_PATH` value to be the application/library/core widget module name in OutSystems.
 
-* Once development is complete, run:
+- Once development is complete, run:
   ```bash
   npm run output
   ```

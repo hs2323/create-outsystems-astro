@@ -8,7 +8,7 @@ slug: 0.1/guides/astro
 
 ## Current supported frameworks
 
-* [React](https://docs.astro.build/en/guides/integrations-guide/react/).
+- [React](https://docs.astro.build/en/guides/integrations-guide/react/).
 
 ## Getting started
 
@@ -69,14 +69,15 @@ All commands are run from the root of the project, from a terminal:
 
 ## Converting to OutSystems
 
-* Copy the environment template file to `.env`.
+- Copy the environment template file to `.env`.
+
   ```bash
   cp .env.template .env
   ```
 
-* Update the `.env` file and modify the `ASSET_PATH` value to be the application/library/core widget module name in OutSystems.
+- Update the `.env` file and modify the `ASSET_PATH` value to be the application/library/core widget module name in OutSystems.
 
-* Once development is complete, run:
+- Once development is complete, run:
   ```bash
   npm run output
   ```

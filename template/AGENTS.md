@@ -135,7 +135,7 @@ Angular does not support the use of slots. Any use of slots with Angular should 
 
 ### Linting and formatting
 
-- No linting or formatting is built into this generator. It is recommended to add Prettier for formatting and ESLint for linting.
+- Prettier is currently added for formatting. It is recommended to add ESLint for linting.
 
 ### TypeScript
 
