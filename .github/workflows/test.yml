@@ -41,14 +41,14 @@ jobs:
         uses: denoland/setup-deno@v2.0.3
 
       - name: Install dependencies
-        run: deno install && deno run postinsall
+        run: deno install && deno run postinstall
 
       - name: Run CLI
         run: deno --allow-env --allow-read --allow-write --allow-run bin/cli.js --projectName test-islands --frameworks react
 
       - name: Run output
         working-directory: test-islands
-        run: deno install && deno run postinsall && deno run output:deno
+        run: deno install && deno run postinstall && deno run output:deno
 
   cli-npm:
     runs-on: ubuntu-latest
@@ -271,7 +271,7 @@ jobs:
         working-directory: template
         run: bun run test
 
-  ## E2E tests with Bun are currently disabled due to issues with Playwright and Bun.
+  ## TODO: Fix Bun E2E tests
   # teste2e-bun:
   #   runs-on: ubuntu-latest
 

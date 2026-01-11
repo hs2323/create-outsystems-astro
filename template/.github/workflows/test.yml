@@ -10,7 +10,7 @@ env:
 
 jobs:
 
-  security-template:
+  security:
     runs-on: ubuntu-latest
 
     steps:  
@@ -41,7 +41,6 @@ jobs:
         run: npm ci
 
       - name: Run tests
-        working-directory: template
         run: npm run test
 
   teste2e:
@@ -63,5 +62,4 @@ jobs:
         run: npm run test:e2e:install
 
       - name: Run tests
-        working-directory: template
         run: npm run test:e2e
