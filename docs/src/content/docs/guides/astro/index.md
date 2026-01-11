@@ -110,7 +110,7 @@ All commands are run from the root of the project, from a terminal, based on you
 ### Deno
 | Command                   | Action                                            |
 | :------------------------ | :-----------------------------------------------  |
-| `deno install`             | Installs dependencies                            |
+| `deno install && deno run postinsall`             | Installs dependencies                            |
 | `deno run dev`             | Starts local dev server at `localhost:4321`      |
 | `deno run build`           | Build distribution to `./dist/`                  |
 | `deno run output:deno`     | Build OutSystems production site to `./output/`  |
@@ -217,3 +217,61 @@ You cannot send Union types (such as either an array or object) due to OutSystem
     ```
 
 This will create a set of files that will then need to be converted to OutSystems components.
+
+## Testing
+The generator comes with unit, integration and testing built in. You can use the built in ones or replace them with your own testing framework preferences.
+
+### Unit testing
+- [Vitest](https://vitest.dev/)
+The unit tests are placed in the ```test/unit``` folder. This is primarily for testing functions and logic.
+
+### Integration Testing
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+- [Vue Testing Library](https://testing-library.com/docs/vue-testing-library/intro/)
+The integration tests are placed in the ```test/integration``` folder.  This tests the interaction between the components as a whole.  The React and Vue libraries have an equivalent testing library module. Currently, the Angular library is not supported for integration testing.
+
+### End-to-End
+- [Playwright](https://playwright.dev/)
+The end-to-end tests are placed in the ```test/e2e``` folder. This tests build the project and then runs a server preview. Playwright will launch a browser and test the page and components. To get started, install the Playwright browsers and necessary dependencies.
+
+### npm
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm run test`            | Run unit and integration tests                   |
+| `npm run test:e2e:install`| Install Playwright browsers and dependencies     |
+| `npm run test:e2e`        | Run the end-to-end tests                         |
+| `npm run test:e2e:ui`     | Run the end-to-end tests in UI mode              |
+
+### Yarn
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `yarn run test`            | Run unit and integration tests                  |
+| `yarn run test:e2e:install`| Install Playwright browsers and dependencies    |
+| `yarn run test:e2e`        | Run the end-to-end tests                        |
+| `yarn run test:e2e:ui`     | Run the end-to-end tests in UI mode             |
+
+
+### pnpm
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `pnpm run test`            | Run unit and integration tests                  |
+| `pnpm run test:e2e:install`| Install Playwright browsers and dependencies    |
+| `pnpm run test:e2e`        | Run the end-to-end tests                        |
+| `pnpm run test:e2e:ui`     | Run the end-to-end tests in UI mode             |
+
+### Bun
+For end-to-end tests, the Bun Playwright configuration is currently not working.
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `bun run test`            | Run unit and integration tests                   |
+| `bun run test:e2e:install`| Install Playwright browsers and dependencies     |
+| `bun run test:e2e`        | Run the end-to-end tests                         |
+| `bun run test:e2e:ui`     | Run the end-to-end tests in UI mode              |
+
+### Deno
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `deno run test`            | Run unit and integration tests                  |
+| `deno run test:e2e:install`| Install Playwright browsers and dependencies    |
+| `deno run test:e2e:deno`   | Run the end-to-end tests                        |
+| `deno run test:e2e:ui:deno`| Run the end-to-end tests in UI mode             |

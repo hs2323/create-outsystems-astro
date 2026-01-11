@@ -30,7 +30,7 @@
     - Angular: ```client:visible```.
 
 ### Components
-- The components live in the folder framework/[NAME]/ (src/framework/react, src/framework/vue, etc)) with each framework having its own folder. The framework folder should stay in place as the components will be rendered from there.  The Angular components will only be transformed by Astro if they are in the framework/angular folder.
+- The components live in the folder framework/[NAME]/ (src/framework/angular, src/framework/react and src/framework/vue ) with each framework having its own folder. The framework folder should stay in place as the components will be rendered from there.  The Angular components will only be transformed by Astro if they are in the framework/angular folder.
 
 ### Parameters
 - Parameters are assigned as attributes on the component. Each framework will then handle them as incoming parameters.
@@ -109,7 +109,10 @@ the slots can be used as:
 Angular does not support the use of slots.  Any use of slots with Angular should be discouraged.
 
 ### Testing
-- No testing is built into this generator.  It is recommended to use best practices for each framework. For example, in React, use Vitest for unit testing, React Testing Library for integration testing of components and PlayWright for end-to-end testing.
+- There is a preset set of testing tools, but can be changed after generation.
+- The unit testing library setup is Vitest. The unit tests are located in ```test/unit``` folder.
+- The integration testing library is Testing Library with an equivalent library per framework. Each framework is in its own folder in ```test/integration/[FRAMEWORK]```.
+- The end-to-end testing library is Playwright. Each framework is in its own folder in ```test/e2e/[FRAMEWORK]```.
 
 ### Linting and formatting
 - No linting or formatting is built into this generator. It is recommended to add Prettier for formatting and ESLint for linting.

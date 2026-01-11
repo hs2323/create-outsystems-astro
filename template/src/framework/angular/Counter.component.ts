@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import OutSystemsLogo from '../../images/outsystems.png?url';
 import AstroLogo from '../../images/astro.png?url';
+import { Operation, setCounterCount } from '../../lib/setCounterCount';
+
 
 @Component({
   selector: 'app-counter',
@@ -43,11 +45,11 @@ export default class CounterComponent implements OnInit {
   }
 
   add() {
-    this.count.update((i) => i + 1);
+    this.count.update((i) => setCounterCount(i, Operation.Add));
   }
 
   subtract() {
-    this.count.update((i) => i - 1);
+    this.count.update((i) => setCounterCount(i, Operation.Subtract));
   }
 
   showParentMessage() {

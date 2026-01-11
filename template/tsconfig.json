@@ -9,6 +9,7 @@
   ],
   "compilerOptions": {
     "jsx": "preserve",
-    "jsxImportSource": "react"
+    "jsxImportSource": "react",
+    "types": ["node", "vite/client", "vitest/globals"],
   }
 }

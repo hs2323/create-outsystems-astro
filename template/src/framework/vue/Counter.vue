@@ -3,6 +3,8 @@ import { ref } from 'vue';
 
 import OutSystemsLogo from '../../images/outsystems.png?url';
 import AstroLogo from '../../images/astro.png?url';
+import { Operation, setCounterCount } from '../../lib/setCounterCount';
+
 
 const props = defineProps<{
   InitialCount: number;
@@ -12,11 +14,11 @@ const props = defineProps<{
 const count = ref(props.InitialCount);
 
 const add = () => {
-  count.value++;
+  count.value = setCounterCount(count.value, Operation.Add);
 };
 
 const subtract = () => {
-  count.value--;
+  count.value = setCounterCount(count.value, Operation.Subtract);
 };
 
 const showParentMessage = () => {

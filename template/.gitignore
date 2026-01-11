@@ -25,3 +25,10 @@ pnpm-debug.log*
 
 # output folder
 output/
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
