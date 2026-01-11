@@ -1,5 +1,5 @@
-import { describe, it, expect } from "vitest";
-import { setCounterCount, Operation } from "../../../src/lib/setCounterCount";
+import { describe, expect, it } from "vitest";
+import { Operation, setCounterCount } from "../../../src/lib/setCounterCount";
 
 describe("setCounterCount", () => {
   it("should increment the count when operation is Add", () => {
@@ -15,6 +15,7 @@ describe("setCounterCount", () => {
   });
 
   it("should return the original count for invalid operation (default case)", () => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     expect(setCounterCount(5, Operation as any)).toBe(5);
   });
 });

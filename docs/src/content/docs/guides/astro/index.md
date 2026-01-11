@@ -374,3 +374,43 @@ For end-to-end tests, the Bun Playwright configuration is currently not working.
 | :---------------------- | :------------------------------ |
 | `deno run format`       | Run format check                |
 | `deno run format:write` | Run format check and fix issues |
+
+## Lint
+
+- [ESLint](https://prettier.io/)
+  Linting sets the guidelines and finds errors, bugs and issues. The configuration is set in `eslint.config.mjs`.
+
+### npm
+
+| Command            | Action                    |
+| :----------------- | :------------------------ |
+| `npm run lint`     | Run linter                |
+| `npm run lint:fix` | Run linter and fix issues |
+
+### Yarn
+
+| Command             | Action                    |
+| :------------------ | :------------------------ |
+| `yarn run lint`     | Run linter                |
+| `yarn run lint:fix` | Run linter and fix issues |
+
+### pnpm
+
+| Command             | Action                    |
+| :------------------ | :------------------------ |
+| `pnpm run lint`     | Run linter                |
+| `pnpm run lint:fix` | Run linter and fix issues |
+
+### Bun
+
+| Command            | Action                    |
+| :----------------- | :------------------------ |
+| `bun run lint`     | Run linter                |
+| `bun run lint:fix` | Run linter and fix issues |
+
+### Deno
+
+| Command             | Action                    |
+| :------------------ | :------------------------ |
+| `deno run lint`     | Run linter                |
+| `deno run lint:fix` | Run linter and fix issues |

@@ -3,6 +3,7 @@ import { expect, test } from "@playwright/test";
 test.beforeEach(async ({ page }) => {
   await page.goto("/angular/angular-counter");
   // Angular sometimes needs a bit more time to fully render the island component.
+  // eslint-disable-next-line playwright/no-wait-for-timeout
   await page.waitForTimeout(2000);
 });
 

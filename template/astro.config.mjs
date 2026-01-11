@@ -6,6 +6,9 @@ import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
+  build: {
+    inlineStylesheets: "always",
+  },
   integrations: [
     angular({
       vite: {
@@ -17,37 +20,34 @@ export default defineConfig({
     react(),
     vue(),
   ],
-  build: {
-    inlineStylesheets: "always",
+  server: {
+    host: true,
+    port: 4321,
   },
   vite: {
-    resolve: {
-      alias: {
-        url: "node:url",
-        path: "node:path",
-        fs: "node:fs",
-        os: "node:os",
-        http: "node:http",
-        https: "node:https",
-      },
-    },
     build: {
       rollupOptions: {
         output: {
+          assetFileNames: `assets/[name]_[hash].[ext]`,
+          chunkFileNames: `[name]_[hash].js`,
+          entryFileNames: `[name]_[hash].js`,
           manualChunks: (id) => {
             if (id.includes("node_modules")) {
               return "app.js";
             }
           },
-          entryFileNames: `[name]_[hash].js`,
-          chunkFileNames: `[name]_[hash].js`,
-          assetFileNames: `assets/[name]_[hash].[ext]`,
         },
       },
     },
-  },
-  server: {
-    host: true,
-    port: 4321,
+    resolve: {
+      alias: {
+        fs: "node:fs",
+        http: "node:http",
+        https: "node:https",
+        os: "node:os",
+        path: "node:path",
+        url: "node:url",
+      },
+    },
   },
 });

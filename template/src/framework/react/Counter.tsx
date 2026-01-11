@@ -1,25 +1,25 @@
 import { useState } from "react";
 
-import OutSystemsLogo from "../../images/outsystems.png?url";
 import AstroLogo from "../../images/astro.png?url";
+import OutSystemsLogo from "../../images/outsystems.png?url";
 import { Operation, setCounterCount } from "../../lib/setCounterCount";
 
 export default function Counter({
   children,
   header,
-  InitialCount,
-  ShowMessage,
+  initialCount,
+  showMessage,
 }: {
   children: React.ReactNode;
   header: React.ReactNode;
-  InitialCount: number;
-  ShowMessage: string;
+  initialCount: number;
+  showMessage: string;
 }) {
-  const [count, setCount] = useState(InitialCount);
+  const [count, setCount] = useState(initialCount);
   const add = () => setCount((i) => setCounterCount(i, Operation.Add));
   const subtract = () =>
     setCount((i) => setCounterCount(i, Operation.Subtract));
-  const showParentMessage = () => (document as any)[ShowMessage](count);
+  const showParentMessage = () => (document as Document)[showMessage](count);
 
   return (
     <>
@@ -34,8 +34,8 @@ export default function Counter({
         <button onClick={showParentMessage}>Send value</button>
       </div>
       <div className="counter-logos">
-        <img src={OutSystemsLogo} alt="OutSystems logo" />
-        <img src={AstroLogo} alt="Astro logo" />
+        <img alt="OutSystems logo" src={OutSystemsLogo} />
+        <img alt="Astro logo" src={AstroLogo} />
       </div>
     </>
   );

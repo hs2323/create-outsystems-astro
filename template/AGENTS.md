@@ -50,7 +50,7 @@ Astro slots can be sent in. A slot can be either the default one or the named on
 - In React, slots are handled as props. The default slot is the `children` prop. A named slot will have the name of its slot as the parameter. For example, a slot with the following:
 
 ```js
-<div slot="header">
+<div slot="header">Header content</div>
 ```
 
 will have the parameter named header.
@@ -84,7 +84,7 @@ export default function Counter({
 
 	return (
 		<>
-            {header}
+      {header}
 			<div>
 				{children}
 			</div>
@@ -135,7 +135,7 @@ Angular does not support the use of slots. Any use of slots with Angular should 
 
 ### Linting and formatting
 
-- Prettier is currently added for formatting. It is recommended to add ESLint for linting.
+- Prettier is currently added for formatting. ESLint is used for linting.
 
 ### TypeScript
 

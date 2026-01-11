@@ -1,27 +1,27 @@
-import { render, screen, fireEvent } from "@testing-library/vue";
+import { fireEvent, render, screen } from "@testing-library/vue";
 import Counter from "../../../src/framework/vue/Counter.vue";
 
 describe("Counter", () => {
   const defaultProps = {
-    InitialCount: 5,
-    ShowMessage: "mockFunction",
+    initialCount: 5,
+    showMessage: "mockFunction",
   };
 
   beforeEach(() => {
-    (document as any).mockFunction = vi.fn();
+    (document as Document).mockFunction = vi.fn();
   });
 
   afterEach(() => {
     vi.clearAllMocks();
-    delete (document as any).mockFunction;
+    delete (document as Document).mockFunction;
   });
 
   it("renders the initial count", () => {
     render(Counter, {
       props: defaultProps,
       slots: {
-        header: "<div>Test Header</div>",
         default: "<div><p>Test Children</p></div>",
+        header: "<div>Test Header</div>",
       },
     });
     expect(screen.getByText("5")).toBeInTheDocument();
@@ -31,8 +31,8 @@ describe("Counter", () => {
     render(Counter, {
       props: defaultProps,
       slots: {
-        header: "<div>Test Header</div>",
         default: "<div><p>Test Children</p></div>",
+        header: "<div>Test Header</div>",
       },
     });
     expect(screen.getByText("Test Header")).toBeInTheDocument();
@@ -42,8 +42,8 @@ describe("Counter", () => {
     render(Counter, {
       props: defaultProps,
       slots: {
-        header: "<div>Test Header</div>",
         default: "<div><p>Test Children</p></div>",
+        header: "<div>Test Header</div>",
       },
     });
     expect(screen.getByText("Test Children")).toBeInTheDocument();
@@ -53,11 +53,11 @@ describe("Counter", () => {
     render(Counter, {
       props: defaultProps,
       slots: {
-        header: "<div>Test Header</div>",
         default: "<div><p>Test Children</p></div>",
+        header: "<div>Test Header</div>",
       },
     });
-    await fireEvent.click(screen.getByRole("button", { name: "+" }));
+    fireEvent.click(screen.getByRole("button", { name: "+" }));
     expect(screen.getByText("6")).toBeInTheDocument();
   });
 
@@ -65,11 +65,11 @@ describe("Counter", () => {
     render(Counter, {
       props: defaultProps,
       slots: {
-        header: "<div>Test Header</div>",
         default: "<div><p>Test Children</p></div>",
+        header: "<div>Test Header</div>",
       },
     });
-    await fireEvent.click(screen.getByRole("button", { name: "-" }));
+    fireEvent.click(screen.getByRole("button", { name: "-" }));
     expect(screen.getByText("4")).toBeInTheDocument();
   });
 
@@ -77,11 +77,11 @@ describe("Counter", () => {
     render(Counter, {
       props: defaultProps,
       slots: {
-        header: "<div>Test Header</div>",
         default: "<div><p>Test Children</p></div>",
+        header: "<div>Test Header</div>",
       },
     });
-    await fireEvent.click(screen.getByRole("button", { name: "Send value" }));
-    expect((document as any).mockFunction).toHaveBeenCalledWith(5);
+    fireEvent.click(screen.getByRole("button", { name: "Send value" }));
+    expect((document as Document).mockFunction).toHaveBeenCalledWith(5);
   });
 });

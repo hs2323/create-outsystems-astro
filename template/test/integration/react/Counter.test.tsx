@@ -1,17 +1,17 @@
-import { render, screen, fireEvent } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import Counter from "../../../src/framework/react/Counter";
 
 describe("Counter", () => {
   const defaultProps = {
     children: <div>Test Children</div>,
     header: <h1>Test Header</h1>,
-    InitialCount: 5,
-    ShowMessage: "mockFunction",
+    initialCount: 5,
+    showMessage: "mockFunction",
   };
 
   beforeEach(() => {
     // Mock the document function
-    (document as any).mockFunction = vi.fn();
+    (document as Document).mockFunction = vi.fn();
   });
 
   afterEach(() => {
@@ -51,6 +51,6 @@ describe("Counter", () => {
     render(<Counter {...defaultProps} />);
     const sendButton = screen.getByRole("button", { name: "Send value" });
     fireEvent.click(sendButton);
-    expect((document as any).mockFunction).toHaveBeenCalledWith(5);
+    expect((document as Document).mockFunction).toHaveBeenCalledWith(5);
   });
 });

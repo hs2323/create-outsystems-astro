@@ -4,12 +4,12 @@ import styles from "../../styles/index.css?url";
 const initialCount = 5;
 const showMessage = "showMessage";
 ---
-<link rel="stylesheet" href={styles} />
+<link href={styles} rel="stylesheet" />
 <script is:inline>
     document.showMessage = (count) => {
         document.getElementById("counter").textContent = count;
     };
 </script>
-<CounterComponent InitialCount={initialCount} ShowMessage={showMessage} client:visible>
+<CounterComponent client:visible initialCount={initialCount} showMessage={showMessage}>
 </CounterComponent>
 <div style="text-align: center; margin-top: 20px;">Counter value: <span id="counter"></span></div>

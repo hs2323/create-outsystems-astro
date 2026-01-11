@@ -1,14 +1,14 @@
-import { Component, input, signal, type OnInit } from "@angular/core";
 import { CommonModule } from "@angular/common";
+import { Component, input, type OnInit, signal } from "@angular/core";
 
-import OutSystemsLogo from "../../images/outsystems.png?url";
 import AstroLogo from "../../images/astro.png?url";
+import OutSystemsLogo from "../../images/outsystems.png?url";
 import { Operation, setCounterCount } from "../../lib/setCounterCount";
 
 @Component({
+  imports: [CommonModule],
   selector: "app-counter",
   standalone: true,
-  imports: [CommonModule],
   template: `
     <div class="counter-title" slot="header">Counter</div>
 
@@ -29,32 +29,32 @@ import { Operation, setCounterCount } from "../../lib/setCounterCount";
   `,
 })
 export default class CounterComponent implements OnInit {
-  initialCount = input<number>(0, { alias: "InitialCount" });
-  messageFunctionName = input<string>("", { alias: "ShowMessage" });
-
+  astroLogo = AstroLogo;
   count = signal(0);
 
-  outSystemsLogo = OutSystemsLogo;
-  astroLogo = AstroLogo;
+  initialCount = input<number>(0, { alias: "initialCount" });
 
-  ngOnInit() {
-    this.count.set(this.initialCount());
-  }
+  messageFunctionName = input<string>("", { alias: "showMessage" });
+  outSystemsLogo = OutSystemsLogo;
 
   add() {
     this.count.update((i) => setCounterCount(i, Operation.Add));
   }
 
-  subtract() {
-    this.count.update((i) => setCounterCount(i, Operation.Subtract));
+  ngOnInit() {
+    this.count.set(this.initialCount());
   }
 
   showParentMessage() {
     const fnName = this.messageFunctionName();
 
     // Safety check to ensure the function exists on window/document
-    if (typeof (document as any)[fnName] === "function") {
-      (document as any)[fnName](this.count());
+    if (typeof (document as Document)[fnName] === "function") {
+      (document as Document)[fnName](this.count());
     }
+  }
+
+  subtract() {
+    this.count.update((i) => setCounterCount(i, Operation.Subtract));
   }
 }
