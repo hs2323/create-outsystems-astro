@@ -1,0 +1,67 @@
+name: Test
+
+on:
+  pull_request:
+  push:
+    branches: [ main ]
+
+env:
+  NODE_VERSION: '24.12.0'
+
+jobs:
+
+  security-template:
+    runs-on: ubuntu-latest
+
+    steps:  
+      - name: Checkout code
+        uses: actions/checkout@v6.0.1
+
+      - name: Use Node.js
+        uses: actions/setup-node@v6.1.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Run security check
+        run: npm audit
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:  
+      - name: Checkout code
+        uses: actions/checkout@v6.0.1
+
+      - name: Use Node.js
+        uses: actions/setup-node@v6.1.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        working-directory: template
+        run: npm run test
+
+  teste2e:
+    runs-on: ubuntu-latest
+
+    steps:  
+      - name: Checkout code
+        uses: actions/checkout@v6.0.1
+
+      - name: Use Node.js
+        uses: actions/setup-node@v6.1.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright
+        run: npm run test:e2e:install
+
+      - name: Run tests
+        working-directory: template
+        run: npm run test:e2e
