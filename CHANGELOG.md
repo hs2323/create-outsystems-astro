@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Added Prettier formatting.
+- Added Playwright end-to-end testing.
 - Added Testing Library integration testing for React and Vue.
 - Added Vitest unit testing.
 - Added patch-package to remove jsxDev from Angular build.

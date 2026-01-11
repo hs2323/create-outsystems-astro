@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref } from "vue";
 
-import OutSystemsLogo from '../../images/outsystems.png?url';
-import AstroLogo from '../../images/astro.png?url';
-import { Operation, setCounterCount } from '../../lib/setCounterCount';
-
+import OutSystemsLogo from "../../images/outsystems.png?url";
+import AstroLogo from "../../images/astro.png?url";
+import { Operation, setCounterCount } from "../../lib/setCounterCount";
 
 const props = defineProps<{
   InitialCount: number;

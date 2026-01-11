@@ -275,3 +275,37 @@ For end-to-end tests, the Bun Playwright configuration is currently not working.
 | `deno run test:e2e:install`| Install Playwright browsers and dependencies    |
 | `deno run test:e2e:deno`   | Run the end-to-end tests                        |
 | `deno run test:e2e:ui:deno`| Run the end-to-end tests in UI mode             |
+
+## Format
+- [Prettier](https://prettier.io/)
+Formatting sets the guidelines for the code styles.  The rules are able to be updated in the ```.prettierrc``` file.
+
+### npm
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm run format`          | Run format check                                 |
+| `npm run format:write`    | Run format check and fix issues                  |
+
+### Yarn
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `yarn run format`          | Run format check                                 |
+| `yarn run format:write`    | Run format check and fix issues                  |
+
+### pnpm
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `pnpm run format`          | Run format check                                 |
+| `pnpm run format:write`    | Run format check and fix issues                  |
+
+### Bun
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `bun run format`          | Run format check                                 |
+| `bun run format:write`    | Run format check and fix issues                  |
+
+### npm
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `bun run format`          | Run format check                                 |
+| `bun run format:write`    | Run format check and fix issues                  |

@@ -1,0 +1,11 @@
+.github/
+bun.lock
+deno.lock
+dist/
+node_modules/
+output/
+package-lock.json
+package.json
+patches/
+pnpm-lock.yaml
+yarn.lock

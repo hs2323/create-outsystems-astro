@@ -1,8 +1,8 @@
 // @ts-check
-import angular from '@analogjs/astro-angular';
-import react from '@astrojs/react';
-import vue from '@astrojs/vue';
-import { defineConfig } from 'astro/config';
+import angular from "@analogjs/astro-angular";
+import react from "@astrojs/react";
+import vue from "@astrojs/vue";
+import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
@@ -10,32 +10,33 @@ export default defineConfig({
     angular({
       vite: {
         transformFilter: (_code, id) => {
-          return id.includes('src/framework/angular');
+          return id.includes("src/framework/angular");
         },
       },
-    }), 
-    react(), 
-    vue()],
+    }),
+    react(),
+    vue(),
+  ],
   build: {
-    inlineStylesheets: 'always'
+    inlineStylesheets: "always",
   },
   vite: {
     resolve: {
       alias: {
-        'url': 'node:url',
-        'path': 'node:path',
-        'fs': 'node:fs',
-        'os': 'node:os',
-        'http': 'node:http',
-        'https': 'node:https'
+        url: "node:url",
+        path: "node:path",
+        fs: "node:fs",
+        os: "node:os",
+        http: "node:http",
+        https: "node:https",
       },
     },
     build: {
       rollupOptions: {
         output: {
           manualChunks: (id) => {
-            if (id.includes('node_modules')) {
-              return 'app.js';
+            if (id.includes("node_modules")) {
+              return "app.js";
             }
           },
           entryFileNames: `[name]_[hash].js`,

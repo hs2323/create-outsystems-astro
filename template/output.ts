@@ -1,7 +1,7 @@
 import * as fs from "node:fs";
 import * as path from "node:path";
 import beautify from "js-beautify";
-import dotenv from 'dotenv';
+import dotenv from "dotenv";
 dotenv.config();
 
 const { html: beautifyHtml } = beautify;
@@ -17,37 +17,33 @@ function keepAstroIslands(html: string): string {
 
 function formatAstroIslandAttributes(html: string): string {
   // For each <astro-island ...>, put attributes on new lines
-  return html.replace(
-    /<astro-island\b([^>]*)>/gi,
-    (match, attrs) => {
+  return html.replace(/<astro-island\b([^>]*)>/gi, (match, attrs) => {
+    // 🔥 Convert HTML-encoded quotes to actual quotes
+    const decoded = attrs.replace(/&quot;/g, '""');
 
-      // 🔥 Convert HTML-encoded quotes to actual quotes
-      const decoded = attrs.replace(/&quot;/g, '""');
+    // Split attributes by whitespace
+    const formattedAttrs = decoded
+      .trim()
+      .split(/\s+/)
+      .filter(Boolean)
+      .map((attr) => `  ${attr}`) // indent each attr
+      .join("\n");
 
-      // Split attributes by whitespace
-      const formattedAttrs = decoded
-        .trim()
-        .split(/\s+/)
-        .filter(Boolean)
-        .map(attr => `  ${attr}`) // indent each attr
-        .join("\n");
-
-      return `<astro-island\n${formattedAttrs}>`;
-    }
-  );
+    return `<astro-island\n${formattedAttrs}>`;
+  });
 }
 
 /**
  * Stringifies the inner contents of astro-islands for exporting to OutSystems.
  * @param html
- * @returns 
+ * @returns
  */
 function stringifyAstroIslandContents(html: string): string {
   return html.replace(
     /(<astro-island\b[^>]*>)([\s\S]*?)(<\/astro-island>)/gi,
     (_match, openTag, inner, closeTag) => {
       const cleanedInner = inner.replace(/<!--\s*astro:end\s*-->/gi, "");
-      
+
       // Trim leading/trailing newlines
       const trimmed = cleanedInner.replace(/^\s+|\s+$/g, "");
 
@@ -56,18 +52,16 @@ function stringifyAstroIslandContents(html: string): string {
       const stringified = lines
         .map((line, index) => {
           const escaped = line
-            .replace(/\\/g, "\\\\")   // escape backslashes first
-            .replace(/"/g, '""');    // escape quotes
+            .replace(/\\/g, "\\\\") // escape backslashes first
+            .replace(/"/g, '""'); // escape quotes
 
           // No trailing + on the last line
-          return index === lines.length - 1
-            ? `"${escaped}"`
-            : `"${escaped}" +`;
+          return index === lines.length - 1 ? `"${escaped}"` : `"${escaped}" +`;
         })
         .join("\n");
 
       return `${openTag}\n${stringified}\n${closeTag}`;
-    }
+    },
   );
 }
 
@@ -144,7 +138,11 @@ function copyDirectory(src: string, dest: string) {
  * Converts dist/foo/index.html → output/foo.html
  * Keeps dist/index.html as output/index.html
  */
-function getFlattenedHtmlOutputPath(inputFile: string, inputDir: string, outputDir: string): string {
+function getFlattenedHtmlOutputPath(
+  inputFile: string,
+  inputDir: string,
+  outputDir: string,
+): string {
   const relative = path.relative(inputDir, inputFile);
   const parts = relative.split(path.sep);
 
@@ -167,7 +165,11 @@ function processAllHTML(inputDir: string, outputDir: string): void {
   }
 
   for (const inputFile of htmlFiles) {
-    const outputFile = getFlattenedHtmlOutputPath(inputFile, inputDir, outputDir);
+    const outputFile = getFlattenedHtmlOutputPath(
+      inputFile,
+      inputDir,
+      outputDir,
+    );
     const html = fs.readFileSync(inputFile, "utf-8");
 
     // Filter to only keep astro-islands
@@ -188,7 +190,9 @@ function processAllHTML(inputDir: string, outputDir: string): void {
     ensureDirExists(path.dirname(outputFile));
     fs.writeFileSync(outputFile, innerStringifiedHtml, "utf-8");
 
-    console.log(`✅ Processed HTML: ${path.relative(inputDir, inputFile)} → ${path.relative(outputDir, outputFile)}`);
+    console.log(
+      `✅ Processed HTML: ${path.relative(inputDir, inputFile)} → ${path.relative(outputDir, outputFile)}`,
+    );
   }
 }
 
@@ -237,7 +241,6 @@ function processAllJsFiles(dir: string) {
     }
   }
 }
-
 
 /**
  * Main function

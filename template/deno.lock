@@ -30,6 +30,7 @@
     "npm:happy-dom@^20.1.0": "20.1.0",
     "npm:js-beautify@^1.15.4": "1.15.4",
     "npm:patch-package@^8.0.1": "8.0.1",
+    "npm:prettier@^3.7.4": "3.7.4",
     "npm:react-dom@^19.2.3": "19.2.3_react@19.2.3",
     "npm:react@^19.2.3": "19.2.3",
     "npm:rxjs@^7.8.2": "7.8.2",
@@ -4464,6 +4465,10 @@
         "source-map-js"
       ]
     },
+    "prettier@3.7.4": {
+      "integrity": "sha512-v6UNi1+3hSlVvv8fSaoUbggEM5VErKmmpGA7Pl3HF8V6uKY7rvClBOJlH6yNwQtfTueNkGVpOv/mtWL9L4bgRA==",
+      "bin": true
+    },
     "pretty-format@27.5.1": {
       "integrity": "sha512-Qb1gy5OrP5+zDf2Bvnzdl3jsTf1qXVMazbvCoKhtKqVs4/YK4ozX4gKQJJVyNe+cajNPn0KoC0MC3FUmaHWEmQ==",
       "dependencies": [
@@ -5700,6 +5705,7 @@
         "npm:happy-dom@^20.1.0",
         "npm:js-beautify@^1.15.4",
         "npm:patch-package@^8.0.1",
+        "npm:prettier@^3.7.4",
         "npm:react-dom@^19.2.3",
         "npm:react@^19.2.3",
         "npm:rxjs@^7.8.2",
