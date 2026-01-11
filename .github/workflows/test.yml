@@ -41,7 +41,7 @@ jobs:
         uses: denoland/setup-deno@v2.0.3
 
       - name: Install dependencies
-        run: deno install && deno run postinstall
+        run: deno install
 
       - name: Run CLI
         run: deno --allow-env --allow-read --allow-write --allow-run bin/cli.js --projectName test-islands --frameworks react
