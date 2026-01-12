@@ -1,15 +1,10 @@
 {
   "extends": "astro/tsconfigs/strict",
-  "include": [
-    ".astro/types.d.ts",
-    "**/*"
-  ],
-  "exclude": [
-    "dist"
-  ],
+  "include": [".astro/types.d.ts", "**/*"],
+  "exclude": ["dist"],
   "compilerOptions": {
     "jsx": "preserve",
     "jsxImportSource": "react",
-    "types": ["node", "vite/client", "vitest/globals"],
+    "types": ["node", "vitest/globals"]
   }
 }

@@ -1,17 +1,16 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref } from "vue";
 
-import OutSystemsLogo from '../../images/outsystems.png?url';
-import AstroLogo from '../../images/astro.png?url';
-import { Operation, setCounterCount } from '../../lib/setCounterCount';
-
+import OutSystemsLogo from "../../images/outsystems.png?url";
+import AstroLogo from "../../images/astro.png?url";
+import { Operation, setCounterCount } from "../../lib/setCounterCount";
 
 const props = defineProps<{
-  InitialCount: number;
-  ShowMessage: string;
+  initialCount: number;
+  showMessage: string;
 }>();
 
-const count = ref(props.InitialCount);
+const count = ref(props.initialCount);
 
 const add = () => {
   count.value = setCounterCount(count.value, Operation.Add);
@@ -22,7 +21,7 @@ const subtract = () => {
 };
 
 const showParentMessage = () => {
-  (document as any)[props.ShowMessage]?.(count.value);
+  (document as Document)[props.showMessage]?.(count.value);
 };
 </script>
 

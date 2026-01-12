@@ -1,87 +1,90 @@
-import { render, screen, fireEvent } from '@testing-library/vue';
-import Counter from '../../../src/framework/vue/Counter.vue';
+import { fireEvent, render, screen } from "@testing-library/vue";
+import Counter from "../../../src/framework/vue/Counter.vue";
 
-describe('Counter', () => {
+describe("Counter", () => {
   const defaultProps = {
-    InitialCount: 5,
-    ShowMessage: 'mockFunction',
+    initialCount: 5,
+    showMessage: "mockFunction",
   };
 
   beforeEach(() => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (document as any).mockFunction = vi.fn();
   });
 
   afterEach(() => {
     vi.clearAllMocks();
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     delete (document as any).mockFunction;
   });
 
-  it('renders the initial count', () => {
+  it("renders the initial count", () => {
     render(Counter, {
       props: defaultProps,
       slots: {
-        header: '<div>Test Header</div>',
-        default: '<div><p>Test Children</p></div>',
+        default: "<div><p>Test Children</p></div>",
+        header: "<div>Test Header</div>",
       },
     });
-    expect(screen.getByText('5')).toBeInTheDocument();
+    expect(screen.getByText("5")).toBeInTheDocument();
   });
 
-  it('renders header slot', () => {
+  it("renders header slot", () => {
     render(Counter, {
       props: defaultProps,
       slots: {
-        header: '<div>Test Header</div>',
-        default: '<div><p>Test Children</p></div>',
+        default: "<div><p>Test Children</p></div>",
+        header: "<div>Test Header</div>",
       },
     });
-    expect(screen.getByText('Test Header')).toBeInTheDocument();
+    expect(screen.getByText("Test Header")).toBeInTheDocument();
   });
 
-  it('renders default slot content', () => {
+  it("renders default slot content", () => {
     render(Counter, {
       props: defaultProps,
       slots: {
-        header: '<div>Test Header</div>',
-        default: '<div><p>Test Children</p></div>',
+        default: "<div><p>Test Children</p></div>",
+        header: "<div>Test Header</div>",
       },
     });
-    expect(screen.getByText('Test Children')).toBeInTheDocument();
+    expect(screen.getByText("Test Children")).toBeInTheDocument();
   });
 
-  it('increments count when add button is clicked', async () => {
+  it("increments count when add button is clicked", async () => {
     render(Counter, {
       props: defaultProps,
       slots: {
-        header: '<div>Test Header</div>',
-        default: '<div><p>Test Children</p></div>',
+        default: "<div><p>Test Children</p></div>",
+        header: "<div>Test Header</div>",
       },
     });
-    await fireEvent.click(screen.getByRole('button', { name: '+' }));
-    expect(screen.getByText('6')).toBeInTheDocument();
+    fireEvent.click(screen.getByRole("button", { name: "+" }));
+    expect(screen.getByText("6")).toBeInTheDocument();
   });
 
-  it('decrements count when subtract button is clicked', async () => {
+  it("decrements count when subtract button is clicked", async () => {
     render(Counter, {
       props: defaultProps,
       slots: {
-        header: '<div>Test Header</div>',
-        default: '<div><p>Test Children</p></div>',
+        default: "<div><p>Test Children</p></div>",
+        header: "<div>Test Header</div>",
       },
     });
-    await fireEvent.click(screen.getByRole('button', { name: '-' }));
-    expect(screen.getByText('4')).toBeInTheDocument();
+    fireEvent.click(screen.getByRole("button", { name: "-" }));
+    expect(screen.getByText("4")).toBeInTheDocument();
   });
 
-  it('calls the show message function with the current count', async () => {
+  it("calls the show message function with the current count", async () => {
     render(Counter, {
       props: defaultProps,
       slots: {
-        header: '<div>Test Header</div>',
-        default: '<div><p>Test Children</p></div>',
+        default: "<div><p>Test Children</p></div>",
+        header: "<div>Test Header</div>",
       },
     });
-    await fireEvent.click(screen.getByRole('button', { name: 'Send value' }));
+    fireEvent.click(screen.getByRole("button", { name: "Send value" }));
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     expect((document as any).mockFunction).toHaveBeenCalledWith(5);
   });
 });

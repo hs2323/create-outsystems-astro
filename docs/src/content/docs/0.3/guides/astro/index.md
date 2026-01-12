@@ -8,8 +8,8 @@ slug: 0.3/guides/astro
 
 ## Current supported frameworks
 
-* [React](https://docs.astro.build/en/guides/integrations-guide/react/)
-* [Vue](https://docs.astro.build/en/guides/integrations-guide/vue/)
+- [React](https://docs.astro.build/en/guides/integrations-guide/react/)
+- [Vue](https://docs.astro.build/en/guides/integrations-guide/vue/)
 
 ## Getting started
 
@@ -80,8 +80,8 @@ All commands are run from the root of the project, from a terminal, based on you
 
 ### Yarn
 
-| Command                   | Action                                            |
-| :------------------------ | :-----------------------------------------------  |
+| Command                    | Action                                           |
+| :------------------------- | :----------------------------------------------- |
 | `yarn install`             | Installs dependencies                            |
 | `yarn run dev`             | Starts local dev server at `localhost:4321`      |
 | `yarn run build`           | Build distribution to `./dist/`                  |
@@ -92,8 +92,8 @@ All commands are run from the root of the project, from a terminal, based on you
 
 ### pnpm
 
-| Command                   | Action                                            |
-| :------------------------ | :-----------------------------------------------  |
+| Command                    | Action                                           |
+| :------------------------- | :----------------------------------------------- |
 | `pnpm install`             | Installs dependencies                            |
 | `pnpm run dev`             | Starts local dev server at `localhost:4321`      |
 | `pnpm run build`           | Build distribution to `./dist/`                  |
@@ -116,8 +116,8 @@ All commands are run from the root of the project, from a terminal, based on you
 
 ### Deno
 
-| Command                   | Action                                            |
-| :------------------------ | :-----------------------------------------------  |
+| Command                    | Action                                           |
+| :------------------------- | :----------------------------------------------- |
 | `deno install`             | Installs dependencies                            |
 | `deno run dev`             | Starts local dev server at `localhost:4321`      |
 | `deno run build`           | Build distribution to `./dist/`                  |
@@ -132,14 +132,16 @@ Since OutSystems does not have a concept of [NULL](https://success.outsystems.co
 
 ### Slots
 
-[Slots](https://docs.astro.build/en/basics/astro-components/#slots) are an optional HTML that can be passed into a component.  They are then able to be picked up and used by the Astro Island component. You can use either default slot or named slots (or both).
+[Slots](https://docs.astro.build/en/basics/astro-components/#slots) are an optional HTML that can be passed into a component. They are then able to be picked up and used by the Astro Island component. You can use either default slot or named slots (or both).
 
 #### React
 
-The default slot (no name) will go into a React component as the `children` prop name.  A named slot will go in as a parameter with the name.
+The default slot (no name) will go into a React component as the `children` prop name. A named slot will go in as a parameter with the name.
 
-* Astro example:
+- Astro example:
+
   ```jsx
+<!-- eslint-disable-next-line -->
   ...
   <Component client:only="react">
       <div slot="header">
@@ -151,7 +153,7 @@ The default slot (no name) will go into a React component as the `children` prop
   </CounterComponent>
   ```
 
-* React example:
+- React example:
   ```js
   export default function Component({
       children,
@@ -173,10 +175,12 @@ The default slot (no name) will go into a React component as the `children` prop
 
 #### Vue
 
-The default slot (no name) will go into a React component as the `<slot />` name.  A named slot will go in as a parameter with the name.
+The default slot (no name) will go into a React component as the `<slot />` name. A named slot will go in as a parameter with the name.
 
-* Astro example:
+- Astro example:
+
   ```jsx
+<!-- eslint-disable-next-line -->
   ...
   <Component client:only="react">
       <div slot="header">
@@ -188,42 +192,43 @@ The default slot (no name) will go into a React component as the `<slot />` name
   </CounterComponent>
   ```
 
-* Vue example:
+- Vue example:
   ```vue
   <template>
-      <slot name="header" />
-      <div>
-          <slot />
-      </div>
+    <slot name="header" />
+    <div>
+      <slot />
+    </div>
   </template>
   ```
 
 ## Using OutSystems handlers
 
-Since OutSystems cannot pass in a function handler, it has to be bound to the document. Usually, this is passed in as a name, and that name is a handler for the document function.  On the Astro library side, you have to call the following (replace functionName):
+Since OutSystems cannot pass in a function handler, it has to be bound to the document. Usually, this is passed in as a name, and that name is a handler for the document function. On the Astro library side, you have to call the following (replace functionName):
 
 ```js
- document[functionName](value);
+document[functionName](value);
 ```
 
 To pass back an array or object, you must `JSON.stringify` it first. The object must then be deserialized on the OutSystems side.
 
 ```js
- document[onSelectChange](JSON.stringify(newValues));
+document[onSelectChange](JSON.stringify(newValues));
 ```
 
 You cannot send Union types (such as either an array or object) due to OutSystems being strongly typed. For example, if you have instances where you send either 0, 1 or multiple items back to the handler, it is important to have an array for that. If only expecting 0-1 items, an object should be fine.
 
 ## Converting to OutSystems
 
-* Copy the environment template file to `.env`.
+- Copy the environment template file to `.env`.
+
   ```bash
   cp .env.template .env
   ```
 
-* Update the `.env` file and modify the `ASSET_PATH` value to be the application/library/core widget module name in OutSystems.
+- Update the `.env` file and modify the `ASSET_PATH` value to be the application/library/core widget module name in OutSystems.
 
-* Once development is complete, run:
+- Once development is complete, run:
   ```bash
   npm run output
   ```

@@ -1,19 +1,16 @@
-import { Component, input, signal, type OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule } from "@angular/common";
+import { Component, input, type OnInit, signal } from "@angular/core";
 
-import OutSystemsLogo from '../../images/outsystems.png?url';
-import AstroLogo from '../../images/astro.png?url';
-import { Operation, setCounterCount } from '../../lib/setCounterCount';
-
+import AstroLogo from "../../images/astro.png?url";
+import OutSystemsLogo from "../../images/outsystems.png?url";
+import { Operation, setCounterCount } from "../../lib/setCounterCount";
 
 @Component({
-  selector: 'app-counter',
-  standalone: true,
   imports: [CommonModule],
+  selector: "app-counter",
+  standalone: true,
   template: `
-    <div class="counter-title" slot="header">
-        Counter
-    </div>
+    <div class="counter-title" slot="header">Counter</div>
 
     <div class="counter-controls">
       <button (click)="subtract()">-</button>
@@ -32,32 +29,34 @@ import { Operation, setCounterCount } from '../../lib/setCounterCount';
   `,
 })
 export default class CounterComponent implements OnInit {
-  initialCount = input<number>(0, { alias: 'InitialCount' });
-  messageFunctionName = input<string>("",{ alias: 'ShowMessage' });
-
+  astroLogo = AstroLogo;
   count = signal(0);
 
-  outSystemsLogo = OutSystemsLogo;
-  astroLogo = AstroLogo;
+  initialCount = input<number>(0, { alias: "initialCount" });
 
-  ngOnInit() {
-    this.count.set(this.initialCount());
-  }
+  messageFunctionName = input<string>("", { alias: "showMessage" });
+  outSystemsLogo = OutSystemsLogo;
 
   add() {
     this.count.update((i) => setCounterCount(i, Operation.Add));
   }
 
-  subtract() {
-    this.count.update((i) => setCounterCount(i, Operation.Subtract));
+  ngOnInit() {
+    this.count.set(this.initialCount());
   }
 
   showParentMessage() {
     const fnName = this.messageFunctionName();
-    
+
     // Safety check to ensure the function exists on window/document
-    if (typeof (document as any)[fnName] === 'function') {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    if (typeof (document as any)[fnName] === "function") {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (document as any)[fnName](this.count());
     }
+  }
+
+  subtract() {
+    this.count.update((i) => setCounterCount(i, Operation.Subtract));
   }
 }
