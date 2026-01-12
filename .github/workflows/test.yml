@@ -286,6 +286,26 @@ jobs:
         working-directory: template
         run: deno run lint
 
+  lint-docs:
+    runs-on: ubuntu-latest
+
+    steps:  
+      - name: Checkout code
+        uses: actions/checkout@v6.0.1
+
+      - name: Use Node.js
+        uses: actions/setup-node@v6.1.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install dependencies
+        working-directory: docs
+        run: npm ci
+
+      - name: Run lint
+        working-directory: docs
+        run: npm run lint
+
   lint-npm:
     runs-on: ubuntu-latest
 

@@ -141,6 +141,7 @@ The default slot (no name) will go into a React component as the `children` prop
 - Astro example:
 
   ```jsx
+<!-- eslint-disable-next-line -->
   ...
   <Component client:only="react">
       <div slot="header">
@@ -179,6 +180,7 @@ The default slot (no name) will go into a React component as the `<slot />` name
 - Astro example:
 
   ```jsx
+<!-- eslint-disable-next-line -->
   ...
   <Component client:only="react">
       <div slot="header">
