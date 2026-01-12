@@ -34,6 +34,7 @@ export default [
       "playwright-report/*",
       "tests-results/*",
       "AGENTS.md",
+      "**.d.ts",
     ],
   },
   {

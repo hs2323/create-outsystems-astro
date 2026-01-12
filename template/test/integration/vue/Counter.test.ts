@@ -8,12 +8,14 @@ describe("Counter", () => {
   };
 
   beforeEach(() => {
-    (document as Document).mockFunction = vi.fn();
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (document as any).mockFunction = vi.fn();
   });
 
   afterEach(() => {
     vi.clearAllMocks();
-    delete (document as Document).mockFunction;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    delete (document as any).mockFunction;
   });
 
   it("renders the initial count", () => {
@@ -82,6 +84,7 @@ describe("Counter", () => {
       },
     });
     fireEvent.click(screen.getByRole("button", { name: "Send value" }));
-    expect((document as Document).mockFunction).toHaveBeenCalledWith(5);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    expect((document as any).mockFunction).toHaveBeenCalledWith(5);
   });
 });

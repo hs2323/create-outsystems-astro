@@ -17,13 +17,10 @@ if (!Array.prototype.toSorted) {
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   {
-    ignores: [
-      ".astro/*",
-      "node_modules/*",
-    ],
+    ignores: [".astro/*", "node_modules/*"],
   },
-  { languageOptions: { globals: { ...globals.browser, ...globals.node } }, },
-  ...tseslint.configs.recommended.map(config => ({
+  { languageOptions: { globals: { ...globals.browser, ...globals.node } } },
+  ...tseslint.configs.recommended.map((config) => ({
     ...config,
     files: ["**/*.{ts,tsx}"],
   })),

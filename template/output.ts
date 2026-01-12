@@ -87,7 +87,7 @@ function formatAstroIslandAttributes(html: string): string {
       .trim()
       .split(/\s+/)
       .filter(Boolean)
-      .map((attr) => `  ${attr}`) // indent each attr
+      .map((attr: string) => `  ${attr}`) // indent each attr
       .join("\n");
 
     return `<astro-island\n${formattedAttrs}>`;
@@ -264,7 +264,7 @@ function stringifyAstroIslandContents(html: string): string {
       const lines = trimmed.split(/\r?\n/);
 
       const stringified = lines
-        .map((line, index) => {
+        .map((line: string, index: number) => {
           const escaped = line
             .replace(/\\/g, "\\\\") // escape backslashes first
             .replace(/"/g, '""'); // escape quotes

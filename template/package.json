@@ -20,7 +20,8 @@
     "test:e2e:ui": "playwright test --ui",
     "test:e2e:ui:deno": "PW_DISABLE_TS_ESM=true deno run --allow-all npm:playwright test --ui",
     "test:e2e:install": "playwright install --with-deps",
-    "test:run": "vitest run"
+    "test:run": "vitest run",
+    "typecheck": "tsc"
   },
   "dependencies": {
     "@analogjs/astro-angular": "^2.2.1",

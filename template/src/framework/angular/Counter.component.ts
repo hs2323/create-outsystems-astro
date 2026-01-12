@@ -49,8 +49,10 @@ export default class CounterComponent implements OnInit {
     const fnName = this.messageFunctionName();
 
     // Safety check to ensure the function exists on window/document
-    if (typeof (document as Document)[fnName] === "function") {
-      (document as Document)[fnName](this.count());
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    if (typeof (document as any)[fnName] === "function") {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (document as any)[fnName](this.count());
     }
   }
 

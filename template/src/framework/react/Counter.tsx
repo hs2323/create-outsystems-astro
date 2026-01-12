@@ -19,7 +19,8 @@ export default function Counter({
   const add = () => setCount((i) => setCounterCount(i, Operation.Add));
   const subtract = () =>
     setCount((i) => setCounterCount(i, Operation.Subtract));
-  const showParentMessage = () => (document as Document)[showMessage](count);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const showParentMessage = () => (document as any)[showMessage](count);
 
   return (
     <>

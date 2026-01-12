@@ -9,7 +9,8 @@ import { defineConfig, devices } from "@playwright/test";
 // dotenv.config({ path: path.resolve(__dirname, '.env') });
 
 function detectPackageManager() {
-  if (typeof Deno !== "undefined") return "deno";
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  if (typeof (globalThis as any).Deno !== "undefined") return "deno";
 
   const ua = process.env.npm_config_user_agent || "";
 
