@@ -15,6 +15,7 @@ export default defineConfig({
           globals: true,
           include: ["test/integration/angular/**/*.{test,spec}.ts"],
           name: "angular",
+          pool: "forks",
           setupFiles: ["test/setup-test-env-angular.ts"],
         },
       },
