@@ -117,8 +117,8 @@ export default [
     ],
     ...testingLibrary.configs["flat/react"],
     rules: {
-      "testing-library/no-await-sync-events": "off"
-    }
+      "testing-library/no-await-sync-events": "off",
+    },
   },
   {
     files: ["**/*.md", "**/*.markdown"],

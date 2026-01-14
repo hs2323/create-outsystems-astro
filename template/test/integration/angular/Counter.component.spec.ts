@@ -17,7 +17,7 @@ describe("CounterComponent (Testing Library)", () => {
       componentInputs: { initialCount: 5 },
     });
 
-    const addButton = screen.getByRole("button", { name: '+' });
+    const addButton = screen.getByRole("button", { name: "+" });
     await fireEvent.click(addButton);
 
     expect(screen.getByText("6")).toBeInTheDocument();
@@ -28,7 +28,7 @@ describe("CounterComponent (Testing Library)", () => {
       componentInputs: { initialCount: 5 },
     });
 
-    const addButton = screen.getByRole("button", { name: '-' });
+    const addButton = screen.getByRole("button", { name: "-" });
     await fireEvent.click(addButton);
 
     expect(screen.getByText("4")).toBeInTheDocument();
