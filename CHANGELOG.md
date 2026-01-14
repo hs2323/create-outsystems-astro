@@ -13,8 +13,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added Playwright end-to-end testing.
 - Added Testing Library integration testing.
 - Added Vitest unit testing.
-- Added patch-package to remove jsxDev from Angular build.
+- Added patch-package.
 - Added Angular integration.
+
+### Changed
+- Updated docs dependency typescript-eslint to 8.53.0.
+- Updated docs dependency astro to 5.16.9.
+- Updated docs dependency @astrojs/starlight to 0.37.2.
 
 ### Fixed
 - Fixed Deno build and output.
