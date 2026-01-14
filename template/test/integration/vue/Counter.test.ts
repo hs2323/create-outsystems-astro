@@ -59,7 +59,7 @@ describe("Counter", () => {
         header: "<div>Test Header</div>",
       },
     });
-    // eslint-disable-next-line testing-library/no-await-sync-events
+     
     await fireEvent.click(screen.getByRole("button", { name: "+" }));
     expect(screen.getByText("6")).toBeInTheDocument();
   });
@@ -72,7 +72,7 @@ describe("Counter", () => {
         header: "<div>Test Header</div>",
       },
     });
-    // eslint-disable-next-line testing-library/no-await-sync-events
+     
     await fireEvent.click(screen.getByRole("button", { name: "-" }));
     expect(screen.getByText("4")).toBeInTheDocument();
   });
@@ -85,7 +85,7 @@ describe("Counter", () => {
         header: "<div>Test Header</div>",
       },
     });
-    // eslint-disable-next-line testing-library/no-await-sync-events
+     
     await fireEvent.click(screen.getByRole("button", { name: "Send value" }));
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     expect((document as any).mockFunction).toHaveBeenCalledWith(5);
