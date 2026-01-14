@@ -25,6 +25,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed Deno build and output.
 - Fixed Bun build and output.
 
+### Security
+- Updated docs dependency diff to 8.0.3 due to GHSA-73rr-hh4g-fpgx.
+
 ## [0.3.0] - 2025-12-24
 
 ### Added
