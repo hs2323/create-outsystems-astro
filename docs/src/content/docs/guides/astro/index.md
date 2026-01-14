@@ -285,7 +285,7 @@ The generator comes with unit, integration and testing built in. You can use the
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 - [Vue Testing Library](https://testing-library.com/docs/vue-testing-library/intro/)
 - [Angular Testing Library](https://testing-library.com/docs/angular-testing-library/intro/)
-  The integration tests are placed in the `test/integration` folder. This tests the interaction between the components as a whole. The React and Vue libraries have an equivalent testing library module. Currently, the Angular library is not supported for integration testing.
+  The integration tests are placed in the `test/integration` folder. This tests the interaction between the components as a whole. The React and Vue libraries have an equivalent testing library module.
 
 ### End-to-End
 

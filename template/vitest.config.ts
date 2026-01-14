@@ -8,7 +8,8 @@ export default defineConfig({
   test: {
     projects: [
       {
-        plugins: [angular({ tsconfig: "tsconfig.spec.json" })],
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        plugins: [angular({ tsconfig: "tsconfig.spec.json" }) as any],
         test: {
           environment: "happy-dom",
           globals: true,
@@ -18,7 +19,8 @@ export default defineConfig({
         },
       },
       {
-        plugins: [react()],
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        plugins: [react() as any],
         test: {
           environment: "happy-dom",
           globals: true,
@@ -28,7 +30,8 @@ export default defineConfig({
         },
       },
       {
-        plugins: [vue()],
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        plugins: [vue() as any],
         test: {
           environment: "happy-dom",
           globals: true,

@@ -242,6 +242,13 @@
     tslib "^2.3.0"
     xhr2 "^0.2.0"
 
+"@angular/router@^21.0.8":
+  version "21.0.8"
+  resolved "https://registry.yarnpkg.com/@angular/router/-/router-21.0.8.tgz#f39ea31a77fd0dae65521b18d5e76c4bc1769881"
+  integrity sha512-LPR65wyWBSyR46fGeQtD92+TM635o0lh+N5k9qPZdMacogwViTrtBHWPfKYBtBUXLWEWXXKJfSbXvhh3w3uLxw==
+  dependencies:
+    tslib "^2.3.0"
+
 "@antfu/utils@^0.7.10":
   version "0.7.10"
   resolved "https://registry.yarnpkg.com/@antfu/utils/-/utils-0.7.10.tgz#ae829f170158e297a9b6a28f161a8e487d00814d"

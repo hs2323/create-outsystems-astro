@@ -66,6 +66,9 @@ importers:
       '@analogjs/vitest-angular':
         specifier: ^2.2.1
         version: 2.2.1(@analogjs/vite-plugin-angular@2.2.1(@angular/build@21.0.4(0f17e0f005a1666c4aceec8a4369ff49)))(@angular-devkit/architect@0.2100.5(chokidar@4.0.3))(vitest@4.0.16(@types/node@25.0.5)(happy-dom@20.1.0)(sass@1.93.2)(yaml@2.8.2))
+      '@angular/router':
+        specifier: ^21.0.8
+        version: 21.0.8(@angular/common@21.0.8(@angular/core@21.0.8(@angular/compiler@21.0.8)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.0.8(@angular/compiler@21.0.8)(rxjs@7.8.2))(@angular/platform-browser@21.0.8(@angular/animations@21.0.8(@angular/core@21.0.8(@angular/compiler@21.0.8)(rxjs@7.8.2)))(@angular/common@21.0.8(@angular/core@21.0.8(@angular/compiler@21.0.8)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.0.8(@angular/compiler@21.0.8)(rxjs@7.8.2)))(rxjs@7.8.2)
       '@eslint/compat':
         specifier: ^2.0.1
         version: 2.0.1(eslint@9.39.2)
