@@ -116,6 +116,9 @@ export default [
       "test/integration/**/*.test.{js,ts,jsx,tsx}",
     ],
     ...testingLibrary.configs["flat/react"],
+    rules: {
+      "testing-library/no-await-sync-events": "off",
+    },
   },
   {
     files: ["**/*.md", "**/*.markdown"],

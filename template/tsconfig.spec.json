@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "outDir": "./out-tsc/spec",
+    "types": ["vitest/globals"],
+    "target": "es2022"
+  },
+  "include": [
+    "test/integration/angular/**/*.d.ts",
+    "test/integration/angular/**/*.spec.ts"
+  ],
+  "files": ["test/setup-test-env-angular.ts", "test/setup-test-env.ts"]
+}
