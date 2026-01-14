@@ -513,28 +513,27 @@ jobs:
         working-directory: template
         run: bun run test
 
-  ## TODO: Fix Bun E2E tests
-  # teste2e-bun:
-  #   runs-on: ubuntu-latest
+  teste2e-bun:
+    runs-on: ubuntu-latest
 
-  #   steps:  
-  #     - name: Checkout code
-  #       uses: actions/checkout@v6.0.1
+    steps:  
+      - name: Checkout code
+        uses: actions/checkout@v6.0.1
 
-  #     - name: Install Bun
-  #       uses: oven-sh/setup-bun@v2.1.0
+      - name: Install Bun
+        uses: oven-sh/setup-bun@v2.1.0
 
-  #     - name: Install dependencies
-  #       working-directory: template
-  #       run: bun install --frozen-lockfile
+      - name: Install dependencies
+        working-directory: template
+        run: bun install --frozen-lockfile
 
-  #     - name: Install Playwright
-  #       working-directory: template
-  #       run: bun run test:e2e:install
+      - name: Install Playwright
+        working-directory: template
+        run: bun run test:e2e:install
 
-  #     - name: Run tests
-  #       working-directory: template
-  #       run: bun run test:e2e
+      - name: Run tests
+        working-directory: template
+        run: bun run test:e2e
 
   test-deno:
     runs-on: ubuntu-latest
@@ -672,7 +671,7 @@ jobs:
       
       - name: Run tests
         working-directory: template
-        run: pnpm run test
+        run: pnpm run test:e2e
 
   test-yarn:
     runs-on: ubuntu-latest

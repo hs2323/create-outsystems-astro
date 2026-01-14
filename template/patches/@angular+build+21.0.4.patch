@@ -1,0 +1,55 @@
+diff --git a/node_modules/@angular/build/src/tools/esbuild/javascript-transformer-worker.js b/node_modules/@angular/build/src/tools/esbuild/javascript-transformer-worker.js
+index 2c055e6..8816704 100755
+--- a/node_modules/@angular/build/src/tools/esbuild/javascript-transformer-worker.js
++++ b/node_modules/@angular/build/src/tools/esbuild/javascript-transformer-worker.js
+@@ -122,30 +122,21 @@ async function requiresLinking(path, source) {
+     return source.includes(LINKER_DECLARATION_PREFIX);
+ }
+ async function createLinkerPlugin(options) {
+-    linkerPluginCreator ??= (await Promise.resolve().then(() => __importStar(require('@angular/compiler-cli/linker/babel'))))
+-        .createEs2015LinkerPlugin;
++    // CHANGE: Replace __importStar(require(...)) with native dynamic import()
++    if (!linkerPluginCreator) {
++        const linkerModule = await import('@angular/compiler-cli/linker/babel');
++        linkerPluginCreator = linkerModule.createEs2015LinkerPlugin;
++    }
++
+     const linkerPlugin = linkerPluginCreator({
+         linkerJitMode: options.jit,
+-        // This is a workaround until https://github.com/angular/angular/issues/42769 is fixed.
+         sourceMapping: false,
+         logger: {
+-            level: 1, // Info level
+-            debug(...args) {
+-                // eslint-disable-next-line no-console
+-                console.debug(args);
+-            },
+-            info(...args) {
+-                // eslint-disable-next-line no-console
+-                console.info(args);
+-            },
+-            warn(...args) {
+-                // eslint-disable-next-line no-console
+-                console.warn(args);
+-            },
+-            error(...args) {
+-                // eslint-disable-next-line no-console
+-                console.error(args);
+-            },
++            level: 1,
++            debug(...args) { console.debug(args); },
++            info(...args) { console.info(args); },
++            warn(...args) { console.warn(args); },
++            error(...args) { console.error(args); },
+         },
+         fileSystem: {
+             resolve: node_path_1.default.resolve,
+@@ -153,8 +144,6 @@ async function createLinkerPlugin(options) {
+             dirname: node_path_1.default.dirname,
+             relative: node_path_1.default.relative,
+             readFile: node_fs_1.default.readFileSync,
+-            // Node.JS types don't overlap the Compiler types.
+-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+         },
+     });
+     return linkerPlugin;
