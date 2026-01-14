@@ -25,7 +25,7 @@ const LOCKFILES = {
   yarn: ["yarn.lock"],
   pnpm: ["pnpm-lock.yaml"],
   bun: ["bun.lock"],
-  deno: ["deno.lock"]
+  deno: ["deno.lock", "deno.json"]
 };
 
 async function main() {

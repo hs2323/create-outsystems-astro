@@ -32,7 +32,7 @@
     "npm:@types/react@^19.2.7": "19.2.7",
     "npm:@vitejs/plugin-react@^5.1.2": "5.1.2_vite@7.2.2__@types+node@25.0.5__sass@1.93.2__picomatch@4.0.3_@babel+core@7.28.5_@types+node@25.0.5",
     "npm:@vitejs/plugin-vue@^6.0.3": "6.0.3_vite@7.2.2__@types+node@25.0.5__sass@1.93.2__picomatch@4.0.3_vue@3.5.26__typescript@5.9.3_@types+node@25.0.5_typescript@5.9.3",
-    "npm:angular-eslint@^21.1.0": "21.1.0_@angular+cli@21.0.5__@types+node@25.0.5__@inquirer+prompts@7.9.0___@types+node@25.0.5__listr2@9.0.5__zod@4.1.13_eslint@9.39.2_typescript@5.9.3_typescript-eslint@8.52.0__eslint@9.39.2__typescript@5.9.3__@typescript-eslint+parser@8.52.0___eslint@9.39.2___typescript@5.9.3_@typescript-eslint+utils@8.52.0__eslint@9.39.2__typescript@5.9.3_@angular-eslint+template-parser@21.1.0__eslint@9.39.2__typescript@5.9.3_@typescript-eslint+types@8.52.0_@types+node@25.0.5",
+    "npm:angular-eslint@^21.1.0": "21.1.0_@angular+cli@21.0.5__@types+node@25.0.5__@inquirer+prompts@7.9.0___@types+node@25.0.5__listr2@9.0.5__zod@4.1.13__hono@4.11.4_eslint@9.39.2_typescript@5.9.3_typescript-eslint@8.52.0__eslint@9.39.2__typescript@5.9.3__@typescript-eslint+parser@8.52.0___eslint@9.39.2___typescript@5.9.3_@typescript-eslint+utils@8.52.0__eslint@9.39.2__typescript@5.9.3_@angular-eslint+template-parser@21.1.0__eslint@9.39.2__typescript@5.9.3_@typescript-eslint+types@8.52.0_@types+node@25.0.5_hono@4.11.4",
     "npm:astro@^5.16.6": "5.16.6_typescript@5.9.3_@types+node@25.0.5_vite@6.4.1__@types+node@25.0.5__picomatch@4.0.3_zod@3.25.76",
     "npm:dotenv@^17.2.3": "17.2.3",
     "npm:eslint-config-prettier@^10.1.8": "10.1.8_eslint@9.39.2",
@@ -49,6 +49,7 @@
     "npm:eslint@^9.39.2": "9.39.2",
     "npm:globals@17": "17.0.0",
     "npm:happy-dom@^20.1.0": "20.1.0",
+    "npm:hono@4.11.4": "4.11.4",
     "npm:js-beautify@^1.15.4": "1.15.4",
     "npm:patch-package@^8.0.1": "8.0.1",
     "npm:prettier@^3.7.4": "3.7.4",
@@ -266,7 +267,7 @@
         "rxjs"
       ]
     },
-    "@angular-eslint/builder@21.1.0_@angular+cli@21.0.5__@types+node@25.0.5__@inquirer+prompts@7.9.0___@types+node@25.0.5__listr2@9.0.5__zod@4.1.13_eslint@9.39.2_typescript@5.9.3_@types+node@25.0.5": {
+    "@angular-eslint/builder@21.1.0_@angular+cli@21.0.5__@types+node@25.0.5__@inquirer+prompts@7.9.0___@types+node@25.0.5__listr2@9.0.5__zod@4.1.13__hono@4.11.4_eslint@9.39.2_typescript@5.9.3_@types+node@25.0.5_hono@4.11.4": {
       "integrity": "sha512-pcUlDkGqeZ+oQC0oEjnkDDlB96gbgHQhnBUKdhYAiAOSuiBod4+npP0xQOq5chYtRNPBprhDqgrJrp5DBeDMOA==",
       "dependencies": [
         "@angular-devkit/architect@0.2100.5",
@@ -304,7 +305,7 @@
         "typescript"
       ]
     },
-    "@angular-eslint/schematics@21.1.0_@angular+cli@21.0.5__@types+node@25.0.5__@inquirer+prompts@7.9.0___@types+node@25.0.5__listr2@9.0.5__zod@4.1.13_@typescript-eslint+utils@8.52.0__eslint@9.39.2__typescript@5.9.3_eslint@9.39.2_typescript@5.9.3_@angular-eslint+template-parser@21.1.0__eslint@9.39.2__typescript@5.9.3_@typescript-eslint+types@8.52.0_@types+node@25.0.5": {
+    "@angular-eslint/schematics@21.1.0_@angular+cli@21.0.5__@types+node@25.0.5__@inquirer+prompts@7.9.0___@types+node@25.0.5__listr2@9.0.5__zod@4.1.13__hono@4.11.4_@typescript-eslint+utils@8.52.0__eslint@9.39.2__typescript@5.9.3_eslint@9.39.2_typescript@5.9.3_@angular-eslint+template-parser@21.1.0__eslint@9.39.2__typescript@5.9.3_@typescript-eslint+types@8.52.0_@types+node@25.0.5_hono@4.11.4": {
       "integrity": "sha512-Hal1mYwx4MTjCcNHqfIlua31xrk2tZJoyTiXiGQ21cAeK4sFuY+9V7/8cxbwJMGftX0G4J7uhx8woOdIFuqiZw==",
       "dependencies": [
         "@angular-devkit/core@21.0.5_ajv@8.17.1",
@@ -391,7 +392,7 @@
         "vitest@4.0.16_@types+node@25.0.5_happy-dom@20.1.0_vite@7.2.2__@types+node@25.0.5__sass@1.93.2__picomatch@4.0.3_sass@1.93.2"
       ]
     },
-    "@angular/cli@21.0.5_@types+node@25.0.5_@inquirer+prompts@7.9.0__@types+node@25.0.5_listr2@9.0.5_zod@4.1.13": {
+    "@angular/cli@21.0.5_@types+node@25.0.5_@inquirer+prompts@7.9.0__@types+node@25.0.5_listr2@9.0.5_zod@4.1.13_hono@4.11.4": {
       "integrity": "sha512-UYFQqn9Ow1wFVSwdB/xfjmZo4Yb7CUNxilbeYDFIybesfxXSdjMJBbXLtV0+icIhjmqfSUm2gTls6WIrG8qv9A==",
       "dependencies": [
         "@angular-devkit/architect@0.2100.5",
@@ -1230,7 +1231,7 @@
         "levn"
       ]
     },
-    "@hono/node-server@1.19.8_hono@4.11.3": {
+    "@hono/node-server@1.19.8_hono@4.11.4": {
       "integrity": "sha512-0/g2lIOPzX8f3vzW1ggQgvG5mjtFBDBHFAzI5SFAi2DzSqS9luJwqg9T6O/gKYLi+inS7eNxBeIFkkghIPvrMA==",
       "dependencies": [
         "hono"
@@ -1697,7 +1698,7 @@
       "os": ["win32"],
       "cpu": ["x64"]
     },
-    "@modelcontextprotocol/sdk@1.25.2_zod@4.1.13_ajv@8.17.1_express@5.2.1": {
+    "@modelcontextprotocol/sdk@1.25.2_zod@4.1.13_hono@4.11.4_ajv@8.17.1_express@5.2.1": {
       "integrity": "sha512-LZFeo4F9M5qOhC/Uc1aQSrBHxMrvxett+9KLHt7OhcExtoiRN9DKgbZffMP/nxjutWDQpfMDfP3nkHI4X9ijww==",
       "dependencies": [
         "@hono/node-server",
@@ -3064,7 +3065,7 @@
         "@algolia/requester-node-http"
       ]
     },
-    "angular-eslint@21.1.0_@angular+cli@21.0.5__@types+node@25.0.5__@inquirer+prompts@7.9.0___@types+node@25.0.5__listr2@9.0.5__zod@4.1.13_eslint@9.39.2_typescript@5.9.3_typescript-eslint@8.52.0__eslint@9.39.2__typescript@5.9.3__@typescript-eslint+parser@8.52.0___eslint@9.39.2___typescript@5.9.3_@typescript-eslint+utils@8.52.0__eslint@9.39.2__typescript@5.9.3_@angular-eslint+template-parser@21.1.0__eslint@9.39.2__typescript@5.9.3_@typescript-eslint+types@8.52.0_@types+node@25.0.5": {
+    "angular-eslint@21.1.0_@angular+cli@21.0.5__@types+node@25.0.5__@inquirer+prompts@7.9.0___@types+node@25.0.5__listr2@9.0.5__zod@4.1.13__hono@4.11.4_eslint@9.39.2_typescript@5.9.3_typescript-eslint@8.52.0__eslint@9.39.2__typescript@5.9.3__@typescript-eslint+parser@8.52.0___eslint@9.39.2___typescript@5.9.3_@typescript-eslint+utils@8.52.0__eslint@9.39.2__typescript@5.9.3_@angular-eslint+template-parser@21.1.0__eslint@9.39.2__typescript@5.9.3_@typescript-eslint+types@8.52.0_@types+node@25.0.5_hono@4.11.4": {
       "integrity": "sha512-qXpIEBNYpfgpBaFblnyFegVSQjWCVUdCXTHvMcvtNtmMgtPwIDKvG8wuJo5BbQ/MNt2d8npmnRUaS2ddzdCzww==",
       "dependencies": [
         "@angular-devkit/core@21.0.5_ajv@8.17.1",
@@ -4987,8 +4988,8 @@
         "hermes-estree"
       ]
     },
-    "hono@4.11.3": {
-      "integrity": "sha512-PmQi306+M/ct/m5s66Hrg+adPnkD5jiO6IjA7WhWw0gSBSo1EcRegwuI1deZ+wd5pzCGynCcn2DprnE4/yEV4w=="
+    "hono@4.11.4": {
+      "integrity": "sha512-U7tt8JsyrxSRKspfhtLET79pU8K+tInj5QZXs1jSugO1Vq5dFj3kmZsRldo29mTBfcjDRVRXrEZ6LS63Cog9ZA=="
     },
     "hookable@5.5.3": {
       "integrity": "sha512-Yc+BQe8SvoXH1643Qez1zqLRmbA5rCL+sSmk6TVos0LWVfNIB7PGncdlId77WzLGSIB5KaWgTaNTs2lNVEI6VQ=="
@@ -8432,6 +8433,9 @@
     }
   },
   "workspace": {
+    "dependencies": [
+      "npm:hono@4.11.4"
+    ],
     "packageJson": {
       "dependencies": [
         "npm:@analogjs/astro-angular@^2.2.1",
