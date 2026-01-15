@@ -17,6 +17,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added Angular integration.
 
 ### Changed
+- Updated temlate dependency astro to 5.16.9.
+- Updated template dependency @types/react to 19.2.8.
+- Updated template dependency @types/node to 25.0.8.
+- Updated template dependency @astrojs/vue to 5.1.4.
 - Updated docs dependency typescript-eslint to 8.53.0.
 - Updated docs dependency astro to 5.16.9.
 - Updated docs dependency @astrojs/starlight to 0.37.2.
