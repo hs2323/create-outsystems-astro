@@ -479,7 +479,35 @@ jobs:
         working-directory: docs
         run: npm audit
 
-  security-template:
+  security-bun:
+    runs-on: ubuntu-latest
+
+    steps:  
+      - name: Checkout code
+        uses: actions/checkout@v6.0.1
+
+      - name: Install Bun
+        uses: oven-sh/setup-bun@v2.1.0
+
+      - name: Run security check
+        working-directory: template
+        run: bun audit
+
+  security-deno:
+    runs-on: ubuntu-latest
+
+    steps:  
+      - name: Checkout code
+        uses: actions/checkout@v6.0.1
+
+      - name: Install Deno
+        uses: denoland/setup-deno@v2.0.3
+
+      - name: Run security check
+        working-directory: template
+        run: deno audit
+
+  security-npm:
     runs-on: ubuntu-latest
 
     steps:  
@@ -494,6 +522,43 @@ jobs:
       - name: Run security check
         working-directory: template
         run: npm audit
+
+  security-pnpm:
+    runs-on: ubuntu-latest
+
+    steps:  
+      - name: Checkout code
+        uses: actions/checkout@v6.0.1
+
+      - name: Use Node.js
+        uses: actions/setup-node@v6.1.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4.2.0
+        with:
+          version: 10
+      
+      - name: Run tests
+        working-directory: template
+        run: pnpm audit
+
+  security-yarn:
+    runs-on: ubuntu-latest
+
+    steps:  
+      - name: Checkout code
+        uses: actions/checkout@v6.0.1
+
+      - name: Use Node.js
+        uses: actions/setup-node@v6.1.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Run output
+        working-directory: template
+        run: yarn audit
 
   test-bun:
     runs-on: ubuntu-latest
