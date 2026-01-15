@@ -50,6 +50,7 @@
     "npm:eslint-plugin-vue@^10.6.2": "10.6.2_eslint@9.39.2_vue-eslint-parser@10.2.0__eslint@9.39.2",
     "npm:eslint@^9.39.2": "9.39.2",
     "npm:globals@17": "17.0.0",
+    "npm:h3@^1.15.5": "1.15.5",
     "npm:happy-dom@^20.3.0": "20.3.0",
     "npm:hono@^4.11.4": "4.11.4",
     "npm:js-beautify@^1.15.4": "1.15.4",
@@ -4739,8 +4740,8 @@
     "graceful-fs@4.2.11": {
       "integrity": "sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ=="
     },
-    "h3@1.15.4": {
-      "integrity": "sha512-z5cFQWDffyOe4vQ9xIqNfCZdV4p//vy6fBnr8Q1AWnVZ0teurKMG66rLj++TKwKPUP3u7iMUvrvKaEUiQw2QWQ==",
+    "h3@1.15.5": {
+      "integrity": "sha512-xEyq3rSl+dhGX2Lm0+eFQIAzlDN6Fs0EcC4f7BNUmzaRX/PTzeuM+Tr2lHB8FoXggsQIeXLj8EDVgs5ywxyxmg==",
       "dependencies": [
         "cookie-es",
         "crossws",
@@ -8317,6 +8318,7 @@
     "dependencies": [
       "npm:devalue@^5.6.2",
       "npm:diff@^8.0.3",
+      "npm:h3@^1.15.5",
       "npm:hono@^4.11.4",
       "npm:undici@^7.18.2"
     ],
