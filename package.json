@@ -3,6 +3,10 @@
   "type": "module",
   "version": "0.3.0",
   "description": "Create an OutSystems Astro Island project to import as a component into your OutSystems application",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hs2323/create-outsystems-astro.git"
+  },
   "bin": {
     "create-outsystems-astro": "bin/cli.js"
   },
