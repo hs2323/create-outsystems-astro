@@ -21,7 +21,7 @@ jobs:
       - name: Checkout your repository using git
         uses: actions/checkout@v6.0.1
       - name: Install, build, and upload your site
-        uses: withastro/action@v5.0.1
+        uses: withastro/action@v5.1.0
         with:
           path: ./docs
 
@@ -34,4 +34,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4.0.5
