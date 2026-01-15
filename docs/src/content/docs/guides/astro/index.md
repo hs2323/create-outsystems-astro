@@ -171,11 +171,8 @@ Since OutSystems does not have a concept of [NULL](https://success.outsystems.co
 The default slot (no name) will go into a React component as the `children` prop name. A named slot will go in as a parameter with the name.
 
 - Astro example:
-
-  ```js
-<!-- eslint-disable-next-line -->
-  ...
-  <Component client:only="react">
+```astro
+  <CounterComponent client:only="react">
       <div slot="header">
           <p>Slot header</p>
       </div>
@@ -183,10 +180,10 @@ The default slot (no name) will go into a React component as the `children` prop
           <p>Slot content</p>
       </div>
   </CounterComponent>
-  ```
+```
 
 - React example:
-```js
+```tsx
   export default function Component({
       children,
       header,
@@ -203,18 +200,15 @@ The default slot (no name) will go into a React component as the `children` prop
           </>
       );
   }
-  ```
+```
 
 #### Vue
 
 The default slot (no name) will go into a React component as the `<slot />` name. A named slot will go in as a parameter with the name.
 
 - Astro example:
-
-  ```js
-<!-- eslint-disable-next-line -->
-  ...
-  <Component client:only="react">
+```tsx
+  <CounterComponent client:only="react">
       <div slot="header">
           <p>Slot header</p>
       </div>
@@ -222,17 +216,17 @@ The default slot (no name) will go into a React component as the `<slot />` name
           <p>Slot content</p>
       </div>
   </CounterComponent>
-  ```
+```
 
 - Vue example:
-  ```vue
+```vue
   <template>
     <slot name="header" />
     <div>
       <slot />
     </div>
   </template>
-  ```
+```
 
 #### Angular
 
