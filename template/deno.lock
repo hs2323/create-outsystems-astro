@@ -34,6 +34,7 @@
     "npm:@vitejs/plugin-vue@^6.0.3": "6.0.3_vite@7.3.0__@types+node@25.0.8__sass@1.97.1__picomatch@4.0.3_vue@3.5.26__typescript@5.9.3_@types+node@25.0.8_typescript@5.9.3",
     "npm:angular-eslint@^21.1.0": "21.1.0_@angular+cli@21.1.0__@types+node@25.0.8__@inquirer+prompts@7.10.1___@types+node@25.0.8__listr2@9.0.5__zod@4.3.5__hono@4.11.4_eslint@9.39.2_typescript@5.9.3_typescript-eslint@8.53.0__eslint@9.39.2__typescript@5.9.3__@typescript-eslint+parser@8.53.0___eslint@9.39.2___typescript@5.9.3_@typescript-eslint+utils@8.53.0__eslint@9.39.2__typescript@5.9.3_@angular-eslint+template-parser@21.1.0__eslint@9.39.2__typescript@5.9.3_@typescript-eslint+types@8.53.0_@types+node@25.0.8_hono@4.11.4",
     "npm:astro@^5.16.9": "5.16.9_typescript@5.9.3_@types+node@25.0.8_vite@6.4.1__@types+node@25.0.8__picomatch@4.0.3_zod@3.25.76",
+    "npm:devalue@^5.6.2": "5.6.2",
     "npm:diff@^8.0.3": "8.0.3",
     "npm:dotenv@^17.2.3": "17.2.3",
     "npm:eslint-config-prettier@^10.1.8": "10.1.8_eslint@9.39.2",
@@ -362,7 +363,7 @@
         "tinyglobby",
         "tslib",
         "typescript",
-        "undici@7.18.2",
+        "undici",
         "vite@7.3.0_@types+node@25.0.8_sass@1.97.1_picomatch@4.0.3",
         "vitest@4.0.17_@types+node@25.0.8_happy-dom@20.3.0_vite@7.3.0__@types+node@25.0.8__sass@1.97.1__picomatch@4.0.3_sass@1.97.1",
         "watchpack"
@@ -3217,7 +3218,7 @@
         "debug@4.4.3",
         "deterministic-object-hash",
         "devalue",
-        "diff@8.0.3",
+        "diff",
         "dlv",
         "dset",
         "es-module-lexer",
@@ -3782,8 +3783,8 @@
         "base-64"
       ]
     },
-    "devalue@5.6.1": {
-      "integrity": "sha512-jDwizj+IlEZBunHcOuuFVBnIMPAEHvTsJj0BcIp94xYguLRVBcXO853px/MyIJvbVzWdsGvrRweIUWJw8hBP7A=="
+    "devalue@5.6.2": {
+      "integrity": "sha512-nPRkjWzzDQlsejL1WVifk5rvcFi/y1onBRxjaFMjZeR9mFpqu2gmAZ9xUB9/IEanEP/vBtGeGganC/GO1fmufg=="
     },
     "devlop@1.1.0": {
       "integrity": "sha512-RWmIqhcFf1lRYBvNmr7qTNuyCt/7/ns2jbpp1+PalgE/rDQcBT0fioSMUpJ93irlUhC5hrg4cYqe6U+0ImW0rA==",
@@ -7573,7 +7574,7 @@
         "acorn-walk",
         "arg",
         "create-require",
-        "diff@8.0.3",
+        "diff",
         "make-error",
         "typescript",
         "v8-compile-cache-lib",
@@ -8314,6 +8315,7 @@
   },
   "workspace": {
     "dependencies": [
+      "npm:devalue@^5.6.2",
       "npm:diff@^8.0.3",
       "npm:hono@^4.11.4",
       "npm:undici@^7.18.2"

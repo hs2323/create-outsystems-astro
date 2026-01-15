@@ -30,6 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed Bun build and output.
 
 ### Security
+- Updated template sub-dependency devalue to 5.6.2 due to CVE-2026-22774.
 - Updated template dependency undici to 17.8.2 due to CVE-2026-22036. 
 - Updated template dependency diff to 8.0.3 due to GHSA-73rr-hh4g-fpgx.
 - Updated docs dependency diff to 8.0.3 due to GHSA-73rr-hh4g-fpgx.
