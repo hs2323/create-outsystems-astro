@@ -7,11 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- Updated template dependency happy-dom to 20.3.1.
+- Updated template dependency eslint-plugin-vue to 10.7.0.
+- Updated template dependency astro to 5.16.11.
+- Updated template dependency @types/node to 25.0.9.
+
 ### Fixed
 - Fixed missing template GitHub Actions npm install.
-
-### Security
-- Updated template dependency tar to 7.5.3 due to CVE-2026-23745.
 
 ## [0.4.0] - 2026-01-15
 
