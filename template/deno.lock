@@ -59,6 +59,7 @@
     "npm:react-dom@^19.2.3": "19.2.3_react@19.2.3",
     "npm:react@^19.2.3": "19.2.3",
     "npm:rxjs@^7.8.2": "7.8.2",
+    "npm:tar@^7.5.3": "7.5.3",
     "npm:ts-node@^10.9.2": "10.9.2_@types+node@25.0.8_typescript@5.9.3",
     "npm:tslib@^2.8.1": "2.8.1",
     "npm:typescript-eslint@^8.53.0": "8.53.0_eslint@9.39.2_typescript@5.9.3_@typescript-eslint+parser@8.53.0__eslint@9.39.2__typescript@5.9.3",
@@ -7499,8 +7500,8 @@
         "@pkgr/core"
       ]
     },
-    "tar@7.5.2": {
-      "integrity": "sha512-7NyxrTE4Anh8km8iEy7o0QYPs+0JKBTj5ZaqHg6B39erLg0qYXN3BijtShwbsNSvQ+LN75+KV+C4QR/f6Gwnpg==",
+    "tar@7.5.3": {
+      "integrity": "sha512-ENg5JUHUm2rDD7IvKNFGzyElLXNjachNLp6RaGf4+JOgxXHkqA+gq81ZAMCUmtMtqBsoU62lcp6S27g1LCYGGQ==",
       "dependencies": [
         "@isaacs/fs-minipass",
         "chownr",
@@ -8320,6 +8321,7 @@
       "npm:diff@^8.0.3",
       "npm:h3@^1.15.5",
       "npm:hono@^4.11.4",
+      "npm:tar@^7.5.3",
       "npm:undici@^7.18.2"
     ],
     "packageJson": {
