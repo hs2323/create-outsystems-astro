@@ -1,10 +1,6 @@
 {
   "imports": {
-    "devalue": "npm:devalue@^5.6.2",
     "diff": "npm:diff@^8.0.3",
-    "h3": "npm:h3@^1.15.5",
-    "hono": "npm:hono@^4.11.4",
-    "undici": "npm:undici@^7.18.2",
-    "tar": "npm:tar@^7.5.3"
+    "undici": "npm:undici@^7.18.2"
   }
 }
