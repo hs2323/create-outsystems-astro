@@ -4,6 +4,8 @@ on:
   pull_request:
   push:
     branches: [ main ]
+  schedule:
+    - cron: '0 12 * * *'
 
 env:
   NODE_VERSION: '24.13.0'
@@ -22,6 +24,10 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
+      - name: Install dependencies
+        working-directory: template
+        run: npm ci
+
       - name: Run format
         run: npm run format
 
@@ -37,6 +43,10 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
+      - name: Install dependencies
+        working-directory: template
+        run: npm ci
+
       - name: Run lint
         run: npm run lint
 
@@ -51,6 +61,10 @@ jobs:
         uses: actions/setup-node@v6.2.0
         with:
           node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install dependencies
+        working-directory: template
+        run: npm ci
 
       - name: Run security check
         run: npm audit

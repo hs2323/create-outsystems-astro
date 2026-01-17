@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+- Fixed missing template GitHub Actions npm install.
+
 ### Security
 - Updated template dependency tar to 7.5.3 due to CVE-2026-23745.
 
