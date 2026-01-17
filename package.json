@@ -1,7 +1,7 @@
 {
   "name": "create-outsystems-astro",
   "type": "module",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Create an OutSystems Astro Island project to import as a component into your OutSystems application",
   "repository": {
     "type": "git",
