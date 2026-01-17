@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Changed
+- Updated docs dependency prettier to 3.8.0.
+- Updated docs dependency astro to 5.16.11.
+- Updated docs dependency @astrojs/starlight to 0.37.3.
 - Updated template dependency happy-dom to 20.3.1.
 - Updated template dependency eslint-plugin-vue to 10.7.0.
 - Updated template dependency astro to 5.16.11.
