@@ -33,7 +33,7 @@ export default defineConfig({
           entryFileNames: `[name]_[hash].js`,
           manualChunks: (id) => {
             if (id.includes("node_modules")) {
-              return "app.js";
+              return "app";
             }
           },
         },
