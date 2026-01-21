@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Changing manual chunks output to remove .js in filename.
 
+### Security
+- Updated template sub-dependency tar to 7.5.6 due to CVE-2026-23950.
+
 ## [0.4.1] - 2026-01-16
 
 ### Changed
