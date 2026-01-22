@@ -21,7 +21,8 @@ const subtract = () => {
 };
 
 const showParentMessage = () => {
-  (document as Document)[props.showMessage]?.(count.value);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  (window as any)[props.showMessage]?.(count.value);
 };
 </script>
 

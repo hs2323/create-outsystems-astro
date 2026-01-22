@@ -48,11 +48,11 @@ export default class CounterComponent implements OnInit {
   showParentMessage() {
     const fnName = this.messageFunctionName();
 
-    // Safety check to ensure the function exists on window/document
+    // Safety check to ensure the function exists on window.
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    if (typeof (document as any)[fnName] === "function") {
+    if (typeof (window as any)[fnName] === "function") {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (document as any)[fnName](this.count());
+      (window as any)[fnName](this.count());
     }
   }
 

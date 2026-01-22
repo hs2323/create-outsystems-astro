@@ -10,9 +10,9 @@ describe("Counter", () => {
   };
 
   beforeEach(() => {
-    // Mock the document function
+    // Mock the window function
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (document as any).mockFunction = vi.fn();
+    (window as any).mockFunction = vi.fn();
   });
 
   afterEach(() => {
@@ -53,6 +53,6 @@ describe("Counter", () => {
     const sendButton = screen.getByRole("button", { name: "Send value" });
     fireEvent.click(sendButton);
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    expect((document as any).mockFunction).toHaveBeenCalledWith(5);
+    expect((window as any).mockFunction).toHaveBeenCalledWith(5);
   });
 });

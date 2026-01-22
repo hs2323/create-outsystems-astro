@@ -9,13 +9,13 @@ describe("Counter", () => {
 
   beforeEach(() => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (document as any).mockFunction = vi.fn();
+    (window as any).mockFunction = vi.fn();
   });
 
   afterEach(() => {
     vi.clearAllMocks();
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    delete (document as any).mockFunction;
+    delete (window as any).mockFunction;
   });
 
   it("renders the initial count", () => {
@@ -88,6 +88,6 @@ describe("Counter", () => {
 
     await fireEvent.click(screen.getByRole("button", { name: "Send value" }));
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    expect((document as any).mockFunction).toHaveBeenCalledWith(5);
+    expect((window as any).mockFunction).toHaveBeenCalledWith(5);
   });
 });

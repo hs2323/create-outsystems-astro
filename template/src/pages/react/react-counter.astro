@@ -6,7 +6,7 @@ const showMessage = "showMessage";
 ---
 <link href={styles} rel="stylesheet" />
 <script is:inline>
-    document.showMessage = (count) => {
+    window.showMessage = (count) => {
         document.getElementById("counter").textContent = count;
     };
 </script>
