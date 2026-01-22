@@ -234,16 +234,16 @@ Angular does not support the use of slots.
 
 ## Using OutSystems handlers
 
-Since OutSystems cannot pass in a function handler, it has to be bound to the document. Usually, this is passed in as a name, and that name is a handler for the document function. On the Astro library side, you have to call the following (replace functionName):
+Since OutSystems cannot pass in a function handler, it has to be bound to the `window` object. Usually, this is passed in as a name, and that name is a handler for the `window` function. On the Astro library side, you have to call the following (replace functionName):
 
 ```js
-document[functionName](value);
+window[functionName](value);
 ```
 
 To pass back an array or object, you must `JSON.stringify` it first. The object must then be deserialized on the OutSystems side.
 
 ```js
-document[onSelectChange](JSON.stringify(newValues));
+window[onSelectChange](JSON.stringify(newValues));
 ```
 
 You cannot send Union types (such as either an array or object) due to OutSystems being strongly typed. For example, if you have instances where you send either 0, 1 or multiple items back to the handler, it is important to have an array for that. If only expecting 0-1 items, an object should be fine.

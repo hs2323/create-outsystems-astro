@@ -20,7 +20,7 @@ export default function Counter({
   const subtract = () =>
     setCount((i) => setCounterCount(i, Operation.Subtract));
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const showParentMessage = () => (document as any)[showMessage](count);
+  const showParentMessage = () => (window as any)[showMessage](count);
 
   return (
     <>

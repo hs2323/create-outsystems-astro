@@ -143,7 +143,7 @@ Angular does not support the use of slots. Any use of slots with Angular should 
 
 ### Handlers
 
-- Incoming functions from OutSystems cannot be passed as function handlers. The way that OutSystems will invoke them is by binding the function with the name to the `document` object of the page. Then it will pass in that name as a parameter. For example, if you need a function handler of `ShowMessage`, it will need to be called as `document[ShowMessage]`.
+- Incoming functions from OutSystems cannot be passed as function handlers. The way that OutSystems will invoke them is by binding the function with the name to the `window` object of the page. Then it will pass in that name as a parameter. For example, if you need a function handler of `ShowMessage`, it will need to be called as `window[ShowMessage]`.
 - Passing in basic text, number and boolean should be fine to the handler. Any array or object must be JSON stringified prior to being passed into the handler.
 
 ## Generating output

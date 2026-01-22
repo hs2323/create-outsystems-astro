@@ -46,7 +46,7 @@ This is the recommended approach. It allows isolation of your library in a separ
 
 ## Parameters
 
-Astro Islands can take input parameters and functions, but they must first serialized in a particular way. Text and objects must be serialized using the tools provided by the OutSystems Astro Islands module. Functions/handlers must be bound to the `document` (or `window`) object as that is the only method to invoke them. See the [Using OutSystems handlers](#using-outsystems-handlers) section to view implementation in the Astro component.
+Astro Islands can take input parameters and functions, but they must first serialized in a particular way. Text and objects must be serialized using the tools provided by the OutSystems Astro Islands module.Functions/handlers must be bound to the `window` (or `documnet`, but `window` is preferred) object as that is the only method to invoke them. See the [Using OutSystems handlers](#using-outsystems-handlers) section to view implementation in the Astro component.
 
 - Right click on the block and click on add input parameter. Give the parameter a name and type. The parameter can be text, number or structure. Do this for every input parameters.
   ![Add input parameter](../../../../assets/odc/block-add-input-parameter.png)
@@ -95,16 +95,15 @@ Astro Islands can take input parameters and functions, but they must first seria
   ![Add JavaScript SetFunctionProps](../../../../assets/odc/add-javascript-set-function-props.png)
   ![Add JavaScript content for SetFunctionProps](../../../../assets/odc/add-javascript-set-function-props-content.png)
 
-- Inside of the JavaScript block, you will need to bind any function handlers to the document body. There is also and Astro Island function to randomize the name so that there are no function collisions. You can use the following script to bind them (update names to match your components):
+- Inside of the JavaScript block, you will need to bind any function handlers to the `window` object. There is also and Astro Island function to randomize the name so that there are no function collisions. You can use the following script to bind them (update names to match your components):
 
   ```js
-  const ShowMessageName =
-    $actions.CreateFunctionProp("ShowMessage").UpdatedFunctionName;
-  document[ShowMessageName] = $actions.ShowMessage;
+  const ShowMessageName = $actions.CreateFunctionProp("ShowMessage").UpdatedFunctionName;
+  window[ShowMessageName] = $actions.ShowMessage;
   $parameters.ShowMessageName = ShowMessageName;
   ```
 
-  Ensure that the library inside of your Astro components is calling the `document[FUNCTION_NAME](param)`.
+  Ensure that the library inside of your Astro components is calling the `window[FUNCTION_NAME](param)`.
 
   This is a helper method from the Astro Island library to create a randomized function name:
 
