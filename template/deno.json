@@ -1,6 +1,7 @@
 {
   "imports": {
     "diff": "npm:diff@^8.0.3",
+    "hono": "npm:hono@^4.11.7",
     "undici": "npm:undici@^7.18.2",
     "tar": "npm:tar@^7.5.4"
   }
