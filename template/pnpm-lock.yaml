@@ -8,6 +8,7 @@ overrides:
   diff: ^8.0.3
   undici: ^7.18.2
   tar: ^7.5.4
+  hono: ^4.11.7
 
 importers:
 
@@ -124,7 +125,7 @@ importers:
         version: 6.0.3(vite@7.3.1(@types/node@25.0.9)(sass@1.97.1)(yaml@2.8.2))(vue@3.5.26(typescript@5.9.3))
       angular-eslint:
         specifier: ^21.1.0
-        version: 21.1.0(@angular/cli@21.1.0(@types/node@25.0.9)(chokidar@5.0.0)(hono@4.11.4))(chokidar@5.0.0)(eslint@9.39.2)(typescript-eslint@8.53.0(eslint@9.39.2)(typescript@5.9.3))(typescript@5.9.3)
+        version: 21.1.0(@angular/cli@21.1.0(@types/node@25.0.9)(chokidar@5.0.0)(hono@4.11.7))(chokidar@5.0.0)(eslint@9.39.2)(typescript-eslint@8.53.0(eslint@9.39.2)(typescript@5.9.3))(typescript@5.9.3)
       dotenv:
         specifier: ^17.2.3
         version: 17.2.3
@@ -1072,7 +1073,7 @@ packages:
     resolution: {integrity: sha512-vHL6w3ecZsky+8P5MD+eFfaGTyCeOHUIFYMGpQGbrBTSmNNoxv0if69rEZ5giu36weC5saFuznL411gRX7bJDw==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
-      hono: ^4
+      hono: ^4.11.7
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -3547,8 +3548,8 @@ packages:
   hermes-parser@0.25.1:
     resolution: {integrity: sha512-6pEjquH3rqaI6cYAXYPcz9MS4rY6R4ngRgrgfDshRptUZIc3lw0MCIJIGDj9++mfySOuPTHB4nrSW99BCvOPIA==}
 
-  hono@4.11.4:
-    resolution: {integrity: sha512-U7tt8JsyrxSRKspfhtLET79pU8K+tInj5QZXs1jSugO1Vq5dFj3kmZsRldo29mTBfcjDRVRXrEZ6LS63Cog9ZA==}
+  hono@4.11.7:
+    resolution: {integrity: sha512-l7qMiNee7t82bH3SeyUCt9UF15EVmaBvsppY2zQtrbIhl/yzBTny+YUxsVjSjQ6gaqaeVtZmGocom8TzBlA4Yw==}
     engines: {node: '>=16.9.0'}
 
   hookable@5.5.3:
@@ -5061,6 +5062,7 @@ packages:
   tar@7.5.6:
     resolution: {integrity: sha512-xqUeu2JAIJpXyvskvU3uvQW8PAmHrtXp2KDuMJwQqW8Sqq0CaZBAQ+dKS3RBXVhU4wC5NjAdKrmh84241gO9cA==}
     engines: {node: '>=18'}
+    deprecated: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exhorbitant rates) by contacting i@izs.me
 
   tiny-inflate@1.0.3:
     resolution: {integrity: sha512-pkY1fj1cKHb2seWDy0B16HeWyczlJA9/WW3u3c4z/NiWDsO3DOU5D7nhTLE9CF0yXv/QZFY7sEJmj24dK+Rrqw==}
@@ -5897,11 +5899,11 @@ snapshots:
     transitivePeerDependencies:
       - chokidar
 
-  '@angular-eslint/builder@21.1.0(@angular/cli@21.1.0(@types/node@25.0.9)(chokidar@5.0.0)(hono@4.11.4))(chokidar@5.0.0)(eslint@9.39.2)(typescript@5.9.3)':
+  '@angular-eslint/builder@21.1.0(@angular/cli@21.1.0(@types/node@25.0.9)(chokidar@5.0.0)(hono@4.11.7))(chokidar@5.0.0)(eslint@9.39.2)(typescript@5.9.3)':
     dependencies:
       '@angular-devkit/architect': 0.2101.0(chokidar@5.0.0)
       '@angular-devkit/core': 21.1.0(chokidar@5.0.0)
-      '@angular/cli': 21.1.0(@types/node@25.0.9)(chokidar@5.0.0)(hono@4.11.4)
+      '@angular/cli': 21.1.0(@types/node@25.0.9)(chokidar@5.0.0)(hono@4.11.7)
       eslint: 9.39.2
       typescript: 5.9.3
     transitivePeerDependencies:
@@ -5930,13 +5932,13 @@ snapshots:
       ts-api-utils: 2.4.0(typescript@5.9.3)
       typescript: 5.9.3
 
-  '@angular-eslint/schematics@21.1.0(@angular-eslint/template-parser@21.1.0(eslint@9.39.2)(typescript@5.9.3))(@angular/cli@21.1.0(@types/node@25.0.9)(chokidar@5.0.0)(hono@4.11.4))(@typescript-eslint/types@8.53.0)(@typescript-eslint/utils@8.53.0(eslint@9.39.2)(typescript@5.9.3))(chokidar@5.0.0)(eslint@9.39.2)(typescript@5.9.3)':
+  '@angular-eslint/schematics@21.1.0(@angular-eslint/template-parser@21.1.0(eslint@9.39.2)(typescript@5.9.3))(@angular/cli@21.1.0(@types/node@25.0.9)(chokidar@5.0.0)(hono@4.11.7))(@typescript-eslint/types@8.53.0)(@typescript-eslint/utils@8.53.0(eslint@9.39.2)(typescript@5.9.3))(chokidar@5.0.0)(eslint@9.39.2)(typescript@5.9.3)':
     dependencies:
       '@angular-devkit/core': 21.1.0(chokidar@5.0.0)
       '@angular-devkit/schematics': 21.1.0(chokidar@5.0.0)
       '@angular-eslint/eslint-plugin': 21.1.0(@typescript-eslint/utils@8.53.0(eslint@9.39.2)(typescript@5.9.3))(eslint@9.39.2)(typescript@5.9.3)
       '@angular-eslint/eslint-plugin-template': 21.1.0(@angular-eslint/template-parser@21.1.0(eslint@9.39.2)(typescript@5.9.3))(@typescript-eslint/types@8.53.0)(@typescript-eslint/utils@8.53.0(eslint@9.39.2)(typescript@5.9.3))(eslint@9.39.2)(typescript@5.9.3)
-      '@angular/cli': 21.1.0(@types/node@25.0.9)(chokidar@5.0.0)(hono@4.11.4)
+      '@angular/cli': 21.1.0(@types/node@25.0.9)(chokidar@5.0.0)(hono@4.11.7)
       ignore: 7.0.5
       semver: 7.7.3
       strip-json-comments: 3.1.1
@@ -6020,14 +6022,14 @@ snapshots:
       - tsx
       - yaml
 
-  '@angular/cli@21.1.0(@types/node@25.0.9)(chokidar@5.0.0)(hono@4.11.4)':
+  '@angular/cli@21.1.0(@types/node@25.0.9)(chokidar@5.0.0)(hono@4.11.7)':
     dependencies:
       '@angular-devkit/architect': 0.2101.0(chokidar@5.0.0)
       '@angular-devkit/core': 21.1.0(chokidar@5.0.0)
       '@angular-devkit/schematics': 21.1.0(chokidar@5.0.0)
       '@inquirer/prompts': 7.10.1(@types/node@25.0.9)
       '@listr2/prompt-adapter-inquirer': 3.0.5(@inquirer/prompts@7.10.1(@types/node@25.0.9))(@types/node@25.0.9)(listr2@9.0.5)
-      '@modelcontextprotocol/sdk': 1.25.2(hono@4.11.4)(zod@4.3.5)
+      '@modelcontextprotocol/sdk': 1.25.2(hono@4.11.7)(zod@4.3.5)
       '@schematics/angular': 21.1.0(chokidar@5.0.0)
       '@yarnpkg/lockfile': 1.1.0
       algoliasearch: 5.46.2
@@ -6691,9 +6693,9 @@ snapshots:
       '@eslint/core': 0.17.0
       levn: 0.4.1
 
-  '@hono/node-server@1.19.9(hono@4.11.4)':
+  '@hono/node-server@1.19.9(hono@4.11.7)':
     dependencies:
-      hono: 4.11.4
+      hono: 4.11.7
 
   '@humanfs/core@0.19.1': {}
 
@@ -7002,9 +7004,9 @@ snapshots:
   '@lmdb/lmdb-win32-x64@3.4.4':
     optional: true
 
-  '@modelcontextprotocol/sdk@1.25.2(hono@4.11.4)(zod@4.3.5)':
+  '@modelcontextprotocol/sdk@1.25.2(hono@4.11.7)(zod@4.3.5)':
     dependencies:
-      '@hono/node-server': 1.19.9(hono@4.11.4)
+      '@hono/node-server': 1.19.9(hono@4.11.7)
       ajv: 8.17.1
       ajv-formats: 3.0.1(ajv@8.17.1)
       content-type: 1.0.5
@@ -8007,16 +8009,16 @@ snapshots:
       '@algolia/requester-fetch': 5.46.2
       '@algolia/requester-node-http': 5.46.2
 
-  angular-eslint@21.1.0(@angular/cli@21.1.0(@types/node@25.0.9)(chokidar@5.0.0)(hono@4.11.4))(chokidar@5.0.0)(eslint@9.39.2)(typescript-eslint@8.53.0(eslint@9.39.2)(typescript@5.9.3))(typescript@5.9.3):
+  angular-eslint@21.1.0(@angular/cli@21.1.0(@types/node@25.0.9)(chokidar@5.0.0)(hono@4.11.7))(chokidar@5.0.0)(eslint@9.39.2)(typescript-eslint@8.53.0(eslint@9.39.2)(typescript@5.9.3))(typescript@5.9.3):
     dependencies:
       '@angular-devkit/core': 21.1.0(chokidar@5.0.0)
       '@angular-devkit/schematics': 21.1.0(chokidar@5.0.0)
-      '@angular-eslint/builder': 21.1.0(@angular/cli@21.1.0(@types/node@25.0.9)(chokidar@5.0.0)(hono@4.11.4))(chokidar@5.0.0)(eslint@9.39.2)(typescript@5.9.3)
+      '@angular-eslint/builder': 21.1.0(@angular/cli@21.1.0(@types/node@25.0.9)(chokidar@5.0.0)(hono@4.11.7))(chokidar@5.0.0)(eslint@9.39.2)(typescript@5.9.3)
       '@angular-eslint/eslint-plugin': 21.1.0(@typescript-eslint/utils@8.53.0(eslint@9.39.2)(typescript@5.9.3))(eslint@9.39.2)(typescript@5.9.3)
       '@angular-eslint/eslint-plugin-template': 21.1.0(@angular-eslint/template-parser@21.1.0(eslint@9.39.2)(typescript@5.9.3))(@typescript-eslint/types@8.53.0)(@typescript-eslint/utils@8.53.0(eslint@9.39.2)(typescript@5.9.3))(eslint@9.39.2)(typescript@5.9.3)
-      '@angular-eslint/schematics': 21.1.0(@angular-eslint/template-parser@21.1.0(eslint@9.39.2)(typescript@5.9.3))(@angular/cli@21.1.0(@types/node@25.0.9)(chokidar@5.0.0)(hono@4.11.4))(@typescript-eslint/types@8.53.0)(@typescript-eslint/utils@8.53.0(eslint@9.39.2)(typescript@5.9.3))(chokidar@5.0.0)(eslint@9.39.2)(typescript@5.9.3)
+      '@angular-eslint/schematics': 21.1.0(@angular-eslint/template-parser@21.1.0(eslint@9.39.2)(typescript@5.9.3))(@angular/cli@21.1.0(@types/node@25.0.9)(chokidar@5.0.0)(hono@4.11.7))(@typescript-eslint/types@8.53.0)(@typescript-eslint/utils@8.53.0(eslint@9.39.2)(typescript@5.9.3))(chokidar@5.0.0)(eslint@9.39.2)(typescript@5.9.3)
       '@angular-eslint/template-parser': 21.1.0(eslint@9.39.2)(typescript@5.9.3)
-      '@angular/cli': 21.1.0(@types/node@25.0.9)(chokidar@5.0.0)(hono@4.11.4)
+      '@angular/cli': 21.1.0(@types/node@25.0.9)(chokidar@5.0.0)(hono@4.11.7)
       '@typescript-eslint/types': 8.53.0
       '@typescript-eslint/utils': 8.53.0(eslint@9.39.2)(typescript@5.9.3)
       eslint: 9.39.2
@@ -9542,7 +9544,7 @@ snapshots:
     dependencies:
       hermes-estree: 0.25.1
 
-  hono@4.11.4: {}
+  hono@4.11.7: {}
 
   hookable@5.5.3: {}
 
