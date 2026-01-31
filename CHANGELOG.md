@@ -8,6 +8,36 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Changed
+- Updated template dependency vue 3.25.7.
+- Updated template dependency vitest to 4.0.18.
+- Updated template dependency typescript-eslint to 8.54.0.
+- Updated template dependency react-dom to 19.2.4.
+- Updated template dependency react to 19.2.4.
+- Updated template dependency prettier to 3.8.1.
+- Updated template dependency happy-dom to 20.4.0.
+- Updated template dependency globals to 17.2.0.
+- Updated template dependency eslint-plugin-playwright 2.5.1.
+- Updated template dependency eslint-plugin-perfectionist to 5.4.0.
+- Updated template dependency astro to 5.17.1.
+- Updated template dependency angular-eslint to 21.2.0.
+- Updated template dependency @types/react to 19.2.10.
+- Updated template dependency @types/node to 25.1.0.
+- Updated template dependency @testing-library/react to 16.3.2.
+- Updated template dependency @playwright/test to 1.58.1.
+- Updated template dependency @eslint/compat to 2.0.2.
+- Updated template dependency @angular/router to 21.1.2.
+- Updated template dependency @angular/platform-server to 21.1.2.
+- Updated template dependency @angular/platform-browser to 21.1.2.
+- Updated template dependency @angular/language-service to 21.1.2.
+- Updated template dependency @angular/core to 21.1.2.
+- Updated template dependency @angular/compiler-cli to 21.1.2.
+- Updated template dependency @angular/compiler to 21.1.2.
+- Updated template dependency @angular/common to 21.1.2.
+- Updated template dependency @angular/build to 21.1.2.
+- Updated template dependency @angular/animations to 21.1.2.
+- Updated template dependency @analogjs/vitest-angular to 2.2.3.
+- Updated template dependency @analogjs/vite-plugin-angular to 2.2.3.
+- Updated template dependency @analogjs/astro-angular to 2.2.3.
 - Changed recommendation of function handler from binding to the ```window``` instead of the ```document``` object.
 
 ### Security
