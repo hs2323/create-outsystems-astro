@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Changed
+- Updated template explicit peer dependencies @angular-devkit/architect, @angular/cli, hono and vite for Yarn.
 - Updated template dependency vue 3.25.7.
 - Updated template dependency vitest to 4.0.18.
 - Updated template dependency typescript-eslint to 8.54.0.
