@@ -701,7 +701,7 @@ jobs:
 
       - name: Install Playwright
         working-directory: template
-        run: npm run test:e2e:install
+        run: deno run test:e2e:install
 
       - name: Run CLI
         working-directory: template
