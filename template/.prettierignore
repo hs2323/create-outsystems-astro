@@ -1,6 +1,7 @@
 .github/
 bun.lock
 deno.lock
+deno.json
 dist/
 node_modules/
 output/
