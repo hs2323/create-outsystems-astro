@@ -36,7 +36,6 @@
     "npm:@vitejs/plugin-vue@^6.0.3": "6.0.3_vite@7.3.1__@types+node@25.1.0__picomatch@4.0.3__sass@1.97.1_vue@3.5.27__typescript@5.9.3_@types+node@25.1.0_typescript@5.9.3",
     "npm:angular-eslint@^21.2.0": "21.2.0_@angular+cli@21.1.2__@types+node@25.1.0__@inquirer+prompts@7.10.1___@types+node@25.1.0__listr2@9.0.5__zod@4.3.5__hono@4.11.7_eslint@9.39.2_typescript@5.9.3_typescript-eslint@8.54.0__eslint@9.39.2__typescript@5.9.3__@typescript-eslint+parser@8.54.0___eslint@9.39.2___typescript@5.9.3_@typescript-eslint+utils@8.54.0__eslint@9.39.2__typescript@5.9.3_@angular-eslint+template-parser@21.2.0__eslint@9.39.2__typescript@5.9.3_@typescript-eslint+types@8.54.0_@types+node@25.1.0_hono@4.11.7",
     "npm:astro@^5.17.1": "5.17.1_typescript@5.9.3_@types+node@25.1.0_vite@6.4.1__@types+node@25.1.0__picomatch@4.0.3_zod@3.25.76",
-    "npm:diff@^8.0.3": "8.0.3",
     "npm:dotenv@^17.2.3": "17.2.3",
     "npm:eslint-config-prettier@^10.1.8": "10.1.8_eslint@9.39.2",
     "npm:eslint-plugin-astro@^1.5.0": "1.5.0_eslint@9.39.2",
@@ -59,12 +58,10 @@
     "npm:react-dom@^19.2.4": "19.2.4_react@19.2.4",
     "npm:react@^19.2.4": "19.2.4",
     "npm:rxjs@^7.8.2": "7.8.2",
-    "npm:tar@^7.5.7": "7.5.7",
     "npm:ts-node@^10.9.2": "10.9.2_@types+node@25.1.0_typescript@5.9.3",
     "npm:tslib@^2.8.1": "2.8.1",
     "npm:typescript-eslint@^8.54.0": "8.54.0_eslint@9.39.2_typescript@5.9.3_@typescript-eslint+parser@8.54.0__eslint@9.39.2__typescript@5.9.3",
     "npm:typescript@^5.9.3": "5.9.3",
-    "npm:undici@^7.18.2": "7.18.2",
     "npm:vite@^7.3.1": "7.3.1_@types+node@25.1.0_picomatch@4.0.3_sass@1.97.1",
     "npm:vitest@^4.0.18": "4.0.18_@types+node@25.1.0_happy-dom@20.4.0_vite@7.3.1__@types+node@25.1.0__sass@1.97.1__picomatch@4.0.3",
     "npm:vue-eslint-parser@^10.2.0": "10.2.0_eslint@9.39.2",
@@ -8356,12 +8353,6 @@
     }
   },
   "workspace": {
-    "dependencies": [
-      "npm:diff@^8.0.3",
-      "npm:hono@^4.11.7",
-      "npm:tar@^7.5.7",
-      "npm:undici@^7.18.2"
-    ],
     "packageJson": {
       "dependencies": [
         "npm:@analogjs/astro-angular@^2.2.3",

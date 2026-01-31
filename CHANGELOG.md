@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Changed
-- Updated template explicit peer dependencies @angular-devkit/architect, @angular/cli, hono and vite for Yarn.
+- Added template explicit peer dependencies @angular-devkit/architect, @angular/cli, hono and vite for Yarn.
 - Updated template dependency vue 3.25.7.
 - Updated template dependency vitest to 4.0.18.
 - Updated template dependency typescript-eslint to 8.54.0.
@@ -40,10 +40,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated template dependency @analogjs/vite-plugin-angular to 2.2.3.
 - Updated template dependency @analogjs/astro-angular to 2.2.3.
 - Changed recommendation of function handler from binding to the ```window``` instead of the ```document``` object.
-
-### Security
-- Updated template sub-dependency tar to 7.5.7 due to CVE-2026-24842.
-- Updated template sub-dependency hono to 4.11.7 due to CVE-2026-24472, CVE-2026-24398 and CVE-2026-24473.
 
 ## [0.4.2] - 2026-01-21
 
