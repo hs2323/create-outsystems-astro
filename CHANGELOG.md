@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated docs dependency typescript-eslint to 8.54.0.
 - Updated docs dependency starlight-versions to 0.6.0.
 - Updated docs dependency prettier to 3.8.1.
-- Updated docs dependency globals to 17.2.0.
+- Updated docs dependency globals to 17.3.0.
 - Updated docs dependency eslint-plugin-perfectionist to 5.4.0.
 - Updated docs dependency astro to 5.17.1.
 - Updated docs dependency @eslint/compat to 2.0.2.
@@ -25,7 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated template dependency react to 19.2.4.
 - Updated template dependency prettier to 3.8.1.
 - Updated template dependency happy-dom to 20.4.0.
-- Updated template dependency globals to 17.2.0.
+- Updated template dependency globals to 17.3.0.
 - Updated template dependency eslint-plugin-playwright 2.5.1.
 - Updated template dependency eslint-plugin-perfectionist to 5.4.0.
 - Updated template dependency astro to 5.17.1.
