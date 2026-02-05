@@ -50,8 +50,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Changed recommendation of function handler from binding to the ```window``` instead of the ```document``` object.
 
 ### Security
-- Updated template sub-dependency tar to 7.5.7 due to CVE-2026-24842.
-- Updated template sub-dependency hono to 4.11.7 due to CVE-2026-24472, CVE-2026-24398 and CVE-2026-24473.
+- Updated template sub-dependency @isaacs/brace-expansion to 5.0.1 due to CVE-2026-25547.
+- Updated template sub-dependency @modelcontextprotocol/sdk to 1.26.0 due to CVE-2026-25536.
 
 ## [0.4.2] - 2026-01-21
 
