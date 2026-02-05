@@ -1,3 +1,7 @@
 {
+  "imports": {
+    "@isaacs/brace-expansion": "npm:@isaacs/brace-expansion@^5.0.1",
+    "@modelcontextprotocol/sdk": "npm:@modelcontextprotocol/sdk@^1.26.0"
+  },
   "allowScripts": ["npm:@parcel/watcher@2.5.4", "npm:esbuild@0.25.12", "npm:esbuild@0.27.2", "npm:fsevents@2.3.2", "npm:fsevents@2.3.3", "npm:lmdb@3.4.4", "npm:msgpackr-extract@3.0.3", "npm:sharp@0.34.5"]
 }
