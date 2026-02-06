@@ -11,10 +11,12 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-top: 0.5em;
   place-items: center;
+  border: 1;
 }
 
 .counter-message,
 .logos {
+  font-size: 1.2em;
   text-align: center;
 }
 
@@ -27,4 +29,67 @@
 
 .counter-logos img {
   width: 150px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Add shadows to create the "card" effect */
+  transition: 0.3s; /* Smooth transition for hover effects */
+  border-radius: 5px; /* Rounded corners */
+  overflow: hidden; /* Ensures content stays within the rounded corners */
+  background-color: #fff;
+  padding: 10px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+  width: 100%; /* Image takes full width of the card */
+  height: 200px; /* Fixed height for consistency */
+  object-fit: cover; /* Ensures image covers the area without distortion */
+}
+
+.card-content {
+  padding: 16px; /* Add some padding inside the card container */
+}
+
+.card-title {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+.card-description {
+  color: #555;
+}
+
+.card-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: dodgerblue;
+  text-decoration: none;
+}
+
+.card-grid {
+  display: grid;
+  /* Automatically fill columns with a minimum width of 250px and maximum of 1fr */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 24px; /* Space between cards */
+  padding: 24px;
+}
+
+.card-btn {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-start; /* Button size */
+}
+
+.card-btn:hover {
+  background-color: #0056b3;
 }

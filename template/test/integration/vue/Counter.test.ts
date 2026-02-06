@@ -1,4 +1,6 @@
 import { fireEvent, render, screen } from "@testing-library/vue";
+import { it, vi } from "vitest";
+
 import Counter from "../../../src/framework/vue/Counter.vue";
 
 describe("Counter", () => {
