@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## Added
+- Added Nano Stores for React and Vue.
+
 ### Changed
 - Updated docs dependency typescript-eslint to 8.54.0.
 - Updated docs dependency starlight-versions to 0.6.0.
