@@ -1,15 +1,31 @@
 ---
-import CounterComponent from '../../framework/angular/Counter.component';
+import CounterComponent from "../../framework/angular/Counter.component";
 import styles from "../../styles/index.css?url";
 const initialCount = 5;
 const showMessage = "showMessage";
 ---
+
 <link href={styles} rel="stylesheet" />
 <script is:inline>
     window.showMessage = (count) => {
         document.getElementById("counter").textContent = count;
     };
 </script>
-<CounterComponent client:visible initialCount={initialCount} showMessage={showMessage}>
-</CounterComponent>
-<div style="text-align: center; margin-top: 20px;">Counter value: <span id="counter"></span></div>
+<div class="counter-title">HTML Content</div>
+<div class="card-grid">
+    <div class="card">
+        Value sent back from component.
+        <div class="card-content">
+            <div style="text-align: center; margin-top: 30px;">
+                Counter value sent back: <br /><span id="counter"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<hr />
+<CounterComponent
+    client:visible
+    initialCount={initialCount}
+    showMessage={showMessage}
+/>
+

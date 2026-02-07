@@ -11,17 +11,27 @@ import { Operation, setCounterCount } from "../../lib/setCounterCount";
   standalone: true,
   template: `
     <div class="counter-title" slot="header">Counter</div>
-
-    <div class="counter-controls">
-      <button (click)="subtract()">-</button>
-      <pre>{{ count() }}</pre>
-      <button (click)="add()">+</button>
+    <div class="card-grid">
+      <div class="card">
+        Internal counter controls. It keeps state within the component.
+        <div class="card-content">
+          <div class="counter-controls">
+            <button (click)="subtract()">-</button>
+            <pre>{{ count() }}</pre>
+            <button (click)="add()">+</button>
+          </div>
+        </div>
+      </div> 
+      <div class="card">
+        The button sends the current count value to a function in the parent
+        component.
+        <div class="card-content">
+          <div>
+            <button class="card-btn" (click)="showParentMessage()">Send value</button>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <div class="counter-message">
-      <button (click)="showParentMessage()">Send value</button>
-    </div>
-
     <div class="counter-logos">
       <img [src]="outSystemsLogo" alt="OutSystems logo" />
       <img [src]="astroLogo" alt="Astro logo" />
