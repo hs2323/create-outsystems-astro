@@ -59,6 +59,7 @@ export default [
     },
   },
   {
+    files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
     plugins: {
       "react-hooks": pluginReactHooks,
     },
