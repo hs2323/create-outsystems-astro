@@ -1,4 +1,6 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { act, fireEvent, render, screen } from "@testing-library/react";
+import { it, vi } from "vitest";
+
 import Counter from "../../../src/framework/react/Counter";
 
 describe("Counter", () => {
@@ -9,14 +11,30 @@ describe("Counter", () => {
     showMessage: "mockFunction",
   };
 
+  let capturedListener: ((val: string) => void) | undefined;
+  let storeValue = "Mocked Nano Value";
+
   beforeEach(() => {
-    // Mock the window function
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (window as any).mockFunction = vi.fn();
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (window as any).Stores = {
+      reactStore: {
+        get: vi.fn(() => storeValue),
+        listen: vi.fn((callback) => {
+          capturedListener = callback;
+          callback(storeValue);
+          return () => {};
+        }),
+      },
+    };
   });
 
   afterEach(() => {
     vi.clearAllMocks();
+    capturedListener = undefined;
+    storeValue = "Mocked Nano Value";
   });
 
   it("renders the initial count", () => {
@@ -36,23 +54,30 @@ describe("Counter", () => {
 
   it("increments count when add button is clicked", () => {
     render(<Counter {...defaultProps} />);
-    const addButton = screen.getByRole("button", { name: "+" });
-    fireEvent.click(addButton);
+    fireEvent.click(screen.getByRole("button", { name: "+" }));
     expect(screen.getByText("6")).toBeInTheDocument();
   });
 
   it("decrements count when subtract button is clicked", () => {
     render(<Counter {...defaultProps} />);
-    const subtractButton = screen.getByRole("button", { name: "-" });
-    fireEvent.click(subtractButton);
+    fireEvent.click(screen.getByRole("button", { name: "-" }));
     expect(screen.getByText("4")).toBeInTheDocument();
   });
 
   it("calls the show message function", () => {
     render(<Counter {...defaultProps} />);
-    const sendButton = screen.getByRole("button", { name: "Send value" });
-    fireEvent.click(sendButton);
+    fireEvent.click(screen.getByRole("button", { name: "Send value" }));
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     expect((window as any).mockFunction).toHaveBeenCalledWith(5);
+  });
+
+  it("updates the component when the nanostore value changes", async () => {
+    render(<Counter {...defaultProps} />);
+    expect(screen.getByText(/Mocked Nano Value/i)).toBeInTheDocument();
+    await act(async () => {
+      storeValue = "Updated Nano Value";
+      capturedListener?.("Updated Nano Value");
+    });
+    expect(await screen.findByText(/Updated Nano Value/i)).toBeInTheDocument();
   });
 });

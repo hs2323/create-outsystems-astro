@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/angular";
-import { vi } from "vitest";
+import { it, vi } from "vitest";
 import CounterComponent from "../../../src/framework/angular/Counter.component";
 
 describe("CounterComponent (Testing Library)", () => {
