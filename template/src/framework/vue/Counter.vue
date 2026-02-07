@@ -27,7 +27,7 @@ const showParentMessage = () => {
 };
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const nanoStoreValue = useStore((window as any).Stores["reactStore"]);
+const nanoStoreValue = useStore((window as any).Stores["vueStore"]);
 </script>
 
 <template>

@@ -1,5 +1,6 @@
 import { act, fireEvent, render, screen } from "@testing-library/react";
 import { it, vi } from "vitest";
+
 import Counter from "../../../src/framework/react/Counter";
 
 describe("Counter", () => {
@@ -70,7 +71,7 @@ describe("Counter", () => {
     expect((window as any).mockFunction).toHaveBeenCalledWith(5);
   });
 
-  it("updates the UI when the nanostore value changes", async () => {
+  it("updates the component when the nanostore value changes", async () => {
     render(<Counter {...defaultProps} />);
     expect(screen.getByText(/Mocked Nano Value/i)).toBeInTheDocument();
     await act(async () => {

@@ -21,13 +21,15 @@ import { Operation, setCounterCount } from "../../lib/setCounterCount";
             <button (click)="add()">+</button>
           </div>
         </div>
-      </div> 
+      </div>
       <div class="card">
         The button sends the current count value to a function in the parent
         component.
         <div class="card-content">
           <div>
-            <button class="card-btn" (click)="showParentMessage()">Send value</button>
+            <button class="card-btn" (click)="showParentMessage()">
+              Send value
+            </button>
           </div>
         </div>
       </div>
