@@ -22,7 +22,7 @@
     "npm:@eslint/js@^9.39.2": "9.39.2",
     "npm:@eslint/markdown@^7.5.1": "7.5.1",
     "npm:@isaacs/brace-expansion@^5.0.1": "5.0.1",
-    "npm:@modelcontextprotocol/sdk@^1.26.0": "1.26.0_zod@3.25.76_hono@4.11.7_ajv@8.17.1_express@5.2.1",
+    "npm:@modelcontextprotocol/sdk@^1.26.0": "1.26.0_zod@3.25.76_hono@4.11.7_ajv@8.18.0_express@5.2.1",
     "npm:@nanostores/react@1": "1.0.0_nanostores@1.1.0_react@19.2.4",
     "npm:@nanostores/vue@^1.0.1": "1.0.1_nanostores@1.1.0_vue@3.5.27__typescript@5.9.3_typescript@5.9.3",
     "npm:@playwright/test@^1.57.0": "1.57.0",
@@ -38,6 +38,7 @@
     "npm:@types/react@^19.2.10": "19.2.10",
     "npm:@vitejs/plugin-react@^5.1.2": "5.1.2_vite@7.3.1__@types+node@25.1.0__picomatch@4.0.3__sass@1.97.1_@babel+core@7.28.5_@types+node@25.1.0",
     "npm:@vitejs/plugin-vue@^6.0.3": "6.0.3_vite@7.3.1__@types+node@25.1.0__picomatch@4.0.3__sass@1.97.1_vue@3.5.27__typescript@5.9.3_@types+node@25.1.0_typescript@5.9.3",
+    "npm:ajv@8.18.0": "8.18.0",
     "npm:angular-eslint@^21.2.0": "21.2.0_@angular+cli@21.1.2__@types+node@25.1.0__@inquirer+prompts@7.10.1___@types+node@25.1.0__listr2@9.0.5__zod@4.3.5_eslint@9.39.2_typescript@5.9.3_typescript-eslint@8.54.0__eslint@9.39.2__typescript@5.9.3__@typescript-eslint+parser@8.54.0___eslint@9.39.2___typescript@5.9.3_@typescript-eslint+utils@8.54.0__eslint@9.39.2__typescript@5.9.3_@angular-eslint+template-parser@21.2.0__eslint@9.39.2__typescript@5.9.3_@typescript-eslint+types@8.54.0_@types+node@25.1.0",
     "npm:astro@^5.17.1": "5.17.1_typescript@5.9.3_@types+node@25.1.0_vite@6.4.1__@types+node@25.1.0__picomatch@4.0.3_zod@3.25.76",
     "npm:dotenv@^17.2.3": "17.2.3",
@@ -239,11 +240,11 @@
       ],
       "bin": true
     },
-    "@angular-devkit/core@21.1.2_ajv@8.17.1": {
+    "@angular-devkit/core@21.1.2_ajv@8.18.0": {
       "integrity": "sha512-0wl5nJlFWsbwfUB2CQeTSmnVQ8AtqqwM3bYPYtXSc+vA8+hzsOAjjDuRnBxZS9zTnqtXKXB1e7M3Iy7KUwh7LA==",
       "dependencies": [
-        "ajv@8.17.1",
-        "ajv-formats",
+        "ajv@8.18.0",
+        "ajv-formats@3.0.1_ajv@8.18.0",
         "jsonc-parser",
         "picomatch@4.0.3",
         "rxjs",
@@ -393,7 +394,7 @@
         "@angular-devkit/schematics",
         "@inquirer/prompts",
         "@listr2/prompt-adapter-inquirer",
-        "@modelcontextprotocol/sdk@1.26.0_zod@4.3.5_hono@4.11.7_ajv@8.17.1_express@5.2.1",
+        "@modelcontextprotocol/sdk@1.26.0_zod@4.3.5_hono@4.11.7_ajv@8.18.0_express@5.2.1",
         "@schematics/angular",
         "@yarnpkg/lockfile",
         "algoliasearch",
@@ -1157,7 +1158,7 @@
     "@eslint/eslintrc@3.3.3": {
       "integrity": "sha512-Kr+LPIUVKz2qkx1HAMH8q1q6azbqBAsXJUxBl/ODDuVPX45Z9DfwB8tPjTi6nNZ8BuM3nbJxC5zCAg5elnBUTQ==",
       "dependencies": [
-        "ajv@6.12.6",
+        "ajv@8.18.0",
         "debug@4.4.3",
         "espree",
         "globals@14.0.0",
@@ -1662,12 +1663,12 @@
       "os": ["win32"],
       "cpu": ["x64"]
     },
-    "@modelcontextprotocol/sdk@1.26.0_zod@3.25.76_hono@4.11.7_ajv@8.17.1_express@5.2.1": {
+    "@modelcontextprotocol/sdk@1.26.0_zod@3.25.76_hono@4.11.7_ajv@8.18.0_express@5.2.1": {
       "integrity": "sha512-Y5RmPncpiDtTXDbLKswIJzTqu2hyBKxTNsgKqKclDbhIgg1wgtf1fRuvxgTnRfcnxtvvgbIEcqUOzZrJ6iSReg==",
       "dependencies": [
         "@hono/node-server",
-        "ajv@8.17.1",
-        "ajv-formats",
+        "ajv@8.18.0",
+        "ajv-formats@3.0.1_ajv@8.18.0",
         "content-type",
         "cors",
         "cross-spawn",
@@ -1684,12 +1685,12 @@
         "zod-to-json-schema@3.25.1_zod@3.25.76"
       ]
     },
-    "@modelcontextprotocol/sdk@1.26.0_zod@4.3.5_hono@4.11.7_ajv@8.17.1_express@5.2.1": {
+    "@modelcontextprotocol/sdk@1.26.0_zod@4.3.5_hono@4.11.7_ajv@8.18.0_express@5.2.1": {
       "integrity": "sha512-Y5RmPncpiDtTXDbLKswIJzTqu2hyBKxTNsgKqKclDbhIgg1wgtf1fRuvxgTnRfcnxtvvgbIEcqUOzZrJ6iSReg==",
       "dependencies": [
         "@hono/node-server",
-        "ajv@8.17.1",
-        "ajv-formats",
+        "ajv@8.18.0",
+        "ajv-formats@3.0.1_ajv@8.18.0",
         "content-type",
         "cors",
         "cross-spawn",
@@ -3009,26 +3010,17 @@
     "agent-base@7.1.4": {
       "integrity": "sha512-MnA+YT8fwfJPgBx3m60MNqakm30XOkyIoH1y6huTQvC0PwZG7ki8NacLBcrPbNoo8vEZy7Jpuk7+jMO+CUovTQ=="
     },
-    "ajv-formats@3.0.1_ajv@8.17.1": {
+    "ajv-formats@3.0.1_ajv@8.18.0": {
       "integrity": "sha512-8iUql50EUR+uUcdRQ3HDqa6EVyo3docL8g5WJ3FNcWmu62IbkGUue/pEyLBW8VGKKucTPgqeks4fIU1DA4yowQ==",
       "dependencies": [
-        "ajv@8.17.1"
+        "ajv@8.18.0"
       ],
       "optionalPeers": [
-        "ajv@8.17.1"
+        "ajv@8.18.0"
       ]
     },
-    "ajv@6.12.6": {
-      "integrity": "sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==",
-      "dependencies": [
-        "fast-deep-equal",
-        "fast-json-stable-stringify",
-        "json-schema-traverse@0.4.1",
-        "uri-js"
-      ]
-    },
-    "ajv@8.17.1": {
-      "integrity": "sha512-B/gBuNg5SiMTrPkC+A2+cW0RszwxYmn6VYxB/inlBStS5nx6xHIt/ehKRhIMhqusl7a8LjQoZnjCs5vhwxOQ1g==",
+    "ajv@8.18.0": {
+      "integrity": "sha512-PlXPeEWMXMZ7sPYOHqmDyCJzcfNrUr3fGNKtezX14ykXOEIvyK81d+qydx89KY5O71FKMPaQ2vBfBFI5NHR63A==",
       "dependencies": [
         "fast-deep-equal",
         "fast-uri",
@@ -4352,7 +4344,7 @@
         "@humanwhocodes/module-importer",
         "@humanwhocodes/retry",
         "@types/estree",
-        "ajv@6.12.6",
+        "ajv@8.18.0",
         "chalk@4.1.2",
         "cross-spawn",
         "debug@4.4.3",
@@ -7555,7 +7547,8 @@
         "minipass@7.1.2",
         "minizlib",
         "yallist@5.0.0"
-      ]
+      ],
+      "deprecated": true
     },
     "tiny-inflate@1.0.3": {
       "integrity": "sha512-pkY1fj1cKHb2seWDy0B16HeWyczlJA9/WW3u3c4z/NiWDsO3DOU5D7nhTLE9CF0yXv/QZFY7sEJmj24dK+Rrqw=="
@@ -8405,6 +8398,7 @@
     "dependencies": [
       "npm:@isaacs/brace-expansion@^5.0.1",
       "npm:@modelcontextprotocol/sdk@^1.26.0",
+      "npm:ajv@8.18.0",
       "npm:qs@^6.14.2"
     ],
     "packageJson": {
