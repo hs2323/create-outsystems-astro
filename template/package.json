@@ -84,7 +84,7 @@
     "eslint-plugin-vue": "^10.7.0",
     "globals": "^17.3.0",
     "happy-dom": "^20.4.0",
-    "hono": "^4.11.7",
+    "hono": "^4.11.10",
     "js-beautify": "^1.15.4",
     "patch-package": "^8.0.1",
     "prettier": "^3.8.1",
