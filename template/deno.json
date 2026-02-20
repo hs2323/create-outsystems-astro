@@ -5,7 +5,8 @@
     "ajv": "npm:ajv@8.18.0",
     "devalue": "npm:devalue@5.6.3",
     "minimatch": "npm:minimatch@10.2.1",
-    "qs": "npm:qs@^6.14.2"
+    "qs": "npm:qs@^6.14.2",
+    "tar": "npm:tar@^7.5.8"
   },
   "allowScripts": ["npm:@parcel/watcher@2.5.4", "npm:esbuild@0.25.12", "npm:esbuild@0.27.2", "npm:fsevents@2.3.2", "npm:fsevents@2.3.3", "npm:lmdb@3.4.4", "npm:msgpackr-extract@3.0.3", "npm:sharp@0.34.5"]
 }
