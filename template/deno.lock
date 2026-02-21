@@ -58,6 +58,7 @@
     "npm:globals@^17.3.0": "17.3.0",
     "npm:happy-dom@^20.4.0": "20.4.0",
     "npm:hono@^4.11.10": "4.12.0",
+    "npm:improved-yarn-audit@^3.0.4": "3.0.4",
     "npm:js-beautify@^1.15.4": "1.15.4",
     "npm:nanostores@^1.1.0": "1.1.0",
     "npm:patch-package@^8.0.1": "8.0.1",
@@ -5075,6 +5076,10 @@
     "import-meta-resolve@4.2.0": {
       "integrity": "sha512-Iqv2fzaTQN28s/FwZAoFq0ZSs/7hMAHJVX+w8PZl3cY19Pxk6jFFalxQoIfW2826i/fDLXv8IiEZRIT0lDuWcg=="
     },
+    "improved-yarn-audit@3.0.4": {
+      "integrity": "sha512-secfgreRqLYmnp4qzaxxICpOC/RJxcfQSrDSVvkMTXS8bssjqMSuJiueqr07PVP87OlyfTytxDR2SkzIeoTfLQ==",
+      "bin": true
+    },
     "imurmurhash@0.1.4": {
       "integrity": "sha512-JmXMZ6wuvDmLiHEml9ykzqO6lwFbof0GG4IkcGaENdCRDDmMVnny7s5HsIgHCbaq0w2MyPhDqkhTUgS2LU2PHA=="
     },
@@ -8513,6 +8518,7 @@
         "npm:globals@^17.3.0",
         "npm:happy-dom@^20.4.0",
         "npm:hono@^4.11.10",
+        "npm:improved-yarn-audit@^3.0.4",
         "npm:js-beautify@^1.15.4",
         "npm:nanostores@^1.1.0",
         "npm:patch-package@^8.0.1",

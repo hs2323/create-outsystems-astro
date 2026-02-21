@@ -3217,7 +3217,7 @@ ajv-formats@3.0.1, ajv-formats@^3.0.1:
   dependencies:
     ajv "^8.0.0"
 
-ajv@8.18.0, ajv@^8.0.0, ajv@^8.18.0:
+ajv@8.18.0, ajv@^8.0.0, ajv@^8.0.1, ajv@^8.18.0:
   version "8.18.0"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-8.18.0.tgz#8864186b6738d003eb3a933172bb3833e10cefbc"
   integrity sha512-PlXPeEWMXMZ7sPYOHqmDyCJzcfNrUr3fGNKtezX14ykXOEIvyK81d+qydx89KY5O71FKMPaQ2vBfBFI5NHR63A==
@@ -5678,6 +5678,11 @@ import-meta-resolve@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/import-meta-resolve/-/import-meta-resolve-4.2.0.tgz#08cb85b5bd37ecc8eb1e0f670dc2767002d43734"
   integrity sha512-Iqv2fzaTQN28s/FwZAoFq0ZSs/7hMAHJVX+w8PZl3cY19Pxk6jFFalxQoIfW2826i/fDLXv8IiEZRIT0lDuWcg==
+
+improved-yarn-audit@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/improved-yarn-audit/-/improved-yarn-audit-3.0.4.tgz#5856ab354e21d98a12090ef690f6ff8b4c7bb8d3"
+  integrity sha512-secfgreRqLYmnp4qzaxxICpOC/RJxcfQSrDSVvkMTXS8bssjqMSuJiueqr07PVP87OlyfTytxDR2SkzIeoTfLQ==
 
 imurmurhash@^0.1.4:
   version "0.1.4"

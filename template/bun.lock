@@ -20,6 +20,7 @@
         "@nanostores/react": "^1.0.0",
         "@nanostores/vue": "^1.0.1",
         "astro": "^5.17.1",
+        "improved-yarn-audit": "^3.0.4",
         "nanostores": "^1.1.0",
         "react": "^19.2.4",
         "react-dom": "^19.2.4",
@@ -1407,6 +1408,8 @@
     "import-fresh": ["import-fresh@3.3.1", "", { "dependencies": { "parent-module": "^1.0.0", "resolve-from": "^4.0.0" } }, "sha512-TR3KfrTZTYLPB6jUjfx6MF9WcWrHL9su5TObK4ZkYgBdWKPOFoSoQIdEuTuR82pmtxH2spWG9h6etwfr1pLBqQ=="],
 
     "import-meta-resolve": ["import-meta-resolve@4.2.0", "", {}, "sha512-Iqv2fzaTQN28s/FwZAoFq0ZSs/7hMAHJVX+w8PZl3cY19Pxk6jFFalxQoIfW2826i/fDLXv8IiEZRIT0lDuWcg=="],
+
+    "improved-yarn-audit": ["improved-yarn-audit@3.0.4", "", { "bin": { "improved-yarn-audit": "bin/improved-yarn-audit" } }, "sha512-secfgreRqLYmnp4qzaxxICpOC/RJxcfQSrDSVvkMTXS8bssjqMSuJiueqr07PVP87OlyfTytxDR2SkzIeoTfLQ=="],
 
     "imurmurhash": ["imurmurhash@0.1.4", "", {}, "sha512-JmXMZ6wuvDmLiHEml9ykzqO6lwFbof0GG4IkcGaENdCRDDmMVnny7s5HsIgHCbaq0w2MyPhDqkhTUgS2LU2PHA=="],
 
