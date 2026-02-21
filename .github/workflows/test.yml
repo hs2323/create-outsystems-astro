@@ -491,6 +491,10 @@ jobs:
       - name: Install Bun
         uses: oven-sh/setup-bun@v2.1.2
 
+      - name: Install dependencies
+        working-directory: template
+        run: bun install --frozen-lockfile
+
       - name: Run security check
         working-directory: template
         run: bun run audit:bun
@@ -504,6 +508,10 @@ jobs:
 
       - name: Install Deno
         uses: denoland/setup-deno@v2.0.3
+
+      - name: Install dependencies
+        working-directory: template
+        run: deno install --frozen && deno run postinstall
 
       - name: Run security check
         working-directory: template
@@ -520,6 +528,10 @@ jobs:
         uses: actions/setup-node@v6.2.0
         with:
           node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install dependencies
+        working-directory: template
+        run: npm ci
 
       - name: Run security check
         working-directory: template
@@ -541,7 +553,11 @@ jobs:
         uses: pnpm/action-setup@v4.2.0
         with:
           version: 10
-      
+
+      - name: Install dependencies
+        working-directory: template
+        run: pnpm install --frozen-lockfile
+
       - name: Run security check
         working-directory: template
         run: pnpm run audit:pnpm
@@ -557,6 +573,10 @@ jobs:
         uses: actions/setup-node@v6.2.0
         with:
           node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install dependencies
+        working-directory: template
+        run: yarn install --frozen-lockfile
 
       - name: Run security check
         working-directory: template
