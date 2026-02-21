@@ -493,7 +493,7 @@ jobs:
 
       - name: Run security check
         working-directory: template
-        run: bun audit --ignore=GHSA-3ppc-4f35-3m26
+        run: bun run audit:bun
 
   security-deno:
     runs-on: ubuntu-latest
@@ -507,7 +507,7 @@ jobs:
 
       - name: Run security check
         working-directory: template
-        run: deno audit
+        run: deno run audit:deno
 
   security-npm:
     runs-on: ubuntu-latest
@@ -523,7 +523,7 @@ jobs:
 
       - name: Run security check
         working-directory: template
-        run: npm audit
+        run: npm run audit:npm
 
   security-pnpm:
     runs-on: ubuntu-latest
@@ -544,7 +544,7 @@ jobs:
       
       - name: Run security check
         working-directory: template
-        run: pnpm audit
+        run: pnpm run audit:pnpm
 
   security-yarn:
     runs-on: ubuntu-latest
@@ -560,7 +560,7 @@ jobs:
 
       - name: Run security check
         working-directory: template
-        run: yarn audit
+        run: yarn run audit:yarn
 
   test-bun:
     runs-on: ubuntu-latest

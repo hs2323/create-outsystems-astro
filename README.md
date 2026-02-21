@@ -93,6 +93,7 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview`         | Preview build locally, before creating output    |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
+| `npm run audit:npm`       | Run audit of modules                             |
 
 ### Yarn
 
@@ -105,6 +106,7 @@ All commands are run from the root of the project, from a terminal:
 | `yarn run preview`         | Preview build locally, before creating output    |
 | `yarn run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `yarn run astro -- --help` | Get help using the Astro CLI                     |
+| `yarn run audit:yarn`      | Run audit of modules                             |
 
 ### pnpm
 
@@ -117,6 +119,7 @@ All commands are run from the root of the project, from a terminal:
 | `pnpm run preview`         | Preview build locally, before creating output    |
 | `pnpm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `pnpm run astro -- --help` | Get help using the Astro CLI                     |
+| `pnpm run audit:pnpm`      | Run audit of modules                             |
 
 ### Bun
 
@@ -129,6 +132,7 @@ All commands are run from the root of the project, from a terminal:
 | `bun run preview`         | Preview build locally, before creating output    |
 | `bun run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `bun run astro -- --help` | Get help using the Astro CLI                     |
+| `bun run audit:bun`       | Run audit of modules                             |
 
 ### Deno
 
@@ -141,6 +145,7 @@ All commands are run from the root of the project, from a terminal:
 | `deno run preview`         | Preview build locally, before creating output    |
 | `deno run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `deno run astro -- --help` | Get help using the Astro CLI                     |
+| `deno run audit:deno`      | Run audit of modules                             |
 
 ## Getting Started
 Delete the demo application under the ```src``` folder and being to build your own application. 
