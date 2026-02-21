@@ -40,6 +40,7 @@
     "npm:@vitejs/plugin-vue@^6.0.3": "6.0.3_vite@7.3.1__@types+node@25.1.0__picomatch@4.0.3__sass@1.97.1_vue@3.5.27__typescript@5.9.3_@types+node@25.1.0_typescript@5.9.3",
     "npm:angular-eslint@^21.2.0": "21.2.0_@angular+cli@21.1.2__@types+node@25.1.0__@inquirer+prompts@7.10.1___@types+node@25.1.0__listr2@9.0.5__zod@4.3.5_eslint@9.39.2_typescript@5.9.3_typescript-eslint@8.54.0__eslint@9.39.2__typescript@5.9.3__@typescript-eslint+parser@8.54.0___eslint@9.39.2___typescript@5.9.3_@typescript-eslint+utils@8.54.0__eslint@9.39.2__typescript@5.9.3_@angular-eslint+template-parser@21.2.0__eslint@9.39.2__typescript@5.9.3_@typescript-eslint+types@8.54.0_@types+node@25.1.0",
     "npm:astro@^5.17.1": "5.17.1_typescript@5.9.3_@types+node@25.1.0_vite@6.4.1__@types+node@25.1.0__picomatch@4.0.3_zod@3.25.76",
+    "npm:devalue@5.6.3": "5.6.3",
     "npm:dotenv@^17.2.3": "17.2.3",
     "npm:eslint-config-prettier@^10.1.8": "10.1.8_eslint@9.39.2",
     "npm:eslint-plugin-astro@^1.5.0": "1.5.0_eslint@9.39.2",
@@ -239,11 +240,11 @@
       ],
       "bin": true
     },
-    "@angular-devkit/core@21.1.2_ajv@8.17.1": {
+    "@angular-devkit/core@21.1.2_ajv@8.18.0": {
       "integrity": "sha512-0wl5nJlFWsbwfUB2CQeTSmnVQ8AtqqwM3bYPYtXSc+vA8+hzsOAjjDuRnBxZS9zTnqtXKXB1e7M3Iy7KUwh7LA==",
       "dependencies": [
         "ajv@8.18.0",
-        "ajv-formats@3.0.1_ajv@8.17.1",
+        "ajv-formats",
         "jsonc-parser",
         "picomatch@4.0.3",
         "rxjs",
@@ -1667,7 +1668,7 @@
       "dependencies": [
         "@hono/node-server",
         "ajv@8.18.0",
-        "ajv-formats@3.0.1_ajv@8.18.0",
+        "ajv-formats",
         "content-type",
         "cors",
         "cross-spawn",
@@ -1689,7 +1690,7 @@
       "dependencies": [
         "@hono/node-server",
         "ajv@8.18.0",
-        "ajv-formats@3.0.1_ajv@8.18.0",
+        "ajv-formats",
         "content-type",
         "cors",
         "cross-spawn",
@@ -3009,15 +3010,6 @@
     "agent-base@7.1.4": {
       "integrity": "sha512-MnA+YT8fwfJPgBx3m60MNqakm30XOkyIoH1y6huTQvC0PwZG7ki8NacLBcrPbNoo8vEZy7Jpuk7+jMO+CUovTQ=="
     },
-    "ajv-formats@3.0.1_ajv@8.17.1": {
-      "integrity": "sha512-8iUql50EUR+uUcdRQ3HDqa6EVyo3docL8g5WJ3FNcWmu62IbkGUue/pEyLBW8VGKKucTPgqeks4fIU1DA4yowQ==",
-      "dependencies": [
-        "ajv@8.18.0"
-      ],
-      "optionalPeers": [
-        "ajv@8.18.0"
-      ]
-    },
     "ajv-formats@3.0.1_ajv@8.18.0": {
       "integrity": "sha512-8iUql50EUR+uUcdRQ3HDqa6EVyo3docL8g5WJ3FNcWmu62IbkGUue/pEyLBW8VGKKucTPgqeks4fIU1DA4yowQ==",
       "dependencies": [
@@ -3833,8 +3825,8 @@
         "base-64"
       ]
     },
-    "devalue@5.6.2": {
-      "integrity": "sha512-nPRkjWzzDQlsejL1WVifk5rvcFi/y1onBRxjaFMjZeR9mFpqu2gmAZ9xUB9/IEanEP/vBtGeGganC/GO1fmufg=="
+    "devalue@5.6.3": {
+      "integrity": "sha512-nc7XjUU/2Lb+SvEFVGcWLiKkzfw8+qHI7zn8WYXKkLMgfGSHbgCEaR6bJpev8Cm6Rmrb19Gfd/tZvGqx9is3wg=="
     },
     "devlop@1.1.0": {
       "integrity": "sha512-RWmIqhcFf1lRYBvNmr7qTNuyCt/7/ns2jbpp1+PalgE/rDQcBT0fioSMUpJ93irlUhC5hrg4cYqe6U+0ImW0rA==",
@@ -8415,6 +8407,7 @@
     "dependencies": [
       "npm:@isaacs/brace-expansion@^5.0.1",
       "npm:@modelcontextprotocol/sdk@^1.26.0",
+      "npm:devalue@5.6.3",
       "npm:qs@^6.14.2"
     ],
     "packageJson": {
