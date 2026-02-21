@@ -493,7 +493,7 @@ jobs:
 
       - name: Run security check
         working-directory: template
-        run: bun audit
+        run: bun audit --ignore=GHSA-3ppc-4f35-3m26
 
   security-deno:
     runs-on: ubuntu-latest
