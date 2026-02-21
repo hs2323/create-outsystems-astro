@@ -22,7 +22,7 @@
     "npm:@eslint/js@^9.39.2": "9.39.2",
     "npm:@eslint/markdown@^7.5.1": "7.5.1",
     "npm:@isaacs/brace-expansion@^5.0.1": "5.0.1",
-    "npm:@modelcontextprotocol/sdk@^1.26.0": "1.26.0_zod@3.25.76_hono@4.11.7_ajv@8.17.1_express@5.2.1",
+    "npm:@modelcontextprotocol/sdk@^1.26.0": "1.26.0_zod@3.25.76_hono@4.11.7_ajv@8.18.0_express@5.2.1",
     "npm:@nanostores/react@1": "1.0.0_nanostores@1.1.0_react@19.2.4",
     "npm:@nanostores/vue@^1.0.1": "1.0.1_nanostores@1.1.0_vue@3.5.27__typescript@5.9.3_typescript@5.9.3",
     "npm:@playwright/test@^1.57.0": "1.57.0",
@@ -242,8 +242,8 @@
     "@angular-devkit/core@21.1.2_ajv@8.17.1": {
       "integrity": "sha512-0wl5nJlFWsbwfUB2CQeTSmnVQ8AtqqwM3bYPYtXSc+vA8+hzsOAjjDuRnBxZS9zTnqtXKXB1e7M3Iy7KUwh7LA==",
       "dependencies": [
-        "ajv@8.17.1",
-        "ajv-formats",
+        "ajv@8.18.0",
+        "ajv-formats@3.0.1_ajv@8.17.1",
         "jsonc-parser",
         "picomatch@4.0.3",
         "rxjs",
@@ -393,7 +393,7 @@
         "@angular-devkit/schematics",
         "@inquirer/prompts",
         "@listr2/prompt-adapter-inquirer",
-        "@modelcontextprotocol/sdk@1.26.0_zod@4.3.5_hono@4.11.7_ajv@8.17.1_express@5.2.1",
+        "@modelcontextprotocol/sdk@1.26.0_zod@4.3.5_hono@4.11.7_ajv@8.18.0_express@5.2.1",
         "@schematics/angular",
         "@yarnpkg/lockfile",
         "algoliasearch",
@@ -1157,7 +1157,7 @@
     "@eslint/eslintrc@3.3.3": {
       "integrity": "sha512-Kr+LPIUVKz2qkx1HAMH8q1q6azbqBAsXJUxBl/ODDuVPX45Z9DfwB8tPjTi6nNZ8BuM3nbJxC5zCAg5elnBUTQ==",
       "dependencies": [
-        "ajv@6.12.6",
+        "ajv@6.14.0",
         "debug@4.4.3",
         "espree",
         "globals@14.0.0",
@@ -1662,12 +1662,12 @@
       "os": ["win32"],
       "cpu": ["x64"]
     },
-    "@modelcontextprotocol/sdk@1.26.0_zod@3.25.76_hono@4.11.7_ajv@8.17.1_express@5.2.1": {
+    "@modelcontextprotocol/sdk@1.26.0_zod@3.25.76_hono@4.11.7_ajv@8.18.0_express@5.2.1": {
       "integrity": "sha512-Y5RmPncpiDtTXDbLKswIJzTqu2hyBKxTNsgKqKclDbhIgg1wgtf1fRuvxgTnRfcnxtvvgbIEcqUOzZrJ6iSReg==",
       "dependencies": [
         "@hono/node-server",
-        "ajv@8.17.1",
-        "ajv-formats",
+        "ajv@8.18.0",
+        "ajv-formats@3.0.1_ajv@8.18.0",
         "content-type",
         "cors",
         "cross-spawn",
@@ -1684,12 +1684,12 @@
         "zod-to-json-schema@3.25.1_zod@3.25.76"
       ]
     },
-    "@modelcontextprotocol/sdk@1.26.0_zod@4.3.5_hono@4.11.7_ajv@8.17.1_express@5.2.1": {
+    "@modelcontextprotocol/sdk@1.26.0_zod@4.3.5_hono@4.11.7_ajv@8.18.0_express@5.2.1": {
       "integrity": "sha512-Y5RmPncpiDtTXDbLKswIJzTqu2hyBKxTNsgKqKclDbhIgg1wgtf1fRuvxgTnRfcnxtvvgbIEcqUOzZrJ6iSReg==",
       "dependencies": [
         "@hono/node-server",
-        "ajv@8.17.1",
-        "ajv-formats",
+        "ajv@8.18.0",
+        "ajv-formats@3.0.1_ajv@8.18.0",
         "content-type",
         "cors",
         "cross-spawn",
@@ -3012,14 +3012,23 @@
     "ajv-formats@3.0.1_ajv@8.17.1": {
       "integrity": "sha512-8iUql50EUR+uUcdRQ3HDqa6EVyo3docL8g5WJ3FNcWmu62IbkGUue/pEyLBW8VGKKucTPgqeks4fIU1DA4yowQ==",
       "dependencies": [
-        "ajv@8.17.1"
+        "ajv@8.18.0"
       ],
       "optionalPeers": [
-        "ajv@8.17.1"
+        "ajv@8.18.0"
       ]
     },
-    "ajv@6.12.6": {
-      "integrity": "sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==",
+    "ajv-formats@3.0.1_ajv@8.18.0": {
+      "integrity": "sha512-8iUql50EUR+uUcdRQ3HDqa6EVyo3docL8g5WJ3FNcWmu62IbkGUue/pEyLBW8VGKKucTPgqeks4fIU1DA4yowQ==",
+      "dependencies": [
+        "ajv@8.18.0"
+      ],
+      "optionalPeers": [
+        "ajv@8.18.0"
+      ]
+    },
+    "ajv@6.14.0": {
+      "integrity": "sha512-IWrosm/yrn43eiKqkfkHis7QioDleaXQHdDVPKg0FSwwd/DuvyX79TZnFOnYpB7dcsFAMmtFztZuXPDvSePkFw==",
       "dependencies": [
         "fast-deep-equal",
         "fast-json-stable-stringify",
@@ -3027,8 +3036,8 @@
         "uri-js"
       ]
     },
-    "ajv@8.17.1": {
-      "integrity": "sha512-B/gBuNg5SiMTrPkC+A2+cW0RszwxYmn6VYxB/inlBStS5nx6xHIt/ehKRhIMhqusl7a8LjQoZnjCs5vhwxOQ1g==",
+    "ajv@8.18.0": {
+      "integrity": "sha512-PlXPeEWMXMZ7sPYOHqmDyCJzcfNrUr3fGNKtezX14ykXOEIvyK81d+qydx89KY5O71FKMPaQ2vBfBFI5NHR63A==",
       "dependencies": [
         "fast-deep-equal",
         "fast-uri",
@@ -4352,7 +4361,7 @@
         "@humanwhocodes/module-importer",
         "@humanwhocodes/retry",
         "@types/estree",
-        "ajv@6.12.6",
+        "ajv@6.14.0",
         "chalk@4.1.2",
         "cross-spawn",
         "debug@4.4.3",
@@ -7555,7 +7564,8 @@
         "minipass@7.1.2",
         "minizlib",
         "yallist@5.0.0"
-      ]
+      ],
+      "deprecated": true
     },
     "tiny-inflate@1.0.3": {
       "integrity": "sha512-pkY1fj1cKHb2seWDy0B16HeWyczlJA9/WW3u3c4z/NiWDsO3DOU5D7nhTLE9CF0yXv/QZFY7sEJmj24dK+Rrqw=="
