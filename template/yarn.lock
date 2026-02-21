@@ -181,7 +181,7 @@
   resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-21.1.0.tgz#723376f112be0e5e0b6a954e3e4918645f23312b"
   integrity sha512-dPfVy0CictDjWffRv4pGTPOFjdlJL3ZkGUqxzaosUjMbJW+Ai9cNn1VNr7zxYZ4kem3BxLBh1thzDsCPrkXlZA==
   dependencies:
-    ajv "8.17.1"
+    ajv "8.18.0"
     ajv-formats "3.0.1"
     jsonc-parser "3.3.1"
     picomatch "4.0.3"
@@ -193,7 +193,7 @@
   resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-21.1.2.tgz#a5d21f7ac12627882676a44d64fb32d226b61621"
   integrity sha512-0wl5nJlFWsbwfUB2CQeTSmnVQ8AtqqwM3bYPYtXSc+vA8+hzsOAjjDuRnBxZS9zTnqtXKXB1e7M3Iy7KUwh7LA==
   dependencies:
-    ajv "8.17.1"
+    ajv "8.18.0"
     ajv-formats "3.0.1"
     jsonc-parser "3.3.1"
     picomatch "4.0.3"
@@ -1630,7 +1630,7 @@
   integrity sha512-Y5RmPncpiDtTXDbLKswIJzTqu2hyBKxTNsgKqKclDbhIgg1wgtf1fRuvxgTnRfcnxtvvgbIEcqUOzZrJ6iSReg==
   dependencies:
     "@hono/node-server" "^1.19.9"
-    ajv "^8.17.1"
+    ajv "^8.18.0"
     ajv-formats "^3.0.1"
     content-type "^1.0.5"
     cors "^2.8.5"
@@ -3217,7 +3217,7 @@ ajv-formats@3.0.1, ajv-formats@^3.0.1:
   dependencies:
     ajv "^8.0.0"
 
-ajv@8.18.0, ajv@^8.0.0, ajv@^8.17.1:
+ajv@8.18.0, ajv@^8.0.0, ajv@^8.18.0:
   version "8.18.0"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-8.18.0.tgz#8864186b6738d003eb3a933172bb3833e10cefbc"
   integrity sha512-PlXPeEWMXMZ7sPYOHqmDyCJzcfNrUr3fGNKtezX14ykXOEIvyK81d+qydx89KY5O71FKMPaQ2vBfBFI5NHR63A==
@@ -8698,10 +8698,10 @@ synckit@^0.11.0:
   dependencies:
     "@pkgr/core" "^0.2.9"
 
-tar@^7.4.3, tar@^7.5.4:
-  version "7.5.7"
-  resolved "https://registry.yarnpkg.com/tar/-/tar-7.5.7.tgz#adf99774008ba1c89819f15dbd6019c630539405"
-  integrity sha512-fov56fJiRuThVFXD6o6/Q354S7pnWMJIVlDBYijsTNx6jKSE4pvrDTs6lUnmGvNyfJwFQQwWy3owKz1ucIhveQ==
+tar@^7.4.3, tar@^7.5.4, tar@^7.5.8:
+  version "7.5.9"
+  resolved "https://registry.yarnpkg.com/tar/-/tar-7.5.9.tgz#817ac12a54bc4362c51340875b8985d7dc9724b8"
+  integrity sha512-BTLcK0xsDh2+PUe9F6c2TlRp4zOOBMTkoQHQIWSIzI0R7KG46uEwq4OPk2W7bZcprBMsuaeFsqwYr7pjh6CuHg==
   dependencies:
     "@isaacs/fs-minipass" "^4.0.0"
     chownr "^3.0.0"
