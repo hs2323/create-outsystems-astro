@@ -22,7 +22,7 @@
     "npm:@eslint/js@^9.39.2": "9.39.2",
     "npm:@eslint/markdown@^7.5.1": "7.5.1",
     "npm:@isaacs/brace-expansion@^5.0.1": "5.0.1",
-    "npm:@modelcontextprotocol/sdk@^1.26.0": "1.26.0_zod@3.25.76_hono@4.11.7_ajv@8.18.0_express@5.2.1",
+    "npm:@modelcontextprotocol/sdk@^1.26.0": "1.26.0_zod@3.25.76_hono@4.12.0_ajv@8.18.0_express@5.2.1",
     "npm:@nanostores/react@1": "1.0.0_nanostores@1.1.0_react@19.2.4",
     "npm:@nanostores/vue@^1.0.1": "1.0.1_nanostores@1.1.0_vue@3.5.27__typescript@5.9.3_typescript@5.9.3",
     "npm:@playwright/test@^1.57.0": "1.57.0",
@@ -56,7 +56,7 @@
     "npm:eslint@^9.39.2": "9.39.2",
     "npm:globals@^17.3.0": "17.3.0",
     "npm:happy-dom@^20.4.0": "20.4.0",
-    "npm:hono@^4.11.7": "4.11.7",
+    "npm:hono@^4.11.10": "4.12.0",
     "npm:js-beautify@^1.15.4": "1.15.4",
     "npm:nanostores@^1.1.0": "1.1.0",
     "npm:patch-package@^8.0.1": "8.0.1",
@@ -395,7 +395,7 @@
         "@angular-devkit/schematics",
         "@inquirer/prompts",
         "@listr2/prompt-adapter-inquirer",
-        "@modelcontextprotocol/sdk@1.26.0_zod@4.3.5_hono@4.11.7_ajv@8.18.0_express@5.2.1",
+        "@modelcontextprotocol/sdk@1.26.0_zod@4.3.5_hono@4.12.0_ajv@8.18.0_express@5.2.1",
         "@schematics/angular",
         "@yarnpkg/lockfile",
         "algoliasearch",
@@ -1197,7 +1197,7 @@
         "levn"
       ]
     },
-    "@hono/node-server@1.19.9_hono@4.11.7": {
+    "@hono/node-server@1.19.9_hono@4.12.0": {
       "integrity": "sha512-vHL6w3ecZsky+8P5MD+eFfaGTyCeOHUIFYMGpQGbrBTSmNNoxv0if69rEZ5giu36weC5saFuznL411gRX7bJDw==",
       "dependencies": [
         "hono"
@@ -1664,7 +1664,7 @@
       "os": ["win32"],
       "cpu": ["x64"]
     },
-    "@modelcontextprotocol/sdk@1.26.0_zod@3.25.76_hono@4.11.7_ajv@8.18.0_express@5.2.1": {
+    "@modelcontextprotocol/sdk@1.26.0_zod@3.25.76_hono@4.12.0_ajv@8.18.0_express@5.2.1": {
       "integrity": "sha512-Y5RmPncpiDtTXDbLKswIJzTqu2hyBKxTNsgKqKclDbhIgg1wgtf1fRuvxgTnRfcnxtvvgbIEcqUOzZrJ6iSReg==",
       "dependencies": [
         "@hono/node-server",
@@ -1686,7 +1686,7 @@
         "zod-to-json-schema@3.25.1_zod@3.25.76"
       ]
     },
-    "@modelcontextprotocol/sdk@1.26.0_zod@4.3.5_hono@4.11.7_ajv@8.18.0_express@5.2.1": {
+    "@modelcontextprotocol/sdk@1.26.0_zod@4.3.5_hono@4.12.0_ajv@8.18.0_express@5.2.1": {
       "integrity": "sha512-Y5RmPncpiDtTXDbLKswIJzTqu2hyBKxTNsgKqKclDbhIgg1wgtf1fRuvxgTnRfcnxtvvgbIEcqUOzZrJ6iSReg==",
       "dependencies": [
         "@hono/node-server",
@@ -4960,8 +4960,8 @@
         "hermes-estree"
       ]
     },
-    "hono@4.11.7": {
-      "integrity": "sha512-l7qMiNee7t82bH3SeyUCt9UF15EVmaBvsppY2zQtrbIhl/yzBTny+YUxsVjSjQ6gaqaeVtZmGocom8TzBlA4Yw=="
+    "hono@4.12.0": {
+      "integrity": "sha512-NekXntS5M94pUfiVZ8oXXK/kkri+5WpX2/Ik+LVsl+uvw+soj4roXIsPqO+XsWrAw20mOzaXOZf3Q7PfB9A/IA=="
     },
     "hookable@5.5.3": {
       "integrity": "sha512-Yc+BQe8SvoXH1643Qez1zqLRmbA5rCL+sSmk6TVos0LWVfNIB7PGncdlId77WzLGSIB5KaWgTaNTs2lNVEI6VQ=="
@@ -8465,7 +8465,7 @@
         "npm:eslint@^9.39.2",
         "npm:globals@^17.3.0",
         "npm:happy-dom@^20.4.0",
-        "npm:hono@^4.11.7",
+        "npm:hono@^4.11.10",
         "npm:js-beautify@^1.15.4",
         "npm:nanostores@^1.1.0",
         "npm:patch-package@^8.0.1",
