@@ -479,7 +479,7 @@ jobs:
 
       - name: Run security check
         working-directory: docs
-        run: npm audit
+        run: npm run audit
 
   security-bun:
     runs-on: ubuntu-latest

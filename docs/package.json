@@ -4,6 +4,7 @@
   "version": "0.4.2",
   "scripts": {
     "astro": "astro",
+    "audit": "better-npm-audit audit --exclude GHSA-3ppc-4f35-3m26",
     "build": "astro build",
     "dev": "astro dev",
     "format": "prettier . --check",
@@ -22,6 +23,7 @@
   "devDependencies": {
     "@eslint/compat": "^2.0.2",
     "@eslint/markdown": "^7.5.1",
+    "better-npm-audit": "^3.11.0",
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-astro": "^1.5.0",

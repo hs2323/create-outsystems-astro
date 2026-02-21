@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## Added
+- Added docs better-npm-audit for npm auditing.
 - Added template improved-yarn-audit for Yarn auditing.
 - Added template better-npm-audit for npm auditing.
 - Added Nano Stores for React and Vue.
