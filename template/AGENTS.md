@@ -34,12 +34,12 @@
 
 ### Components
 
-- The components live in the folder framework/[NAME]/ (src/framework/angular, src/framework/react and src/framework/vue ) with each framework having its own folder. The framework folder should stay in place as the components will be rendered from there. The Angular components will only be transformed by Astro if they are in the framework/angular folder.
+- The components live in the folder framework/{NAME}/ (src/framework/angular, src/framework/react and src/framework/vue ) with each framework having its own folder. The framework folder should stay in place as the components will be rendered from there. The Angular components will only be transformed by Astro if they are in the framework/angular folder.
 
 ### Parameters
 
 - Parameters are assigned as attributes on the component. Each framework will then handle them as incoming parameters.
-- OutSystems will pass in parameters already prepared for the ``<astro-island>`. It already has copied the Astro method of serialization in https://github.com/withastro/astro/blob/main/packages/astro/src/runtime/server/serialize.ts.
+- OutSystems will pass in parameters already prepared for the astro-island. It already has copied the Astro method of serialization in https://github.com/withastro/astro/blob/main/packages/astro/src/runtime/server/serialize.ts.
 
 #### Slots
 
@@ -126,12 +126,56 @@ the slots can be used as:
 
 Angular does not support the use of slots. Any use of slots with Angular should be discouraged.
 
+
+### Nano Stores
+The Nano Stores library - https://github.com/nanostores/nanostores - is supported for both sharing state between different Islands or from OutSystems to an Island. This could be used in place of a parameter, but parameters should be the default method. 
+
+The current supported OutSystems Nano Stores module only suports Atoms and Maps. It can either subscribe to an Atom or Map. It can also listen to Keys of a Map.
+
+Nano Stores are currently supported for only React - https://github.com/nanostores/react and Vue - https://github.com/nanostores/vue. The Angular 21 library does not yet support them.
+
+In OutSystems, the store will be on the Window object. The Islands component will then have to access it from there.
+
+#### React
+```js
+import { useStore } from "@nanostores/react";
+import { useState } from "react";
+
+
+export default function Counter({}) {
+  const nanoStoreValue = useStore(window.Stores["MyGreatStore"]);
+
+  return (
+    <>
+        <div>
+            <strong>Nano Store value:</strong>
+            <div>{nanoStoreValue}</div>
+        </div>
+    </>
+  );
+}
+```
+
+#### Vue
+```vue
+<script setup lang="ts">
+import { useStore } from "@nanostores/vue";
+const nanoStoreValue = useStore(window.Stores["MyGreatStore"]);
+</script>
+
+<template>
+    <div>
+          <div>{{ nanoStoreValue }}</div>
+    </div>
+</template>
+```
+
 ### Testing
 
 - There is a preset set of testing tools, but can be changed after generation.
 - The unit testing library setup is Vitest. The unit tests are located in `test/unit` folder.
-- The integration testing library is Testing Library with an equivalent library per framework. Each framework is in its own folder in `test/integration/[FRAMEWORK]`.
-- The end-to-end testing library is Playwright. Each framework is in its own folder in `test/e2e/[FRAMEWORK]`.
+- The integration testing library is Testing Library with an equivalent library per framework. Each framework is in its own folder in `test/integration/{FRAMEWORK}`.
+- The end-to-end testing library is Playwright. Each framework is in its own folder in `test/e2e/{FRAMEWORK}`.
 
 ### Linting and formatting
 
