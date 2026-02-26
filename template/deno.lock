@@ -1138,7 +1138,7 @@
       "dependencies": [
         "@eslint/object-schema",
         "debug@4.4.3",
-        "minimatch@3.1.2"
+        "minimatch@3.1.5"
       ]
     },
     "@eslint/config-helpers@0.4.2": {
@@ -1169,7 +1169,7 @@
         "ignore@5.3.2",
         "import-fresh",
         "js-yaml",
-        "minimatch@3.1.2",
+        "minimatch@3.1.5",
         "strip-json-comments"
       ]
     },
@@ -2473,7 +2473,7 @@
       "integrity": "sha512-HqNBuV/oIlMKdkLshXd1zKBqNQCsuPEsgQOkfFQ/eUKjRlwndXW1AjN9LVkBEIukm00gGXSRmfkl0Wv5VXLnlw==",
       "dependencies": [
         "fast-glob",
-        "minimatch@9.0.5",
+        "minimatch@9.0.9",
         "mkdirp",
         "path-browserify"
       ]
@@ -2497,7 +2497,7 @@
       "integrity": "sha512-Y8cK9aggNRsqJVaKUlEYs4s7CvQ1b1ta2DVPyAimb0I2qhzjNk+A+mxvll/klL0RlfuIUei8BF7YWiua4kQqww==",
       "dependencies": [
         "@tufjs/canonical-json",
-        "minimatch@10.1.1"
+        "minimatch@10.2.4"
       ]
     },
     "@tybys/wasm-util@0.10.1": {
@@ -2693,7 +2693,7 @@
         "@typescript-eslint/types",
         "@typescript-eslint/visitor-keys",
         "debug@4.4.3",
-        "minimatch@9.0.5",
+        "minimatch@9.0.9",
         "semver@7.7.3",
         "tinyglobby",
         "ts-api-utils",
@@ -3927,7 +3927,7 @@
       "dependencies": [
         "@one-ini/wasm",
         "commander@10.0.1",
-        "minimatch@9.0.1",
+        "minimatch@9.0.9",
         "semver@7.7.3"
       ],
       "bin": true
@@ -4245,7 +4245,7 @@
         "hasown",
         "is-core-module",
         "is-glob",
-        "minimatch@3.1.2",
+        "minimatch@3.1.5",
         "object.fromentries",
         "object.groupby",
         "object.values",
@@ -4312,7 +4312,7 @@
         "estraverse",
         "hasown",
         "jsx-ast-utils",
-        "minimatch@3.1.2",
+        "minimatch@3.1.5",
         "object.entries",
         "object.fromentries",
         "object.values",
@@ -4400,7 +4400,7 @@
         "is-glob",
         "json-stable-stringify-without-jsonify",
         "lodash.merge",
-        "minimatch@3.1.2",
+        "minimatch@3.1.5",
         "natural-compare",
         "optionator"
       ],
@@ -4775,7 +4775,7 @@
       "dependencies": [
         "foreground-child",
         "jackspeak",
-        "minimatch@9.0.5",
+        "minimatch@9.0.9",
         "minipass@7.1.2",
         "package-json-from-dist",
         "path-scurry@1.11.1"
@@ -4786,7 +4786,7 @@
     "glob@13.0.0": {
       "integrity": "sha512-tvZgpqk6fz4BaNZ66ZsRaZnbHvP/jG3uKJvAZOwEVUL4RTA5nJeeLYfyN9/VA8NX/V3IBG+hkeuGpKjvELkVhA==",
       "dependencies": [
-        "minimatch@10.1.1",
+        "minimatch@10.2.4",
         "minipass@7.1.2",
         "path-scurry@2.0.1"
       ]
@@ -5059,7 +5059,7 @@
     "ignore-walk@8.0.0": {
       "integrity": "sha512-FCeMZT4NiRQGh+YkeKMtWrOmBgWjHjMJ26WQWrRQyoyzqevdaGSakUaJW5xQYmjLlUVk2qUnCjYVBax9EKKg8A==",
       "dependencies": [
-        "minimatch@10.1.1"
+        "minimatch@10.2.4"
       ]
     },
     "ignore@5.3.2": {
@@ -6055,26 +6055,20 @@
     "min-indent@1.0.1": {
       "integrity": "sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg=="
     },
-    "minimatch@10.1.1": {
-      "integrity": "sha512-enIvLvRAFZYXJzkCYG5RKmPfrFArdLv+R+lbQ53BmIMLIry74bjKzX6iHAm8WYamJkhSSEabrWN5D97XnKObjQ==",
+    "minimatch@10.2.4": {
+      "integrity": "sha512-oRjTw/97aTBN0RHbYCdtF1MQfvusSIBQM0IZEgzl6426+8jSC0nF1a/GmnVLpfB9yyr6g6FTqWqiZVbxrtaCIg==",
       "dependencies": [
         "@isaacs/brace-expansion"
       ]
     },
-    "minimatch@3.1.2": {
-      "integrity": "sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==",
+    "minimatch@3.1.5": {
+      "integrity": "sha512-VgjWUsnnT6n+NUk6eZq77zeFdpW2LWDzP6zFGrCbHXiYNul5Dzqk2HHQ5uFH2DNW5Xbp8+jVzaeNt94ssEEl4w==",
       "dependencies": [
         "brace-expansion@1.1.12"
       ]
     },
-    "minimatch@9.0.1": {
-      "integrity": "sha512-0jWhJpD/MdhPXwPuiRkCbfYfSKp2qnn2eOc279qI7f+osl/l+prKSrvhg157zSYvx/1nmgn2NqdT6k2Z7zSH9w==",
-      "dependencies": [
-        "brace-expansion@2.0.2"
-      ]
-    },
-    "minimatch@9.0.5": {
-      "integrity": "sha512-G6T0ZX48xgozx7587koeX9Ys2NYy6Gmv//P89sEte9V9whIapMNF4idKxnW2QtCcLiTWlb/wfCabAtAFWhhBow==",
+    "minimatch@9.0.9": {
+      "integrity": "sha512-OBwBN9AL4dqmETlpS2zasx+vTeWclWzkblfZk7KTA5j3jeOONz/tRCnZomUyvNg83wL5Zv9Ss6HMJXAgL8R2Yg==",
       "dependencies": [
         "brace-expansion@2.0.2"
       ]

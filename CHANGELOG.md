@@ -56,6 +56,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Changed recommendation of function handler from binding to the ```window``` instead of the ```document``` object.
 
 ### Security
+- Updated template sub-dependency minimatch@10 to 10.2.4 due to CVE-2026-27903.
+- Updated template sub-dependency minimatch@9 to 9.0.9 due to CVE-2026-27903.
+- Updated template sub-dependency minimatch@3 to 3.1.5 due to CVE-2026-27903.
 - Updated docs sub-dependency rollup to 4.59.0 due to CVE-2026-27606.
 - Updated docs sub-dependency minimatch 9.0.5 to 9.0.9 due to CVE-2026-26996.
 - Updated docs sub-dependency minimatch 3.1.2 to 3.1.5 due to CVE-2026-26996.
