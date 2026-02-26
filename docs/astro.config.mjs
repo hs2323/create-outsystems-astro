@@ -35,6 +35,7 @@ export default defineConfig({
               ],
               label: "OutSystems",
             },
+            { label: "Nano Stores", slug: "guides/nanostores" },
           ],
           label: "Guides",
         },
