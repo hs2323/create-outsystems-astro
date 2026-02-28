@@ -24,6 +24,10 @@
 - The project can intialized from the Create OutSystems Astro package (https://www.npmjs.com/package/create-outsystems-astro).
 - In this document, for any reference to running package manager script, the `PM` attribute should be replaced with whatever package manager the user is using.
 
+In OutSystems 11, the Islands library is available at https://www.outsystems.com/forge/component-overview/22857/islands-o11.
+
+In OutSystems Developer Cloud, the Islands library is available at https://www.outsystems.com/forge/component-overview/22960/islands-odc.
+
 ### Pages
 
 - The files in src/pages/\*.astro are used as a starting point and holds the components for generation. They can be tested by running `npm run dev`. That will show what the component looks like as rendered. The sample example pages are broken out by framework name (src/pages/react, src/pages/vue, etc). This page will house the component(s) entry points.
@@ -126,37 +130,42 @@ the slots can be used as:
 
 Angular does not support the use of slots. Any use of slots with Angular should be discouraged.
 
-
 ### Nano Stores
-The Nano Stores library - https://github.com/nanostores/nanostores - is supported for both sharing state between different Islands or from OutSystems to an Island. This could be used in place of a parameter, but parameters should be the default method. 
+
+The Nano Stores library - https://github.com/nanostores/nanostores - is supported for both sharing state between different Islands or from OutSystems to an Island. This could be used in place of a parameter, but parameters should be the default method.
 
 The current supported OutSystems Nano Stores module only suports Atoms and Maps. It can either subscribe to an Atom or Map. It can also listen to Keys of a Map.
+
+The OutSystems 11 library is called Lightweight State Manager - https://www.outsystems.com/forge/component-overview/23528/lightweight-state-manager-o11 is available in the O11 Forge.
+
+The OutSystems Developer Cloud library is called Lightweight State Manager and is available in the ODC Forge.
 
 Nano Stores are currently supported for only React - https://github.com/nanostores/react and Vue - https://github.com/nanostores/vue. The Angular 21 library does not yet support them.
 
 In OutSystems, the store will be on the Window object. The Islands component will then have to access it from there.
 
 #### React
+
 ```js
 import { useStore } from "@nanostores/react";
 import { useState } from "react";
-
 
 export default function Counter({}) {
   const nanoStoreValue = useStore(window.Stores["MyGreatStore"]);
 
   return (
     <>
-        <div>
-            <strong>Nano Store value:</strong>
-            <div>{nanoStoreValue}</div>
-        </div>
+      <div>
+        <strong>Nano Store value:</strong>
+        <div>{nanoStoreValue}</div>
+      </div>
     </>
   );
 }
 ```
 
 #### Vue
+
 ```vue
 <script setup lang="ts">
 import { useStore } from "@nanostores/vue";
@@ -164,9 +173,9 @@ const nanoStoreValue = useStore(window.Stores["MyGreatStore"]);
 </script>
 
 <template>
-    <div>
-          <div>{{ nanoStoreValue }}</div>
-    </div>
+  <div>
+    <div>{{ nanoStoreValue }}</div>
+  </div>
 </template>
 ```
 
