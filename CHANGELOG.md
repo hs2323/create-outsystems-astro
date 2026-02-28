@@ -8,6 +8,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ##  [Unreleased]
 
 ### Changed
+- Updated docs dependency typescript-eslint to 8.56.1.
+- Updated docs dependency starlight-versions to 0.7.0.
+- Updated docs dependency eslint-plugin-perfectionist to 5.6.0.
+- Updated docs dependency eslint-plugin-astro to 1.6.0.
+- Updated docs dependency eslint to 9.39.3.
+- Updated docs dependency astro to 5.18.0.
+- Updated docs dependency @astrojs/starlight to 0.37.6.
 - Updated template dependency vue-eslint-parser to 10.4.0.
 - Updated template dependency typescript-eslint to 8.56.1.
 - Updated template dependency happy-dom to 20.7.0.
