@@ -42,9 +42,9 @@ In OutSystems Developer Cloud, the Islands library is available at https://www.o
 - The components live in the folder framework/{NAME}/:
   - Angular: src/framework/angular
   - React: src/framework/react
-  - Svelte:  src/framework/svelte
-  - Vue: src/framework/vue 
-The framework folder should stay in place as the components will be rendered from there. The Angular components will only be transformed by Astro if they are in the framework/angular folder.
+  - Svelte: src/framework/svelte
+  - Vue: src/framework/vue
+    The framework folder should stay in place as the components will be rendered from there. The Angular components will only be transformed by Astro if they are in the framework/angular folder.
 
 ### Parameters
 
@@ -108,6 +108,7 @@ export default function Counter({
 ```
 
 ##### Svelte
+
 - In Svelte, slots are handled as by using the <slot /> tag. The default slot is the is just <slot />. A named slot will have the name of its slot as an attribute such as <slot name="header" />. Placement of the slot will determine where the slot will render.
 
 ```js
@@ -160,7 +161,6 @@ the slots can be used as:
 </template>
 ```
 
-
 ### Nano Stores
 
 The Nano Stores library - https://github.com/nanostores/nanostores - is supported for both sharing state between different Islands or from OutSystems to an Island. This could be used in place of a parameter, but parameters should be the default method.
@@ -193,12 +193,13 @@ export default function Counter({}) {
 ```
 
 #### Svelte
+
 ```svelte
 <script lang="ts">
   const nanoStoreValue = (window as any).Stores["svelteStore"];
 </script>
-<div>{$nanoStoreValue}</div>
 
+<div>{$nanoStoreValue}</div>
 ```
 
 #### Vue
