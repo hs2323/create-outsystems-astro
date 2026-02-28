@@ -12,6 +12,7 @@ Refer to the full [Nano Stores documentation](https://github.com/nanostores/nano
 Nano Stores are currently supported for the following libraries:
 
 - [React](https://github.com/nanostores/react)
+- [Svelte](https://svelte.dev/docs/svelte/svelte-files#script-4-prefix-stores-with-$-to-access-their-values)
 - [Vue](https://github.com/nanostores/vue)
 
 Nano Stores for Angular is not currently supported.
@@ -23,7 +24,7 @@ Create the objects inside of the stores folder (or other preferred structure). Y
 The OutSystems module, Lightweight State Manager, is available for both the O11 and ODC platforms.
 
 - [O11](https://www.outsystems.com/forge/component-overview/23528/lightweight-state-manager-o11)
-- ODC (coming soon)
+- ODC
 
 OutSystem currently supports the following structures:
 
@@ -54,6 +55,15 @@ export default function Counter({}) {
     </>
   );
 }
+```
+
+Svelte:
+```svelte
+<script lang="ts">
+  const nanoStoreValue = (window as any).Stores["svelteStore"];
+</script>
+
+<div>{$nanoStoreValue}</div>
 ```
 
 Vue:
