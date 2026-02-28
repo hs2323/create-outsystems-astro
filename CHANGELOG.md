@@ -5,9 +5,44 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+##  [Unreleased]
+
+### Changed
+- Updated docs dependency typescript-eslint to 8.56.1.
+- Updated docs dependency starlight-versions to 0.7.0.
+- Updated docs dependency eslint-plugin-perfectionist to 5.6.0.
+- Updated docs dependency eslint-plugin-astro to 1.6.0.
+- Updated docs dependency eslint to 9.39.3.
+- Updated docs dependency astro to 5.18.0.
+- Updated docs dependency @astrojs/starlight to 0.37.6.
+- Updated template dependency vue-eslint-parser to 10.4.0.
+- Updated template dependency typescript-eslint to 8.56.1.
+- Updated template dependency happy-dom to 20.7.0.
+- Removed hono peer dependency.
+- Updated template dependency eslint-plugin-vue to 10.8.0.
+- Updated template dependency eslint-plugin-testing-library to 7.16.0.
+- Updated template dependency eslint-plugin-playwright to 2.8.0.
+- Updated template dependency eslint-plugin-perfectionist to 5.6.0.
+- Updated template dependency eslint-plugin-jest to 29.15.0.
+- Updated template dependency eslint-plugin-astro to 1.6.0.
+- Updated template dependency eslint to 9.39.3.
+- Updated template dependency dotenv to 17.3.1.
+- Updated template dependency @vitejs/plugin-vue to 6.0.4.
+- Updated template dependency @vitejs/plugin-react to 5.1.4.
+- Updated template dependency @types/react to 19.2.14.
+- Updated template dependency @types/node to 25.3.2.
+- Updated template dependency @testing-library/angular to 19.1.0.
+- Updated template dependency @eslint/js to 9.39.3.
+- Updated template dependency @angular/cli to 21.2.0.
+- Added template peer dependency @angular-devkit/schematics.
+- Updated template dependency @angular-devkit/architect to 0.2102.0.
+- Updated template dependency vue to 3.5.29.
+- Updated template dependency nanostores to 1.1.1.
+- Updated template dependency astro to 5.18.0.
+
 ## [0.5.0] - 2026-02-28
 
-## Added
+### Added
 - Added docs better-npm-audit for npm auditing.
 - Added template improved-yarn-audit for Yarn auditing.
 - Added template better-npm-audit for npm auditing.
