@@ -56,6 +56,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Changed recommendation of function handler from binding to the ```window``` instead of the ```document``` object.
 
 ### Security
+- Updated template dependency @angular/router to 21.1.6 due to CVE-2026-27970.
+- Updated template dependency @angular/cli to 21.1.5 due to CVE-2026-27970.
+- Updated template dependency @angular-devkit/architect to 0.2101.5 due to CVE-2026-27970.
+- Updated template dependency @analogjs/vite-plugin-angular to 2.3.0 due to CVE-2026-27970.
+- Updated template dependency @angular/platform-server to 21.1.6 due to CVE-2026-27970.
+- Updated template dependency @angular/platform-browser" to 21.1.6 due to CVE-2026-27970.
+- Updated template dependency @angular/language-service to 21.1.6 due to CVE-2026-27970.
+- Updated template dependency @angular/core to 21.1.6 due to CVE-2026-27970.
+- Updated template dependency @angular/compiler-cli to 21.1.6 due to CVE-2026-27970.
+- Updated template dependency @angular/compiler to 21.1.6 due to CVE-2026-27970.
+- Updated template dependency @angular/common to 21.1.6 due to CVE-2026-27970.
+- Updated template dependency @angular/build to 21.1.6 due to CVE-2026-27970.
+- Updated template dependency @angular/animations to 21.1.6 due to CVE-2026-27970.
+- Updated template dependency @analogjs/astro-angular to 2.3.0 due to CVE-2026-27970.
 - Updated template sub-dependency minimatch@10 to 10.2.4 due to CVE-2026-27903.
 - Updated template sub-dependency minimatch@9 to 9.0.9 due to CVE-2026-27903.
 - Updated template sub-dependency minimatch@3 to 3.1.5 due to CVE-2026-27903.
