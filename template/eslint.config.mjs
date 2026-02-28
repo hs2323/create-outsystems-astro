@@ -11,10 +11,14 @@ import perfectionist from "eslint-plugin-perfectionist";
 import playwright from "eslint-plugin-playwright";
 import pluginReact from "eslint-plugin-react";
 import pluginReactHooks from "eslint-plugin-react-hooks";
+import svelte from "eslint-plugin-svelte";
 import testingLibrary from "eslint-plugin-testing-library";
 import pluginVue from "eslint-plugin-vue";
 import globals from "globals";
+import svelteParser from "svelte-eslint-parser";
 import tseslint from "typescript-eslint";
+
+import svelteConfig from "./svelte.config.js";
 
 // Fix for Bun and eslint-plugin-perfectionist.
 if (!Array.prototype.toSorted) {
@@ -167,6 +171,20 @@ export default [
     rules: {
       ...config.rules,
       "@angular-eslint/no-input-rename": "off",
+    },
+  })),
+  ...svelte.configs["flat/recommended"].map((config) => ({
+    ...config,
+    files: ["**/*.svelte"],
+    languageOptions: {
+      ...config.languageOptions,
+      parser: svelteParser, // 2. Explicitly set the Svelte parser
+      parserOptions: {
+        ...config.languageOptions?.parserOptions,
+        extraFileExtensions: [".svelte"],
+        parser: tseslint.parser, // 3. Use TS parser for the <script> block
+        svelteConfig,
+      },
     },
   })),
 ];

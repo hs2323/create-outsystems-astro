@@ -17,9 +17,11 @@
   };
 
   const showParentMessage = () => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (window as any)[showMessage](count);
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const nanoStoreValue = (window as any).Stores["svelteStore"];
 </script>
 
