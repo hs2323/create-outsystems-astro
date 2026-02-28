@@ -1,21 +1,21 @@
 {
   "version": "5",
   "specifiers": {
-    "npm:@analogjs/astro-angular@^2.2.3": "2.2.3_@angular+animations@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+compiler@21.1.2__rxjs@7.8.2_@angular+build@21.1.2__@angular+compiler@21.1.2__@angular+compiler-cli@21.1.2___@angular+compiler@21.1.2___typescript@5.9.3__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+platform-browser@21.1.2___@angular+animations@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+common@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__@angular+platform-server@21.1.2___@angular+common@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.1.2___@angular+compiler@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+platform-browser@21.1.2____@angular+animations@21.1.2_____@angular+core@21.1.2______@angular+compiler@21.1.2______rxjs@7.8.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____@angular+common@21.1.2_____@angular+core@21.1.2______@angular+compiler@21.1.2______rxjs@7.8.2_____rxjs@7.8.2_____@angular+compiler@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.1.2___rxjs@7.8.2___@angular+animations@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____@angular+compiler@21.1.2____rxjs@7.8.2__tslib@2.8.1__typescript@5.9.3__vitest@4.0.18___@types+node@25.1.0___happy-dom@20.4.0___vite@7.3.1____@types+node@25.1.0____sass@1.97.1____picomatch@4.0.3__rxjs@7.8.2__@angular+animations@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+common@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__@types+node@25.1.0__vite@7.3.0___@types+node@25.1.0___sass@1.97.1___picomatch@4.0.3__sass@1.97.1__happy-dom@20.4.0_@angular+common@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.1.2_@angular+compiler@21.1.2_@angular+compiler-cli@21.1.2__@angular+compiler@21.1.2__typescript@5.9.3_@angular+core@21.1.2__@angular+compiler@21.1.2__rxjs@7.8.2_@angular+language-service@21.1.2_@angular+platform-browser@21.1.2__@angular+animations@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+common@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.1.2_@angular+platform-server@21.1.2__@angular+common@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__@angular+compiler@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+platform-browser@21.1.2___@angular+animations@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+common@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__rxjs@7.8.2__@angular+animations@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+compiler@21.1.2___rxjs@7.8.2_rxjs@7.8.2_tslib@2.8.1_typescript@5.9.3_vitest@4.0.18__@types+node@25.1.0__happy-dom@20.4.0__vite@7.3.1___@types+node@25.1.0___sass@1.97.1___picomatch@4.0.3_@types+node@25.1.0_happy-dom@20.4.0",
-    "npm:@analogjs/vite-plugin-angular@^2.2.3": "2.2.3_@angular+build@21.1.2__@angular+compiler@21.1.2__@angular+compiler-cli@21.1.2___@angular+compiler@21.1.2___typescript@5.9.3__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+platform-browser@21.1.2___@angular+animations@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+common@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__@angular+platform-server@21.1.2___@angular+common@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.1.2___@angular+compiler@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+platform-browser@21.1.2____@angular+animations@21.1.2_____@angular+core@21.1.2______@angular+compiler@21.1.2______rxjs@7.8.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____@angular+common@21.1.2_____@angular+core@21.1.2______@angular+compiler@21.1.2______rxjs@7.8.2_____rxjs@7.8.2_____@angular+compiler@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.1.2___rxjs@7.8.2___@angular+animations@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____@angular+compiler@21.1.2____rxjs@7.8.2__tslib@2.8.1__typescript@5.9.3__vitest@4.0.18___@types+node@25.1.0___happy-dom@20.4.0___vite@7.3.1____@types+node@25.1.0____sass@1.97.1____picomatch@4.0.3__rxjs@7.8.2__@angular+animations@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+common@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__@types+node@25.1.0__vite@7.3.0___@types+node@25.1.0___sass@1.97.1___picomatch@4.0.3__sass@1.97.1__happy-dom@20.4.0_@angular+compiler@21.1.2_@angular+compiler-cli@21.1.2__@angular+compiler@21.1.2__typescript@5.9.3_@angular+core@21.1.2__@angular+compiler@21.1.2__rxjs@7.8.2_@angular+platform-browser@21.1.2__@angular+animations@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+common@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.1.2_@angular+platform-server@21.1.2__@angular+common@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__@angular+compiler@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+platform-browser@21.1.2___@angular+animations@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+common@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__rxjs@7.8.2__@angular+animations@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+compiler@21.1.2___rxjs@7.8.2_tslib@2.8.1_typescript@5.9.3_vitest@4.0.18__@types+node@25.1.0__happy-dom@20.4.0__vite@7.3.1___@types+node@25.1.0___sass@1.97.1___picomatch@4.0.3_rxjs@7.8.2_@angular+animations@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+compiler@21.1.2__rxjs@7.8.2_@angular+common@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.1.2_@types+node@25.1.0_happy-dom@20.4.0",
-    "npm:@analogjs/vitest-angular@^2.2.3": "2.2.3_@analogjs+vite-plugin-angular@2.2.3__@angular+build@21.1.2___@angular+compiler@21.1.2___@angular+compiler-cli@21.1.2____@angular+compiler@21.1.2____typescript@5.9.3___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+platform-browser@21.1.2____@angular+animations@21.1.2_____@angular+core@21.1.2______@angular+compiler@21.1.2______rxjs@7.8.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____@angular+common@21.1.2_____@angular+core@21.1.2______@angular+compiler@21.1.2______rxjs@7.8.2_____rxjs@7.8.2_____@angular+compiler@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.1.2___@angular+platform-server@21.1.2____@angular+common@21.1.2_____@angular+core@21.1.2______@angular+compiler@21.1.2______rxjs@7.8.2_____rxjs@7.8.2_____@angular+compiler@21.1.2____@angular+compiler@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____@angular+platform-browser@21.1.2_____@angular+animations@21.1.2______@angular+core@21.1.2_______@angular+compiler@21.1.2_______rxjs@7.8.2______@angular+compiler@21.1.2______rxjs@7.8.2_____@angular+common@21.1.2______@angular+core@21.1.2_______@angular+compiler@21.1.2_______rxjs@7.8.2______rxjs@7.8.2______@angular+compiler@21.1.2_____@angular+core@21.1.2______@angular+compiler@21.1.2______rxjs@7.8.2_____rxjs@7.8.2_____@angular+compiler@21.1.2____rxjs@7.8.2____@angular+animations@21.1.2_____@angular+core@21.1.2______@angular+compiler@21.1.2______rxjs@7.8.2_____@angular+compiler@21.1.2_____rxjs@7.8.2___tslib@2.8.1___typescript@5.9.3___vitest@4.0.18____@types+node@25.1.0____happy-dom@20.4.0____vite@7.3.1_____@types+node@25.1.0_____sass@1.97.1_____picomatch@4.0.3___rxjs@7.8.2___@angular+animations@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+common@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.1.2___@types+node@25.1.0___vite@7.3.0____@types+node@25.1.0____sass@1.97.1____picomatch@4.0.3___sass@1.97.1___happy-dom@20.4.0__@angular+compiler@21.1.2__@angular+compiler-cli@21.1.2___@angular+compiler@21.1.2___typescript@5.9.3__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+platform-browser@21.1.2___@angular+animations@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+common@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__@angular+platform-server@21.1.2___@angular+common@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.1.2___@angular+compiler@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+platform-browser@21.1.2____@angular+animations@21.1.2_____@angular+core@21.1.2______@angular+compiler@21.1.2______rxjs@7.8.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____@angular+common@21.1.2_____@angular+core@21.1.2______@angular+compiler@21.1.2______rxjs@7.8.2_____rxjs@7.8.2_____@angular+compiler@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.1.2___rxjs@7.8.2___@angular+animations@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____@angular+compiler@21.1.2____rxjs@7.8.2__tslib@2.8.1__typescript@5.9.3__vitest@4.0.18___@types+node@25.1.0___happy-dom@20.4.0___vite@7.3.1____@types+node@25.1.0____sass@1.97.1____picomatch@4.0.3__rxjs@7.8.2__@angular+animations@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+common@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__@types+node@25.1.0__happy-dom@20.4.0_@angular-devkit+architect@0.2101.2_vitest@4.0.18__@types+node@25.1.0__happy-dom@20.4.0__vite@7.3.1___@types+node@25.1.0___sass@1.97.1___picomatch@4.0.3_@angular+build@21.1.2__@angular+compiler@21.1.2__@angular+compiler-cli@21.1.2___@angular+compiler@21.1.2___typescript@5.9.3__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+platform-browser@21.1.2___@angular+animations@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+common@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__@angular+platform-server@21.1.2___@angular+common@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.1.2___@angular+compiler@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+platform-browser@21.1.2____@angular+animations@21.1.2_____@angular+core@21.1.2______@angular+compiler@21.1.2______rxjs@7.8.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____@angular+common@21.1.2_____@angular+core@21.1.2______@angular+compiler@21.1.2______rxjs@7.8.2_____rxjs@7.8.2_____@angular+compiler@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.1.2___rxjs@7.8.2___@angular+animations@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____@angular+compiler@21.1.2____rxjs@7.8.2__tslib@2.8.1__typescript@5.9.3__vitest@4.0.18___@types+node@25.1.0___happy-dom@20.4.0___vite@7.3.1____@types+node@25.1.0____sass@1.97.1____picomatch@4.0.3__rxjs@7.8.2__@angular+animations@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+common@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__@types+node@25.1.0__vite@7.3.0___@types+node@25.1.0___sass@1.97.1___picomatch@4.0.3__sass@1.97.1__happy-dom@20.4.0_@types+node@25.1.0_happy-dom@20.4.0_@angular+compiler@21.1.2_@angular+compiler-cli@21.1.2__@angular+compiler@21.1.2__typescript@5.9.3_@angular+core@21.1.2__@angular+compiler@21.1.2__rxjs@7.8.2_@angular+platform-browser@21.1.2__@angular+animations@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+common@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.1.2_@angular+platform-server@21.1.2__@angular+common@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__@angular+compiler@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+platform-browser@21.1.2___@angular+animations@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+common@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__rxjs@7.8.2__@angular+animations@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+compiler@21.1.2___rxjs@7.8.2_tslib@2.8.1_typescript@5.9.3_rxjs@7.8.2_@angular+animations@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+compiler@21.1.2__rxjs@7.8.2_@angular+common@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.1.2",
-    "npm:@angular-devkit/architect@~0.2101.2": "0.2101.2",
-    "npm:@angular/animations@^21.1.2": "21.1.2_@angular+core@21.1.2__@angular+compiler@21.1.2__rxjs@7.8.2_@angular+compiler@21.1.2_rxjs@7.8.2",
-    "npm:@angular/build@^21.1.2": "21.1.2_@angular+compiler@21.1.2_@angular+compiler-cli@21.1.2__@angular+compiler@21.1.2__typescript@5.9.3_@angular+core@21.1.2__@angular+compiler@21.1.2__rxjs@7.8.2_@angular+platform-browser@21.1.2__@angular+animations@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+common@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.1.2_@angular+platform-server@21.1.2__@angular+common@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__@angular+compiler@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+platform-browser@21.1.2___@angular+animations@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+common@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__rxjs@7.8.2__@angular+animations@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+compiler@21.1.2___rxjs@7.8.2_tslib@2.8.1_typescript@5.9.3_vitest@4.0.18__@types+node@25.1.0__happy-dom@20.4.0__vite@7.3.1___@types+node@25.1.0___sass@1.97.1___picomatch@4.0.3_rxjs@7.8.2_@angular+animations@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+compiler@21.1.2__rxjs@7.8.2_@angular+common@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.1.2_@types+node@25.1.0_vite@7.3.0__@types+node@25.1.0__sass@1.97.1__picomatch@4.0.3_sass@1.97.1_happy-dom@20.4.0",
-    "npm:@angular/cli@^21.1.2": "21.1.2_@types+node@25.1.0_@inquirer+prompts@7.10.1__@types+node@25.1.0_listr2@9.0.5_zod@4.3.5",
-    "npm:@angular/common@^21.1.2": "21.1.2_@angular+core@21.1.2__@angular+compiler@21.1.2__rxjs@7.8.2_rxjs@7.8.2_@angular+compiler@21.1.2",
-    "npm:@angular/compiler-cli@^21.1.2": "21.1.2_@angular+compiler@21.1.2_typescript@5.9.3",
-    "npm:@angular/compiler@^21.1.2": "21.1.2",
-    "npm:@angular/core@^21.1.2": "21.1.2_@angular+compiler@21.1.2_rxjs@7.8.2",
-    "npm:@angular/language-service@^21.1.2": "21.1.2",
-    "npm:@angular/platform-browser@^21.1.2": "21.1.2_@angular+animations@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+compiler@21.1.2__rxjs@7.8.2_@angular+common@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.1.2_@angular+core@21.1.2__@angular+compiler@21.1.2__rxjs@7.8.2_rxjs@7.8.2_@angular+compiler@21.1.2",
-    "npm:@angular/platform-server@^21.1.2": "21.1.2_@angular+common@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.1.2_@angular+compiler@21.1.2_@angular+core@21.1.2__@angular+compiler@21.1.2__rxjs@7.8.2_@angular+platform-browser@21.1.2__@angular+animations@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+common@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.1.2_rxjs@7.8.2_@angular+animations@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+compiler@21.1.2__rxjs@7.8.2",
-    "npm:@angular/router@^21.1.2": "21.1.2_@angular+common@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.1.2_@angular+core@21.1.2__@angular+compiler@21.1.2__rxjs@7.8.2_@angular+platform-browser@21.1.2__@angular+animations@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+common@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.1.2_rxjs@7.8.2_@angular+compiler@21.1.2_@angular+animations@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+compiler@21.1.2__rxjs@7.8.2",
+    "npm:@analogjs/astro-angular@^2.3.0": "2.3.0_@angular+animations@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+compiler@21.2.0__rxjs@7.8.2_@angular+build@21.2.0__@angular+compiler@21.2.0__@angular+compiler-cli@21.2.0___@angular+compiler@21.2.0___typescript@5.9.3__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+platform-browser@21.2.0___@angular+animations@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+common@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@angular+platform-server@21.2.0___@angular+common@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___@angular+compiler@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+platform-browser@21.2.0____@angular+animations@21.2.0_____@angular+core@21.2.0______@angular+compiler@21.2.0______rxjs@7.8.2_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+common@21.2.0_____@angular+core@21.2.0______@angular+compiler@21.2.0______rxjs@7.8.2_____rxjs@7.8.2_____@angular+compiler@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___rxjs@7.8.2___@angular+animations@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+compiler@21.2.0____rxjs@7.8.2__tslib@2.8.1__typescript@5.9.3__vitest@4.0.18___@types+node@25.1.0___happy-dom@20.4.0___vite@7.3.1____@types+node@25.1.0____sass@1.97.3____picomatch@4.0.3__rxjs@7.8.2__@angular+animations@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+common@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@types+node@25.1.0__vite@7.3.1___@types+node@25.1.0___sass@1.97.3___picomatch@4.0.3__sass@1.97.3__happy-dom@20.4.0_@angular+common@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.2.0_@angular+compiler@21.2.0_@angular+compiler-cli@21.2.0__@angular+compiler@21.2.0__typescript@5.9.3_@angular+core@21.2.0__@angular+compiler@21.2.0__rxjs@7.8.2_@angular+language-service@21.2.0_@angular+platform-browser@21.2.0__@angular+animations@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+common@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.2.0_@angular+platform-server@21.2.0__@angular+common@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@angular+compiler@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+platform-browser@21.2.0___@angular+animations@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+common@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__rxjs@7.8.2__@angular+animations@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+compiler@21.2.0___rxjs@7.8.2_rxjs@7.8.2_tslib@2.8.1_typescript@5.9.3_vitest@4.0.18__@types+node@25.1.0__happy-dom@20.4.0__vite@7.3.1___@types+node@25.1.0___sass@1.97.3___picomatch@4.0.3_@types+node@25.1.0_happy-dom@20.4.0",
+    "npm:@analogjs/vite-plugin-angular@^2.3.0": "2.3.0_@angular+build@21.2.0__@angular+compiler@21.2.0__@angular+compiler-cli@21.2.0___@angular+compiler@21.2.0___typescript@5.9.3__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+platform-browser@21.2.0___@angular+animations@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+common@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@angular+platform-server@21.2.0___@angular+common@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___@angular+compiler@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+platform-browser@21.2.0____@angular+animations@21.2.0_____@angular+core@21.2.0______@angular+compiler@21.2.0______rxjs@7.8.2_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+common@21.2.0_____@angular+core@21.2.0______@angular+compiler@21.2.0______rxjs@7.8.2_____rxjs@7.8.2_____@angular+compiler@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___rxjs@7.8.2___@angular+animations@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+compiler@21.2.0____rxjs@7.8.2__tslib@2.8.1__typescript@5.9.3__vitest@4.0.18___@types+node@25.1.0___happy-dom@20.4.0___vite@7.3.1____@types+node@25.1.0____sass@1.97.3____picomatch@4.0.3__rxjs@7.8.2__@angular+animations@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+common@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@types+node@25.1.0__vite@7.3.1___@types+node@25.1.0___sass@1.97.3___picomatch@4.0.3__sass@1.97.3__happy-dom@20.4.0_@angular+compiler@21.2.0_@angular+compiler-cli@21.2.0__@angular+compiler@21.2.0__typescript@5.9.3_@angular+core@21.2.0__@angular+compiler@21.2.0__rxjs@7.8.2_@angular+platform-browser@21.2.0__@angular+animations@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+common@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.2.0_@angular+platform-server@21.2.0__@angular+common@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@angular+compiler@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+platform-browser@21.2.0___@angular+animations@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+common@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__rxjs@7.8.2__@angular+animations@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+compiler@21.2.0___rxjs@7.8.2_tslib@2.8.1_typescript@5.9.3_vitest@4.0.18__@types+node@25.1.0__happy-dom@20.4.0__vite@7.3.1___@types+node@25.1.0___sass@1.97.3___picomatch@4.0.3_rxjs@7.8.2_@angular+animations@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+compiler@21.2.0__rxjs@7.8.2_@angular+common@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.2.0_@types+node@25.1.0_happy-dom@20.4.0",
+    "npm:@analogjs/vitest-angular@^2.2.3": "2.2.3_@analogjs+vite-plugin-angular@2.3.0__@angular+build@21.2.0___@angular+compiler@21.2.0___@angular+compiler-cli@21.2.0____@angular+compiler@21.2.0____typescript@5.9.3___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+platform-browser@21.2.0____@angular+animations@21.2.0_____@angular+core@21.2.0______@angular+compiler@21.2.0______rxjs@7.8.2_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+common@21.2.0_____@angular+core@21.2.0______@angular+compiler@21.2.0______rxjs@7.8.2_____rxjs@7.8.2_____@angular+compiler@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___@angular+platform-server@21.2.0____@angular+common@21.2.0_____@angular+core@21.2.0______@angular+compiler@21.2.0______rxjs@7.8.2_____rxjs@7.8.2_____@angular+compiler@21.2.0____@angular+compiler@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+platform-browser@21.2.0_____@angular+animations@21.2.0______@angular+core@21.2.0_______@angular+compiler@21.2.0_______rxjs@7.8.2______@angular+compiler@21.2.0______rxjs@7.8.2_____@angular+common@21.2.0______@angular+core@21.2.0_______@angular+compiler@21.2.0_______rxjs@7.8.2______rxjs@7.8.2______@angular+compiler@21.2.0_____@angular+core@21.2.0______@angular+compiler@21.2.0______rxjs@7.8.2_____rxjs@7.8.2_____@angular+compiler@21.2.0____rxjs@7.8.2____@angular+animations@21.2.0_____@angular+core@21.2.0______@angular+compiler@21.2.0______rxjs@7.8.2_____@angular+compiler@21.2.0_____rxjs@7.8.2___tslib@2.8.1___typescript@5.9.3___vitest@4.0.18____@types+node@25.1.0____happy-dom@20.4.0____vite@7.3.1_____@types+node@25.1.0_____sass@1.97.3_____picomatch@4.0.3___rxjs@7.8.2___@angular+animations@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+common@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___@types+node@25.1.0___vite@7.3.1____@types+node@25.1.0____sass@1.97.3____picomatch@4.0.3___sass@1.97.3___happy-dom@20.4.0__@angular+compiler@21.2.0__@angular+compiler-cli@21.2.0___@angular+compiler@21.2.0___typescript@5.9.3__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+platform-browser@21.2.0___@angular+animations@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+common@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@angular+platform-server@21.2.0___@angular+common@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___@angular+compiler@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+platform-browser@21.2.0____@angular+animations@21.2.0_____@angular+core@21.2.0______@angular+compiler@21.2.0______rxjs@7.8.2_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+common@21.2.0_____@angular+core@21.2.0______@angular+compiler@21.2.0______rxjs@7.8.2_____rxjs@7.8.2_____@angular+compiler@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___rxjs@7.8.2___@angular+animations@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+compiler@21.2.0____rxjs@7.8.2__tslib@2.8.1__typescript@5.9.3__vitest@4.0.18___@types+node@25.1.0___happy-dom@20.4.0___vite@7.3.1____@types+node@25.1.0____sass@1.97.3____picomatch@4.0.3__rxjs@7.8.2__@angular+animations@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+common@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@types+node@25.1.0__happy-dom@20.4.0_@angular-devkit+architect@0.2101.5_vitest@4.0.18__@types+node@25.1.0__happy-dom@20.4.0__vite@7.3.1___@types+node@25.1.0___sass@1.97.3___picomatch@4.0.3_@angular+build@21.2.0__@angular+compiler@21.2.0__@angular+compiler-cli@21.2.0___@angular+compiler@21.2.0___typescript@5.9.3__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+platform-browser@21.2.0___@angular+animations@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+common@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@angular+platform-server@21.2.0___@angular+common@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___@angular+compiler@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+platform-browser@21.2.0____@angular+animations@21.2.0_____@angular+core@21.2.0______@angular+compiler@21.2.0______rxjs@7.8.2_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+common@21.2.0_____@angular+core@21.2.0______@angular+compiler@21.2.0______rxjs@7.8.2_____rxjs@7.8.2_____@angular+compiler@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___rxjs@7.8.2___@angular+animations@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+compiler@21.2.0____rxjs@7.8.2__tslib@2.8.1__typescript@5.9.3__vitest@4.0.18___@types+node@25.1.0___happy-dom@20.4.0___vite@7.3.1____@types+node@25.1.0____sass@1.97.3____picomatch@4.0.3__rxjs@7.8.2__@angular+animations@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+common@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@types+node@25.1.0__vite@7.3.1___@types+node@25.1.0___sass@1.97.3___picomatch@4.0.3__sass@1.97.3__happy-dom@20.4.0_@types+node@25.1.0_happy-dom@20.4.0_@angular+compiler@21.2.0_@angular+compiler-cli@21.2.0__@angular+compiler@21.2.0__typescript@5.9.3_@angular+core@21.2.0__@angular+compiler@21.2.0__rxjs@7.8.2_@angular+platform-browser@21.2.0__@angular+animations@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+common@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.2.0_@angular+platform-server@21.2.0__@angular+common@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@angular+compiler@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+platform-browser@21.2.0___@angular+animations@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+common@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__rxjs@7.8.2__@angular+animations@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+compiler@21.2.0___rxjs@7.8.2_tslib@2.8.1_typescript@5.9.3_rxjs@7.8.2_@angular+animations@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+compiler@21.2.0__rxjs@7.8.2_@angular+common@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.2.0",
+    "npm:@angular-devkit/architect@~0.2101.5": "0.2101.5",
+    "npm:@angular/animations@^21.1.6": "21.2.0_@angular+core@21.2.0__@angular+compiler@21.2.0__rxjs@7.8.2_@angular+compiler@21.2.0_rxjs@7.8.2",
+    "npm:@angular/build@^21.1.5": "21.2.0_@angular+compiler@21.2.0_@angular+compiler-cli@21.2.0__@angular+compiler@21.2.0__typescript@5.9.3_@angular+core@21.2.0__@angular+compiler@21.2.0__rxjs@7.8.2_@angular+platform-browser@21.2.0__@angular+animations@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+common@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.2.0_@angular+platform-server@21.2.0__@angular+common@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@angular+compiler@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+platform-browser@21.2.0___@angular+animations@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+common@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__rxjs@7.8.2__@angular+animations@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+compiler@21.2.0___rxjs@7.8.2_tslib@2.8.1_typescript@5.9.3_vitest@4.0.18__@types+node@25.1.0__happy-dom@20.4.0__vite@7.3.1___@types+node@25.1.0___sass@1.97.3___picomatch@4.0.3_rxjs@7.8.2_@angular+animations@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+compiler@21.2.0__rxjs@7.8.2_@angular+common@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.2.0_@types+node@25.1.0_vite@7.3.1__@types+node@25.1.0__sass@1.97.3__picomatch@4.0.3_sass@1.97.3_happy-dom@20.4.0",
+    "npm:@angular/cli@^21.1.5": "21.2.0_@types+node@25.1.0_@inquirer+prompts@7.10.1__@types+node@25.1.0_listr2@9.0.5_zod@4.3.6",
+    "npm:@angular/common@^21.1.6": "21.2.0_@angular+core@21.2.0__@angular+compiler@21.2.0__rxjs@7.8.2_rxjs@7.8.2_@angular+compiler@21.2.0",
+    "npm:@angular/compiler-cli@^21.1.6": "21.2.0_@angular+compiler@21.2.0_typescript@5.9.3",
+    "npm:@angular/compiler@^21.1.6": "21.2.0",
+    "npm:@angular/core@^21.1.6": "21.2.0_@angular+compiler@21.2.0_rxjs@7.8.2",
+    "npm:@angular/language-service@^21.1.6": "21.2.0",
+    "npm:@angular/platform-browser@^21.1.6": "21.2.0_@angular+animations@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+compiler@21.2.0__rxjs@7.8.2_@angular+common@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.2.0_@angular+core@21.2.0__@angular+compiler@21.2.0__rxjs@7.8.2_rxjs@7.8.2_@angular+compiler@21.2.0",
+    "npm:@angular/platform-server@^21.1.6": "21.2.0_@angular+common@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.2.0_@angular+compiler@21.2.0_@angular+core@21.2.0__@angular+compiler@21.2.0__rxjs@7.8.2_@angular+platform-browser@21.2.0__@angular+animations@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+common@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.2.0_rxjs@7.8.2_@angular+animations@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+compiler@21.2.0__rxjs@7.8.2",
+    "npm:@angular/router@^21.1.6": "21.2.0_@angular+common@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.2.0_@angular+core@21.2.0__@angular+compiler@21.2.0__rxjs@7.8.2_@angular+platform-browser@21.2.0__@angular+animations@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+common@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.2.0_rxjs@7.8.2_@angular+compiler@21.2.0_@angular+animations@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+compiler@21.2.0__rxjs@7.8.2",
     "npm:@astrojs/react@^4.4.2": "4.4.2_@types+react@19.2.10_@types+react-dom@19.2.3__@types+react@19.2.10_react@19.2.4_react-dom@19.2.4__react@19.2.4_vite@6.4.1__@types+node@25.1.0__picomatch@4.0.3_@types+node@25.1.0",
     "npm:@astrojs/vue@^5.1.4": "5.1.4_astro@5.17.1__rollup@4.59.0__typescript@5.9.3__@types+node@25.1.0__vite@6.4.1___@types+node@25.1.0___picomatch@4.0.3__zod@3.25.76_vue@3.5.27__typescript@5.9.3_vite@6.4.1__@types+node@25.1.0__picomatch@4.0.3_@types+node@25.1.0_typescript@5.9.3_rollup@4.59.0",
     "npm:@eslint/compat@^2.0.2": "2.0.2_eslint@9.39.2",
@@ -26,7 +26,7 @@
     "npm:@nanostores/react@1": "1.0.0_nanostores@1.1.0_react@19.2.4",
     "npm:@nanostores/vue@^1.0.1": "1.0.1_nanostores@1.1.0_vue@3.5.27__typescript@5.9.3_typescript@5.9.3",
     "npm:@playwright/test@^1.57.0": "1.57.0",
-    "npm:@testing-library/angular@19": "19.0.0_@angular+common@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.1.2_@angular+core@21.1.2__@angular+compiler@21.1.2__rxjs@7.8.2_@angular+platform-browser@21.1.2__@angular+animations@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+common@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.1.2_@angular+router@21.1.2__@angular+common@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+platform-browser@21.1.2___@angular+animations@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+common@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__rxjs@7.8.2__@angular+compiler@21.1.2__@angular+animations@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+compiler@21.1.2___rxjs@7.8.2_@testing-library+dom@10.4.1_rxjs@7.8.2_@angular+compiler@21.1.2_@angular+animations@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+compiler@21.1.2__rxjs@7.8.2",
+    "npm:@testing-library/angular@19": "19.0.0_@angular+common@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.2.0_@angular+core@21.2.0__@angular+compiler@21.2.0__rxjs@7.8.2_@angular+platform-browser@21.2.0__@angular+animations@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+common@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.2.0_@angular+router@21.2.0__@angular+common@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+platform-browser@21.2.0___@angular+animations@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+common@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__rxjs@7.8.2__@angular+compiler@21.2.0__@angular+animations@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+compiler@21.2.0___rxjs@7.8.2_@testing-library+dom@10.4.1_rxjs@7.8.2_@angular+compiler@21.2.0_@angular+animations@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+compiler@21.2.0__rxjs@7.8.2",
     "npm:@testing-library/dom@^10.4.1": "10.4.1",
     "npm:@testing-library/jest-dom@^6.9.1": "6.9.1",
     "npm:@testing-library/react@^16.3.2": "16.3.2_@testing-library+dom@10.4.1_@types+react@19.2.10_@types+react-dom@19.2.3__@types+react@19.2.10_react@19.2.4_react-dom@19.2.4__react@19.2.4",
@@ -36,9 +36,9 @@
     "npm:@types/node@^25.1.0": "25.1.0",
     "npm:@types/react-dom@^19.2.3": "19.2.3_@types+react@19.2.10",
     "npm:@types/react@^19.2.10": "19.2.10",
-    "npm:@vitejs/plugin-react@^5.1.2": "5.1.2_vite@7.3.1__@types+node@25.1.0__picomatch@4.0.3__sass@1.97.1_@babel+core@7.28.5_@types+node@25.1.0",
-    "npm:@vitejs/plugin-vue@^6.0.3": "6.0.3_vite@7.3.1__@types+node@25.1.0__picomatch@4.0.3__sass@1.97.1_vue@3.5.27__typescript@5.9.3_@types+node@25.1.0_typescript@5.9.3",
-    "npm:angular-eslint@^21.2.0": "21.2.0_@angular+cli@21.1.2__@types+node@25.1.0__@inquirer+prompts@7.10.1___@types+node@25.1.0__listr2@9.0.5__zod@4.3.5_eslint@9.39.2_typescript@5.9.3_typescript-eslint@8.54.0__eslint@9.39.2__typescript@5.9.3__@typescript-eslint+parser@8.54.0___eslint@9.39.2___typescript@5.9.3_@typescript-eslint+utils@8.54.0__eslint@9.39.2__typescript@5.9.3_@angular-eslint+template-parser@21.2.0__eslint@9.39.2__typescript@5.9.3_@typescript-eslint+types@8.54.0_@types+node@25.1.0",
+    "npm:@vitejs/plugin-react@^5.1.2": "5.1.2_vite@7.3.1__@types+node@25.1.0__picomatch@4.0.3__sass@1.97.3_@babel+core@7.29.0_@types+node@25.1.0",
+    "npm:@vitejs/plugin-vue@^6.0.3": "6.0.3_vite@7.3.1__@types+node@25.1.0__picomatch@4.0.3__sass@1.97.3_vue@3.5.27__typescript@5.9.3_@types+node@25.1.0_typescript@5.9.3",
+    "npm:angular-eslint@^21.2.0": "21.2.0_@angular+cli@21.2.0__@types+node@25.1.0__@inquirer+prompts@7.10.1___@types+node@25.1.0__listr2@9.0.5__zod@4.3.6_eslint@9.39.2_typescript@5.9.3_typescript-eslint@8.54.0__eslint@9.39.2__typescript@5.9.3__@typescript-eslint+parser@8.54.0___eslint@9.39.2___typescript@5.9.3_@typescript-eslint+utils@8.54.0__eslint@9.39.2__typescript@5.9.3_@angular-eslint+template-parser@21.2.0__eslint@9.39.2__typescript@5.9.3_@typescript-eslint+types@8.54.0_@types+node@25.1.0",
     "npm:astro@^5.17.1": "5.17.1_rollup@4.59.0_typescript@5.9.3_@types+node@25.1.0_vite@6.4.1__@types+node@25.1.0__picomatch@4.0.3_zod@3.25.76",
     "npm:better-npm-audit@^3.11.0": "3.11.0",
     "npm:devalue@5.6.3": "5.6.3",
@@ -50,7 +50,7 @@
     "npm:eslint-plugin-jest@^29.12.1": "29.12.1_eslint@9.39.2_typescript@5.9.3",
     "npm:eslint-plugin-perfectionist@^5.4.0": "5.4.0_eslint@9.39.2_typescript@5.9.3",
     "npm:eslint-plugin-playwright@^2.5.1": "2.5.1_eslint@9.39.2",
-    "npm:eslint-plugin-react-hooks@^7.0.1": "7.0.1_eslint@9.39.2_zod@4.3.5",
+    "npm:eslint-plugin-react-hooks@^7.0.1": "7.0.1_eslint@9.39.2_zod@4.3.6",
     "npm:eslint-plugin-react@^7.37.5": "7.37.5_eslint@9.39.2",
     "npm:eslint-plugin-testing-library@^7.15.4": "7.15.4_eslint@9.39.2_typescript@5.9.3",
     "npm:eslint-plugin-vue@^10.7.0": "10.7.0_eslint@9.39.2_vue-eslint-parser@10.2.0__eslint@9.39.2",
@@ -73,8 +73,8 @@
     "npm:tslib@^2.8.1": "2.8.1",
     "npm:typescript-eslint@^8.54.0": "8.54.0_eslint@9.39.2_typescript@5.9.3_@typescript-eslint+parser@8.54.0__eslint@9.39.2__typescript@5.9.3",
     "npm:typescript@^5.9.3": "5.9.3",
-    "npm:vite@^6.4.1 || ^7.3.1": "7.3.1_@types+node@25.1.0_picomatch@4.0.3_sass@1.97.1",
-    "npm:vitest@^4.0.18": "4.0.18_@types+node@25.1.0_happy-dom@20.4.0_vite@7.3.1__@types+node@25.1.0__sass@1.97.1__picomatch@4.0.3",
+    "npm:vite@^6.4.1 || ^7.3.1": "7.3.1_@types+node@25.1.0_picomatch@4.0.3_sass@1.97.3",
+    "npm:vitest@^4.0.18": "4.0.18_@types+node@25.1.0_happy-dom@20.4.0_vite@7.3.1__@types+node@25.1.0__sass@1.97.3__picomatch@4.0.3",
     "npm:vue-eslint-parser@^10.2.0": "10.2.0_eslint@9.39.2",
     "npm:vue@^3.5.27": "3.5.27_typescript@5.9.3",
     "npm:zod@^3.25.76": "3.25.76"
@@ -83,8 +83,8 @@
     "@adobe/css-tools@4.4.4": {
       "integrity": "sha512-Elp+iwUx5rN5+Y8xLt5/GRoG20WGoDCQ/1Fb+1LiGtvwbDavuSk0jhD/eZdckHAuzcDzccnkv+rEjyWfRx18gg=="
     },
-    "@algolia/abtesting@1.12.2": {
-      "integrity": "sha512-oWknd6wpfNrmRcH0vzed3UPX0i17o4kYLM5OMITyMVM2xLgaRbIafoxL0e8mcrNNb0iORCJA0evnNDKRYth5WQ==",
+    "@algolia/abtesting@1.14.1": {
+      "integrity": "sha512-Dkj0BgPiLAaim9sbQ97UKDFHJE/880wgStAM18U++NaJ/2Cws34J5731ovJifr6E3Pv4T2CqvMXf8qLCC417Ew==",
       "dependencies": [
         "@algolia/client-common",
         "@algolia/requester-browser-xhr",
@@ -92,8 +92,8 @@
         "@algolia/requester-node-http"
       ]
     },
-    "@algolia/client-abtesting@5.46.2": {
-      "integrity": "sha512-oRSUHbylGIuxrlzdPA8FPJuwrLLRavOhAmFGgdAvMcX47XsyM+IOGa9tc7/K5SPvBqn4nhppOCEz7BrzOPWc4A==",
+    "@algolia/client-abtesting@5.48.1": {
+      "integrity": "sha512-LV5qCJdj+/m9I+Aj91o+glYszrzd7CX6NgKaYdTOj4+tUYfbS62pwYgUfZprYNayhkQpVFcrW8x8ZlIHpS23Vw==",
       "dependencies": [
         "@algolia/client-common",
         "@algolia/requester-browser-xhr",
@@ -101,8 +101,8 @@
         "@algolia/requester-node-http"
       ]
     },
-    "@algolia/client-analytics@5.46.2": {
-      "integrity": "sha512-EPBN2Oruw0maWOF4OgGPfioTvd+gmiNwx0HmD9IgmlS+l75DatcBkKOPNJN+0z3wBQWUO5oq602ATxIfmTQ8bA==",
+    "@algolia/client-analytics@5.48.1": {
+      "integrity": "sha512-/AVoMqHhPm14CcHq7mwB+bUJbfCv+jrxlNvRjXAuO+TQa+V37N8k1b0ijaRBPdmSjULMd8KtJbQyUyabXOu6Kg==",
       "dependencies": [
         "@algolia/client-common",
         "@algolia/requester-browser-xhr",
@@ -110,11 +110,11 @@
         "@algolia/requester-node-http"
       ]
     },
-    "@algolia/client-common@5.46.2": {
-      "integrity": "sha512-Hj8gswSJNKZ0oyd0wWissqyasm+wTz1oIsv5ZmLarzOZAp3vFEda8bpDQ8PUhO+DfkbiLyVnAxsPe4cGzWtqkg=="
+    "@algolia/client-common@5.48.1": {
+      "integrity": "sha512-VXO+qu2Ep6ota28ktvBm3sG53wUHS2n7bgLWmce5jTskdlCD0/JrV4tnBm1l7qpla1CeoQb8D7ShFhad+UoSOw=="
     },
-    "@algolia/client-insights@5.46.2": {
-      "integrity": "sha512-6dBZko2jt8FmQcHCbmNLB0kCV079Mx/DJcySTL3wirgDBUH7xhY1pOuUTLMiGkqM5D8moVZTvTdRKZUJRkrwBA==",
+    "@algolia/client-insights@5.48.1": {
+      "integrity": "sha512-zl+Qyb0nLg+Y5YvKp1Ij+u9OaPaKg2/EPzTwKNiVyOHnQJlFxmXyUZL1EInczAZsEY8hVpPCLtNfhMhfxluXKQ==",
       "dependencies": [
         "@algolia/client-common",
         "@algolia/requester-browser-xhr",
@@ -122,8 +122,8 @@
         "@algolia/requester-node-http"
       ]
     },
-    "@algolia/client-personalization@5.46.2": {
-      "integrity": "sha512-1waE2Uqh/PHNeDXGn/PM/WrmYOBiUGSVxAWqiJIj73jqPqvfzZgzdakHscIVaDl6Cp+j5dwjsZ5LCgaUr6DtmA==",
+    "@algolia/client-personalization@5.48.1": {
+      "integrity": "sha512-r89Qf9Oo9mKWQXumRu/1LtvVJAmEDpn8mHZMc485pRfQUMAwSSrsnaw1tQ3sszqzEgAr1c7rw6fjBI+zrAXTOw==",
       "dependencies": [
         "@algolia/client-common",
         "@algolia/requester-browser-xhr",
@@ -131,8 +131,8 @@
         "@algolia/requester-node-http"
       ]
     },
-    "@algolia/client-query-suggestions@5.46.2": {
-      "integrity": "sha512-EgOzTZkyDcNL6DV0V/24+oBJ+hKo0wNgyrOX/mePBM9bc9huHxIY2352sXmoZ648JXXY2x//V1kropF/Spx83w==",
+    "@algolia/client-query-suggestions@5.48.1": {
+      "integrity": "sha512-TPKNPKfghKG/bMSc7mQYD9HxHRUkBZA4q1PEmHgICaSeHQscGqL4wBrKkhfPlDV1uYBKW02pbFMUhsOt7p4ZpA==",
       "dependencies": [
         "@algolia/client-common",
         "@algolia/requester-browser-xhr",
@@ -140,8 +140,8 @@
         "@algolia/requester-node-http"
       ]
     },
-    "@algolia/client-search@5.46.2": {
-      "integrity": "sha512-ZsOJqu4HOG5BlvIFnMU0YKjQ9ZI6r3C31dg2jk5kMWPSdhJpYL9xa5hEe7aieE+707dXeMI4ej3diy6mXdZpgA==",
+    "@algolia/client-search@5.48.1": {
+      "integrity": "sha512-4Fu7dnzQyQmMFknYwTiN/HxPbH4DyxvQ1m+IxpPp5oslOgz8m6PG5qhiGbqJzH4HiT1I58ecDiCAC716UyVA8Q==",
       "dependencies": [
         "@algolia/client-common",
         "@algolia/requester-browser-xhr",
@@ -149,8 +149,8 @@
         "@algolia/requester-node-http"
       ]
     },
-    "@algolia/ingestion@1.46.2": {
-      "integrity": "sha512-1Uw2OslTWiOFDtt83y0bGiErJYy5MizadV0nHnOoHFWMoDqWW0kQoMFI65pXqRSkVvit5zjXSLik2xMiyQJDWQ==",
+    "@algolia/ingestion@1.48.1": {
+      "integrity": "sha512-/RFq3TqtXDUUawwic/A9xylA2P3LDMO8dNhphHAUOU51b1ZLHrmZ6YYJm3df1APz7xLY1aht6okCQf+/vmrV9w==",
       "dependencies": [
         "@algolia/client-common",
         "@algolia/requester-browser-xhr",
@@ -158,8 +158,8 @@
         "@algolia/requester-node-http"
       ]
     },
-    "@algolia/monitoring@1.46.2": {
-      "integrity": "sha512-xk9f+DPtNcddWN6E7n1hyNNsATBCHIqAvVGG2EAGHJc4AFYL18uM/kMTiOKXE/LKDPyy1JhIerrh9oYb7RBrgw==",
+    "@algolia/monitoring@1.48.1": {
+      "integrity": "sha512-Of0jTeAZRyRhC7XzDSjJef0aBkgRcvRAaw0ooYRlOw57APii7lZdq+layuNdeL72BRq1snaJhoMMwkmLIpJScw==",
       "dependencies": [
         "@algolia/client-common",
         "@algolia/requester-browser-xhr",
@@ -167,8 +167,8 @@
         "@algolia/requester-node-http"
       ]
     },
-    "@algolia/recommend@5.46.2": {
-      "integrity": "sha512-NApbTPj9LxGzNw4dYnZmj2BoXiAc8NmbbH6qBNzQgXklGklt/xldTvu+FACN6ltFsTzoNU6j2mWNlHQTKGC5+Q==",
+    "@algolia/recommend@5.48.1": {
+      "integrity": "sha512-bE7JcpFXzxF5zHwj/vkl2eiCBvyR1zQ7aoUdO+GDXxGp0DGw7nI0p8Xj6u8VmRQ+RDuPcICFQcCwRIJT5tDJFw==",
       "dependencies": [
         "@algolia/client-common",
         "@algolia/requester-browser-xhr",
@@ -176,20 +176,20 @@
         "@algolia/requester-node-http"
       ]
     },
-    "@algolia/requester-browser-xhr@5.46.2": {
-      "integrity": "sha512-ekotpCwpSp033DIIrsTpYlGUCF6momkgupRV/FA3m62SreTSZUKjgK6VTNyG7TtYfq9YFm/pnh65bATP/ZWJEg==",
+    "@algolia/requester-browser-xhr@5.48.1": {
+      "integrity": "sha512-MK3wZ2koLDnvH/AmqIF1EKbJlhRS5j74OZGkLpxI4rYvNi9Jn/C7vb5DytBnQ4KUWts7QsmbdwHkxY5txQHXVw==",
       "dependencies": [
         "@algolia/client-common"
       ]
     },
-    "@algolia/requester-fetch@5.46.2": {
-      "integrity": "sha512-gKE+ZFi/6y7saTr34wS0SqYFDcjHW4Wminv8PDZEi0/mE99+hSrbKgJWxo2ztb5eqGirQTgIh1AMVacGGWM1iw==",
+    "@algolia/requester-fetch@5.48.1": {
+      "integrity": "sha512-2oDT43Y5HWRSIQMPQI4tA/W+TN/N2tjggZCUsqQV440kxzzoPGsvv9QP1GhQ4CoDa+yn6ygUsGp6Dr+a9sPPSg==",
       "dependencies": [
         "@algolia/client-common"
       ]
     },
-    "@algolia/requester-node-http@5.46.2": {
-      "integrity": "sha512-ciPihkletp7ttweJ8Zt+GukSVLp2ANJHU+9ttiSxsJZThXc4Y2yJ8HGVWesW5jN1zrsZsezN71KrMx/iZsOYpg==",
+    "@algolia/requester-node-http@5.48.1": {
+      "integrity": "sha512-xcaCqbhupVWhuBP1nwbk1XNvwrGljozutEiLx06mvqDf3o8cHyEgQSHS4fKJM+UAggaWVnnFW+Nne5aQ8SUJXg==",
       "dependencies": [
         "@algolia/client-common"
       ]
@@ -201,8 +201,8 @@
         "@jridgewell/trace-mapping@0.3.31"
       ]
     },
-    "@analogjs/astro-angular@2.2.3_@angular+animations@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+compiler@21.1.2__rxjs@7.8.2_@angular+build@21.1.2__@angular+compiler@21.1.2__@angular+compiler-cli@21.1.2___@angular+compiler@21.1.2___typescript@5.9.3__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+platform-browser@21.1.2___@angular+animations@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+common@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__@angular+platform-server@21.1.2___@angular+common@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.1.2___@angular+compiler@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+platform-browser@21.1.2____@angular+animations@21.1.2_____@angular+core@21.1.2______@angular+compiler@21.1.2______rxjs@7.8.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____@angular+common@21.1.2_____@angular+core@21.1.2______@angular+compiler@21.1.2______rxjs@7.8.2_____rxjs@7.8.2_____@angular+compiler@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.1.2___rxjs@7.8.2___@angular+animations@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____@angular+compiler@21.1.2____rxjs@7.8.2__tslib@2.8.1__typescript@5.9.3__vitest@4.0.18___@types+node@25.1.0___happy-dom@20.4.0___vite@7.3.1____@types+node@25.1.0____sass@1.97.1____picomatch@4.0.3__rxjs@7.8.2__@angular+animations@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+common@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__@types+node@25.1.0__vite@7.3.0___@types+node@25.1.0___sass@1.97.1___picomatch@4.0.3__sass@1.97.1__happy-dom@20.4.0_@angular+common@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.1.2_@angular+compiler@21.1.2_@angular+compiler-cli@21.1.2__@angular+compiler@21.1.2__typescript@5.9.3_@angular+core@21.1.2__@angular+compiler@21.1.2__rxjs@7.8.2_@angular+language-service@21.1.2_@angular+platform-browser@21.1.2__@angular+animations@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+common@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.1.2_@angular+platform-server@21.1.2__@angular+common@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__@angular+compiler@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+platform-browser@21.1.2___@angular+animations@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+common@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__rxjs@7.8.2__@angular+animations@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+compiler@21.1.2___rxjs@7.8.2_rxjs@7.8.2_tslib@2.8.1_typescript@5.9.3_vitest@4.0.18__@types+node@25.1.0__happy-dom@20.4.0__vite@7.3.1___@types+node@25.1.0___sass@1.97.1___picomatch@4.0.3_@types+node@25.1.0_happy-dom@20.4.0": {
-      "integrity": "sha512-qVNwaXBxBmxDxH9r6McHb68RCBQh78jjVaRm723oP0sp9tqES94s3dUec4MeFdk3HvpXcdFOqoHQDCgEL2qm9Q==",
+    "@analogjs/astro-angular@2.3.0_@angular+animations@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+compiler@21.2.0__rxjs@7.8.2_@angular+build@21.2.0__@angular+compiler@21.2.0__@angular+compiler-cli@21.2.0___@angular+compiler@21.2.0___typescript@5.9.3__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+platform-browser@21.2.0___@angular+animations@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+common@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@angular+platform-server@21.2.0___@angular+common@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___@angular+compiler@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+platform-browser@21.2.0____@angular+animations@21.2.0_____@angular+core@21.2.0______@angular+compiler@21.2.0______rxjs@7.8.2_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+common@21.2.0_____@angular+core@21.2.0______@angular+compiler@21.2.0______rxjs@7.8.2_____rxjs@7.8.2_____@angular+compiler@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___rxjs@7.8.2___@angular+animations@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+compiler@21.2.0____rxjs@7.8.2__tslib@2.8.1__typescript@5.9.3__vitest@4.0.18___@types+node@25.1.0___happy-dom@20.4.0___vite@7.3.1____@types+node@25.1.0____sass@1.97.3____picomatch@4.0.3__rxjs@7.8.2__@angular+animations@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+common@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@types+node@25.1.0__vite@7.3.1___@types+node@25.1.0___sass@1.97.3___picomatch@4.0.3__sass@1.97.3__happy-dom@20.4.0_@angular+common@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.2.0_@angular+compiler@21.2.0_@angular+compiler-cli@21.2.0__@angular+compiler@21.2.0__typescript@5.9.3_@angular+core@21.2.0__@angular+compiler@21.2.0__rxjs@7.8.2_@angular+language-service@21.2.0_@angular+platform-browser@21.2.0__@angular+animations@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+common@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.2.0_@angular+platform-server@21.2.0__@angular+common@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@angular+compiler@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+platform-browser@21.2.0___@angular+animations@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+common@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__rxjs@7.8.2__@angular+animations@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+compiler@21.2.0___rxjs@7.8.2_rxjs@7.8.2_tslib@2.8.1_typescript@5.9.3_vitest@4.0.18__@types+node@25.1.0__happy-dom@20.4.0__vite@7.3.1___@types+node@25.1.0___sass@1.97.3___picomatch@4.0.3_@types+node@25.1.0_happy-dom@20.4.0": {
+      "integrity": "sha512-T1HKXQGQLh9WQJctCmuMWvV4bUSzkhySK11Pf3M/oY5ZED9fjITvZOhULo1JOSHn/kk+ZPnuGJnHcjqtVTMmAg==",
       "dependencies": [
         "@analogjs/vite-plugin-angular",
         "@angular/animations",
@@ -218,34 +218,43 @@
         "tslib"
       ]
     },
-    "@analogjs/vite-plugin-angular@2.2.3_@angular+build@21.1.2__@angular+compiler@21.1.2__@angular+compiler-cli@21.1.2___@angular+compiler@21.1.2___typescript@5.9.3__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+platform-browser@21.1.2___@angular+animations@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+common@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__@angular+platform-server@21.1.2___@angular+common@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.1.2___@angular+compiler@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+platform-browser@21.1.2____@angular+animations@21.1.2_____@angular+core@21.1.2______@angular+compiler@21.1.2______rxjs@7.8.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____@angular+common@21.1.2_____@angular+core@21.1.2______@angular+compiler@21.1.2______rxjs@7.8.2_____rxjs@7.8.2_____@angular+compiler@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.1.2___rxjs@7.8.2___@angular+animations@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____@angular+compiler@21.1.2____rxjs@7.8.2__tslib@2.8.1__typescript@5.9.3__vitest@4.0.18___@types+node@25.1.0___happy-dom@20.4.0___vite@7.3.1____@types+node@25.1.0____sass@1.97.1____picomatch@4.0.3__rxjs@7.8.2__@angular+animations@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+common@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__@types+node@25.1.0__vite@7.3.0___@types+node@25.1.0___sass@1.97.1___picomatch@4.0.3__sass@1.97.1__happy-dom@20.4.0_@angular+compiler@21.1.2_@angular+compiler-cli@21.1.2__@angular+compiler@21.1.2__typescript@5.9.3_@angular+core@21.1.2__@angular+compiler@21.1.2__rxjs@7.8.2_@angular+platform-browser@21.1.2__@angular+animations@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+common@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.1.2_@angular+platform-server@21.1.2__@angular+common@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__@angular+compiler@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+platform-browser@21.1.2___@angular+animations@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+common@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__rxjs@7.8.2__@angular+animations@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+compiler@21.1.2___rxjs@7.8.2_tslib@2.8.1_typescript@5.9.3_vitest@4.0.18__@types+node@25.1.0__happy-dom@20.4.0__vite@7.3.1___@types+node@25.1.0___sass@1.97.1___picomatch@4.0.3_rxjs@7.8.2_@angular+animations@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+compiler@21.1.2__rxjs@7.8.2_@angular+common@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.1.2_@types+node@25.1.0_happy-dom@20.4.0": {
-      "integrity": "sha512-OqVfiJsaHdHMxzvK0heVvp8MenSXh+xib6/p+v3d44kJ3J7ooD4gRx/jKC350zkgRKwcZc3a0ybGUnG6LEF7mg==",
+    "@analogjs/vite-plugin-angular@2.3.0_@angular+build@21.2.0__@angular+compiler@21.2.0__@angular+compiler-cli@21.2.0___@angular+compiler@21.2.0___typescript@5.9.3__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+platform-browser@21.2.0___@angular+animations@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+common@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@angular+platform-server@21.2.0___@angular+common@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___@angular+compiler@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+platform-browser@21.2.0____@angular+animations@21.2.0_____@angular+core@21.2.0______@angular+compiler@21.2.0______rxjs@7.8.2_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+common@21.2.0_____@angular+core@21.2.0______@angular+compiler@21.2.0______rxjs@7.8.2_____rxjs@7.8.2_____@angular+compiler@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___rxjs@7.8.2___@angular+animations@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+compiler@21.2.0____rxjs@7.8.2__tslib@2.8.1__typescript@5.9.3__vitest@4.0.18___@types+node@25.1.0___happy-dom@20.4.0___vite@7.3.1____@types+node@25.1.0____sass@1.97.3____picomatch@4.0.3__rxjs@7.8.2__@angular+animations@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+common@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@types+node@25.1.0__vite@7.3.1___@types+node@25.1.0___sass@1.97.3___picomatch@4.0.3__sass@1.97.3__happy-dom@20.4.0_@angular+compiler@21.2.0_@angular+compiler-cli@21.2.0__@angular+compiler@21.2.0__typescript@5.9.3_@angular+core@21.2.0__@angular+compiler@21.2.0__rxjs@7.8.2_@angular+platform-browser@21.2.0__@angular+animations@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+common@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.2.0_@angular+platform-server@21.2.0__@angular+common@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@angular+compiler@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+platform-browser@21.2.0___@angular+animations@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+common@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__rxjs@7.8.2__@angular+animations@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+compiler@21.2.0___rxjs@7.8.2_tslib@2.8.1_typescript@5.9.3_vitest@4.0.18__@types+node@25.1.0__happy-dom@20.4.0__vite@7.3.1___@types+node@25.1.0___sass@1.97.3___picomatch@4.0.3_rxjs@7.8.2_@angular+animations@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+compiler@21.2.0__rxjs@7.8.2_@angular+common@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.2.0_@types+node@25.1.0_happy-dom@20.4.0": {
+      "integrity": "sha512-3zbx2Pu/PyP0cw5EMgpdVMerYwYOtZvV1pFXxoViGZAxFzQ8TGHCuJm4ECg3jcs7iBdt1O9ZejMuwebVCXeD3A==",
       "dependencies": [
         "@angular/build",
+        "tinyglobby",
         "ts-morph"
       ],
       "optionalPeers": [
         "@angular/build"
       ]
     },
-    "@analogjs/vitest-angular@2.2.3_@analogjs+vite-plugin-angular@2.2.3__@angular+build@21.1.2___@angular+compiler@21.1.2___@angular+compiler-cli@21.1.2____@angular+compiler@21.1.2____typescript@5.9.3___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+platform-browser@21.1.2____@angular+animations@21.1.2_____@angular+core@21.1.2______@angular+compiler@21.1.2______rxjs@7.8.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____@angular+common@21.1.2_____@angular+core@21.1.2______@angular+compiler@21.1.2______rxjs@7.8.2_____rxjs@7.8.2_____@angular+compiler@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.1.2___@angular+platform-server@21.1.2____@angular+common@21.1.2_____@angular+core@21.1.2______@angular+compiler@21.1.2______rxjs@7.8.2_____rxjs@7.8.2_____@angular+compiler@21.1.2____@angular+compiler@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____@angular+platform-browser@21.1.2_____@angular+animations@21.1.2______@angular+core@21.1.2_______@angular+compiler@21.1.2_______rxjs@7.8.2______@angular+compiler@21.1.2______rxjs@7.8.2_____@angular+common@21.1.2______@angular+core@21.1.2_______@angular+compiler@21.1.2_______rxjs@7.8.2______rxjs@7.8.2______@angular+compiler@21.1.2_____@angular+core@21.1.2______@angular+compiler@21.1.2______rxjs@7.8.2_____rxjs@7.8.2_____@angular+compiler@21.1.2____rxjs@7.8.2____@angular+animations@21.1.2_____@angular+core@21.1.2______@angular+compiler@21.1.2______rxjs@7.8.2_____@angular+compiler@21.1.2_____rxjs@7.8.2___tslib@2.8.1___typescript@5.9.3___vitest@4.0.18____@types+node@25.1.0____happy-dom@20.4.0____vite@7.3.1_____@types+node@25.1.0_____sass@1.97.1_____picomatch@4.0.3___rxjs@7.8.2___@angular+animations@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+common@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.1.2___@types+node@25.1.0___vite@7.3.0____@types+node@25.1.0____sass@1.97.1____picomatch@4.0.3___sass@1.97.1___happy-dom@20.4.0__@angular+compiler@21.1.2__@angular+compiler-cli@21.1.2___@angular+compiler@21.1.2___typescript@5.9.3__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+platform-browser@21.1.2___@angular+animations@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+common@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__@angular+platform-server@21.1.2___@angular+common@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.1.2___@angular+compiler@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+platform-browser@21.1.2____@angular+animations@21.1.2_____@angular+core@21.1.2______@angular+compiler@21.1.2______rxjs@7.8.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____@angular+common@21.1.2_____@angular+core@21.1.2______@angular+compiler@21.1.2______rxjs@7.8.2_____rxjs@7.8.2_____@angular+compiler@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.1.2___rxjs@7.8.2___@angular+animations@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____@angular+compiler@21.1.2____rxjs@7.8.2__tslib@2.8.1__typescript@5.9.3__vitest@4.0.18___@types+node@25.1.0___happy-dom@20.4.0___vite@7.3.1____@types+node@25.1.0____sass@1.97.1____picomatch@4.0.3__rxjs@7.8.2__@angular+animations@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+common@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__@types+node@25.1.0__happy-dom@20.4.0_@angular-devkit+architect@0.2101.2_vitest@4.0.18__@types+node@25.1.0__happy-dom@20.4.0__vite@7.3.1___@types+node@25.1.0___sass@1.97.1___picomatch@4.0.3_@angular+build@21.1.2__@angular+compiler@21.1.2__@angular+compiler-cli@21.1.2___@angular+compiler@21.1.2___typescript@5.9.3__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+platform-browser@21.1.2___@angular+animations@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+common@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__@angular+platform-server@21.1.2___@angular+common@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.1.2___@angular+compiler@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+platform-browser@21.1.2____@angular+animations@21.1.2_____@angular+core@21.1.2______@angular+compiler@21.1.2______rxjs@7.8.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____@angular+common@21.1.2_____@angular+core@21.1.2______@angular+compiler@21.1.2______rxjs@7.8.2_____rxjs@7.8.2_____@angular+compiler@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.1.2___rxjs@7.8.2___@angular+animations@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____@angular+compiler@21.1.2____rxjs@7.8.2__tslib@2.8.1__typescript@5.9.3__vitest@4.0.18___@types+node@25.1.0___happy-dom@20.4.0___vite@7.3.1____@types+node@25.1.0____sass@1.97.1____picomatch@4.0.3__rxjs@7.8.2__@angular+animations@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+common@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__@types+node@25.1.0__vite@7.3.0___@types+node@25.1.0___sass@1.97.1___picomatch@4.0.3__sass@1.97.1__happy-dom@20.4.0_@types+node@25.1.0_happy-dom@20.4.0_@angular+compiler@21.1.2_@angular+compiler-cli@21.1.2__@angular+compiler@21.1.2__typescript@5.9.3_@angular+core@21.1.2__@angular+compiler@21.1.2__rxjs@7.8.2_@angular+platform-browser@21.1.2__@angular+animations@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+common@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.1.2_@angular+platform-server@21.1.2__@angular+common@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__@angular+compiler@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+platform-browser@21.1.2___@angular+animations@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+common@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__rxjs@7.8.2__@angular+animations@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+compiler@21.1.2___rxjs@7.8.2_tslib@2.8.1_typescript@5.9.3_rxjs@7.8.2_@angular+animations@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+compiler@21.1.2__rxjs@7.8.2_@angular+common@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.1.2": {
+    "@analogjs/vitest-angular@2.2.3_@analogjs+vite-plugin-angular@2.3.0__@angular+build@21.2.0___@angular+compiler@21.2.0___@angular+compiler-cli@21.2.0____@angular+compiler@21.2.0____typescript@5.9.3___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+platform-browser@21.2.0____@angular+animations@21.2.0_____@angular+core@21.2.0______@angular+compiler@21.2.0______rxjs@7.8.2_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+common@21.2.0_____@angular+core@21.2.0______@angular+compiler@21.2.0______rxjs@7.8.2_____rxjs@7.8.2_____@angular+compiler@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___@angular+platform-server@21.2.0____@angular+common@21.2.0_____@angular+core@21.2.0______@angular+compiler@21.2.0______rxjs@7.8.2_____rxjs@7.8.2_____@angular+compiler@21.2.0____@angular+compiler@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+platform-browser@21.2.0_____@angular+animations@21.2.0______@angular+core@21.2.0_______@angular+compiler@21.2.0_______rxjs@7.8.2______@angular+compiler@21.2.0______rxjs@7.8.2_____@angular+common@21.2.0______@angular+core@21.2.0_______@angular+compiler@21.2.0_______rxjs@7.8.2______rxjs@7.8.2______@angular+compiler@21.2.0_____@angular+core@21.2.0______@angular+compiler@21.2.0______rxjs@7.8.2_____rxjs@7.8.2_____@angular+compiler@21.2.0____rxjs@7.8.2____@angular+animations@21.2.0_____@angular+core@21.2.0______@angular+compiler@21.2.0______rxjs@7.8.2_____@angular+compiler@21.2.0_____rxjs@7.8.2___tslib@2.8.1___typescript@5.9.3___vitest@4.0.18____@types+node@25.1.0____happy-dom@20.4.0____vite@7.3.1_____@types+node@25.1.0_____sass@1.97.3_____picomatch@4.0.3___rxjs@7.8.2___@angular+animations@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+common@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___@types+node@25.1.0___vite@7.3.1____@types+node@25.1.0____sass@1.97.3____picomatch@4.0.3___sass@1.97.3___happy-dom@20.4.0__@angular+compiler@21.2.0__@angular+compiler-cli@21.2.0___@angular+compiler@21.2.0___typescript@5.9.3__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+platform-browser@21.2.0___@angular+animations@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+common@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@angular+platform-server@21.2.0___@angular+common@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___@angular+compiler@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+platform-browser@21.2.0____@angular+animations@21.2.0_____@angular+core@21.2.0______@angular+compiler@21.2.0______rxjs@7.8.2_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+common@21.2.0_____@angular+core@21.2.0______@angular+compiler@21.2.0______rxjs@7.8.2_____rxjs@7.8.2_____@angular+compiler@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___rxjs@7.8.2___@angular+animations@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+compiler@21.2.0____rxjs@7.8.2__tslib@2.8.1__typescript@5.9.3__vitest@4.0.18___@types+node@25.1.0___happy-dom@20.4.0___vite@7.3.1____@types+node@25.1.0____sass@1.97.3____picomatch@4.0.3__rxjs@7.8.2__@angular+animations@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+common@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@types+node@25.1.0__happy-dom@20.4.0_@angular-devkit+architect@0.2101.5_vitest@4.0.18__@types+node@25.1.0__happy-dom@20.4.0__vite@7.3.1___@types+node@25.1.0___sass@1.97.3___picomatch@4.0.3_@angular+build@21.2.0__@angular+compiler@21.2.0__@angular+compiler-cli@21.2.0___@angular+compiler@21.2.0___typescript@5.9.3__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+platform-browser@21.2.0___@angular+animations@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+common@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@angular+platform-server@21.2.0___@angular+common@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___@angular+compiler@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+platform-browser@21.2.0____@angular+animations@21.2.0_____@angular+core@21.2.0______@angular+compiler@21.2.0______rxjs@7.8.2_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+common@21.2.0_____@angular+core@21.2.0______@angular+compiler@21.2.0______rxjs@7.8.2_____rxjs@7.8.2_____@angular+compiler@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___rxjs@7.8.2___@angular+animations@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+compiler@21.2.0____rxjs@7.8.2__tslib@2.8.1__typescript@5.9.3__vitest@4.0.18___@types+node@25.1.0___happy-dom@20.4.0___vite@7.3.1____@types+node@25.1.0____sass@1.97.3____picomatch@4.0.3__rxjs@7.8.2__@angular+animations@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+common@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@types+node@25.1.0__vite@7.3.1___@types+node@25.1.0___sass@1.97.3___picomatch@4.0.3__sass@1.97.3__happy-dom@20.4.0_@types+node@25.1.0_happy-dom@20.4.0_@angular+compiler@21.2.0_@angular+compiler-cli@21.2.0__@angular+compiler@21.2.0__typescript@5.9.3_@angular+core@21.2.0__@angular+compiler@21.2.0__rxjs@7.8.2_@angular+platform-browser@21.2.0__@angular+animations@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+common@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.2.0_@angular+platform-server@21.2.0__@angular+common@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@angular+compiler@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+platform-browser@21.2.0___@angular+animations@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+common@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__rxjs@7.8.2__@angular+animations@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+compiler@21.2.0___rxjs@7.8.2_tslib@2.8.1_typescript@5.9.3_rxjs@7.8.2_@angular+animations@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+compiler@21.2.0__rxjs@7.8.2_@angular+common@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.2.0": {
       "integrity": "sha512-514A8RqT4sQnWj/3pHnoGrvDLYjcUTWL3d00GCQ4MVRUpisUg2R8tC/PZ/3ZARK5SskIwy5LwPEg4RFX0iOSug==",
       "dependencies": [
         "@analogjs/vite-plugin-angular",
-        "@angular-devkit/architect",
-        "vitest@4.0.18_@types+node@25.1.0_happy-dom@20.4.0_vite@7.3.1__@types+node@25.1.0__sass@1.97.1__picomatch@4.0.3"
+        "@angular-devkit/architect@0.2101.5",
+        "vitest@4.0.18_@types+node@25.1.0_happy-dom@20.4.0_vite@7.3.1__@types+node@25.1.0__sass@1.97.3__picomatch@4.0.3"
       ]
     },
-    "@angular-devkit/architect@0.2101.2": {
-      "integrity": "sha512-pV2onJgp16xO0vAqEfRWVynRPPLVHydYLANNa3UX3l5T39JcYdMIoOHSIIl8tWrxVeOwiWd1ajub0VsFTUok4Q==",
+    "@angular-devkit/architect@0.2101.5": {
+      "integrity": "sha512-eTo6wWzUW5AyBBLTbaUTpBHhGbZhzteErtNGklWkhjicCr/soNH+2mVtvg8bqA8sNreYffK1VXKFsq5NyMh5qg==",
       "dependencies": [
-        "@angular-devkit/core",
+        "@angular-devkit/core@21.1.5_ajv@8.18.0",
         "rxjs"
       ],
       "bin": true
     },
-    "@angular-devkit/core@21.1.2_ajv@8.18.0": {
-      "integrity": "sha512-0wl5nJlFWsbwfUB2CQeTSmnVQ8AtqqwM3bYPYtXSc+vA8+hzsOAjjDuRnBxZS9zTnqtXKXB1e7M3Iy7KUwh7LA==",
+    "@angular-devkit/architect@0.2102.0": {
+      "integrity": "sha512-kYFwTNzToG2SJMxj2f41w3QRtdqlrFuF+bpZrtIaHOP078Ktld8EPIp9KqB0Y46Vvs69ifby5Q1/wPD9wA3iaw==",
+      "dependencies": [
+        "@angular-devkit/core@21.2.0_ajv@8.18.0",
+        "rxjs"
+      ],
+      "bin": true
+    },
+    "@angular-devkit/core@21.1.5_ajv@8.18.0": {
+      "integrity": "sha512-KUKbllHvHefkAbTBjWNpRPyrpBqecW+6HBBAR+XNbKBuFTHkG+gxtuwMXNsvO5KECKwQphvQt5h3g05Xtaf0LQ==",
       "dependencies": [
         "ajv@8.18.0",
         "ajv-formats",
@@ -255,21 +264,32 @@
         "source-map@0.7.6"
       ]
     },
-    "@angular-devkit/schematics@21.1.2": {
-      "integrity": "sha512-PA3gkiFhHUuXd2XuP7yzKg/9N++bjw+uOl473KwIsMuZwMPhncKa4+mUYBaffDoPqaujZvjfo6mjtCBuiBv05w==",
+    "@angular-devkit/core@21.2.0_ajv@8.18.0": {
+      "integrity": "sha512-HZdTn46Ca6qbb9Zef8R/+TWsk6mNKRm4rJyL3PxHP6HnVCwSPNZ0LNN9BjVREBs+UlRdXqBGFBZh5D1nBgu5GQ==",
       "dependencies": [
-        "@angular-devkit/core",
+        "ajv@8.18.0",
+        "ajv-formats",
+        "jsonc-parser",
+        "picomatch@4.0.3",
+        "rxjs",
+        "source-map@0.7.6"
+      ]
+    },
+    "@angular-devkit/schematics@21.2.0": {
+      "integrity": "sha512-3kn3FI5v7BQ7Zct6raek+WgvyDwOJ8wElbyC903GxMQCDBRGGcevhHvTAIHhknihEsrgplzPhTlWeMbk1JfdFg==",
+      "dependencies": [
+        "@angular-devkit/core@21.2.0_ajv@8.18.0",
         "jsonc-parser",
         "magic-string",
         "ora",
         "rxjs"
       ]
     },
-    "@angular-eslint/builder@21.2.0_@angular+cli@21.1.2__@types+node@25.1.0__@inquirer+prompts@7.10.1___@types+node@25.1.0__listr2@9.0.5__zod@4.3.5_eslint@9.39.2_typescript@5.9.3_@types+node@25.1.0": {
+    "@angular-eslint/builder@21.2.0_@angular+cli@21.2.0__@types+node@25.1.0__@inquirer+prompts@7.10.1___@types+node@25.1.0__listr2@9.0.5__zod@4.3.6_eslint@9.39.2_typescript@5.9.3_@types+node@25.1.0": {
       "integrity": "sha512-wcp3J9cbrDwSeI/o1D/DSvMQa8zpKjc5WhRGTx33omhWijCfiVNEAiBLWiEx5Sb/dWcoX8yFNWY5jSgFVy9Sjw==",
       "dependencies": [
-        "@angular-devkit/architect",
-        "@angular-devkit/core",
+        "@angular-devkit/architect@0.2102.0",
+        "@angular-devkit/core@21.2.0_ajv@8.18.0",
         "@angular/cli",
         "eslint",
         "typescript"
@@ -303,10 +323,10 @@
         "typescript"
       ]
     },
-    "@angular-eslint/schematics@21.2.0_@angular+cli@21.1.2__@types+node@25.1.0__@inquirer+prompts@7.10.1___@types+node@25.1.0__listr2@9.0.5__zod@4.3.5_@typescript-eslint+utils@8.54.0__eslint@9.39.2__typescript@5.9.3_eslint@9.39.2_typescript@5.9.3_@angular-eslint+template-parser@21.2.0__eslint@9.39.2__typescript@5.9.3_@typescript-eslint+types@8.54.0_@types+node@25.1.0": {
+    "@angular-eslint/schematics@21.2.0_@angular+cli@21.2.0__@types+node@25.1.0__@inquirer+prompts@7.10.1___@types+node@25.1.0__listr2@9.0.5__zod@4.3.6_@typescript-eslint+utils@8.54.0__eslint@9.39.2__typescript@5.9.3_eslint@9.39.2_typescript@5.9.3_@angular-eslint+template-parser@21.2.0__eslint@9.39.2__typescript@5.9.3_@typescript-eslint+types@8.54.0_@types+node@25.1.0": {
       "integrity": "sha512-WtT4fPKIUQ/hswy+l2GF/rKOdD+42L3fUzzcwRzNutQbe2tU9SimoSOAsay/ylWEuhIOQTs7ysPB8fUgFQoLpA==",
       "dependencies": [
-        "@angular-devkit/core",
+        "@angular-devkit/core@21.2.0_ajv@8.18.0",
         "@angular-devkit/schematics",
         "@angular-eslint/eslint-plugin",
         "@angular-eslint/eslint-plugin-template",
@@ -334,18 +354,18 @@
         "typescript"
       ]
     },
-    "@angular/animations@21.1.2_@angular+core@21.1.2__@angular+compiler@21.1.2__rxjs@7.8.2_@angular+compiler@21.1.2_rxjs@7.8.2": {
-      "integrity": "sha512-8lVSH3y/Pq22ND9ng80UQwQRiIPIE7oD3vuV98Wufld59+s5g4PdJNqPhEVD5dkYD0gYQcm3jTIXSeYuOfpsUg==",
+    "@angular/animations@21.2.0_@angular+core@21.2.0__@angular+compiler@21.2.0__rxjs@7.8.2_@angular+compiler@21.2.0_rxjs@7.8.2": {
+      "integrity": "sha512-SzlLoMT/r5wKqPicx5okCAiN5UD5+VE7x/F1G6gSJCcnBfbK5PqHPUmDnMW4jw9Ode06KZDT7ntstn6fG+Ld8w==",
       "dependencies": [
         "@angular/core",
         "tslib"
       ]
     },
-    "@angular/build@21.1.2_@angular+compiler@21.1.2_@angular+compiler-cli@21.1.2__@angular+compiler@21.1.2__typescript@5.9.3_@angular+core@21.1.2__@angular+compiler@21.1.2__rxjs@7.8.2_@angular+platform-browser@21.1.2__@angular+animations@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+common@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.1.2_@angular+platform-server@21.1.2__@angular+common@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__@angular+compiler@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+platform-browser@21.1.2___@angular+animations@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+common@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__rxjs@7.8.2__@angular+animations@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+compiler@21.1.2___rxjs@7.8.2_tslib@2.8.1_typescript@5.9.3_vitest@4.0.18__@types+node@25.1.0__happy-dom@20.4.0__vite@7.3.1___@types+node@25.1.0___sass@1.97.1___picomatch@4.0.3_rxjs@7.8.2_@angular+animations@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+compiler@21.1.2__rxjs@7.8.2_@angular+common@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.1.2_@types+node@25.1.0_vite@7.3.0__@types+node@25.1.0__sass@1.97.1__picomatch@4.0.3_sass@1.97.1_happy-dom@20.4.0": {
-      "integrity": "sha512-5hl7OTZeQcdkr/3LXSijLuUCwlcqGyYJYOb8GbFqSifSR03JFI3tLQtyQ0LX2CXv3MOx1qFUQbYVfcjW5M36QQ==",
+    "@angular/build@21.2.0_@angular+compiler@21.2.0_@angular+compiler-cli@21.2.0__@angular+compiler@21.2.0__typescript@5.9.3_@angular+core@21.2.0__@angular+compiler@21.2.0__rxjs@7.8.2_@angular+platform-browser@21.2.0__@angular+animations@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+common@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.2.0_@angular+platform-server@21.2.0__@angular+common@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@angular+compiler@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+platform-browser@21.2.0___@angular+animations@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+common@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__rxjs@7.8.2__@angular+animations@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+compiler@21.2.0___rxjs@7.8.2_tslib@2.8.1_typescript@5.9.3_vitest@4.0.18__@types+node@25.1.0__happy-dom@20.4.0__vite@7.3.1___@types+node@25.1.0___sass@1.97.3___picomatch@4.0.3_rxjs@7.8.2_@angular+animations@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+compiler@21.2.0__rxjs@7.8.2_@angular+common@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.2.0_@types+node@25.1.0_vite@7.3.1__@types+node@25.1.0__sass@1.97.3__picomatch@4.0.3_sass@1.97.3_happy-dom@20.4.0": {
+      "integrity": "sha512-K0EqiHz2y7TSyD4adWD0+C/P9khKlrsSWavXWxGRvoSJC/H3I3SK5Z6BWwftBibXR1Fis7njwvl5IGAlQrDchA==",
       "dependencies": [
         "@ampproject/remapping",
-        "@angular-devkit/architect",
+        "@angular-devkit/architect@0.2102.0",
         "@angular/compiler",
         "@angular/compiler-cli",
         "@angular/core",
@@ -358,7 +378,7 @@
         "@vitejs/plugin-basic-ssl",
         "beasties",
         "browserslist",
-        "esbuild@0.27.2",
+        "esbuild@0.27.3",
         "https-proxy-agent",
         "istanbul-lib-instrument",
         "jsonc-parser",
@@ -370,14 +390,14 @@
         "piscina",
         "rolldown",
         "sass",
-        "semver@7.7.3",
+        "semver@7.7.4",
         "source-map-support",
         "tinyglobby",
         "tslib",
         "typescript",
         "undici",
-        "vite@7.3.0_@types+node@25.1.0_sass@1.97.1_picomatch@4.0.3",
-        "vitest@4.0.18_@types+node@25.1.0_happy-dom@20.4.0_vite@7.3.1__@types+node@25.1.0__sass@1.97.1__picomatch@4.0.3_sass@1.97.1",
+        "vite@7.3.1_@types+node@25.1.0_sass@1.97.3_picomatch@4.0.3",
+        "vitest@4.0.18_@types+node@25.1.0_happy-dom@20.4.0_vite@7.3.1__@types+node@25.1.0__sass@1.97.3__picomatch@4.0.3_sass@1.97.3",
         "watchpack"
       ],
       "optionalDependencies": [
@@ -387,18 +407,18 @@
         "@angular/core",
         "@angular/platform-browser",
         "@angular/platform-server",
-        "vitest@4.0.18_@types+node@25.1.0_happy-dom@20.4.0_vite@7.3.1__@types+node@25.1.0__sass@1.97.1__picomatch@4.0.3_sass@1.97.1"
+        "vitest@4.0.18_@types+node@25.1.0_happy-dom@20.4.0_vite@7.3.1__@types+node@25.1.0__sass@1.97.3__picomatch@4.0.3_sass@1.97.3"
       ]
     },
-    "@angular/cli@21.1.2_@types+node@25.1.0_@inquirer+prompts@7.10.1__@types+node@25.1.0_listr2@9.0.5_zod@4.3.5": {
-      "integrity": "sha512-AHjXCBl2PEilMJct6DX3ih5Fl5PiKpNDIj0ViTyVh1YcfpYjt6NzhVlV2o++8VNPNH/vMcmf2551LZIDProXXA==",
+    "@angular/cli@21.2.0_@types+node@25.1.0_@inquirer+prompts@7.10.1__@types+node@25.1.0_listr2@9.0.5_zod@4.3.6": {
+      "integrity": "sha512-yaGEpckqgOemcHkoWeH92i9eNrcbr9iE/dnxL+Du6s9spTAXJ2jjtYfszhmowuQZkCK5rjecMb8ctNtHlaGCjg==",
       "dependencies": [
-        "@angular-devkit/architect",
-        "@angular-devkit/core",
+        "@angular-devkit/architect@0.2102.0",
+        "@angular-devkit/core@21.2.0_ajv@8.18.0",
         "@angular-devkit/schematics",
         "@inquirer/prompts",
         "@listr2/prompt-adapter-inquirer",
-        "@modelcontextprotocol/sdk@1.26.0_zod@4.3.5_hono@4.12.3_ajv@8.18.0_express@5.2.1",
+        "@modelcontextprotocol/sdk@1.26.0_zod@4.3.6_hono@4.12.3_ajv@8.18.0_express@5.2.1",
         "@schematics/angular",
         "@yarnpkg/lockfile",
         "algoliasearch",
@@ -408,23 +428,22 @@
         "npm-package-arg",
         "pacote",
         "parse5-html-rewriting-stream",
-        "resolve@1.22.11",
-        "semver@7.7.3",
+        "semver@7.7.4",
         "yargs",
-        "zod@4.3.5"
+        "zod@4.3.6"
       ],
       "bin": true
     },
-    "@angular/common@21.1.2_@angular+core@21.1.2__@angular+compiler@21.1.2__rxjs@7.8.2_rxjs@7.8.2_@angular+compiler@21.1.2": {
-      "integrity": "sha512-NK26OG1+/3EXLDWstSPmdGbkpt8bP9AsT9J7EBornMswUjmQDbjyb85N/esKjRjDMkw4p/aKpBo24eCV5uUmBA==",
+    "@angular/common@21.2.0_@angular+core@21.2.0__@angular+compiler@21.2.0__rxjs@7.8.2_rxjs@7.8.2_@angular+compiler@21.2.0": {
+      "integrity": "sha512-6zJMPi0i/XDniEgv3/t2BjuDHiOG44lgIR5PYyxqGpgJ0kqB5hku/0TuentNEi1VnBYgthnfhjek7c+lakXmhw==",
       "dependencies": [
         "@angular/core",
         "rxjs",
         "tslib"
       ]
     },
-    "@angular/compiler-cli@21.1.2_@angular+compiler@21.1.2_typescript@5.9.3": {
-      "integrity": "sha512-h+sX7QvSz58KvmRwNMa33EZHti8Cnw1DL01kInJ/foDchC/O2VMOumeGHS+lAe48t2Nbhiq/obgf275TkDZYsA==",
+    "@angular/compiler-cli@21.2.0_@angular+compiler@21.2.0_typescript@5.9.3": {
+      "integrity": "sha512-gZd58p0/JjgdxMX3v+LjCB6e3dBIfNVr/YzXoh55TfffdBCUQY94hl1+DFQkJ72K5EX+1zbaz03dIm30kw1bGw==",
       "dependencies": [
         "@angular/compiler",
         "@babel/core",
@@ -432,7 +451,7 @@
         "chokidar@5.0.0",
         "convert-source-map@1.9.0",
         "reflect-metadata",
-        "semver@7.7.3",
+        "semver@7.7.4",
         "tslib",
         "typescript",
         "yargs"
@@ -442,14 +461,14 @@
       ],
       "bin": true
     },
-    "@angular/compiler@21.1.2": {
-      "integrity": "sha512-5OFdZPNix7iK4HSdRxPgg74VvcmQZAMzv9ACYZ8iGfNxiJUjFSurfz0AtVEh0oE2oZDH1v48bHI1s+0ljCHZhA==",
+    "@angular/compiler@21.2.0": {
+      "integrity": "sha512-0RPkma8UVNpse/VJcXT9w6SKzTMz4J/uMGj0l9enM1frg9xrx1fwi/lLmaVV9Nr9LfqPjQdxNFFlvaBB7g/2zg==",
       "dependencies": [
         "tslib"
       ]
     },
-    "@angular/core@21.1.2_@angular+compiler@21.1.2_rxjs@7.8.2": {
-      "integrity": "sha512-W2xxRb7noOD1DdMwKaZ3chFhii6nutaNIXt7dfWsMWoujg3Kqpdn1ukeyW5aHKQZvCJTIGr4f3whZ8Sj/17aCA==",
+    "@angular/core@21.2.0_@angular+compiler@21.2.0_rxjs@7.8.2": {
+      "integrity": "sha512-VnTbmZq3g3Q+s3nCZ8VUDMLjMezOg/bqUxAJ/DrRWCrEcTP5JO3mrNPs3FHj+qlB0T+BQP7uQv6QTzPVKybwoA==",
       "dependencies": [
         "@angular/compiler",
         "rxjs",
@@ -459,11 +478,11 @@
         "@angular/compiler"
       ]
     },
-    "@angular/language-service@21.1.2": {
-      "integrity": "sha512-/2VXz08k0BVQoYiDv/AyQgDY9AVzFuo29I/OAh28za58ReiXkT/WOWgP4el1rewX4uxWnM+BEpYxC3hcc+Ls0Q=="
+    "@angular/language-service@21.2.0": {
+      "integrity": "sha512-tWG/8I9kMfSk1NYlS/PvvcVg+Jx1wy4mbZFYIKfcSOoOsVuW/QyHRsHNFtHUG7ZbgzDXoHIWblEk3ESSoPlkjw=="
     },
-    "@angular/platform-browser@21.1.2_@angular+animations@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+compiler@21.1.2__rxjs@7.8.2_@angular+common@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.1.2_@angular+core@21.1.2__@angular+compiler@21.1.2__rxjs@7.8.2_rxjs@7.8.2_@angular+compiler@21.1.2": {
-      "integrity": "sha512-8vnCbQhxugQ3meGQ0YlSp0uNBYUjpFXYjFnGQ0Xq5jvzc9WX7KSix6+AydEjZtQfc1bWRetBTOlhQpqnwYp53g==",
+    "@angular/platform-browser@21.2.0_@angular+animations@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+compiler@21.2.0__rxjs@7.8.2_@angular+common@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.2.0_@angular+core@21.2.0__@angular+compiler@21.2.0__rxjs@7.8.2_rxjs@7.8.2_@angular+compiler@21.2.0": {
+      "integrity": "sha512-IUGukpvvT2B5Dl76qzk6rY7UIHUT9u4BhT2AwVz+5JqcX9KwQtYD17Gt7wj6bvIgCXKWG+CfN8Zd9DECOCYWjg==",
       "dependencies": [
         "@angular/animations",
         "@angular/common",
@@ -474,8 +493,8 @@
         "@angular/animations"
       ]
     },
-    "@angular/platform-server@21.1.2_@angular+common@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.1.2_@angular+compiler@21.1.2_@angular+core@21.1.2__@angular+compiler@21.1.2__rxjs@7.8.2_@angular+platform-browser@21.1.2__@angular+animations@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+common@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.1.2_rxjs@7.8.2_@angular+animations@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+compiler@21.1.2__rxjs@7.8.2": {
-      "integrity": "sha512-H3xr7qsk4BNQM91gUCIiLwdwR0zxE3H/6UdC2UHtPa8vJ467KJ1HqGJ9oyO3VSXig0mSNLly5j7OWFKJXwpULA==",
+    "@angular/platform-server@21.2.0_@angular+common@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.2.0_@angular+compiler@21.2.0_@angular+core@21.2.0__@angular+compiler@21.2.0__rxjs@7.8.2_@angular+platform-browser@21.2.0__@angular+animations@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+common@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.2.0_rxjs@7.8.2_@angular+animations@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+compiler@21.2.0__rxjs@7.8.2": {
+      "integrity": "sha512-XE/0HTYlPpO37aOOc4BEH1AZMDcPOGd2FoZcwGoWDRWhXYrRqzgcX4h1q0WxmMZRe/p7hEd3g9lrf3Vdjj/4ZQ==",
       "dependencies": [
         "@angular/common",
         "@angular/compiler",
@@ -486,8 +505,8 @@
         "xhr2"
       ]
     },
-    "@angular/router@21.1.2_@angular+common@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.1.2_@angular+core@21.1.2__@angular+compiler@21.1.2__rxjs@7.8.2_@angular+platform-browser@21.1.2__@angular+animations@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+common@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.1.2_rxjs@7.8.2_@angular+compiler@21.1.2_@angular+animations@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+compiler@21.1.2__rxjs@7.8.2": {
-      "integrity": "sha512-APl4tkTJIrpejlULLrGtIdLuJkNctPy0pnVijrJLR52nEV0xX165ulXk3XrL9QnMk0iy950aTYtoTal4aMw16Q==",
+    "@angular/router@21.2.0_@angular+common@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.2.0_@angular+core@21.2.0__@angular+compiler@21.2.0__rxjs@7.8.2_@angular+platform-browser@21.2.0__@angular+animations@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+common@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.2.0_rxjs@7.8.2_@angular+compiler@21.2.0_@angular+animations@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+compiler@21.2.0__rxjs@7.8.2": {
+      "integrity": "sha512-siliJ+jJRUCRZ0cdkqc7zww9Didz56Z0Z2YPIuR2n5TZLiuJY+jAf6xotXKp/v6v8XoGJwLiRNipGgNDRIAlWA==",
       "dependencies": [
         "@angular/common",
         "@angular/core",
@@ -542,7 +561,7 @@
       "dependencies": [
         "@types/react",
         "@types/react-dom",
-        "@vitejs/plugin-react@4.7.0_vite@6.4.1__@types+node@25.1.0__picomatch@4.0.3_@babel+core@7.28.5_@types+node@25.1.0",
+        "@vitejs/plugin-react@4.7.0_vite@6.4.1__@types+node@25.1.0__picomatch@4.0.3_@babel+core@7.29.0_@types+node@25.1.0",
         "react",
         "react-dom",
         "ultrahtml",
@@ -573,8 +592,8 @@
         "vue"
       ]
     },
-    "@babel/code-frame@7.28.6": {
-      "integrity": "sha512-JYgintcMjRiCvS8mMECzaEn+m3PfoQiyqukOMCCVQtoJGYJw8j/8LBJEiqkHLkfwCcs74E3pbAUFNg7d9VNJ+Q==",
+    "@babel/code-frame@7.29.0": {
+      "integrity": "sha512-9NhCeYjq9+3uxgdtp20LSiJXJvN0FeCtNGpJxuMFZ1Kv3cWUNb6DOhJwUvcVCzKGR66cw4njwM6hrJLqgOwbcw==",
       "dependencies": [
         "@babel/helper-validator-identifier",
         "js-tokens",
@@ -584,8 +603,8 @@
     "@babel/compat-data@7.28.6": {
       "integrity": "sha512-2lfu57JtzctfIrcGMz992hyLlByuzgIk58+hhGCxjKZ3rWI82NnVLjXcaTqkI2NvlcvOskZaiZ5kjUALo3Lpxg=="
     },
-    "@babel/core@7.28.5": {
-      "integrity": "sha512-e7jT4DxYvIDLk1ZHmU/m/mB19rex9sv0c2ftBtjSBv+kVM/902eh0fINUzD7UwLLNR+jU585GxUJ8/EBfAM5fw==",
+    "@babel/core@7.29.0": {
+      "integrity": "sha512-CGOfOJqWjg2qW/Mb6zNsDm+u5vFQ8DxXfbM09z69p5Z6+mE1ikP2jUXw+j42Pf1XTYED2Rni5f95npYeuwMDQA==",
       "dependencies": [
         "@babel/code-frame",
         "@babel/generator",
@@ -604,8 +623,8 @@
         "semver@6.3.1"
       ]
     },
-    "@babel/generator@7.28.6": {
-      "integrity": "sha512-lOoVRwADj8hjf7al89tvQ2a1lf53Z+7tiXMgpZJL3maQPDxh0DgLMN62B2MKUOFcoodBHLMbDM6WAbKgNy5Suw==",
+    "@babel/generator@7.29.1": {
+      "integrity": "sha512-qsaF+9Qcm2Qv8SRIMMscAvG4O3lJ0F1GuMo5HR/Bp02LopNgnZBC/EkbevHFeGs4ls/oPz9v+Bsmzbkbe+0dUw==",
       "dependencies": [
         "@babel/parser",
         "@babel/types",
@@ -630,7 +649,7 @@
         "semver@6.3.1"
       ]
     },
-    "@babel/helper-create-class-features-plugin@7.28.6_@babel+core@7.28.5": {
+    "@babel/helper-create-class-features-plugin@7.28.6_@babel+core@7.29.0": {
       "integrity": "sha512-dTOdvsjnG3xNT9Y0AUg1wAl38y+4Rl4sf9caSQZOXdNqVn+H+HbbJ4IyyHaIqNR6SW9oJpA/RuRjsjCw2IdIow==",
       "dependencies": [
         "@babel/core",
@@ -660,7 +679,7 @@
         "@babel/types"
       ]
     },
-    "@babel/helper-module-transforms@7.28.6_@babel+core@7.28.5": {
+    "@babel/helper-module-transforms@7.28.6_@babel+core@7.29.0": {
       "integrity": "sha512-67oXFAYr2cDLDVGLXTEABjdBJZ6drElUSI7WKp70NrpyISso3plG9SAGEF6y7zbha/wOzUByWWTJvEDVNIUGcA==",
       "dependencies": [
         "@babel/core",
@@ -678,7 +697,7 @@
     "@babel/helper-plugin-utils@7.28.6": {
       "integrity": "sha512-S9gzZ/bz83GRysI7gAD4wPT/AI3uCnY+9xn+Mx/KPs2JwHJIz1W8PZkg2cqyt3RNOBM8ejcXhV6y8Og7ly/Dug=="
     },
-    "@babel/helper-replace-supers@7.28.6_@babel+core@7.28.5": {
+    "@babel/helper-replace-supers@7.28.6_@babel+core@7.29.0": {
       "integrity": "sha512-mq8e+laIk94/yFec3DxSjCRD2Z0TAjhVbEJY3UQrlwVo15Lmt7C2wAUbK4bjnTs4APkwsYLTahXRraQXhb1WCg==",
       "dependencies": [
         "@babel/core",
@@ -716,14 +735,14 @@
         "@babel/types"
       ]
     },
-    "@babel/parser@7.28.6": {
-      "integrity": "sha512-TeR9zWR18BvbfPmGbLampPMW+uW1NZnJlRuuHso8i87QZNq2JRF9i6RgxRqtEq+wQGsS19NNTWr2duhnE49mfQ==",
+    "@babel/parser@7.29.0": {
+      "integrity": "sha512-IyDgFV5GeDUVX4YdF/3CPULtVGSXXMLh1xVIgdCgxApktqnQV0r7/8Nqthg+8YLGaAtdyIlo2qIdZrbCv4+7ww==",
       "dependencies": [
         "@babel/types"
       ],
       "bin": true
     },
-    "@babel/plugin-proposal-decorators@7.28.6_@babel+core@7.28.5": {
+    "@babel/plugin-proposal-decorators@7.28.6_@babel+core@7.29.0": {
       "integrity": "sha512-RVdFPPyY9fCRAX68haPmOk2iyKW8PKJFthmm8NeSI3paNxKWGZIn99+VbIf0FrtCpFnPgnpF/L48tadi617ULg==",
       "dependencies": [
         "@babel/core",
@@ -732,56 +751,56 @@
         "@babel/plugin-syntax-decorators"
       ]
     },
-    "@babel/plugin-syntax-decorators@7.28.6_@babel+core@7.28.5": {
+    "@babel/plugin-syntax-decorators@7.28.6_@babel+core@7.29.0": {
       "integrity": "sha512-71EYI0ONURHJBL4rSFXnITXqXrrY8q4P0q006DPfN+Rk+ASM+++IBXem/ruokgBZR8YNEWZ8R6B+rCb8VcUTqA==",
       "dependencies": [
         "@babel/core",
         "@babel/helper-plugin-utils"
       ]
     },
-    "@babel/plugin-syntax-import-attributes@7.28.6_@babel+core@7.28.5": {
+    "@babel/plugin-syntax-import-attributes@7.28.6_@babel+core@7.29.0": {
       "integrity": "sha512-jiLC0ma9XkQT3TKJ9uYvlakm66Pamywo+qwL+oL8HJOvc6TWdZXVfhqJr8CCzbSGUAbDOzlGHJC1U+vRfLQDvw==",
       "dependencies": [
         "@babel/core",
         "@babel/helper-plugin-utils"
       ]
     },
-    "@babel/plugin-syntax-import-meta@7.10.4_@babel+core@7.28.5": {
+    "@babel/plugin-syntax-import-meta@7.10.4_@babel+core@7.29.0": {
       "integrity": "sha512-Yqfm+XDx0+Prh3VSeEQCPU81yC+JWZ2pDPFSS4ZdpfZhp4MkFMaDC1UqseovEKwSUpnIL7+vK+Clp7bfh0iD7g==",
       "dependencies": [
         "@babel/core",
         "@babel/helper-plugin-utils"
       ]
     },
-    "@babel/plugin-syntax-jsx@7.28.6_@babel+core@7.28.5": {
+    "@babel/plugin-syntax-jsx@7.28.6_@babel+core@7.29.0": {
       "integrity": "sha512-wgEmr06G6sIpqr8YDwA2dSRTE3bJ+V0IfpzfSY3Lfgd7YWOaAdlykvJi13ZKBt8cZHfgH1IXN+CL656W3uUa4w==",
       "dependencies": [
         "@babel/core",
         "@babel/helper-plugin-utils"
       ]
     },
-    "@babel/plugin-syntax-typescript@7.28.6_@babel+core@7.28.5": {
+    "@babel/plugin-syntax-typescript@7.28.6_@babel+core@7.29.0": {
       "integrity": "sha512-+nDNmQye7nlnuuHDboPbGm00Vqg3oO8niRRL27/4LYHUsHYh0zJ1xWOz0uRwNFmM1Avzk8wZbc6rdiYhomzv/A==",
       "dependencies": [
         "@babel/core",
         "@babel/helper-plugin-utils"
       ]
     },
-    "@babel/plugin-transform-react-jsx-self@7.27.1_@babel+core@7.28.5": {
+    "@babel/plugin-transform-react-jsx-self@7.27.1_@babel+core@7.29.0": {
       "integrity": "sha512-6UzkCs+ejGdZ5mFFC/OCUrv028ab2fp1znZmCZjAOBKiBK2jXD1O+BPSfX8X2qjJ75fZBMSnQn3Rq2mrBJK2mw==",
       "dependencies": [
         "@babel/core",
         "@babel/helper-plugin-utils"
       ]
     },
-    "@babel/plugin-transform-react-jsx-source@7.27.1_@babel+core@7.28.5": {
+    "@babel/plugin-transform-react-jsx-source@7.27.1_@babel+core@7.29.0": {
       "integrity": "sha512-zbwoTsBruTeKB9hSq73ha66iFeJHuaFkUbwvqElnygoNbj/jHRsSeokowZFN3CZ64IvEqcmmkVe89OPXc7ldAw==",
       "dependencies": [
         "@babel/core",
         "@babel/helper-plugin-utils"
       ]
     },
-    "@babel/plugin-transform-typescript@7.28.6_@babel+core@7.28.5": {
+    "@babel/plugin-transform-typescript@7.28.6_@babel+core@7.29.0": {
       "integrity": "sha512-0YWL2RFxOqEm9Efk5PvreamxPME8OyY0wM5wh5lHjF+VtVhdneCWGzZeSqzOfiobVqQaNCd2z0tQvnI9DaPWPw==",
       "dependencies": [
         "@babel/core",
@@ -803,8 +822,8 @@
         "@babel/types"
       ]
     },
-    "@babel/traverse@7.28.6": {
-      "integrity": "sha512-fgWX62k02qtjqdSNTAGxmKYY/7FSL9WAS1o2Hu5+I5m9T0yxZzr4cnrfXQ/MX0rIifthCSs6FKTlzYbJcPtMNg==",
+    "@babel/traverse@7.29.0": {
+      "integrity": "sha512-4HPiQr0X7+waHfyXPZpWPfWL/J7dcN1mx9gL6WdQVMbPnF3+ZhSMs8tCxN7oHddJE9fhNE7+lxdnlyemKfJRuA==",
       "dependencies": [
         "@babel/code-frame",
         "@babel/generator",
@@ -815,8 +834,8 @@
         "debug@4.4.3"
       ]
     },
-    "@babel/types@7.28.6": {
-      "integrity": "sha512-0ZrskXVEHSWIqZM/sQZ4EV3jZJXRkio/WCxaqKZP1g//CEWEPSfeZFcms4XeKBCHU0ZKnIkdJeU/kF+eRp5lBg==",
+    "@babel/types@7.29.0": {
+      "integrity": "sha512-LwdZHpScM4Qz8Xw2iKSzS+cfglZzJGvofQICy7W7v4caru4EaAmyUuO6BGrbyQ2mYV11W0U8j5mBhd14dd3B0A==",
       "dependencies": [
         "@babel/helper-string-parser",
         "@babel/helper-validator-identifier"
@@ -858,8 +877,8 @@
       "os": ["aix"],
       "cpu": ["ppc64"]
     },
-    "@esbuild/aix-ppc64@0.27.2": {
-      "integrity": "sha512-GZMB+a0mOMZs4MpDbj8RJp4cw+w1WV5NYD6xzgvzUJ5Ek2jerwfO2eADyI6ExDSUED+1X8aMbegahsJi+8mgpw==",
+    "@esbuild/aix-ppc64@0.27.3": {
+      "integrity": "sha512-9fJMTNFTWZMh5qwrBItuziu834eOCUcEqymSH7pY+zoMVEZg3gcPuBNxH1EvfVYe9h0x/Ptw8KBzv7qxb7l8dg==",
       "os": ["aix"],
       "cpu": ["ppc64"]
     },
@@ -868,8 +887,8 @@
       "os": ["android"],
       "cpu": ["arm64"]
     },
-    "@esbuild/android-arm64@0.27.2": {
-      "integrity": "sha512-pvz8ZZ7ot/RBphf8fv60ljmaoydPU12VuXHImtAs0XhLLw+EXBi2BLe3OYSBslR4rryHvweW5gmkKFwTiFy6KA==",
+    "@esbuild/android-arm64@0.27.3": {
+      "integrity": "sha512-YdghPYUmj/FX2SYKJ0OZxf+iaKgMsKHVPF1MAq/P8WirnSpCStzKJFjOjzsW0QQ7oIAiccHdcqjbHmJxRb/dmg==",
       "os": ["android"],
       "cpu": ["arm64"]
     },
@@ -878,8 +897,8 @@
       "os": ["android"],
       "cpu": ["arm"]
     },
-    "@esbuild/android-arm@0.27.2": {
-      "integrity": "sha512-DVNI8jlPa7Ujbr1yjU2PfUSRtAUZPG9I1RwW4F4xFB1Imiu2on0ADiI/c3td+KmDtVKNbi+nffGDQMfcIMkwIA==",
+    "@esbuild/android-arm@0.27.3": {
+      "integrity": "sha512-i5D1hPY7GIQmXlXhs2w8AWHhenb00+GxjxRncS2ZM7YNVGNfaMxgzSGuO8o8SJzRc/oZwU2bcScvVERk03QhzA==",
       "os": ["android"],
       "cpu": ["arm"]
     },
@@ -888,8 +907,8 @@
       "os": ["android"],
       "cpu": ["x64"]
     },
-    "@esbuild/android-x64@0.27.2": {
-      "integrity": "sha512-z8Ank4Byh4TJJOh4wpz8g2vDy75zFL0TlZlkUkEwYXuPSgX8yzep596n6mT7905kA9uHZsf/o2OJZubl2l3M7A==",
+    "@esbuild/android-x64@0.27.3": {
+      "integrity": "sha512-IN/0BNTkHtk8lkOM8JWAYFg4ORxBkZQf9zXiEOfERX/CzxW3Vg1ewAhU7QSWQpVIzTW+b8Xy+lGzdYXV6UZObQ==",
       "os": ["android"],
       "cpu": ["x64"]
     },
@@ -898,8 +917,8 @@
       "os": ["darwin"],
       "cpu": ["arm64"]
     },
-    "@esbuild/darwin-arm64@0.27.2": {
-      "integrity": "sha512-davCD2Zc80nzDVRwXTcQP/28fiJbcOwvdolL0sOiOsbwBa72kegmVU0Wrh1MYrbuCL98Omp5dVhQFWRKR2ZAlg==",
+    "@esbuild/darwin-arm64@0.27.3": {
+      "integrity": "sha512-Re491k7ByTVRy0t3EKWajdLIr0gz2kKKfzafkth4Q8A5n1xTHrkqZgLLjFEHVD+AXdUGgQMq+Godfq45mGpCKg==",
       "os": ["darwin"],
       "cpu": ["arm64"]
     },
@@ -908,8 +927,8 @@
       "os": ["darwin"],
       "cpu": ["x64"]
     },
-    "@esbuild/darwin-x64@0.27.2": {
-      "integrity": "sha512-ZxtijOmlQCBWGwbVmwOF/UCzuGIbUkqB1faQRf5akQmxRJ1ujusWsb3CVfk/9iZKr2L5SMU5wPBi1UWbvL+VQA==",
+    "@esbuild/darwin-x64@0.27.3": {
+      "integrity": "sha512-vHk/hA7/1AckjGzRqi6wbo+jaShzRowYip6rt6q7VYEDX4LEy1pZfDpdxCBnGtl+A5zq8iXDcyuxwtv3hNtHFg==",
       "os": ["darwin"],
       "cpu": ["x64"]
     },
@@ -918,8 +937,8 @@
       "os": ["freebsd"],
       "cpu": ["arm64"]
     },
-    "@esbuild/freebsd-arm64@0.27.2": {
-      "integrity": "sha512-lS/9CN+rgqQ9czogxlMcBMGd+l8Q3Nj1MFQwBZJyoEKI50XGxwuzznYdwcav6lpOGv5BqaZXqvBSiB/kJ5op+g==",
+    "@esbuild/freebsd-arm64@0.27.3": {
+      "integrity": "sha512-ipTYM2fjt3kQAYOvo6vcxJx3nBYAzPjgTCk7QEgZG8AUO3ydUhvelmhrbOheMnGOlaSFUoHXB6un+A7q4ygY9w==",
       "os": ["freebsd"],
       "cpu": ["arm64"]
     },
@@ -928,8 +947,8 @@
       "os": ["freebsd"],
       "cpu": ["x64"]
     },
-    "@esbuild/freebsd-x64@0.27.2": {
-      "integrity": "sha512-tAfqtNYb4YgPnJlEFu4c212HYjQWSO/w/h/lQaBK7RbwGIkBOuNKQI9tqWzx7Wtp7bTPaGC6MJvWI608P3wXYA==",
+    "@esbuild/freebsd-x64@0.27.3": {
+      "integrity": "sha512-dDk0X87T7mI6U3K9VjWtHOXqwAMJBNN2r7bejDsc+j03SEjtD9HrOl8gVFByeM0aJksoUuUVU9TBaZa2rgj0oA==",
       "os": ["freebsd"],
       "cpu": ["x64"]
     },
@@ -938,8 +957,8 @@
       "os": ["linux"],
       "cpu": ["arm64"]
     },
-    "@esbuild/linux-arm64@0.27.2": {
-      "integrity": "sha512-hYxN8pr66NsCCiRFkHUAsxylNOcAQaxSSkHMMjcpx0si13t1LHFphxJZUiGwojB1a/Hd5OiPIqDdXONia6bhTw==",
+    "@esbuild/linux-arm64@0.27.3": {
+      "integrity": "sha512-sZOuFz/xWnZ4KH3YfFrKCf1WyPZHakVzTiqji3WDc0BCl2kBwiJLCXpzLzUBLgmp4veFZdvN5ChW4Eq/8Fc2Fg==",
       "os": ["linux"],
       "cpu": ["arm64"]
     },
@@ -948,8 +967,8 @@
       "os": ["linux"],
       "cpu": ["arm"]
     },
-    "@esbuild/linux-arm@0.27.2": {
-      "integrity": "sha512-vWfq4GaIMP9AIe4yj1ZUW18RDhx6EPQKjwe7n8BbIecFtCQG4CfHGaHuh7fdfq+y3LIA2vGS/o9ZBGVxIDi9hw==",
+    "@esbuild/linux-arm@0.27.3": {
+      "integrity": "sha512-s6nPv2QkSupJwLYyfS+gwdirm0ukyTFNl3KTgZEAiJDd+iHZcbTPPcWCcRYH+WlNbwChgH2QkE9NSlNrMT8Gfw==",
       "os": ["linux"],
       "cpu": ["arm"]
     },
@@ -958,8 +977,8 @@
       "os": ["linux"],
       "cpu": ["ia32"]
     },
-    "@esbuild/linux-ia32@0.27.2": {
-      "integrity": "sha512-MJt5BRRSScPDwG2hLelYhAAKh9imjHK5+NE/tvnRLbIqUWa+0E9N4WNMjmp/kXXPHZGqPLxggwVhz7QP8CTR8w==",
+    "@esbuild/linux-ia32@0.27.3": {
+      "integrity": "sha512-yGlQYjdxtLdh0a3jHjuwOrxQjOZYD/C9PfdbgJJF3TIZWnm/tMd/RcNiLngiu4iwcBAOezdnSLAwQDPqTmtTYg==",
       "os": ["linux"],
       "cpu": ["ia32"]
     },
@@ -968,8 +987,8 @@
       "os": ["linux"],
       "cpu": ["loong64"]
     },
-    "@esbuild/linux-loong64@0.27.2": {
-      "integrity": "sha512-lugyF1atnAT463aO6KPshVCJK5NgRnU4yb3FUumyVz+cGvZbontBgzeGFO1nF+dPueHD367a2ZXe1NtUkAjOtg==",
+    "@esbuild/linux-loong64@0.27.3": {
+      "integrity": "sha512-WO60Sn8ly3gtzhyjATDgieJNet/KqsDlX5nRC5Y3oTFcS1l0KWba+SEa9Ja1GfDqSF1z6hif/SkpQJbL63cgOA==",
       "os": ["linux"],
       "cpu": ["loong64"]
     },
@@ -978,8 +997,8 @@
       "os": ["linux"],
       "cpu": ["mips64el"]
     },
-    "@esbuild/linux-mips64el@0.27.2": {
-      "integrity": "sha512-nlP2I6ArEBewvJ2gjrrkESEZkB5mIoaTswuqNFRv/WYd+ATtUpe9Y09RnJvgvdag7he0OWgEZWhviS1OTOKixw==",
+    "@esbuild/linux-mips64el@0.27.3": {
+      "integrity": "sha512-APsymYA6sGcZ4pD6k+UxbDjOFSvPWyZhjaiPyl/f79xKxwTnrn5QUnXR5prvetuaSMsb4jgeHewIDCIWljrSxw==",
       "os": ["linux"],
       "cpu": ["mips64el"]
     },
@@ -988,8 +1007,8 @@
       "os": ["linux"],
       "cpu": ["ppc64"]
     },
-    "@esbuild/linux-ppc64@0.27.2": {
-      "integrity": "sha512-C92gnpey7tUQONqg1n6dKVbx3vphKtTHJaNG2Ok9lGwbZil6DrfyecMsp9CrmXGQJmZ7iiVXvvZH6Ml5hL6XdQ==",
+    "@esbuild/linux-ppc64@0.27.3": {
+      "integrity": "sha512-eizBnTeBefojtDb9nSh4vvVQ3V9Qf9Df01PfawPcRzJH4gFSgrObw+LveUyDoKU3kxi5+9RJTCWlj4FjYXVPEA==",
       "os": ["linux"],
       "cpu": ["ppc64"]
     },
@@ -998,8 +1017,8 @@
       "os": ["linux"],
       "cpu": ["riscv64"]
     },
-    "@esbuild/linux-riscv64@0.27.2": {
-      "integrity": "sha512-B5BOmojNtUyN8AXlK0QJyvjEZkWwy/FKvakkTDCziX95AowLZKR6aCDhG7LeF7uMCXEJqwa8Bejz5LTPYm8AvA==",
+    "@esbuild/linux-riscv64@0.27.3": {
+      "integrity": "sha512-3Emwh0r5wmfm3ssTWRQSyVhbOHvqegUDRd0WhmXKX2mkHJe1SFCMJhagUleMq+Uci34wLSipf8Lagt4LlpRFWQ==",
       "os": ["linux"],
       "cpu": ["riscv64"]
     },
@@ -1008,8 +1027,8 @@
       "os": ["linux"],
       "cpu": ["s390x"]
     },
-    "@esbuild/linux-s390x@0.27.2": {
-      "integrity": "sha512-p4bm9+wsPwup5Z8f4EpfN63qNagQ47Ua2znaqGH6bqLlmJ4bx97Y9JdqxgGZ6Y8xVTixUnEkoKSHcpRlDnNr5w==",
+    "@esbuild/linux-s390x@0.27.3": {
+      "integrity": "sha512-pBHUx9LzXWBc7MFIEEL0yD/ZVtNgLytvx60gES28GcWMqil8ElCYR4kvbV2BDqsHOvVDRrOxGySBM9Fcv744hw==",
       "os": ["linux"],
       "cpu": ["s390x"]
     },
@@ -1018,8 +1037,8 @@
       "os": ["linux"],
       "cpu": ["x64"]
     },
-    "@esbuild/linux-x64@0.27.2": {
-      "integrity": "sha512-uwp2Tip5aPmH+NRUwTcfLb+W32WXjpFejTIOWZFw/v7/KnpCDKG66u4DLcurQpiYTiYwQ9B7KOeMJvLCu/OvbA==",
+    "@esbuild/linux-x64@0.27.3": {
+      "integrity": "sha512-Czi8yzXUWIQYAtL/2y6vogER8pvcsOsk5cpwL4Gk5nJqH5UZiVByIY8Eorm5R13gq+DQKYg0+JyQoytLQas4dA==",
       "os": ["linux"],
       "cpu": ["x64"]
     },
@@ -1028,8 +1047,8 @@
       "os": ["netbsd"],
       "cpu": ["arm64"]
     },
-    "@esbuild/netbsd-arm64@0.27.2": {
-      "integrity": "sha512-Kj6DiBlwXrPsCRDeRvGAUb/LNrBASrfqAIok+xB0LxK8CHqxZ037viF13ugfsIpePH93mX7xfJp97cyDuTZ3cw==",
+    "@esbuild/netbsd-arm64@0.27.3": {
+      "integrity": "sha512-sDpk0RgmTCR/5HguIZa9n9u+HVKf40fbEUt+iTzSnCaGvY9kFP0YKBWZtJaraonFnqef5SlJ8/TiPAxzyS+UoA==",
       "os": ["netbsd"],
       "cpu": ["arm64"]
     },
@@ -1038,8 +1057,8 @@
       "os": ["netbsd"],
       "cpu": ["x64"]
     },
-    "@esbuild/netbsd-x64@0.27.2": {
-      "integrity": "sha512-HwGDZ0VLVBY3Y+Nw0JexZy9o/nUAWq9MlV7cahpaXKW6TOzfVno3y3/M8Ga8u8Yr7GldLOov27xiCnqRZf0tCA==",
+    "@esbuild/netbsd-x64@0.27.3": {
+      "integrity": "sha512-P14lFKJl/DdaE00LItAukUdZO5iqNH7+PjoBm+fLQjtxfcfFE20Xf5CrLsmZdq5LFFZzb5JMZ9grUwvtVYzjiA==",
       "os": ["netbsd"],
       "cpu": ["x64"]
     },
@@ -1048,8 +1067,8 @@
       "os": ["openbsd"],
       "cpu": ["arm64"]
     },
-    "@esbuild/openbsd-arm64@0.27.2": {
-      "integrity": "sha512-DNIHH2BPQ5551A7oSHD0CKbwIA/Ox7+78/AWkbS5QoRzaqlev2uFayfSxq68EkonB+IKjiuxBFoV8ESJy8bOHA==",
+    "@esbuild/openbsd-arm64@0.27.3": {
+      "integrity": "sha512-AIcMP77AvirGbRl/UZFTq5hjXK+2wC7qFRGoHSDrZ5v5b8DK/GYpXW3CPRL53NkvDqb9D+alBiC/dV0Fb7eJcw==",
       "os": ["openbsd"],
       "cpu": ["arm64"]
     },
@@ -1058,8 +1077,8 @@
       "os": ["openbsd"],
       "cpu": ["x64"]
     },
-    "@esbuild/openbsd-x64@0.27.2": {
-      "integrity": "sha512-/it7w9Nb7+0KFIzjalNJVR5bOzA9Vay+yIPLVHfIQYG/j+j9VTH84aNB8ExGKPU4AzfaEvN9/V4HV+F+vo8OEg==",
+    "@esbuild/openbsd-x64@0.27.3": {
+      "integrity": "sha512-DnW2sRrBzA+YnE70LKqnM3P+z8vehfJWHXECbwBmH/CU51z6FiqTQTHFenPlHmo3a8UgpLyH3PT+87OViOh1AQ==",
       "os": ["openbsd"],
       "cpu": ["x64"]
     },
@@ -1068,8 +1087,8 @@
       "os": ["openharmony"],
       "cpu": ["arm64"]
     },
-    "@esbuild/openharmony-arm64@0.27.2": {
-      "integrity": "sha512-LRBbCmiU51IXfeXk59csuX/aSaToeG7w48nMwA6049Y4J4+VbWALAuXcs+qcD04rHDuSCSRKdmY63sruDS5qag==",
+    "@esbuild/openharmony-arm64@0.27.3": {
+      "integrity": "sha512-NinAEgr/etERPTsZJ7aEZQvvg/A6IsZG/LgZy+81wON2huV7SrK3e63dU0XhyZP4RKGyTm7aOgmQk0bGp0fy2g==",
       "os": ["openharmony"],
       "cpu": ["arm64"]
     },
@@ -1078,8 +1097,8 @@
       "os": ["sunos"],
       "cpu": ["x64"]
     },
-    "@esbuild/sunos-x64@0.27.2": {
-      "integrity": "sha512-kMtx1yqJHTmqaqHPAzKCAkDaKsffmXkPHThSfRwZGyuqyIeBvf08KSsYXl+abf5HDAPMJIPnbBfXvP2ZC2TfHg==",
+    "@esbuild/sunos-x64@0.27.3": {
+      "integrity": "sha512-PanZ+nEz+eWoBJ8/f8HKxTTD172SKwdXebZ0ndd953gt1HRBbhMsaNqjTyYLGLPdoWHy4zLU7bDVJztF5f3BHA==",
       "os": ["sunos"],
       "cpu": ["x64"]
     },
@@ -1088,8 +1107,8 @@
       "os": ["win32"],
       "cpu": ["arm64"]
     },
-    "@esbuild/win32-arm64@0.27.2": {
-      "integrity": "sha512-Yaf78O/B3Kkh+nKABUF++bvJv5Ijoy9AN1ww904rOXZFLWVc5OLOfL56W+C8F9xn5JQZa3UX6m+IktJnIb1Jjg==",
+    "@esbuild/win32-arm64@0.27.3": {
+      "integrity": "sha512-B2t59lWWYrbRDw/tjiWOuzSsFh1Y/E95ofKz7rIVYSQkUYBjfSgf6oeYPNWHToFRr2zx52JKApIcAS/D5TUBnA==",
       "os": ["win32"],
       "cpu": ["arm64"]
     },
@@ -1098,8 +1117,8 @@
       "os": ["win32"],
       "cpu": ["ia32"]
     },
-    "@esbuild/win32-ia32@0.27.2": {
-      "integrity": "sha512-Iuws0kxo4yusk7sw70Xa2E2imZU5HoixzxfGCdxwBdhiDgt9vX9VUCBhqcwY7/uh//78A1hMkkROMJq9l27oLQ==",
+    "@esbuild/win32-ia32@0.27.3": {
+      "integrity": "sha512-QLKSFeXNS8+tHW7tZpMtjlNb7HKau0QDpwm49u0vUp9y1WOF+PEzkU84y9GqYaAVW8aH8f3GcBck26jh54cX4Q==",
       "os": ["win32"],
       "cpu": ["ia32"]
     },
@@ -1108,8 +1127,8 @@
       "os": ["win32"],
       "cpu": ["x64"]
     },
-    "@esbuild/win32-x64@0.27.2": {
-      "integrity": "sha512-sRdU18mcKf7F+YgheI/zGf5alZatMUTKj/jNS6l744f9u3WFu4v7twcUI9vu4mknF4Y9aDlblIie0IM+5xxaqQ==",
+    "@esbuild/win32-x64@0.27.3": {
+      "integrity": "sha512-4uJGhsxuptu3OcpVAzli+/gWusVGwZZHTlS63hh++ehExkVT8SgiEf7/uC/PclrPPkLhZqGgCTjd0VWLo6xMqA==",
       "os": ["win32"],
       "cpu": ["x64"]
     },
@@ -1199,6 +1218,9 @@
         "@eslint/core@0.17.0",
         "levn"
       ]
+    },
+    "@harperfast/extended-iterable@1.0.3": {
+      "integrity": "sha512-sSAYhQca3rDWtQUHSAPeO7axFIUJOI6hn1gjRC5APVE1a90tuyT8f5WIgRsFhhWA7htNkju2veB9eWL6YHi/Lw=="
     },
     "@hono/node-server@1.19.9_hono@4.12.3": {
       "integrity": "sha512-vHL6w3ecZsky+8P5MD+eFfaGTyCeOHUIFYMGpQGbrBTSmNNoxv0if69rEZ5giu36weC5saFuznL411gRX7bJDw==",
@@ -1632,38 +1654,38 @@
         "listr2"
       ]
     },
-    "@lmdb/lmdb-darwin-arm64@3.4.4": {
-      "integrity": "sha512-XaKL705gDWd6XVls3ATDj13ZdML/LqSIxwgnYpG8xTzH2ifArx8fMMDdvqGE/Emd+W6R90W2fveZcJ0AyS8Y0w==",
+    "@lmdb/lmdb-darwin-arm64@3.5.1": {
+      "integrity": "sha512-tpfN4kKrrMpQ+If1l8bhmoNkECJi0iOu6AEdrTJvWVC+32sLxTARX5Rsu579mPImRP9YFWfWgeRQ5oav7zApQQ==",
       "os": ["darwin"],
       "cpu": ["arm64"]
     },
-    "@lmdb/lmdb-darwin-x64@3.4.4": {
-      "integrity": "sha512-GPHGEVcwJlkD01GmIr7B4kvbIcUDS2+kBadVEd7lU4can1RZaZQLDDBJRrrNfS2Kavvl0VLI/cMv7UASAXGrww==",
+    "@lmdb/lmdb-darwin-x64@3.5.1": {
+      "integrity": "sha512-+a2tTfc3rmWhLAolFUWRgJtpSuu+Fw/yjn4rF406NMxhfjbMuiOUTDRvRlMFV+DzyjkwnokisskHbCWkS3Ly5w==",
       "os": ["darwin"],
       "cpu": ["x64"]
     },
-    "@lmdb/lmdb-linux-arm64@3.4.4": {
-      "integrity": "sha512-mALqr7DE42HsiwVTKpQWxacjHoJk+e9p00RWIJqTACh/hpucxp/0lK/XMh5XzWnU/TDCZLukq1+vNqnNumTP/Q==",
+    "@lmdb/lmdb-linux-arm64@3.5.1": {
+      "integrity": "sha512-aoERa5B6ywXdyFeYGQ1gbQpkMkDbEo45qVoXE5QpIRavqjnyPwjOulMkmkypkmsbJ5z4Wi0TBztON8agCTG0Vg==",
       "os": ["linux"],
       "cpu": ["arm64"]
     },
-    "@lmdb/lmdb-linux-arm@3.4.4": {
-      "integrity": "sha512-cmev5/dZr5ACKri9f6GU6lZCXTjMhV72xujlbOhFCgFXrt4W0TxGsmY8kA1BITvH60JBKE50cSxsiulybAbrrw==",
+    "@lmdb/lmdb-linux-arm@3.5.1": {
+      "integrity": "sha512-0EgcE6reYr8InjD7V37EgXcYrloqpxVPINy3ig1MwDSbl6LF/vXTYRH9OE1Ti1D8YZnB35ZH9aTcdfSb5lql2A==",
       "os": ["linux"],
       "cpu": ["arm"]
     },
-    "@lmdb/lmdb-linux-x64@3.4.4": {
-      "integrity": "sha512-QjLs8OcmCNcraAcLoZyFlo0atzBJniQLLwhtR+ymQqS5kLYpV5RqwriL87BW+ZiR9ZiGgZx3evrz5vnWPtJ1fQ==",
+    "@lmdb/lmdb-linux-x64@3.5.1": {
+      "integrity": "sha512-SqNDY1+vpji7bh0sFH5wlWyFTOzjbDOl0/kB5RLLYDAFyd/uw3n7wyrmas3rYPpAW7z18lMOi1yKlTPv967E3g==",
       "os": ["linux"],
       "cpu": ["x64"]
     },
-    "@lmdb/lmdb-win32-arm64@3.4.4": {
-      "integrity": "sha512-tr/pwHDlZ33forLGAr0tI04cRmP4SgF93yHbb+2zvZiDEyln5yMHhbKDySxY66aUOkhvBvTuHq9q/3YmTj6ZHQ==",
+    "@lmdb/lmdb-win32-arm64@3.5.1": {
+      "integrity": "sha512-50v0O1Lt37cwrmR9vWZK5hRW0Aw+KEmxJJ75fge/zIYdvNKB/0bSMSVR5Uc2OV9JhosIUyklOmrEvavwNJ8D6w==",
       "os": ["win32"],
       "cpu": ["arm64"]
     },
-    "@lmdb/lmdb-win32-x64@3.4.4": {
-      "integrity": "sha512-KRzfocJzB/mgoTCqnMawuLSKheHRVTqWfSmouIgYpFs6Hx4zvZSvsZKSCEb5gHmICy7qsx9l06jk3MFTtiFVAQ==",
+    "@lmdb/lmdb-win32-x64@3.5.1": {
+      "integrity": "sha512-qwosvPyl+zpUlp3gRb7UcJ3H8S28XHCzkv0Y0EgQToXjQP91ZD67EHSCDmaLjtKhe+GVIW5om1KUpzVLA0l6pg==",
       "os": ["win32"],
       "cpu": ["x64"]
     },
@@ -1689,7 +1711,7 @@
         "zod-to-json-schema@3.25.1_zod@3.25.76"
       ]
     },
-    "@modelcontextprotocol/sdk@1.26.0_zod@4.3.5_hono@4.12.3_ajv@8.18.0_express@5.2.1": {
+    "@modelcontextprotocol/sdk@1.26.0_zod@4.3.6_hono@4.12.3_ajv@8.18.0_express@5.2.1": {
       "integrity": "sha512-Y5RmPncpiDtTXDbLKswIJzTqu2hyBKxTNsgKqKclDbhIgg1wgtf1fRuvxgTnRfcnxtvvgbIEcqUOzZrJ6iSReg==",
       "dependencies": [
         "@hono/node-server",
@@ -1707,8 +1729,8 @@
         "json-schema-typed",
         "pkce-challenge",
         "raw-body",
-        "zod@4.3.5",
-        "zod-to-json-schema@3.25.1_zod@4.3.5"
+        "zod@4.3.6",
+        "zod-to-json-schema@3.25.1_zod@4.3.6"
       ]
     },
     "@msgpackr-extract/msgpackr-extract-darwin-arm64@3.0.3": {
@@ -1900,7 +1922,7 @@
     "@npmcli/fs@5.0.0": {
       "integrity": "sha512-7OsC1gNORBEawOa5+j2pXN9vsicaIOH5cPXxoR6fJOmH6/EXpJB2CajXOu1fPRFun2m1lktEFX11+P89hqO/og==",
       "dependencies": [
-        "semver@7.7.3"
+        "semver@7.7.4"
       ]
     },
     "@npmcli/git@7.0.1": {
@@ -1912,7 +1934,7 @@
         "npm-pick-manifest",
         "proc-log",
         "promise-retry",
-        "semver@7.7.3",
+        "semver@7.7.4",
         "which@6.0.0"
       ]
     },
@@ -1935,7 +1957,7 @@
         "hosted-git-info",
         "json-parse-even-better-errors",
         "proc-log",
-        "semver@7.7.3",
+        "semver@7.7.4",
         "validate-npm-package-license"
       ]
     },
@@ -1965,8 +1987,8 @@
     "@oslojs/encoding@1.1.0": {
       "integrity": "sha512-70wQhgYmndg4GCPxPPxPGevRKqTIJ2Nh4OkiMWmDAVYsTQ+Ta7Sq+rPevXyXGdzr30/qZBnyOalCszoMxlyldQ=="
     },
-    "@oxc-project/types@0.106.0": {
-      "integrity": "sha512-QdsH3rZq480VnOHSHgPYOhjL8O8LBdcnSjM408BpPCCUc0JYYZPG9Gafl9i3OcGk/7137o+gweb4cCv3WAUykg=="
+    "@oxc-project/types@0.113.0": {
+      "integrity": "sha512-Tp3XmgxwNQ9pEN9vxgJBAqdRamHibi76iowQ38O2I4PMpcvNRQNVsU2n1x1nv9yh0XoTrGFzf7cZSGxmixxrhA=="
     },
     "@parcel/watcher-android-arm64@2.5.4": {
       "integrity": "sha512-hoh0vx4v+b3BNI7Cjoy2/B0ARqcwVNrzN/n7DLq9ZB4I3lrsvhrkCViJyfTj/Qi5xM9YFiH4AmHGK6pgH1ss7g==",
@@ -2074,70 +2096,70 @@
     "@polka/url@1.0.0-next.29": {
       "integrity": "sha512-wwQAWhWSuHaag8c4q/KN/vCoeOJYshAIvMQwD4GpSb3OiZklFfvAgmj0VCBBImRpuF/aFgIRzllXlVX93Jevww=="
     },
-    "@rolldown/binding-android-arm64@1.0.0-beta.58": {
-      "integrity": "sha512-mWj5eE4Qc8TbPdGGaaLvBb9XfDPvE1EmZkJQgiGKwchkWH4oAJcRAKMTw7ZHnb1L+t7Ah41sBkAecaIsuUgsug==",
+    "@rolldown/binding-android-arm64@1.0.0-rc.4": {
+      "integrity": "sha512-vRq9f4NzvbdZavhQbjkJBx7rRebDKYR9zHfO/Wg486+I7bSecdUapzCm5cyXoK+LHokTxgSq7A5baAXUZkIz0w==",
       "os": ["android"],
       "cpu": ["arm64"]
     },
-    "@rolldown/binding-darwin-arm64@1.0.0-beta.58": {
-      "integrity": "sha512-wFxUymI/5R8bH8qZFYDfAxAN9CyISEIYke+95oZPiv6EWo88aa5rskjVcCpKA532R+klFmdqjbbaD56GNmTF4Q==",
+    "@rolldown/binding-darwin-arm64@1.0.0-rc.4": {
+      "integrity": "sha512-kFgEvkWLqt3YCgKB5re9RlIrx9bRsvyVUnaTakEpOPuLGzLpLapYxE9BufJNvPg8GjT6mB1alN4yN1NjzoeM8Q==",
       "os": ["darwin"],
       "cpu": ["arm64"]
     },
-    "@rolldown/binding-darwin-x64@1.0.0-beta.58": {
-      "integrity": "sha512-ybp3MkPj23VDV9PhtRwdU5qrGhlViWRV5BjKwO6epaSlUD5lW0WyY+roN3ZAzbma/9RrMTgZ/a/gtQq8YXOcqw==",
+    "@rolldown/binding-darwin-x64@1.0.0-rc.4": {
+      "integrity": "sha512-JXmaOJGsL/+rsmMfutcDjxWM2fTaVgCHGoXS7nE8Z3c9NAYjGqHvXrAhMUZvMpHS/k7Mg+X7n/MVKb7NYWKKww==",
       "os": ["darwin"],
       "cpu": ["x64"]
     },
-    "@rolldown/binding-freebsd-x64@1.0.0-beta.58": {
-      "integrity": "sha512-Evxj3yh7FWvyklUYZa0qTVT9N2zX9TPDqGF056hl8hlCZ9/ndQ2xMv6uw9PD1VlLpukbsqL+/C6M0qwipL0QMg==",
+    "@rolldown/binding-freebsd-x64@1.0.0-rc.4": {
+      "integrity": "sha512-ep3Catd6sPnHTM0P4hNEvIv5arnDvk01PfyJIJ+J3wVCG1eEaPo09tvFqdtcaTrkwQy0VWR24uz+cb4IsK53Qw==",
       "os": ["freebsd"],
       "cpu": ["x64"]
     },
-    "@rolldown/binding-linux-arm-gnueabihf@1.0.0-beta.58": {
-      "integrity": "sha512-tYeXprDOrEgVHUbPXH6MPso4cM/c6RTkmJNICMQlYdki4hGMh92aj3yU6CKs+4X5gfG0yj5kVUw/L4M685SYag==",
+    "@rolldown/binding-linux-arm-gnueabihf@1.0.0-rc.4": {
+      "integrity": "sha512-LwA5ayKIpnsgXJEwWc3h8wPiS33NMIHd9BhsV92T8VetVAbGe2qXlJwNVDGHN5cOQ22R9uYvbrQir2AB+ntT2w==",
       "os": ["linux"],
       "cpu": ["arm"]
     },
-    "@rolldown/binding-linux-arm64-gnu@1.0.0-beta.58": {
-      "integrity": "sha512-N78vmZzP6zG967Ohr+MasCjmKtis0geZ1SOVmxrA0/bklTQSzH5kHEjW5Qn+i1taFno6GEre1E40v0wuWsNOQw==",
+    "@rolldown/binding-linux-arm64-gnu@1.0.0-rc.4": {
+      "integrity": "sha512-AC1WsGdlV1MtGay/OQ4J9T7GRadVnpYRzTcygV1hKnypbYN20Yh4t6O1Sa2qRBMqv1etulUknqXjc3CTIsBu6A==",
       "os": ["linux"],
       "cpu": ["arm64"]
     },
-    "@rolldown/binding-linux-arm64-musl@1.0.0-beta.58": {
-      "integrity": "sha512-l+p4QVtG72C7wI2SIkNQw/KQtSjuYwS3rV6AKcWrRBF62ClsFUcif5vLaZIEbPrCXu5OFRXigXFJnxYsVVZqdQ==",
+    "@rolldown/binding-linux-arm64-musl@1.0.0-rc.4": {
+      "integrity": "sha512-lU+6rgXXViO61B4EudxtVMXSOfiZONR29Sys5VGSetUY7X8mg9FCKIIjcPPj8xNDeYzKl+H8F/qSKOBVFJChCQ==",
       "os": ["linux"],
       "cpu": ["arm64"]
     },
-    "@rolldown/binding-linux-x64-gnu@1.0.0-beta.58": {
-      "integrity": "sha512-urzJX0HrXxIh0FfxwWRjfPCMeInU9qsImLQxHBgLp5ivji1EEUnOfux8KxPPnRQthJyneBrN2LeqUix9DYrNaQ==",
+    "@rolldown/binding-linux-x64-gnu@1.0.0-rc.4": {
+      "integrity": "sha512-DZaN1f0PGp/bSvKhtw50pPsnln4T13ycDq1FrDWRiHmWt1JeW+UtYg9touPFf8yt993p8tS2QjybpzKNTxYEwg==",
       "os": ["linux"],
       "cpu": ["x64"]
     },
-    "@rolldown/binding-linux-x64-musl@1.0.0-beta.58": {
-      "integrity": "sha512-7ijfVK3GISnXIwq/1FZo+KyAUJjL3kWPJ7rViAL6MWeEBhEgRzJ0yEd9I8N9aut8Y8ab+EKFJyRNMWZuUBwQ0A==",
+    "@rolldown/binding-linux-x64-musl@1.0.0-rc.4": {
+      "integrity": "sha512-RnGxwZLN7fhMMAItnD6dZ7lvy+TI7ba+2V54UF4dhaWa/p8I/ys1E73KO6HmPmgz92ZkfD8TXS1IMV8+uhbR9g==",
       "os": ["linux"],
       "cpu": ["x64"]
     },
-    "@rolldown/binding-openharmony-arm64@1.0.0-beta.58": {
-      "integrity": "sha512-/m7sKZCS+cUULbzyJTIlv8JbjNohxbpAOA6cM+lgWgqVzPee3U6jpwydrib328JFN/gF9A99IZEnuGYqEDJdww==",
+    "@rolldown/binding-openharmony-arm64@1.0.0-rc.4": {
+      "integrity": "sha512-6lcI79+X8klGiGd8yHuTgQRjuuJYNggmEml+RsyN596P23l/zf9FVmJ7K0KVKkFAeYEdg0iMUKyIxiV5vebDNQ==",
       "os": ["openharmony"],
       "cpu": ["arm64"]
     },
-    "@rolldown/binding-wasm32-wasi@1.0.0-beta.58": {
-      "integrity": "sha512-6SZk7zMgv+y3wFFQ9qE5P9NnRHcRsptL1ypmudD26PDY+PvFCvfHRkJNfclWnvacVGxjowr7JOL3a9fd1wWhUw==",
+    "@rolldown/binding-wasm32-wasi@1.0.0-rc.4": {
+      "integrity": "sha512-wz7ohsKCAIWy91blZ/1FlpPdqrsm1xpcEOQVveWoL6+aSPKL4VUcoYmmzuLTssyZxRpEwzuIxL/GDsvpjaBtOw==",
       "dependencies": [
         "@napi-rs/wasm-runtime"
       ],
       "cpu": ["wasm32"]
     },
-    "@rolldown/binding-win32-arm64-msvc@1.0.0-beta.58": {
-      "integrity": "sha512-sFqfYPnBZ6xBhMkadB7UD0yjEDRvs7ipR3nCggblN+N4ODCXY6qhg/bKL39+W+dgQybL7ErD4EGERVbW9DAWvg==",
+    "@rolldown/binding-win32-arm64-msvc@1.0.0-rc.4": {
+      "integrity": "sha512-cfiMrfuWCIgsFmcVG0IPuO6qTRHvF7NuG3wngX1RZzc6dU8FuBFb+J3MIR5WrdTNozlumfgL4cvz+R4ozBCvsQ==",
       "os": ["win32"],
       "cpu": ["arm64"]
     },
-    "@rolldown/binding-win32-x64-msvc@1.0.0-beta.58": {
-      "integrity": "sha512-AnFWJdAqB8+IDPcGrATYs67Kik/6tnndNJV2jGRmwlbeNiQQ8GhRJU8ETRlINfII0pqi9k4WWLnb00p1QCxw/Q==",
+    "@rolldown/binding-win32-x64-msvc@1.0.0-rc.4": {
+      "integrity": "sha512-p6UeR9y7ht82AH57qwGuFYn69S6CZ7LLKdCKy/8T3zS9VTrJei2/CGsTUV45Da4Z9Rbhc7G4gyWQ/Ioamqn09g==",
       "os": ["win32"],
       "cpu": ["x64"]
     },
@@ -2147,8 +2169,8 @@
     "@rolldown/pluginutils@1.0.0-beta.53": {
       "integrity": "sha512-vENRlFU4YbrwVqNDZ7fLvy+JR1CRkyr01jhSiDpE1u6py3OMzQfztQU2jxykW3ALNxO4kSlqIDeYyD0Y9RcQeQ=="
     },
-    "@rolldown/pluginutils@1.0.0-beta.58": {
-      "integrity": "sha512-qWhDs6yFGR5xDfdrwiSa3CWGIHxD597uGE/A9xGqytBjANvh4rLCTTkq7szhMV4+Ygh+PMS90KVJ8xWG/TkX4w=="
+    "@rolldown/pluginutils@1.0.0-rc.4": {
+      "integrity": "sha512-1BrrmTu0TWfOP1riA8uakjFc9bpIUGzVKETsOtzY39pPga8zELGDl8eu1Dx7/gjM5CAz14UknsUMpBO8L+YntQ=="
     },
     "@rollup/pluginutils@5.3.0_rollup@4.59.0": {
       "integrity": "sha512-5EdhGZtnu3V88ces7s53hhfK5KSASnJZv8Lulpc04cWO3REESroJXg73DFsOmgbU2BhwV0E20bu2IDZb3VKW4Q==",
@@ -2290,10 +2312,10 @@
     "@rtsao/scc@1.1.0": {
       "integrity": "sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g=="
     },
-    "@schematics/angular@21.1.2": {
-      "integrity": "sha512-kxwxhCIUrj7DfzEtDSs/pi/w+aII/WQLpPfLgoQCWE8/95v60WnTfd1afmsXsFoxikKPxkwoPWtU2YbhSoX9MQ==",
+    "@schematics/angular@21.2.0": {
+      "integrity": "sha512-GQUIeGzZwCT9/W5MAkKnkwETROPbA1eRmy3JF56jLmvr95tJnypGOG8jGYy0d+tcEVujIouh48r4J3bJQg5mrw==",
       "dependencies": [
-        "@angular-devkit/core",
+        "@angular-devkit/core@21.2.0_ajv@8.18.0",
         "@angular-devkit/schematics",
         "jsonc-parser"
       ]
@@ -2391,7 +2413,7 @@
     "@standard-schema/spec@1.1.0": {
       "integrity": "sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w=="
     },
-    "@testing-library/angular@19.0.0_@angular+common@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.1.2_@angular+core@21.1.2__@angular+compiler@21.1.2__rxjs@7.8.2_@angular+platform-browser@21.1.2__@angular+animations@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+common@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.1.2_@angular+router@21.1.2__@angular+common@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+platform-browser@21.1.2___@angular+animations@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+common@21.1.2____@angular+core@21.1.2_____@angular+compiler@21.1.2_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.1.2__rxjs@7.8.2__@angular+compiler@21.1.2__@angular+animations@21.1.2___@angular+core@21.1.2____@angular+compiler@21.1.2____rxjs@7.8.2___@angular+compiler@21.1.2___rxjs@7.8.2_@testing-library+dom@10.4.1_rxjs@7.8.2_@angular+compiler@21.1.2_@angular+animations@21.1.2__@angular+core@21.1.2___@angular+compiler@21.1.2___rxjs@7.8.2__@angular+compiler@21.1.2__rxjs@7.8.2": {
+    "@testing-library/angular@19.0.0_@angular+common@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.2.0_@angular+core@21.2.0__@angular+compiler@21.2.0__rxjs@7.8.2_@angular+platform-browser@21.2.0__@angular+animations@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+common@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.2.0_@angular+router@21.2.0__@angular+common@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+platform-browser@21.2.0___@angular+animations@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+common@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__rxjs@7.8.2__@angular+compiler@21.2.0__@angular+animations@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+compiler@21.2.0___rxjs@7.8.2_@testing-library+dom@10.4.1_rxjs@7.8.2_@angular+compiler@21.2.0_@angular+animations@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+compiler@21.2.0__rxjs@7.8.2": {
       "integrity": "sha512-thUIHbpfpI7FTPwxZ4phKvVK7Twx254nZ3i48WG72xT9CK+tFWuP/4KuVy23Odr3eJ6JAqKmsYxdEQay8Rv33A==",
       "dependencies": [
         "@angular/common",
@@ -2694,7 +2716,7 @@
         "@typescript-eslint/visitor-keys",
         "debug@4.4.3",
         "minimatch@9.0.9",
-        "semver@7.7.3",
+        "semver@7.7.4",
         "tinyglobby",
         "ts-api-utils",
         "typescript"
@@ -2721,13 +2743,13 @@
     "@ungap/structured-clone@1.3.0": {
       "integrity": "sha512-WmoN8qaIAo7WTYWbAZuG8PYEhn5fkz7dZrqTBZ7dtt//lL2Gwms1IcnQ5yHqjDfX8Ft5j4YzDM23f87zBfDe9g=="
     },
-    "@vitejs/plugin-basic-ssl@2.1.0_vite@7.3.0__@types+node@25.1.0__sass@1.97.1__picomatch@4.0.3_@types+node@25.1.0_sass@1.97.1": {
-      "integrity": "sha512-dOxxrhgyDIEUADhb/8OlV9JIqYLgos03YorAueTIeOUskLJSEsfwCByjbu98ctXitUN3znXKp0bYD/WHSudCeA==",
+    "@vitejs/plugin-basic-ssl@2.1.4_vite@7.3.1__@types+node@25.1.0__sass@1.97.3__picomatch@4.0.3_@types+node@25.1.0_sass@1.97.3": {
+      "integrity": "sha512-HXciTXN/sDBYWgeAD4V4s0DN0g72x5mlxQhHxtYu3Tt8BLa6MzcJZUyDVFCdtjNs3bfENVHVzOsmooTVuNgAAw==",
       "dependencies": [
-        "vite@7.3.0_@types+node@25.1.0_sass@1.97.1_picomatch@4.0.3"
+        "vite@7.3.1_@types+node@25.1.0_sass@1.97.3_picomatch@4.0.3"
       ]
     },
-    "@vitejs/plugin-react@4.7.0_vite@6.4.1__@types+node@25.1.0__picomatch@4.0.3_@babel+core@7.28.5_@types+node@25.1.0": {
+    "@vitejs/plugin-react@4.7.0_vite@6.4.1__@types+node@25.1.0__picomatch@4.0.3_@babel+core@7.29.0_@types+node@25.1.0": {
       "integrity": "sha512-gUu9hwfWvvEDBBmgtAowQCojwZmJ5mcLn3aufeCsitijs3+f2NsrPtlAWIR6OPiqljl96GVCUbLe0HyqIpVaoA==",
       "dependencies": [
         "@babel/core",
@@ -2739,7 +2761,7 @@
         "vite@6.4.1_@types+node@25.1.0_picomatch@4.0.3"
       ]
     },
-    "@vitejs/plugin-react@5.1.2_vite@7.3.1__@types+node@25.1.0__picomatch@4.0.3__sass@1.97.1_@babel+core@7.28.5_@types+node@25.1.0": {
+    "@vitejs/plugin-react@5.1.2_vite@7.3.1__@types+node@25.1.0__picomatch@4.0.3__sass@1.97.3_@babel+core@7.29.0_@types+node@25.1.0": {
       "integrity": "sha512-EcA07pHJouywpzsoTUqNh5NwGayl2PPVEJKUSinGGSxFGYn+shYbqMGBg6FXDqgXum9Ou/ecb+411ssw8HImJQ==",
       "dependencies": [
         "@babel/core",
@@ -2748,15 +2770,15 @@
         "@rolldown/pluginutils@1.0.0-beta.53",
         "@types/babel__core",
         "react-refresh@0.18.0",
-        "vite@7.3.1_@types+node@25.1.0_picomatch@4.0.3_sass@1.97.1"
+        "vite@7.3.1_@types+node@25.1.0_sass@1.97.3_picomatch@4.0.3"
       ]
     },
-    "@vitejs/plugin-vue-jsx@4.2.0_vite@6.4.1__@types+node@25.1.0__picomatch@4.0.3_vue@3.5.27__typescript@5.9.3_@babel+core@7.28.5_@types+node@25.1.0_typescript@5.9.3": {
+    "@vitejs/plugin-vue-jsx@4.2.0_vite@6.4.1__@types+node@25.1.0__picomatch@4.0.3_vue@3.5.27__typescript@5.9.3_@babel+core@7.29.0_@types+node@25.1.0_typescript@5.9.3": {
       "integrity": "sha512-DSTrmrdLp+0LDNF77fqrKfx7X0ErRbOcUAgJL/HbSesqQwoUvUQ4uYQqaex+rovqgGcoPqVk+AwUh3v9CuiYIw==",
       "dependencies": [
         "@babel/core",
         "@babel/plugin-transform-typescript",
-        "@rolldown/pluginutils@1.0.0-beta.58",
+        "@rolldown/pluginutils@1.0.0-rc.4",
         "@vue/babel-plugin-jsx",
         "vite@6.4.1_@types+node@25.1.0_picomatch@4.0.3",
         "vue"
@@ -2769,11 +2791,11 @@
         "vue"
       ]
     },
-    "@vitejs/plugin-vue@6.0.3_vite@7.3.1__@types+node@25.1.0__picomatch@4.0.3__sass@1.97.1_vue@3.5.27__typescript@5.9.3_@types+node@25.1.0_typescript@5.9.3": {
+    "@vitejs/plugin-vue@6.0.3_vite@7.3.1__@types+node@25.1.0__picomatch@4.0.3__sass@1.97.3_vue@3.5.27__typescript@5.9.3_@types+node@25.1.0_typescript@5.9.3": {
       "integrity": "sha512-TlGPkLFLVOY3T7fZrwdvKpjprR3s4fxRln0ORDo1VQ7HHyxJwTlrjKU3kpVWTlaAjIEuCTokmjkZnr8Tpc925w==",
       "dependencies": [
         "@rolldown/pluginutils@1.0.0-beta.53",
-        "vite@7.3.1_@types+node@25.1.0_picomatch@4.0.3_sass@1.97.1",
+        "vite@7.3.1_@types+node@25.1.0_sass@1.97.3_picomatch@4.0.3",
         "vue"
       ]
     },
@@ -2788,28 +2810,28 @@
         "tinyrainbow"
       ]
     },
-    "@vitest/mocker@4.0.18_vite@7.3.1__@types+node@25.1.0__sass@1.97.1__picomatch@4.0.3_@types+node@25.1.0": {
+    "@vitest/mocker@4.0.18_vite@7.3.1__@types+node@25.1.0__sass@1.97.3__picomatch@4.0.3_@types+node@25.1.0": {
       "integrity": "sha512-HhVd0MDnzzsgevnOWCBj5Otnzobjy5wLBe4EdeeFGv8luMsGcYqDuFRMcttKWZA5vVO8RFjexVovXvAM4JoJDQ==",
       "dependencies": [
         "@vitest/spy",
         "estree-walker@3.0.3",
         "magic-string",
-        "vite@7.3.1_@types+node@25.1.0_sass@1.97.1_picomatch@4.0.3"
+        "vite@7.3.1_@types+node@25.1.0_sass@1.97.3_picomatch@4.0.3"
       ],
       "optionalPeers": [
-        "vite@7.3.1_@types+node@25.1.0_sass@1.97.1_picomatch@4.0.3"
+        "vite@7.3.1_@types+node@25.1.0_sass@1.97.3_picomatch@4.0.3"
       ]
     },
-    "@vitest/mocker@4.0.18_vite@7.3.1__@types+node@25.1.0__sass@1.97.1__picomatch@4.0.3_@types+node@25.1.0_sass@1.97.1": {
+    "@vitest/mocker@4.0.18_vite@7.3.1__@types+node@25.1.0__sass@1.97.3__picomatch@4.0.3_@types+node@25.1.0_sass@1.97.3": {
       "integrity": "sha512-HhVd0MDnzzsgevnOWCBj5Otnzobjy5wLBe4EdeeFGv8luMsGcYqDuFRMcttKWZA5vVO8RFjexVovXvAM4JoJDQ==",
       "dependencies": [
         "@vitest/spy",
         "estree-walker@3.0.3",
         "magic-string",
-        "vite@7.3.1_@types+node@25.1.0_sass@1.97.1_picomatch@4.0.3"
+        "vite@7.3.1_@types+node@25.1.0_sass@1.97.3_picomatch@4.0.3"
       ],
       "optionalPeers": [
-        "vite@7.3.1_@types+node@25.1.0_sass@1.97.1_picomatch@4.0.3"
+        "vite@7.3.1_@types+node@25.1.0_sass@1.97.3_picomatch@4.0.3"
       ]
     },
     "@vitest/pretty-format@4.0.18": {
@@ -2846,7 +2868,7 @@
     "@vue/babel-helper-vue-transform-on@1.5.0": {
       "integrity": "sha512-0dAYkerNhhHutHZ34JtTl2czVQHUNWv6xEbkdF5W+Yrv5pCWsqjeORdOgbtW2I9gWlt+wBmVn+ttqN9ZxR5tzA=="
     },
-    "@vue/babel-plugin-jsx@1.5.0_@babel+core@7.28.5": {
+    "@vue/babel-plugin-jsx@1.5.0_@babel+core@7.29.0": {
       "integrity": "sha512-mneBhw1oOqCd2247O0Yw/mRwC9jIGACAJUlawkmMBiNmL4dGA2eMzuNZVNqOUfYTa6vqmND4CtOPzmEEEqLKFw==",
       "dependencies": [
         "@babel/core",
@@ -2864,7 +2886,7 @@
         "@babel/core"
       ]
     },
-    "@vue/babel-plugin-resolve-type@1.5.0_@babel+core@7.28.5": {
+    "@vue/babel-plugin-resolve-type@1.5.0_@babel+core@7.29.0": {
       "integrity": "sha512-Wm/60o+53JwJODm4Knz47dxJnLDJ9FnKnGZJbUUf8nQRAtt6P+undLUAVU3Ha33LxOJe6IPoifRQ6F/0RrU31w==",
       "dependencies": [
         "@babel/code-frame",
@@ -3045,8 +3067,8 @@
         "require-from-string"
       ]
     },
-    "algoliasearch@5.46.2": {
-      "integrity": "sha512-qqAXW9QvKf2tTyhpDA4qXv1IfBwD2eduSW6tUEBFIfCeE9gn9HQ9I5+MaKoenRuHrzk5sQoNh1/iof8mY7uD6Q==",
+    "algoliasearch@5.48.1": {
+      "integrity": "sha512-Rf7xmeuIo7nb6S4mp4abW2faW8DauZyE2faBIKFaUfP3wnpOvNSbiI5AwVhqBNj0jPgBWEvhyCu0sLjN2q77Rg==",
       "dependencies": [
         "@algolia/abtesting",
         "@algolia/client-abtesting",
@@ -3064,10 +3086,10 @@
         "@algolia/requester-node-http"
       ]
     },
-    "angular-eslint@21.2.0_@angular+cli@21.1.2__@types+node@25.1.0__@inquirer+prompts@7.10.1___@types+node@25.1.0__listr2@9.0.5__zod@4.3.5_eslint@9.39.2_typescript@5.9.3_typescript-eslint@8.54.0__eslint@9.39.2__typescript@5.9.3__@typescript-eslint+parser@8.54.0___eslint@9.39.2___typescript@5.9.3_@typescript-eslint+utils@8.54.0__eslint@9.39.2__typescript@5.9.3_@angular-eslint+template-parser@21.2.0__eslint@9.39.2__typescript@5.9.3_@typescript-eslint+types@8.54.0_@types+node@25.1.0": {
+    "angular-eslint@21.2.0_@angular+cli@21.2.0__@types+node@25.1.0__@inquirer+prompts@7.10.1___@types+node@25.1.0__listr2@9.0.5__zod@4.3.6_eslint@9.39.2_typescript@5.9.3_typescript-eslint@8.54.0__eslint@9.39.2__typescript@5.9.3__@typescript-eslint+parser@8.54.0___eslint@9.39.2___typescript@5.9.3_@typescript-eslint+utils@8.54.0__eslint@9.39.2__typescript@5.9.3_@angular-eslint+template-parser@21.2.0__eslint@9.39.2__typescript@5.9.3_@typescript-eslint+types@8.54.0_@types+node@25.1.0": {
       "integrity": "sha512-pERqqHIMwD34UT0FoHSNTt4V332vHiAzgkY0rgdUaqSamS94IzbF02EfFxygr53UogQQOXhpLbSSDMOyovB3TA==",
       "dependencies": [
-        "@angular-devkit/core",
+        "@angular-devkit/core@21.2.0_ajv@8.18.0",
         "@angular-devkit/schematics",
         "@angular-eslint/builder",
         "@angular-eslint/eslint-plugin",
@@ -3246,7 +3268,7 @@
         "espree",
         "fast-glob",
         "is-glob",
-        "semver@7.7.3"
+        "semver@7.7.4"
       ]
     },
     "astro@5.17.1_rollup@4.59.0_typescript@5.9.3_@types+node@25.1.0_vite@6.4.1__@types+node@25.1.0__picomatch@4.0.3_zod@3.25.76": {
@@ -3295,7 +3317,7 @@
         "picomatch@4.0.3",
         "prompts",
         "rehype",
-        "semver@7.7.3",
+        "semver@7.7.4",
         "shiki",
         "smol-toml",
         "svgo",
@@ -3346,6 +3368,9 @@
     "balanced-match@1.0.2": {
       "integrity": "sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw=="
     },
+    "balanced-match@4.0.4": {
+      "integrity": "sha512-BLrgEcRTwX2o6gGxGOCNyMvGSp35YofuYzw9h1IMTRmKqttAZZVU67bdb9Pr2vUHA8+j3i2tJfjO6C6+4myGTA=="
+    },
     "base-64@1.0.0": {
       "integrity": "sha512-kwDPIFCGx0NZHog36dj+tHiwP4QMzsZ3AgMViUBKI0+V5n4U0ufTCUMhnQ04diaRI8EX/QcPfql7zlhZ7j4zgg=="
     },
@@ -3353,8 +3378,8 @@
       "integrity": "sha512-B0xUquLkiGLgHhpPBqvl7GWegWBUNuujQ6kXd/r1U38ElPT6Ok8KZ8e+FpUGEc2ZoRQUzq/aUnaKFc/svWUGSg==",
       "bin": true
     },
-    "beasties@0.3.5": {
-      "integrity": "sha512-NaWu+f4YrJxEttJSm16AzMIFtVldCvaJ68b1L098KpqXmxt9xOLtKoLkKxb8ekhOrLqEJAbvT6n6SEvB/sac7A==",
+    "beasties@0.4.1_postcss@8.5.6": {
+      "integrity": "sha512-2Imdcw3LznDuxAbJM26RHniOLAzE6WgrK8OuvVXCQtNBS8rsnD9zsSEa3fHl4hHpUY7BYTlrpvtPVbvu9G6neg==",
       "dependencies": [
         "css-select@6.0.0",
         "css-what@7.0.0",
@@ -3363,7 +3388,8 @@
         "htmlparser2",
         "picocolors",
         "postcss",
-        "postcss-media-query-parser"
+        "postcss-media-query-parser",
+        "postcss-safe-parser"
       ]
     },
     "better-npm-audit@3.11.0": {
@@ -3372,7 +3398,7 @@
         "commander@8.3.0",
         "dayjs",
         "lodash.get",
-        "semver@7.7.3",
+        "semver@7.7.4",
         "table"
       ],
       "bin": true
@@ -3413,14 +3439,20 @@
     "brace-expansion@1.1.12": {
       "integrity": "sha512-9T9UjW3r0UW5c1Q7GTwllptXwhvYmEzFhzMfZ9H7FQWt+uZePjZPjBP/W1ZEyZ1twGWom5/56TF4lPcqjnDHcg==",
       "dependencies": [
-        "balanced-match",
+        "balanced-match@1.0.2",
         "concat-map"
       ]
     },
     "brace-expansion@2.0.2": {
       "integrity": "sha512-Jt0vHyM+jmUBqojB7E1NIYadt0vI0Qxjxd2TErW94wDz+E2LAm5vKMXXwg6ZZBTHPuUlDgQHKXvjGBdfcF1ZDQ==",
       "dependencies": [
-        "balanced-match"
+        "balanced-match@1.0.2"
+      ]
+    },
+    "brace-expansion@5.0.3": {
+      "integrity": "sha512-fy6KJm2RawA5RcHkLa1z/ScpBeA762UF9KmZQxwIbDtRJrgLzM10depAiEQ+CXYcoiqW1/m96OAAoke2nE9EeA==",
+      "dependencies": [
+        "balanced-match@4.0.4"
       ]
     },
     "braces@3.0.3": {
@@ -3928,7 +3960,7 @@
         "@one-ini/wasm",
         "commander@10.0.1",
         "minimatch@9.0.9",
-        "semver@7.7.3"
+        "semver@7.7.4"
       ],
       "bin": true
     },
@@ -4142,35 +4174,35 @@
       "scripts": true,
       "bin": true
     },
-    "esbuild@0.27.2": {
-      "integrity": "sha512-HyNQImnsOC7X9PMNaCIeAm4ISCQXs5a5YasTXVliKv4uuBo1dKrG0A+uQS8M5eXjVMnLg3WgXaKvprHlFJQffw==",
+    "esbuild@0.27.3": {
+      "integrity": "sha512-8VwMnyGCONIs6cWue2IdpHxHnAjzxnw2Zr7MkVxB2vjmQ2ivqGFb4LEG3SMnv0Gb2F/G/2yA8zUaiL1gywDCCg==",
       "optionalDependencies": [
-        "@esbuild/aix-ppc64@0.27.2",
-        "@esbuild/android-arm@0.27.2",
-        "@esbuild/android-arm64@0.27.2",
-        "@esbuild/android-x64@0.27.2",
-        "@esbuild/darwin-arm64@0.27.2",
-        "@esbuild/darwin-x64@0.27.2",
-        "@esbuild/freebsd-arm64@0.27.2",
-        "@esbuild/freebsd-x64@0.27.2",
-        "@esbuild/linux-arm@0.27.2",
-        "@esbuild/linux-arm64@0.27.2",
-        "@esbuild/linux-ia32@0.27.2",
-        "@esbuild/linux-loong64@0.27.2",
-        "@esbuild/linux-mips64el@0.27.2",
-        "@esbuild/linux-ppc64@0.27.2",
-        "@esbuild/linux-riscv64@0.27.2",
-        "@esbuild/linux-s390x@0.27.2",
-        "@esbuild/linux-x64@0.27.2",
-        "@esbuild/netbsd-arm64@0.27.2",
-        "@esbuild/netbsd-x64@0.27.2",
-        "@esbuild/openbsd-arm64@0.27.2",
-        "@esbuild/openbsd-x64@0.27.2",
-        "@esbuild/openharmony-arm64@0.27.2",
-        "@esbuild/sunos-x64@0.27.2",
-        "@esbuild/win32-arm64@0.27.2",
-        "@esbuild/win32-ia32@0.27.2",
-        "@esbuild/win32-x64@0.27.2"
+        "@esbuild/aix-ppc64@0.27.3",
+        "@esbuild/android-arm@0.27.3",
+        "@esbuild/android-arm64@0.27.3",
+        "@esbuild/android-x64@0.27.3",
+        "@esbuild/darwin-arm64@0.27.3",
+        "@esbuild/darwin-x64@0.27.3",
+        "@esbuild/freebsd-arm64@0.27.3",
+        "@esbuild/freebsd-x64@0.27.3",
+        "@esbuild/linux-arm@0.27.3",
+        "@esbuild/linux-arm64@0.27.3",
+        "@esbuild/linux-ia32@0.27.3",
+        "@esbuild/linux-loong64@0.27.3",
+        "@esbuild/linux-mips64el@0.27.3",
+        "@esbuild/linux-ppc64@0.27.3",
+        "@esbuild/linux-riscv64@0.27.3",
+        "@esbuild/linux-s390x@0.27.3",
+        "@esbuild/linux-x64@0.27.3",
+        "@esbuild/netbsd-arm64@0.27.3",
+        "@esbuild/netbsd-x64@0.27.3",
+        "@esbuild/openbsd-arm64@0.27.3",
+        "@esbuild/openbsd-x64@0.27.3",
+        "@esbuild/openharmony-arm64@0.27.3",
+        "@esbuild/sunos-x64@0.27.3",
+        "@esbuild/win32-arm64@0.27.3",
+        "@esbuild/win32-ia32@0.27.3",
+        "@esbuild/win32-x64@0.27.3"
       ],
       "scripts": true,
       "bin": true
@@ -4191,7 +4223,7 @@
       "integrity": "sha512-vAUHYzue4YAa2hNACjB8HvUQj5yehAZgiClyFVVom9cP8z5NSFq3PwB/TtJslN2zAMgRX6FCFCjYBbQh71g5RQ==",
       "dependencies": [
         "eslint",
-        "semver@7.7.3"
+        "semver@7.7.4"
       ]
     },
     "eslint-config-prettier@10.1.8_eslint@9.39.2": {
@@ -4288,14 +4320,14 @@
         "globals@16.5.0"
       ]
     },
-    "eslint-plugin-react-hooks@7.0.1_eslint@9.39.2_zod@4.3.5": {
+    "eslint-plugin-react-hooks@7.0.1_eslint@9.39.2_zod@4.3.6": {
       "integrity": "sha512-O0d0m04evaNzEPoSW+59Mezf8Qt0InfgGIBJnpC0h3NH/WjUAR7BIKUfysC6todmtiZ/A0oUVS8Gce0WhBrHsA==",
       "dependencies": [
         "@babel/core",
         "@babel/parser",
         "eslint",
         "hermes-parser",
-        "zod@4.3.5",
+        "zod@4.3.6",
         "zod-validation-error"
       ]
     },
@@ -4339,7 +4371,7 @@
         "natural-compare",
         "nth-check",
         "postcss-selector-parser",
-        "semver@7.7.3",
+        "semver@7.7.4",
         "vue-eslint-parser",
         "xml-name-validator"
       ]
@@ -5348,7 +5380,7 @@
         "@babel/parser",
         "@istanbuljs/schema",
         "istanbul-lib-coverage",
-        "semver@7.7.3"
+        "semver@7.7.4"
       ]
     },
     "iterator.prototype@1.1.5": {
@@ -5504,9 +5536,10 @@
         "wrap-ansi@9.0.2"
       ]
     },
-    "lmdb@3.4.4": {
-      "integrity": "sha512-+Y2DqovevLkb6DrSQ6SXTYLEd6kvlRbhsxzgJrk7BUfOVA/mt21ak6pFDZDKxiAczHMWxrb02kXBTSTIA0O94A==",
+    "lmdb@3.5.1": {
+      "integrity": "sha512-NYHA0MRPjvNX+vSw8Xxg6FLKxzAG+e7Pt8RqAQA/EehzHVXq9SxDqJIN3JL1hK0dweb884y8kIh6rkWvPyg9Wg==",
       "dependencies": [
+        "@harperfast/extended-iterable",
         "msgpackr",
         "node-addon-api@6.1.0",
         "node-gyp-build-optional-packages",
@@ -6058,7 +6091,8 @@
     "minimatch@10.2.4": {
       "integrity": "sha512-oRjTw/97aTBN0RHbYCdtF1MQfvusSIBQM0IZEgzl6426+8jSC0nF1a/GmnVLpfB9yyr6g6FTqWqiZVbxrtaCIg==",
       "dependencies": [
-        "@isaacs/brace-expansion"
+        "@isaacs/brace-expansion",
+        "brace-expansion@5.0.3"
       ]
     },
     "minimatch@3.1.5": {
@@ -6218,7 +6252,7 @@
         "make-fetch-happen",
         "nopt@9.0.0",
         "proc-log",
-        "semver@7.7.3",
+        "semver@7.7.4",
         "tar",
         "tinyglobby",
         "which@6.0.0"
@@ -6257,7 +6291,7 @@
     "npm-install-checks@8.0.0": {
       "integrity": "sha512-ScAUdMpyzkbpxoNekQ3tNRdFI8SJ86wgKZSQZdUxT+bj0wVFpsEMWnkXP0twVe1gJyNF5apBWDJhhIbgrIViRA==",
       "dependencies": [
-        "semver@7.7.3"
+        "semver@7.7.4"
       ]
     },
     "npm-normalize-package-bin@5.0.0": {
@@ -6268,7 +6302,7 @@
       "dependencies": [
         "hosted-git-info",
         "proc-log",
-        "semver@7.7.3",
+        "semver@7.7.4",
         "validate-npm-package-name"
       ]
     },
@@ -6285,7 +6319,7 @@
         "npm-install-checks",
         "npm-normalize-package-bin",
         "npm-package-arg",
-        "semver@7.7.3"
+        "semver@7.7.4"
       ]
     },
     "npm-registry-fetch@19.1.1": {
@@ -6446,8 +6480,8 @@
         "word-wrap"
       ]
     },
-    "ora@9.0.0": {
-      "integrity": "sha512-m0pg2zscbYgWbqRR6ABga5c3sZdEon7bSgjnlXC64kxtxLOyjRcbbUkLj7HFyy/FTD+P2xdBWu8snGhYI0jc4A==",
+    "ora@9.3.0": {
+      "integrity": "sha512-lBX72MWFduWEf7v7uWf5DHp9Jn5BI8bNPGuFgtXMmr2uDz2Gz2749y3am3agSDdkhHPHYmmxEGSKH85ZLGzgXw==",
       "dependencies": [
         "chalk@5.6.2",
         "cli-cursor",
@@ -6456,8 +6490,7 @@
         "is-unicode-supported",
         "log-symbols",
         "stdin-discarder",
-        "string-width@8.1.1",
-        "strip-ansi@7.1.2"
+        "string-width@8.1.1"
       ]
     },
     "ordered-binary@1.6.1": {
@@ -6508,8 +6541,8 @@
     "package-manager-detector@1.6.0": {
       "integrity": "sha512-61A5ThoTiDG/C8s8UMZwSorAGwMJ0ERVGj2OjoW5pAalsNOg15+iQiPzrLJ4jhZ1HJzmC2PIHT2oEiH3R5fzNA=="
     },
-    "pacote@21.0.4": {
-      "integrity": "sha512-RplP/pDW0NNNDh3pnaoIWYPvNenS7UqMbXyvMqJczosiFWTeGGwJC2NQBLqKf4rGLFfwCOnntw1aEp9Jiqm1MA==",
+    "pacote@21.3.1": {
+      "integrity": "sha512-O0EDXi85LF4AzdjG74GUwEArhdvawi/YOHcsW6IijKNj7wm8IvEWNF5GnfuxNpQ/ZpO3L37+v8hqdVh8GgWYhg==",
       "dependencies": [
         "@npmcli/git",
         "@npmcli/installed-package-contents",
@@ -6593,7 +6626,7 @@
         "klaw-sync",
         "minimist",
         "open@7.4.2",
-        "semver@7.7.3",
+        "semver@7.7.4",
         "slash",
         "tmp",
         "yaml"
@@ -6678,6 +6711,12 @@
     },
     "postcss-media-query-parser@0.2.3": {
       "integrity": "sha512-3sOlxmbKcSHMjlUXQZKQ06jOswE7oVkXPxmZdoB1r5l0q6gTFTQSHxNxOrCccElbW7dxNytifNEo8qidX2Vsig=="
+    },
+    "postcss-safe-parser@7.0.1_postcss@8.5.6": {
+      "integrity": "sha512-0AioNCJZ2DPYz5ABT6bddIqlhgwhpHZ/l65YAYo0BCIn0xiDpsnTHz0gnoTGk0OXZW0JRs+cDwL8u/teRdz+8A==",
+      "dependencies": [
+        "postcss"
+      ]
     },
     "postcss-selector-parser@7.1.1": {
       "integrity": "sha512-orRsuYpJVw8LdAwqqLykBj9ecS5/cRHlI5+nvTo8LcCKmzDmqVORXtOIYEEQuL9D4BxtA1lm5isAqzQZCoQ6Eg==",
@@ -7016,11 +7055,11 @@
     "rfdc@1.4.1": {
       "integrity": "sha512-q1b3N5QkRUWUl7iyylaaj3kOpIT0N2i9MqIEQXP73GVsN9cw3fdx8X63cEmWhJGi2PPCF23Ijp7ktmd39rawIA=="
     },
-    "rolldown@1.0.0-beta.58": {
-      "integrity": "sha512-v1FCjMZCan7f+xGAHBi+mqiE4MlH7I+SXEHSQSJoMOGNNB2UYtvMiejsq9YuUOiZjNeUeV/a21nSFbrUR+4ZCQ==",
+    "rolldown@1.0.0-rc.4": {
+      "integrity": "sha512-V2tPDUrY3WSevrvU2E41ijZlpF+5PbZu4giH+VpNraaadsJGHa4fR6IFwsocVwEXDoAdIv5qgPPxgrvKAOIPtA==",
       "dependencies": [
         "@oxc-project/types",
-        "@rolldown/pluginutils@1.0.0-beta.58"
+        "@rolldown/pluginutils@1.0.0-rc.4"
       ],
       "optionalDependencies": [
         "@rolldown/binding-android-arm64",
@@ -7127,8 +7166,8 @@
     "safer-buffer@2.1.2": {
       "integrity": "sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg=="
     },
-    "sass@1.97.1": {
-      "integrity": "sha512-uf6HoO8fy6ClsrShvMgaKUn14f2EHQLQRtpsZZLeU/Mv0Q1K5P0+x2uvH6Cub39TVVbWNSrraUhDAoFph6vh0A==",
+    "sass@1.97.3": {
+      "integrity": "sha512-fDz1zJpd5GycprAbu4Q2PV/RprsRtKC/0z82z0JLgdytmcq0+ujJbJ/09bPGDxCLkKY3Np5cRAOcWiVkLXJURg==",
       "dependencies": [
         "chokidar@4.0.3",
         "immutable",
@@ -7151,6 +7190,10 @@
     },
     "semver@7.7.3": {
       "integrity": "sha512-SdsKMrI9TdgjdweUSR9MweHA4EJ8YxHn8DFaDisvhVlUOe4BF1tLD7GAj0lIqWVl+dPb/rExr0Btby5loQm20Q==",
+      "bin": true
+    },
+    "semver@7.7.4": {
+      "integrity": "sha512-vFKC2IEtQnVhpT78h1Yp8wzwrf8CM+MzKMHGJZfBtzhZNycRFnXsHk6E5TxIkkMsgNS7mdX3AGB7x2QM2di4lA==",
       "bin": true
     },
     "send@1.2.1": {
@@ -7214,7 +7257,7 @@
       "dependencies": [
         "@img/colour",
         "detect-libc",
-        "semver@7.7.3"
+        "semver@7.7.4"
       ],
       "optionalDependencies": [
         "@img/sharp-darwin-arm64",
@@ -7426,8 +7469,8 @@
     "std-env@3.10.0": {
       "integrity": "sha512-5GS12FdOZNliM5mAOxFRg7Ir0pWz8MdpYm6AY6VPkGpbA7ZzmbzNcBJQ0GPvvyWgcY7QAhCgf9Uy89I03faLkg=="
     },
-    "stdin-discarder@0.2.2": {
-      "integrity": "sha512-UhDfHmA92YAlNnCfhmq0VeNL5bDbiZGg7sZ2IvPsXubGkiNa9EC+tUTsjBRsYUAz87btI6/1wf4XoVvQ3uRnmQ=="
+    "stdin-discarder@0.3.1": {
+      "integrity": "sha512-reExS1kSGoElkextOcPkel4NE99S0BWxjUHQeDFnR8S993JxpPX7KU4MNmO19NXhlJp+8dmdCbKQVNgLJh2teA=="
     },
     "stop-iteration-iterator@1.1.0": {
       "integrity": "sha512-eLoXW/DHyl62zxY4SCaIgnRhuMr6ri4juEYARS8E6sCEqzKpOiE521Ucofdx+KnDZl5xmvGYaaKCk5FEOxJCoQ==",
@@ -7807,8 +7850,8 @@
     "undici-types@7.16.0": {
       "integrity": "sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw=="
     },
-    "undici@7.18.2": {
-      "integrity": "sha512-y+8YjDFzWdQlSE9N5nzKMT3g4a5UBX1HKowfdXh0uvAnTaqqwqB92Jt4UXBAeKekDs5IaDKyJFR4X1gYVCgXcw=="
+    "undici@7.22.0": {
+      "integrity": "sha512-RqslV2Us5BrllB+JeiZnK4peryVTndy9Dnqq62S3yYRRTj0tFQCwEniUy2167skdGOy3vqRzEvl1Dm4sV2ReDg=="
     },
     "unicorn-magic@0.3.0": {
       "integrity": "sha512-+QBBXBCvifc56fsbuxZQ6Sic3wqqc3WWaqxs58gvJrcOuN83HGTCwz3oS5phzU9LthRNE9VrJCFCLUgHeeFnfA=="
@@ -8013,7 +8056,7 @@
         "vite-plugin-vue-inspector"
       ]
     },
-    "vite-plugin-vue-inspector@5.3.2_vite@6.4.1__@types+node@25.1.0__picomatch@4.0.3_@babel+core@7.28.5_@types+node@25.1.0": {
+    "vite-plugin-vue-inspector@5.3.2_vite@6.4.1__@types+node@25.1.0__picomatch@4.0.3_@babel+core@7.29.0_@types+node@25.1.0": {
       "integrity": "sha512-YvEKooQcSiBTAs0DoYLfefNja9bLgkFM7NI2b07bE2SruuvX0MEa9cMaxjKVMkeCp5Nz9FRIdcN1rOdFVBeL6Q==",
       "dependencies": [
         "@babel/core",
@@ -8047,11 +8090,11 @@
       ],
       "bin": true
     },
-    "vite@7.3.0_@types+node@25.1.0_sass@1.97.1_picomatch@4.0.3": {
-      "integrity": "sha512-dZwN5L1VlUBewiP6H9s2+B3e3Jg96D0vzN+Ry73sOefebhYr9f94wwkMNN/9ouoU8pV1BqA1d1zGk8928cx0rg==",
+    "vite@7.3.1_@types+node@25.1.0_picomatch@4.0.3_sass@1.97.3": {
+      "integrity": "sha512-w+N7Hifpc3gRjZ63vYBXA56dvvRlNWRczTdmCBBa+CotUzAPf5b7YMdMR/8CQoeYE5LX3W4wj6RYTgonm1b9DA==",
       "dependencies": [
         "@types/node",
-        "esbuild@0.27.2",
+        "esbuild@0.27.3",
         "fdir",
         "picomatch@4.0.3",
         "postcss",
@@ -8068,32 +8111,11 @@
       ],
       "bin": true
     },
-    "vite@7.3.1_@types+node@25.1.0_picomatch@4.0.3_sass@1.97.1": {
+    "vite@7.3.1_@types+node@25.1.0_sass@1.97.3_picomatch@4.0.3": {
       "integrity": "sha512-w+N7Hifpc3gRjZ63vYBXA56dvvRlNWRczTdmCBBa+CotUzAPf5b7YMdMR/8CQoeYE5LX3W4wj6RYTgonm1b9DA==",
       "dependencies": [
         "@types/node",
-        "esbuild@0.27.2",
-        "fdir",
-        "picomatch@4.0.3",
-        "postcss",
-        "rollup",
-        "sass",
-        "tinyglobby"
-      ],
-      "optionalDependencies": [
-        "fsevents@2.3.3"
-      ],
-      "optionalPeers": [
-        "@types/node",
-        "sass"
-      ],
-      "bin": true
-    },
-    "vite@7.3.1_@types+node@25.1.0_sass@1.97.1_picomatch@4.0.3": {
-      "integrity": "sha512-w+N7Hifpc3gRjZ63vYBXA56dvvRlNWRczTdmCBBa+CotUzAPf5b7YMdMR/8CQoeYE5LX3W4wj6RYTgonm1b9DA==",
-      "dependencies": [
-        "@types/node",
-        "esbuild@0.27.2",
+        "esbuild@0.27.3",
         "fdir",
         "picomatch@4.0.3",
         "postcss",
@@ -8119,12 +8141,12 @@
         "vite@6.4.1_@types+node@25.1.0_picomatch@4.0.3"
       ]
     },
-    "vitest@4.0.18_@types+node@25.1.0_happy-dom@20.4.0_vite@7.3.1__@types+node@25.1.0__sass@1.97.1__picomatch@4.0.3": {
+    "vitest@4.0.18_@types+node@25.1.0_happy-dom@20.4.0_vite@7.3.1__@types+node@25.1.0__sass@1.97.3__picomatch@4.0.3": {
       "integrity": "sha512-hOQuK7h0FGKgBAas7v0mSAsnvrIgAvWmRFjmzpJ7SwFHH3g1k2u37JtYwOwmEKhK6ZO3v9ggDBBm0La1LCK4uQ==",
       "dependencies": [
         "@types/node",
         "@vitest/expect",
-        "@vitest/mocker@4.0.18_vite@7.3.1__@types+node@25.1.0__sass@1.97.1__picomatch@4.0.3_@types+node@25.1.0",
+        "@vitest/mocker@4.0.18_vite@7.3.1__@types+node@25.1.0__sass@1.97.3__picomatch@4.0.3_@types+node@25.1.0",
         "@vitest/pretty-format",
         "@vitest/runner",
         "@vitest/snapshot",
@@ -8142,7 +8164,7 @@
         "tinyexec",
         "tinyglobby",
         "tinyrainbow",
-        "vite@7.3.1_@types+node@25.1.0_sass@1.97.1_picomatch@4.0.3",
+        "vite@7.3.1_@types+node@25.1.0_sass@1.97.3_picomatch@4.0.3",
         "why-is-node-running"
       ],
       "optionalPeers": [
@@ -8151,12 +8173,12 @@
       ],
       "bin": true
     },
-    "vitest@4.0.18_@types+node@25.1.0_happy-dom@20.4.0_vite@7.3.1__@types+node@25.1.0__sass@1.97.1__picomatch@4.0.3_sass@1.97.1": {
+    "vitest@4.0.18_@types+node@25.1.0_happy-dom@20.4.0_vite@7.3.1__@types+node@25.1.0__sass@1.97.3__picomatch@4.0.3_sass@1.97.3": {
       "integrity": "sha512-hOQuK7h0FGKgBAas7v0mSAsnvrIgAvWmRFjmzpJ7SwFHH3g1k2u37JtYwOwmEKhK6ZO3v9ggDBBm0La1LCK4uQ==",
       "dependencies": [
         "@types/node",
         "@vitest/expect",
-        "@vitest/mocker@4.0.18_vite@7.3.1__@types+node@25.1.0__sass@1.97.1__picomatch@4.0.3_@types+node@25.1.0_sass@1.97.1",
+        "@vitest/mocker@4.0.18_vite@7.3.1__@types+node@25.1.0__sass@1.97.3__picomatch@4.0.3_@types+node@25.1.0_sass@1.97.3",
         "@vitest/pretty-format",
         "@vitest/runner",
         "@vitest/snapshot",
@@ -8174,7 +8196,7 @@
         "tinyexec",
         "tinyglobby",
         "tinyrainbow",
-        "vite@7.3.1_@types+node@25.1.0_sass@1.97.1_picomatch@4.0.3",
+        "vite@7.3.1_@types+node@25.1.0_sass@1.97.3_picomatch@4.0.3",
         "why-is-node-running"
       ],
       "optionalPeers": [
@@ -8195,7 +8217,7 @@
         "eslint-visitor-keys@4.2.1",
         "espree",
         "esquery",
-        "semver@7.7.3"
+        "semver@7.7.4"
       ]
     },
     "vue@3.5.27_typescript@5.9.3": {
@@ -8212,8 +8234,8 @@
         "typescript"
       ]
     },
-    "watchpack@2.5.0": {
-      "integrity": "sha512-e6vZvY6xboSwLz2GD36c16+O/2Z6fKvIf4pOXptw2rY9MVwE/TXc6RGqxD3I3x0a28lwBY7DE+76uTPSsBrrCA==",
+    "watchpack@2.5.1": {
+      "integrity": "sha512-Zn5uXdcFNIA1+1Ei5McRd+iRzfhENPCe7LeABkJtNulSxjma+l7ltNx55BWZkRlwRnpOgHqxnjyaDgJnNXnqzg==",
       "dependencies": [
         "glob-to-regexp",
         "graceful-fs"
@@ -8424,10 +8446,10 @@
         "zod@3.25.76"
       ]
     },
-    "zod-to-json-schema@3.25.1_zod@4.3.5": {
+    "zod-to-json-schema@3.25.1_zod@4.3.6": {
       "integrity": "sha512-pM/SU9d3YAggzi6MtR4h7ruuQlqKtad8e9S0fmxcMi+ueAK5Korys/aWcV9LIIHTVbj01NdzxcnXSN+O74ZIVA==",
       "dependencies": [
-        "zod@4.3.5"
+        "zod@4.3.6"
       ]
     },
     "zod-to-ts@1.2.0_typescript@5.9.3_zod@3.25.76": {
@@ -8437,17 +8459,17 @@
         "zod@3.25.76"
       ]
     },
-    "zod-validation-error@4.0.2_zod@4.3.5": {
+    "zod-validation-error@4.0.2_zod@4.3.6": {
       "integrity": "sha512-Q6/nZLe6jxuU80qb/4uJ4t5v2VEZ44lzQjPDhYJNztRQ4wyWc6VF3D3Kb/fAuPetZQnhS3hnajCf9CsWesghLQ==",
       "dependencies": [
-        "zod@4.3.5"
+        "zod@4.3.6"
       ]
     },
     "zod@3.25.76": {
       "integrity": "sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ=="
     },
-    "zod@4.3.5": {
-      "integrity": "sha512-k7Nwx6vuWx1IJ9Bjuf4Zt1PEllcwe7cls3VNzm4CQ1/hgtFUK2bRNG3rvnpPUhFjmqJKAKtjV576KnUkHocg/g=="
+    "zod@4.3.6": {
+      "integrity": "sha512-rftlrkhHZOcjDwkGlnUtZZkvaPHCsDATp4pGpuOOMDaTdDDXF91wuVDJoWoPsKX/3YPQ5fHuF3STjcYyKr+Qhg=="
     },
     "zwitch@2.0.4": {
       "integrity": "sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A=="
@@ -8464,21 +8486,21 @@
     ],
     "packageJson": {
       "dependencies": [
-        "npm:@analogjs/astro-angular@^2.2.3",
-        "npm:@analogjs/vite-plugin-angular@^2.2.3",
+        "npm:@analogjs/astro-angular@^2.3.0",
+        "npm:@analogjs/vite-plugin-angular@^2.3.0",
         "npm:@analogjs/vitest-angular@^2.2.3",
-        "npm:@angular-devkit/architect@~0.2101.2",
-        "npm:@angular/animations@^21.1.2",
-        "npm:@angular/build@^21.1.2",
-        "npm:@angular/cli@^21.1.2",
-        "npm:@angular/common@^21.1.2",
-        "npm:@angular/compiler-cli@^21.1.2",
-        "npm:@angular/compiler@^21.1.2",
-        "npm:@angular/core@^21.1.2",
-        "npm:@angular/language-service@^21.1.2",
-        "npm:@angular/platform-browser@^21.1.2",
-        "npm:@angular/platform-server@^21.1.2",
-        "npm:@angular/router@^21.1.2",
+        "npm:@angular-devkit/architect@~0.2101.5",
+        "npm:@angular/animations@^21.1.6",
+        "npm:@angular/build@^21.1.5",
+        "npm:@angular/cli@^21.1.5",
+        "npm:@angular/common@^21.1.6",
+        "npm:@angular/compiler-cli@^21.1.6",
+        "npm:@angular/compiler@^21.1.6",
+        "npm:@angular/core@^21.1.6",
+        "npm:@angular/language-service@^21.1.6",
+        "npm:@angular/platform-browser@^21.1.6",
+        "npm:@angular/platform-server@^21.1.6",
+        "npm:@angular/router@^21.1.6",
         "npm:@astrojs/react@^4.4.2",
         "npm:@astrojs/vue@^5.1.4",
         "npm:@eslint/compat@^2.0.2",
