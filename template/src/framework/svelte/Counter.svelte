@@ -7,7 +7,7 @@
   export let showMessage: string;
 
   let count = initialCount;
-  
+
   const add = () => {
     count = setCounterCount(count, Operation.Add);
   };
@@ -20,7 +20,7 @@
     (window as any)[showMessage](count);
   };
 
-    const nanoStoreValue = (window as any).Stores["svelteStore"];
+  const nanoStoreValue = (window as any).Stores["svelteStore"];
 </script>
 
 <slot name="header" />
@@ -38,7 +38,8 @@
   </div>
 
   <div class="card">
-    The button sends the current count value to a function in the parent component.
+    The button sends the current count value to a function in the parent
+    component.
     <div class="card-content">
       <div>
         <button class="card-btn" on:click={showParentMessage}>

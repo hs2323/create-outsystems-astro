@@ -11,8 +11,8 @@
       subscribe: (fn: any) => {
         fn("test-store-value");
         return () => {};
-      }
-    }
+      },
+    },
   };
 </script>
 

@@ -1,4 +1,5 @@
 .github/
+.prettierrc
 bun.lock
 deno.json
 deno.lock

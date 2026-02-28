@@ -2356,6 +2356,13 @@
   dependencies:
     debug "^4.3.7"
 
+"@sveltejs/vite-plugin-svelte-inspector@^5.0.0":
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/@sveltejs/vite-plugin-svelte-inspector/-/vite-plugin-svelte-inspector-5.0.2.tgz#81302822c29d530cfe707c795cca014ef00e9c1e"
+  integrity sha512-TZzRTcEtZffICSAoZGkPSl6Etsj2torOVrx6Uw0KpXxrec9Gg6jFWQ60Q3+LmNGfZSxHRCZL7vXVZIWmuV50Ig==
+  dependencies:
+    obug "^2.1.0"
+
 "@sveltejs/vite-plugin-svelte@^5.1.1":
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/@sveltejs/vite-plugin-svelte/-/vite-plugin-svelte-5.1.1.tgz#4db3b0475190a7148ad8740259ad57081bcfccbc"
@@ -2368,6 +2375,17 @@
     magic-string "^0.30.17"
     vitefu "^1.0.6"
 
+"@sveltejs/vite-plugin-svelte@^6.2.4":
+  version "6.2.4"
+  resolved "https://registry.yarnpkg.com/@sveltejs/vite-plugin-svelte/-/vite-plugin-svelte-6.2.4.tgz#f3a1dac0eba70a053bd750e1a15f7fb1ae71fa4f"
+  integrity sha512-ou/d51QSdTyN26D7h6dSpusAKaZkAiGM55/AKYi+9AGZw7q85hElbjK3kEyzXHhLSnRISHOYzVge6x0jRZ7DXA==
+  dependencies:
+    "@sveltejs/vite-plugin-svelte-inspector" "^5.0.0"
+    deepmerge "^4.3.1"
+    magic-string "^0.30.21"
+    obug "^2.1.0"
+    vitefu "^1.1.1"
+
 "@testing-library/angular@^19.1.0":
   version "19.1.0"
   resolved "https://registry.yarnpkg.com/@testing-library/angular/-/angular-19.1.0.tgz#0f88943393fb56246acda3c69b796ddf6f488f8f"
@@ -2375,7 +2393,7 @@
   dependencies:
     tslib "^2.3.1"
 
-"@testing-library/dom@^10.4.1":
+"@testing-library/dom@9.x.x || 10.x.x", "@testing-library/dom@^10.4.1":
   version "10.4.1"
   resolved "https://registry.yarnpkg.com/@testing-library/dom/-/dom-10.4.1.tgz#d444f8a889e9a46e9a3b4f3b88e0fcb3efb6cf95"
   integrity sha512-o4PXJQidqJl82ckFaXUeoAW+XysPLauYI43Abki5hABd853iMhitooc6znOnczgbTYmEP6U6/y1ZyKAIsvMKGg==
@@ -2421,6 +2439,19 @@
   integrity sha512-XU5/SytQM+ykqMnAnvB2umaJNIOsLF3PVv//1Ew4CTcpz0/BRyy/af40qqrt7SjKpDdT1saBMc42CUok5gaw+g==
   dependencies:
     "@babel/runtime" "^7.12.5"
+
+"@testing-library/svelte-core@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@testing-library/svelte-core/-/svelte-core-1.0.0.tgz#09ad79f5491600afa1cd064203223c9cdcd5799f"
+  integrity sha512-VkUePoLV6oOYwSUvX6ShA8KLnJqZiYMIbP2JW2t0GLWLkJxKGvuH5qrrZBV/X7cXFnLGuFQEC7RheYiZOW68KQ==
+
+"@testing-library/svelte@^5.3.1":
+  version "5.3.1"
+  resolved "https://registry.yarnpkg.com/@testing-library/svelte/-/svelte-5.3.1.tgz#8142c1894be5e173f1fea9afcedbb2df537e37e3"
+  integrity sha512-8Ez7ZOqW5geRf9PF5rkuopODe5RGy3I9XR+kc7zHh26gBiktLaxTfKmhlGaSHYUOTQE7wFsLMN9xCJVCszw47w==
+  dependencies:
+    "@testing-library/dom" "9.x.x || 10.x.x"
+    "@testing-library/svelte-core" "1.0.0"
 
 "@testing-library/user-event@^14.6.1":
   version "14.6.1"
@@ -7153,7 +7184,7 @@ object.values@^1.1.6, object.values@^1.2.1:
     define-properties "^1.2.1"
     es-object-atoms "^1.0.0"
 
-obug@^2.1.1:
+obug@^2.1.0, obug@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/obug/-/obug-2.1.1.tgz#2cba74ff241beb77d63055ddf4cd1e9f90b538be"
   integrity sha512-uTqF9MuPraAQ+IsnPf366RG4cP9RtUi7MLO1N3KEc+wb0a6yKpeL0lmk2IB1jY5KHPAlTc6T/JRdC/YqxHNwkQ==
@@ -7554,6 +7585,11 @@ prelude-ls@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
+
+prettier-plugin-svelte@^3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/prettier-plugin-svelte/-/prettier-plugin-svelte-3.5.0.tgz#84f0284f5f931d9517f795cfeddca4c1025ea764"
+  integrity sha512-2lLO/7EupnjO/95t+XZesXs8Bf3nYLIDfCo270h5QWbj/vjLqmrQ1LiRk9LPggxSDsnVYfehamZNf+rgQYApZg==
 
 prettier@^3.8.1:
   version "3.8.1"
