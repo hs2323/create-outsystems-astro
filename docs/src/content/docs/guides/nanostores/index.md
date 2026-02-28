@@ -20,9 +20,9 @@ Nano Stores for Angular is not currently supported.
 Create the objects inside of the stores folder (or other preferred structure). You can create a store and then have your components subscribe and update the stores. Refer to each libraries documentation on how to listen, subscribe and update.
 
 ## Sharing between OutSystems and Astro Islands
-The OutSystems modules are available for both the O11 and ODC platforms.
+The OutSystems module, Lightweight State Manager, is available for both the O11 and ODC platforms.
 
-- O11 (coming soon)
+- [O11](https://www.outsystems.com/forge/component-overview/23528/lightweight-state-manager-o11)
 - ODC (coming soon)
 
 OutSystem currently supports the following structures:
