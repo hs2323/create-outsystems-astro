@@ -13,6 +13,7 @@ export default defineConfig({
       plugins: [
         starlightVersions({
           versions: [
+            { slug: "0.5" },
             { slug: "0.4" },
             { slug: "0.3" },
             { slug: "0.2" },
