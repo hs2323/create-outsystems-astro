@@ -9,4 +9,5 @@ package-lock.json
 package.json
 patches/
 pnpm-lock.yaml
+pnpm-workspace.yaml
 yarn.lock
