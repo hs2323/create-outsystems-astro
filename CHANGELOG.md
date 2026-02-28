@@ -25,7 +25,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated template dependency @types/react to 19.2.14.
 - Updated template dependency @types/node to 25.3.2.
 - Updated template dependency @testing-library/angular to 19.1.0.
-- Updated template dependency @playwright/test to 1.58.2.
 - Updated template dependency @eslint/js to 9.39.3.
 - Updated template dependency @angular/cli to 21.2.0.
 - Added template peer dependency @angular-devkit/schematics.

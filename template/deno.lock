@@ -24,7 +24,7 @@
     "npm:@eslint/markdown@^7.5.1": "7.5.1",
     "npm:@nanostores/react@1": "1.0.0_nanostores@1.1.1_react@19.2.4",
     "npm:@nanostores/vue@^1.0.1": "1.0.1_nanostores@1.1.1_vue@3.5.29__typescript@5.9.3_typescript@5.9.3",
-    "npm:@playwright/test@^1.58.2": "1.58.2",
+    "npm:@playwright/test@1.57.0": "1.57.0",
     "npm:@testing-library/angular@^19.1.0": "19.1.0_@angular+common@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.2.0_@angular+core@21.2.0__@angular+compiler@21.2.0__rxjs@7.8.2_@angular+platform-browser@21.2.0__@angular+animations@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+common@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.2.0_@angular+router@21.2.0__@angular+common@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+platform-browser@21.2.0___@angular+animations@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+common@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__rxjs@7.8.2__@angular+compiler@21.2.0__@angular+animations@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+compiler@21.2.0___rxjs@7.8.2_@testing-library+dom@10.4.1_rxjs@7.8.2_@angular+compiler@21.2.0_@angular+animations@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+compiler@21.2.0__rxjs@7.8.2",
     "npm:@testing-library/dom@^10.4.1": "10.4.1",
     "npm:@testing-library/jest-dom@^6.9.1": "6.9.1",
@@ -2035,8 +2035,8 @@
     "@pkgr/core@0.2.9": {
       "integrity": "sha512-QNqXyfVS2wm9hweSYD2O7F0G06uurj9kZ96TRQE5Y9hU7+tgdZwIkbAKc5Ocy1HxEY2kuDQa6cQ1WRs/O5LFKA=="
     },
-    "@playwright/test@1.58.2": {
-      "integrity": "sha512-akea+6bHYBBfA9uQqSYmlJXn61cTa+jbO87xVLCWbTqbWadRVmhxlXATaOjOgcBaWU4ePo0wB41KMFv3o35IXA==",
+    "@playwright/test@1.57.0": {
+      "integrity": "sha512-6TyEnHgd6SArQO8UO2OMTxshln3QMWBtPGrOCgs3wVEmQmwyuNtB10IZMfmYDE0riwNR1cu4q+pPcxMVtaG3TA==",
       "dependencies": [
         "playwright"
       ],
@@ -6646,12 +6646,12 @@
     "pkce-challenge@5.0.1": {
       "integrity": "sha512-wQ0b/W4Fr01qtpHlqSqspcj3EhBvimsdh0KlHhH8HRZnMsEa0ea2fTULOXOS9ccQr3om+GcGRk4e+isrZWV8qQ=="
     },
-    "playwright-core@1.58.2": {
-      "integrity": "sha512-yZkEtftgwS8CsfYo7nm0KE8jsvm6i/PTgVtB8DL726wNf6H2IMsDuxCpJj59KDaxCtSnrWan2AeDqM7JBaultg==",
+    "playwright-core@1.57.0": {
+      "integrity": "sha512-agTcKlMw/mjBWOnD6kFZttAAGHgi/Nw0CZ2o6JqWSbMlI219lAFLZZCyqByTsvVAJq5XA5H8cA6PrvBRpBWEuQ==",
       "bin": true
     },
-    "playwright@1.58.2": {
-      "integrity": "sha512-vA30H8Nvkq/cPBnNw4Q8TWz1EJyqgpuinBcHET0YVJVFldr8JDNiU9LaWAE1KqSkRYazuaBhTpB5ZzShOezQ6A==",
+    "playwright@1.57.0": {
+      "integrity": "sha512-ilYQj1s8sr2ppEJ2YVadYBN0Mb3mdo9J0wQ+UuDhzYqURwSoW4n1Xs5vs7ORwgDGmyEh33tRMeS8KhdkMoLXQw==",
       "dependencies": [
         "playwright-core"
       ],
@@ -8426,7 +8426,7 @@
         "npm:@eslint/markdown@^7.5.1",
         "npm:@nanostores/react@1",
         "npm:@nanostores/vue@^1.0.1",
-        "npm:@playwright/test@^1.58.2",
+        "npm:@playwright/test@1.57.0",
         "npm:@testing-library/angular@^19.1.0",
         "npm:@testing-library/dom@^10.4.1",
         "npm:@testing-library/jest-dom@^6.9.1",
