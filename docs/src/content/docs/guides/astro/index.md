@@ -3,7 +3,7 @@ title: Astro setup
 description: Setup Astro JavaScript project
 ---
 
-# Astro setup
+# Setup
 
 ## Current supported frameworks
 

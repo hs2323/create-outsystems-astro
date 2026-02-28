@@ -52,6 +52,7 @@ export default [
   },
   {
     files: ["**/*.md", "**/*.markdown"],
+    language: "markdown/gfm",
     plugins: {
       markdown,
     },
@@ -59,6 +60,16 @@ export default [
     rules: {
       ...markdown.configs.recommended.rules,
       "markdown/no-html": "error",
+    },
+  },
+  {
+    files: ["**/*.md/*.js", "**/*.md/*.jsx", "**/*.md/*.ts", "**/*.md/*.tsx"],
+    languageOptions: {
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
     },
   },
   eslintConfigPrettier,
