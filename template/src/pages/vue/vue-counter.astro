@@ -6,7 +6,7 @@ const showMessage = "showMessage";
 ---
 
 <link href={styles} rel="stylesheet" />
-<script>
+<script is:inline>
     import { atom } from "nanostores";
     window["showMessage"] = (count) => {
         document.getElementById("counter").textContent = count;
