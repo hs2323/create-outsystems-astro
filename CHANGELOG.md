@@ -43,6 +43,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated template dependency nanostores to 1.1.1.
 - Updated template dependency astro to 5.18.0.
 
+### Fixed
+- Fixed inline script Nano Stores for development .astro pages.
+
 ## [0.5.0] - 2026-02-28
 
 ### Added

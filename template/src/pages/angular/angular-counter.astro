@@ -4,28 +4,32 @@ import styles from "../../styles/index.css?url";
 const initialCount = 5;
 const showMessage = "showMessage";
 ---
-
-<link href={styles} rel="stylesheet" />
-<script is:inline>
-    window.showMessage = (count) => {
-        document.getElementById("counter").textContent = count;
-    };
-</script>
-<div class="counter-title">HTML Content</div>
-<div class="card-grid">
-    <div class="card">
-        Value sent back from component.
-        <div class="card-content">
-            <div style="text-align: center; margin-top: 30px;">
-                Counter value sent back: <br /><span id="counter"></span>
+<html lang="en">
+    <head>
+        <link href={styles} rel="stylesheet" />
+        <script is:inline type="module">
+            window.showMessage = (count) => {
+                document.getElementById("counter").textContent = count;
+            };
+        </script>
+    </head>
+    <body>
+        <div class="counter-title">HTML Content</div>
+        <div class="card-grid">
+            <div class="card">
+                Value sent back from component.
+                <div class="card-content">
+                    <div style="text-align: center; margin-top: 30px;">
+                        Counter value sent back: <br /><span id="counter"></span>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-<hr />
-<CounterComponent
-    client:visible
-    initialCount={initialCount}
-    showMessage={showMessage}
-/>
-
+        <hr />
+        <CounterComponent
+            client:visible
+            initialCount={initialCount}
+            showMessage={showMessage}
+        />
+    </body>
+</html>
