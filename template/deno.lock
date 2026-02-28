@@ -30,6 +30,7 @@
     "npm:@testing-library/dom@^10.4.1": "10.4.1",
     "npm:@testing-library/jest-dom@^6.9.1": "6.9.1",
     "npm:@testing-library/react@^16.3.2": "16.3.2_@testing-library+dom@10.4.1_@types+react@19.2.14_@types+react-dom@19.2.3__@types+react@19.2.14_react@19.2.4_react-dom@19.2.4__react@19.2.4",
+    "npm:@testing-library/svelte@^5.3.1": "5.3.1_svelte@5.53.6__acorn@8.16.0_vite@6.4.1__@types+node@25.3.2__picomatch@4.0.3_vitest@4.0.18__@types+node@25.3.2__happy-dom@20.7.0__vite@7.3.1___@types+node@25.3.2___sass@1.97.3___picomatch@4.0.3_@types+node@25.3.2_happy-dom@20.7.0",
     "npm:@testing-library/user-event@^14.6.1": "14.6.1_@testing-library+dom@10.4.1",
     "npm:@testing-library/vue@^8.1.0": "8.1.0_vue@3.5.29__typescript@5.9.3_typescript@5.9.3",
     "npm:@types/js-beautify@^1.14.3": "1.14.3",
@@ -2463,6 +2464,26 @@
       "optionalPeers": [
         "@types/react",
         "@types/react-dom"
+      ]
+    },
+    "@testing-library/svelte-core@1.0.0_svelte@5.53.6__acorn@8.16.0": {
+      "integrity": "sha512-VkUePoLV6oOYwSUvX6ShA8KLnJqZiYMIbP2JW2t0GLWLkJxKGvuH5qrrZBV/X7cXFnLGuFQEC7RheYiZOW68KQ==",
+      "dependencies": [
+        "svelte"
+      ]
+    },
+    "@testing-library/svelte@5.3.1_svelte@5.53.6__acorn@8.16.0_vite@6.4.1__@types+node@25.3.2__picomatch@4.0.3_vitest@4.0.18__@types+node@25.3.2__happy-dom@20.7.0__vite@7.3.1___@types+node@25.3.2___sass@1.97.3___picomatch@4.0.3_@types+node@25.3.2_happy-dom@20.7.0": {
+      "integrity": "sha512-8Ez7ZOqW5geRf9PF5rkuopODe5RGy3I9XR+kc7zHh26gBiktLaxTfKmhlGaSHYUOTQE7wFsLMN9xCJVCszw47w==",
+      "dependencies": [
+        "@testing-library/dom@10.4.1",
+        "@testing-library/svelte-core",
+        "svelte",
+        "vite@6.4.1_@types+node@25.3.2_picomatch@4.0.3",
+        "vitest@4.0.18_@types+node@25.3.2_happy-dom@20.7.0_vite@7.3.1__@types+node@25.3.2__sass@1.97.3__picomatch@4.0.3"
+      ],
+      "optionalPeers": [
+        "vite@6.4.1_@types+node@25.3.2_picomatch@4.0.3",
+        "vitest@4.0.18_@types+node@25.3.2_happy-dom@20.7.0_vite@7.3.1__@types+node@25.3.2__sass@1.97.3__picomatch@4.0.3"
       ]
     },
     "@testing-library/user-event@14.6.1_@testing-library+dom@10.4.1": {
@@ -8542,6 +8563,7 @@
         "npm:@testing-library/dom@^10.4.1",
         "npm:@testing-library/jest-dom@^6.9.1",
         "npm:@testing-library/react@^16.3.2",
+        "npm:@testing-library/svelte@^5.3.1",
         "npm:@testing-library/user-event@^14.6.1",
         "npm:@testing-library/vue@^8.1.0",
         "npm:@types/js-beautify@^1.14.3",
