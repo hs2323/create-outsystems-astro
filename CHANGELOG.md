@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ##  [Unreleased]
 
+### Added
+- Added Svelte integration.
+
 ### Changed
 - Updated docs dependency typescript-eslint to 8.56.1.
 - Updated docs dependency starlight-versions to 0.7.0.
