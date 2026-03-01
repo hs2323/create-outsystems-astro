@@ -156,19 +156,19 @@ function updateAstroConfig(projectDir, selectedFrameworks) {
     },
     preact: {
       import: /import\s+preact\s+from\s+['"]@astrojs\/preact['"];\s*\n?/,
-      integration: /preact\(\)\s*,?\s*/
+      integration: /preact\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
     },
     react: {
       import: /import\s+react\s+from\s+['"]@astrojs\/react['"];\s*\n?/,
-      integration: /react\(\)\s*,?\s*/
+      integration: /react\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
     },
     svelte: {
       import: /import\s+svelte\s+from\s+['"]@astrojs\/svelte['"];\s*\n?/,
-      integration: /svelte\(\)\s*,?\s*/
+      integration: /svelte\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
     },
     vue: {
       import: /import\s+vue\s+from\s+['"]@astrojs\/vue['"];\s*\n?/,
-      integration: /vue\(\)\s*,?\s*/
+      integration: /vue\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
     }
   };
 
