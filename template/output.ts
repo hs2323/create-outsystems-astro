@@ -109,7 +109,7 @@ function getAllFilesWithExtension(dir: string, ext: string): string[] {
     if (stat.isDirectory()) {
       results = results.concat(getAllFilesWithExtension(filePath, ext));
     } else {
-      // Check if it ends with the extension (e.g., .js) 
+      // Check if it ends with the extension (e.g., .js)
       // AND does not contain the string ".astro"
       const isTargetExtension = filePath.endsWith(ext);
       const isAstroInternal = file.includes(".astro");
