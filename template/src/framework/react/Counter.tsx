@@ -26,7 +26,7 @@ export default function Counter({
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const showParentMessage = () => (window as any)[showMessage](count);
-  
+
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const nanoStoreValue = useStore((window as any).Stores["reactStore"]);
 

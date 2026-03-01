@@ -1,6 +1,6 @@
 /** @jsxImportSource preact */
 import { useStore } from "@nanostores/preact";
-import type { h, ComponentChildren } from "preact";
+import type { ComponentChildren } from "preact";
 import { useState } from "preact/hooks";
 
 import AstroLogo from "../../images/astro.png?url";
@@ -24,15 +24,17 @@ export default function Counter({
 
   const add = () => setCount((i) => setCounterCount(i, Operation.Add));
 
-  const subtract = () => setCount((i) => setCounterCount(i, Operation.Subtract));
+  const subtract = () =>
+    setCount((i) => setCounterCount(i, Operation.Subtract));
 
   const showParentMessage = () => {
     if (typeof window !== "undefined") {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (window as any)[showMessage]?.(count);
     }
   };
 
-  // Accessing NanoStores via the window object as per your original logic
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const nanoStoreValue = useStore((window as any).Stores?.["preactStore"]);
 
   return (

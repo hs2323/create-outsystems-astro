@@ -6,7 +6,6 @@ import svelte from "@astrojs/svelte";
 import vue from "@astrojs/vue";
 import { defineConfig } from "astro/config";
 
-
 // https://astro.build/config
 export default defineConfig({
   build: {
@@ -22,16 +21,16 @@ export default defineConfig({
     }),
     preact({
       compat: true,
-      include: ['src/framework/preact/*'],
+      include: ["src/framework/preact/*"],
     }),
     react({
-      include: ['src/framework/react/*'],
+      include: ["src/framework/react/*"],
     }),
     svelte({
-      include: ['src/framework/svelte/*'],
+      include: ["src/framework/svelte/*"],
     }),
     vue({
-      include: ['src/framework/vue/*'],
+      include: ["src/framework/vue/*"],
     }),
   ],
   server: {

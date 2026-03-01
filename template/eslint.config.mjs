@@ -2,6 +2,7 @@ import { fixupPluginRules } from "@eslint/compat";
 import pluginJs from "@eslint/js";
 import markdown from "@eslint/markdown";
 import angular from "angular-eslint";
+import preactConfig from "eslint-config-preact";
 import eslintConfigPrettier from "eslint-config-prettier";
 import eslintPluginAstro from "eslint-plugin-astro";
 import importPlugin from "eslint-plugin-import";
@@ -17,6 +18,8 @@ import pluginVue from "eslint-plugin-vue";
 import globals from "globals";
 import svelteParser from "svelte-eslint-parser";
 import tseslint from "typescript-eslint";
+
+// 1. Import the Preact config normally
 
 import svelteConfig from "./svelte.config.js";
 
@@ -62,6 +65,7 @@ export default [
       },
     },
   },
+  // ... rest of your config remains identical
   {
     files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
     plugins: {
@@ -178,13 +182,34 @@ export default [
     files: ["**/*.svelte"],
     languageOptions: {
       ...config.languageOptions,
-      parser: svelteParser, // 2. Explicitly set the Svelte parser
+      parser: svelteParser,
       parserOptions: {
         ...config.languageOptions?.parserOptions,
         extraFileExtensions: [".svelte"],
-        parser: tseslint.parser, // 3. Use TS parser for the <script> block
+        parser: tseslint.parser,
         svelteConfig,
       },
     },
   })),
+  {
+    files: ["src/framework/preact/**/*.{js,ts,jsx,tsx}"],
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+      },
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+    },
+    rules: {
+      ...preactConfig.rules,
+    },
+    settings: {
+      react: {
+        version: "19.0",
+      },
+    },
+  },
 ];
