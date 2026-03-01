@@ -69,10 +69,10 @@ This will create the generated files as well as an example component.
 ```
 
 ### Pages
-Each page inside of the pages file should represent an Island that will be imported into OutSystems.
+Each page inside of the pages file should represent an Island that will be imported into OutSystems. This is for setup/development and the actual page will not be used for the final output.
 
 ### Components
-The location of the component code.
+The location of the component code. Each framework has its own separate folder.
 
 ### Images
 Any image assets.
