@@ -114,6 +114,9 @@ importers:
       '@playwright/test':
         specifier: 1.57.0
         version: 1.57.0
+      '@preact/preset-vite':
+        specifier: ^2.10.3
+        version: 2.10.3(@babel/core@7.29.0)(preact@10.28.4)(rollup@4.59.0)(vite@6.4.1(@types/node@25.3.2)(sass@1.97.3)(yaml@2.8.2))
       '@sveltejs/vite-plugin-svelte':
         specifier: ^6.2.4
         version: 6.2.4(svelte@5.53.6)(vite@6.4.1(@types/node@25.3.2)(sass@1.97.3)(yaml@2.8.2))
@@ -126,6 +129,9 @@ importers:
       '@testing-library/jest-dom':
         specifier: ^6.9.1
         version: 6.9.1
+      '@testing-library/preact':
+        specifier: ^3.2.4
+        version: 3.2.4(preact@10.28.4)
       '@testing-library/react':
         specifier: ^16.3.2
         version: 16.3.2(@testing-library/dom@10.4.1)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -2270,6 +2276,10 @@ packages:
     resolution: {integrity: sha512-o4PXJQidqJl82ckFaXUeoAW+XysPLauYI43Abki5hABd853iMhitooc6znOnczgbTYmEP6U6/y1ZyKAIsvMKGg==}
     engines: {node: '>=18'}
 
+  '@testing-library/dom@8.20.1':
+    resolution: {integrity: sha512-/DiOQ5xBxgdYRC8LNk7U+RWat0S3qRLeIw3ZIkMQ9kkVlRmwD/Eg8k8CqIpD6GW7u20JIUOfMKbxtiLutpjQ4g==}
+    engines: {node: '>=12'}
+
   '@testing-library/dom@9.3.4':
     resolution: {integrity: sha512-FlS4ZWlp97iiNWig0Muq8p+3rVDjRiYE+YKGbAqXOu9nwJFFOdL00kFpz42M+4huzYi86vAK1sOOfyOG45muIQ==}
     engines: {node: '>=14'}
@@ -2277,6 +2287,12 @@ packages:
   '@testing-library/jest-dom@6.9.1':
     resolution: {integrity: sha512-zIcONa+hVtVSSep9UT3jZ5rizo2BsxgyDYU7WFD5eICBE7no3881HGeb/QkGfsJs6JTkY1aQhT7rIPC7e+0nnA==}
     engines: {node: '>=14', npm: '>=6', yarn: '>=1'}
+
+  '@testing-library/preact@3.2.4':
+    resolution: {integrity: sha512-F+kJ243LP6VmEK1M809unzTE/ijg+bsMNuiRN0JEDIJBELKKDNhdgC/WrUSZ7klwJvtlO3wQZ9ix+jhObG07Fg==}
+    engines: {node: '>= 12'}
+    peerDependencies:
+      preact: '>=10 || ^10.0.0-alpha.0 || ^10.0.0-beta.0'
 
   '@testing-library/react@16.3.2':
     resolution: {integrity: sha512-XU5/SytQM+ykqMnAnvB2umaJNIOsLF3PVv//1Ew4CTcpz0/BRyy/af40qqrt7SjKpDdT1saBMc42CUok5gaw+g==}
@@ -8050,6 +8066,17 @@ snapshots:
       picocolors: 1.1.1
       pretty-format: 27.5.1
 
+  '@testing-library/dom@8.20.1':
+    dependencies:
+      '@babel/code-frame': 7.29.0
+      '@babel/runtime': 7.28.6
+      '@types/aria-query': 5.0.4
+      aria-query: 5.1.3
+      chalk: 4.1.2
+      dom-accessibility-api: 0.5.16
+      lz-string: 1.5.0
+      pretty-format: 27.5.1
+
   '@testing-library/dom@9.3.4':
     dependencies:
       '@babel/code-frame': 7.29.0
@@ -8069,6 +8096,11 @@ snapshots:
       dom-accessibility-api: 0.6.3
       picocolors: 1.1.1
       redent: 3.0.0
+
+  '@testing-library/preact@3.2.4(preact@10.28.4)':
+    dependencies:
+      '@testing-library/dom': 8.20.1
+      preact: 10.28.4
 
   '@testing-library/react@16.3.2(@testing-library/dom@10.4.1)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
     dependencies:

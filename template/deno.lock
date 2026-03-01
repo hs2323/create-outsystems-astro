@@ -28,10 +28,12 @@
     "npm:@nanostores/react@1": "1.0.0_nanostores@1.1.1_react@19.2.4",
     "npm:@nanostores/vue@^1.0.1": "1.0.1_nanostores@1.1.1_vue@3.5.29__typescript@5.9.3_typescript@5.9.3",
     "npm:@playwright/test@1.57.0": "1.57.0",
+    "npm:@preact/preset-vite@^2.10.3": "2.10.3_@babel+core@7.29.0_vite@6.4.1__@types+node@25.3.2__picomatch@4.0.3_preact@10.28.4_@types+node@25.3.2",
     "npm:@sveltejs/vite-plugin-svelte@^6.2.4": "6.2.4_svelte@5.53.6__acorn@8.16.0_vite@6.4.1__@types+node@25.3.2__picomatch@4.0.3_@types+node@25.3.2",
     "npm:@testing-library/angular@^19.1.0": "19.1.0_@angular+common@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.2.0_@angular+core@21.2.0__@angular+compiler@21.2.0__rxjs@7.8.2_@angular+platform-browser@21.2.0__@angular+animations@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+common@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.2.0_@angular+router@21.2.0__@angular+common@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+platform-browser@21.2.0___@angular+animations@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+common@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__rxjs@7.8.2__@angular+compiler@21.2.0__@angular+animations@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+compiler@21.2.0___rxjs@7.8.2_@testing-library+dom@10.4.1_rxjs@7.8.2_@angular+compiler@21.2.0_@angular+animations@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+compiler@21.2.0__rxjs@7.8.2",
     "npm:@testing-library/dom@^10.4.1": "10.4.1",
     "npm:@testing-library/jest-dom@^6.9.1": "6.9.1",
+    "npm:@testing-library/preact@^3.2.4": "3.2.4_preact@10.28.4",
     "npm:@testing-library/react@^16.3.2": "16.3.2_@testing-library+dom@10.4.1_@types+react@19.2.14_@types+react-dom@19.2.3__@types+react@19.2.14_react@19.2.4_react-dom@19.2.4__react@19.2.4",
     "npm:@testing-library/svelte@^5.3.1": "5.3.1_svelte@5.53.6__acorn@8.16.0_vite@6.4.1__@types+node@25.3.2__picomatch@4.0.3_vitest@4.0.18__@types+node@25.3.2__happy-dom@20.7.0__vite@7.3.1___@types+node@25.3.2___sass@1.97.3___picomatch@4.0.3_@types+node@25.3.2_happy-dom@20.7.0",
     "npm:@testing-library/user-event@^14.6.1": "14.6.1_@testing-library+dom@10.4.1",
@@ -2546,6 +2548,19 @@
         "pretty-format"
       ]
     },
+    "@testing-library/dom@8.20.1": {
+      "integrity": "sha512-/DiOQ5xBxgdYRC8LNk7U+RWat0S3qRLeIw3ZIkMQ9kkVlRmwD/Eg8k8CqIpD6GW7u20JIUOfMKbxtiLutpjQ4g==",
+      "dependencies": [
+        "@babel/code-frame",
+        "@babel/runtime",
+        "@types/aria-query",
+        "aria-query@5.1.3",
+        "chalk@4.1.2",
+        "dom-accessibility-api@0.5.16",
+        "lz-string",
+        "pretty-format"
+      ]
+    },
     "@testing-library/dom@9.3.4": {
       "integrity": "sha512-FlS4ZWlp97iiNWig0Muq8p+3rVDjRiYE+YKGbAqXOu9nwJFFOdL00kFpz42M+4huzYi86vAK1sOOfyOG45muIQ==",
       "dependencies": [
@@ -2568,6 +2583,13 @@
         "dom-accessibility-api@0.6.3",
         "picocolors",
         "redent"
+      ]
+    },
+    "@testing-library/preact@3.2.4_preact@10.28.4": {
+      "integrity": "sha512-F+kJ243LP6VmEK1M809unzTE/ijg+bsMNuiRN0JEDIJBELKKDNhdgC/WrUSZ7klwJvtlO3wQZ9ix+jhObG07Fg==",
+      "dependencies": [
+        "@testing-library/dom@8.20.1",
+        "preact"
       ]
     },
     "@testing-library/react@16.3.2_@testing-library+dom@10.4.1_@types+react@19.2.14_@types+react-dom@19.2.3__@types+react@19.2.14_react@19.2.4_react-dom@19.2.4__react@19.2.4": {
@@ -8798,10 +8820,12 @@
         "npm:@nanostores/react@1",
         "npm:@nanostores/vue@^1.0.1",
         "npm:@playwright/test@1.57.0",
+        "npm:@preact/preset-vite@^2.10.3",
         "npm:@sveltejs/vite-plugin-svelte@^6.2.4",
         "npm:@testing-library/angular@^19.1.0",
         "npm:@testing-library/dom@^10.4.1",
         "npm:@testing-library/jest-dom@^6.9.1",
+        "npm:@testing-library/preact@^3.2.4",
         "npm:@testing-library/react@^16.3.2",
         "npm:@testing-library/svelte@^5.3.1",
         "npm:@testing-library/user-event@^14.6.1",

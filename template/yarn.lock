@@ -1416,7 +1416,7 @@
   resolved "https://registry.npmjs.org/@polka/url/-/url-1.0.0-next.29.tgz"
   integrity sha512-wwQAWhWSuHaag8c4q/KN/vCoeOJYshAIvMQwD4GpSb3OiZklFfvAgmj0VCBBImRpuF/aFgIRzllXlVX93Jevww==
 
-"@preact/preset-vite@^2.10.2":
+"@preact/preset-vite@^2.10.2", "@preact/preset-vite@^2.10.3":
   version "2.10.3"
   resolved "https://registry.npmjs.org/@preact/preset-vite/-/preset-vite-2.10.3.tgz"
   integrity sha512-1SiS+vFItpkNdBs7q585PSAIln0wBeBdcpJYbzPs1qipsb/FssnkUioNXuRsb8ZnU8YEQHr+3v8+/mzWSnTQmg==
@@ -1707,6 +1707,20 @@
     picocolors "1.1.1"
     pretty-format "^27.0.2"
 
+"@testing-library/dom@^8.11.1":
+  version "8.20.1"
+  resolved "https://registry.npmjs.org/@testing-library/dom/-/dom-8.20.1.tgz"
+  integrity sha512-/DiOQ5xBxgdYRC8LNk7U+RWat0S3qRLeIw3ZIkMQ9kkVlRmwD/Eg8k8CqIpD6GW7u20JIUOfMKbxtiLutpjQ4g==
+  dependencies:
+    "@babel/code-frame" "^7.10.4"
+    "@babel/runtime" "^7.12.5"
+    "@types/aria-query" "^5.0.1"
+    aria-query "5.1.3"
+    chalk "^4.1.0"
+    dom-accessibility-api "^0.5.9"
+    lz-string "^1.5.0"
+    pretty-format "^27.0.2"
+
 "@testing-library/dom@^9.3.3":
   version "9.3.4"
   resolved "https://registry.npmjs.org/@testing-library/dom/-/dom-9.3.4.tgz"
@@ -1732,6 +1746,13 @@
     dom-accessibility-api "^0.6.3"
     picocolors "^1.1.1"
     redent "^3.0.0"
+
+"@testing-library/preact@^3.2.4":
+  version "3.2.4"
+  resolved "https://registry.npmjs.org/@testing-library/preact/-/preact-3.2.4.tgz"
+  integrity sha512-F+kJ243LP6VmEK1M809unzTE/ijg+bsMNuiRN0JEDIJBELKKDNhdgC/WrUSZ7klwJvtlO3wQZ9ix+jhObG07Fg==
+  dependencies:
+    "@testing-library/dom" "^8.11.1"
 
 "@testing-library/react@^16.3.2":
   version "16.3.2"
@@ -7014,7 +7035,7 @@ preact-render-to-string@^6.6.1:
   resolved "https://registry.npmjs.org/preact-render-to-string/-/preact-render-to-string-6.6.6.tgz"
   integrity sha512-EfqZJytnjJldV+YaaqhthU2oXsEf5e+6rDv957p+zxAvNfFLQOPfvBOTncscQ+akzu6Wrl7s3Pa0LjUQmWJsGQ==
 
-"preact@^10.0.0 || ^11.0.0-0", preact@^10.28.4, "preact@^10.4.0 || ^11.0.0-0", preact@^10.6.5, "preact@>= 10.25.0 || >=11.0.0-0", "preact@>=10 || >= 11.0.0-0", preact@>=10.0.0:
+"preact@^10.0.0 || ^11.0.0-0", preact@^10.28.4, "preact@^10.4.0 || ^11.0.0-0", preact@^10.6.5, "preact@>= 10.25.0 || >=11.0.0-0", "preact@>=10 || ^10.0.0-alpha.0 || ^10.0.0-beta.0", "preact@>=10 || >= 11.0.0-0", preact@>=10.0.0:
   version "10.28.4"
   resolved "https://registry.npmjs.org/preact/-/preact-10.28.4.tgz"
   integrity sha512-uKFfOHWuSNpRFVTnljsCluEFq57OKT+0QdOiQo8XWnQ/pSvg7OpX5eNOejELXJMWy+BwM2nobz0FkvzmnpCNsQ==
