@@ -1,7 +1,7 @@
 {
   "name": "create-outsystems-astro-docs",
   "type": "module",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "scripts": {
     "astro": "astro",
     "audit": "better-npm-audit audit",
@@ -32,16 +32,5 @@
     "globals": "^17.3.0",
     "prettier": "^3.8.1",
     "typescript-eslint": "^8.56.1"
-  },
-  "overrides": {
-    "ajv@6": "6.14.0",
-    "ajv@8": "8.18.0",
-    "astro": {
-      "devalue": "5.6.3",
-      "diff": "8.0.3",
-      "unstorage": {
-        "h3": "1.15.5"
-      }
-    }
   }
 }
