@@ -21,6 +21,7 @@ export default defineConfig({
       },
     }),
     preact({
+      compat: true,
       include: ['src/framework/preact/*'],
     }),
     react({

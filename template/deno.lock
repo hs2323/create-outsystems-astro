@@ -24,6 +24,7 @@
     "npm:@eslint/compat@^2.0.2": "2.0.2_eslint@9.39.3",
     "npm:@eslint/js@^9.39.3": "9.39.3",
     "npm:@eslint/markdown@^7.5.1": "7.5.1",
+    "npm:@nanostores/preact@1": "1.0.0_nanostores@1.1.1_preact@10.28.4",
     "npm:@nanostores/react@1": "1.0.0_nanostores@1.1.1_react@19.2.4",
     "npm:@nanostores/vue@^1.0.1": "1.0.1_nanostores@1.1.1_vue@3.5.29__typescript@5.9.3_typescript@5.9.3",
     "npm:@playwright/test@1.57.0": "1.57.0",
@@ -1760,6 +1761,13 @@
       "integrity": "sha512-x0fWaQtYp4E6sktbsdAqnehxDgEc/VwM7uLsRCYWaiGu0ykYdZPiS8zCWdnjHwyiumousxfBm4SO31eXqwEZhQ==",
       "os": ["win32"],
       "cpu": ["x64"]
+    },
+    "@nanostores/preact@1.0.0_nanostores@1.1.1_preact@10.28.4": {
+      "integrity": "sha512-woHYvSwau1YtO9AEnGsh/jRPU2u5DTfNSrDHtKMZOeDUWV6EJfvyv7dJ7AaMps2I9uJcY6OlqXKkA9qTctEjyw==",
+      "dependencies": [
+        "nanostores",
+        "preact"
+      ]
     },
     "@nanostores/react@1.0.0_nanostores@1.1.1_react@19.2.4": {
       "integrity": "sha512-eDduyNy+lbQJMg6XxZ/YssQqF6b4OXMFEZMYKPJCCmBevp1lg0g+4ZRi94qGHirMtsNfAWKNwsjOhC+q1gvC+A==",
@@ -8786,6 +8794,7 @@
         "npm:@eslint/compat@^2.0.2",
         "npm:@eslint/js@^9.39.3",
         "npm:@eslint/markdown@^7.5.1",
+        "npm:@nanostores/preact@1",
         "npm:@nanostores/react@1",
         "npm:@nanostores/vue@^1.0.1",
         "npm:@playwright/test@1.57.0",

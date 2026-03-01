@@ -50,6 +50,9 @@ importers:
       '@astrojs/vue':
         specifier: ^5.1.4
         version: 5.1.4(@types/node@25.3.2)(astro@5.18.0(@types/node@25.3.2)(rollup@4.59.0)(sass@1.97.3)(typescript@5.9.3)(yaml@2.8.2))(rollup@4.59.0)(sass@1.97.3)(vue@3.5.29(typescript@5.9.3))(yaml@2.8.2)
+      '@nanostores/preact':
+        specifier: ^1.0.0
+        version: 1.0.0(nanostores@1.1.1)(preact@10.28.4)
       '@nanostores/react':
         specifier: ^1.0.0
         version: 1.0.0(nanostores@1.1.1)(react@19.2.4)
@@ -1572,6 +1575,13 @@ packages:
     resolution: {integrity: sha512-x0fWaQtYp4E6sktbsdAqnehxDgEc/VwM7uLsRCYWaiGu0ykYdZPiS8zCWdnjHwyiumousxfBm4SO31eXqwEZhQ==}
     cpu: [x64]
     os: [win32]
+
+  '@nanostores/preact@1.0.0':
+    resolution: {integrity: sha512-woHYvSwau1YtO9AEnGsh/jRPU2u5DTfNSrDHtKMZOeDUWV6EJfvyv7dJ7AaMps2I9uJcY6OlqXKkA9qTctEjyw==}
+    engines: {node: ^20.0.0 || >=22.0.0}
+    peerDependencies:
+      nanostores: ^0.9.0 || ^0.10.0 || ^0.11.0 || ^1.0.0
+      preact: '>=10.0.0'
 
   '@nanostores/react@1.0.0':
     resolution: {integrity: sha512-eDduyNy+lbQJMg6XxZ/YssQqF6b4OXMFEZMYKPJCCmBevp1lg0g+4ZRi94qGHirMtsNfAWKNwsjOhC+q1gvC+A==}
@@ -7470,6 +7480,11 @@ snapshots:
 
   '@msgpackr-extract/msgpackr-extract-win32-x64@3.0.3':
     optional: true
+
+  '@nanostores/preact@1.0.0(nanostores@1.1.1)(preact@10.28.4)':
+    dependencies:
+      nanostores: 1.1.1
+      preact: 10.28.4
 
   '@nanostores/react@1.0.0(nanostores@1.1.1)(react@19.2.4)':
     dependencies:
