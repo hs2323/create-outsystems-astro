@@ -11,6 +11,7 @@ Refer to the full [Nano Stores documentation](https://github.com/nanostores/nano
 
 Nano Stores are currently supported for the following libraries:
 
+- [Preact](https://github.com/nanostores/preact)
 - [React](https://github.com/nanostores/react)
 - [Svelte](https://svelte.dev/docs/svelte/svelte-files#script-4-prefix-stores-with-$-to-access-their-values)
 - [Vue](https://github.com/nanostores/vue)
@@ -37,10 +38,27 @@ In OutSystems, you need to use the Nano Stores component and pull in blocks for 
 
 You can reference the Nano Store Atom or Map from the window inside of your component.
 
+Preact:
+```jsx
+import { useStore } from "@nanostores/preact";
+
+export default function Counter({}) {
+  const nanoStoreValue = useStore(window.Stores["MyGreatStore"]);
+
+  return (
+    <>
+        <div>
+            <strong>Nano Store value:</strong>
+            <div>{nanoStoreValue}</div>
+        </div>
+    </>
+  );
+}
+```
+
 React:
 ```jsx
 import { useStore } from "@nanostores/react";
-import { useState } from "react";
 
 
 export default function Counter({}) {
