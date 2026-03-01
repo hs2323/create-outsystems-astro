@@ -16,6 +16,7 @@ const __dirname = path.dirname(__filename);
 
 const FRAMEWORKS = [
   { title: "Angular", value: "angular" },
+  { title: "Preact", value: "preact" },
   { title: "React", value: "react" },
   { title: "Svelte", value: "svelte" },
   { title: "Vue", value: "vue" }
@@ -152,6 +153,10 @@ function updateAstroConfig(projectDir, selectedFrameworks) {
     angular: {
       import: /import\s+angular\s+from\s+['"]@analogjs\/astro-angular['"];\s*\n?/,
       integration: /angular\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
+    },
+    preact: {
+      import: /import\s+preact\s+from\s+['"]@astrojs\/preact['"];\s*\n?/,
+      integration: /preact\(\)\s*,?\s*/
     },
     react: {
       import: /import\s+react\s+from\s+['"]@astrojs\/react['"];\s*\n?/,
