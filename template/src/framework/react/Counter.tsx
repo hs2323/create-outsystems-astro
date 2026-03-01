@@ -1,3 +1,5 @@
+/** @jsxImportSource react */
+
 import { useStore } from "@nanostores/react";
 import { useState } from "react";
 
