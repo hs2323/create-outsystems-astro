@@ -100,14 +100,26 @@ function formatAstroIslandAttributes(html: string): string {
 function getAllFilesWithExtension(dir: string, ext: string): string[] {
   let results: string[] = [];
 
+  if (!fs.existsSync(dir)) return results;
+
   for (const file of fs.readdirSync(dir)) {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
 
     if (stat.isDirectory()) {
       results = results.concat(getAllFilesWithExtension(filePath, ext));
-    } else if (filePath.endsWith(ext)) {
-      results.push(filePath);
+    } else {
+      // Check if it ends with the extension (e.g., .js)
+      // AND does not contain the string ".astro"
+      const isTargetExtension = filePath.endsWith(ext);
+      const isAstroInternal = file.includes(".astro");
+
+      if (isTargetExtension && !isAstroInternal) {
+        results.push(filePath);
+      } else if (isTargetExtension && isAstroInternal) {
+        // Optional: Log what we are filtering out for peace of mind
+        console.log(`🚫 Filtering out internal Astro script: ${file}`);
+      }
     }
   }
 

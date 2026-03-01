@@ -31,14 +31,20 @@ In OutSystems Developer Cloud, the Islands library is available at https://www.o
 ### Pages
 
 - The files in src/pages/\*.astro are used as a starting point and holds the components for generation. They can be tested by running `npm run dev`. That will show what the component looks like as rendered. The sample example pages are broken out by framework name (src/pages/react, src/pages/vue, etc). This page will house the component(s) entry points.
-- When importing a component, the component must have the attribute of the client:only= + the framework name.
-  - React: `client:only="react"`.
-  - Vue: `client:only="vue"`.
-  - Angular: `client:visible`.
+- When importing a component, the component must have the attribute of the client:only= + the framework name.\
+  - Angular: `client:visible`
+  - React: `client:only="react"`
+  - Svelte: `client:only="svelte"`
+  - Vue: `client:only="vue"`
 
 ### Components
 
-- The components live in the folder framework/{NAME}/ (src/framework/angular, src/framework/react and src/framework/vue ) with each framework having its own folder. The framework folder should stay in place as the components will be rendered from there. The Angular components will only be transformed by Astro if they are in the framework/angular folder.
+- The components live in the folder framework/{NAME}/:
+  - Angular: src/framework/angular
+  - React: src/framework/react
+  - Svelte: src/framework/svelte
+  - Vue: src/framework/vue
+    The framework folder should stay in place as the components will be rendered from there. The Angular components will only be transformed by Astro if they are in the framework/angular folder.
 
 ### Parameters
 
@@ -48,6 +54,10 @@ In OutSystems Developer Cloud, the Islands library is available at https://www.o
 #### Slots
 
 Astro slots can be sent in. A slot can be either the default one or the named one. Each framework handles slots differently. Slots can only be HTML elements and cannot be components of a framework.
+
+##### Angular
+
+Angular does not support the use of slots. Any use of slots with Angular should be discouraged.
 
 ##### React
 
@@ -67,10 +77,10 @@ import CounterComponent from '../../framework/react/Counter';
 ---
 <CounterComponent client:only="react">
     <div slot="header">
-        Counter
+        Counter Component
     </div>
     <div style="text-align: center;">
-        <p>Slot content!</p>
+        <p>This is content passed into the component.</p>
     </div>
 </CounterComponent>
 ```
@@ -97,6 +107,31 @@ export default function Counter({
 }
 ```
 
+##### Svelte
+
+- In Svelte, slots are handled as by using the <slot /> tag. The default slot is the is just <slot />. A named slot will have the name of its slot as an attribute such as <slot name="header" />. Placement of the slot will determine where the slot will render.
+
+```js
+---
+import CounterComponent from "../../framework/svelte/Counter.svelte";
+---
+<CounterComponent client:only="svelte">
+    <div class="counter-title" slot="header">Counter Component</div>
+    <div style="text-align: center;">
+        <p><strong>This is content passed into the component.</strong></p>
+    </div>
+</CounterComponent>
+```
+
+the slots can be used as:
+
+```svelte
+<slot name="header" />
+<div>
+  <slot />
+</div>
+```
+
 ##### Vue
 
 - In Vue, slots are handled as by using the <slot /> tag. The default slot is the is just <slot />. A named slot will have the name of its slot as an attribute such as <slot name="header" />. Placement of the slot will determine where the slot will render.
@@ -107,10 +142,10 @@ import CounterComponent from '../../framework/react/Counter';
 ---
 <CounterComponent client:only="vue">
     <div slot="header">
-        Counter
+        Counter Component
     </div>
     <div style="text-align: center;">
-        <p>Slot content!</p>
+        <p>This is content passed into the component.</p>
     </div>
 </CounterComponent>
 ```
@@ -125,10 +160,6 @@ the slots can be used as:
   </div>
 </template>
 ```
-
-##### Angular
-
-Angular does not support the use of slots. Any use of slots with Angular should be discouraged.
 
 ### Nano Stores
 
@@ -155,13 +186,20 @@ export default function Counter({}) {
 
   return (
     <>
-      <div>
-        <strong>Nano Store value:</strong>
-        <div>{nanoStoreValue}</div>
-      </div>
+      <div>{nanoStoreValue}</div>
     </>
   );
 }
+```
+
+#### Svelte
+
+```svelte
+<script lang="ts">
+  const nanoStoreValue = (window as any).Stores["svelteStore"];
+</script>
+
+<div>{$nanoStoreValue}</div>
 ```
 
 #### Vue
@@ -173,9 +211,7 @@ const nanoStoreValue = useStore(window.Stores["MyGreatStore"]);
 </script>
 
 <template>
-  <div>
-    <div>{{ nanoStoreValue }}</div>
-  </div>
+  <div>{{ nanoStoreValue }}</div>
 </template>
 ```
 

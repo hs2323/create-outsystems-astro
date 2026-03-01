@@ -17,13 +17,14 @@ const __dirname = path.dirname(__filename);
 const FRAMEWORKS = [
   { title: "Angular", value: "angular" },
   { title: "React", value: "react" },
+  { title: "Svelte", value: "svelte" },
   { title: "Vue", value: "vue" }
 ];
 
 const LOCKFILES = {
   npm: ["package-lock.json"],
   yarn: ["yarn.lock"],
-  pnpm: ["pnpm-lock.yaml"],
+  pnpm: ["pnpm-lock.yaml", "pnpm-workspace.yaml"],
   bun: ["bun.lock"],
   deno: ["deno.lock", "deno.json"]
 };
@@ -155,6 +156,10 @@ function updateAstroConfig(projectDir, selectedFrameworks) {
     react: {
       import: /import\s+react\s+from\s+['"]@astrojs\/react['"];\s*\n?/,
       integration: /react\(\)\s*,?\s*/
+    },
+    svelte: {
+      import: /import\s+svelte\s+from\s+['"]@astrojs\/svelte['"];\s*\n?/,
+      integration: /svelte\(\)\s*,?\s*/
     },
     vue: {
       import: /import\s+vue\s+from\s+['"]@astrojs\/vue['"];\s*\n?/,

@@ -1,6 +1,7 @@
 // @ts-check
 import angular from "@analogjs/astro-angular";
 import react from "@astrojs/react";
+import svelte from "@astrojs/svelte";
 import vue from "@astrojs/vue";
 import { defineConfig } from "astro/config";
 
@@ -19,6 +20,7 @@ export default defineConfig({
     }),
     react(),
     vue(),
+    svelte(),
   ],
   server: {
     host: true,

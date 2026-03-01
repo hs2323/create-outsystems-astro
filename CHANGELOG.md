@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ##  [Unreleased]
 
+### Added
+- Added Svelte integration.
+
 ### Changed
 - Updated docs dependency typescript-eslint to 8.56.1.
 - Updated docs dependency starlight-versions to 0.7.0.
@@ -39,6 +42,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated template dependency vue to 3.5.29.
 - Updated template dependency nanostores to 1.1.1.
 - Updated template dependency astro to 5.18.0.
+
+### Fixed
+- Fixed inline script Nano Stores for development .astro pages.
 
 ## [0.5.0] - 2026-02-28
 
