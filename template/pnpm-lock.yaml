@@ -50,6 +50,9 @@ importers:
       '@astrojs/vue':
         specifier: ^5.1.4
         version: 5.1.4(@types/node@25.3.2)(astro@5.18.0(@types/node@25.3.2)(rollup@4.59.0)(sass@1.97.3)(typescript@5.9.3)(yaml@2.8.2))(rollup@4.59.0)(sass@1.97.3)(vue@3.5.29(typescript@5.9.3))(yaml@2.8.2)
+      '@babel/core':
+        specifier: ^7.29.0
+        version: 7.29.0
       '@nanostores/preact':
         specifier: ^1.0.0
         version: 1.0.0(nanostores@1.1.1)(preact@10.28.4)
