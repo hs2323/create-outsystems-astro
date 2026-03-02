@@ -1,3 +1,4 @@
+/** @jsxImportSource preact */
 import { act, fireEvent, render, screen } from "@testing-library/preact";
 import { it, vi } from "vitest";
 

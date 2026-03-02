@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- Added peer dependency @babel/core.
+- Added template peer dependency @babel/core.
 - Added Preact integration.
 
 ##  [0.6.0] - 2026-02-28
