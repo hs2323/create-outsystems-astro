@@ -42,17 +42,15 @@ export default function Counter({
       {header}
       <div className="card-grid">
         <div className="card">
-          Internal counter controls. It keeps state within the component.
+          <strong>Counter component</strong>
           <div className="card-content">
+            Internal counter controls. It keeps state within the component.
             <div className="counter-controls">
               <button onClick={subtract}>-</button>
               <pre>{count}</pre>
               <button onClick={add}>+</button>
             </div>
           </div>
-        </div>
-
-        <div className="card">
           The button sends the current count value to a function in the parent
           component.
           <div className="card-content">
@@ -63,25 +61,22 @@ export default function Counter({
             </div>
           </div>
         </div>
-
         <div className="card">
-          Slot content coming in to the component
-          <div className="card-content">
-            <div>{children}</div>
-          </div>
-        </div>
-
-        <div className="card">
-          Nano Store content
+          <strong>Nano Stores</strong>
           <div className="card-content">
             <div>
-              <strong>Nano Store value:</strong>
+              <strong>Value:</strong>
               <div id="nanostore">{nanoStoreValue}</div>
             </div>
           </div>
         </div>
+        <div className="card">
+          <strong>Slot content</strong>
+          <div className="card-content">
+            <div>{children}</div>
+          </div>
+        </div>
       </div>
-
       <div className="counter-logos">
         <img alt="OutSystems logo" src={OutSystemsLogo} />
         <img alt="Astro logo" src={AstroLogo} />

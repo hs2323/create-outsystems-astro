@@ -13,16 +13,15 @@ import { Operation, setCounterCount } from "../../lib/setCounterCount";
     <div class="counter-title" slot="header">Angular Counter Component</div>
     <div class="card-grid">
       <div class="card">
-        Internal counter controls. It keeps state within the component.
+        <strong>Counter component</strong>
         <div class="card-content">
+          Internal counter controls. It keeps state within the component.
           <div class="counter-controls">
             <button (click)="subtract()">-</button>
             <pre>{{ count() }}</pre>
             <button (click)="add()">+</button>
           </div>
         </div>
-      </div>
-      <div class="card">
         The button sends the current count value to a function in the parent
         component.
         <div class="card-content">
@@ -32,6 +31,14 @@ import { Operation, setCounterCount } from "../../lib/setCounterCount";
             </button>
           </div>
         </div>
+      </div>
+      <div class="card unused">
+        <strong>Nano Stores (not supported)</strong>
+        <div class="card-content"></div>
+      </div>
+      <div class="card unused">
+        <strong>Slot content (not supported)</strong>
+        <div class="card-content"></div>
       </div>
     </div>
     <div class="counter-logos">

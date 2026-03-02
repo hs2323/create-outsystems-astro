@@ -24,15 +24,18 @@ const showMessage = "showMessage";
         <div class="counter-title">HTML Content</div>
         <div class="card-grid">
             <div class="card">
-                Value sent back from component.
+                <strong>Counter component</strong>
                 <div class="card-content">
                     <div style="text-align: center; margin-top: 30px;">
-                        Counter value sent back: <br /><span id="counter"></span>
+                        Counter value:
+                        <div>
+                            <span id="counter"></span>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="card">
-                Update Nano Store value
+                <strong>Nano Stores</strong>
                 <div class="card-content">
                     <div style="text-align: center; margin-top: 30px;">
                         <input
@@ -56,7 +59,7 @@ const showMessage = "showMessage";
         >
             <div class="counter-title" slot="header">React Counter Component</div>
             <div style="text-align: center;">
-                <p><strong>This is content passed into the component.</strong></p>
+                <p><em>This is content passed into the component.</em></p>
             </div>
         </CounterComponent>
     </body>
