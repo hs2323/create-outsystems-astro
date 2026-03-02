@@ -8,7 +8,7 @@
   - Angular - Documentation available at https://analogjs.org/docs/packages/astro-angular/overview
   - Preact - Documentation available at https://docs.astro.build/en/guides/integrations-guide/preact/
   - React - Documentation available at https://docs.astro.build/en/guides/integrations-guide/react/
-  - Vue - Documentation available at  https://docs.astro.build/en/guides/integrations-guide/vue/
+  - Vue - Documentation available at https://docs.astro.build/en/guides/integrations-guide/vue/
 - Prefer to use TypeScript when possible.
 
 ## OutSystems
@@ -29,7 +29,7 @@ In OutSystems 11, the Islands library is available at https://www.outsystems.com
 
 In OutSystems Developer Cloud, the Islands library is available at https://www.outsystems.com/forge/component-overview/22960/islands-odc.
 
-- When starting a project, the demo files should be deleted.  The demo files under src/ and test/.
+- When starting a project, the demo files should be deleted. The demo files under src/ and test/.
 
 ### Pages
 
@@ -49,17 +49,20 @@ In OutSystems Developer Cloud, the Islands library is available at https://www.o
   - React: src/framework/react
   - Svelte: src/framework/svelte
   - Vue: src/framework/vue
-  
+
 The framework folder should stay in place as the components will be rendered from there. The Angular components will only be transformed by Astro if they are in the framework/angular folder.
 
 - For any JSX based libraries, the @jsxImportSource directive must be at the top of the file.
   - Preact:
+
 ```js
-  /** @jsxImportSource preact */
+/** @jsxImportSource preact */
 ```
-  - React:
+
+- React:
+
 ```js
-  /** @jsxImportSource react */
+/** @jsxImportSource react */
 ```
 
 ### Parameters
@@ -240,6 +243,7 @@ Nano Stores are currently supported for only Preact - https://github.com/nanosto
 In OutSystems, the store will be on the Window object. The Islands component will then have to access it from there.
 
 #### Preact
+
 ```jsx
 import { useStore } from "@nanostores/preact";
 
@@ -248,10 +252,10 @@ export default function Counter({}) {
 
   return (
     <>
-        <div>
-            <strong>Nano Store value:</strong>
-            <div>{nanoStoreValue}</div>
-        </div>
+      <div>
+        <strong>Nano Store value:</strong>
+        <div>{nanoStoreValue}</div>
+      </div>
     </>
   );
 }
