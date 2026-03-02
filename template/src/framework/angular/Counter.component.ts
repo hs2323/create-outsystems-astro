@@ -10,7 +10,7 @@ import { Operation, setCounterCount } from "../../lib/setCounterCount";
   selector: "app-counter",
   standalone: true,
   template: `
-    <div class="counter-title" slot="header">Counter</div>
+    <div class="counter-title" slot="header">Angular Counter Component</div>
     <div class="card-grid">
       <div class="card">
         Internal counter controls. It keeps state within the component.

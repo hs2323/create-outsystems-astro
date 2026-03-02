@@ -35,7 +35,10 @@ Read the [OutSystems Astro docs](../astro/).
 
 The following frameworks are currently compatible with the OutSystems Astro Islands library:
 
+- [Angular](https://analogjs.org/docs/packages/astro-angular/overview)
+- [Preact](https://docs.astro.build/en/guides/integrations-guide/preact/)
 - [React](https://docs.astro.build/en/guides/integrations-guide/react/)
+- [Svelte](https://docs.astro.build/en/guides/integrations-guide/svelte/)
 - [Vue](https://docs.astro.build/en/guides/integrations-guide/vue/)
 
 ### OutSystems

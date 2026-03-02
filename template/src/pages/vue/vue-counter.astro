@@ -57,10 +57,10 @@ const showMessage = "showMessage";
         </script>
         <CounterComponent client:only="vue" initialCount={initialCount} showMessage={showMessage}>
             <div class="counter-title" slot="header">
-                Counter Component
+                Vue Counter Component
             </div>
             <div style="text-align: center;">
-                <p>This is content passed into the component.</p>
+                <p><strong>This is content passed into the component.</strong></p>
             </div>
         </CounterComponent>
     </body>

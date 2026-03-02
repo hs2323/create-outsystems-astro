@@ -1,5 +1,6 @@
 // @ts-check
 import angular from "@analogjs/astro-angular";
+import preact from "@astrojs/preact";
 import react from "@astrojs/react";
 import svelte from "@astrojs/svelte";
 import vue from "@astrojs/vue";
@@ -18,9 +19,19 @@ export default defineConfig({
         },
       },
     }),
-    react(),
-    vue(),
-    svelte(),
+    preact({
+      compat: true,
+      include: ["src/framework/preact/*"],
+    }),
+    react({
+      include: ["src/framework/react/*"],
+    }),
+    svelte({
+      include: ["src/framework/svelte/*"],
+    }),
+    vue({
+      include: ["src/framework/vue/*"],
+    }),
   ],
   server: {
     host: true,

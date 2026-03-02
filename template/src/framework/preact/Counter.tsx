@@ -1,22 +1,25 @@
-/** @jsxImportSource react */
-import { useStore } from "@nanostores/react";
-import { useState } from "react";
+/** @jsxImportSource preact */
+import { useStore } from "@nanostores/preact";
+import type { ComponentChildren } from "preact";
+import { useState } from "preact/hooks";
 
 import AstroLogo from "../../images/astro.png?url";
 import OutSystemsLogo from "../../images/outsystems.png?url";
 import { Operation, setCounterCount } from "../../lib/setCounterCount";
+
+interface CounterProps {
+  children: ComponentChildren;
+  header: ComponentChildren;
+  initialCount: number;
+  showMessage: string;
+}
 
 export default function Counter({
   children,
   header,
   initialCount,
   showMessage,
-}: {
-  children: React.ReactNode;
-  header: React.ReactNode;
-  initialCount: number;
-  showMessage: string;
-}) {
+}: CounterProps) {
   const [count, setCount] = useState(initialCount);
 
   const add = () => setCount((i) => setCounterCount(i, Operation.Add));
@@ -24,11 +27,15 @@ export default function Counter({
   const subtract = () =>
     setCount((i) => setCounterCount(i, Operation.Subtract));
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const showParentMessage = () => (window as any)[showMessage](count);
+  const showParentMessage = () => {
+    if (typeof window !== "undefined") {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (window as any)[showMessage]?.(count);
+    }
+  };
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const nanoStoreValue = useStore((window as any).Stores["reactStore"]);
+  const nanoStoreValue = useStore((window as any).Stores?.["preactStore"]);
 
   return (
     <>
@@ -44,6 +51,7 @@ export default function Counter({
             </div>
           </div>
         </div>
+
         <div className="card">
           The button sends the current count value to a function in the parent
           component.
@@ -55,12 +63,14 @@ export default function Counter({
             </div>
           </div>
         </div>
+
         <div className="card">
           Slot content coming in to the component
           <div className="card-content">
             <div>{children}</div>
           </div>
         </div>
+
         <div className="card">
           Nano Store content
           <div className="card-content">
@@ -71,6 +81,7 @@ export default function Counter({
           </div>
         </div>
       </div>
+
       <div className="counter-logos">
         <img alt="OutSystems logo" src={OutSystemsLogo} />
         <img alt="Astro logo" src={AstroLogo} />

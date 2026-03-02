@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+- Added template peer dependency @babel/core.
+- Added Preact integration.
+
 ##  [0.6.0] - 2026-02-28
 
 ### Added
@@ -52,6 +58,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added docs better-npm-audit for npm auditing.
 - Added template improved-yarn-audit for Yarn auditing.
 - Added template better-npm-audit for npm auditing.
+- Added template peer dependencies @angular-devkit/architect, @angular/cli, hono, vite and zod.
 - Added Nano Stores for React and Vue.
 
 ### Changed
@@ -64,7 +71,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated docs dependency @eslint/compat to 2.0.2.
 - Updated docs dependency @astrojs/starlight to 0.37.5.
 - Updated Deno allowed scripts.
-- Added template peer dependencies @angular-devkit/architect, @angular/cli, hono, vite and zod.
 - Updated template dependency vue 3.25.7.
 - Updated template dependency vitest to 4.0.18.
 - Updated template dependency typescript-eslint to 8.54.0.

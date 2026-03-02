@@ -1,5 +1,6 @@
 /// <reference types="vitest" />
 import angular from "@analogjs/vite-plugin-angular";
+import preact from "@preact/preset-vite";
 import { svelte } from "@sveltejs/vite-plugin-svelte";
 import react from "@vitejs/plugin-react";
 import vue from "@vitejs/plugin-vue";
@@ -18,6 +19,17 @@ export default defineConfig(({ mode }) => ({
           name: "angular",
           pool: "forks",
           setupFiles: ["test/setup-test-env-angular.ts"],
+        },
+      },
+      {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        plugins: [preact() as any],
+        test: {
+          environment: "happy-dom",
+          globals: true,
+          include: ["test/integration/preact/**/*.test.tsx"],
+          name: "preact",
+          setupFiles: ["test/setup-test-env.ts"],
         },
       },
       {

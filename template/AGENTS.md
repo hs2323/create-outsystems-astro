@@ -6,8 +6,9 @@
 - The output generation will be only client side. No server side rendering or server side components will be used.
 - The Astro Islands can be used generated with the following frameworks:
   - Angular - Documentation available at https://analogjs.org/docs/packages/astro-angular/overview
+  - Preact - Documentation available at https://docs.astro.build/en/guides/integrations-guide/preact/
   - React - Documentation available at https://docs.astro.build/en/guides/integrations-guide/react/
-  - Vue - https://docs.astro.build/en/guides/integrations-guide/vue/
+  - Vue - Documentation available at https://docs.astro.build/en/guides/integrations-guide/vue/
 - Prefer to use TypeScript when possible.
 
 ## OutSystems
@@ -28,11 +29,14 @@ In OutSystems 11, the Islands library is available at https://www.outsystems.com
 
 In OutSystems Developer Cloud, the Islands library is available at https://www.outsystems.com/forge/component-overview/22960/islands-odc.
 
+- When starting a project, the demo files should be deleted. The demo files under src/ and test/.
+
 ### Pages
 
 - The files in src/pages/\*.astro are used as a starting point and holds the components for generation. They can be tested by running `npm run dev`. That will show what the component looks like as rendered. The sample example pages are broken out by framework name (src/pages/react, src/pages/vue, etc). This page will house the component(s) entry points.
 - When importing a component, the component must have the attribute of the client:only= + the framework name.\
   - Angular: `client:visible`
+  - Preact: `client:only="preact"`
   - React: `client:only="react"`
   - Svelte: `client:only="svelte"`
   - Vue: `client:only="vue"`
@@ -41,10 +45,25 @@ In OutSystems Developer Cloud, the Islands library is available at https://www.o
 
 - The components live in the folder framework/{NAME}/:
   - Angular: src/framework/angular
+  - Preact: src/framework/react
   - React: src/framework/react
   - Svelte: src/framework/svelte
   - Vue: src/framework/vue
-    The framework folder should stay in place as the components will be rendered from there. The Angular components will only be transformed by Astro if they are in the framework/angular folder.
+
+The framework folder should stay in place as the components will be rendered from there. The Angular components will only be transformed by Astro if they are in the framework/angular folder.
+
+- For any JSX based libraries, the @jsxImportSource directive must be at the top of the file.
+  - Preact:
+
+```js
+/** @jsxImportSource preact */
+```
+
+- React:
+
+```js
+/** @jsxImportSource react */
+```
 
 ### Parameters
 
@@ -58,6 +77,54 @@ Astro slots can be sent in. A slot can be either the default one or the named on
 ##### Angular
 
 Angular does not support the use of slots. Any use of slots with Angular should be discouraged.
+
+##### Preact
+
+- In Preact, slots are handled as props. The default slot is the `children` prop. A named slot will have the name of its slot as the parameter. For example, a slot with the following:
+
+```js
+<div slot="header">Header content</div>
+```
+
+will have the parameter named header.
+
+- The slots are then rendered using the regular React rendering parameter method. With the following Astro component:
+
+```js
+---
+import CounterComponent from '../../framework/preact/Counter';
+---
+<CounterComponent client:only="preact">
+    <div slot="header">
+        Counter Component
+    </div>
+    <div style="text-align: center;">
+        <p>This is content passed into the component.</p>
+    </div>
+</CounterComponent>
+```
+
+the slots can be used as:
+
+```js
+export default function Counter({
+	children,
+	header,
+}: {
+	children: ComponentChildren;
+	header: ComponentChildren;
+}) {
+
+	return (
+		<>
+      {header}
+			<div>
+				{children}
+			</div>
+		</>
+	);
+}
+```
 
 ##### React
 
@@ -171,13 +238,32 @@ The OutSystems 11 library is called Lightweight State Manager - https://www.outs
 
 The OutSystems Developer Cloud library is called Lightweight State Manager and is available in the ODC Forge.
 
-Nano Stores are currently supported for only React - https://github.com/nanostores/react and Vue - https://github.com/nanostores/vue. The Angular 21 library does not yet support them.
+Nano Stores are currently supported for only Preact - https://github.com/nanostores/preact, React - https://github.com/nanostores/react and Vue - https://github.com/nanostores/vue. The Angular 21 library does not yet support them.
 
 In OutSystems, the store will be on the Window object. The Islands component will then have to access it from there.
 
+#### Preact
+
+```jsx
+import { useStore } from "@nanostores/preact";
+
+export default function Counter({}) {
+  const nanoStoreValue = useStore(window.Stores["MyGreatStore"]);
+
+  return (
+    <>
+      <div>
+        <strong>Nano Store value:</strong>
+        <div>{nanoStoreValue}</div>
+      </div>
+    </>
+  );
+}
+```
+
 #### React
 
-```js
+```jsx
 import { useStore } from "@nanostores/react";
 import { useState } from "react";
 

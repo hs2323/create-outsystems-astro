@@ -1,8 +1,8 @@
-/** @jsxImportSource react */
-import { act, fireEvent, render, screen } from "@testing-library/react";
+/** @jsxImportSource preact */
+import { act, fireEvent, render, screen } from "@testing-library/preact";
 import { it, vi } from "vitest";
 
-import Counter from "../../../src/framework/react/Counter";
+import Counter from "../../../src/framework/preact/Counter";
 
 describe("Counter", () => {
   const defaultProps = {
@@ -21,7 +21,7 @@ describe("Counter", () => {
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (window as any).Stores = {
-      reactStore: {
+      preactStore: {
         get: vi.fn(() => storeValue),
         listen: vi.fn((callback) => {
           capturedListener = callback;

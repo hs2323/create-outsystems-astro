@@ -16,6 +16,7 @@ const __dirname = path.dirname(__filename);
 
 const FRAMEWORKS = [
   { title: "Angular", value: "angular" },
+  { title: "Preact", value: "preact" },
   { title: "React", value: "react" },
   { title: "Svelte", value: "svelte" },
   { title: "Vue", value: "vue" }
@@ -153,17 +154,21 @@ function updateAstroConfig(projectDir, selectedFrameworks) {
       import: /import\s+angular\s+from\s+['"]@analogjs\/astro-angular['"];\s*\n?/,
       integration: /angular\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
     },
+    preact: {
+      import: /import\s+preact\s+from\s+['"]@astrojs\/preact['"];\s*\n?/,
+      integration: /preact\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
+    },
     react: {
       import: /import\s+react\s+from\s+['"]@astrojs\/react['"];\s*\n?/,
-      integration: /react\(\)\s*,?\s*/
+      integration: /react\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
     },
     svelte: {
       import: /import\s+svelte\s+from\s+['"]@astrojs\/svelte['"];\s*\n?/,
-      integration: /svelte\(\)\s*,?\s*/
+      integration: /svelte\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
     },
     vue: {
       import: /import\s+vue\s+from\s+['"]@astrojs\/vue['"];\s*\n?/,
-      integration: /vue\(\)\s*,?\s*/
+      integration: /vue\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
     }
   };
 
