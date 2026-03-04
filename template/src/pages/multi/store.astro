@@ -1,0 +1,22 @@
+---
+import AngularStore from "../../framework/angular/Store.component"
+import PreactStore from "../../framework/preact/Store";
+import ReactStore from "../../framework/react/Store";
+import SvelteStore from "../../framework/svelte/Store.svelte";
+import VueStore from "../../framework/vue/Store.vue";
+import styles from "../../styles/index.css?url";
+---
+<html lang="en">
+    <head>
+        <link href={styles} rel="stylesheet" />
+    </head>
+    <body>
+        <div class="card-grid">
+            <AngularStore client:visible />
+            <PreactStore client:only="preact" />
+            <ReactStore client:only="react" />
+            <SvelteStore client:only="svelte" />
+            <VueStore client:only="vue" />
+        </div>
+    </body>
+</html>

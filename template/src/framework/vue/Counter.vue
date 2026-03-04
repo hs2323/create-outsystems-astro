@@ -66,14 +66,13 @@ const nanoStoreValue = useStore((window as any).Stores["vueStore"]);
     </div>
 
     <div class="card">
-       <strong>Slot content</strong>
+      <strong>Slot content</strong>
       <div class="card-content">
         <div>
           <slot />
         </div>
       </div>
     </div>
-
   </div>
 
   <div class="counter-logos">
