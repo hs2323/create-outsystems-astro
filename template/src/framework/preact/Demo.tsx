@@ -7,19 +7,19 @@ import AstroLogo from "../../images/astro.png?url";
 import OutSystemsLogo from "../../images/outsystems.png?url";
 import { Operation, setCounterCount } from "../../lib/setCounterCount";
 
-interface CounterProps {
+interface DemoProps {
   children: ComponentChildren;
   header: ComponentChildren;
   initialCount: number;
   showMessage: string;
 }
 
-export default function Counter({
+export default function Demo({
   children,
   header,
   initialCount,
   showMessage,
-}: CounterProps) {
+}: DemoProps) {
   const [count, setCount] = useState(initialCount);
 
   const add = () => setCount((i) => setCounterCount(i, Operation.Add));
@@ -42,7 +42,7 @@ export default function Counter({
       {header}
       <div className="card-grid">
         <div className="card">
-          <strong>Preact component</strong>
+          <strong>Preact counter component</strong>
           <div className="card-content">
             Internal counter controls. It keeps state within the component.
             <div className="counter-controls">

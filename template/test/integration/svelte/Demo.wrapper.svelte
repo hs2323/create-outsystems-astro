@@ -1,7 +1,7 @@
 <script lang="ts">
   import { vi } from "vitest";
 
-  import Counter from "../../../src/framework/svelte/Counter.svelte";
+  import Demo from "../../../src/framework/svelte/Demo.svelte";
 
   export let initialCount = 5;
   export let showMessage = "mockFn";
@@ -21,7 +21,7 @@
   };
 </script>
 
-<Counter {initialCount} {showMessage}>
+<Demo {initialCount} {showMessage}>
   <h1 slot="header">Test Header</h1>
   <div>Test Children</div>
-</Counter>
+</Demo>

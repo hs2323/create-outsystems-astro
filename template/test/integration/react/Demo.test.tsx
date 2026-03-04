@@ -2,9 +2,9 @@
 import { act, fireEvent, render, screen } from "@testing-library/react";
 import { it, vi } from "vitest";
 
-import Counter from "../../../src/framework/react/Counter";
+import Demo from "../../../src/framework/react/Demo";
 
-describe("Counter", () => {
+describe("Demo", () => {
   const defaultProps = {
     children: <div>Test Children</div>,
     header: <h1>Test Header</h1>,
@@ -39,41 +39,41 @@ describe("Counter", () => {
   });
 
   it("renders the initial count", () => {
-    render(<Counter {...defaultProps} />);
+    render(<Demo {...defaultProps} />);
     expect(screen.getByText("5")).toBeInTheDocument();
   });
 
   it("renders header", () => {
-    render(<Counter {...defaultProps} />);
+    render(<Demo {...defaultProps} />);
     expect(screen.getByText("Test Header")).toBeInTheDocument();
   });
 
   it("renders children", () => {
-    render(<Counter {...defaultProps} />);
+    render(<Demo {...defaultProps} />);
     expect(screen.getByText("Test Children")).toBeInTheDocument();
   });
 
   it("increments count when add button is clicked", () => {
-    render(<Counter {...defaultProps} />);
+    render(<Demo {...defaultProps} />);
     fireEvent.click(screen.getByRole("button", { name: "+" }));
     expect(screen.getByText("6")).toBeInTheDocument();
   });
 
   it("decrements count when subtract button is clicked", () => {
-    render(<Counter {...defaultProps} />);
+    render(<Demo {...defaultProps} />);
     fireEvent.click(screen.getByRole("button", { name: "-" }));
     expect(screen.getByText("4")).toBeInTheDocument();
   });
 
   it("calls the show message function", () => {
-    render(<Counter {...defaultProps} />);
+    render(<Demo {...defaultProps} />);
     fireEvent.click(screen.getByRole("button", { name: "Send value" }));
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     expect((window as any).mockFunction).toHaveBeenCalledWith(5);
   });
 
   it("updates the component when the nanostore value changes", async () => {
-    render(<Counter {...defaultProps} />);
+    render(<Demo {...defaultProps} />);
     expect(screen.getByText(/Mocked Nano Value/i)).toBeInTheDocument();
     await act(async () => {
       storeValue = "Updated Nano Value";

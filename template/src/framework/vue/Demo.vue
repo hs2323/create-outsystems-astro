@@ -35,7 +35,7 @@ const nanoStoreValue = useStore((window as any).Stores["vueStore"]);
 
   <div class="card-grid">
     <div class="card">
-      <strong>Vue component</strong>
+      <strong>Vue counter component</strong>
       <div class="card-content">
         Internal counter controls. It keeps state within the component.
         <div class="counter-controls">

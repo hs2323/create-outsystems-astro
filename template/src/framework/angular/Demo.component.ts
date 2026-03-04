@@ -10,10 +10,10 @@ import { Operation, setCounterCount } from "../../lib/setCounterCount";
   selector: "app-counter",
   standalone: true,
   template: `
-    <div class="counter-title" slot="header">Angular Counter Component</div>
+    <div class="counter-title" slot="header">Angular Demo Component</div>
     <div class="card-grid">
       <div class="card">
-        <strong>Angular component</strong>
+        <strong>Angular counter component</strong>
         <div class="card-content">
           Internal counter controls. It keeps state within the component.
           <div class="counter-controls">
@@ -47,7 +47,7 @@ import { Operation, setCounterCount } from "../../lib/setCounterCount";
     </div>
   `,
 })
-export default class CounterComponent implements OnInit {
+export default class DemoComponent implements OnInit {
   astroLogo = AstroLogo;
   count = signal(0);
 

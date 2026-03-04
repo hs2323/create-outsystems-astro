@@ -1,5 +1,5 @@
 ---
-import CounterComponent from "../../framework/react/Counter";
+import DemoComponent from "../../framework/preact/Demo";
 import styles from "../../styles/index.css?url";
 const initialCount = 5;
 const showMessage = "showMessage";
@@ -13,10 +13,10 @@ const showMessage = "showMessage";
                 document.getElementById("counter").textContent = count;
             };
             window.Stores = [];
-            window.Stores["reactStore"] = atom("Test Value");
+            window.Stores["preactStore"] = atom("Test Value");
             document.addEventListener("DOMContentLoaded", function () {
                 const input = document.getElementById("store");
-                input.value = window.Stores["reactStore"].get();
+                input.value = window.Stores["preactStore"].get();
             });
         </script>
     </head>
@@ -24,7 +24,7 @@ const showMessage = "showMessage";
         <div class="counter-title">Astro Page</div>
         <div class="card-grid">
             <div class="card">
-                <strong>PCounter component</strong>
+                <strong>Counter component</strong>
                 <div class="card-content">
                     <div style="text-align: center; margin-top: 30px;">
                         Counter value:
@@ -44,7 +44,7 @@ const showMessage = "showMessage";
                             type="text"
                         /><button
                             class="card-btn"
-                            onclick="window.Stores['reactStore'].set(document.getElementById('store').value)"
+                            onclick="window.Stores['preactStore'].set(document.getElementById('store').value)"
                             >Update Store</button
                         >
                     </div>
@@ -52,15 +52,15 @@ const showMessage = "showMessage";
             </div>
         </div>
         <hr />
-        <CounterComponent
-            client:only="react"
+        <DemoComponent
+            client:only="preact"
             initialCount={initialCount}
             showMessage={showMessage}
         >
-            <div class="counter-title" slot="header">React Counter Component</div>
+            <div class="counter-title" slot="header">Preact Demo Component</div>
             <div style="text-align: center;">
                 <p><em>This is content passed into the component.</em></p>
             </div>
-        </CounterComponent>
+        </DemoComponent>
     </body>
 </html>

@@ -29,7 +29,7 @@
 
 <div class="card-grid">
   <div class="card">
-    <strong>Svelte component</strong>
+    <strong>Svelte counter component</strong>
     <div class="card-content">
       Internal counter controls. It keeps state within the component.
       <div class="counter-controls">
