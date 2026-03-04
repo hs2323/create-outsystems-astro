@@ -6,7 +6,7 @@ test.beforeEach(async ({ page }) => {
 
 test.describe("Has values", () => {
   test("Should have header", async ({ page }) => {
-    await expect(page.getByText("Counter Component")).toBeVisible();
+    await expect(page.getByText("React Counter Component")).toBeVisible();
   });
 
   test("Should have slot content", async ({ page }) => {

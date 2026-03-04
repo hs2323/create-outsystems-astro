@@ -7,6 +7,12 @@ test.beforeEach(async ({ page }) => {
   await page.waitForTimeout(2000);
 });
 
+test.describe("Has values", () => {
+  test("Should have header", async ({ page }) => {
+    await expect(page.getByText("Angular Counter Component")).toBeVisible();
+  });
+});
+
 test.describe("Change counter", () => {
   test("Should increment counter when clicking + button", async ({ page }) => {
     await page.getByRole("button", { name: "+" }).click();

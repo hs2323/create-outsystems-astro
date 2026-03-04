@@ -13,7 +13,7 @@ import { Operation, setCounterCount } from "../../lib/setCounterCount";
     <div class="counter-title" slot="header">Angular Counter Component</div>
     <div class="card-grid">
       <div class="card">
-        <strong>Counter component</strong>
+        <strong>Angular component</strong>
         <div class="card-content">
           Internal counter controls. It keeps state within the component.
           <div class="counter-controls">

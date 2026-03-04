@@ -42,7 +42,7 @@ export default function Counter({
       {header}
       <div className="card-grid">
         <div className="card">
-          <strong>Counter component</strong>
+          <strong>Preact component</strong>
           <div className="card-content">
             Internal counter controls. It keeps state within the component.
             <div className="counter-controls">
