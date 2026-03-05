@@ -1,3 +1,9 @@
 {
+  "imports": {
+    "@hono/node-server": "npm:@hono/node-server@^1.19.10",
+    "hono": "npm:hono@^4.12.4",
+    "immutable": "npm:immutable@^5.1.5",
+    "svgo": "npm:svgo@4.0.1"
+  },
   "allowScripts": ["npm:@parcel/watcher@2.5.4", "npm:@parcel/watcher@2.5.6", "npm:esbuild@0.25.12", "npm:esbuild@0.27.2", "npm:esbuild@0.27.3", "npm:fsevents@2.3.2", "npm:fsevents@2.3.3", "npm:lmdb@3.4.4", "npm:lmdb@3.5.1", "npm:msgpackr-extract@3.0.3", "npm:sharp@0.34.5"]
 }

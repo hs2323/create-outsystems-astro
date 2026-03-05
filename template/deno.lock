@@ -26,6 +26,7 @@
     "npm:@eslint/eslintrc@^3.3.4": "3.3.4",
     "npm:@eslint/js@^9.39.3": "9.39.3",
     "npm:@eslint/markdown@^7.5.1": "7.5.1",
+    "npm:@hono/node-server@^1.19.10": "1.19.10_hono@4.12.5",
     "npm:@nanostores/preact@1": "1.0.0_nanostores@1.1.1_preact@10.28.4",
     "npm:@nanostores/react@1": "1.0.0_nanostores@1.1.1_react@19.2.4",
     "npm:@nanostores/vue@^1.0.1": "1.0.1_nanostores@1.1.1_vue@3.5.29__typescript@5.9.3_typescript@5.9.3",
@@ -66,6 +67,8 @@
     "npm:eslint@^9.39.3": "9.39.3",
     "npm:globals@^17.3.0": "17.3.0",
     "npm:happy-dom@^20.7.0": "20.7.0",
+    "npm:hono@^4.12.4": "4.12.5",
+    "npm:immutable@^5.1.5": "5.1.5",
     "npm:improved-yarn-audit@^3.0.4": "3.0.4",
     "npm:js-beautify@^1.15.4": "1.15.4",
     "npm:nanostores@^1.1.1": "1.1.1",
@@ -78,6 +81,7 @@
     "npm:rxjs@^7.8.2": "7.8.2",
     "npm:svelte-eslint-parser@^1.5.1": "1.5.1_svelte@5.53.6__acorn@8.16.0_postcss@8.5.6",
     "npm:svelte@^5.53.6": "5.53.6_acorn@8.16.0",
+    "npm:svgo@4.0.1": "4.0.1",
     "npm:ts-node@^10.9.2": "10.9.2_@types+node@25.3.2_typescript@5.9.3",
     "npm:tslib@^2.8.1": "2.8.1",
     "npm:typescript-eslint@^8.56.1": "8.56.1_eslint@9.39.3_typescript@5.9.3_@typescript-eslint+parser@8.56.1__eslint@9.39.3__typescript@5.9.3",
@@ -1274,8 +1278,8 @@
     "@harperfast/extended-iterable@1.0.3": {
       "integrity": "sha512-sSAYhQca3rDWtQUHSAPeO7axFIUJOI6hn1gjRC5APVE1a90tuyT8f5WIgRsFhhWA7htNkju2veB9eWL6YHi/Lw=="
     },
-    "@hono/node-server@1.19.9_hono@4.12.3": {
-      "integrity": "sha512-vHL6w3ecZsky+8P5MD+eFfaGTyCeOHUIFYMGpQGbrBTSmNNoxv0if69rEZ5giu36weC5saFuznL411gRX7bJDw==",
+    "@hono/node-server@1.19.10_hono@4.12.5": {
+      "integrity": "sha512-hZ7nOssGqRgyV3FVVQdfi+U4q02uB23bpnYpdvNXkYTRRyWx84b7yf1ans+dnJ/7h41sGL3CeQTfO+ZGxuO+Iw==",
       "dependencies": [
         "hono"
       ]
@@ -1738,7 +1742,7 @@
     "@mdn/browser-compat-data@6.1.5": {
       "integrity": "sha512-PzdZZzRhcXvKB0begee28n5lvwAcinGKYuLZOVxHAZm+n7y01ddEGfdS1ZXRuVcV+ndG6mSEAE8vgudom5UjYg=="
     },
-    "@modelcontextprotocol/sdk@1.26.0_zod@4.3.6_hono@4.12.3_ajv@8.18.0_express@5.2.1": {
+    "@modelcontextprotocol/sdk@1.26.0_zod@4.3.6_hono@4.12.5_ajv@8.18.0_express@5.2.1": {
       "integrity": "sha512-Y5RmPncpiDtTXDbLKswIJzTqu2hyBKxTNsgKqKclDbhIgg1wgtf1fRuvxgTnRfcnxtvvgbIEcqUOzZrJ6iSReg==",
       "dependencies": [
         "@hono/node-server",
@@ -5313,8 +5317,8 @@
         "hermes-estree"
       ]
     },
-    "hono@4.12.3": {
-      "integrity": "sha512-SFsVSjp8sj5UumXOOFlkZOG6XS9SJDKw0TbwFeV+AJ8xlST8kxK5Z/5EYa111UY8732lK2S/xB653ceuaoGwpg=="
+    "hono@4.12.5": {
+      "integrity": "sha512-3qq+FUBtlTHhtYxbxheZgY8NIFnkkC/MR8u5TTsr7YZ3wixryQ3cCwn3iZbg8p8B88iDBBAYSfZDS75t8MN7Vg=="
     },
     "hookable@5.5.3": {
       "integrity": "sha512-Yc+BQe8SvoXH1643Qez1zqLRmbA5rCL+sSmk6TVos0LWVfNIB7PGncdlId77WzLGSIB5KaWgTaNTs2lNVEI6VQ=="
@@ -5388,8 +5392,8 @@
     "ignore@7.0.5": {
       "integrity": "sha512-Hs59xBNfUIunMFgWAbGX5cq6893IbWg4KnrjbYwX3tx0ztorVgTDA6B2sxf8ejHJ4wz8BqGUMYlnzNBer5NvGg=="
     },
-    "immutable@5.1.4": {
-      "integrity": "sha512-p6u1bG3YSnINT5RQmx/yRZBpenIl30kVxkTLDyHLIMk0gict704Q9n+thfDI7lTRm9vXdDYutVzXhzcThxTnXA=="
+    "immutable@5.1.5": {
+      "integrity": "sha512-t7xcm2siw+hlUM68I+UEOK+z84RzmN59as9DZ7P1l0994DKUWV7UXBMQZVxaoMSRQ+PBZbHCOoBt7a2wxOMt+A=="
     },
     "import-fresh@3.3.1": {
       "integrity": "sha512-TR3KfrTZTYLPB6jUjfx6MF9WcWrHL9su5TObK4ZkYgBdWKPOFoSoQIdEuTuR82pmtxH2spWG9h6etwfr1pLBqQ==",
@@ -7543,8 +7547,8 @@
       ],
       "bin": true
     },
-    "sax@1.4.4": {
-      "integrity": "sha512-1n3r/tGXO6b6VXMdFT54SHzT9ytu9yr7TaELowdYpMqY/Ao7EnlQGmAQ1+RatX7Tkkdm6hONI2owqNx2aZj5Sw=="
+    "sax@1.5.0": {
+      "integrity": "sha512-21IYA3Q5cQf089Z6tgaUTr7lDAyzoTPx5HRtbhsME8Udispad8dC/+sziTNugOEx54ilvatQ9YCzl4KQLPcRHA=="
     },
     "scheduler@0.27.0": {
       "integrity": "sha512-eNv+WrVbKu1f3vbYJT/xtiF5syA5HPIMtf9IgY/nKg0sWqzAUEvqY/xm7OcZc/qafLx/iO9FgOmeSAp4v5ti/Q=="
@@ -8029,8 +8033,8 @@
         "zimmerframe"
       ]
     },
-    "svgo@4.0.0": {
-      "integrity": "sha512-VvrHQ+9uniE+Mvx3+C9IEe/lWasXCU0nXMY2kZeLrHNICuRiC8uMPyM14UEaMOFA5mhyQqEkB02VoQ16n3DLaw==",
+    "svgo@4.0.1": {
+      "integrity": "sha512-XDpWUOPC6FEibaLzjfe0ucaV0YrOjYotGJO1WpF0Zd+n6ZGEQUsSugaoLq9QkEZtAfQIxT42UChcssDVPP3+/w==",
       "dependencies": [
         "commander@11.1.0",
         "css-select@5.2.2",
@@ -8882,6 +8886,12 @@
     }
   },
   "workspace": {
+    "dependencies": [
+      "npm:@hono/node-server@^1.19.10",
+      "npm:hono@^4.12.4",
+      "npm:immutable@^5.1.5",
+      "npm:svgo@4.0.1"
+    ],
     "packageJson": {
       "dependencies": [
         "npm:@analogjs/astro-angular@^2.3.0",
@@ -8969,7 +8979,13 @@
         "npm:vitest@^4.0.18",
         "npm:vue-eslint-parser@^10.4.0",
         "npm:vue@^3.5.29"
-      ]
+      ],
+      "overrides": {
+        "@hono/node-server": "^1.19.10",
+        "hono": "^4.12.4",
+        "immutable": "^5.1.5",
+        "svgo": "4.0.1"
+      }
     }
   }
 }

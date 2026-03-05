@@ -116,5 +116,25 @@
     "vite": "^6.4.1",
     "vitest": "^4.0.18",
     "vue-eslint-parser": "^10.4.0"
+  },
+  "overrides": {
+    "@hono/node-server": "^1.19.10",
+    "hono": "^4.12.4",
+    "immutable": "^5.1.5",
+    "svgo": "4.0.1"
+  },
+  "resolutions": {
+    "@hono/node-server": "^1.19.10",
+    "hono": "^4.12.4",
+    "immutable": "^5.1.5",
+        "svgo": "4.0.1"
+  },
+  "pnpm": {
+    "overrides": {
+      "@hono/node-server": "^1.19.10",
+      "hono": "^4.12.4",
+      "immutable": "^5.1.5",
+      "svgo": "4.0.1"
+    }
   }
 }
