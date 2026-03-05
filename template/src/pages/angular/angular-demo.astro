@@ -1,5 +1,5 @@
 ---
-import CounterComponent from "../../framework/angular/Counter.component";
+import DemoComponent from "../../framework/angular/Demo.component";
 import styles from "../../styles/index.css?url";
 const initialCount = 5;
 const showMessage = "showMessage";
@@ -14,19 +14,26 @@ const showMessage = "showMessage";
         </script>
     </head>
     <body>
-        <div class="counter-title">HTML Content</div>
+        <div class="counter-title">Astro Page</div>
         <div class="card-grid">
             <div class="card">
-                Value sent back from component.
+                <strong>Counter component</strong>
                 <div class="card-content">
                     <div style="text-align: center; margin-top: 30px;">
-                        Counter value sent back: <br /><span id="counter"></span>
+                        Counter value: <br /><span id="counter"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="card unused">
+                <strong>Nano Stores (not supported)</strong>
+                <div class="card-content">
+                    <div style="text-align: center; margin-top: 30px;">
                     </div>
                 </div>
             </div>
         </div>
         <hr />
-        <CounterComponent
+        <DemoComponent
             client:visible
             initialCount={initialCount}
             showMessage={showMessage}

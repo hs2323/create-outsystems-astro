@@ -1,12 +1,12 @@
 import { expect, test } from "@playwright/test";
 
 test.beforeEach(async ({ page }) => {
-  await page.goto("/react/react-counter");
+  await page.goto("/react/react-demo");
 });
 
 test.describe("Has values", () => {
   test("Should have header", async ({ page }) => {
-    await expect(page.getByText("Counter Component")).toBeVisible();
+    await expect(page.getByText("React Demo Component")).toBeVisible();
   });
 
   test("Should have slot content", async ({ page }) => {

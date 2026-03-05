@@ -1,10 +1,16 @@
 import { expect, test } from "@playwright/test";
 
 test.beforeEach(async ({ page }) => {
-  await page.goto("/angular/angular-counter");
+  await page.goto("/angular/angular-demo");
   // Angular sometimes needs a bit more time to fully render the island component.
   // eslint-disable-next-line playwright/no-wait-for-timeout
   await page.waitForTimeout(2000);
+});
+
+test.describe("Has values", () => {
+  test("Should have header", async ({ page }) => {
+    await expect(page.getByText("Angular Demo Component")).toBeVisible();
+  });
 });
 
 test.describe("Change counter", () => {

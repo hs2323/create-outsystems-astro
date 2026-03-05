@@ -10,19 +10,18 @@ import { Operation, setCounterCount } from "../../lib/setCounterCount";
   selector: "app-counter",
   standalone: true,
   template: `
-    <div class="counter-title" slot="header">Angular Counter Component</div>
+    <div class="counter-title" slot="header">Angular Demo Component</div>
     <div class="card-grid">
       <div class="card">
-        Internal counter controls. It keeps state within the component.
+        <strong>Angular counter component</strong>
         <div class="card-content">
+          Internal counter controls. It keeps state within the component.
           <div class="counter-controls">
             <button (click)="subtract()">-</button>
             <pre>{{ count() }}</pre>
             <button (click)="add()">+</button>
           </div>
         </div>
-      </div>
-      <div class="card">
         The button sends the current count value to a function in the parent
         component.
         <div class="card-content">
@@ -33,6 +32,14 @@ import { Operation, setCounterCount } from "../../lib/setCounterCount";
           </div>
         </div>
       </div>
+      <div class="card unused">
+        <strong>Nano Stores (not supported)</strong>
+        <div class="card-content"></div>
+      </div>
+      <div class="card unused">
+        <strong>Slot content (not supported)</strong>
+        <div class="card-content"></div>
+      </div>
     </div>
     <div class="counter-logos">
       <img [src]="outSystemsLogo" alt="OutSystems logo" />
@@ -40,7 +47,7 @@ import { Operation, setCounterCount } from "../../lib/setCounterCount";
     </div>
   `,
 })
-export default class CounterComponent implements OnInit {
+export default class DemoComponent implements OnInit {
   astroLogo = AstroLogo;
   count = signal(0);
 

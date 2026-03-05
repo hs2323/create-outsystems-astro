@@ -1,10 +1,10 @@
 import { fireEvent, render, screen } from "@testing-library/angular";
 import { it, vi } from "vitest";
-import CounterComponent from "../../../src/framework/angular/Counter.component";
+import DemoComponent from "../../../src/framework/angular/Demo.component";
 
-describe("CounterComponent (Testing Library)", () => {
+describe("DemoComponent (Testing Library)", () => {
   it("should render the initial count", async () => {
-    await render(CounterComponent, {
+    await render(DemoComponent, {
       componentInputs: { initialCount: 5 },
     });
 
@@ -13,7 +13,7 @@ describe("CounterComponent (Testing Library)", () => {
   });
 
   it("should increment the count when add button is clicked", async () => {
-    await render(CounterComponent, {
+    await render(DemoComponent, {
       componentInputs: { initialCount: 5 },
     });
 
@@ -24,7 +24,7 @@ describe("CounterComponent (Testing Library)", () => {
   });
 
   it("should decrement the count when add button is clicked", async () => {
-    await render(CounterComponent, {
+    await render(DemoComponent, {
       componentInputs: { initialCount: 5 },
     });
 
@@ -35,7 +35,7 @@ describe("CounterComponent (Testing Library)", () => {
   });
 
   it('should call the showParentMessage function when "Send value" button is clicked', async () => {
-    const { fixture } = await render(CounterComponent, {
+    const { fixture } = await render(DemoComponent, {
       componentInputs: { initialCount: 5 },
     });
 

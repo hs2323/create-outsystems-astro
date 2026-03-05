@@ -1,12 +1,12 @@
 import { expect, test } from "@playwright/test";
 
 test.beforeEach(async ({ page }) => {
-  await page.goto("/vue/vue-counter");
+  await page.goto("/vue/vue-demo");
 });
 
 test.describe("Has values", () => {
   test("Should have header", async ({ page }) => {
-    await expect(page.getByText("Counter Component")).toBeVisible();
+    await expect(page.getByText("Vue Demo Component")).toBeVisible();
   });
 
   test("Should have slot content", async ({ page }) => {

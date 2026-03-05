@@ -70,6 +70,8 @@ async function main() {
 
   updateAstroConfig(targetDir, selectedFrameworks);
 
+  updateMultiAstroPage(targetDir, selectedFrameworks)
+
   const readmeSrc = path.resolve(__dirname, "../README.md");
   const readmeDest = path.join(targetDir, "README.md");
 
@@ -191,6 +193,57 @@ function updateAstroConfig(projectDir, selectedFrameworks) {
 
   fs.writeFileSync(configPath, content, "utf-8");
   console.log("🛠️ Updated astro.config.mjs integrations");
+}
+
+function updateMultiAstroPage(projectDir, selectedFrameworks) {
+  const pagePath = path.join(projectDir, "src", "pages", "multi", "store.astro");
+
+  if (!fs.existsSync(pagePath)) {
+    console.warn(`⚠️ ${path.relative(projectDir, pagePath)} not found, skipping page cleanup.`);
+    return;
+  }
+
+  let content = fs.readFileSync(pagePath, "utf-8");
+
+  // Map each framework to its specific Import and Component tag patterns
+  const frameworkMap = {
+    angular: {
+      import: /import\s+AngularStore\s+from\s+['"].*?angular\/Store\.component['"];?\s*\n?/g,
+      component: /<AngularStore\s+client:visible\s*\/>\s*\n?/g
+    },
+    preact: {
+      import: /import\s+PreactStore\s+from\s+['"].*?preact\/Store['"];?\s*\n?/g,
+      component: /<PreactStore\s+client:only="preact"\s*\/>\s*\n?/g
+    },
+    react: {
+      import: /import\s+ReactStore\s+from\s+['"].*?react\/Store['"];?\s*\n?/g,
+      component: /<ReactStore\s+client:only="react"\s*\/>\s*\n?/g
+    },
+    svelte: {
+      import: /import\s+SvelteStore\s+from\s+['"].*?svelte\/Store\.svelte['"];?\s*\n?/g,
+      component: /<SvelteStore\s+client:only="svelte"\s*\/>\s*\n?/g
+    },
+    vue: {
+      import: /import\s+VueStore\s+from\s+['"].*?vue\/Store\.vue['"];?\s*\n?/g,
+      component: /<VueStore\s+client:only="vue"\s*\/>\s*\n?/g
+    }
+  };
+
+  FRAMEWORKS.forEach(({ value: framework }) => {
+    if (!selectedFrameworks.includes(framework)) {
+      const patterns = frameworkMap[framework];
+      if (patterns) {
+        content = content.replace(patterns.import, "");
+        content = content.replace(patterns.component, "");
+      }
+    }
+  });
+
+  // Clean up any double-newlines left behind in the template body
+  content = content.replace(/\n\s*\n\s*\n/g, "\n\n");
+
+  fs.writeFileSync(pagePath, content, "utf-8");
+  console.log(`✨ Cleaned up components in ${path.relative(projectDir, pagePath)}`);
 }
 
 function detectPackageManager() {

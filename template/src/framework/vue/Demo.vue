@@ -35,17 +35,15 @@ const nanoStoreValue = useStore((window as any).Stores["vueStore"]);
 
   <div class="card-grid">
     <div class="card">
-      Internal counter controls. It keeps state within the component.
+      <strong>Vue counter component</strong>
       <div class="card-content">
+        Internal counter controls. It keeps state within the component.
         <div class="counter-controls">
           <button @click="subtract">-</button>
           <pre>{{ count }}</pre>
           <button @click="add">+</button>
         </div>
       </div>
-    </div>
-
-    <div class="card">
       The button sends the current count value to a function in the parent
       component.
       <div class="card-content">
@@ -58,20 +56,20 @@ const nanoStoreValue = useStore((window as any).Stores["vueStore"]);
     </div>
 
     <div class="card">
-      Slot content coming in to the component
+      <strong>Nano Stores</strong>
       <div class="card-content">
         <div>
-          <slot />
+          <strong>Value:</strong>
+          <div id="nanostore">{{ nanoStoreValue }}</div>
         </div>
       </div>
     </div>
 
     <div class="card">
-      Nano Store content
+      <strong>Slot content</strong>
       <div class="card-content">
         <div>
-          <strong>Nano Store value:</strong>
-          <div id="nanostore">{{ nanoStoreValue }}</div>
+          <slot />
         </div>
       </div>
     </div>

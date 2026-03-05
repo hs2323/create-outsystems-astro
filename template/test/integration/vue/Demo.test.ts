@@ -1,9 +1,9 @@
 import { fireEvent, render, screen, waitFor } from "@testing-library/vue";
 import { it, vi } from "vitest";
 
-import Counter from "../../../src/framework/vue/Counter.vue";
+import Demo from "../../../src/framework/vue/Demo.vue";
 
-describe("Counter", () => {
+describe("Demo", () => {
   const defaultProps = {
     initialCount: 5,
     showMessage: "mockFunction",
@@ -40,7 +40,7 @@ describe("Counter", () => {
   });
 
   it("renders the initial count", () => {
-    render(Counter, {
+    render(Demo, {
       props: defaultProps,
       slots: {
         default: "<div><p>Test Children</p></div>",
@@ -51,7 +51,7 @@ describe("Counter", () => {
   });
 
   it("renders header slot", () => {
-    render(Counter, {
+    render(Demo, {
       props: defaultProps,
       slots: {
         default: "<div><p>Test Children</p></div>",
@@ -62,7 +62,7 @@ describe("Counter", () => {
   });
 
   it("renders default slot content", () => {
-    render(Counter, {
+    render(Demo, {
       props: defaultProps,
       slots: {
         default: "<div><p>Test Children</p></div>",
@@ -73,7 +73,7 @@ describe("Counter", () => {
   });
 
   it("increments count when add button is clicked", async () => {
-    render(Counter, {
+    render(Demo, {
       props: defaultProps,
       slots: {
         default: "<div><p>Test Children</p></div>",
@@ -86,7 +86,7 @@ describe("Counter", () => {
   });
 
   it("decrements count when subtract button is clicked", async () => {
-    render(Counter, {
+    render(Demo, {
       props: defaultProps,
       slots: {
         default: "<div><p>Test Children</p></div>",
@@ -99,7 +99,7 @@ describe("Counter", () => {
   });
 
   it("calls the show message function with the current count", async () => {
-    render(Counter, {
+    render(Demo, {
       props: defaultProps,
       slots: {
         default: "<div><p>Test Children</p></div>",
@@ -113,7 +113,7 @@ describe("Counter", () => {
   });
 
   it("updates the component when the nanostore value changes", async () => {
-    render(Counter, {
+    render(Demo, {
       props: defaultProps,
       slots: {
         default: "<div><p>Test Children</p></div>",

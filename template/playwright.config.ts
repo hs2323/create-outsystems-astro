@@ -86,7 +86,7 @@ export default defineConfig({
   webServer: {
     command: `${packageManager} run build && ${packageManager} run preview`,
     reuseExistingServer: !process.env.CI,
-    url: "http://localhost:4321/react/react-counter",
+    url: "http://localhost:4321/",
   },
 
   /* Opt out of parallel tests on CI. */

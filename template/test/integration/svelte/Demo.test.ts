@@ -1,10 +1,10 @@
 import { act, fireEvent, render, screen } from "@testing-library/svelte";
 import { writable } from "svelte/store";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import Counter from "../../../src/framework/svelte/Counter.svelte";
-import SlotCounter from "./SlotCounter.wrapper.svelte";
+import Demo from "../../../src/framework/svelte/Demo.svelte";
+import DemoWrapper from "./Demo.wrapper.svelte";
 
-describe("Counter.svelte", () => {
+describe("Demo", () => {
   const defaultProps = {
     initialCount: 5,
     showMessage: "mockFunction",
@@ -30,19 +30,19 @@ describe("Counter.svelte", () => {
   });
 
   it("renders the initial count", () => {
-    render(Counter, { props: defaultProps });
+    render(Demo, { props: defaultProps });
     expect(screen.getByText("5")).toBeInTheDocument();
   });
 
   it("renders slots (header and default)", () => {
-    render(SlotCounter);
+    render(DemoWrapper);
 
     expect(screen.getByText("Test Header")).toBeInTheDocument();
     expect(screen.getByText("Test Children")).toBeInTheDocument();
   });
 
   it("increments count when add button is clicked", async () => {
-    render(Counter, { props: defaultProps });
+    render(Demo, { props: defaultProps });
     const addButton = screen.getByRole("button", { name: "+" });
 
     await fireEvent.click(addButton);
@@ -50,7 +50,7 @@ describe("Counter.svelte", () => {
   });
 
   it("decrements count when subtract button is clicked", async () => {
-    render(Counter, { props: defaultProps });
+    render(Demo, { props: defaultProps });
     const subtractButton = screen.getByRole("button", { name: "-" });
 
     await fireEvent.click(subtractButton);
@@ -58,7 +58,7 @@ describe("Counter.svelte", () => {
   });
 
   it("calls the show message function", async () => {
-    render(Counter, { props: defaultProps });
+    render(Demo, { props: defaultProps });
     const sendButton = screen.getByRole("button", { name: "Send value" });
 
     await fireEvent.click(sendButton);
@@ -67,7 +67,7 @@ describe("Counter.svelte", () => {
   });
 
   it("updates the component when the nanostore value changes", async () => {
-    render(Counter, { props: defaultProps });
+    render(Demo, { props: defaultProps });
 
     expect(screen.getByText(/Mocked Nano Value/i)).toBeInTheDocument();
 

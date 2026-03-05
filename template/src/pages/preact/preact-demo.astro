@@ -1,5 +1,5 @@
 ---
-import CounterComponent from "../../framework/preact/Counter";
+import DemoComponent from "../../framework/preact/Demo";
 import styles from "../../styles/index.css?url";
 const initialCount = 5;
 const showMessage = "showMessage";
@@ -21,18 +21,21 @@ const showMessage = "showMessage";
         </script>
     </head>
     <body>
-        <div class="counter-title">HTML Content</div>
+        <div class="counter-title">Astro Page</div>
         <div class="card-grid">
             <div class="card">
-                Value sent back from component.
+                <strong>Counter component</strong>
                 <div class="card-content">
                     <div style="text-align: center; margin-top: 30px;">
-                        Counter value sent back: <br /><span id="counter"></span>
+                        Counter value:
+                        <div>
+                            <span id="counter"></span>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="card">
-                Update Nano Store value
+                <strong>Nano Stores</strong>
                 <div class="card-content">
                     <div style="text-align: center; margin-top: 30px;">
                         <input
@@ -49,15 +52,15 @@ const showMessage = "showMessage";
             </div>
         </div>
         <hr />
-        <CounterComponent
+        <DemoComponent
             client:only="preact"
             initialCount={initialCount}
             showMessage={showMessage}
         >
-            <div class="counter-title" slot="header">Preact Counter Component</div>
+            <div class="counter-title" slot="header">Preact Demo Component</div>
             <div style="text-align: center;">
-                <p><strong>This is content passed into the component.</strong></p>
+                <p><em>This is content passed into the component.</em></p>
             </div>
-        </CounterComponent>
+        </DemoComponent>
     </body>
 </html>
