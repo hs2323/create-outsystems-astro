@@ -18,6 +18,7 @@
     "output:bun": "astro build && bun run ./output.ts",
     "output:deno": "astro build && deno run -A ./output.ts",
     "postinstall": "patch-package",
+    "postinstall:deno": "patch-package && patch-package --patch-dir patches-deno",
     "preview": "astro preview",
     "test": "vitest",
     "test:e2e": "playwright test",
