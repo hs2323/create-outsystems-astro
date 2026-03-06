@@ -11,6 +11,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added template peer dependency @babel/core.
 - Added Preact integration.
 
+### Changed
+- Updated template dependency Playwright to 1.58.2.
+
 ### Fixed
 - Fixed Playwright checking for root to be ready.
 
