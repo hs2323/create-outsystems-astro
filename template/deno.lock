@@ -73,6 +73,7 @@
     "npm:js-beautify@^1.15.4": "1.15.4",
     "npm:nanostores@^1.1.1": "1.1.1",
     "npm:patch-package@^8.0.1": "8.0.1",
+    "npm:playwright@1.58.2": "1.58.2",
     "npm:preact@^10.28.4": "10.28.4",
     "npm:prettier-plugin-svelte@^3.5.0": "3.5.0_prettier@3.8.1_svelte@5.53.6__acorn@8.16.0",
     "npm:prettier@^3.8.1": "3.8.1",
@@ -8890,6 +8891,7 @@
       "npm:@hono/node-server@^1.19.10",
       "npm:hono@^4.12.4",
       "npm:immutable@^5.1.5",
+      "npm:playwright@1.58.2",
       "npm:svgo@4.0.1"
     ],
     "packageJson": {
