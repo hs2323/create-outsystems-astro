@@ -121,20 +121,23 @@
     "@hono/node-server": "^1.19.10",
     "hono": "^4.12.4",
     "immutable": "^5.1.5",
-    "svgo": "4.0.1"
+    "svgo": "^4.0.1",
+    "tar": "^7.5.10"
   },
   "resolutions": {
     "@hono/node-server": "^1.19.10",
     "hono": "^4.12.4",
     "immutable": "^5.1.5",
-        "svgo": "4.0.1"
+    "svgo": "^4.0.1",
+    "tar": "^7.5.10"
   },
   "pnpm": {
     "overrides": {
       "@hono/node-server": "^1.19.10",
       "hono": "^4.12.4",
       "immutable": "^5.1.5",
-      "svgo": "4.0.1"
+      "svgo": "^4.0.1",
+      "tar": "^7.5.10"
     }
   }
 }

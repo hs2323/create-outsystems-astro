@@ -18,11 +18,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed Playwright checking for root to be ready.
 
 ### Security
-- Updating docs sub-dependency svgo to 4.0.1 due to CVE-2026-29074.
-- Updating template sub-dependency svgo to 4.0.1 due to CVE-2026-29074.
-- Updating template sub-dependency immutable to 5.1.5 due to CVE-2026-29063.
-- Updating template sub-dependency hono 4.12.4 due to CVE-2026-29086, CVE-2026-29085 and CVE-2026-29045. 
-- Updating template sub-dependency @hono/node-server to 1.19.10 due to CVE-2026-29087.
+- Updated template sub-dependency tar to 7.5.10 due to CVE-2026-29786. 
+- Updated docs sub-dependency svgo to 4.0.1 due to CVE-2026-29074.
+- Updated template sub-dependency svgo to 4.0.1 due to CVE-2026-29074.
+- Updated template sub-dependency immutable to 5.1.5 due to CVE-2026-29063.
+- Updated template sub-dependency hono 4.12.4 due to CVE-2026-29086, CVE-2026-29085 and CVE-2026-29045. 
+- Updated template sub-dependency @hono/node-server to 1.19.10 due to CVE-2026-29087.
 
 ##  [0.6.0] - 2026-02-28
 
