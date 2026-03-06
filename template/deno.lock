@@ -30,7 +30,7 @@
     "npm:@nanostores/preact@1": "1.0.0_nanostores@1.1.1_preact@10.28.4",
     "npm:@nanostores/react@1": "1.0.0_nanostores@1.1.1_react@19.2.4",
     "npm:@nanostores/vue@^1.0.1": "1.0.1_nanostores@1.1.1_vue@3.5.29__typescript@5.9.3_typescript@5.9.3",
-    "npm:@playwright/test@1.57.0": "1.57.0",
+    "npm:@playwright/test@1.58.2": "1.58.2",
     "npm:@preact/preset-vite@^2.10.3": "2.10.3_@babel+core@7.29.0_vite@6.4.1__@types+node@25.3.2__picomatch@4.0.3_preact@10.28.4_@types+node@25.3.2",
     "npm:@sveltejs/vite-plugin-svelte@^6.2.4": "6.2.4_svelte@5.53.6__acorn@8.16.0_vite@6.4.1__@types+node@25.3.2__picomatch@4.0.3_@types+node@25.3.2",
     "npm:@testing-library/angular@^19.1.0": "19.1.0_@angular+common@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.2.0_@angular+core@21.2.0__@angular+compiler@21.2.0__rxjs@7.8.2_@angular+platform-browser@21.2.0__@angular+animations@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+common@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.2.0_@angular+router@21.2.0__@angular+common@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+platform-browser@21.2.0___@angular+animations@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+common@21.2.0____@angular+core@21.2.0_____@angular+compiler@21.2.0_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.0__rxjs@7.8.2__@angular+compiler@21.2.0__@angular+animations@21.2.0___@angular+core@21.2.0____@angular+compiler@21.2.0____rxjs@7.8.2___@angular+compiler@21.2.0___rxjs@7.8.2_@testing-library+dom@10.4.1_rxjs@7.8.2_@angular+compiler@21.2.0_@angular+animations@21.2.0__@angular+core@21.2.0___@angular+compiler@21.2.0___rxjs@7.8.2__@angular+compiler@21.2.0__rxjs@7.8.2",
@@ -73,6 +73,7 @@
     "npm:js-beautify@^1.15.4": "1.15.4",
     "npm:nanostores@^1.1.1": "1.1.1",
     "npm:patch-package@^8.0.1": "8.0.1",
+    "npm:playwright@1.58.2": "1.58.2",
     "npm:preact@^10.28.4": "10.28.4",
     "npm:prettier-plugin-svelte@^3.5.0": "3.5.0_prettier@3.8.1_svelte@5.53.6__acorn@8.16.0",
     "npm:prettier@^3.8.1": "3.8.1",
@@ -82,6 +83,7 @@
     "npm:svelte-eslint-parser@^1.5.1": "1.5.1_svelte@5.53.6__acorn@8.16.0_postcss@8.5.6",
     "npm:svelte@^5.53.6": "5.53.6_acorn@8.16.0",
     "npm:svgo@4.0.1": "4.0.1",
+    "npm:tar@^7.5.10": "7.5.10",
     "npm:ts-node@^10.9.2": "10.9.2_@types+node@25.3.2_typescript@5.9.3",
     "npm:tslib@^2.8.1": "2.8.1",
     "npm:typescript-eslint@^8.56.1": "8.56.1_eslint@9.39.3_typescript@5.9.3_@typescript-eslint+parser@8.56.1__eslint@9.39.3__typescript@5.9.3",
@@ -2129,8 +2131,8 @@
     "@pkgr/core@0.2.9": {
       "integrity": "sha512-QNqXyfVS2wm9hweSYD2O7F0G06uurj9kZ96TRQE5Y9hU7+tgdZwIkbAKc5Ocy1HxEY2kuDQa6cQ1WRs/O5LFKA=="
     },
-    "@playwright/test@1.57.0": {
-      "integrity": "sha512-6TyEnHgd6SArQO8UO2OMTxshln3QMWBtPGrOCgs3wVEmQmwyuNtB10IZMfmYDE0riwNR1cu4q+pPcxMVtaG3TA==",
+    "@playwright/test@1.58.2": {
+      "integrity": "sha512-akea+6bHYBBfA9uQqSYmlJXn61cTa+jbO87xVLCWbTqbWadRVmhxlXATaOjOgcBaWU4ePo0wB41KMFv3o35IXA==",
       "dependencies": [
         "playwright"
       ],
@@ -7020,12 +7022,12 @@
     "pkce-challenge@5.0.1": {
       "integrity": "sha512-wQ0b/W4Fr01qtpHlqSqspcj3EhBvimsdh0KlHhH8HRZnMsEa0ea2fTULOXOS9ccQr3om+GcGRk4e+isrZWV8qQ=="
     },
-    "playwright-core@1.57.0": {
-      "integrity": "sha512-agTcKlMw/mjBWOnD6kFZttAAGHgi/Nw0CZ2o6JqWSbMlI219lAFLZZCyqByTsvVAJq5XA5H8cA6PrvBRpBWEuQ==",
+    "playwright-core@1.58.2": {
+      "integrity": "sha512-yZkEtftgwS8CsfYo7nm0KE8jsvm6i/PTgVtB8DL726wNf6H2IMsDuxCpJj59KDaxCtSnrWan2AeDqM7JBaultg==",
       "bin": true
     },
-    "playwright@1.57.0": {
-      "integrity": "sha512-ilYQj1s8sr2ppEJ2YVadYBN0Mb3mdo9J0wQ+UuDhzYqURwSoW4n1Xs5vs7ORwgDGmyEh33tRMeS8KhdkMoLXQw==",
+    "playwright@1.58.2": {
+      "integrity": "sha512-vA30H8Nvkq/cPBnNw4Q8TWz1EJyqgpuinBcHET0YVJVFldr8JDNiU9LaWAE1KqSkRYazuaBhTpB5ZzShOezQ6A==",
       "dependencies": [
         "playwright-core"
       ],
@@ -8062,8 +8064,8 @@
         "strip-ansi@6.0.1"
       ]
     },
-    "tar@7.5.9": {
-      "integrity": "sha512-BTLcK0xsDh2+PUe9F6c2TlRp4zOOBMTkoQHQIWSIzI0R7KG46uEwq4OPk2W7bZcprBMsuaeFsqwYr7pjh6CuHg==",
+    "tar@7.5.10": {
+      "integrity": "sha512-8mOPs1//5q/rlkNSPcCegA6hiHJYDmSLEI8aMH/CdSQJNWztHC9WHNam5zdQlfpTwB9Xp7IBEsHfV5LKMJGVAw==",
       "dependencies": [
         "@isaacs/fs-minipass",
         "chownr",
@@ -8890,7 +8892,9 @@
       "npm:@hono/node-server@^1.19.10",
       "npm:hono@^4.12.4",
       "npm:immutable@^5.1.5",
-      "npm:svgo@4.0.1"
+      "npm:playwright@1.58.2",
+      "npm:svgo@4.0.1",
+      "npm:tar@^7.5.10"
     ],
     "packageJson": {
       "dependencies": [
@@ -8922,7 +8926,7 @@
         "npm:@nanostores/preact@1",
         "npm:@nanostores/react@1",
         "npm:@nanostores/vue@^1.0.1",
-        "npm:@playwright/test@1.57.0",
+        "npm:@playwright/test@1.58.2",
         "npm:@preact/preset-vite@^2.10.3",
         "npm:@sveltejs/vite-plugin-svelte@^6.2.4",
         "npm:@testing-library/angular@^19.1.0",
@@ -8984,7 +8988,8 @@
         "@hono/node-server": "^1.19.10",
         "hono": "^4.12.4",
         "immutable": "^5.1.5",
-        "svgo": "4.0.1"
+        "svgo": "^4.0.1",
+        "tar": "^7.5.10"
       }
     }
   }

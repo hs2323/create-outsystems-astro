@@ -177,7 +177,7 @@ All commands are run from the root of the project, from a terminal, based on you
 
 | Command                               | Action                                           |
 | :------------------------------------ | :----------------------------------------------- |
-| `deno install && deno run postinsall` | Installs dependencies                            |
+| `deno install && deno run postinsall:deno` | Installs dependencies                            |
 | `deno run dev`                        | Starts local dev server at `localhost:4321`      |
 | `deno run build`                      | Build distribution to `./dist/`                  |
 | `deno run output:deno`                | Build OutSystems production site to `./output/`  |

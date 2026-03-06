@@ -1,0 +1,26 @@
+diff --git a/node_modules/playwright/lib/transform/esmLoader.js b/node_modules/playwright/lib/transform/esmLoader.js
+index 46147e9..07e894a 100644
+--- a/node_modules/playwright/lib/transform/esmLoader.js
++++ b/node_modules/playwright/lib/transform/esmLoader.js
+@@ -27,7 +27,7 @@ var import_compilationCache = require("./compilationCache");
+ var import_portTransport = require("./portTransport");
+ var import_transform = require("./transform");
+ var import_util = require("../util");
+-const esmPreflightExtension = ".esm.preflight";
++const esmPreflightExtension = "";
+ async function resolve(originalSpecifier, context, defaultResolve) {
+   let specifier = originalSpecifier.replace(esmPreflightExtension, "");
+   if (context.parentURL && context.parentURL.startsWith("file://")) {
+diff --git a/node_modules/playwright/lib/transform/transform.js b/node_modules/playwright/lib/transform/transform.js
+index 715bcce..a15c762 100644
+--- a/node_modules/playwright/lib/transform/transform.js
++++ b/node_modules/playwright/lib/transform/transform.js
+@@ -219,7 +219,7 @@ async function requireOrImport(file) {
+   if (isModule) {
+     const fileName = import_url.default.pathToFileURL(file);
+     const esmImport = () => eval(`import(${JSON.stringify(fileName)})`);
+-    await eval(`import(${JSON.stringify(fileName + ".esm.preflight")})`).finally(nextTask);
++    await eval(`import(${JSON.stringify(fileName)})`).finally(nextTask);
+     return await esmImport().finally(nextTask);
+   }
+   const result = require(file);
