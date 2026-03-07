@@ -44,7 +44,6 @@
     "@astrojs/react": "^4.4.2",
     "@astrojs/svelte": "^7.2.5",
     "@astrojs/vue": "^5.1.4",
-    "@babel/core": "^7.29.0",
     "@nanostores/preact": "^1.0.0",
     "@nanostores/react": "^1.0.0",
     "@nanostores/vue": "^1.0.1",
@@ -64,6 +63,7 @@
     "@angular-devkit/schematics": "^21.2.0",
     "@angular/cli": "^21.2.0",
     "@angular/router": "^21.1.6",
+    "@babel/core": "^7.29.0",
     "@eslint/compat": "^2.0.2",
     "@eslint/eslintrc": "^3.3.4",
     "@eslint/js": "^9.39.3",
@@ -120,6 +120,7 @@
   },
   "overrides": {
     "@hono/node-server": "^1.19.10",
+    "express-rate-limit": "8.2.2",
     "hono": "^4.12.4",
     "immutable": "^5.1.5",
     "svgo": "^4.0.1",
@@ -127,6 +128,7 @@
   },
   "resolutions": {
     "@hono/node-server": "^1.19.10",
+    "express-rate-limit": "8.2.2",
     "hono": "^4.12.4",
     "immutable": "^5.1.5",
     "svgo": "^4.0.1",
@@ -135,6 +137,7 @@
   "pnpm": {
     "overrides": {
       "@hono/node-server": "^1.19.10",
+      "express-rate-limit": "8.2.2",
       "hono": "^4.12.4",
       "immutable": "^5.1.5",
       "svgo": "^4.0.1",

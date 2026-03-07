@@ -1,6 +1,7 @@
 {
   "imports": {
     "@hono/node-server": "npm:@hono/node-server@^1.19.10",
+    "express-rate-limit": "npm:express-rate-limit@8.2.2",
     "hono": "npm:hono@^4.12.4",
     "immutable": "npm:immutable@^5.1.5",
     "playwright": "npm:playwright@1.58.2",

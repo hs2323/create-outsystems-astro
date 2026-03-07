@@ -117,6 +117,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Changed recommendation of function handler from binding to the ```window``` instead of the ```document``` object.
 
 ### Security
+- Updated template sub-dependency express-rate-limit to 8.2.2 due to CVE-2026-30827.
 - Updated template dependency @angular/router to 21.1.6 due to CVE-2026-27970.
 - Updated template dependency @angular/cli to 21.1.5 due to CVE-2026-27970.
 - Updated template dependency @angular-devkit/architect to 0.2101.5 due to CVE-2026-27970.

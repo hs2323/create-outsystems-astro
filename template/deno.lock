@@ -65,6 +65,7 @@
     "npm:eslint-plugin-testing-library@^7.16.0": "7.16.0_eslint@9.39.3_typescript@5.9.3",
     "npm:eslint-plugin-vue@^10.8.0": "10.8.0_eslint@9.39.3_vue-eslint-parser@10.4.0__eslint@9.39.3",
     "npm:eslint@^9.39.3": "9.39.3",
+    "npm:express-rate-limit@8.2.2": "8.2.2_express@5.2.1",
     "npm:globals@^17.3.0": "17.3.0",
     "npm:happy-dom@^20.7.0": "20.7.0",
     "npm:hono@^4.12.4": "4.12.5",
@@ -4804,8 +4805,8 @@
     "exponential-backoff@3.1.3": {
       "integrity": "sha512-ZgEeZXj30q+I0EN+CbSSpIyPaJ5HVQD18Z1m+u1FXbAeT94mr1zw50q4q6jiiC447Nl/YTcIYSAftiGqetwXCA=="
     },
-    "express-rate-limit@8.2.1_express@5.2.1": {
-      "integrity": "sha512-PCZEIEIxqwhzw4KF0n7QF4QqruVTcF73O5kFKUnGOyjbCCgizBBiFaYpd/fnBLUMPw/BWw9OsiN7GgrNYr7j6g==",
+    "express-rate-limit@8.2.2_express@5.2.1": {
+      "integrity": "sha512-Ybv7bqtOgA914MLwaHWVFXMpMYeR1MQu/D+z2MaLYteqBsTIp9sY3AU7mGNLMJv8eLg8uQMpE20I+L2Lv49nSg==",
       "dependencies": [
         "express",
         "ip-address"
@@ -5434,8 +5435,8 @@
         "side-channel"
       ]
     },
-    "ip-address@10.0.1": {
-      "integrity": "sha512-NWv9YLW4PoW2B7xtzaS3NCot75m6nK7Icdv0o3lfMceJVRfSoQwqD4wEH5rLwoKJwUiZ/rfpiVBhnaF0FK4HoA=="
+    "ip-address@10.1.0": {
+      "integrity": "sha512-XXADHxXmvT9+CRxhXg56LJovE+bmWnEWB78LB83VZTprKTmaC5QfruXocxzTZ2Kl0DNwKuBdlIhjL8LeY8Sf8Q=="
     },
     "ipaddr.js@1.9.1": {
       "integrity": "sha512-0KI/607xoxSToH7GjN1FfSbLoU0+btTicjsQSWQlh/hZykN8KpmMf7uYwPW3R+akZ6R/w18ZlXSHBYXiYUPO3g=="
@@ -8890,6 +8891,7 @@
   "workspace": {
     "dependencies": [
       "npm:@hono/node-server@^1.19.10",
+      "npm:express-rate-limit@8.2.2",
       "npm:hono@^4.12.4",
       "npm:immutable@^5.1.5",
       "npm:playwright@1.58.2",
@@ -8986,6 +8988,7 @@
       ],
       "overrides": {
         "@hono/node-server": "^1.19.10",
+        "express-rate-limit": "8.2.2",
         "hono": "^4.12.4",
         "immutable": "^5.1.5",
         "svgo": "^4.0.1",
