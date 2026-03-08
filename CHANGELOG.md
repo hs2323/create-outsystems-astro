@@ -12,6 +12,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added Preact integration.
 
 ### Changed
+- Updated docs dependency starlight-versions to 0.7.1.
+- Updated docs dependency globals to 17.4.0.
+- Updated docs dependency eslint to 9.39.4.
+- Updated docs dependency @eslint/compat to 2.0.3.
+- Updated docs dependency @astrojs/starlight to 0.37.7.
 - Updated template dependency svelte-eslint-parser to 1.6.0.
 - Updated template dependency svelte to 5.53.7.
 - Updated template dependency prettier-plugin-svelte to 3.5.1.
@@ -45,9 +50,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Fixed Playwright checking for root to be ready.
-
-### Security
-- Updated docs sub-dependency svgo to 4.0.1 due to CVE-2026-29074.
 
 ##  [0.6.0] - 2026-02-28
 
