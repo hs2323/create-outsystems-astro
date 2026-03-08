@@ -8,6 +8,7 @@
   - Angular - Documentation available at https://analogjs.org/docs/packages/astro-angular/overview
   - Preact - Documentation available at https://docs.astro.build/en/guides/integrations-guide/preact/
   - React - Documentation available at https://docs.astro.build/en/guides/integrations-guide/react/
+  - Svelte - Documentation availabe at https://docs.astro.build/en/guides/integrations-guide/svelte/
   - Vue - Documentation available at https://docs.astro.build/en/guides/integrations-guide/vue/
 - Prefer to use TypeScript when possible.
 
