@@ -12,7 +12,7 @@ export default defineConfig({
       favicon: "/favicon.ico",
       plugins: [
         starlightVersions({
-          versions: [{ slug: "0.6" }, { slug: "0.5" }, { slug: "0.4" }],
+          versions: [{ slug: "0.7" }, { slug: "0.6" }, { slug: "0.5" }],
         }),
       ],
       sidebar: [
