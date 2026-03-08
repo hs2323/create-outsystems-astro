@@ -12,18 +12,44 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added Preact integration.
 
 ### Changed
+- Updated docs dependency starlight-versions to 0.7.1.
+- Updated docs dependency globals to 17.4.0.
+- Updated docs dependency eslint to 9.39.4.
+- Updated docs dependency @eslint/compat to 2.0.3.
+- Updated docs dependency @astrojs/starlight to 0.37.7.
+- Updated template dependency svelte-eslint-parser to 1.6.0.
+- Updated template dependency svelte to 5.53.7.
+- Updated template dependency prettier-plugin-svelte to 3.5.1.
+- Updated template dependency happy-dom to 20.8.3.
+- Updated template dependency globals to 17.4.0.
+- Updated template dependency eslint-plugin-playwright to 2.9.0.
+- Updated template dependency eslint to 9.39.4.
+- Updated template dependency angular-eslint to 21.3.0.
+- Updated template dependency @types/node to 25.3.5.
+- Updated template dependency @nanostores/vue to 1.1.0.
+- Updated template dependency @eslint/js to 9.39.4.
+- Updated template dependency @eslint/eslintrc to 3.3.5.
+- Updated template dependency @eslint/compat to 2.0.3.
+- Updated template dependency @angular/router to 21.2.1.
+- Updated template dependency @angular/platform-server to 21.2.1.
+- Updated template dependency @angular/platform-browser to 21.2.1.
+- Updated template dependency @angular/language-service to 21.2.1.
+- Updated template dependency @angular/core to 21.2.1.
+- Updated template dependency @angular/compiler-cli to 21.2.1.
+- Updated template dependency @angular/compiler to 21.2.1.
+- Updated template dependency @angular/common to 21.2.1.
+- Updated template dependency @angular/cli to 21.2.1.
+- Updated template dependency @angular/build to 21.2.1.
+- Updated template dependency @angular/animations to 21.2.1.
+- Updated template dependency @angular-devkit/schematics to 21.2.1.
+- Updated template dependency @angular-devkit/architect to 0.2102.1.
+- Updated template dependency @analogjs/vitest-angular to 2.3.1.
+- Updated template dependency @analogjs/vite-plugin-angular to 2.3.1.
+- Updated template dependency @analogjs/astro-angular to 2.3.1.
 - Updated template dependency Playwright to 1.58.2.
 
 ### Fixed
 - Fixed Playwright checking for root to be ready.
-
-### Security
-- Updated template sub-dependency tar to 7.5.10 due to CVE-2026-29786. 
-- Updated docs sub-dependency svgo to 4.0.1 due to CVE-2026-29074.
-- Updated template sub-dependency svgo to 4.0.1 due to CVE-2026-29074.
-- Updated template sub-dependency immutable to 5.1.5 due to CVE-2026-29063.
-- Updated template sub-dependency hono 4.12.4 due to CVE-2026-29086, CVE-2026-29085 and CVE-2026-29045. 
-- Updated template sub-dependency @hono/node-server to 1.19.10 due to CVE-2026-29087.
 
 ##  [0.6.0] - 2026-02-28
 
