@@ -95,14 +95,6 @@
       },
     },
   },
-  "overrides": {
-    "@hono/node-server": "^1.19.10",
-    "express-rate-limit": "8.2.2",
-    "hono": "^4.12.4",
-    "immutable": "^5.1.5",
-    "svgo": "^4.0.1",
-    "tar": "^7.5.10",
-  },
   "packages": {
     "@adobe/css-tools": ["@adobe/css-tools@4.4.4", "", {}, "sha512-Elp+iwUx5rN5+Y8xLt5/GRoG20WGoDCQ/1Fb+1LiGtvwbDavuSk0jhD/eZdckHAuzcDzccnkv+rEjyWfRx18gg=="],
 

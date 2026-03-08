@@ -26,7 +26,6 @@
     "npm:@eslint/eslintrc@^3.3.5": "3.3.5",
     "npm:@eslint/js@^9.39.4": "9.39.4",
     "npm:@eslint/markdown@^7.5.1": "7.5.1",
-    "npm:@hono/node-server@^1.19.10": "1.19.10_hono@4.12.5",
     "npm:@nanostores/preact@1": "1.0.0_nanostores@1.1.1_preact@10.28.4",
     "npm:@nanostores/react@1": "1.0.0_nanostores@1.1.1_react@19.2.4",
     "npm:@nanostores/vue@^1.1.0": "1.1.0_nanostores@1.1.1_vue@3.5.29__typescript@5.9.3_typescript@5.9.3",
@@ -65,11 +64,8 @@
     "npm:eslint-plugin-testing-library@^7.16.0": "7.16.0_eslint@9.39.4_typescript@5.9.3",
     "npm:eslint-plugin-vue@^10.8.0": "10.8.0_eslint@9.39.4_vue-eslint-parser@10.4.0__eslint@9.39.4",
     "npm:eslint@^9.39.4": "9.39.4",
-    "npm:express-rate-limit@8.2.2": "8.2.2_express@5.2.1",
     "npm:globals@^17.4.0": "17.4.0",
     "npm:happy-dom@^20.8.3": "20.8.3",
-    "npm:hono@^4.12.4": "4.12.5",
-    "npm:immutable@^5.1.5": "5.1.5",
     "npm:improved-yarn-audit@^3.0.4": "3.0.4",
     "npm:js-beautify@^1.15.4": "1.15.4",
     "npm:nanostores@^1.1.1": "1.1.1",
@@ -83,8 +79,6 @@
     "npm:rxjs@^7.8.2": "7.8.2",
     "npm:svelte-eslint-parser@^1.6.0": "1.6.0_svelte@5.53.7__acorn@8.16.0_postcss@8.5.6",
     "npm:svelte@^5.53.7": "5.53.7_acorn@8.16.0",
-    "npm:svgo@4.0.1": "4.0.1",
-    "npm:tar@^7.5.10": "7.5.10",
     "npm:ts-node@^10.9.2": "10.9.2_@types+node@25.3.5_typescript@5.9.3",
     "npm:tslib@^2.8.1": "2.8.1",
     "npm:typescript-eslint@^8.56.1": "8.56.1_eslint@9.39.4_typescript@5.9.3_@typescript-eslint+parser@8.56.1__eslint@9.39.4__typescript@5.9.3",
@@ -8886,13 +8880,7 @@
   },
   "workspace": {
     "dependencies": [
-      "npm:@hono/node-server@^1.19.10",
-      "npm:express-rate-limit@8.2.2",
-      "npm:hono@^4.12.4",
-      "npm:immutable@^5.1.5",
-      "npm:playwright@1.58.2",
-      "npm:svgo@4.0.1",
-      "npm:tar@^7.5.10"
+      "npm:playwright@1.58.2"
     ],
     "packageJson": {
       "dependencies": [
@@ -8981,15 +8969,7 @@
         "npm:vitest@^4.0.18",
         "npm:vue-eslint-parser@^10.4.0",
         "npm:vue@^3.5.29"
-      ],
-      "overrides": {
-        "@hono/node-server": "^1.19.10",
-        "express-rate-limit": "8.2.2",
-        "hono": "^4.12.4",
-        "immutable": "^5.1.5",
-        "svgo": "^4.0.1",
-        "tar": "^7.5.10"
-      }
+      ]
     }
   }
 }

@@ -1,12 +1,6 @@
 {
   "imports": {
-    "@hono/node-server": "npm:@hono/node-server@^1.19.10",
-    "express-rate-limit": "npm:express-rate-limit@8.2.2",
-    "hono": "npm:hono@^4.12.4",
-    "immutable": "npm:immutable@^5.1.5",
-    "playwright": "npm:playwright@1.58.2",
-    "svgo": "npm:svgo@4.0.1",
-    "tar": "npm:tar@^7.5.10"
+    "playwright": "npm:playwright@1.58.2"
   },
   "allowScripts": [
     "npm:@parcel/watcher@2.5.4",
