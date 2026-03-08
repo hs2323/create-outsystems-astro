@@ -49,6 +49,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated template dependency Playwright to 1.58.2.
 
 ### Fixed
+- Fixed generator renaming .gitignore to .npmignore in generated template. 
 - Fixed Playwright checking for root to be ready.
 
 ##  [0.6.0] - 2026-02-28
