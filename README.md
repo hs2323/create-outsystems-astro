@@ -57,28 +57,65 @@ This will create the generated files as well as an example component.
 /
 ├── public/
 ├── src/
-│   └── components/
-│       └── Counter.tsx
+│   └── framework/
+│       └── [NAME]/
+│           └── components/
+│               └── Counter.tsx
+│   └── lib/
+│       └── library.ts
 │   └── images/
 │       └── image.png
 │   └── pages/
-│       └── counter.astro
+│       └── [NAME]/
+│           └── page.astro
 │   └── styles/
 │       └── index.css
+│   └── stores/
+│       └── store.ts
+├── test/
+│   └── e2e
+│       └── [NAME]/
+│           └── counter.spec.ts
+│   └── integration
+│       └── [NAME]/
+│           └── counter.test.tsx
+│           └── conter.test.ts
+│   └── unit
+        └── counter.test.ts
 └── package.json
 ```
 
-### Pages
-Each page inside of the pages file should represent an Island that will be imported into OutSystems. This is for setup/development and the actual page will not be used for the final output.
+### Src
 
-### Components
+#### Framework Components
 The location of the component code. Each framework has its own separate folder.
 
-### Images
+#### Lib
+Cane be use for shared/library logic that is not part of the visual presentation of the component.
+
+#### Images
 Any image assets.
 
-### Styles
+#### Pages
+Each page inside of the pages file should represent an Island that will be imported into OutSystems. This is for setup/development and the actual page will not be used for the final output. Pages may be split by framework if using multiple frameworks.
+
+#### Styles
 Stylesheets that may apply to the component.
+
+#### Stores
+Nano Stores for use in components.
+
+### Test
+
+#### E2E
+End-to-end tests using Playwright.
+
+#### Integration
+Integration tests that test the whole component structure. Written using Testing Library specific providers.
+
+#### Unit
+Unit tests for functions or shared code/libraries.
+
 
 ## 🧞 Commands
 
@@ -150,7 +187,7 @@ All commands are run from the root of the project, from a terminal:
 | `deno run audit:deno`      | Run audit of modules                             |
 
 ## Getting Started
-Delete the demo application under the ```src``` folder and being to build your own application. 
+Delete the demo application under the ```src``` folder and being to build your own application. It is recommended to keep the folder structure. The frameworks/[NAME]/components should be kept for asset building.
 
 ## Converting to OutSystems
 
