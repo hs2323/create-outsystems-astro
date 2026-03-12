@@ -119,15 +119,18 @@
     "vue-eslint-parser": "^10.4.0"
   },
   "overrides": {
+    "devalue": "^5.6.4",
     "hono": "^4.12.7",
     "tar": "^7.5.11"
   },
   "resolutions": {
+    "devalue": "^5.6.4",
     "hono": "^4.12.7",
     "tar": "^7.5.11"
   },
   "pnpm": {
     "overrides": {
+      "devalue": "^5.6.4",
       "hono": "^4.12.7",
       "tar": "^7.5.11"
     }
