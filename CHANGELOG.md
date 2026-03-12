@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Security
+- Updated docs sub-dependency devalue to 5.6.4 due to CVE-2026-30226.
+- Updated template sub-dependency devalue to 5.6.4 due to CVE-2026-30226.
 - Updated template sub-dependency tar to 7.5.11 due to CVE-2026-31802.
 - Updated template sub-dependency hono to 4.12.7 due to GHSA-v8w9-8mx6-g223.
 

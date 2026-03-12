@@ -49,6 +49,7 @@
     "npm:angular-eslint@^21.3.0": "21.3.0_@angular+cli@21.2.1__@types+node@25.3.5__@inquirer+prompts@7.10.1___@types+node@25.3.5__listr2@9.0.5__zod@4.3.6_eslint@9.39.4_typescript@5.9.3_typescript-eslint@8.56.1__eslint@9.39.4__typescript@5.9.3__@typescript-eslint+parser@8.56.1___eslint@9.39.4___typescript@5.9.3_@typescript-eslint+utils@8.56.1__eslint@9.39.4__typescript@5.9.3_@angular-eslint+template-parser@21.3.0__eslint@9.39.4__typescript@5.9.3_@typescript-eslint+types@8.56.1_@types+node@25.3.5",
     "npm:astro@^5.18.0": "5.18.0_typescript@5.9.3_@types+node@25.3.5_vite@6.4.1__@types+node@25.3.5__picomatch@4.0.3_zod@3.25.76",
     "npm:better-npm-audit@^3.11.0": "3.11.0",
+    "npm:devalue@^5.6.4": "5.6.4",
     "npm:dotenv@^17.3.1": "17.3.1",
     "npm:eslint-config-preact@2": "2.0.0_eslint@9.39.4_@babel+core@7.29.0",
     "npm:eslint-config-prettier@^10.1.8": "10.1.8_eslint@9.39.4",
@@ -4095,8 +4096,8 @@
         "base-64"
       ]
     },
-    "devalue@5.6.3": {
-      "integrity": "sha512-nc7XjUU/2Lb+SvEFVGcWLiKkzfw8+qHI7zn8WYXKkLMgfGSHbgCEaR6bJpev8Cm6Rmrb19Gfd/tZvGqx9is3wg=="
+    "devalue@5.6.4": {
+      "integrity": "sha512-Gp6rDldRsFh/7XuouDbxMH3Mx8GMCcgzIb1pDTvNyn8pZGQ22u+Wa+lGV9dQCltFQ7uVw0MhRyb8XDskNFOReA=="
     },
     "devlop@1.1.0": {
       "integrity": "sha512-RWmIqhcFf1lRYBvNmr7qTNuyCt/7/ns2jbpp1+PalgE/rDQcBT0fioSMUpJ93irlUhC5hrg4cYqe6U+0ImW0rA==",
@@ -8882,6 +8883,7 @@
   },
   "workspace": {
     "dependencies": [
+      "npm:devalue@^5.6.4",
       "npm:hono@^4.12.7",
       "npm:playwright@1.58.2",
       "npm:tar@^7.5.11"
@@ -8975,6 +8977,7 @@
         "npm:vue@^3.5.29"
       ],
       "overrides": {
+        "devalue": "^5.6.4",
         "hono": "^4.12.7",
         "tar": "^7.5.11"
       }
