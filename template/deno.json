@@ -1,6 +1,8 @@
 {
   "imports": {
-    "playwright": "npm:playwright@1.58.2"
+    "hono": "npm:hono@^4.12.7",
+    "playwright": "npm:playwright@1.58.2",
+    "tar": "npm:tar@^7.5.11"
   },
   "allowScripts": [
     "npm:@parcel/watcher@2.5.4",

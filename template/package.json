@@ -117,5 +117,19 @@
     "vite": "^6.4.1",
     "vitest": "^4.0.18",
     "vue-eslint-parser": "^10.4.0"
+  },
+  "overrides": {
+    "hono": "^4.12.7",
+    "tar": "^7.5.11"
+  },
+  "resolutions": {
+    "hono": "^4.12.7",
+    "tar": "^7.5.11"
+  },
+  "pnpm": {
+    "overrides": {
+      "hono": "^4.12.7",
+      "tar": "^7.5.11"
+    }
   }
 }
