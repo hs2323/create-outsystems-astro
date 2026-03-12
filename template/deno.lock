@@ -66,6 +66,7 @@
     "npm:eslint@^9.39.4": "9.39.4",
     "npm:globals@^17.4.0": "17.4.0",
     "npm:happy-dom@^20.8.3": "20.8.3",
+    "npm:hono@^4.12.7": "4.12.7",
     "npm:improved-yarn-audit@^3.0.4": "3.0.4",
     "npm:js-beautify@^1.15.4": "1.15.4",
     "npm:nanostores@^1.1.1": "1.1.1",
@@ -79,6 +80,7 @@
     "npm:rxjs@^7.8.2": "7.8.2",
     "npm:svelte-eslint-parser@^1.6.0": "1.6.0_svelte@5.53.7__acorn@8.16.0_postcss@8.5.6",
     "npm:svelte@^5.53.7": "5.53.7_acorn@8.16.0",
+    "npm:tar@^7.5.11": "7.5.11",
     "npm:ts-node@^10.9.2": "10.9.2_@types+node@25.3.5_typescript@5.9.3",
     "npm:tslib@^2.8.1": "2.8.1",
     "npm:typescript-eslint@^8.56.1": "8.56.1_eslint@9.39.4_typescript@5.9.3_@typescript-eslint+parser@8.56.1__eslint@9.39.4__typescript@5.9.3",
@@ -1275,7 +1277,7 @@
     "@harperfast/extended-iterable@1.0.3": {
       "integrity": "sha512-sSAYhQca3rDWtQUHSAPeO7axFIUJOI6hn1gjRC5APVE1a90tuyT8f5WIgRsFhhWA7htNkju2veB9eWL6YHi/Lw=="
     },
-    "@hono/node-server@1.19.10_hono@4.12.5": {
+    "@hono/node-server@1.19.10_hono@4.12.7": {
       "integrity": "sha512-hZ7nOssGqRgyV3FVVQdfi+U4q02uB23bpnYpdvNXkYTRRyWx84b7yf1ans+dnJ/7h41sGL3CeQTfO+ZGxuO+Iw==",
       "dependencies": [
         "hono"
@@ -1739,7 +1741,7 @@
     "@mdn/browser-compat-data@6.1.5": {
       "integrity": "sha512-PzdZZzRhcXvKB0begee28n5lvwAcinGKYuLZOVxHAZm+n7y01ddEGfdS1ZXRuVcV+ndG6mSEAE8vgudom5UjYg=="
     },
-    "@modelcontextprotocol/sdk@1.26.0_zod@4.3.6_hono@4.12.5_ajv@8.18.0_express@5.2.1": {
+    "@modelcontextprotocol/sdk@1.26.0_zod@4.3.6_hono@4.12.7_ajv@8.18.0_express@5.2.1": {
       "integrity": "sha512-Y5RmPncpiDtTXDbLKswIJzTqu2hyBKxTNsgKqKclDbhIgg1wgtf1fRuvxgTnRfcnxtvvgbIEcqUOzZrJ6iSReg==",
       "dependencies": [
         "@hono/node-server",
@@ -5314,8 +5316,8 @@
         "hermes-estree"
       ]
     },
-    "hono@4.12.5": {
-      "integrity": "sha512-3qq+FUBtlTHhtYxbxheZgY8NIFnkkC/MR8u5TTsr7YZ3wixryQ3cCwn3iZbg8p8B88iDBBAYSfZDS75t8MN7Vg=="
+    "hono@4.12.7": {
+      "integrity": "sha512-jq9l1DM0zVIvsm3lv9Nw9nlJnMNPOcAtsbsgiUhWcFzPE99Gvo6yRTlszSLLYacMeQ6quHD6hMfId8crVHvexw=="
     },
     "hookable@5.5.3": {
       "integrity": "sha512-Yc+BQe8SvoXH1643Qez1zqLRmbA5rCL+sSmk6TVos0LWVfNIB7PGncdlId77WzLGSIB5KaWgTaNTs2lNVEI6VQ=="
@@ -8055,8 +8057,8 @@
         "strip-ansi@6.0.1"
       ]
     },
-    "tar@7.5.10": {
-      "integrity": "sha512-8mOPs1//5q/rlkNSPcCegA6hiHJYDmSLEI8aMH/CdSQJNWztHC9WHNam5zdQlfpTwB9Xp7IBEsHfV5LKMJGVAw==",
+    "tar@7.5.11": {
+      "integrity": "sha512-ChjMH33/KetonMTAtpYdgUFr0tbz69Fp2v7zWxQfYZX4g5ZN2nOBXm1R2xyA+lMIKrLKIoKAwFj93jE/avX9cQ==",
       "dependencies": [
         "@isaacs/fs-minipass",
         "chownr",
@@ -8880,7 +8882,9 @@
   },
   "workspace": {
     "dependencies": [
-      "npm:playwright@1.58.2"
+      "npm:hono@^4.12.7",
+      "npm:playwright@1.58.2",
+      "npm:tar@^7.5.11"
     ],
     "packageJson": {
       "dependencies": [
@@ -8969,7 +8973,11 @@
         "npm:vitest@^4.0.18",
         "npm:vue-eslint-parser@^10.4.0",
         "npm:vue@^3.5.29"
-      ]
+      ],
+      "overrides": {
+        "hono": "^4.12.7",
+        "tar": "^7.5.11"
+      }
     }
   }
 }

@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Security
+- Updated template sub-dependency tar to 7.5.11 due to CVE-2026-31802.
+- Updated template sub-dependency hono to 4.12.7 due to GHSA-v8w9-8mx6-g223.
+
 ## [0.7.0] - 2026-03-08
 
 ### Added
