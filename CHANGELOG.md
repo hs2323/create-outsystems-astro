@@ -8,6 +8,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Security
+- Updated docs sub-dependency flatted to 3.4.1 due to CVE-2026-32141.
+- Updated template sub-dependency undici to 7.24.3 due to CVE-2026-1525, CVE-2026-1526, CVE-2026-1527, CVE-2026-1528, CVE-2026-2229 and CVE-2026-2581.
+- Updated template sub-dependency flatted to 3.4.1 due to CVE-2026-32141.
+- Updated template dependency @angular/router to 21.2.4 due to CVE-2026-32635.
+- Updated template dependency @angular/platform-server to 21.2.4 due to CVE-2026-32635.
+- Updated template dependency @angular/platform-browser to 21.2.4 due to CVE-2026-32635.
+- Updated template dependency @angular/language-service to 21.2.4 due to CVE-2026-32635.
+- Updated template dependency @angular/core to 21.2.4 due to CVE-2026-32635.
+- Updated template dependency @angular/compiler-cli to 21.2.4 due to CVE-2026-32635.
+- Updated template dependency @angular/compiler to 21.2.4 due to CVE-2026-32635.
+- Updated template dependency @angular/common to 21.2.4 due to CVE-2026-32635.
+- Updated template dependency @angular/cli to 21.2.2 due to CVE-2026-32635.
+- Updated template dependency @angular/build to 21.2.2 due to CVE-2026-32635.
+- Updated template dependency @angular/animations to 21.2.4 due to CVE-2026-32635.
+- Updated template dependency @angular-devkit/schematics to 21.2.2 due to CVE-2026-32635.
+- Updated template dependency @angular-devkit/architect to 0.2102.2 due to CVE-2026-32635.
 - Updated docs sub-dependency devalue to 5.6.4 due to CVE-2026-30226.
 - Updated template sub-dependency devalue to 5.6.4 due to CVE-2026-30226.
 - Updated template sub-dependency tar to 7.5.11 due to CVE-2026-31802.
