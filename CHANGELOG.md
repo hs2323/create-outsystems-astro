@@ -23,6 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated template dependency @angular-devkit/architect to 0.2102.2.
 
 ### Security
+- Updated docs sub-dependency flatted to 3.4.1 due to CVE-2026-32141.
 - Updated template sub-dependency undici to 7.24.3 due to CVE-2026-1525, CVE-2026-1526, CVE-2026-1527, CVE-2026-1528, CVE-2026-2229 and CVE-2026-2581.
 - Updated template sub-dependency flatted to 3.4.1 due to CVE-2026-32141.
 - Updated docs sub-dependency devalue to 5.6.4 due to CVE-2026-30226.
