@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- Updated template dependency @angular/router to 21.2.4.
+- Updated template dependency @angular/platform-server to 21.2.4.
+- Updated template dependency @angular/platform-browser to 21.2.4.
+- Updated template dependency @angular/language-service to 21.2.4.
+- Updated template dependency @angular/core to 21.2.4.
+- Updated template dependency @angular/compiler-cli to 21.2.4.
+- Updated template dependency @angular/compiler to 21.2.4.
+- Updated template dependency @angular/common to 21.2.4.
+- Updated template dependency @angular/cli to 21.2.2.
+- Updated template dependency @angular/build to 21.2.2.
+- Updated template dependency @angular/animations to 21.2.4.
+- Updated template dependency @angular-devkit/schematics to 21.2.2.
+- Updated template dependency @angular-devkit/architect to 0.2102.2.
+
 ### Security
 - Updated docs sub-dependency devalue to 5.6.4 due to CVE-2026-30226.
 - Updated template sub-dependency devalue to 5.6.4 due to CVE-2026-30226.
