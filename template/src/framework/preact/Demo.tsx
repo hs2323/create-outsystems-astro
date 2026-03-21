@@ -30,7 +30,7 @@ export default function Demo({
   const showParentMessage = () => {
     if (typeof window !== "undefined") {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (window as any)[showMessage]?.(count);
+      (window as any)[showMessage](count);
     }
   };
 
