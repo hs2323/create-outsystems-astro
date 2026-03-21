@@ -2,6 +2,7 @@
   "imports": {
     "devalue": "npm:devalue@^5.6.4",
     "flatted": "npm:flatted@^3.4.2",
+    "h3": "npm:h3@^1.15.6",
     "hono": "npm:hono@^4.12.7",
     "playwright": "npm:playwright@1.58.2",
     "tar": "npm:tar@^7.5.11",
