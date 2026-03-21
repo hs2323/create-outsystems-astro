@@ -95,6 +95,9 @@ For Angular, keep the framework/angular structure in place or update the `astro.
 
 Each page inside of the pages file should represent an Island that will be imported into OutSystems. The example has them separated by framework name, but you can name them anything you would like. The output script will flatten the index.html to the root of the `output` folder with the name of the folder.
 
+#### Client loading
+For any of the official frameworks (react, preact, solid-js, vue and svelte) you should pass client:only="[FRAMEWORK]". See [Astro documentation](https://docs.astro.build/en/reference/directives-reference/) for client:only. For other fameworks, such as Angular, it should pass client:load or any other non specific famework.
+
 ### Framework
 
 The location of the component code.
@@ -350,6 +353,8 @@ You cannot send Union types (such as either an array or object) due to OutSystem
   ```
 
 This will create a set of files that will then need to be converted to OutSystems components.
+
+If using a directive for the component of anything other than ```client:only```, you may need to delete the interior contents of the rendered island (since it will have done some static generation).
 
 ## Testing
 
