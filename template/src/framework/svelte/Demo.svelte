@@ -2,6 +2,7 @@
   import AstroLogo from "../../images/astro.png?url";
   import OutSystemsLogo from "../../images/outsystems.png?url";
   import { Operation, setCounterCount } from "../../lib/setCounterCount";
+  import { setupStore } from "../../stores/demo";
 
   export let initialCount: number;
   export let showMessage: string;
@@ -21,8 +22,7 @@
     (window as any)[showMessage](count);
   };
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const nanoStoreValue = (window as any).Stores["svelteStore"];
+  const nanoStoreValue = setupStore("svelteStore");
 </script>
 
 <slot name="header" />

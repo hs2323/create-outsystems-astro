@@ -5,6 +5,7 @@ import { useStore } from "@nanostores/vue";
 import AstroLogo from "../../images/astro.png?url";
 import OutSystemsLogo from "../../images/outsystems.png?url";
 import { Operation, setCounterCount } from "../../lib/setCounterCount";
+import { setupStore } from "../../stores/demo";
 
 const props = defineProps<{
   initialCount: number;
@@ -26,8 +27,8 @@ const showParentMessage = () => {
   (window as any)[props.showMessage](count.value);
 };
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const nanoStoreValue = useStore((window as any).Stores["vueStore"]);
+const store = setupStore("vueStore");
+const nanoStoreValue = useStore(store);
 </script>
 
 <template>

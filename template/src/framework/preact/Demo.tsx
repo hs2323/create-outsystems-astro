@@ -6,6 +6,7 @@ import { useState } from "preact/hooks";
 import AstroLogo from "../../images/astro.png?url";
 import OutSystemsLogo from "../../images/outsystems.png?url";
 import { Operation, setCounterCount } from "../../lib/setCounterCount";
+import { setupStore } from "../../stores/demo";
 
 interface DemoProps {
   children: ComponentChildren;
@@ -34,8 +35,9 @@ export default function Demo({
     }
   };
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const nanoStoreValue = useStore((window as any).Stores?.["preactStore"]);
+  const store = setupStore("preactStore");
+
+  const nanoStoreValue = useStore(store);
 
   return (
     <>
