@@ -5,6 +5,7 @@ import { useState } from "react";
 import AstroLogo from "../../images/astro.png?url";
 import OutSystemsLogo from "../../images/outsystems.png?url";
 import { Operation, setCounterCount } from "../../lib/setCounterCount";
+import { setupStore } from "../../stores/demo";
 
 interface DemoProps {
   children: React.ReactNode;
@@ -29,8 +30,9 @@ export default function Demo({
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const showParentMessage = () => (window as any)[showMessage](count);
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const nanoStoreValue = useStore((window as any).Stores["reactStore"]);
+  const store = setupStore("reactStore");
+
+  const nanoStoreValue = useStore(store);
 
   return (
     <>

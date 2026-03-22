@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- Changed build output to run as NODE_ENV=production.
+
 ### Security
 - Updated docs sub-dependency h3 to 1.15.9 due to CVE-2026-33128.
 - Updated docs sub-dependency flatted to 3.4.2 due to CVE-2026-33228.
