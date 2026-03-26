@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Changed build output to run as NODE_ENV=production.
 
 ### Security
+- Updated template dependency happy-dom to 20.8.8 due to CVE-2026-33943.
 - Updated template sub-dependency picomatch to 2.3.2 and 4.0.4 due to CVE-2026-33672.
 - Updated template sub-dependency brace-expansion to 5.0.5 due to CVE-2026-33750.
 - Updated template dependency astro to 5.18.1 due to CVE-2026-33769.
