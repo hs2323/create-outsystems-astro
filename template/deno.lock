@@ -85,6 +85,7 @@
     "npm:react-dom@^19.2.4": "19.2.4_react@19.2.4",
     "npm:react@^19.2.4": "19.2.4",
     "npm:rxjs@^7.8.2": "7.8.2",
+    "npm:smol-toml@^1.6.1": "1.6.1",
     "npm:svelte-eslint-parser@^1.6.0": "1.6.0_svelte@5.53.7__acorn@8.16.0_postcss@8.5.6",
     "npm:svelte@^5.53.7": "5.53.7_acorn@8.16.0",
     "npm:tar@^7.5.11": "7.5.11",
@@ -7761,8 +7762,8 @@
     "smart-buffer@4.2.0": {
       "integrity": "sha512-94hK0Hh8rPqQl2xXc3HsaBoOXKV20MToPkcXvwbISWLEs+64sBq5kFgn2kJDHb1Pry9yrP0dxrCI9RRci7RXKg=="
     },
-    "smol-toml@1.6.0": {
-      "integrity": "sha512-4zemZi0HvTnYwLfrpk/CF9LOd9Lt87kAt50GnqhMpyF9U3poDAP2+iukq2bZsO/ufegbYehBkqINbsWxj4l4cw=="
+    "smol-toml@1.6.1": {
+      "integrity": "sha512-dWUG8F5sIIARXih1DTaQAX4SsiTXhInKf1buxdY9DIg4ZYPZK5nGM1VRIYmEbDbsHt7USo99xSLFu5Q1IqTmsg=="
     },
     "socks-proxy-agent@8.0.5": {
       "integrity": "sha512-HehCEsotFqbPW9sJ8WVYB6UbmIMv7kUUORIF2Nncq4VQvBfNBLibW9YZR5dlYCSUhwcD628pRllm7n+E+YTzJw==",
@@ -8889,6 +8890,7 @@
       "npm:picomatch@^3.0.2",
       "npm:picomatch@^4.0.4",
       "npm:playwright@1.58.2",
+      "npm:smol-toml@^1.6.1",
       "npm:tar@^7.5.11",
       "npm:undici@^7.24.0",
       "npm:yaml@^1.10.3",
@@ -8991,6 +8993,7 @@
         "picomatch@2": "^2.3.2",
         "picomatch@3": "^3.0.2",
         "picomatch@4": "^4.0.4",
+        "smol-toml": "^1.6.1",
         "tar": "^7.5.11",
         "undici": "^7.24.0",
         "yaml@1": "^1.10.3",
