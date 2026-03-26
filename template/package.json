@@ -119,6 +119,7 @@
     "vue-eslint-parser": "^10.4.0"
   },
   "overrides": {
+    "brace-expansion": "^5.0.5",
     "devalue": "^5.6.4",
     "flatted": "^3.4.2",
     "h3": "^1.15.6",
@@ -127,6 +128,7 @@
     "undici": "^7.24.0"
   },
   "resolutions": {
+    "brace-expansion": "^5.0.5",
     "devalue": "^5.6.4",
     "flatted": "^3.4.2",
     "h3": "^1.15.6",
@@ -136,6 +138,7 @@
   },
   "pnpm": {
     "overrides": {
+      "brace-expansion": "^5.0.5",
       "devalue": "^5.6.4",
       "flatted": "^3.4.2",
       "h3": "^1.15.6",

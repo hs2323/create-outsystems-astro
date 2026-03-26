@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Changed build output to run as NODE_ENV=production.
 
 ### Security
+- Updated template sub-dependency brace-expansion to 5.0.5 due to CVE-2026-33750.
 - Updated template dependency astro to 5.18.1 due to CVE-2026-33769.
 - Updated docs sub-dependency h3 to 1.15.9 due to CVE-2026-33128.
 - Updated docs sub-dependency flatted to 3.4.2 due to CVE-2026-33228.
