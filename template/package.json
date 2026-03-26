@@ -44,7 +44,7 @@
     "@nanostores/preact": "^1.0.0",
     "@nanostores/react": "^1.0.0",
     "@nanostores/vue": "^1.1.0",
-    "astro": "^5.18.0",
+    "astro": "^5.18.1",
     "nanostores": "^1.1.1",
     "preact": "^10.28.4",
     "react": "^19.2.4",

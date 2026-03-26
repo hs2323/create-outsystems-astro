@@ -19,8 +19,8 @@
     "npm:@angular/router@^21.2.4": "21.2.4_@angular+common@21.2.4__@angular+core@21.2.4___@angular+compiler@21.2.4___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.2.4_@angular+core@21.2.4__@angular+compiler@21.2.4__rxjs@7.8.2_@angular+platform-browser@21.2.4__@angular+animations@21.2.4___@angular+core@21.2.4____@angular+compiler@21.2.4____rxjs@7.8.2___@angular+compiler@21.2.4___rxjs@7.8.2__@angular+common@21.2.4___@angular+core@21.2.4____@angular+compiler@21.2.4____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.4__@angular+core@21.2.4___@angular+compiler@21.2.4___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.2.4_rxjs@7.8.2_@angular+compiler@21.2.4_@angular+animations@21.2.4__@angular+core@21.2.4___@angular+compiler@21.2.4___rxjs@7.8.2__@angular+compiler@21.2.4__rxjs@7.8.2",
     "npm:@astrojs/preact@^4.1.3": "4.1.3_preact@10.28.4_@babel+core@7.29.0_vite@6.4.1__@types+node@25.3.5__picomatch@4.0.3_@types+node@25.3.5",
     "npm:@astrojs/react@^4.4.2": "4.4.2_@types+react@19.2.14_@types+react-dom@19.2.3__@types+react@19.2.14_react@19.2.4_react-dom@19.2.4__react@19.2.4_vite@6.4.1__@types+node@25.3.5__picomatch@4.0.3_@types+node@25.3.5",
-    "npm:@astrojs/svelte@^7.2.5": "7.2.5_astro@5.18.0__typescript@5.9.3__@types+node@25.3.5__vite@6.4.1___@types+node@25.3.5___picomatch@4.0.3__zod@3.25.76_svelte@5.53.7__acorn@8.16.0_typescript@5.9.3_vite@6.4.1__@types+node@25.3.5__picomatch@4.0.3_@types+node@25.3.5",
-    "npm:@astrojs/vue@^5.1.4": "5.1.4_astro@5.18.0__typescript@5.9.3__@types+node@25.3.5__vite@6.4.1___@types+node@25.3.5___picomatch@4.0.3__zod@3.25.76_vue@3.5.29__typescript@5.9.3_vite@6.4.1__@types+node@25.3.5__picomatch@4.0.3_@types+node@25.3.5_typescript@5.9.3",
+    "npm:@astrojs/svelte@^7.2.5": "7.2.5_astro@5.18.1__typescript@5.9.3__@types+node@25.3.5__vite@6.4.1___@types+node@25.3.5___picomatch@4.0.3__zod@3.25.76_svelte@5.53.7__acorn@8.16.0_typescript@5.9.3_vite@6.4.1__@types+node@25.3.5__picomatch@4.0.3_@types+node@25.3.5",
+    "npm:@astrojs/vue@^5.1.4": "5.1.4_astro@5.18.1__typescript@5.9.3__@types+node@25.3.5__vite@6.4.1___@types+node@25.3.5___picomatch@4.0.3__zod@3.25.76_vue@3.5.29__typescript@5.9.3_vite@6.4.1__@types+node@25.3.5__picomatch@4.0.3_@types+node@25.3.5_typescript@5.9.3",
     "npm:@babel/core@^7.29.0": "7.29.0",
     "npm:@eslint/compat@^2.0.3": "2.0.3_eslint@9.39.4",
     "npm:@eslint/eslintrc@^3.3.5": "3.3.5",
@@ -47,7 +47,7 @@
     "npm:@vitejs/plugin-react@^5.1.4": "5.1.4_vite@6.4.1__@types+node@25.3.5__picomatch@4.0.3_@babel+core@7.29.0_@types+node@25.3.5",
     "npm:@vitejs/plugin-vue@^6.0.4": "6.0.4_vite@6.4.1__@types+node@25.3.5__picomatch@4.0.3_vue@3.5.29__typescript@5.9.3_@types+node@25.3.5_typescript@5.9.3",
     "npm:angular-eslint@^21.3.0": "21.3.0_@angular+cli@21.2.2__@types+node@25.3.5__@inquirer+prompts@7.10.1___@types+node@25.3.5__listr2@9.0.5__zod@4.3.6_eslint@9.39.4_typescript@5.9.3_typescript-eslint@8.56.1__eslint@9.39.4__typescript@5.9.3__@typescript-eslint+parser@8.56.1___eslint@9.39.4___typescript@5.9.3_@typescript-eslint+utils@8.56.1__eslint@9.39.4__typescript@5.9.3_@angular-eslint+template-parser@21.3.0__eslint@9.39.4__typescript@5.9.3_@typescript-eslint+types@8.56.1_@types+node@25.3.5",
-    "npm:astro@^5.18.0": "5.18.0_typescript@5.9.3_@types+node@25.3.5_vite@6.4.1__@types+node@25.3.5__picomatch@4.0.3_zod@3.25.76",
+    "npm:astro@^5.18.1": "5.18.1_typescript@5.9.3_@types+node@25.3.5_vite@6.4.1__@types+node@25.3.5__picomatch@4.0.3_zod@3.25.76",
     "npm:better-npm-audit@^3.11.0": "3.11.0",
     "npm:devalue@^5.6.4": "5.6.4",
     "npm:dotenv@^17.3.1": "17.3.1",
@@ -518,11 +518,11 @@
     "@astrojs/compiler@2.13.1": {
       "integrity": "sha512-f3FN83d2G/v32ipNClRKgYv30onQlMZX1vCeZMjPsMMPl1mDpmbl0+N5BYo4S/ofzqJyS5hvwacEo0CCVDn/Qg=="
     },
-    "@astrojs/internal-helpers@0.7.5": {
-      "integrity": "sha512-vreGnYSSKhAjFJCWAwe/CNhONvoc5lokxtRoZims+0wa3KbHBdPHSSthJsKxPd8d/aic6lWKpRTYGY/hsgK6EA=="
+    "@astrojs/internal-helpers@0.7.6": {
+      "integrity": "sha512-GOle7smBWKfMSP8osUIGOlB5kaHdQLV3foCsf+5Q9Wsuu+C6Fs3Ez/ttXmhjZ1HkSgsogcM1RXSjjOVieHq16Q=="
     },
-    "@astrojs/markdown-remark@6.3.10": {
-      "integrity": "sha512-kk4HeYR6AcnzC4QV8iSlOfh+N8TZ3MEStxPyenyCtemqn8IpEATBFMTJcfrNW32dgpt6MY3oCkMM/Tv3/I4G3A==",
+    "@astrojs/markdown-remark@6.3.11": {
+      "integrity": "sha512-hcaxX/5aC6lQgHeGh1i+aauvSwIT6cfyFjKWvExYSxUhZZBBdvCliOtu06gbQyhbe0pGJNoNmqNlQZ5zYUuIyQ==",
       "dependencies": [
         "@astrojs/internal-helpers",
         "@astrojs/prism",
@@ -575,7 +575,7 @@
         "vite@6.4.1_@types+node@25.3.5_picomatch@4.0.3"
       ]
     },
-    "@astrojs/svelte@7.2.5_astro@5.18.0__typescript@5.9.3__@types+node@25.3.5__vite@6.4.1___@types+node@25.3.5___picomatch@4.0.3__zod@3.25.76_svelte@5.53.7__acorn@8.16.0_typescript@5.9.3_vite@6.4.1__@types+node@25.3.5__picomatch@4.0.3_@types+node@25.3.5": {
+    "@astrojs/svelte@7.2.5_astro@5.18.1__typescript@5.9.3__@types+node@25.3.5__vite@6.4.1___@types+node@25.3.5___picomatch@4.0.3__zod@3.25.76_svelte@5.53.7__acorn@8.16.0_typescript@5.9.3_vite@6.4.1__@types+node@25.3.5__picomatch@4.0.3_@types+node@25.3.5": {
       "integrity": "sha512-Tl5aF/dYbzzd7sLpxMBX6pRz3yJ1B4pilt9G3GJbj0I0/doJHIEmerNQsnlxX0/InNKUhMXXN8wyyet9VhA+Zw==",
       "dependencies": [
         "@sveltejs/vite-plugin-svelte@5.1.1_svelte@5.53.7__acorn@8.16.0_vite@6.4.1__@types+node@25.3.5__picomatch@4.0.3_@types+node@25.3.5",
@@ -598,7 +598,7 @@
         "which-pm-runs"
       ]
     },
-    "@astrojs/vue@5.1.4_astro@5.18.0__typescript@5.9.3__@types+node@25.3.5__vite@6.4.1___@types+node@25.3.5___picomatch@4.0.3__zod@3.25.76_vue@3.5.29__typescript@5.9.3_vite@6.4.1__@types+node@25.3.5__picomatch@4.0.3_@types+node@25.3.5_typescript@5.9.3": {
+    "@astrojs/vue@5.1.4_astro@5.18.1__typescript@5.9.3__@types+node@25.3.5__vite@6.4.1___@types+node@25.3.5___picomatch@4.0.3__zod@3.25.76_vue@3.5.29__typescript@5.9.3_vite@6.4.1__@types+node@25.3.5__picomatch@4.0.3_@types+node@25.3.5_typescript@5.9.3": {
       "integrity": "sha512-srE+3tgSnGG4FVr7Bs9JAgLcUAg1mtGrbBFdwlj++Y05Awwlc967WCcmOK6rnxQ6q5PcK5+WL2x2tKoWh5SN7A==",
       "dependencies": [
         "@vitejs/plugin-vue@5.2.4_vite@6.4.1__@types+node@25.3.5__picomatch@4.0.3_vue@3.5.29__typescript@5.9.3_@types+node@25.3.5_typescript@5.9.3",
@@ -3473,8 +3473,8 @@
         "semver@7.7.4"
       ]
     },
-    "astro@5.18.0_typescript@5.9.3_@types+node@25.3.5_vite@6.4.1__@types+node@25.3.5__picomatch@4.0.3_zod@3.25.76": {
-      "integrity": "sha512-CHiohwJIS4L0G6/IzE1Fx3dgWqXBCXus/od0eGUfxrZJD2um2pE7ehclMmgL/fXqbU7NfE1Ze2pq34h2QaA6iQ==",
+    "astro@5.18.1_typescript@5.9.3_@types+node@25.3.5_vite@6.4.1__@types+node@25.3.5__picomatch@4.0.3_zod@3.25.76": {
+      "integrity": "sha512-m4VWilWZ+Xt6NPoYzC4CgGZim/zQUO7WFL0RHCH0AiEavF1153iC3+me2atDvXpf/yX4PyGUeD8wZLq1cirT3g==",
       "dependencies": [
         "@astrojs/compiler",
         "@astrojs/internal-helpers",
@@ -8942,7 +8942,7 @@
         "npm:@vitejs/plugin-react@^5.1.4",
         "npm:@vitejs/plugin-vue@^6.0.4",
         "npm:angular-eslint@^21.3.0",
-        "npm:astro@^5.18.0",
+        "npm:astro@^5.18.1",
         "npm:better-npm-audit@^3.11.0",
         "npm:dotenv@^17.3.1",
         "npm:eslint-config-preact@2",
