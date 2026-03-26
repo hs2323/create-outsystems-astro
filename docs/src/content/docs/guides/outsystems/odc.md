@@ -195,6 +195,14 @@ Astro Islands can take input parameters and functions, but they must first seria
 - Click on the **RendererURL** dropdown and select **Expression Editor**.
   ![Parameter set Island Component URL](../../../../assets/odc/island-renderer-url.png)
 
+- Click on the **ClientDirective**. 
+  ![Select Client Directive](../../../../assets/o11/island-client-directive.png) 
+  
+- Enter one of the client values. If using React, Svelte or Vue, then type "only" as an option. If using Angular or Preact, type "load".
+  **_Note_**: Even though Preact must be built with ```client:only="preact"```, the ClientDirective in OutSystems must be changed to "load".
+  ![Set the Client Directive value](../../../../assets/o11/island-client-directive-value.png)
+
+
 - Scroll down in the bottom left section that has the variables until you get to the **Resources**. Click on the arrow to drop down the resources list. Find the resource that matches the **renderer-url** and click on the arrow to drop down more options. The URL variable should be displayed. Double click on the URL and it should populate the window. Once the resource variable is populated, click the **Close** button.
   ![Select Island Renderer URL value](../../../../assets/odc/island-renderer-url-value.png)
 
