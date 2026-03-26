@@ -6,6 +6,9 @@
     "h3": "npm:h3@^1.15.6",
     "hono": "npm:hono@^4.12.7",
     "playwright": "npm:playwright@1.58.2",
+    "picomatch@2": "npm:picomatch@^2.3.2",
+    "picomatch@3": "npm:picomatch@^3.0.2",
+    "picomatch@4": "npm:picomatch@^4.0.4",
     "tar": "npm:tar@^7.5.11",
     "undici": "npm:undici@^7.24.0"
   },
