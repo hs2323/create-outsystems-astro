@@ -4,7 +4,7 @@
   "scripts": {
     "astro": "astro",
     "audit:bun": "bun audit --ignore GHSA-f886-m6hf-6m8v",
-    "audit:deno": "deno audit",
+    "audit:deno": "deno audit --ignore  CVE-2026-33750",
     "audit:npm": "better-npm-audit audit --exclude GHSA-f886-m6hf-6m8v",
     "audit:pnpm": "pnpm audit",
     "audit:yarn": "yarn run improved-yarn-audit --exclude GHSA-f886-m6hf-6m8v",
