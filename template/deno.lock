@@ -49,7 +49,6 @@
     "npm:angular-eslint@^21.3.0": "21.3.0_@angular+cli@21.2.2__@types+node@25.3.5__@inquirer+prompts@7.10.1___@types+node@25.3.5__listr2@9.0.5__zod@4.3.6_eslint@9.39.4_typescript@5.9.3_typescript-eslint@8.56.1__eslint@9.39.4__typescript@5.9.3__@typescript-eslint+parser@8.56.1___eslint@9.39.4___typescript@5.9.3_@typescript-eslint+utils@8.56.1__eslint@9.39.4__typescript@5.9.3_@angular-eslint+template-parser@21.3.0__eslint@9.39.4__typescript@5.9.3_@typescript-eslint+types@8.56.1_@types+node@25.3.5",
     "npm:astro@^5.18.1": "5.18.1_typescript@5.9.3_@types+node@25.3.5_yaml@1.10.3_vite@6.4.1__@types+node@25.3.5__yaml@1.10.3__picomatch@4.0.4_zod@3.25.76",
     "npm:better-npm-audit@^3.11.0": "3.11.0",
-    "npm:brace-expansion@^5.0.5": "5.0.5",
     "npm:devalue@^5.6.4": "5.6.4",
     "npm:dotenv@^17.3.1": "17.3.1",
     "npm:eslint-config-preact@2": "2.0.0_eslint@9.39.4_@babel+core@7.29.0",
@@ -8881,7 +8880,6 @@
   },
   "workspace": {
     "dependencies": [
-      "npm:brace-expansion@^5.0.5",
       "npm:devalue@^5.6.4",
       "npm:flatted@^3.4.2",
       "npm:h3@^1.15.6",
