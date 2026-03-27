@@ -8985,7 +8985,6 @@
         "npm:vue@^3.5.29"
       ],
       "overrides": {
-        "brace-expansion": "^5.0.5",
         "devalue": "^5.6.4",
         "flatted": "^3.4.2",
         "h3": "^1.15.6",
