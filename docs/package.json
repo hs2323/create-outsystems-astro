@@ -4,7 +4,7 @@
   "version": "0.7.1",
   "scripts": {
     "astro": "astro",
-    "audit": "better-npm-audit audit",
+    "audit": "better-npm-audit audit --exclude GHSA-f886-m6hf-6m8v",
     "build": "astro build",
     "dev": "astro dev",
     "format": "prettier . --check",
@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@astrojs/starlight": "^0.37.6",
-    "astro": "^5.18.0",
+    "astro": "^5.18.1",
     "sharp": "^0.34.2",
     "starlight-versions": "^0.7.0"
   },

@@ -11,6 +11,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Changed build output to run as NODE_ENV=production.
 
 ### Security
+- Updated docs sub-dependency smol-toml to 1.6.1 due to GHSA-v3rj-xjv7-4jmq.
+- Updated docs sub-dependency yaml to 1.10.3 and 2.8.3 due to CVE-2026-33532.
+- Updated docs sub-dependency picomatch to 2.3.2 and 4.0.4 due to CVE-2026-33672.
+- Updated docs dependency astro to 5.18.1 due to CVE-2026-33769.
+- Updated template sub-dependency smol-toml to 1.6.1 due to GHSA-v3rj-xjv7-4jmq.
+- Updated template sub-dependency yaml to 1.10.3 and 2.8.3 due to CVE-2026-33532.
+- Updated template dependency happy-dom to 20.8.8 due to CVE-2026-33943.
+- Updated template sub-dependency picomatch to 2.3.2 and 4.0.4 due to CVE-2026-33672.
+- Updated template dependency astro to 5.18.1 due to CVE-2026-33769.
 - Updated docs sub-dependency h3 to 1.15.9 due to CVE-2026-33128.
 - Updated docs sub-dependency flatted to 3.4.2 due to CVE-2026-33228.
 - Updated template sub-dependency h3 to 1.15.9 due to CVE-2026-33128.

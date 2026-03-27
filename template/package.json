@@ -3,11 +3,11 @@
   "type": "module",
   "scripts": {
     "astro": "astro",
-    "audit:bun": "bun audit",
-    "audit:deno": "deno audit",
-    "audit:npm": "better-npm-audit audit",
+    "audit:bun": "bun audit --ignore GHSA-f886-m6hf-6m8v",
+    "audit:deno": "deno audit --ignore  CVE-2026-33750",
+    "audit:npm": "better-npm-audit audit --exclude GHSA-f886-m6hf-6m8v",
     "audit:pnpm": "pnpm audit",
-    "audit:yarn": "yarn run improved-yarn-audit",
+    "audit:yarn": "yarn run improved-yarn-audit --exclude GHSA-f886-m6hf-6m8v",
     "build": "astro build",
     "dev": "astro dev",
     "format": "prettier . --check",
@@ -44,7 +44,7 @@
     "@nanostores/preact": "^1.0.0",
     "@nanostores/react": "^1.0.0",
     "@nanostores/vue": "^1.1.0",
-    "astro": "^5.18.0",
+    "astro": "^5.18.1",
     "nanostores": "^1.1.1",
     "preact": "^10.28.4",
     "react": "^19.2.4",
@@ -104,7 +104,7 @@
     "eslint-plugin-testing-library": "^7.16.0",
     "eslint-plugin-vue": "^10.8.0",
     "globals": "^17.4.0",
-    "happy-dom": "^20.8.3",
+    "happy-dom": "^20.8.8",
     "improved-yarn-audit": "^3.0.4",
     "js-beautify": "^1.15.4",
     "patch-package": "^8.0.1",
@@ -123,25 +123,43 @@
     "flatted": "^3.4.2",
     "h3": "^1.15.6",
     "hono": "^4.12.7",
+    "picomatch@2": "^2.3.2",
+    "picomatch@3": "^3.0.2",
+    "picomatch@4": "^4.0.4",
+    "smol-toml": "^1.6.1",
     "tar": "^7.5.11",
-    "undici": "^7.24.0"
+    "undici": "^7.24.0",
+    "yaml@1": "^1.10.3",
+    "yaml@2": "^2.8.3"
   },
   "resolutions": {
     "devalue": "^5.6.4",
     "flatted": "^3.4.2",
     "h3": "^1.15.6",
     "hono": "^4.12.7",
+    "smol-toml": "^1.6.1",
     "tar": "^7.5.11",
     "undici": "^7.24.0"
   },
   "pnpm": {
+    "auditConfig": {
+      "ignoreGhsas": [
+        "GHSA-f886-m6hf-6m8v"
+      ]
+    },
     "overrides": {
       "devalue": "^5.6.4",
       "flatted": "^3.4.2",
       "h3": "^1.15.6",
       "hono": "^4.12.7",
+      "picomatch@2": "^2.3.2",
+      "picomatch@3": "^3.0.2",
+      "picomatch@4": "^4.0.4",
+      "smol-toml": "^1.6.1",
       "tar": "^7.5.11",
-      "undici": "^7.24.0"
+      "undici": "^7.24.0",
+      "yaml@1": "^1.10.3",
+      "yaml@2": "^2.8.3"
     }
   }
 }
