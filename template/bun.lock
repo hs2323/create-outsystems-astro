@@ -50,6 +50,7 @@
         "@oxc-project/runtime": "^0.122.0",
         "@playwright/test": "1.58.2",
         "@preact/preset-vite": "^2.10.5",
+        "@solidjs/testing-library": "^0.8.10",
         "@sveltejs/vite-plugin-svelte": "^7.0.0",
         "@testing-library/angular": "^19.1.10",
         "@testing-library/dom": "^10.4.1",
@@ -96,6 +97,7 @@
         "typescript": "^5.9.3",
         "typescript-eslint": "^8.57.2",
         "vite": "^8.0.1",
+        "vite-plugin-solid": "^2.11.11",
         "vitest": "^4.1.2",
         "vue-eslint-parser": "^10.4.0",
       },
@@ -761,6 +763,8 @@
     "@sindresorhus/merge-streams": ["@sindresorhus/merge-streams@4.0.0", "", {}, "sha512-tlqY9xq5ukxTUZBmoOp+m61cqwQD5pHJtFY3Mn8CA8ps6yghLH/Hw8UPdqg4OLmFW3IFlcXnQNmo/dh8HzXYIQ=="],
 
     "@solidity-parser/parser": ["@solidity-parser/parser@0.20.2", "", {}, "sha512-rbu0bzwNvMcwAjH86hiEAcOeRI2EeK8zCkHDrFykh/Al8mvJeFmjy3UrE7GYQjNwOgbGUUtCn5/k8CB8zIu7QA=="],
+
+    "@solidjs/testing-library": ["@solidjs/testing-library@0.8.10", "", { "dependencies": { "@testing-library/dom": "^10.4.0" }, "peerDependencies": { "@solidjs/router": ">=0.9.0", "solid-js": ">=1.0.0" }, "optionalPeers": ["@solidjs/router"] }, "sha512-qdeuIerwyq7oQTIrrKvV0aL9aFeuwTd86VYD3afdq5HYEwoox1OBTJy4y8A3TFZr8oAR0nujYgCzY/8wgHGfeQ=="],
 
     "@standard-schema/spec": ["@standard-schema/spec@1.1.0", "", {}, "sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w=="],
 

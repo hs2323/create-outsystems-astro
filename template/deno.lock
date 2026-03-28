@@ -34,6 +34,7 @@
     "npm:@oxc-project/runtime@0.122": "0.122.0",
     "npm:@playwright/test@1.58.2": "1.58.2",
     "npm:@preact/preset-vite@^2.10.5": "2.10.5_@babel+core@7.29.0_vite@8.0.3__@types+node@25.5.0__esbuild@0.27.3__sass@1.97.3_preact@10.29.0_@types+node@25.5.0",
+    "npm:@solidjs/testing-library@~0.8.10": "0.8.10_solid-js@1.9.12__seroval@1.5.1",
     "npm:@sveltejs/vite-plugin-svelte@7": "7.0.0_svelte@5.55.0__acorn@8.16.0_vite@8.0.3__@types+node@25.5.0__esbuild@0.27.3__sass@1.97.3_@types+node@25.5.0",
     "npm:@testing-library/angular@^19.1.10": "19.2.1_@angular+common@21.2.6__@angular+core@21.2.6___@angular+compiler@21.2.6___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.2.6_@angular+core@21.2.6__@angular+compiler@21.2.6__rxjs@7.8.2_@angular+platform-browser@21.2.6__@angular+animations@21.2.6___@angular+core@21.2.6____@angular+compiler@21.2.6____rxjs@7.8.2___@angular+compiler@21.2.6___rxjs@7.8.2__@angular+common@21.2.6___@angular+core@21.2.6____@angular+compiler@21.2.6____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.6__@angular+core@21.2.6___@angular+compiler@21.2.6___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@21.2.6_@angular+router@21.2.6__@angular+common@21.2.6___@angular+core@21.2.6____@angular+compiler@21.2.6____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.6__@angular+core@21.2.6___@angular+compiler@21.2.6___rxjs@7.8.2__@angular+platform-browser@21.2.6___@angular+animations@21.2.6____@angular+core@21.2.6_____@angular+compiler@21.2.6_____rxjs@7.8.2____@angular+compiler@21.2.6____rxjs@7.8.2___@angular+common@21.2.6____@angular+core@21.2.6_____@angular+compiler@21.2.6_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@21.2.6___@angular+core@21.2.6____@angular+compiler@21.2.6____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@21.2.6__rxjs@7.8.2__@angular+compiler@21.2.6__@angular+animations@21.2.6___@angular+core@21.2.6____@angular+compiler@21.2.6____rxjs@7.8.2___@angular+compiler@21.2.6___rxjs@7.8.2_@testing-library+dom@10.4.1_rxjs@7.8.2_@angular+compiler@21.2.6_@angular+animations@21.2.6__@angular+core@21.2.6___@angular+compiler@21.2.6___rxjs@7.8.2__@angular+compiler@21.2.6__rxjs@7.8.2",
     "npm:@testing-library/dom@^10.4.1": "10.4.1",
@@ -89,6 +90,7 @@
     "npm:tslib@^2.8.1": "2.8.1",
     "npm:typescript-eslint@^8.57.2": "8.57.2_eslint@9.39.4_typescript@5.9.3_@typescript-eslint+parser@8.57.2__eslint@9.39.4__typescript@5.9.3",
     "npm:typescript@^5.9.3": "5.9.3",
+    "npm:vite-plugin-solid@^2.11.11": "2.11.11_@testing-library+jest-dom@6.9.1_solid-js@1.9.12__seroval@1.5.1_vite@8.0.3__@types+node@25.5.0__esbuild@0.27.3__sass@1.97.3_@babel+core@7.29.0_@types+node@25.5.0",
     "npm:vite@^8.0.1": "8.0.3_@types+node@25.5.0_esbuild@0.27.3_sass@1.97.3",
     "npm:vitest@^4.1.2": "4.1.2_@types+node@25.5.0_happy-dom@20.8.9_vite@8.0.3__@types+node@25.5.0__esbuild@0.27.3__sass@1.97.3",
     "npm:vue-eslint-parser@^10.4.0": "10.4.0_eslint@9.39.4",
@@ -580,7 +582,7 @@
       "dependencies": [
         "solid-js",
         "vite@6.4.1_@types+node@25.5.0_picomatch@4.0.4",
-        "vite-plugin-solid"
+        "vite-plugin-solid@2.11.11_@testing-library+jest-dom@6.9.1_solid-js@1.9.12__seroval@1.5.1_vite@6.4.1__@types+node@25.5.0__picomatch@4.0.4_@babel+core@7.29.0_@types+node@25.5.0"
       ]
     },
     "@astrojs/svelte@7.2.5_astro@5.18.1__typescript@5.9.3__@types+node@25.5.0__vite@6.4.1___@types+node@25.5.0___picomatch@4.0.4__zod@3.25.76_svelte@5.55.0__acorn@8.16.0_typescript@5.9.3_vite@6.4.1__@types+node@25.5.0__picomatch@4.0.4_@types+node@25.5.0": {
@@ -2669,6 +2671,13 @@
     },
     "@solidity-parser/parser@0.20.2": {
       "integrity": "sha512-rbu0bzwNvMcwAjH86hiEAcOeRI2EeK8zCkHDrFykh/Al8mvJeFmjy3UrE7GYQjNwOgbGUUtCn5/k8CB8zIu7QA=="
+    },
+    "@solidjs/testing-library@0.8.10_solid-js@1.9.12__seroval@1.5.1": {
+      "integrity": "sha512-qdeuIerwyq7oQTIrrKvV0aL9aFeuwTd86VYD3afdq5HYEwoox1OBTJy4y8A3TFZr8oAR0nujYgCzY/8wgHGfeQ==",
+      "dependencies": [
+        "@testing-library/dom@10.4.1",
+        "solid-js"
+      ]
     },
     "@standard-schema/spec@1.1.0": {
       "integrity": "sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w=="
@@ -8857,6 +8866,23 @@
         "@testing-library/jest-dom"
       ]
     },
+    "vite-plugin-solid@2.11.11_@testing-library+jest-dom@6.9.1_solid-js@1.9.12__seroval@1.5.1_vite@8.0.3__@types+node@25.5.0__esbuild@0.27.3__sass@1.97.3_@babel+core@7.29.0_@types+node@25.5.0": {
+      "integrity": "sha512-YMZCXsLw9kyuvQFEdwLP27fuTQJLmjNoHy90AOJnbRuJ6DwShUxKFo38gdFrWn9v11hnGicKCZEaeI/TFs6JKw==",
+      "dependencies": [
+        "@babel/core",
+        "@testing-library/jest-dom",
+        "@types/babel__core",
+        "babel-preset-solid",
+        "merge-anything",
+        "solid-js",
+        "solid-refresh",
+        "vite@8.0.3_@types+node@25.5.0_esbuild@0.27.3_sass@1.97.3",
+        "vitefu@1.1.2_vite@8.0.3__@types+node@25.5.0__esbuild@0.27.3__sass@1.97.3_@types+node@25.5.0"
+      ],
+      "optionalPeers": [
+        "@testing-library/jest-dom"
+      ]
+    },
     "vite-plugin-vue-devtools@7.7.9_vite@6.4.1__@types+node@25.5.0__picomatch@4.0.4_vue@3.5.31__typescript@5.9.3_@types+node@25.5.0_typescript@5.9.3": {
       "integrity": "sha512-08DvePf663SxqLFJeMVNW537zzVyakp9KIrI2K7lwgaTqA5R/ydN/N2K8dgZO34tg/Qmw0ch84fOKoBtCEdcGg==",
       "dependencies": [
@@ -9368,6 +9394,7 @@
         "npm:@oxc-project/runtime@0.122",
         "npm:@playwright/test@1.58.2",
         "npm:@preact/preset-vite@^2.10.5",
+        "npm:@solidjs/testing-library@~0.8.10",
         "npm:@sveltejs/vite-plugin-svelte@7",
         "npm:@testing-library/angular@^19.1.10",
         "npm:@testing-library/dom@^10.4.1",
@@ -9422,6 +9449,7 @@
         "npm:tslib@^2.8.1",
         "npm:typescript-eslint@^8.57.2",
         "npm:typescript@^5.9.3",
+        "npm:vite-plugin-solid@^2.11.11",
         "npm:vite@^8.0.1",
         "npm:vitest@^4.1.2",
         "npm:vue-eslint-parser@^10.4.0",

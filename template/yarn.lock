@@ -2658,6 +2658,13 @@
   resolved "https://registry.yarnpkg.com/@solidity-parser/parser/-/parser-0.20.2.tgz#e07053488ed60dae1b54f6fe37bb6d2c5fe146a7"
   integrity sha512-rbu0bzwNvMcwAjH86hiEAcOeRI2EeK8zCkHDrFykh/Al8mvJeFmjy3UrE7GYQjNwOgbGUUtCn5/k8CB8zIu7QA==
 
+"@solidjs/testing-library@^0.8.10":
+  version "0.8.10"
+  resolved "https://registry.yarnpkg.com/@solidjs/testing-library/-/testing-library-0.8.10.tgz#26cb611ef18cf6557e6857c26f73a9c211756d60"
+  integrity sha512-qdeuIerwyq7oQTIrrKvV0aL9aFeuwTd86VYD3afdq5HYEwoox1OBTJy4y8A3TFZr8oAR0nujYgCzY/8wgHGfeQ==
+  dependencies:
+    "@testing-library/dom" "^10.4.0"
+
 "@standard-schema/spec@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@standard-schema/spec/-/spec-1.1.0.tgz#a79b55dbaf8604812f52d140b2c9ab41bc150bb8"
@@ -2704,9 +2711,9 @@
   dependencies:
     tslib "^2.3.1"
 
-"@testing-library/dom@9.x.x || 10.x.x", "@testing-library/dom@^10.4.1":
+"@testing-library/dom@9.x.x || 10.x.x", "@testing-library/dom@^10.4.0", "@testing-library/dom@^10.4.1":
   version "10.4.1"
-  resolved "https://registry.npmjs.org/@testing-library/dom/-/dom-10.4.1.tgz"
+  resolved "https://registry.yarnpkg.com/@testing-library/dom/-/dom-10.4.1.tgz#d444f8a889e9a46e9a3b4f3b88e0fcb3efb6cf95"
   integrity sha512-o4PXJQidqJl82ckFaXUeoAW+XysPLauYI43Abki5hABd853iMhitooc6znOnczgbTYmEP6U6/y1ZyKAIsvMKGg==
   dependencies:
     "@babel/code-frame" "^7.10.4"
@@ -10070,7 +10077,7 @@ vite-plugin-inspect@0.8.9:
     picocolors "^1.1.1"
     sirv "^3.0.0"
 
-vite-plugin-solid@^2.11.8:
+vite-plugin-solid@^2.11.11, vite-plugin-solid@^2.11.8:
   version "2.11.11"
   resolved "https://registry.yarnpkg.com/vite-plugin-solid/-/vite-plugin-solid-2.11.11.tgz#397bf339ab42fe5ac1bda033dec6e4f50e28fcc0"
   integrity sha512-YMZCXsLw9kyuvQFEdwLP27fuTQJLmjNoHy90AOJnbRuJ6DwShUxKFo38gdFrWn9v11hnGicKCZEaeI/TFs6JKw==
