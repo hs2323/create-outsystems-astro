@@ -18,6 +18,7 @@ const FRAMEWORKS = [
   { title: "Angular", value: "angular" },
   { title: "Preact", value: "preact" },
   { title: "React", value: "react" },
+  { title: "SolidJS", value: "solid" },
   { title: "Svelte", value: "svelte" },
   { title: "Vue", value: "vue" }
 ];
@@ -166,6 +167,10 @@ function updateAstroConfig(projectDir, selectedFrameworks) {
     react: {
       import: /import\s+react\s+from\s+['"]@astrojs\/react['"];\s*\n?/,
       integration: /react\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
+    },
+    solid: {
+      import: /import\s+solid\s+from\s+['"]@astrojs\/solid-js['"];\s*\n?/,
+      integration: /solid\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
     },
     svelte: {
       import: /import\s+svelte\s+from\s+['"]@astrojs\/svelte['"];\s*\n?/,
