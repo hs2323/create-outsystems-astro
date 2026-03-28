@@ -8,6 +8,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Changed
+- Updated template dependency typescript-eslint t0 8.57.2.
+- Updated template dependency eslint-plugin-testing-library to 7.16.2
+- Updated template dependency eslint-plugin-svelte to 3.16.0.
+- Updated template dependency eslint-plugin-playwright to 2.10.1.
+- Updated template dependency eslint-plugin-perfectionist to 5.7.0.
+- Updated template dependency eslint-plugin-jest to 29.15.1.
+- Updated template dependency eslint-plugin-jest 29.15.1.
+- Updated template dependency angular-eslint 21.3.1.
+- Updated template dependency @eslint/markdown to 8.0.0.
 - Updated template dependency @angular/router to 21.2.6.
 - Updated template dependency @angular/platform-server to 21.2.6.
 - Updated template dependency @angular/platform-browser to 21.2.6.
