@@ -5,16 +5,17 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  brace-expansion@1: ^1.1.13
-  brace-expansion@2: ^2.0.3
-  brace-expansion@5: ^5.0.5
   devalue: ^5.6.4
   flatted: ^3.4.2
   h3: ^1.15.6
   hono: ^4.12.7
+  path-to-regexp: ^8.4.0
   smol-toml: ^1.6.1
   tar: ^7.5.11
   undici: ^7.24.0
+  brace-expansion@1: ^1.1.13
+  brace-expansion@2: ^2.0.3
+  brace-expansion@5: ^5.0.5
   picomatch@2: ^2.3.2
   picomatch@3: ^3.0.2
   picomatch@4: ^4.0.4
@@ -4971,8 +4972,8 @@ packages:
     resolution: {integrity: sha512-3O/iVVsJAPsOnpwWIeD+d6z/7PmqApyQePUtCndjatj/9I5LylHvt5qluFaBT3I5h3r1ejfR056c+FCv+NnNXg==}
     engines: {node: 18 || 20 || >=22}
 
-  path-to-regexp@8.3.0:
-    resolution: {integrity: sha512-7jdwVIRtsP8MYpdXSwOS0YdD0Du+qOoF/AEPIt88PcCFrZCzx41oxku1jD88hZBwbNUIEfpqvuhjFaMAqMTWnA==}
+  path-to-regexp@8.4.0:
+    resolution: {integrity: sha512-PuseHIvAnz3bjrM2rGJtSgo1zjgxapTLZ7x2pjhzWwlp4SJQgK3f3iZIQwkpEnBaKz6seKBADpM4B4ySkuYypg==}
 
   pathe@2.0.3:
     resolution: {integrity: sha512-WUjGcAqP1gQacoQe+OBJsFA7Ld4DyXuUIjZ5cc75cLHvJ7dtNsTugphxIADwspS+AraAUePCKrSVtPLFj/F88w==}
@@ -11616,7 +11617,7 @@ snapshots:
       lru-cache: 11.2.6
       minipass: 7.1.3
 
-  path-to-regexp@8.3.0: {}
+  path-to-regexp@8.4.0: {}
 
   pathe@2.0.3: {}
 
@@ -11985,7 +11986,7 @@ snapshots:
       depd: 2.0.0
       is-promise: 4.0.0
       parseurl: 1.3.3
-      path-to-regexp: 8.3.0
+      path-to-regexp: 8.4.0
     transitivePeerDependencies:
       - supports-color
 

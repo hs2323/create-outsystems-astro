@@ -7,6 +7,7 @@
     "flatted": "npm:flatted@^3.4.2",
     "h3": "npm:h3@^1.15.6",
     "hono": "npm:hono@^4.12.7",
+    "path-to-regexp": "npm:path-to-regexp@^8.4.0",
     "playwright": "npm:playwright@1.58.2",
     "picomatch@2": "npm:picomatch@^2.3.2",
     "picomatch@3": "npm:picomatch@^3.0.2",

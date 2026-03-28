@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Changed build output to run as NODE_ENV=production.
 
 ### Security
+- Updated template sub-dependency path-to-regexp to 8.4.0 due to CVE-2026-4923 and CVE-2026-4926.
 - Updated template sub-dependency brace-expansion to 1.1.13, 2.0.3 and 5.0.5 due to CVE-2026-33750.
 - Updated docs sub-dependency smol-toml to 1.6.1 due to GHSA-v3rj-xjv7-4jmq.
 - Updated docs sub-dependency yaml to 1.10.3 and 2.8.3 due to CVE-2026-33532.
