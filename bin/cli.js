@@ -18,6 +18,7 @@ const FRAMEWORKS = [
   { title: "Angular", value: "angular" },
   { title: "Preact", value: "preact" },
   { title: "React", value: "react" },
+  { title: "SolidJS", value: "solid" },
   { title: "Svelte", value: "svelte" },
   { title: "Vue", value: "vue" }
 ];
@@ -167,6 +168,10 @@ function updateAstroConfig(projectDir, selectedFrameworks) {
       import: /import\s+react\s+from\s+['"]@astrojs\/react['"];\s*\n?/,
       integration: /react\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
     },
+    solid: {
+      import: /import\s+solid\s+from\s+['"]@astrojs\/solid-js['"];\s*\n?/,
+      integration: /solid\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
+    },
     svelte: {
       import: /import\s+svelte\s+from\s+['"]@astrojs\/svelte['"];\s*\n?/,
       integration: /svelte\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
@@ -212,7 +217,7 @@ function updateMultiAstroPage(projectDir, selectedFrameworks) {
   const frameworkMap = {
     angular: {
       import: /import\s+AngularStore\s+from\s+['"].*?angular\/Store\.component['"];?\s*\n?/g,
-      component: /<AngularStore\s+client:visible\s*\/>\s*\n?/g
+      component: /<AngularStore\s+client:load\s*\/>\s*\n?/g
     },
     preact: {
       import: /import\s+PreactStore\s+from\s+['"].*?preact\/Store['"];?\s*\n?/g,
@@ -221,6 +226,10 @@ function updateMultiAstroPage(projectDir, selectedFrameworks) {
     react: {
       import: /import\s+ReactStore\s+from\s+['"].*?react\/Store['"];?\s*\n?/g,
       component: /<ReactStore\s+client:only="react"\s*\/>\s*\n?/g
+    },
+    solid: {
+      import: /import\s+SolidStore\s+from\s+['"].*?solid\/Store['"];?\s*\n?/g,
+      component: /<SolidStore\s+client:only="solid-js"\s*\/>\s*\n?/g
     },
     svelte: {
       import: /import\s+SvelteStore\s+from\s+['"].*?svelte\/Store\.svelte['"];?\s*\n?/g,

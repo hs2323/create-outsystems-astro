@@ -8,6 +8,7 @@
   - Angular - Documentation available at https://analogjs.org/docs/packages/astro-angular/overview
   - Preact - Documentation available at https://docs.astro.build/en/guides/integrations-guide/preact/
   - React - Documentation available at https://docs.astro.build/en/guides/integrations-guide/react/
+  - SolidJS - Documentation available at https://docs.astro.build/en/guides/integrations-guide/solid-js/
   - Svelte - Documentation availabe at https://docs.astro.build/en/guides/integrations-guide/svelte/
   - Vue - Documentation available at https://docs.astro.build/en/guides/integrations-guide/vue/
 - Prefer to use TypeScript when possible.
@@ -36,9 +37,10 @@ In OutSystems Developer Cloud, the Islands library is available at https://www.o
 
 - The files in src/pages/\*.astro are used as a starting point and holds the components for generation. They can be tested by running `npm run dev`. That will show what the component looks like as rendered. The sample example pages are broken out by framework name (src/pages/react, src/pages/vue, etc). This page will house the component(s) entry points.
 - When importing a component, the component must have the attribute of the client:only= + the framework name.\
-  - Angular: `client:visible`
+  - Angular: `client:load`
   - Preact: `client:only="preact"`
   - React: `client:only="react"`
+  - SolidJS: `client:only="solid-js"`
   - Svelte: `client:only="svelte"`
   - Vue: `client:only="vue"`
 
@@ -48,6 +50,7 @@ In OutSystems Developer Cloud, the Islands library is available at https://www.o
   - Angular: src/framework/angular
   - Preact: src/framework/react
   - React: src/framework/react
+  - SolidJS: src/framework/solid
   - Svelte: src/framework/svelte
   - Vue: src/framework/vue
 
@@ -64,6 +67,12 @@ The framework folder should stay in place as the components will be rendered fro
 
 ```js
 /** @jsxImportSource react */
+```
+
+- SolidJS:
+
+```js
+/** @jsxImportSource solid-js */
 ```
 
 ### Parameters
@@ -175,6 +184,54 @@ export default function Counter({
 }
 ```
 
+##### SolidJS
+
+- In SolidJS, slots are handled as props. The default slot is the `children` prop. A named slot will have the name of its slot as the parameter. For example, a slot with the following:
+
+```js
+<div slot="header">Header content</div>
+```
+
+will have the parameter named header.
+
+- The slots are then rendered using the regular React rendering parameter method. With the following Astro component:
+
+```js
+---
+import CounterComponent from '../../framework/solid/Counter';
+---
+<CounterComponent client:only="solid-js">
+    <div slot="header">
+        Counter Component
+    </div>
+    <div style="text-align: center;">
+        <p>This is content passed into the component.</p>
+    </div>
+</CounterComponent>
+```
+
+the slots can be used as:
+
+```js
+export default function Counter({
+	children,
+	header,
+}: {
+	children: JSX.Element;
+	header: JSX.Element;
+}) {
+
+	return (
+		<>
+      {header}
+			<div>
+				{children}
+			</div>
+		</>
+	);
+}
+```
+
 ##### Svelte
 
 - In Svelte, slots are handled as by using the <slot /> tag. The default slot is the is just <slot />. A named slot will have the name of its slot as an attribute such as <slot name="header" />. Placement of the slot will determine where the slot will render.
@@ -266,7 +323,22 @@ export default function Counter({}) {
 
 ```jsx
 import { useStore } from "@nanostores/react";
-import { useState } from "react";
+
+export default function Counter({}) {
+  const nanoStoreValue = useStore(window.Stores["MyGreatStore"]);
+
+  return (
+    <>
+      <div>{nanoStoreValue}</div>
+    </>
+  );
+}
+```
+
+#### SolidJS
+
+```jsx
+import { useStore } from "@nanostores/solid";
 
 export default function Counter({}) {
   const nanoStoreValue = useStore(window.Stores["MyGreatStore"]);

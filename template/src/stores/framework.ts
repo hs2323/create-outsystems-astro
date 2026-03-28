@@ -4,6 +4,7 @@ export type CurrentSelectedFramework =
   | ""
   | "Preact"
   | "React"
+  | "Solid"
   | "Svelte"
   | "Vue";
 
