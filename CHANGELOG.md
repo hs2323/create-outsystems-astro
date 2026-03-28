@@ -8,7 +8,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Changed
-- Updated template dependency typescript-eslint t0 8.57.2.
+- Updated template dependency vue to 3.5.31.
+- Updated template dependency vitest to 4.1.2.
+- Updated template dependency vite to 8.0.1.
+- Updated template dependency svelte to 5.55.0.
+- Updated template dependency preact to 10.29.0.
+- Updated template dependency nanostores to 1.2.0.
+- Updated template dependency happy-dom to 20.8.9.
+- Updated template dependency @vitejs/plugin-vue to 6.0.5.
+- Updated template dependency @vitejs/plugin-react to 6.0.1.
+- Updated template dependency @types/node to 25.5.0.
+- Updated template dependency @sveltejs/vite-plugin-svelte 7.0.0.
+- Updated template dependency @preact/preset-vite to 2.10.5.
+- Updated template dependency @nanostores/react to 1.1.0.
+- Updated template dependency @nanostores/preact to 1.1.0.
+- Updated template dependency typescript-eslint to 8.57.2.
 - Updated template dependency eslint-plugin-testing-library to 7.16.2
 - Updated template dependency eslint-plugin-svelte to 3.16.0.
 - Updated template dependency eslint-plugin-playwright to 2.10.1.
