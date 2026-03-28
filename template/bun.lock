@@ -19,6 +19,7 @@
         "@astrojs/vue": "^5.1.4",
         "@nanostores/preact": "^1.1.0",
         "@nanostores/react": "^1.1.0",
+        "@nanostores/solid": "^1.1.1",
         "@nanostores/vue": "^1.1.0",
         "astro": "^5.18.1",
         "nanostores": "^1.2.0",
@@ -508,6 +509,8 @@
     "@nanostores/preact": ["@nanostores/preact@1.1.0", "", { "peerDependencies": { "nanostores": "^1.2.0", "preact": ">=10.0.0" } }, "sha512-oiu9z85AiZlBTKJ8YsfAs8TALpDij70LmmKuRkeF22rS9zUBhVtYDWXEvV1qUUStNNwSFdhTMkwzOYL/IsA+UA=="],
 
     "@nanostores/react": ["@nanostores/react@1.1.0", "", { "peerDependencies": { "nanostores": "^1.2.0", "react": ">=18.0.0" } }, "sha512-MbH35fjhcf7LAubYX5vhOChYUfTLzNLqH/mBGLVsHkcvjy0F8crO1WQwdmQ2xKbAmtpalDa2zBt3Hlg5kqr8iw=="],
+
+    "@nanostores/solid": ["@nanostores/solid@1.1.1", "", { "peerDependencies": { "nanostores": ">=0.9.0 <2.0.0", "solid-js": "^1.6.0" } }, "sha512-gF0Eat1/c3hOaklBMSVoEjcNzJc5zGk4VSg94H9LPmXYww1pxgr7zylpi3jjyxRu24c8+aYNkmRWzolAwzSA1A=="],
 
     "@nanostores/vue": ["@nanostores/vue@1.1.0", "", { "peerDependencies": { "@nanostores/logger": "^0.4.0 || ^1.0.0", "@vue/devtools-api": ">=7.6.2", "nanostores": "^0.11.3 || ^1.0.0", "vue": ">=3.3.1" }, "optionalPeers": ["@nanostores/logger", "@vue/devtools-api"] }, "sha512-14eY8/YA0AbtWkAjk8zHKxbjcuPubF+M7y9afQzg2b5VqRJcashwA0100vprau13BTBSynUmU6ZsU6x03YidjA=="],
 

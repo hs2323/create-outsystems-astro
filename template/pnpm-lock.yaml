@@ -50,6 +50,9 @@ importers:
       '@nanostores/react':
         specifier: ^1.1.0
         version: 1.1.0(nanostores@1.2.0)(react@19.2.4)
+      '@nanostores/solid':
+        specifier: ^1.1.1
+        version: 1.1.1(nanostores@1.2.0)(solid-js@1.9.12)
       '@nanostores/vue':
         specifier: ^1.1.0
         version: 1.1.0(nanostores@1.2.0)(vue@3.5.31(typescript@5.9.3))
@@ -1654,6 +1657,12 @@ packages:
     peerDependencies:
       nanostores: ^1.2.0
       react: '>=18.0.0'
+
+  '@nanostores/solid@1.1.1':
+    resolution: {integrity: sha512-gF0Eat1/c3hOaklBMSVoEjcNzJc5zGk4VSg94H9LPmXYww1pxgr7zylpi3jjyxRu24c8+aYNkmRWzolAwzSA1A==}
+    peerDependencies:
+      nanostores: '>=0.9.0 <2.0.0'
+      solid-js: ^1.6.0
 
   '@nanostores/vue@1.1.0':
     resolution: {integrity: sha512-14eY8/YA0AbtWkAjk8zHKxbjcuPubF+M7y9afQzg2b5VqRJcashwA0100vprau13BTBSynUmU6ZsU6x03YidjA==}
@@ -8002,6 +8011,11 @@ snapshots:
     dependencies:
       nanostores: 1.2.0
       react: 19.2.4
+
+  '@nanostores/solid@1.1.1(nanostores@1.2.0)(solid-js@1.9.12)':
+    dependencies:
+      nanostores: 1.2.0
+      solid-js: 1.9.12
 
   '@nanostores/vue@1.1.0(nanostores@1.2.0)(vue@3.5.31(typescript@5.9.3))':
     dependencies:

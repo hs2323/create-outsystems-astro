@@ -29,6 +29,7 @@
     "npm:@eslint/markdown@8": "8.0.0",
     "npm:@nanostores/preact@^1.1.0": "1.1.0_nanostores@1.2.0_preact@10.29.0",
     "npm:@nanostores/react@^1.1.0": "1.1.0_nanostores@1.2.0_react@19.2.4",
+    "npm:@nanostores/solid@^1.1.1": "1.1.1_nanostores@1.2.0_solid-js@1.9.12__seroval@1.5.1",
     "npm:@nanostores/vue@^1.1.0": "1.1.0_nanostores@1.2.0_vue@3.5.31__typescript@5.9.3_typescript@5.9.3",
     "npm:@oxc-project/runtime@0.122": "0.122.0",
     "npm:@playwright/test@1.58.2": "1.58.2",
@@ -1829,6 +1830,13 @@
       "dependencies": [
         "nanostores",
         "react"
+      ]
+    },
+    "@nanostores/solid@1.1.1_nanostores@1.2.0_solid-js@1.9.12__seroval@1.5.1": {
+      "integrity": "sha512-gF0Eat1/c3hOaklBMSVoEjcNzJc5zGk4VSg94H9LPmXYww1pxgr7zylpi3jjyxRu24c8+aYNkmRWzolAwzSA1A==",
+      "dependencies": [
+        "nanostores",
+        "solid-js"
       ]
     },
     "@nanostores/vue@1.1.0_nanostores@1.2.0_vue@3.5.31__typescript@5.9.3_typescript@5.9.3": {
@@ -9295,6 +9303,7 @@
         "npm:@eslint/markdown@8",
         "npm:@nanostores/preact@^1.1.0",
         "npm:@nanostores/react@^1.1.0",
+        "npm:@nanostores/solid@^1.1.1",
         "npm:@nanostores/vue@^1.1.0",
         "npm:@oxc-project/runtime@0.122",
         "npm:@playwright/test@1.58.2",

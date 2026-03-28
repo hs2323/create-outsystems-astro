@@ -185,7 +185,7 @@
     ajv "8.18.0"
     ajv-formats "3.0.1"
     jsonc-parser "3.3.1"
-    picomatch "4.0.3"
+    picomatch "4.0.4"
     rxjs "7.8.2"
     source-map "0.7.6"
 
@@ -1765,6 +1765,11 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@nanostores/react/-/react-1.1.0.tgz#d21def5618d821d33e7fa449255983cb9d187ee1"
   integrity sha512-MbH35fjhcf7LAubYX5vhOChYUfTLzNLqH/mBGLVsHkcvjy0F8crO1WQwdmQ2xKbAmtpalDa2zBt3Hlg5kqr8iw==
+
+"@nanostores/solid@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@nanostores/solid/-/solid-1.1.1.tgz#bcab6542474d5eb8e380c75e2b574d1f61cd3a79"
+  integrity sha512-gF0Eat1/c3hOaklBMSVoEjcNzJc5zGk4VSg94H9LPmXYww1pxgr7zylpi3jjyxRu24c8+aYNkmRWzolAwzSA1A==
 
 "@nanostores/vue@^1.1.0":
   version "1.1.0"
