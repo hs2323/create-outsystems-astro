@@ -2,7 +2,7 @@
 import angular from "@analogjs/astro-angular";
 import preact from "@astrojs/preact";
 import react from "@astrojs/react";
-import solidJs from "@astrojs/solid-js";
+import solid from "@astrojs/solid-js";
 import svelte from "@astrojs/svelte";
 import vue from "@astrojs/vue";
 import { defineConfig } from "astro/config";
@@ -27,9 +27,9 @@ export default defineConfig({
     react({
       include: ["src/framework/react/*"],
     }),
-    solidJs({
+    solid({
       devtools: true,
-      include: ["src/framework/solid-js/*"],
+      include: ["src/framework/solid/*"],
     }),
     svelte({
       include: ["src/framework/svelte/*"],
