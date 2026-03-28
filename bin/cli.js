@@ -217,7 +217,7 @@ function updateMultiAstroPage(projectDir, selectedFrameworks) {
   const frameworkMap = {
     angular: {
       import: /import\s+AngularStore\s+from\s+['"].*?angular\/Store\.component['"];?\s*\n?/g,
-      component: /<AngularStore\s+client:visible\s*\/>\s*\n?/g
+      component: /<AngularStore\s+client:load\s*\/>\s*\n?/g
     },
     preact: {
       import: /import\s+PreactStore\s+from\s+['"].*?preact\/Store['"];?\s*\n?/g,
