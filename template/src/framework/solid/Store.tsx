@@ -5,7 +5,6 @@ import SolidLogo from "../../images/solid.png?url";
 import { framework } from "../../stores/framework";
 
 export default function Store() {
-  // useStore in Solid returns an accessor function
   const selectedFramework = useStore(framework);
 
   const setFramework = () => {

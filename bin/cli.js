@@ -227,6 +227,10 @@ function updateMultiAstroPage(projectDir, selectedFrameworks) {
       import: /import\s+ReactStore\s+from\s+['"].*?react\/Store['"];?\s*\n?/g,
       component: /<ReactStore\s+client:only="react"\s*\/>\s*\n?/g
     },
+    solid: {
+      import: /import\s+SolidStore\s+from\s+['"].*?solid\/Store['"];?\s*\n?/g,
+      component: /<SolidStore\s+client:only="solid-js"\s*\/>\s*\n?/g
+    },
     svelte: {
       import: /import\s+SvelteStore\s+from\s+['"].*?svelte\/Store\.svelte['"];?\s*\n?/g,
       component: /<SvelteStore\s+client:only="svelte"\s*\/>\s*\n?/g
