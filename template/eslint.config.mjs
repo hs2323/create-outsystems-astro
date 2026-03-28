@@ -216,5 +216,5 @@ export default [
   {
     ...solid.configs["flat/recommended"],
     files: ["src/framework/solid/**/*.{js,ts,jsx,tsx}"],
-  }
+  },
 ];

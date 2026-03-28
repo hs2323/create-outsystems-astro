@@ -76,6 +76,7 @@
     "npm:patch-package@^8.0.1": "8.0.1",
     "npm:playwright@1.58.2": "1.58.2",
     "npm:preact@^10.29.0": "10.29.0",
+    "npm:prettier-plugin-solidity@^2.3.1": "2.3.1_prettier@3.8.1",
     "npm:prettier-plugin-svelte@^3.5.1": "3.5.1_prettier@3.8.1_svelte@5.55.0__acorn@8.16.0",
     "npm:prettier@^3.8.1": "3.8.1",
     "npm:react-dom@^19.2.4": "19.2.4_react@19.2.4",
@@ -906,6 +907,9 @@
         "@babel/helper-string-parser",
         "@babel/helper-validator-identifier"
       ]
+    },
+    "@bytecodealliance/preview2-shim@0.17.8": {
+      "integrity": "sha512-wS5kg8u0KCML1UeHQPJ1IuOI24x/XLentCzsqPER1+gDNC5Cz2hG4G2blLOZap+3CEGhIhnJ9mmZYj6a2W0Lww=="
     },
     "@capsizecss/unpack@4.0.0": {
       "integrity": "sha512-VERIM64vtTP1C4mxQ5thVT9fK0apjPFobqybMtA1UdUujWka24ERHbRHFGmpbbhp73MhV+KSsHQH9C6uOTdEQA==",
@@ -1985,6 +1989,12 @@
         "fastq"
       ]
     },
+    "@nomicfoundation/slang@1.3.4": {
+      "integrity": "sha512-ghzrPSYH1sZO65id6+Bq2Ood87HT54QP3RGC8EkmpcrJ6tT9Ky0RtaJfrzV5G4jpDsnNua6+YEDpzOMori04hQ==",
+      "dependencies": [
+        "@bytecodealliance/preview2-shim"
+      ]
+    },
     "@npmcli/agent@4.0.0": {
       "integrity": "sha512-kAQTcEN9E8ERLVg5AsGwLNoFb+oEG6engbqAU2P43gD4JEIkNGMHdVQ096FsOAAYpZPB0RSt0zgInKIAS1l5QA==",
       "dependencies": [
@@ -2656,6 +2666,9 @@
     },
     "@sindresorhus/merge-streams@4.0.0": {
       "integrity": "sha512-tlqY9xq5ukxTUZBmoOp+m61cqwQD5pHJtFY3Mn8CA8ps6yghLH/Hw8UPdqg4OLmFW3IFlcXnQNmo/dh8HzXYIQ=="
+    },
+    "@solidity-parser/parser@0.20.2": {
+      "integrity": "sha512-rbu0bzwNvMcwAjH86hiEAcOeRI2EeK8zCkHDrFykh/Al8mvJeFmjy3UrE7GYQjNwOgbGUUtCn5/k8CB8zIu7QA=="
     },
     "@standard-schema/spec@1.1.0": {
       "integrity": "sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w=="
@@ -7404,6 +7417,15 @@
     "prelude-ls@1.2.1": {
       "integrity": "sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g=="
     },
+    "prettier-plugin-solidity@2.3.1_prettier@3.8.1": {
+      "integrity": "sha512-71sZM5oqgq6pnTlf+RH23U6Ej710APfCiMWO2Z/pHNjrXyvn9Nr0vTS1AUVaSf4GRW0V6hj6Djt0MyWudJUJbQ==",
+      "dependencies": [
+        "@nomicfoundation/slang",
+        "@solidity-parser/parser",
+        "prettier",
+        "semver@7.7.4"
+      ]
+    },
     "prettier-plugin-svelte@3.5.1_prettier@3.8.1_svelte@5.55.0__acorn@8.16.0": {
       "integrity": "sha512-65+fr5+cgIKWKiqM1Doum4uX6bY8iFCdztvvp2RcF+AJoieaw9kJOFMNcJo/bkmKYsxFaM9OsVZK/gWauG/5mg==",
       "dependencies": [
@@ -9387,6 +9409,7 @@
         "npm:nanostores@^1.2.0",
         "npm:patch-package@^8.0.1",
         "npm:preact@^10.29.0",
+        "npm:prettier-plugin-solidity@^2.3.1",
         "npm:prettier-plugin-svelte@^3.5.1",
         "npm:prettier@^3.8.1",
         "npm:react-dom@^19.2.4",
