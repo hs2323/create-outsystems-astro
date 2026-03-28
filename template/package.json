@@ -3,11 +3,11 @@
   "type": "module",
   "scripts": {
     "astro": "astro",
-    "audit:bun": "bun audit --ignore GHSA-f886-m6hf-6m8v",
-    "audit:deno": "deno audit --ignore  CVE-2026-33750",
-    "audit:npm": "better-npm-audit audit --exclude GHSA-f886-m6hf-6m8v",
+    "audit:bun": "bun audit",
+    "audit:deno": "deno audit",
+    "audit:npm": "better-npm-audit audit",
     "audit:pnpm": "pnpm audit",
-    "audit:yarn": "yarn run improved-yarn-audit --exclude GHSA-f886-m6hf-6m8v",
+    "audit:yarn": "yarn run improved-yarn-audit",
     "build": "astro build",
     "dev": "astro dev",
     "format": "prettier . --check",
@@ -119,6 +119,9 @@
     "vue-eslint-parser": "^10.4.0"
   },
   "overrides": {
+    "brace-expansion@1": "^1.1.13",
+    "brace-expansion@2": "^2.0.3",
+    "brace-expansion@5": "^5.0.5",
     "devalue": "^5.6.4",
     "flatted": "^3.4.2",
     "h3": "^1.15.6",
@@ -142,12 +145,10 @@
     "undici": "^7.24.0"
   },
   "pnpm": {
-    "auditConfig": {
-      "ignoreGhsas": [
-        "GHSA-f886-m6hf-6m8v"
-      ]
-    },
     "overrides": {
+      "brace-expansion@1": "^1.1.13",
+      "brace-expansion@2": "^2.0.3",
+      "brace-expansion@5": "^5.0.5",
       "devalue": "^5.6.4",
       "flatted": "^3.4.2",
       "h3": "^1.15.6",

@@ -1,5 +1,8 @@
 {
   "imports": {
+    "brace-expansion@1": "npm:brace-expansion@^1.1.13",
+    "brace-expansion@2": "npm:brace-expansion@^2.0.3",
+    "brace-expansion@5": "npm:brace-expansion@^5.0.5",
     "devalue": "npm:devalue@^5.6.4",
     "flatted": "npm:flatted@^3.4.2",
     "h3": "npm:h3@^1.15.6",
