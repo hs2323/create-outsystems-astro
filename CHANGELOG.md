@@ -5,6 +5,51 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+- Added template dependency @oxc-project/runtime due to Angular testing issue.
+
+### Changed
+- Updated docs dependency typescript-eslint to 8.57.2.
+- Updated docs dependency eslint-plugin-perfectionist top 5.7.0.
+- Updated template dependency vue to 3.5.31.
+- Updated template dependency vitest to 4.1.2.
+- Updated template dependency vite to 8.0.1.
+- Updated template dependency svelte to 5.55.0.
+- Updated template dependency preact to 10.29.0.
+- Updated template dependency nanostores to 1.2.0.
+- Updated template dependency happy-dom to 20.8.9.
+- Updated template dependency @vitejs/plugin-vue to 6.0.5.
+- Updated template dependency @vitejs/plugin-react to 6.0.1.
+- Updated template dependency @types/node to 25.5.0.
+- Updated template dependency @sveltejs/vite-plugin-svelte 7.0.0.
+- Updated template dependency @preact/preset-vite to 2.10.5.
+- Updated template dependency @nanostores/react to 1.1.0.
+- Updated template dependency @nanostores/preact to 1.1.0.
+- Updated template dependency typescript-eslint to 8.57.2.
+- Updated template dependency eslint-plugin-testing-library to 7.16.2
+- Updated template dependency eslint-plugin-svelte to 3.16.0.
+- Updated template dependency eslint-plugin-playwright to 2.10.1.
+- Updated template dependency eslint-plugin-perfectionist to 5.7.0.
+- Updated template dependency eslint-plugin-jest to 29.15.1.
+- Updated template dependency eslint-plugin-jest 29.15.1.
+- Updated template dependency angular-eslint 21.3.1.
+- Updated template dependency @eslint/markdown to 8.0.0.
+- Updated template dependency @angular/router to 21.2.6.
+- Updated template dependency @angular/platform-server to 21.2.6.
+- Updated template dependency @angular/platform-browser to 21.2.6.
+- Updated template dependency @angular/language-service to 21.2.6.
+- Updated template dependency @angular/core to 21.2.6.
+- Updated template dependency @angular/compiler-cli to 21.2.6.
+- Updated template dependency @angular/compiler to 21.2.6.
+- Updated template dependency @angular/common to 21.2.6.
+- Updated template dependency @angular/cli to 21.2.5.
+- Updated template dependency @angular/build to 21.2.5.
+- Updated template dependency @angular/animations to 21.2.6.
+- Updated template dependency @angular-devkit/schematics to 21.2.5.
+- Updated template dependency @angular-devkit/architect to 0.2102.5.
+
 ## [0.7.2] - 2026-03-28
 
 ### Changed
