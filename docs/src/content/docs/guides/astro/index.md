@@ -10,6 +10,7 @@ description: Setup Astro JavaScript project
 - [Angular](https://analogjs.org/docs/packages/astro-angular/overview)
 - [Preact](https://docs.astro.build/en/guides/integrations-guide/preact/)
 - [React](https://docs.astro.build/en/guides/integrations-guide/react/)
+- [SolidJS](https://docs.astro.build/en/guides/integrations-guide/solid-js/)
 - [Svelte](https://docs.astro.build/en/guides/integrations-guide/svelte/)
 - [Vue](https://docs.astro.build/en/guides/integrations-guide/vue/)
 
@@ -65,6 +66,8 @@ This will create the generated files as well as an example component. You can de
 │           └── Counter.tsx
 │       └── react/
 │           └── Counter.tsx
+│       └── solid/
+│           └── Counter.tsx
 │       └── svelte/
 │           └── Counter.svelte
 │       └── vue/
@@ -78,6 +81,8 @@ This will create the generated files as well as an example component. You can de
 │           └── Counter.tsx
 │       └── react/
 │           └── react-counter.astro
+│       └── solid/
+│           └── solid-counter.astro
 │       └── svelte/
 │           └── svelte-counter.astro
 │       └── vue/
@@ -114,6 +119,11 @@ For JSX based frameworks, you must use the jsxImportSource header at the top of 
 ##### React
 ```js
 /** @jsxImportSource react */
+```
+
+##### SolidJS
+```js
+/** @jsxImportSource solid-js */
 ```
 
 ### Images
@@ -216,7 +226,7 @@ The default slot (no name) will go into a Preact component as the `children` pro
   </CounterComponent>
 ```
 
-- React example:
+- Preact example:
 ```tsx
   export default function Component({
       children,
@@ -227,10 +237,10 @@ The default slot (no name) will go into a Preact component as the `children` pro
   }) {
       return (
           <>
-              {header}
-              <div>
-                  {children}
-              </div>
+            {header}
+            <div>
+              {children}
+            </div>
           </>
       );
   }
@@ -263,10 +273,46 @@ The default slot (no name) will go into a React component as the `children` prop
   }) {
       return (
           <>
-              {header}
-              <div>
-                  {children}
-              </div>
+            {header}
+            <div>
+              {children}
+            </div>
+          </>
+      );
+  }
+```
+
+#### Preact
+
+The default slot (no name) will go into a Preact component as the `children` prop name. A named slot will go in as a parameter with the name.
+
+- Astro example:
+```astro
+  <CounterComponent client:only="solid-js">
+      <div slot="header">
+          <p>Slot header</p>
+      </div>
+      <div>
+          <p>Slot content</p>
+      </div>
+  </CounterComponent>
+```
+
+- React example:
+```tsx
+  export default function Component({
+      children,
+      header,
+  }: {
+      children: JSX.Element;
+      header: JSX.Element;
+  }) {
+      return (
+          <>
+            {header}
+            <div>
+              {children}
+            </div>
           </>
       );
   }
@@ -370,6 +416,7 @@ The generator comes with unit, integration and testing built in. You can use the
 - [Angular Testing Library](https://testing-library.com/docs/angular-testing-library/intro/)
 - [Preact Testing Library](https://testing-library.com/docs/preact-testing-library/intro/)
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+- [SolidJS Testing Library](https://testing-library.com/docs/solid-testing-library/intro/)
 - [Svelte Testing Library](https://testing-library.com/docs/svelte-testing-library/intro/)
 - [Vue Testing Library](https://testing-library.com/docs/vue-testing-library/intro/)
   The integration tests are placed in the `test/integration` folder. This tests the interaction between the components as a whole.

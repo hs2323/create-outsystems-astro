@@ -15,6 +15,7 @@ Generates [Astro Islands](https://docs.astro.build/en/concepts/islands/) for use
 - [Angular](https://analogjs.org/docs/packages/astro-angular/overview)
 - [Preact](https://docs.astro.build/en/guides/integrations-guide/preact/)
 - [React](https://docs.astro.build/en/guides/integrations-guide/react/)
+- [SolidJS](https://docs.astro.build/en/guides/integrations-guide/solid-js/)
 - [Svelte](https://docs.astro.build/en/guides/integrations-guide/svelte/)
 - [Vue](https://docs.astro.build/en/guides/integrations-guide/vue/)
 
