@@ -4,7 +4,7 @@
   "version": "0.7.1",
   "scripts": {
     "astro": "astro",
-    "audit": "better-npm-audit audit --exclude GHSA-f886-m6hf-6m8v",
+    "audit": "better-npm-audit audit",
     "build": "astro build",
     "dev": "astro dev",
     "format": "prettier . --check",
