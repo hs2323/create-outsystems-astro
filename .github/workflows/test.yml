@@ -404,13 +404,13 @@ jobs:
         run: npm ci
 
       - name: Run CLI
-        run: npx create-outsystems-astro \
-          --projectName test-islands \
-          --frameworks angular \
-          --frameworks preact \
-          --frameworks react \
-          --frameworks solid \
-          --frameworks svelte \
+        run: npx create-outsystems-astro
+          --projectName test-islands
+          --frameworks angular
+          --frameworks preact
+          --frameworks react
+          --frameworks solid
+          --frameworks svelte
           --frameworks vue
 
       - name: Run output
