@@ -1,22 +1,6 @@
 {
   "imports": {
-    "brace-expansion@1": "npm:brace-expansion@^1.1.13",
-    "brace-expansion@2": "npm:brace-expansion@^2.0.3",
-    "brace-expansion@5": "npm:brace-expansion@^5.0.5",
-    "devalue": "npm:devalue@^5.6.4",
-    "flatted": "npm:flatted@^3.4.2",
-    "h3": "npm:h3@^1.15.6",
-    "hono": "npm:hono@^4.12.7",
-    "path-to-regexp": "npm:path-to-regexp@^8.4.0",
-    "playwright": "npm:playwright@1.58.2",
-    "picomatch@2": "npm:picomatch@^2.3.2",
-    "picomatch@3": "npm:picomatch@^3.0.2",
-    "picomatch@4": "npm:picomatch@^4.0.4",
-    "smol-toml": "npm:smol-toml@^1.6.1",
-    "tar": "npm:tar@^7.5.11",
-    "undici": "npm:undici@^7.24.0",
-    "yaml@1": "npm:yaml@^1.10.3",
-    "yaml@2": "npm:yaml@^2.8.3"
+    "playwright": "npm:playwright@1.58.2"
   },
   "allowScripts": [
     "npm:@parcel/watcher@2.5.4",
