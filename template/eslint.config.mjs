@@ -12,6 +12,7 @@ import perfectionist from "eslint-plugin-perfectionist";
 import playwright from "eslint-plugin-playwright";
 import pluginReact from "eslint-plugin-react";
 import pluginReactHooks from "eslint-plugin-react-hooks";
+import solid from "eslint-plugin-solid";
 import svelte from "eslint-plugin-svelte";
 import testingLibrary from "eslint-plugin-testing-library";
 import pluginVue from "eslint-plugin-vue";
@@ -212,4 +213,8 @@ export default [
       },
     },
   },
+  {
+    ...solid.configs["flat/recommended"],
+    files: ["src/framework/solid/**/*.{js,ts,jsx,tsx}"],
+  }
 ];
