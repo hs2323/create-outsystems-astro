@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Added template dependency @oxc-project/runtime due to Angular testing issue.
+
 ### Changed
 - Updated docs dependency typescript-eslint to 8.57.2.
 - Updated docs dependency eslint-plugin-perfectionist top 5.7.0.

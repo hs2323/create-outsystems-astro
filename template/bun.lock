@@ -44,6 +44,7 @@
         "@eslint/eslintrc": "^3.3.5",
         "@eslint/js": "^9.39.4",
         "@eslint/markdown": "^8.0.0",
+        "@oxc-project/runtime": "^0.122.0",
         "@playwright/test": "1.58.2",
         "@preact/preset-vite": "^2.10.5",
         "@sveltejs/vite-plugin-svelte": "^7.0.0",
@@ -591,6 +592,8 @@
     "@one-ini/wasm": ["@one-ini/wasm@0.1.1", "", {}, "sha512-XuySG1E38YScSJoMlqovLru4KTUNSjgVTIjyh7qMX6aNN5HY5Ct5LhRJdxO79JtTzKfzV/bnWpz+zquYrISsvw=="],
 
     "@oslojs/encoding": ["@oslojs/encoding@1.1.0", "", {}, "sha512-70wQhgYmndg4GCPxPPxPGevRKqTIJ2Nh4OkiMWmDAVYsTQ+Ta7Sq+rPevXyXGdzr30/qZBnyOalCszoMxlyldQ=="],
+
+    "@oxc-project/runtime": ["@oxc-project/runtime@0.122.0", "", {}, "sha512-vevyz3bNjevQFCV2Yg5o6Sp9BSoiYiJVymMrzA3S1ZGj4J8ak4YiywhFyQMueQ3UNlJU6HZOZYDy70TUc99aHw=="],
 
     "@oxc-project/types": ["@oxc-project/types@0.113.0", "", {}, "sha512-Tp3XmgxwNQ9pEN9vxgJBAqdRamHibi76iowQ38O2I4PMpcvNRQNVsU2n1x1nv9yh0XoTrGFzf7cZSGxmixxrhA=="],
 

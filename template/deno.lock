@@ -29,6 +29,7 @@
     "npm:@nanostores/preact@^1.1.0": "1.1.0_nanostores@1.2.0_preact@10.29.0",
     "npm:@nanostores/react@^1.1.0": "1.1.0_nanostores@1.2.0_react@19.2.4",
     "npm:@nanostores/vue@^1.1.0": "1.1.0_nanostores@1.2.0_vue@3.5.31__typescript@5.9.3_typescript@5.9.3",
+    "npm:@oxc-project/runtime@0.122": "0.122.0",
     "npm:@playwright/test@1.58.2": "1.58.2",
     "npm:@preact/preset-vite@^2.10.5": "2.10.5_@babel+core@7.29.0_vite@8.0.3__@types+node@25.5.0__yaml@1.10.3__esbuild@0.27.3__sass@1.97.3_preact@10.29.0_@types+node@25.5.0_yaml@1.10.3",
     "npm:@sveltejs/vite-plugin-svelte@7": "7.0.0_svelte@5.55.0__acorn@8.16.0_vite@8.0.3__@types+node@25.5.0__yaml@1.10.3__esbuild@0.27.3__sass@1.97.3_@types+node@25.5.0_yaml@1.10.3",
@@ -2051,6 +2052,9 @@
     },
     "@oslojs/encoding@1.1.0": {
       "integrity": "sha512-70wQhgYmndg4GCPxPPxPGevRKqTIJ2Nh4OkiMWmDAVYsTQ+Ta7Sq+rPevXyXGdzr30/qZBnyOalCszoMxlyldQ=="
+    },
+    "@oxc-project/runtime@0.122.0": {
+      "integrity": "sha512-vevyz3bNjevQFCV2Yg5o6Sp9BSoiYiJVymMrzA3S1ZGj4J8ak4YiywhFyQMueQ3UNlJU6HZOZYDy70TUc99aHw=="
     },
     "@oxc-project/types@0.113.0": {
       "integrity": "sha512-Tp3XmgxwNQ9pEN9vxgJBAqdRamHibi76iowQ38O2I4PMpcvNRQNVsU2n1x1nv9yh0XoTrGFzf7cZSGxmixxrhA=="
@@ -9239,6 +9243,7 @@
         "npm:@nanostores/preact@^1.1.0",
         "npm:@nanostores/react@^1.1.0",
         "npm:@nanostores/vue@^1.1.0",
+        "npm:@oxc-project/runtime@0.122",
         "npm:@playwright/test@1.58.2",
         "npm:@preact/preset-vite@^2.10.5",
         "npm:@sveltejs/vite-plugin-svelte@7",

@@ -1992,6 +1992,11 @@
   resolved "https://registry.npmjs.org/@oslojs/encoding/-/encoding-1.1.0.tgz"
   integrity sha512-70wQhgYmndg4GCPxPPxPGevRKqTIJ2Nh4OkiMWmDAVYsTQ+Ta7Sq+rPevXyXGdzr30/qZBnyOalCszoMxlyldQ==
 
+"@oxc-project/runtime@^0.122.0":
+  version "0.122.0"
+  resolved "https://registry.yarnpkg.com/@oxc-project/runtime/-/runtime-0.122.0.tgz#c9dd2ccbe59627b88def9919ca7f60a7aba24ea9"
+  integrity sha512-vevyz3bNjevQFCV2Yg5o6Sp9BSoiYiJVymMrzA3S1ZGj4J8ak4YiywhFyQMueQ3UNlJU6HZOZYDy70TUc99aHw==
+
 "@oxc-project/types@=0.113.0":
   version "0.113.0"
   resolved "https://registry.npmjs.org/@oxc-project/types/-/types-0.113.0.tgz"

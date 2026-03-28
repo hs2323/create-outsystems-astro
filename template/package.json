@@ -69,6 +69,7 @@
     "@eslint/eslintrc": "^3.3.5",
     "@eslint/js": "^9.39.4",
     "@eslint/markdown": "^8.0.0",
+    "@oxc-project/runtime": "^0.122.0",
     "@playwright/test": "1.58.2",
     "@preact/preset-vite": "^2.10.5",
     "@sveltejs/vite-plugin-svelte": "^7.0.0",
