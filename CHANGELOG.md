@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Changed
+- Updated docs dependency typescript-eslint to 8.57.2.
+- Updated docs dependency eslint-plugin-perfectionist top 5.7.0.
 - Updated template dependency vue to 3.5.31.
 - Updated template dependency vitest to 4.1.2.
 - Updated template dependency vite to 8.0.1.
