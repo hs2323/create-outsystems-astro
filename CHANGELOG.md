@@ -5,6 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Changed
+- Updated template dependency @angular/router to 21.2.6.
+- Updated template dependency @angular/platform-server to 21.2.6.
+- Updated template dependency @angular/platform-browser to 21.2.6.
+- Updated template dependency @angular/language-service to 21.2.6.
+- Updated template dependency @angular/core to 21.2.6.
+- Updated template dependency @angular/compiler-cli to 21.2.6.
+- Updated template dependency @angular/compiler to 21.2.6.
+- Updated template dependency @angular/common to 21.2.6.
+- Updated template dependency @angular/cli to 21.2.5.
+- Updated template dependency @angular/build to 21.2.5.
+- Updated template dependency @angular/animations to 21.2.6.
+- Updated template dependency @angular-devkit/schematics to 21.2.5.
+- Updated template dependency @angular-devkit/architect to 0.2102.5.
+
 ## [0.7.2] - 2026-03-28
 
 ### Changed
