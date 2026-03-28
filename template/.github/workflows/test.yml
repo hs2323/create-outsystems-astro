@@ -8,7 +8,7 @@ on:
     - cron: '0 12 * * *'
 
 env:
-  NODE_VERSION: '24.13.0'
+  NODE_VERSION: '24.14.1'
 
 jobs:
 
@@ -17,10 +17,10 @@ jobs:
 
     steps:  
       - name: Checkout code
-        uses: actions/checkout@v6.0.1
+        uses: actions/checkout@v6.0.2
 
       - name: Use Node.js
-        uses: actions/setup-node@v6.2.0
+        uses: actions/setup-node@v6.3.0
         with:
           node-version: ${{ env.NODE_VERSION }}
 
@@ -36,10 +36,10 @@ jobs:
 
     steps:  
       - name: Checkout code
-        uses: actions/checkout@v6.0.1
+        uses: actions/checkout@v6.0.2
 
       - name: Use Node.js
-        uses: actions/setup-node@v6.2.0
+        uses: actions/setup-node@v6.3.0
         with:
           node-version: ${{ env.NODE_VERSION }}
 
@@ -55,10 +55,10 @@ jobs:
 
     steps:  
       - name: Checkout code
-        uses: actions/checkout@v6.0.1
+        uses: actions/checkout@v6.0.2
 
       - name: Use Node.js
-        uses: actions/setup-node@v6.2.0
+        uses: actions/setup-node@v6.3.0
         with:
           node-version: ${{ env.NODE_VERSION }}
 
@@ -74,10 +74,10 @@ jobs:
 
     steps:  
       - name: Checkout code
-        uses: actions/checkout@v6.0.1
+        uses: actions/checkout@v6.0.2
 
       - name: Use Node.js
-        uses: actions/setup-node@v6.2.0
+        uses: actions/setup-node@v6.3.0
         with:
           node-version: ${{ env.NODE_VERSION }}
 
@@ -92,10 +92,10 @@ jobs:
 
     steps:  
       - name: Checkout code
-        uses: actions/checkout@v6.0.1
+        uses: actions/checkout@v6.0.2
 
       - name: Use Node.js
-        uses: actions/setup-node@v6.2.0
+        uses: actions/setup-node@v6.3.0
         with:
           node-version: ${{ env.NODE_VERSION }}
 
@@ -113,10 +113,10 @@ jobs:
 
     steps:  
       - name: Checkout code
-        uses: actions/checkout@v6.0.1
+        uses: actions/checkout@v6.0.2
 
       - name: Use Node.js
-        uses: actions/setup-node@v6.2.0
+        uses: actions/setup-node@v6.3.0
         with:
           node-version: ${{ env.NODE_VERSION }}
 
