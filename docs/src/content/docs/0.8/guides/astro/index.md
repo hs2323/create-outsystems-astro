@@ -1,7 +1,7 @@
 ---
 title: Astro setup
 description: Setup Astro JavaScript project
-slug: 0.5/guides/astro
+slug: 0.8/guides/astro
 ---
 
 # Setup
@@ -9,7 +9,10 @@ slug: 0.5/guides/astro
 ## Current supported frameworks
 
 * [Angular](https://analogjs.org/docs/packages/astro-angular/overview)
+* [Preact](https://docs.astro.build/en/guides/integrations-guide/preact/)
 * [React](https://docs.astro.build/en/guides/integrations-guide/react/)
+* [SolidJS](https://docs.astro.build/en/guides/integrations-guide/solid-js/)
+* [Svelte](https://docs.astro.build/en/guides/integrations-guide/svelte/)
 * [Vue](https://docs.astro.build/en/guides/integrations-guide/vue/)
 
 ## Getting started
@@ -58,16 +61,31 @@ This will create the generated files as well as an example component. You can de
 /
 ├── src/
 │   └── framework/
+│       └── angular/
+│           └── Counter.component.ts
+│       └── preact/
+│           └── Counter.tsx
 │       └── react/
 │           └── Counter.tsx
+│       └── solid/
+│           └── Counter.tsx
+│       └── svelte/
+│           └── Counter.svelte
 │       └── vue/
 │           └── Counter.vue
 │   └── images/
 │       └── image.png
 │   └── pages/
+│       └── angular/
+│           └── angular-counter.astro
+│       └── preact/
+│           └── Counter.tsx
 │       └── react/
 │           └── react-counter.astro
-│   └── pages/
+│       └── solid/
+│           └── solid-counter.astro
+│       └── svelte/
+│           └── svelte-counter.astro
 │       └── vue/
 │           └── vue-counter.astro
 │   └── styles/
@@ -83,9 +101,35 @@ For Angular, keep the framework/angular structure in place or update the `astro.
 
 Each page inside of the pages file should represent an Island that will be imported into OutSystems. The example has them separated by framework name, but you can name them anything you would like. The output script will flatten the index.html to the root of the `output` folder with the name of the folder.
 
+#### Client loading
+
+For any of the official frameworks (react, preact, solid-js, vue and svelte) you should pass client:only="\[FRAMEWORK]". See [Astro documentation](https://docs.astro.build/en/reference/directives-reference/) for client:only. For other fameworks, such as Angular, it should pass client:load or any other non specific famework.
+
 ### Framework
 
 The location of the component code.
+
+#### JSX frameworks
+
+For JSX based frameworks, you must use the jsxImportSource header at the top of the page:
+
+##### Preact
+
+```js
+/** @jsxImportSource preact */
+```
+
+##### React
+
+```js
+/** @jsxImportSource react */
+```
+
+##### SolidJS
+
+```js
+/** @jsxImportSource solid-js */
+```
 
 ### Images
 
@@ -151,7 +195,7 @@ All commands are run from the root of the project, from a terminal, based on you
 
 | Command                               | Action                                           |
 | :------------------------------------ | :----------------------------------------------- |
-| `deno install && deno run postinsall` | Installs dependencies                            |
+| `deno install && deno run postinsall:deno` | Installs dependencies                            |
 | `deno run dev`                        | Starts local dev server at `localhost:4321`      |
 | `deno run build`                      | Build distribution to `./dist/`                  |
 | `deno run output:deno`                | Build OutSystems production site to `./output/`  |
@@ -166,6 +210,48 @@ Since OutSystems does not have a concept of [NULL](https://success.outsystems.co
 ### Slots
 
 [Slots](https://docs.astro.build/en/basics/astro-components/#slots) are an optional HTML that can be passed into a component. They are then able to be picked up and used by the Astro Island component. You can use either default slot or named slots (or both).
+
+#### Angular
+
+Angular does not support the use of slots.
+
+#### Preact
+
+The default slot (no name) will go into a Preact component as the `children` prop name. A named slot will go in as a parameter with the name.
+
+* Astro example:
+
+```astro
+  <CounterComponent client:only="preact">
+      <div slot="header">
+          <p>Slot header</p>
+      </div>
+      <div>
+          <p>Slot content</p>
+      </div>
+  </CounterComponent>
+```
+
+* Preact example:
+
+```tsx
+  export default function Component({
+      children,
+      header,
+  }: {
+      children: ComponentChildren
+      header: ComponentChildren;
+  }) {
+      return (
+          <>
+            {header}
+            <div>
+              {children}
+            </div>
+          </>
+      );
+  }
+```
 
 #### React
 
@@ -196,18 +282,82 @@ The default slot (no name) will go into a React component as the `children` prop
   }) {
       return (
           <>
-              {header}
-              <div>
-                  {children}
-              </div>
+            {header}
+            <div>
+              {children}
+            </div>
           </>
       );
   }
 ```
 
+#### Preact
+
+The default slot (no name) will go into a Preact component as the `children` prop name. A named slot will go in as a parameter with the name.
+
+* Astro example:
+
+```astro
+  <CounterComponent client:only="solid-js">
+      <div slot="header">
+          <p>Slot header</p>
+      </div>
+      <div>
+          <p>Slot content</p>
+      </div>
+  </CounterComponent>
+```
+
+* React example:
+
+```tsx
+  export default function Component({
+      children,
+      header,
+  }: {
+      children: JSX.Element;
+      header: JSX.Element;
+  }) {
+      return (
+          <>
+            {header}
+            <div>
+              {children}
+            </div>
+          </>
+      );
+  }
+```
+
+#### Svelte
+
+The default slot (no name) will go into a Svelte component as the `<slot>` name. A named slot will go in as a parameter with the name.
+
+* Astro example:
+
+```astro
+  <CounterComponent client:only="svelte">
+      <div slot="header">
+          <p>Slot header</p>
+      </div>
+      <div>
+          <p>Slot content</p>
+      </div>
+  </CounterComponent>
+```
+
+* Svelte example:
+
+```svelte
+<slot name="header" />
+<div>
+  <slot />
+</div>
+```
+
 #### Vue
 
-The default slot (no name) will go into a React component as the `<slot />` name. A named slot will go in as a parameter with the name.
+The default slot (no name) will go into a Vue component as the `<slot />` name. A named slot will go in as a parameter with the name.
 
 * Astro example:
 
@@ -232,10 +382,6 @@ The default slot (no name) will go into a React component as the `<slot />` name
     </div>
   </template>
 ```
-
-#### Angular
-
-Angular does not support the use of slots.
 
 ## Using OutSystems handlers
 
@@ -270,6 +416,8 @@ You cannot send Union types (such as either an array or object) due to OutSystem
 
 This will create a set of files that will then need to be converted to OutSystems components.
 
+If using a directive for the component of anything other than `client:only`, you may need to delete the interior contents of the rendered island (since it will have done some static generation).
+
 ## Testing
 
 The generator comes with unit, integration and testing built in. You can use the built in ones or replace them with your own testing framework preferences.
@@ -281,10 +429,13 @@ The generator comes with unit, integration and testing built in. You can use the
 
 ### Integration Testing
 
-* [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
-* [Vue Testing Library](https://testing-library.com/docs/vue-testing-library/intro/)
 * [Angular Testing Library](https://testing-library.com/docs/angular-testing-library/intro/)
-  The integration tests are placed in the `test/integration` folder. This tests the interaction between the components as a whole. The React and Vue libraries have an equivalent testing library module.
+* [Preact Testing Library](https://testing-library.com/docs/preact-testing-library/intro/)
+* [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+* [SolidJS Testing Library](https://testing-library.com/docs/solid-testing-library/intro/)
+* [Svelte Testing Library](https://testing-library.com/docs/svelte-testing-library/intro/)
+* [Vue Testing Library](https://testing-library.com/docs/vue-testing-library/intro/)
+  The integration tests are placed in the `test/integration` folder. This tests the interaction between the components as a whole.
 
 ### End-to-End
 

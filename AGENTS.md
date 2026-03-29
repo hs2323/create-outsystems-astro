@@ -8,6 +8,7 @@
     - Angular
     - Preact
     - React
+    - SolidJS
     - Vue
     - Svelte
 - While unique and custom functionality may be developed, a general use case will be for wrappers around pre-existing modules/libraries/components.
