@@ -5,18 +5,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Security
+
+- Updated sub-dependency defu to 6.1.6 due to CVE-2026-35209.
+
 ## [0.8.1] - 2026-04-03
 
 ### Added
+
 - Adding dependency cross-env to run build scripts across environments.
 
 ## [0.8.0] - 2026-03-29
 
 ### Added
+
 - Added SolidJS integration.
 - Added dependency @oxc-project/runtime due to Angular testing issue.
 
 ### Changed
+
 - Updated dependency vue to 3.5.31.
 - Updated dependency vitest to 4.1.2.
 - Updated dependency vite to 8.0.1.
@@ -57,9 +66,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.7.2] - 2026-03-28
 
 ### Changed
+
 - Changed build output to run as NODE_ENV=production.
 
 ### Security
+
 - Updated sub-dependency path-to-regexp to 8.4.0 due to CVE-2026-4923 and CVE-2026-4926.
 - Updated sub-dependency brace-expansion to 1.1.13, 2.0.3 and 5.0.5 due to CVE-2026-33750.
 - Updated sub-dependency smol-toml to 1.6.1 due to GHSA-v3rj-xjv7-4jmq.
@@ -73,6 +84,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.7.1] - 2026-03-15
 
 ### Security
+
 - Updated sub-dependency undici to 7.24.3 due to CVE-2026-1525, CVE-2026-1526, CVE-2026-1527, CVE-2026-1528, CVE-2026-2229 and CVE-2026-2581.
 - Updated sub-dependency flatted to 3.4.1 due to CVE-2026-32141.
 - Updated dependency @angular/router to 21.2.4 due to CVE-2026-32635.
@@ -95,10 +107,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.7.0] - 2026-03-08
 
 ### Added
+
 - Added peer dependency @babel/core.
 - Added Preact integration.
 
 ### Changed
+
 - Updated dependency svelte-eslint-parser to 1.6.0.
 - Updated dependency svelte to 5.53.7.
 - Updated dependency prettier-plugin-svelte to 3.5.1.
@@ -131,12 +145,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated dependency Playwright to 1.58.2.
 
 ### Fixed
-- Fixed generator renaming .gitignore to .npmignore in generated template. 
+
+- Fixed generator renaming .gitignore to .npmignore in generated template.
 - Fixed Playwright checking for root to be ready.
 
-##  [0.6.0] - 2026-02-28
+## [0.6.0] - 2026-02-28
 
 ### Added
+
 - Added Svelte integration.
 
 ### Changed
@@ -167,17 +183,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated dependency astro to 5.18.0.
 
 ### Fixed
+
 - Fixed inline script Nano Stores for development .astro pages.
 
 ## [0.5.0] - 2026-02-28
 
 ### Added
+
 - Added improved-yarn-audit for Yarn auditing.
 - Added better-npm-audit for npm auditing.
 - Added peer dependencies @angular-devkit/architect, @angular/cli, hono, vite and zod.
 - Added Nano Stores for React and Vue.
 
 ### Changed
+
 - Updated Deno allowed scripts.
 - Updated dependency vue 3.25.7.
 - Updated dependency vitest to 4.0.18.
@@ -208,9 +227,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated dependency @analogjs/vitest-angular to 2.2.3.
 - Updated dependency @analogjs/vite-plugin-angular to 2.2.3.
 - Updated dependency @analogjs/astro-angular to 2.2.3.
-- Changed recommendation of function handler from binding to the ```window``` instead of the ```document``` object.
+- Changed recommendation of function handler from binding to the `window` instead of the `document` object.
 
 ### Security
+
 - Updated sub-dependency express-rate-limit to 8.2.2 due to CVE-2026-30827.
 - Updated dependency @angular/router to 21.1.6 due to CVE-2026-27970.
 - Updated dependency @angular/cli to 21.1.5 due to CVE-2026-27970.
@@ -241,25 +261,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.4.2] - 2026-01-21
 
 ### Changed
+
 - Changing manual chunks output to remove .js in filename.
 
 ### Security
+
 - Updated sub-dependency tar to 7.5.6 due to CVE-2026-23950.
 
 ## [0.4.1] - 2026-01-16
 
 ### Changed
+
 - Updated dependency happy-dom to 20.3.1.
 - Updated dependency eslint-plugin-vue to 10.7.0.
 - Updated dependency astro to 5.16.11.
 - Updated dependency @types/node to 25.0.9.
 
 ### Fixed
+
 - Fixed missing template GitHub Actions npm install.
 
 ## [0.4.0] - 2026-01-15
 
 ### Added
+
 - Added ESLint linting.
 - Added Prettier formatting.
 - Added Playwright end-to-end testing.
@@ -269,30 +294,35 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added Angular integration.
 
 ### Changed
+
 - Updated temlate dependency astro to 5.16.9.
 - Updated dependency @types/react to 19.2.8.
 - Updated dependency @types/node to 25.0.8.
 - Updated dependency @astrojs/vue to 5.1.4.
 
 ### Fixed
+
 - Fixed Deno build and output.
 - Fixed Bun build and output.
 
 ### Security
+
 - Updated sub-dependency h3 to 1.15.5 due to CVE-2026-23527.
 - Updated sub-dependency devalue to 5.6.2 due to CVE-2026-22774.
-- Updated dependency undici to 17.8.2 due to CVE-2026-22036. 
+- Updated dependency undici to 17.8.2 due to CVE-2026-22036.
 - Updated dependency diff to 8.0.3 due to GHSA-73rr-hh4g-fpgx.
 
 ## [0.3.0] - 2025-12-24
 
 ### Added
+
 - Added GitHub CI publishing to npm.
 - Added integration guides for AI agents.
 - Added ability to use package managers npm, Yarn, pnpm, Bun and Deno for initialization.
 - Added slot processing for output into OutSystems.
 
 ### Changed
+
 - Updated dependency vue to 3.25.6.
 - Updated dependency astro to 5.16.6.
 - Changed CLI generation to include only requested frameworks.
@@ -300,9 +330,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.2.0] - 2025-12-18
 
 ### Added
+
 - Added Vue integration.
 
 ### Changed
+
 - Changed folder structure of demo components.
 - Updated dependency astro to 5.16.5.
 - Updated dependency react to 19.2.3.
@@ -311,5 +343,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.1.0] - 2025-12-03
 
 ### Added
+
 - Added Starlight docs.
 - Added starter.
