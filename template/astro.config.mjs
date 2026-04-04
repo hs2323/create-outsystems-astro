@@ -7,6 +7,8 @@ import svelte from "@astrojs/svelte";
 import vue from "@astrojs/vue";
 import { defineConfig } from "astro/config";
 
+import html from "./integrations/html";
+
 // https://astro.build/config
 export default defineConfig({
   build: {
@@ -20,6 +22,7 @@ export default defineConfig({
         },
       },
     }),
+    html(),
     preact({
       compat: true,
       include: ["src/framework/preact/*"],

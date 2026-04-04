@@ -1,0 +1,18 @@
+---
+import DemoComponent from "../../framework/html/Demo";
+import styles from "../../styles/index.css?url";
+---
+<html lang="en">
+    <head>
+        <link href={styles} rel="stylesheet" />
+    </head>
+    <body>
+        <div class="counter-title">Astro Page</div>
+        <DemoComponent client:load stuff="thing">
+            <div class="counter-title" slot="header">HTML Demo Component</div>
+            <div style="text-align: center;">
+                <p><em>This is content passed into the component.</em></p>
+            </div>
+        </DemoComponent>
+    </body>
+</html>
