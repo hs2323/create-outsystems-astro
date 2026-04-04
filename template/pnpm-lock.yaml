@@ -62,9 +62,6 @@ importers:
       astro:
         specifier: ^5.18.1
         version: 5.18.1(@types/node@25.5.0)(lightningcss@1.32.0)(rollup@4.59.0)(sass@1.97.3)(typescript@5.9.3)(yaml@2.8.3)
-      cross-env:
-        specifier: ^10.1.0
-        version: 10.1.0
       nanostores:
         specifier: ^1.2.0
         version: 1.2.0
@@ -198,6 +195,9 @@ importers:
       better-npm-audit:
         specifier: ^3.11.0
         version: 3.11.0
+      cross-env:
+        specifier: ^10.1.0
+        version: 10.1.0
       dotenv:
         specifier: ^17.3.1
         version: 17.3.1
