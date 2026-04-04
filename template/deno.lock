@@ -54,6 +54,7 @@
     "npm:astro@^5.18.1": "5.18.1_typescript@5.9.3_@types+node@25.5.0_vite@6.4.1__@types+node@25.5.0__picomatch@4.0.4_zod@3.25.76",
     "npm:better-npm-audit@^3.11.0": "3.11.0",
     "npm:cross-env@^10.1.0": "10.1.0",
+    "npm:defu@^6.1.5": "6.1.6",
     "npm:dotenv@^17.3.1": "17.3.1",
     "npm:eslint-config-preact@2": "2.0.0_eslint@9.39.4_@babel+core@7.29.0",
     "npm:eslint-config-prettier@^10.1.8": "10.1.8_eslint@9.39.4",
@@ -4270,8 +4271,8 @@
         "object-keys"
       ]
     },
-    "defu@6.1.4": {
-      "integrity": "sha512-mEQCMmwJu317oSz8CwdIOdwf3xMif1ttiM8LTufzc3g6kR+9Pe236twL8j3IYT1F7GfRgGcW6MWxzZjLIkuHIg=="
+    "defu@6.1.6": {
+      "integrity": "sha512-f8mefEW4WIVg4LckePx3mALjQSPQgFlg9U8yaPdlsbdYcHQyj9n2zL2LJEA52smeYxOvmd/nB7TpMtHGMTHcug=="
     },
     "depd@2.0.0": {
       "integrity": "sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw=="
@@ -9369,6 +9370,7 @@
   },
   "workspace": {
     "dependencies": [
+      "npm:defu@^6.1.5",
       "npm:playwright@1.58.2"
     ],
     "packageJson": {
@@ -9467,7 +9469,10 @@
         "npm:vitest@^4.1.2",
         "npm:vue-eslint-parser@^10.4.0",
         "npm:vue@^3.5.31"
-      ]
+      ],
+      "overrides": {
+        "defu": "^6.1.5"
+      }
     }
   }
 }
