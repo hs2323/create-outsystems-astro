@@ -1,5 +1,6 @@
 {
   "imports": {
+    "defu": "npm:defu@^6.1.5",
     "playwright": "npm:playwright@1.58.2"
   },
   "allowScripts": [
