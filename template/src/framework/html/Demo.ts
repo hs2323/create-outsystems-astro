@@ -2,8 +2,8 @@ import AstroLogo from "../../images/astro.png?url";
 import OutSystemsLogo from "../../images/outsystems.png?url";
 
 interface DemoProps {
-  header?: string; // named slot
-  children?: string; // default slot
+  header?: string;
+  children?: string;
 }
 
 export default function Demo({

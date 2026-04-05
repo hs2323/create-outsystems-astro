@@ -90,7 +90,7 @@ Next steps:
 
 function injectIntegrations(targetDir) {
   const srcDist = path.join(__dirname, "..", "integrations", "dist", "html");
-  const destDir = path.join(targetDir, "integrations");
+  const destDir = path.join(targetDir, ".integrations");
 
   // Copy built JS files from dist/ — no TS sources, no dist/ nesting
   const files = ["index.js", "client.js", "server.js"];
@@ -129,7 +129,7 @@ function injectIntegrations(targetDir) {
   const pkgPath = path.join(targetDir, "package.json");
   const pkg = JSON.parse(fs.readFileSync(pkgPath, "utf-8"));
   if (pkg.dependencies?.["islands-integrations"]) {
-    pkg.dependencies["islands-integrations"] = "file:integrations";
+    pkg.dependencies["islands-integrations"] = "file:.integrations";
     fs.writeFileSync(pkgPath, JSON.stringify(pkg, null, 2) + "\n", "utf-8");
   }
 
