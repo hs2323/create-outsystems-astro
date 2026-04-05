@@ -10,15 +10,8 @@
   "bin": {
     "create-outsystems-astro": "bin/cli.js"
   },
-  "exports": {
-    "./integrations/html": "./integrations/html/index.ts",
-    "./integrations/html/client": "./integrations/html/client.ts",
-    "./integrations/html/server": "./integrations/html/server.ts"
-  },
   "files": [
     "bin",
-    "integrations",
-    "scripts",
     "template",
     "template/.gitignore"
   ],
