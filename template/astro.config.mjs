@@ -7,7 +7,7 @@ import svelte from "@astrojs/svelte";
 import vue from "@astrojs/vue";
 import { defineConfig } from "astro/config";
 
-import html from "./integrations/html";
+import html from "create-outsystems-astro/integrations/html";
 
 // https://astro.build/config
 export default defineConfig({

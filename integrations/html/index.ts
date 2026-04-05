@@ -3,8 +3,8 @@ import type { AstroIntegration, AstroRenderer, ViteUserConfig } from "astro";
 function getRenderer(development: boolean): AstroRenderer {
   return {
     name: "islands/html",
-    clientEntrypoint: "./integrations/html/client.ts",
-    serverEntrypoint: "./integrations/html/server.ts",
+    clientEntrypoint: "create-outsystems-astro/integrations/html/client",
+    serverEntrypoint: "create-outsystems-astro/integrations/html/server",
   };
 }
 

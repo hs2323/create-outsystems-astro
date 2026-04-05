@@ -9,7 +9,7 @@
     "audit:pnpm": "pnpm audit",
     "audit:yarn": "yarn run improved-yarn-audit --exclude GHSA-j687-52p2-xcff,GHSA-45q2-gjvg-7973",
     "build": "astro build",
-    "dev": "astro dev",
+    "dev": "node ../scripts/link-integrations.js && astro dev",
     "format": "prettier . --check",
     "format:write": "prettier  --write .",
     "lint": "eslint",

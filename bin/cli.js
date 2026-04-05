@@ -50,6 +50,7 @@ async function main() {
   copyDir(templateDir, targetDir);
 
   const packageManager = packageInstall(targetDir);
+  injectIntegrations(targetDir);
 
   let selectedFrameworks = [];
 
@@ -89,6 +90,40 @@ Next steps:
   cd ${response.projectName}
   ${packageManager} run dev
 `);
+}
+
+function injectIntegrations(targetDir) {
+  const srcIntegrations = path.join(__dirname, "..", "integrations");
+  if (!fs.existsSync(srcIntegrations)) return;
+
+  const rootPkg = JSON.parse(
+    fs.readFileSync(path.join(__dirname, "..", "package.json"), "utf-8")
+  );
+
+  const destPkg = path.join(
+    targetDir, "node_modules", "create-outsystems-astro"
+  );
+
+  fs.mkdirSync(destPkg, { recursive: true });
+
+  // Write a minimal package.json so Node/Vite can resolve subpath exports
+  fs.writeFileSync(
+    path.join(destPkg, "package.json"),
+    JSON.stringify(
+      {
+        name: "create-outsystems-astro",
+        version: rootPkg.version,
+        type: "module",
+        exports: rootPkg.exports,
+      },
+      null,
+      2
+    ) + "\n"
+  );
+
+  // Copy integration source files
+  copyDir(srcIntegrations, path.join(destPkg, "integrations"));
+  console.log("🔌 Injected outsystems integrations into node_modules");
 }
 
 // Simple recursive copy
