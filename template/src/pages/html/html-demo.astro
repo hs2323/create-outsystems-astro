@@ -1,14 +1,59 @@
 ---
 import DemoComponent from "../../framework/html/Demo";
 import styles from "../../styles/index.css?url";
+const initialCount = 5;
+const showMessage = "showMessage";
 ---
 <html lang="en">
     <head>
         <link href={styles} rel="stylesheet" />
+        <script>
+            window["showMessage"] = (count) => {
+                document.getElementById("counter").textContent = count;
+            };
+            document.addEventListener("DOMContentLoaded", function () {
+                const input = document.getElementById("store");
+                input.value = window.Stores["htmlStore"].get();
+            });
+        </script>
     </head>
     <body>
         <div class="counter-title">Astro Page</div>
-        <DemoComponent client:load stuff="thing">
+        <div class="card-grid">
+            <div class="card">
+                <strong>Counter component</strong>
+                <div class="card-content">
+                    <div style="text-align: center; margin-top: 30px;">
+                        Counter value:
+                        <div>
+                            <span id="counter"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <strong>Nano Stores</strong>
+                <div class="card-content">
+                    <div style="text-align: center; margin-top: 30px;">
+                        <input
+                            id="store"
+                            placeholder="Type something..."
+                            type="text"
+                        /><button
+                            class="card-btn"
+                            onclick="window.Stores['htmlStore'].set(document.getElementById('store').value)"
+                            >Update Store</button
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <DemoComponent
+            client:load
+            initialCount={initialCount}
+            showMessage={showMessage}
+        >
             <div class="counter-title" slot="header">HTML Demo Component</div>
             <div style="text-align: center;">
                 <p><em>This is content passed into the component.</em></p>
