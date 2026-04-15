@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+- Updated sub-dependency hono to 4.12.12 due to GHSA-26pp-8wgv-hjvm, CVE-2026-39410, CVE-2026-39409, CVE-2026-39408 and CVE-2026-39407.
+- Updated sub-dependency @hono/node-server to 1.19.14 due to CVE-2026-39406.
+- Updated sub-dependency vite to 6.4.2, 7.3.2, and 8.0.8 due to CVE-2026-39363, CVE-2026-39364 and CVE-2026-39365.
 - Updated sub-dependency defu to 6.1.6 due to CVE-2026-35209.
 
 ## [0.8.1] - 2026-04-03

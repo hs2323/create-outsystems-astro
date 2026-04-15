@@ -1,6 +1,6 @@
 /** @jsxImportSource react */
 import { useStore } from "@nanostores/react";
-import { useState } from "react";
+import React, { useState } from "react";
 
 import AstroLogo from "../../images/astro.png?url";
 import OutSystemsLogo from "../../images/outsystems.png?url";
