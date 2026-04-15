@@ -8,6 +8,8 @@ const showMessage = "showMessage";
     <head>
         <link href={styles} rel="stylesheet" />
         <script>
+            import { setupStore } from "../../stores/demo";
+            setupStore("htmlStore");
             window["showMessage"] = (count) => {
                 document.getElementById("counter").textContent = count;
             };

@@ -22,6 +22,13 @@ const client_default =
     }
 
     element.innerHTML = html;
+
+    // innerHTML does not execute <script> tags — re-create each one so it runs
+    element.querySelectorAll("script").forEach((oldScript) => {
+      const newScript = document.createElement("script");
+      newScript.textContent = oldScript.textContent;
+      oldScript.parentNode?.replaceChild(newScript, oldScript);
+    });
   };
 
 export default client_default;
