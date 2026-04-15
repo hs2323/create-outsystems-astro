@@ -3,7 +3,8 @@
     "@hono/node-server": "npm:@hono/node-server@^1.19.13",
     "defu": "npm:defu@^6.1.5",
     "hono": "npm:hono@^4.12.12",
-    "playwright": "npm:playwright@1.58.2"
+    "playwright": "npm:playwright@1.58.2",
+    "vite@8": "npm:vite@^8.0.8"
   },
   "allowScripts": [
     "npm:@parcel/watcher@2.5.4",

@@ -47,7 +47,6 @@ The Deno DX command is available in [Deno 2.6](https://deno.com/blog/v2.6).
 ```bash
 dx create-outsystems-astro
 ```
-Due to an issue with node:dns compatibility, the minimum version for Deno is 2.7.12.
 
 This will create the generated files as well as an example component.
 
