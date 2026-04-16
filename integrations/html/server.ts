@@ -13,21 +13,7 @@ async function check(Component: unknown): Promise<boolean> {
   return false;
 }
 
-async function renderToStaticMarkup(
-  Component: unknown,
-  props: Record<string, unknown>,
-  { default: children = "", ...slots }: Record<string, string> = {},
-): Promise<{ html: string }> {
-  if (typeof Component === "string") return { html: Component };
-  if (typeof Component === "function") {
-    return {
-      html: (Component as (p: Record<string, unknown>) => string)({
-        ...props,
-        children,
-        ...slots,
-      }),
-    };
-  }
+async function renderToStaticMarkup(): Promise<{ html: string }> {
   return { html: "" };
 }
 

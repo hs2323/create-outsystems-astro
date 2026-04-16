@@ -25,6 +25,3 @@ pnpm-debug.log*
 
 # output folder
 output/
-
-# Integrations inside template during generator development
-template/integrations
