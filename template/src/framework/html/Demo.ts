@@ -58,7 +58,7 @@ export default function Demo({
       </div>
       <script>
         (function () {
-          const container = document.currentScript.parentElement;
+          const container = (document.currentScript && document.currentScript.parentElement) || document.querySelector('.html-demo');
           let count = ${initialCount};
           const countEl = container.querySelector('.count');
           const addBtn = container.querySelector('.add');
