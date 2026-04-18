@@ -607,7 +607,6 @@ jobs:
 
       - name: Run security check
         working-directory: template
-        continue-on-error: true
         run: deno run audit:deno
 
   security-npm:
@@ -653,7 +652,6 @@ jobs:
 
       - name: Run security check
         working-directory: template
-        continue-on-error: true
         run: pnpm run audit:pnpm
 
   security-yarn:
@@ -674,7 +672,6 @@ jobs:
 
       - name: Run security check
         working-directory: template
-        continue-on-error: true
         run: yarn run audit:yarn
 
   test-bun:
