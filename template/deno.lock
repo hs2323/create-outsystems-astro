@@ -27,7 +27,7 @@
     "npm:@eslint/eslintrc@^3.3.5": "3.3.5",
     "npm:@eslint/js@^9.39.4": "9.39.4",
     "npm:@eslint/markdown@8": "8.0.0",
-    "npm:@hono/node-server@^1.19.13": "1.19.13_hono@4.12.12",
+    "npm:@hono/node-server@^1.19.13": "1.19.13_hono@4.12.14",
     "npm:@nanostores/preact@^1.1.0": "1.1.0_nanostores@1.2.0_preact@10.29.0",
     "npm:@nanostores/react@^1.1.0": "1.1.0_nanostores@1.2.0_react@19.2.4",
     "npm:@nanostores/solid@^1.1.1": "1.1.1_nanostores@1.2.0_solid-js@1.9.12__seroval@1.5.1",
@@ -74,7 +74,7 @@
     "npm:eslint@^9.39.4": "9.39.4",
     "npm:globals@^17.4.0": "17.4.0",
     "npm:happy-dom@^20.8.9": "20.8.9",
-    "npm:hono@^4.12.12": "4.12.12",
+    "npm:hono@^4.12.14": "4.12.14",
     "npm:improved-yarn-audit@^3.0.4": "3.0.4",
     "npm:js-beautify@^1.15.4": "1.15.4",
     "npm:nanostores@^1.2.0": "1.2.0",
@@ -1318,6 +1318,9 @@
       "integrity": "sha512-sSAYhQca3rDWtQUHSAPeO7axFIUJOI6hn1gjRC5APVE1a90tuyT8f5WIgRsFhhWA7htNkju2veB9eWL6YHi/Lw=="
     },
     "@hono/node-server@1.19.13_hono@4.12.12": {
+      "integrity": "sha512-TsQLe4i2gvoTtrHje625ngThGBySOgSK3Xo2XRYOdqGN1teR8+I7vchQC46uLJi8OF62YTYA3AhSpumtkhsaKQ=="
+    },
+    "@hono/node-server@1.19.13_hono@4.12.14": {
       "integrity": "sha512-TsQLe4i2gvoTtrHje625ngThGBySOgSK3Xo2XRYOdqGN1teR8+I7vchQC46uLJi8OF62YTYA3AhSpumtkhsaKQ==",
       "dependencies": [
         "hono"
@@ -1784,7 +1787,7 @@
     "@modelcontextprotocol/sdk@1.26.0_zod@4.3.6_hono@4.12.12_ajv@8.18.0_express@5.2.1": {
       "integrity": "sha512-Y5RmPncpiDtTXDbLKswIJzTqu2hyBKxTNsgKqKclDbhIgg1wgtf1fRuvxgTnRfcnxtvvgbIEcqUOzZrJ6iSReg==",
       "dependencies": [
-        "@hono/node-server",
+        "@hono/node-server@1.19.13_hono@4.12.12",
         "ajv@8.18.0",
         "ajv-formats",
         "content-type",
@@ -5531,8 +5534,8 @@
         "hermes-estree"
       ]
     },
-    "hono@4.12.12": {
-      "integrity": "sha512-p1JfQMKaceuCbpJKAPKVqyqviZdS0eUxH9v82oWo1kb9xjQ5wA6iP3FNVAPDFlz5/p7d45lO+BpSk1tuSZMF4Q=="
+    "hono@4.12.14": {
+      "integrity": "sha512-am5zfg3yu6sqn5yjKBNqhnTX7Cv+m00ox+7jbaKkrLMRJ4rAdldd1xPd/JzbBWspqaQv6RSTrgFN95EsfhC+7w=="
     },
     "hookable@5.5.3": {
       "integrity": "sha512-Yc+BQe8SvoXH1643Qez1zqLRmbA5rCL+sSmk6TVos0LWVfNIB7PGncdlId77WzLGSIB5KaWgTaNTs2lNVEI6VQ=="
@@ -9353,7 +9356,7 @@
     "dependencies": [
       "npm:@hono/node-server@^1.19.13",
       "npm:defu@^6.1.5",
-      "npm:hono@^4.12.12",
+      "npm:hono@^4.12.14",
       "npm:playwright@1.58.2",
       "npm:vite@^8.0.8"
     ],
@@ -9460,7 +9463,7 @@
           "vite": "^7.3.2"
         },
         "defu": "^6.1.5",
-        "hono": "^4.12.12",
+        "hono": "^4.12.14",
         "vite@6": "^6.4.2",
         "vite@7": "^7.3.2"
       }

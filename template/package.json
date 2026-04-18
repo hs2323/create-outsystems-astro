@@ -133,14 +133,14 @@
         "vite": "^7.3.2"
       },
       "defu": "^6.1.5",
-      "hono": "^4.12.12",
+      "hono": "^4.12.14",
       "vite@6": "^6.4.2",
       "vite@7": "^7.3.2"
   },
   "resolutions": {
       "@hono/node-server": "^1.19.13",
       "defu": "^6.1.5",
-      "hono": "^4.12.12"
+      "hono": "^4.12.14"
   },
   "pnpm": {
     "auditConfig": {
@@ -159,7 +159,7 @@
       "@vue/devtools-core>vite": "^7.3.2",
       "astro>vite": "^6.4.2",
       "defu": "^6.1.5",
-      "hono": "^4.12.12",
+      "hono": "^4.12.14",
       "vitest>vite": "^8.0.8"
     }
   }
