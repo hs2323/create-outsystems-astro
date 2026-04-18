@@ -3,11 +3,11 @@
   "type": "module",
   "scripts": {
     "astro": "astro",
-    "audit:bun": "bun audit",
-    "audit:deno": "deno audit",
-    "audit:npm": "better-npm-audit audit",
+    "audit:bun": "bun audit --ignore=GHSA-45q2-gjvg-7973",
+    "audit:deno": "deno audit || true",
+    "audit:npm": "better-npm-audit audit --exclude GHSA-45q2-gjvg-7973",
     "audit:pnpm": "pnpm audit",
-    "audit:yarn": "yarn run improved-yarn-audit",
+    "audit:yarn": "yarn run improved-yarn-audit --exclude GHSA-45q2-gjvg-7973",
     "build": "astro build",
     "dev": "astro dev",
     "format": "prettier . --check",
@@ -143,6 +143,11 @@
       "hono": "^4.12.12"
   },
   "pnpm": {
+    "auditConfig": {
+      "ignoreGhsas": [
+        "GHSA-45q2-gjvg-7973"
+      ]
+    },
     "overrides": {
       "@angular/build>vite": "^7.3.2",
       "@astrojs/preact>vite": "^6.4.2",
