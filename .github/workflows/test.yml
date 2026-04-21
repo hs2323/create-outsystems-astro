@@ -602,12 +602,32 @@ jobs:
           deno-version: ${{ env.DENO_VERSION }}
 
       - name: Install dependencies
-        working-directory: template
+        working-directory: integrations
         run: deno install --frozen && deno run postinstall:deno
 
       - name: Run security check
         working-directory: template
         run: deno run audit:deno
+
+  security-integrations:
+    runs-on: ubuntu-latest
+
+    steps:  
+      - name: Checkout code
+        uses: actions/checkout@v6.0.2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v6.3.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install dependencies
+        working-directory: integrations
+        run: npm ci
+
+      - name: Run security check
+        working-directory: integrations
+        run: npm audit
 
   security-npm:
     runs-on: ubuntu-latest

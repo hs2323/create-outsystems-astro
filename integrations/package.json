@@ -1,6 +1,6 @@
 {
   "name": "islands-integrations",
-  "version": "0.1.0",
+  "version": "0.8.2",
   "type": "module",
   "exports": {
     "./html": "./dist/html/index.js",
@@ -12,7 +12,7 @@
     "prepublishOnly": "tsc"
   },
   "devDependencies": {
-    "astro": "*",
-    "typescript": "*"
+    "astro": "^5.18.1",
+    "typescript": "^5.9.3"
   }
 }

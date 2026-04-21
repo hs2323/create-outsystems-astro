@@ -14,6 +14,7 @@ const __dirname = path.dirname(__filename);
 
 const FRAMEWORKS = [
   { title: "Angular", value: "angular" },
+  { title: "HTML", value: "html" },
   { title: "Preact", value: "preact" },
   { title: "React", value: "react" },
   { title: "SolidJS", value: "solid" },
@@ -206,6 +207,11 @@ function updateAstroConfig(projectDir, selectedFrameworks) {
       import:
         /import\s+angular\s+from\s+['"]@analogjs\/astro-angular['"];\s*\n?/,
       integration: /angular\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/,
+    },
+    html: {
+      import:
+        /import\s+html\s+from\s+['"]islands-integrations\/html['"];\s*\n?/,
+      integration: /html\s*\(\s*\)\s*,?\s*/,
     },
     preact: {
       import: /import\s+preact\s+from\s+['"]@astrojs\/preact['"];\s*\n?/,
