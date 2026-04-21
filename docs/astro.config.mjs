@@ -20,8 +20,14 @@ export default defineConfig({
           items: [
             { label: "Getting Started", slug: "guides/getting-started" },
             {
-              items: [{ label: "Astro", slug: "guides/astro" }],
+              items: [{ label: "Astro", slug: "guides/client/astro" },
+                            { label: "Nano Stores", slug: "guides/client/nanostores" },
+              ],
               label: "Client",
+            },
+            {
+              items: [{ label: "HTML", slug: "guides/integrations/html" },],
+              label: "Integrations",
             },
             {
               items: [
@@ -30,7 +36,7 @@ export default defineConfig({
               ],
               label: "OutSystems",
             },
-            { label: "Nano Stores", slug: "guides/nanostores" },
+
           ],
           label: "Guides",
         },

@@ -13,7 +13,9 @@ Nano Stores are currently supported for the following libraries:
 
 - [Preact](https://github.com/nanostores/preact)
 - [React](https://github.com/nanostores/react)
+- [SolidJS](https://github.com/nanostores/solid)
 - [Svelte](https://svelte.dev/docs/svelte/svelte-files#script-4-prefix-stores-with-$-to-access-their-values)
+- [Vanilla JS](https://github.com/nanostores/nanostores#vanilla-js)
 - [Vue](https://github.com/nanostores/vue)
 
 Nano Stores for Angular is not currently supported.
@@ -34,7 +36,7 @@ OutSystem currently supports the following structures:
 
 In OutSystems, you need to use the Nano Stores component and pull in blocks for either Listen/Subscribe to an Atom or Map.  The imported block will require a store name and a handler for changes that happen to the store value/map.
 
-![Import Nano Store](../../../../assets/nanostores/import.png)
+![Import Nano Store](../../../../../assets/nanostores/import.png)
 
 You can reference the Nano Store Atom or Map from the window inside of your component.
 
@@ -82,6 +84,19 @@ Svelte:
 </script>
 
 <div>{$nanoStoreValue}</div>
+```
+
+Vanilla JS
+```js
+<script>
+const nanostoreEl = container.querySelector('#nanostore-value');
+const store = window.Stores['htmlStore'];
+nanostoreEl.textContent = store.get();
+store.subscribe(function (value) {
+  nanostoreEl.textContent = value;
+});
+</script>
+<div id="nanostore-value'"></div> 
 ```
 
 Vue:
