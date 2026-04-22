@@ -275,6 +275,10 @@ function updateMultiAstroPage(projectDir, selectedFrameworks) {
         /import\s+AngularStore\s+from\s+['"].*?angular\/Store\.component['"];?\s*\n?/g,
       component: /<AngularStore\s+client:load\s*\/>\s*\n?/g,
     },
+    html: {
+      import: /import\s+HtmlStore\s+from\s+['"].*?html\/Store['"];?\s*\n?/g,
+      component: /<HtmlStore\s+client:load\s*\/>\s*\n?/g,
+    },
     preact: {
       import: /import\s+PreactStore\s+from\s+['"].*?preact\/Store['"];?\s*\n?/g,
       component: /<PreactStore\s+client:only="preact"\s*\/>\s*\n?/g,
