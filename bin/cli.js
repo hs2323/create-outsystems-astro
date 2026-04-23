@@ -89,11 +89,40 @@ Next steps:
 `);
 }
 
+function buildIntegrations() {
+  const integrationsDir = path.join(__dirname, "..", "integrations");
+  const packageManager = detectPackageManager();
+
+  const installCmd = {
+    npm: "npm install",
+    yarn: "yarn install",
+    pnpm: "pnpm install",
+    bun: "bun install",
+    deno: "deno install",
+    unknown: "npm install",
+  }[packageManager];
+
+  const buildCmd = {
+    npm: "npm run build",
+    yarn: "yarn build",
+    pnpm: "pnpm run build",
+    bun: "bun run build",
+    deno: "deno task build",
+    unknown: "npm run build",
+  }[packageManager];
+
+  console.log("📦 Installing integration dependencies...");
+  execSync(installCmd, { cwd: integrationsDir, stdio: "inherit" });
+
+  console.log("🔨 Building integrations...");
+  execSync(buildCmd, { cwd: integrationsDir, stdio: "inherit" });
+}
+
 function injectIntegrations(targetDir) {
+  buildIntegrations();
   const srcDist = path.join(__dirname, "..", "integrations", "dist", "html");
   const destDir = path.join(targetDir, ".integrations");
 
-  // Copy built JS files from dist/ — no TS sources, no dist/ nesting
   const files = ["index.js", "client.js", "server.js"];
   const destHtml = path.join(destDir, "html");
   fs.mkdirSync(destHtml, { recursive: true });
@@ -101,7 +130,6 @@ function injectIntegrations(targetDir) {
     fs.copyFileSync(path.join(srcDist, file), path.join(destHtml, file));
   }
 
-  // Write a minimal package.json with flat export paths
   const { name, version } = JSON.parse(
     fs.readFileSync(
       path.join(__dirname, "..", "integrations", "package.json"),
@@ -276,8 +304,8 @@ function updateMultiAstroPage(projectDir, selectedFrameworks) {
       component: /<AngularStore\s+client:load\s*\/>\s*\n?/g,
     },
     html: {
-      import: /import\s+HtmlStore\s+from\s+['"].*?html\/Store['"];?\s*\n?/g,
-      component: /<HtmlStore\s+client:load\s*\/>\s*\n?/g,
+      import: /import\s+HTMLStore\s+from\s+['"].*?html\/Store['"];?\s*\n?/g,
+      component: /<HTMLStore\s+client:load\s*\/>\s*\n?/g,
     },
     preact: {
       import: /import\s+PreactStore\s+from\s+['"].*?preact\/Store['"];?\s*\n?/g,

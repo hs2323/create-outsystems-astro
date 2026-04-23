@@ -4,7 +4,7 @@ async function check(Component: unknown): Promise<boolean> {
   if (typeof Component === "string") return true;
   if (typeof Component === "function") {
     try {
-      const result = (Component as () => unknown)({});
+      const result = (Component as (p: Record<string, unknown>) => unknown)({});
       return typeof result === "string";
     } catch {
       return false;
