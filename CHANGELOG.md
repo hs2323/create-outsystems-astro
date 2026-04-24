@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+- Patched dependency astro due to CVE-2026-41067.
 - Updated sub-dependency hono to 4.12.14 due to GHSA-458j-xx4x-4375.
 
 ## [0.8.2] - 2026-04-14

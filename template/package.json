@@ -3,11 +3,11 @@
   "type": "module",
   "scripts": {
     "astro": "astro",
-    "audit:bun": "bun audit --ignore=GHSA-45q2-gjvg-7973",
-    "audit:deno": "deno audit || true",
-    "audit:npm": "better-npm-audit audit --exclude GHSA-45q2-gjvg-7973",
+    "audit:bun": "bun audit --ignore=GHSA-45q2-gjvg-7973 --ignore=GHSA-j687-52p2-xcff",
+    "audit:deno": "deno audit --ignore=CVE-2026-41067 || true",
+    "audit:npm": "better-npm-audit audit --exclude GHSA-45q2-gjvg-7973,GHSA-j687-52p2-xcff",
     "audit:pnpm": "pnpm audit",
-    "audit:yarn": "yarn run improved-yarn-audit --exclude GHSA-45q2-gjvg-7973",
+    "audit:yarn": "yarn run improved-yarn-audit --exclude GHSA-j687-52p2-xcff,GHSA-45q2-gjvg-7973",
     "build": "astro build",
     "dev": "astro dev",
     "format": "prettier . --check",
@@ -145,7 +145,8 @@
   "pnpm": {
     "auditConfig": {
       "ignoreGhsas": [
-        "GHSA-45q2-gjvg-7973"
+        "GHSA-45q2-gjvg-7973",
+        "GHSA-j687-52p2-xcff"
       ]
     },
     "overrides": {
