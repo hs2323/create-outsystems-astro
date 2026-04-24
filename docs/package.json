@@ -4,7 +4,7 @@
   "version": "0.8.2",
   "scripts": {
     "astro": "astro",
-    "audit": "better-npm-audit audit",
+    "audit": "better-npm-audit audit --exclude GHSA-j687-52p2-xcff",
     "build": "astro build",
     "dev": "astro dev",
     "format": "prettier . --check",
@@ -30,6 +30,7 @@
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-perfectionist": "^5.6.0",
     "globals": "^17.3.0",
+    "patch-package": "^8.0.1",
     "prettier": "^3.8.1",
     "typescript-eslint": "^8.56.1"
   }

@@ -8,6 +8,7 @@ overrides:
   '@hono/node-server': ^1.19.13
   defu: ^6.1.5
   hono: ^4.12.14
+  postcss: ^8.5.10
   '@angular/build>vite': ^7.3.2
   '@astrojs/preact>vite': ^6.4.2
   '@astrojs/react>vite': ^6.4.2
@@ -24,7 +25,7 @@ importers:
     dependencies:
       '@analogjs/astro-angular':
         specifier: ^2.3.1
-        version: 2.3.1(2192e7832a4e19991467a3b21f78e240)
+        version: 2.3.1(32d13488e8c5db63bc064e6625e16a9a)
       '@angular/animations':
         specifier: ^21.2.6
         version: 21.2.6(@angular/core@21.2.6(@angular/compiler@21.2.6)(rxjs@7.8.2))
@@ -103,10 +104,10 @@ importers:
     devDependencies:
       '@analogjs/vite-plugin-angular':
         specifier: ^2.3.1
-        version: 2.3.1(@angular/build@21.2.5(4f35cf6f82511458d0a6c5197436f60d))
+        version: 2.3.1(@angular/build@21.2.5(b0383c0694a286ab5cfc43c683abe15d))
       '@analogjs/vitest-angular':
         specifier: ^2.3.1
-        version: 2.3.1(@analogjs/vite-plugin-angular@2.3.1(@angular/build@21.2.5(4f35cf6f82511458d0a6c5197436f60d)))(@angular-devkit/architect@0.2102.5(chokidar@5.0.0))(@angular-devkit/schematics@21.2.5(chokidar@5.0.0))(vitest@4.1.2(@types/node@25.5.0)(happy-dom@20.8.9)(vite@8.0.8(@types/node@25.5.0)(esbuild@0.27.3)(sass@1.97.3)(yaml@2.8.3)))
+        version: 2.3.1(@analogjs/vite-plugin-angular@2.3.1(@angular/build@21.2.5(b0383c0694a286ab5cfc43c683abe15d)))(@angular-devkit/architect@0.2102.5(chokidar@5.0.0))(@angular-devkit/schematics@21.2.5(chokidar@5.0.0))(vitest@4.1.2(@types/node@25.5.0)(happy-dom@20.8.9)(vite@8.0.8(@types/node@25.5.0)(esbuild@0.27.3)(sass@1.97.3)(yaml@2.8.3)))
       '@angular-devkit/architect':
         specifier: ^0.2102.5
         version: 0.2102.5(chokidar@5.0.0)
@@ -115,7 +116,7 @@ importers:
         version: 21.2.5(chokidar@5.0.0)
       '@angular/build':
         specifier: ^21.2.5
-        version: 21.2.5(4f35cf6f82511458d0a6c5197436f60d)
+        version: 21.2.5(b0383c0694a286ab5cfc43c683abe15d)
       '@angular/cli':
         specifier: ^21.2.5
         version: 21.2.5(@types/node@25.5.0)(chokidar@5.0.0)
@@ -492,7 +493,7 @@ packages:
       karma: ^6.4.0
       less: ^4.2.0
       ng-packagr: ^21.0.0
-      postcss: ^8.4.0
+      postcss: ^8.5.10
       tailwindcss: ^2.0.0 || ^3.0.0 || ^4.0.0
       tslib: ^2.3.0
       typescript: '>=5.9 <6.0'
@@ -5405,7 +5406,7 @@ packages:
     resolution: {integrity: sha512-6DiM4E7v4coTE4uzA8U//WhtPwyhiim3eyjEMFCnUpzbrkK9wJHgKDT2mR+HbtSrd/NubVaYTOpSpjUl8NQeRg==}
     engines: {node: '>= 10'}
     peerDependencies:
-      postcss: '>=8.0.9'
+      postcss: ^8.5.10
       ts-node: '>=9.0.0'
     peerDependenciesMeta:
       postcss:
@@ -5420,24 +5421,20 @@ packages:
     resolution: {integrity: sha512-0AioNCJZ2DPYz5ABT6bddIqlhgwhpHZ/l65YAYo0BCIn0xiDpsnTHz0gnoTGk0OXZW0JRs+cDwL8u/teRdz+8A==}
     engines: {node: '>=18.0'}
     peerDependencies:
-      postcss: ^8.4.31
+      postcss: ^8.5.10
 
   postcss-scss@4.0.9:
     resolution: {integrity: sha512-AjKOeiwAitL/MXxQW2DliT28EKukvvbEWx3LBmJIRN8KfBGZbRTxNYW0kSqi1COiTZ57nZ9NW06S6ux//N1c9A==}
     engines: {node: '>=12.0'}
     peerDependencies:
-      postcss: ^8.4.29
+      postcss: ^8.5.10
 
   postcss-selector-parser@7.1.1:
     resolution: {integrity: sha512-orRsuYpJVw8LdAwqqLykBj9ecS5/cRHlI5+nvTo8LcCKmzDmqVORXtOIYEEQuL9D4BxtA1lm5isAqzQZCoQ6Eg==}
     engines: {node: '>=4'}
 
-  postcss@8.5.6:
-    resolution: {integrity: sha512-3Ybi1tAuwAP9s0r1UQ2J4n5Y0G05bJkpUIO0/bI9MhwmD70S5aTWbXGBwxHrelT+XM1k6dM0pk+SwNkpTRN7Pg==}
-    engines: {node: ^10 || ^12 || >=14}
-
-  postcss@8.5.8:
-    resolution: {integrity: sha512-OW/rX8O/jXnm82Ey1k44pObPtdblfiuWnrd8X7GJ7emImCOstunGbXUpp7HdBrFQX6rJzn3sPT397Wp5aCwCHg==}
+  postcss@8.5.10:
+    resolution: {integrity: sha512-pMMHxBOZKFU6HgAZ4eyGnwXF/EvPGGqUr0MnZ5+99485wwW41kW91A4LOGxSHhgugZmSChL5AlElNdwlNgcnLQ==}
     engines: {node: ^10 || ^12 || >=14}
 
   preact-render-to-string@6.6.6:
@@ -6817,11 +6814,11 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.13
       '@jridgewell/trace-mapping': 0.3.31
 
-  '@analogjs/astro-angular@2.3.1(2192e7832a4e19991467a3b21f78e240)':
+  '@analogjs/astro-angular@2.3.1(32d13488e8c5db63bc064e6625e16a9a)':
     dependencies:
-      '@analogjs/vite-plugin-angular': 2.3.1(@angular/build@21.2.5(4f35cf6f82511458d0a6c5197436f60d))
+      '@analogjs/vite-plugin-angular': 2.3.1(@angular/build@21.2.5(b0383c0694a286ab5cfc43c683abe15d))
       '@angular/animations': 21.2.6(@angular/core@21.2.6(@angular/compiler@21.2.6)(rxjs@7.8.2))
-      '@angular/build': 21.2.5(4f35cf6f82511458d0a6c5197436f60d)
+      '@angular/build': 21.2.5(b0383c0694a286ab5cfc43c683abe15d)
       '@angular/common': 21.2.6(@angular/core@21.2.6(@angular/compiler@21.2.6)(rxjs@7.8.2))(rxjs@7.8.2)
       '@angular/compiler': 21.2.6
       '@angular/compiler-cli': 21.2.6(@angular/compiler@21.2.6)(typescript@5.9.3)
@@ -6834,16 +6831,16 @@ snapshots:
     transitivePeerDependencies:
       - '@angular-devkit/build-angular'
 
-  '@analogjs/vite-plugin-angular@2.3.1(@angular/build@21.2.5(4f35cf6f82511458d0a6c5197436f60d))':
+  '@analogjs/vite-plugin-angular@2.3.1(@angular/build@21.2.5(b0383c0694a286ab5cfc43c683abe15d))':
     dependencies:
       tinyglobby: 0.2.15
       ts-morph: 21.0.1
     optionalDependencies:
-      '@angular/build': 21.2.5(4f35cf6f82511458d0a6c5197436f60d)
+      '@angular/build': 21.2.5(b0383c0694a286ab5cfc43c683abe15d)
 
-  '@analogjs/vitest-angular@2.3.1(@analogjs/vite-plugin-angular@2.3.1(@angular/build@21.2.5(4f35cf6f82511458d0a6c5197436f60d)))(@angular-devkit/architect@0.2102.5(chokidar@5.0.0))(@angular-devkit/schematics@21.2.5(chokidar@5.0.0))(vitest@4.1.2(@types/node@25.5.0)(happy-dom@20.8.9)(vite@8.0.8(@types/node@25.5.0)(esbuild@0.27.3)(sass@1.97.3)(yaml@2.8.3)))':
+  '@analogjs/vitest-angular@2.3.1(@analogjs/vite-plugin-angular@2.3.1(@angular/build@21.2.5(b0383c0694a286ab5cfc43c683abe15d)))(@angular-devkit/architect@0.2102.5(chokidar@5.0.0))(@angular-devkit/schematics@21.2.5(chokidar@5.0.0))(vitest@4.1.2(@types/node@25.5.0)(happy-dom@20.8.9)(vite@8.0.8(@types/node@25.5.0)(esbuild@0.27.3)(sass@1.97.3)(yaml@2.8.3)))':
     dependencies:
-      '@analogjs/vite-plugin-angular': 2.3.1(@angular/build@21.2.5(4f35cf6f82511458d0a6c5197436f60d))
+      '@analogjs/vite-plugin-angular': 2.3.1(@angular/build@21.2.5(b0383c0694a286ab5cfc43c683abe15d))
       '@angular-devkit/architect': 0.2102.5(chokidar@5.0.0)
       '@angular-devkit/schematics': 21.2.5(chokidar@5.0.0)
       vitest: 4.1.2(@types/node@25.5.0)(happy-dom@20.8.9)(vite@8.0.8(@types/node@25.5.0)(esbuild@0.27.3)(sass@1.97.3)(yaml@2.8.3))
@@ -6946,7 +6943,7 @@ snapshots:
       '@angular/core': 21.2.6(@angular/compiler@21.2.6)(rxjs@7.8.2)
       tslib: 2.8.1
 
-  '@angular/build@21.2.5(4f35cf6f82511458d0a6c5197436f60d)':
+  '@angular/build@21.2.5(b0383c0694a286ab5cfc43c683abe15d)':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@angular-devkit/architect': 0.2102.5(chokidar@5.0.0)
@@ -6984,7 +6981,7 @@ snapshots:
       '@angular/platform-browser': 21.2.6(@angular/animations@21.2.6(@angular/core@21.2.6(@angular/compiler@21.2.6)(rxjs@7.8.2)))(@angular/common@21.2.6(@angular/core@21.2.6(@angular/compiler@21.2.6)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.2.6(@angular/compiler@21.2.6)(rxjs@7.8.2))
       '@angular/platform-server': 21.2.6(@angular/common@21.2.6(@angular/core@21.2.6(@angular/compiler@21.2.6)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/compiler@21.2.6)(@angular/core@21.2.6(@angular/compiler@21.2.6)(rxjs@7.8.2))(@angular/platform-browser@21.2.6(@angular/animations@21.2.6(@angular/core@21.2.6(@angular/compiler@21.2.6)(rxjs@7.8.2)))(@angular/common@21.2.6(@angular/core@21.2.6(@angular/compiler@21.2.6)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.2.6(@angular/compiler@21.2.6)(rxjs@7.8.2)))(rxjs@7.8.2)
       lmdb: 3.5.1
-      postcss: 8.5.6
+      postcss: 8.5.10
       vitest: 4.1.2(@types/node@25.5.0)(happy-dom@20.8.9)(vite@8.0.8(@types/node@25.5.0)(esbuild@0.27.3)(sass@1.97.3)(yaml@2.8.3))
     transitivePeerDependencies:
       - '@types/node'
@@ -9275,7 +9272,7 @@ snapshots:
       '@vue/shared': 3.5.29
       estree-walker: 2.0.2
       magic-string: 0.30.21
-      postcss: 8.5.6
+      postcss: 8.5.10
       source-map-js: 1.2.1
 
   '@vue/compiler-sfc@3.5.31':
@@ -9287,7 +9284,7 @@ snapshots:
       '@vue/shared': 3.5.31
       estree-walker: 2.0.2
       magic-string: 0.30.21
-      postcss: 8.5.8
+      postcss: 8.5.10
       source-map-js: 1.2.1
 
   '@vue/compiler-ssr@3.5.29':
@@ -9722,9 +9719,9 @@ snapshots:
       domhandler: 5.0.3
       htmlparser2: 10.1.0
       picocolors: 1.1.1
-      postcss: 8.5.6
+      postcss: 8.5.10
       postcss-media-query-parser: 0.2.3
-      postcss-safe-parser: 7.0.1(postcss@8.5.6)
+      postcss-safe-parser: 7.0.1(postcss@8.5.10)
 
   better-npm-audit@3.11.0:
     dependencies:
@@ -10409,7 +10406,7 @@ snapshots:
       eslint: 9.39.4
       eslint-compat-utils: 0.6.5(eslint@9.39.4)
       globals: 16.5.0
-      postcss: 8.5.6
+      postcss: 8.5.10
       postcss-selector-parser: 7.1.1
     transitivePeerDependencies:
       - supports-color
@@ -10544,9 +10541,9 @@ snapshots:
       esutils: 2.0.3
       globals: 16.5.0
       known-css-properties: 0.37.0
-      postcss: 8.5.6
-      postcss-load-config: 3.1.4(postcss@8.5.6)(ts-node@10.9.2(@types/node@25.5.0)(typescript@5.9.3))
-      postcss-safe-parser: 7.0.1(postcss@8.5.6)
+      postcss: 8.5.10
+      postcss-load-config: 3.1.4(postcss@8.5.10)(ts-node@10.9.2(@types/node@25.5.0)(typescript@5.9.3))
+      postcss-safe-parser: 7.0.1(postcss@8.5.10)
       semver: 7.7.4
       svelte-eslint-parser: 1.6.0(svelte@5.55.0)
     optionalDependencies:
@@ -12481,36 +12478,30 @@ snapshots:
 
   possible-typed-array-names@1.1.0: {}
 
-  postcss-load-config@3.1.4(postcss@8.5.6)(ts-node@10.9.2(@types/node@25.5.0)(typescript@5.9.3)):
+  postcss-load-config@3.1.4(postcss@8.5.10)(ts-node@10.9.2(@types/node@25.5.0)(typescript@5.9.3)):
     dependencies:
       lilconfig: 2.1.0
       yaml: 1.10.3
     optionalDependencies:
-      postcss: 8.5.6
+      postcss: 8.5.10
       ts-node: 10.9.2(@types/node@25.5.0)(typescript@5.9.3)
 
   postcss-media-query-parser@0.2.3: {}
 
-  postcss-safe-parser@7.0.1(postcss@8.5.6):
+  postcss-safe-parser@7.0.1(postcss@8.5.10):
     dependencies:
-      postcss: 8.5.6
+      postcss: 8.5.10
 
-  postcss-scss@4.0.9(postcss@8.5.6):
+  postcss-scss@4.0.9(postcss@8.5.10):
     dependencies:
-      postcss: 8.5.6
+      postcss: 8.5.10
 
   postcss-selector-parser@7.1.1:
     dependencies:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
 
-  postcss@8.5.6:
-    dependencies:
-      nanoid: 3.3.11
-      picocolors: 1.1.1
-      source-map-js: 1.2.1
-
-  postcss@8.5.8:
+  postcss@8.5.10:
     dependencies:
       nanoid: 3.3.11
       picocolors: 1.1.1
@@ -13261,8 +13252,8 @@ snapshots:
       eslint-scope: 8.4.0
       eslint-visitor-keys: 4.2.1
       espree: 10.4.0
-      postcss: 8.5.6
-      postcss-scss: 4.0.9(postcss@8.5.6)
+      postcss: 8.5.10
+      postcss-scss: 4.0.9(postcss@8.5.10)
       postcss-selector-parser: 7.1.1
       semver: 7.7.4
     optionalDependencies:
@@ -13696,7 +13687,7 @@ snapshots:
       esbuild: 0.25.12
       fdir: 6.5.0(picomatch@4.0.4)
       picomatch: 4.0.4
-      postcss: 8.5.8
+      postcss: 8.5.10
       rollup: 4.59.0
       tinyglobby: 0.2.15
     optionalDependencies:
@@ -13711,7 +13702,7 @@ snapshots:
       esbuild: 0.27.3
       fdir: 6.5.0(picomatch@4.0.4)
       picomatch: 4.0.4
-      postcss: 8.5.8
+      postcss: 8.5.10
       rollup: 4.59.0
       tinyglobby: 0.2.15
     optionalDependencies:
@@ -13725,7 +13716,7 @@ snapshots:
     dependencies:
       lightningcss: 1.32.0
       picomatch: 4.0.4
-      postcss: 8.5.8
+      postcss: 8.5.10
       rolldown: 1.0.0-rc.15
       tinyglobby: 0.2.15
     optionalDependencies:
