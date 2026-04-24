@@ -4,6 +4,7 @@
     "defu": "npm:defu@^6.1.5",
     "hono": "npm:hono@^4.12.14",
     "playwright": "npm:playwright@1.58.2",
+    "postcss": "npm:postcss@^8.5.10",
     "vite@8": "npm:vite@^8.0.8"
   },
   "allowScripts": [
