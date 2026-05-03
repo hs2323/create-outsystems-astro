@@ -27,19 +27,19 @@ jobs:
         with:
           bun-version: ${{ env.BUN_VERSION }}
 
+      - name: Install dependencies
+        run: bun install
+
       - name: Build integrations
         working-directory: integrations
         run: bun install && bun run build
-
-      - name: Install dependencies
-        run: bun install && bun 
 
       - name: Run CLI
         run: bun run bin/cli.js --projectName test-islands --frameworks react
 
       - name: Run output
         working-directory: test-islands
-        run: bun install && bun run output:bun
+        run: bun install --frozen-lockfile && bun run output:bun
 
   cli-deno:
     runs-on: ubuntu-latest
@@ -53,19 +53,19 @@ jobs:
         with:
           deno-version: ${{ env.DENO_VERSION }}
 
+      - name: Install dependencies
+        run: deno install
+
       - name: Build integrations
         working-directory: integrations
-        run: npm ci && npm run build
-
-      - name: Install dependencies
-        run: deno install && deno run build
+        run: deno install --frozen && deno run build
 
       - name: Run CLI
         run: deno --allow-env --allow-read --allow-write --allow-run bin/cli.js --projectName test-islands --frameworks react
 
       - name: Run output
         working-directory: test-islands
-        run: deno install && deno run postinstall:deno && deno run output:deno
+        run: deno install --frozen && deno run postinstall:deno && deno run output:deno
 
   cli-npm:
     runs-on: ubuntu-latest
@@ -84,7 +84,7 @@ jobs:
         run: npm ci && npm run build
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Run CLI
         run: npx create-outsystems-astro --projectName test-islands --frameworks react
@@ -110,13 +110,13 @@ jobs:
         with:
           version: ${{ env.PNPM_VERSION }}
 
-      - name: Build integrations
-        working-directory: integrations
-        run: npm ci && npm run build
-
       - name: Install dependencies
         run: pnpm install
 
+      - name: Build integrations
+        working-directory: integrations
+        run: pnpm install --frozen-lockfile && pnpm run build
+  
       - name: Run CLI
         run: pnpm exec bin/cli.js --projectName test-islands --frameworks react
 
@@ -136,12 +136,15 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      - name: Build integrations
-        working-directory: integrations
-        run: npm ci && npm run build
+      - name: Enable Corepack
+        run: corepack enable
 
       - name: Install dependencies
         run: yarn install
+
+      - name: Build integrations
+        working-directory: integrations
+        run: yarn install --frozen-lockfile && yarn run build
 
       - name: Link
         run: yarn link
@@ -266,7 +269,7 @@ jobs:
   format-yarn:
     runs-on: ubuntu-latest
 
-    steps:  
+    steps:
       - name: Checkout code
         uses: actions/checkout@v6.0.2
 
@@ -274,6 +277,9 @@ jobs:
         uses: actions/setup-node@v6.3.0
         with:
           node-version: ${{ env.NODE_VERSION }}
+
+      - name: Enable Corepack
+        run: corepack enable
 
       - name: Install dependencies
         working-directory: template
@@ -391,7 +397,7 @@ jobs:
   lint-yarn:
     runs-on: ubuntu-latest
 
-    steps:  
+    steps:
       - name: Checkout code
         uses: actions/checkout@v6.0.2
 
@@ -399,6 +405,9 @@ jobs:
         uses: actions/setup-node@v6.3.0
         with:
           node-version: ${{ env.NODE_VERSION }}
+
+      - name: Enable Corepack
+        run: corepack enable
 
       - name: Install dependencies
         working-directory: template
@@ -431,6 +440,7 @@ jobs:
         run: npx create-outsystems-astro
           --projectName test-islands
           --frameworks angular
+          --frameworks html
           --frameworks preact
           --frameworks react
           --frameworks solid
@@ -462,6 +472,32 @@ jobs:
 
       - name: Run CLI
         run: npx create-outsystems-astro --projectName test-islands --frameworks angular
+
+      - name: Run output
+        working-directory: test-islands
+        run: npm ci && npm run output
+
+  framework-html:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6.0.2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v6.3.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Build integrations
+        working-directory: integrations
+        run: npm ci && npm run build
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run CLI
+        run: npx create-outsystems-astro --projectName test-islands --frameworks html
 
       - name: Run output
         working-directory: test-islands
@@ -725,7 +761,7 @@ jobs:
   security-yarn:
     runs-on: ubuntu-latest
 
-    steps:  
+    steps:
       - name: Checkout code
         uses: actions/checkout@v6.0.2
 
@@ -733,6 +769,9 @@ jobs:
         uses: actions/setup-node@v6.3.0
         with:
           node-version: ${{ env.NODE_VERSION }}
+
+      - name: Enable Corepack
+        run: corepack enable
 
       - name: Install dependencies
         working-directory: template
@@ -854,6 +893,9 @@ jobs:
         uses: actions/setup-node@v6.3.0
         with:
           node-version: ${{ env.NODE_VERSION }}
+
+      - name: Enable Corepack
+        run: corepack enable
 
       - name: Build integrations
         working-directory: integrations
@@ -996,6 +1038,9 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
+      - name: Enable Corepack
+        run: corepack enable
+
       - name: Build integrations
         working-directory: integrations
         run: npm ci && npm run build
@@ -1103,7 +1148,7 @@ jobs:
 
       - name: Build integrations
         working-directory: integrations
-        run: npm ci && npm run build
+        run: pnpm install --frozen-lockfile && pnpm run build
 
       - name: Install dependencies
         working-directory: template
@@ -1125,9 +1170,12 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
+      - name: Enable Corepack
+        run: corepack enable
+
       - name: Build integrations
         working-directory: integrations
-        run: npm ci && npm run build
+        run: yarn install --frozen-lockfile && yarn run build
 
       - name: Install dependencies
         working-directory: template

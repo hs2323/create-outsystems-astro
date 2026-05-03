@@ -74,6 +74,9 @@ importers:
       astro:
         specifier: ^5.18.1
         version: 5.18.1(@types/node@25.5.0)(lightningcss@1.32.0)(rollup@4.59.0)(sass@1.97.3)(typescript@5.9.3)(yaml@2.8.3)
+      islands-integrations:
+        specifier: file:.integrations
+        version: file:.integrations
       nanostores:
         specifier: ^1.2.0
         version: 1.2.0
@@ -306,6 +309,8 @@ importers:
       vue-eslint-parser:
         specifier: ^10.4.0
         version: 10.4.0(eslint@9.39.4)
+
+  .integrations: {}
 
 packages:
 
@@ -4540,6 +4545,9 @@ packages:
   isexe@4.0.0:
     resolution: {integrity: sha512-FFUtZMpoZ8RqHS3XeXEmHWLA4thH+ZxCv2lOiPIn1Xc7CxrqhWzNSDzD+/chS/zbYezmiwWLdQC09JdQKmthOw==}
     engines: {node: '>=20'}
+
+  islands-integrations@file:.integrations:
+    resolution: {directory: .integrations, type: directory}
 
   istanbul-lib-coverage@3.2.2:
     resolution: {integrity: sha512-O8dpsF+r0WV/8MNRKfnmrtCWhuKjxrq2w+jpzBL5UZKTi2LeVWnWOmWRxFlesJONmc+wLAGvKQZEOanko0LFTg==}
@@ -11358,6 +11366,8 @@ snapshots:
   isexe@2.0.0: {}
 
   isexe@4.0.0: {}
+
+  islands-integrations@file:.integrations: {}
 
   istanbul-lib-coverage@3.2.2: {}
 

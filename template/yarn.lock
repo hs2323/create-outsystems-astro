@@ -6594,6 +6594,9 @@ isexe@^4.0.0:
   resolved "https://registry.npmjs.org/isexe/-/isexe-4.0.0.tgz"
   integrity sha512-FFUtZMpoZ8RqHS3XeXEmHWLA4thH+ZxCv2lOiPIn1Xc7CxrqhWzNSDzD+/chS/zbYezmiwWLdQC09JdQKmthOw==
 
+"islands-integrations@file:.integrations":
+  version "0.8.2"
+
 istanbul-lib-coverage@^3.2.0:
   version "3.2.2"
   resolved "https://registry.npmjs.org/istanbul-lib-coverage/-/istanbul-lib-coverage-3.2.2.tgz"

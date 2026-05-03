@@ -1,3 +1,6 @@
+packages:
+  - '.integrations'
+
 onlyBuiltDependencies:
   - '@parcel/watcher'
   - esbuild
