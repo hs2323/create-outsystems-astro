@@ -67,7 +67,7 @@ jobs:
         run: npm ci
 
       - name: Run security check
-        run: npm audit
+        run: npm run audit:npm
 
   test:
     runs-on: ubuntu-latest

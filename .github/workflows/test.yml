@@ -57,7 +57,7 @@ jobs:
 
       - name: Run output
         working-directory: test-islands
-        run: deno install && deno run postinstall:deno && deno run output:deno
+        run: deno install && deno run output:deno
 
   cli-npm:
     runs-on: ubuntu-latest
@@ -172,7 +172,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: template
-        run: deno install --frozen && deno run postinstall:deno
+        run: deno install --frozen
 
       - name: Run format
         working-directory: template
@@ -297,7 +297,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: template
-        run: deno install --frozen && deno run postinstall:deno
+        run: deno install --frozen
 
       - name: Run lint
         working-directory: template
@@ -603,7 +603,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: template
-        run: deno install --frozen && deno run postinstall:deno
+        run: deno install --frozen
 
       - name: Run security check
         working-directory: template
@@ -708,7 +708,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: template
-        run: deno install --frozen && deno run postinstall:deno
+        run: deno install --frozen
 
       - name: Run CLI
         working-directory: template
@@ -817,7 +817,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: template
-        run: deno install --frozen && deno run postinstall:deno
+        run: deno install --frozen
 
       - name: Install Playwright
         working-directory: template
@@ -938,7 +938,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: template
-        run: deno install --frozen && deno run postinstall:deno
+        run: deno install --frozen
 
       - name: Run type check
         working-directory: template

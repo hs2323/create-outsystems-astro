@@ -1,9 +1,9 @@
 diff --git a/node_modules/@analogjs/astro-angular/src/index.js b/node_modules/@analogjs/astro-angular/src/index.js
-index 905312a..84b45d8 100644
+index 277cc8d..0f85d4a 100644
 --- a/node_modules/@analogjs/astro-angular/src/index.js
 +++ b/node_modules/@analogjs/astro-angular/src/index.js
-@@ -10,7 +10,7 @@ function getRenderer() {
- function getViteConfiguration(vite) {
+@@ -15,7 +15,7 @@ function getRenderer(ngHydration) {
+ function getViteConfiguration(options) {
      return {
          esbuild: {
 -            jsxDev: true,

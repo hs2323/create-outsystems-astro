@@ -7,11 +7,56 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleaed]
 
-### Security
-
-- Updated sub-dependency postcss due to CVE-2026-41305.
-- Patched dependency astro due to CVE-2026-41067.
-- Updated sub-dependency hono to 4.12.14 due to GHSA-458j-xx4x-4375.
+### Changed
+- Updated dependency vue to 3.5.33.
+- Updated dependency vitest to 4.1.5.
+- Updated dependency vite-plugin-solid to 2.11.12.
+- Updated dependency vite to 8.0.10.
+- Updated dependency typescript-eslint to 8.59.2.
+- Updated dependency svelte to 5.55.5.
+- Updated dependency react-dom to 19.2.5.
+- Updated dependency react to 19.2.5.
+- Updated dependency prettier to 3.8.3.
+- Updated dependency preact to 10.29.1.
+- Updated dependency nanostores to 1.3.0.
+- Updated dependency happy-dom to 20.9.0.
+- Updated dependency globals to 17.6.0.
+- Updated dependency eslint-plugin-vue to 10.9.0.
+- Updated dependency eslint-plugin-svelte to 3.17.1.
+- Updated dependency eslint-plugin-react-hooks to 7.1.1.
+- Updated dependency eslint-plugin-playwright to 2.10.2.
+- Updated dependency eslint-plugin-perfectionist to 5.9.0.
+- Updated dependency eslint-plugin-jest to 29.15.2.
+- Updated dependency eslint-plugin-astro to 1.7.0.
+- Updated dependency eslint to 10.3.0.
+- Updated dependency dotenv to 17.4.2.
+- Updated dependency astro to 6.2.2.
+- Updated dependency @vitejs/plugin-vue to 6.0.6.
+- Updated dependency @types/node to 25.6.0.
+- Updated dependency @playwright/test to 1.59.1.
+- Updated dependency @oxc-project/runtime to 0.128.0.
+- Updated dependency @eslint/markdown to 8.0.1.
+- Updated dependency @eslint/compat to 2.0.5.
+- Updated dependency @astrojs/vue to 6.0.1.
+- Updated dependency @astrojs/svelte to 8.1.0.
+- Updated dependency @astrojs/solid-js to 6.0.1.
+- Updated dependency @astrojs/react to 5.0.4.
+- Updated dependency @astrojs/preact to 5.1.2.
+- Updated dependency @angular/platform-server to 21.2.11.
+- Updated dependency @angular/platform-browser to 21.2.11.
+- Updated dependency @angular/language-service to 21.2.11.
+- Updated dependency @angular/core to 21.2.11.
+- Updated dependency @angular/compiler-cli to 21.2.11.
+- Updated dependency @angular/compiler to 21.2.11.
+- Updated dependency @angular/common to 21.2.11.
+- Updated dependency @angular/cli to  21.2.9.
+- Updated dependency @angular/build to 21.2.9.
+- Updated dependency @angular/animations to 21.2.11.
+- Updated dependency @angular-devkit/schematics to 21.2.9.
+- Updated dependency @angular-devkit/architect to 0.2102.9.
+- Updated dependency @analogjs/vitest-angular to 2.5.0.
+- Updated dependency @analogjs/vite-plugin-angular to 2.5.0.
+- Updated dependency @analogjs/astro-angular to 2.5.0.
 
 ## [0.8.2] - 2026-04-14
 
