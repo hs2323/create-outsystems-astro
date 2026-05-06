@@ -1,0 +1,127 @@
+name: Test
+
+on:
+  pull_request:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: '0 12 * * *'
+
+env:
+  DENO_VERSION: '2.7.14'
+
+jobs:
+
+  format:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6.0.2
+
+      - name: Install Deno
+        uses: denoland/setup-deno@v2.0.3
+        with:
+          deno-version: ${{ env.DENO_VERSION }}
+
+      - name: Install dependencies
+        working-directory: template
+        run: deno install --frozen && deno run postinstall:deno
+
+      - name: Run format
+        run: deno run format
+
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6.0.2
+
+      - name: Install Deno
+        uses: denoland/setup-deno@v2.0.3
+        with:
+          deno-version: ${{ env.DENO_VERSION }}
+
+      - name: Install dependencies
+        working-directory: template
+        run: deno install --frozen && deno run postinstall:deno
+
+      - name: Run lint
+        run: deno run lint
+
+  security:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6.0.2
+
+      - name: Install Deno
+        uses: denoland/setup-deno@v2.0.3
+        with:
+          deno-version: ${{ env.DENO_VERSION }}
+
+      - name: Install dependencies
+        working-directory: template
+        run: deno install --frozen && deno run postinstall:deno
+
+      - name: Run security check
+        run: deno run audit:deno
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6.0.2
+
+      - name: Install Deno
+        uses: denoland/setup-deno@v2.0.3
+        with:
+          deno-version: ${{ env.DENO_VERSION }}
+
+      - name: Install dependencies
+        run: deno install --frozen && deno run postinstall:deno
+
+      - name: Run tests
+        run: deno run test
+
+  teste2e:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6.0.2
+
+      - name: Install Deno
+        uses: denoland/setup-deno@v2.0.3
+        with:
+          deno-version: ${{ env.DENO_VERSION }}
+
+      - name: Install dependencies
+        run: deno install --frozen && deno run postinstall:deno
+
+      - name: Install Playwright
+        run: deno run test:e2e:install
+
+      - name: Run tests
+        run: deno run test:e2e:deno
+
+  typecheck:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6.0.2
+
+      - name: Install Deno
+        uses: denoland/setup-deno@v2.0.3
+        with:
+          deno-version: ${{ env.DENO_VERSION }}
+
+      - name: Install dependencies
+        run: deno install --frozen && deno run postinstall:deno
+
+      - name: Run type check
+        run: deno run typecheck

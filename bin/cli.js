@@ -51,6 +51,8 @@ async function main() {
 
   const packageManager = packageInstall(targetDir);
 
+  selectWorkflowTestCI(targetDir, packageManager);
+
   let selectedFrameworks = [];
 
   while (selectedFrameworks.length === 0) {
@@ -256,6 +258,29 @@ function updateMultiAstroPage(projectDir, selectedFrameworks) {
 
   fs.writeFileSync(pagePath, content, "utf-8");
   console.log(`✨ Cleaned up components in ${path.relative(projectDir, pagePath)}`);
+}
+
+function selectWorkflowTestCI(projectDir, packageManager) {
+  const workflowDir = path.join(projectDir, '.github', 'workflows');
+  if (!fs.existsSync(workflowDir)) return;
+
+  const allPMs = ['npm', 'yarn', 'pnpm', 'bun', 'deno'];
+  const activePM = allPMs.includes(packageManager) ? packageManager : 'npm';
+
+  for (const pm of allPMs) {
+    if (pm === activePM) continue;
+    const file = path.join(workflowDir, `${pm}-test.yml`);
+    if (fs.existsSync(file)) {
+      fs.rmSync(file, { force: true });
+    }
+  }
+
+  const src = path.join(workflowDir, `${activePM}-test.yml`);
+  const dest = path.join(workflowDir, 'test.yml');
+  if (fs.existsSync(src)) {
+    fs.renameSync(src, dest);
+    console.log(`✅ Added .github/workflows/test.yml for ${activePM}`);
+  }
 }
 
 function detectPackageManager() {
