@@ -125,5 +125,14 @@
     "vite": "^8.0.10",
     "vitest": "^4.1.5",
     "vue-eslint-parser": "^10.4.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "esbuild",
+      "lmdb",
+      "msgpackr-extract",
+      "sharp"
+    ]
   }
 }
