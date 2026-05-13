@@ -57,7 +57,7 @@ jobs:
 
       - name: Run output
         working-directory: test-islands
-        run: deno install && deno run postinstall:deno && deno run output:deno
+        run: deno install && deno run output:deno
 
   cli-npm:
     runs-on: ubuntu-latest

@@ -1,0 +1,26 @@
+diff --git a/node_modules/@analogjs/astro-angular/src/index.js b/node_modules/@analogjs/astro-angular/src/index.js
+index 277cc8d..059ed0f 100644
+--- a/node_modules/@analogjs/astro-angular/src/index.js
++++ b/node_modules/@analogjs/astro-angular/src/index.js
+@@ -15,17 +15,18 @@ function getRenderer(ngHydration) {
+ function getViteConfiguration(options) {
+     return {
+         esbuild: {
+-            jsxDev: true,
++            jsxDev: false,
+         },
+         optimizeDeps: {
+             include: [
+-                '@angular/platform-browser',
+-                '@angular/core',
+                 options?.useAngularHydration
+                     ? '@analogjs/astro-angular/client-ngh.js'
+                     : '@analogjs/astro-angular/client.js',
+             ],
+             exclude: [
++                '@angular/core',
++                '@angular/common',
++                '@angular/platform-browser',
+                 '@angular/platform-server',
+                 '@analogjs/astro-angular/server.js',
+                 '@analogjs/astro-angular/server-ngh.js',
