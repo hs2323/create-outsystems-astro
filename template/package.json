@@ -15,7 +15,7 @@
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "output": "cross-env NODE_ENV=production astro build && ts-node ./output.ts",
-    "output:bun": "cross-env NODE_ENV=production bun astro build && bun run ./output.ts",
+    "output:bun": "cross-env NODE_ENV=production bun run --bun astro build && bun run ./output.ts",
     "output:deno": "cross-env NODE_ENV=production deno run -A npm:astro build && deno run -A ./output.ts",
     "postinstall": "patch-package",
     "preview": "astro preview",
