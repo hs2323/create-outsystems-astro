@@ -26,7 +26,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: template
-        run: deno install --frozen && deno run postinstall:deno
+        run: deno install --frozen && deno run postinstall
 
       - name: Run format
         run: deno run format
@@ -45,7 +45,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: template
-        run: deno install --frozen && deno run postinstall:deno
+        run: deno install --frozen && deno run postinstall
 
       - name: Run lint
         run: deno run lint
@@ -64,7 +64,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: template
-        run: deno install --frozen && deno run postinstall:deno
+        run: deno install --frozen && deno run postinstall
 
       - name: Run security check
         run: deno run audit:deno
@@ -82,7 +82,7 @@ jobs:
           deno-version: ${{ env.DENO_VERSION }}
 
       - name: Install dependencies
-        run: deno install --frozen && deno run postinstall:deno
+        run: deno install --frozen && deno run postinstall
 
       - name: Run tests
         run: deno run test
@@ -100,7 +100,7 @@ jobs:
           deno-version: ${{ env.DENO_VERSION }}
 
       - name: Install dependencies
-        run: deno install --frozen && deno run postinstall:deno
+        run: deno install --frozen && deno run postinstall
 
       - name: Install Playwright
         run: deno run test:e2e:install
@@ -121,7 +121,7 @@ jobs:
           deno-version: ${{ env.DENO_VERSION }}
 
       - name: Install dependencies
-        run: deno install --frozen && deno run postinstall:deno
+        run: deno install --frozen && deno run postinstall
 
       - name: Run type check
         run: deno run typecheck

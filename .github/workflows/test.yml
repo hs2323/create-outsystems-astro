@@ -172,7 +172,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: template
-        run: deno install --frozen && deno run postinstall:deno
+        run: deno install --frozen && deno run postinstall
 
       - name: Run format
         working-directory: template
@@ -297,7 +297,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: template
-        run: deno install --frozen && deno run postinstall:deno
+        run: deno install --frozen && deno run postinstall
 
       - name: Run lint
         working-directory: template
@@ -603,7 +603,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: template
-        run: deno install --frozen && deno run postinstall:deno
+        run: deno install --frozen && deno run postinstall
 
       - name: Run security check
         working-directory: template
@@ -726,7 +726,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: template
-        run: deno install --frozen && deno run postinstall:deno
+        run: deno install --frozen && deno run postinstall
 
       - name: Run CLI
         working-directory: template
@@ -835,7 +835,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: template
-        run: deno install --frozen && deno run postinstall:deno
+        run: deno install --frozen && deno run postinstall
 
       - name: Install Playwright
         working-directory: template
@@ -956,7 +956,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: template
-        run: deno install --frozen && deno run postinstall:deno
+        run: deno install --frozen && deno run postinstall
 
       - name: Run type check
         working-directory: template
