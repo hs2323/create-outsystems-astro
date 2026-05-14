@@ -819,7 +819,7 @@ jobs:
 
       - name: Run tests
         working-directory: template
-        run: bun run test:e2e
+        run: bun run test:e2e:bun
 
   teste2e-deno:
     runs-on: ubuntu-latest

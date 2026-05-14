@@ -460,8 +460,8 @@ For end-to-end tests, the Bun Playwright configuration is currently not working.
 | :------------------------ | :----------------------------------------------- |
 | `bun run test` | Run unit and integration tests |
 | `bun run test:e2e:install`| Install Playwright browsers and dependencies |
-| `bun run test:e2e` | Run the end-to-end tests |
-| `bun run test:e2e:ui` | Run the end-to-end tests in UI mode |
+| `bun run test:e2e:bun` | Run the end-to-end tests |
+| `bun run test:e2e:ui:bun` | Run the end-to-end tests in UI mode |
 
 ### Deno
 
