@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Changed Bun and Deno build scripts to run native command.
 - Updated dependency vue to 3.5.34.
 - Updated dependency vitest to 4.1.6.
 - Updated dependency vite-plugin-solid to 2.11.12.
