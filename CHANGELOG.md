@@ -32,7 +32,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated dependency eslint-plugin-jest to 29.15.2.
 - Updated dependency eslint-plugin-astro to 1.7.0.
 - Updated dependency dotenv to 17.4.2.
-- Updated dependency astro to 6.3.1.
+- Updated dependency astro to 6.3.2.
+- Updated dependency angular-eslint to 21.4.0.
 - Updated dependency @vitejs/plugin-vue to 6.0.6.
 - Updated dependency @types/node to 25.6.0.
 - Updated dependency @sveltejs/vite-plugin-svelte to 7.1.2.
@@ -41,25 +42,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated dependency @eslint/markdown to 8.0.1.
 - Updated dependency @eslint/compat to 2.1.0.
 - Updated dependency @astrojs/vue to 6.0.1.
-- Updated dependency @astrojs/svelte to 8.1.0.
+- Updated dependency @astrojs/svelte to 8.1.1.
 - Updated dependency @astrojs/solid-js to 6.0.1.
-- Updated dependency @astrojs/react to 5.0.4.
-- Updated dependency @astrojs/preact to 5.1.2.
-- Updated dependency @angular/platform-server to 21.2.11.
-- Updated dependency @angular/platform-browser to 21.2.11.
-- Updated dependency @angular/language-service to 21.2.11.
-- Updated dependency @angular/core to 21.2.11.
-- Updated dependency @angular/compiler-cli to 21.2.11.
-- Updated dependency @angular/compiler to 21.2.11.
-- Updated dependency @angular/common to 21.2.11.
-- Updated dependency @angular/cli to  21.2.11.
+- Updated dependency @astrojs/react to 5.0.5.
+- Updated dependency @astrojs/preact to 5.1.3.
+- Updated dependency @angular/platform-server to 21.2.13.
+- Updated dependency @angular/platform-browser to 21.2.13.
+- Updated dependency @angular/language-service to 21.2.13.
+- Updated dependency @angular/core to 21.2.13.
+- Updated dependency @angular/compiler-cli to 21.2.13.
+- Updated dependency @angular/compiler to 21.2.13.
+- Updated dependency @angular/common to 21.2.13.
+- Updated dependency @angular/cli to 21.2.11.
 - Updated dependency @angular/build to 21.2.11.
-- Updated dependency @angular/animations to 21.2.12.
+- Updated dependency @angular/animations to 21.2.13.
 - Updated dependency @angular-devkit/schematics to 21.2.11.
 - Updated dependency @angular-devkit/architect to 0.2102.11.
-- Updated dependency @analogjs/vitest-angular to 2.5.0.
-- Updated dependency @analogjs/vite-plugin-angular to 2.5.0.
-- Updated dependency @analogjs/astro-angular to 2.5.0.
+- Updated dependency @analogjs/vitest-angular to 2.5.1.
+- Updated dependency @analogjs/vite-plugin-angular to 2.5.1.
+- Updated dependency @analogjs/astro-angular to 2.5.1.
 
 ### Security
 
