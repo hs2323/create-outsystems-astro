@@ -21,7 +21,7 @@ jobs:
       - name: Checkout your repository using git
         uses: actions/checkout@v6.0.2
       - name: Install, build, and upload your site
-        uses: withastro/action@v6.1.1.
+        uses: withastro/action@v6.1.1
         with:
           path: ./docs
 
