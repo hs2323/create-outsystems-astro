@@ -13,10 +13,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated dependency vue to 3.5.34.
 - Updated dependency vitest to 4.1.6.
 - Updated dependency vite-plugin-solid to 2.11.12.
-- Updated dependency vite to 8.0.12.
+- Updated dependency vite to 8.0.13.
 - Updated dependency typescript-eslint to 8.59.3.
 - Updated dependency svelte-eslint-parser to 1.6.1.
-- Updated dependency svelte to 5.55.5.
+- Updated dependency svelte to 5.55.7.
 - Updated dependency react-dom to 19.2.6.
 - Updated dependency react to 19.2.6.
 - Updated dependency prettier to 3.8.3.
@@ -32,10 +32,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated dependency eslint-plugin-jest to 29.15.2.
 - Updated dependency eslint-plugin-astro to 1.7.0.
 - Updated dependency dotenv to 17.4.2.
-- Updated dependency astro to 6.3.2.
+- Updated dependency astro to 6.3.3.
 - Updated dependency angular-eslint to 21.4.0.
-- Updated dependency @vitejs/plugin-vue to 6.0.6.
-- Updated dependency @types/node to 25.6.0.
+- Updated dependency @vitejs/plugin-vue to 6.0.7.
+- Updated dependency @vitejs/plugin-react to 6.0.2.
+- Updated dependency @types/node to 25.8.0.
 - Updated dependency @sveltejs/vite-plugin-svelte to 7.1.2.
 - Updated dependency @playwright/test to 1.60.0.
 - Updated dependency @oxc-project/runtime to 0.130.0.
