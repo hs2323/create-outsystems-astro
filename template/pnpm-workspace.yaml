@@ -1,6 +1,6 @@
-onlyBuiltDependencies:
-  - '@parcel/watcher'
-  - esbuild
-  - lmdb
-  - msgpackr-extract
-  - sharp
+allowBuilds:
+  '@parcel/watcher': true
+  esbuild: true
+  lmdb: true
+  msgpackr-extract: true
+  sharp: true
