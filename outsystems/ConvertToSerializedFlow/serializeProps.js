@@ -84,7 +84,7 @@ function convertToSerializedForm(
             return [PROP_TYPE.Uint8Array, Array.from(value)];
         }
         case '[object Uint16Array]': {
-            return [PROP_TYPE.Uint16Array, Array.from(value )];
+            return [PROP_TYPE.Uint16Array, Array.from(value)];
         }
         case '[object Uint32Array]': {
             return [PROP_TYPE.Uint32Array, Array.from(value)];
@@ -93,10 +93,10 @@ function convertToSerializedForm(
             if (value !== null && typeof value === 'object') {
                 return [PROP_TYPE.Value, serializeObject(value, metadata, parents)];
             }
-            if (value === Infinity) {
+            if (value === Number.POSITIVE_INFINITY) {
                 return [PROP_TYPE.Infinity, 1];
             }
-            if (value === -Infinity) {
+            if (value === Number.NEGATIVE_INFINITY) {
                 return [PROP_TYPE.Infinity, -1];
             }
             if (value === undefined) {
@@ -111,6 +111,5 @@ function serializeProps(props, metadata) {
     const serialized = JSON.stringify(serializeObject(props, metadata));
     return serialized;
 }
-
 
 $parameters.SerializedProp = serializeProps(JSON.parse($parameters.Prop));
