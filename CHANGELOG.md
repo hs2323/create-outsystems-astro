@@ -65,9 +65,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
-- Updated sub-dependency postcss due to CVE-2026-41305.
-- Patched dependency astro due to CVE-2026-41067.
-- Updated sub-dependency hono to 4.12.14 due to GHSA-458j-xx4x-4375.
+- Updated devalue to 5.8.1 due to CVE-2026-42570.
 
 ## [0.8.2] - 2026-04-14
 

@@ -54,6 +54,7 @@
     "npm:astro@^6.3.3": "6.3.3_@types+node@25.8.0",
     "npm:better-npm-audit@^3.11.0": "3.11.0",
     "npm:cross-env@^10.1.0": "10.1.0",
+    "npm:devalue@^5.8.1": "5.8.1",
     "npm:dotenv@^17.4.2": "17.4.2",
     "npm:eslint-config-preact@2": "2.0.0_eslint@9.39.4",
     "npm:eslint-config-prettier@^10.1.8": "10.1.8_eslint@9.39.4",
@@ -2213,7 +2214,6 @@
         "debug@4.4.3",
         "magic-string",
         "picocolors",
-        "vite@7.3.2_@types+node@25.8.0_sass@1.97.3",
         "vite-prerender-plugin@0.5.13_vite@7.3.2__@types+node@25.8.0__sass@1.97.3_@types+node@25.8.0",
         "zimmerframe"
       ]
@@ -2265,8 +2265,7 @@
         "@prefresh/core",
         "@prefresh/utils",
         "@rollup/pluginutils@4.2.1",
-        "preact",
-        "vite@7.3.2_@types+node@25.8.0_sass@1.97.3"
+        "preact"
       ]
     },
     "@prefresh/vite@2.4.12_preact@10.29.1_vite@8.0.13__@types+node@25.8.0_@types+node@25.8.0": {
@@ -3121,8 +3120,7 @@
         "@babel/plugin-transform-react-jsx-source",
         "@rolldown/pluginutils@1.0.0-rc.3",
         "@types/babel__core",
-        "react-refresh",
-        "vite@7.3.2_@types+node@25.8.0_sass@1.97.3"
+        "react-refresh"
       ]
     },
     "@vitejs/plugin-react@6.0.2_vite@8.0.13__@types+node@25.8.0_@types+node@25.8.0": {
@@ -3140,7 +3138,6 @@
         "@babel/plugin-transform-typescript",
         "@rolldown/pluginutils@1.0.1",
         "@vue/babel-plugin-jsx@2.0.1_@babel+core@7.29.0",
-        "vite@7.3.2_@types+node@25.8.0_sass@1.97.3",
         "vue"
       ]
     },
@@ -3148,7 +3145,6 @@
       "integrity": "sha512-km+p+XdSz9Sxm5rqUbqcSfZYaAniKxWBj1KURl+Jr7UaPvvX7BmaWMdP69I5rrFDeQGyxAG7NXdc57vz+snhWg==",
       "dependencies": [
         "@rolldown/pluginutils@1.0.1",
-        "vite@7.3.2_@types+node@25.8.0_sass@1.97.3",
         "vue"
       ]
     },
@@ -3171,7 +3167,7 @@
         "tinyrainbow"
       ]
     },
-    "@vitest/mocker@4.1.6_vite@7.3.2__@types+node@25.8.0__sass@1.97.3_@types+node@25.8.0": {
+    "@vitest/mocker@4.1.6_vite@7.3.2__@types+node@25.8.0__sass@1.97.3": {
       "integrity": "sha512-MCFc63czMjEInOlcY2cpQCvCN+KgbAn+60xu9cMgP4sKaLC5JNAKw7JH8QdAnoAC88hW1IiSNZ+GgVXlN1UcMQ==",
       "dependencies": [
         "@vitest/spy",
@@ -8753,10 +8749,7 @@
       ]
     },
     "vite-hot-client@2.2.0_vite@7.3.2__@types+node@25.8.0__sass@1.97.3_@types+node@25.8.0": {
-      "integrity": "sha512-76Zs9zrHbH7M7wqeyooGQKdX+yg0pQ0xuQ1PbFp4z5a0Lzn2e5IPFoCswnmqZ4GiwqB4Jo3WcDAMO9jARTJl8w==",
-      "dependencies": [
-        "vite@7.3.2_@types+node@25.8.0_sass@1.97.3"
-      ]
+      "integrity": "sha512-76Zs9zrHbH7M7wqeyooGQKdX+yg0pQ0xuQ1PbFp4z5a0Lzn2e5IPFoCswnmqZ4GiwqB4Jo3WcDAMO9jARTJl8w=="
     },
     "vite-plugin-inspect@11.3.3_vite@7.3.2__@types+node@25.8.0__sass@1.97.3_@types+node@25.8.0": {
       "integrity": "sha512-u2eV5La99oHoYPHE6UvbwgEqKKOQGz86wMg40CCosP6q8BkB6e5xPneZfYagK4ojPJSj5anHCrnvC20DpwVdRA==",
@@ -8783,7 +8776,6 @@
         "merge-anything",
         "solid-js",
         "solid-refresh",
-        "vite@7.3.2_@types+node@25.8.0_sass@1.97.3",
         "vitefu@1.1.3_vite@7.3.2__@types+node@25.8.0__sass@1.97.3_@types+node@25.8.0"
       ],
       "optionalPeers": [
@@ -8814,7 +8806,6 @@
         "@vue/devtools-kit",
         "@vue/devtools-shared",
         "sirv",
-        "vite@7.3.2_@types+node@25.8.0_sass@1.97.3",
         "vite-plugin-inspect",
         "vite-plugin-vue-inspector"
       ]
@@ -8830,8 +8821,7 @@
         "@vue/babel-plugin-jsx@1.5.0_@babel+core@7.29.0",
         "@vue/compiler-dom",
         "kolorist",
-        "magic-string",
-        "vite@7.3.2_@types+node@25.8.0_sass@1.97.3"
+        "magic-string"
       ]
     },
     "vite-prerender-plugin@0.5.13_vite@7.3.2__@types+node@25.8.0__sass@1.97.3_@types+node@25.8.0": {
@@ -8842,8 +8832,7 @@
         "node-html-parser",
         "simple-code-frame",
         "source-map@0.7.6",
-        "stack-trace",
-        "vite@7.3.2_@types+node@25.8.0_sass@1.97.3"
+        "stack-trace"
       ]
     },
     "vite-prerender-plugin@0.5.13_vite@8.0.13__@types+node@25.8.0_@types+node@25.8.0": {
@@ -8898,13 +8887,7 @@
       "bin": true
     },
     "vitefu@1.1.3_vite@7.3.2__@types+node@25.8.0__sass@1.97.3_@types+node@25.8.0": {
-      "integrity": "sha512-ub4okH7Z5KLjb6hDyjqrGXqWtWvoYdU3IGm/NorpgHncKoLTCfRIbvlhBm7r0YstIaQRYlp4yEbFqDcKSzXSSg==",
-      "dependencies": [
-        "vite@7.3.2_@types+node@25.8.0_sass@1.97.3"
-      ],
-      "optionalPeers": [
-        "vite@7.3.2_@types+node@25.8.0_sass@1.97.3"
-      ]
+      "integrity": "sha512-ub4okH7Z5KLjb6hDyjqrGXqWtWvoYdU3IGm/NorpgHncKoLTCfRIbvlhBm7r0YstIaQRYlp4yEbFqDcKSzXSSg=="
     },
     "vitefu@1.1.3_vite@8.0.13__@types+node@25.8.0_@types+node@25.8.0": {
       "integrity": "sha512-ub4okH7Z5KLjb6hDyjqrGXqWtWvoYdU3IGm/NorpgHncKoLTCfRIbvlhBm7r0YstIaQRYlp4yEbFqDcKSzXSSg==",
@@ -8920,7 +8903,7 @@
       "dependencies": [
         "@types/node",
         "@vitest/expect",
-        "@vitest/mocker@4.1.6_vite@7.3.2__@types+node@25.8.0__sass@1.97.3_@types+node@25.8.0",
+        "@vitest/mocker@4.1.6_vite@7.3.2__@types+node@25.8.0__sass@1.97.3",
         "@vitest/pretty-format",
         "@vitest/runner",
         "@vitest/snapshot",
@@ -9225,6 +9208,9 @@
     }
   },
   "workspace": {
+    "dependencies": [
+      "npm:devalue@^5.8.1"
+    ],
     "packageJson": {
       "dependencies": [
         "npm:@analogjs/astro-angular@^2.5.1",
@@ -9321,7 +9307,10 @@
         "npm:vitest@^4.1.6",
         "npm:vue-eslint-parser@^10.4.0",
         "npm:vue@^3.5.34"
-      ]
+      ],
+      "overrides": {
+        "devalue": "^5.8.1"
+      }
     }
   }
 }
