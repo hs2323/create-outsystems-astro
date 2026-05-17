@@ -47,9 +47,9 @@ export default defineConfig({
     build: {
       rollupOptions: {
         output: {
-          assetFileNames: `assets/[name]_[hash].[ext]`,
-          chunkFileNames: `[name]_[hash].js`,
-          entryFileNames: `[name]_[hash].js`,
+          assetFileNames: `assets/[name].[hash].[ext]`,
+          chunkFileNames: `[name].[hash].js`,
+          entryFileNames: `[name].[hash].js`,
           manualChunks: (id) => {
             if (id.includes("node_modules")) {
               return "app";
