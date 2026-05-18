@@ -1,7 +1,7 @@
 ---
 title: Nano Stores
 description: Using Nano Stores for state management.
-slug: 0.6/guides/nanostores
+slug: 0.9/guides/nanostores
 ---
 
 [Nano Stores](https://github.com/nanostores/nanostores) is a state library that allows for communication between Island components and OutSystems components.
@@ -12,6 +12,7 @@ Refer to the full [Nano Stores documentation](https://github.com/nanostores/nano
 
 Nano Stores are currently supported for the following libraries:
 
+* [Preact](https://github.com/nanostores/preact)
 * [React](https://github.com/nanostores/react)
 * [Svelte](https://svelte.dev/docs/svelte/svelte-files#script-4-prefix-stores-with-$-to-access-their-values)
 * [Vue](https://github.com/nanostores/vue)
@@ -36,15 +37,33 @@ OutSystem currently supports the following structures:
 
 In OutSystems, you need to use the Nano Stores component and pull in blocks for either Listen/Subscribe to an Atom or Map.  The imported block will require a store name and a handler for changes that happen to the store value/map.
 
-![Import Nano Store](../../../../../assets/nanostores/0.6/import.png)
+![Import Nano Store](../../../../../assets/nanostores/0.9/import.png)
 
 You can reference the Nano Store Atom or Map from the window inside of your component.
+
+Preact:
+
+```jsx
+import { useStore } from "@nanostores/preact";
+
+export default function Counter({}) {
+  const nanoStoreValue = useStore(window.Stores["MyGreatStore"]);
+
+  return (
+    <>
+        <div>
+            <strong>Nano Store value:</strong>
+            <div>{nanoStoreValue}</div>
+        </div>
+    </>
+  );
+}
+```
 
 React:
 
 ```jsx
 import { useStore } from "@nanostores/react";
-import { useState } from "react";
 
 
 export default function Counter({}) {
