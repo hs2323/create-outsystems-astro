@@ -4,3 +4,7 @@ allowBuilds:
   lmdb: true
   msgpackr-extract: true
   sharp: true
+overrides:
+  devalue: ^5.8.1
+  js-cookie: ^3.0.7
+  qs: ^6.15.2

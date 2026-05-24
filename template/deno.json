@@ -1,6 +1,8 @@
 {
   "imports": {
-    "devalue": "npm:devalue@^5.8.1"
+    "devalue": "npm:devalue@^5.8.1",
+    "js-cookie": "npm:js-cookie@^3.0.7",
+    "qs": "npm:qs@^6.15.2"
   },
   "allowScripts": [
     "npm:@parcel/watcher@2.5.6",
