@@ -129,14 +129,13 @@
     "vue-eslint-parser": "^10.4.0"
   },
   "overrides": {
-    "devalue": "^5.8.1"
+    "devalue": "^5.8.1",
+    "js-cookie": "^3.0.7",
+    "qs": "^6.15.2"
   },
   "resolutions": {
-     "devalue": "^5.8.1"
-  },
-  "pnpm": {
-    "overrides": {
-      "devalue": "^5.8.1"
-    }
+    "devalue": "^5.8.1",
+    "js-cookie": "^3.0.7",
+    "qs": "^6.15.2"
   }
 }

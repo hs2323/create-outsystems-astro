@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleaed]
+
+### Changed
+
+- Moved pnpm overrides from package.json to pnpm-workspace.yaml.
+
+### Security
+
+- Updated sub-dependency qs to 6.15.2 due to CVE-2026-8723.
+- Updated sub-dependency js-cookie to 3.0.7 due to CVE-2026-46625.
+
 ## [0.9.0] - 2026-05-18
 
 ### Changed
