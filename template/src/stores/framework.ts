@@ -2,6 +2,7 @@ import { atom } from "nanostores";
 
 export type CurrentSelectedFramework =
   | ""
+  | "HTML"
   | "Preact"
   | "React"
   | "Solid"

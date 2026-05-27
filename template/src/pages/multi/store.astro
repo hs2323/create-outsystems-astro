@@ -1,5 +1,6 @@
 ---
-import AngularStore from "../../framework/angular/Store.component"
+import AngularStore from "../../framework/angular/Store.component";
+import HTMLStore from "../../framework/html/Store";
 import PreactStore from "../../framework/preact/Store";
 import ReactStore from "../../framework/react/Store";
 import SolidStore from "../../framework/solid/Store";
@@ -14,6 +15,7 @@ import styles from "../../styles/index.css?url";
     <body>
         <div class="card-grid">
             <AngularStore client:load />
+            <HTMLStore client:load />
             <PreactStore client:only="preact" />
             <ReactStore client:only="react" />
             <SolidStore client:only="solid-js" />
