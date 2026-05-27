@@ -64,6 +64,9 @@ importers:
       astro:
         specifier: ^6.3.3
         version: 6.3.3(@types/node@25.8.0)(lightningcss@1.32.0)(rollup@4.60.3)(sass@1.97.3)(yaml@2.9.0)
+      islands-integrations:
+        specifier: file:./.integrations
+        version: file:.integrations
       nanostores:
         specifier: ^1.3.0
         version: 1.3.0
@@ -4621,6 +4624,9 @@ packages:
   isexe@4.0.0:
     resolution: {integrity: sha512-FFUtZMpoZ8RqHS3XeXEmHWLA4thH+ZxCv2lOiPIn1Xc7CxrqhWzNSDzD+/chS/zbYezmiwWLdQC09JdQKmthOw==}
     engines: {node: '>=20'}
+
+  islands-integrations@file:.integrations:
+    resolution: {directory: .integrations, type: directory}
 
   istanbul-lib-coverage@3.2.2:
     resolution: {integrity: sha512-O8dpsF+r0WV/8MNRKfnmrtCWhuKjxrq2w+jpzBL5UZKTi2LeVWnWOmWRxFlesJONmc+wLAGvKQZEOanko0LFTg==}
@@ -11374,6 +11380,8 @@ snapshots:
   isexe@2.0.0: {}
 
   isexe@4.0.0: {}
+
+  islands-integrations@file:.integrations: {}
 
   istanbul-lib-coverage@3.2.2: {}
 

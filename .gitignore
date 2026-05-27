@@ -25,3 +25,6 @@ pnpm-debug.log*
 
 # output folder
 output/
+
+# Integrations folder
+template/.integrations

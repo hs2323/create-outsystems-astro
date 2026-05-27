@@ -48,6 +48,7 @@
     "@nanostores/solid": "^1.1.1",
     "@nanostores/vue": "^1.1.0",
     "astro": "^6.3.3",
+    "islands-integrations": "file:./.integrations",
     "nanostores": "^1.3.0",
     "preact": "^10.29.1",
     "react": "^19.2.6",
