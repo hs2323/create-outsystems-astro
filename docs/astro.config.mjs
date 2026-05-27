@@ -3,6 +3,8 @@ import starlight from "@astrojs/starlight";
 import { defineConfig } from "astro/config";
 import starlightVersions from "starlight-versions";
 
+const externalLinkAttributes = { rel: "noopener noreferrer", target: "_blank" };
+
 // https://astro.build/config
 export default defineConfig({
   base: "/create-outsystems-astro",
@@ -20,8 +22,47 @@ export default defineConfig({
           items: [
             { label: "Getting Started", slug: "guides/getting-started" },
             {
-              items: [{ label: "Astro", slug: "guides/astro" }],
+              items: [
+                { label: "Astro", slug: "guides/astro" },
+                { label: "Nano Stores", slug: "guides/nanostores" },
+              ],
               label: "Client",
+            },
+            {
+              items: [
+                {
+                  attrs: externalLinkAttributes,
+                  label: "Angular",
+                  link: "https://angular.dev/",
+                },
+                { label: "HTML", slug: "guides/integrations/html" },
+                {
+                  attrs: externalLinkAttributes,
+                  label: "Preact",
+                  link: "https://preactjs.com/",
+                },
+                {
+                  attrs: externalLinkAttributes,
+                  label: "React",
+                  link: "https://react.dev/",
+                },
+                {
+                  attrs: externalLinkAttributes,
+                  label: "Solid",
+                  link: "https://www.solidjs.com/",
+                },
+                {
+                  attrs: externalLinkAttributes,
+                  label: "Svelte",
+                  link: "https://svelte.dev/",
+                },
+                {
+                  attrs: externalLinkAttributes,
+                  label: "Vue",
+                  link: "https://vuejs.org/",
+                },
+              ],
+              label: "Integrations",
             },
             {
               items: [
@@ -30,7 +71,6 @@ export default defineConfig({
               ],
               label: "OutSystems",
             },
-            { label: "Nano Stores", slug: "guides/nanostores" },
           ],
           label: "Guides",
         },

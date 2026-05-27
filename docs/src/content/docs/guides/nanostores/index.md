@@ -13,7 +13,9 @@ Nano Stores are currently supported for the following libraries:
 
 - [Preact](https://github.com/nanostores/preact)
 - [React](https://github.com/nanostores/react)
+- [SolidJS](https://github.com/nanostores/solid)
 - [Svelte](https://svelte.dev/docs/svelte/svelte-files#script-4-prefix-stores-with-$-to-access-their-values)
+- [Vanilla JS](https://github.com/nanostores/nanostores#vanilla-js)
 - [Vue](https://github.com/nanostores/vue)
 
 Nano Stores for Angular is not currently supported.
@@ -25,7 +27,7 @@ Create the objects inside of the stores folder (or other preferred structure). Y
 The OutSystems module, Lightweight State Manager, is available for both the O11 and ODC platforms.
 
 - [O11](https://www.outsystems.com/forge/component-overview/23528/lightweight-state-manager-o11)
-- ODC
+- [ODC](https://www.outsystems.com/forge/component-overview/23576/lightweight-state-manager-odc)
 
 OutSystem currently supports the following structures:
 
@@ -82,6 +84,19 @@ Svelte:
 </script>
 
 <div>{$nanoStoreValue}</div>
+```
+
+Vanilla JS
+```js
+<script>
+const nanostoreEl = container.querySelector('#nanostore-value');
+const store = window.Stores['htmlStore'];
+nanostoreEl.textContent = store.get();
+store.subscribe(function (value) {
+  nanostoreEl.textContent = value;
+});
+</script>
+<div id="nanostore-value'"></div> 
 ```
 
 Vue:
