@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleaed]
 
+### Added
+
+- Added HTML integration.
+
 ### Changed
 
 - Moved pnpm overrides from package.json to pnpm-workspace.yaml.

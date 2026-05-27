@@ -6,6 +6,7 @@ import solid from "@astrojs/solid-js";
 import svelte from "@astrojs/svelte";
 import vue from "@astrojs/vue";
 import { defineConfig } from "astro/config";
+import html from "islands-integrations/html";
 
 // https://astro.build/config
 export default defineConfig({
@@ -20,6 +21,9 @@ export default defineConfig({
           return id.includes("src/framework/angular");
         },
       },
+    }),
+    html({
+      include: ["src/framework/html/*"],
     }),
     preact({
       compat: true,

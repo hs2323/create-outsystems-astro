@@ -23,6 +23,15 @@ export default defineConfig(({ mode }) => ({
         },
       },
       {
+        test: {
+          environment: "happy-dom",
+          globals: true,
+          include: ["test/integration/html/**/*.test.ts"],
+          name: "html",
+          setupFiles: ["test/setup-test-env.ts"],
+        },
+      },
+      {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         plugins: [preact() as any],
         test: {
