@@ -150,6 +150,10 @@ jobs:
         with:
           bun-version: ${{ env.BUN_VERSION }}
 
+      - name: Build integrations
+        working-directory: integrations
+        run: bun install --frozen-lockfile && bun run process
+
       - name: Install dependencies
         working-directory: template
         run: bun install --frozen-lockfile
@@ -169,6 +173,10 @@ jobs:
         uses: denoland/setup-deno@v2.0.4
         with:
           deno-version: ${{ env.DENO_VERSION }}
+
+      - name: Build integrations
+        working-directory: integrations
+        run:  deno install --frozen && deno run process
 
       - name: Install dependencies
         working-directory: template
@@ -190,6 +198,10 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
+      - name: Build integrations
+        working-directory: integrations
+        run: npm ci && npm run process
+
       - name: Install dependencies
         working-directory: docs
         run: npm ci
@@ -209,6 +221,10 @@ jobs:
         uses: actions/setup-node@v6.4.0
         with:
           node-version: ${{ env.NODE_VERSION }}
+
+      - name: Build integrations
+        working-directory: integrations
+        run: npm ci && npm run process
 
       - name: Install dependencies
         working-directory: template
@@ -235,6 +251,10 @@ jobs:
         with:
           version: ${{ env.PNPM_VERSION }}
 
+      - name: Build integrations
+        working-directory: integrations
+        run: pnpm install --frozen-lockfile && pnpm run process
+
       - name: Install dependencies
         working-directory: template
         run: pnpm install --frozen-lockfile
@@ -254,6 +274,10 @@ jobs:
         uses: actions/setup-node@v6.4.0
         with:
           node-version: ${{ env.NODE_VERSION }}
+
+      - name: Build integrations
+        working-directory: integrations
+        run: yarn install --frozen-lockfile && yarn run process
 
       - name: Install dependencies
         working-directory: template
@@ -275,6 +299,10 @@ jobs:
         with:
           bun-version: ${{ env.BUN_VERSION }}
 
+      - name: Build integrations
+        working-directory: integrations
+        run: bun install --frozen-lockfile && bun run process
+
       - name: Install dependencies
         working-directory: template
         run: bun install --frozen-lockfile
@@ -294,6 +322,10 @@ jobs:
         uses: denoland/setup-deno@v2.0.4
         with:
           deno-version: ${{ env.DENO_VERSION }}
+
+      - name: Build integrations
+        working-directory: integrations
+        run:  deno install --frozen && deno run process
 
       - name: Install dependencies
         working-directory: template
@@ -335,6 +367,10 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
+      - name: Build integrations
+        working-directory: integrations
+        run: npm ci && npm run process
+
       - name: Install dependencies
         working-directory: template
         run: npm ci
@@ -360,6 +396,10 @@ jobs:
         with:
           version: ${{ env.PNPM_VERSION }}
 
+      - name: Build integrations
+        working-directory: integrations
+        run: pnpm install --frozen-lockfile && pnpm run process
+
       - name: Install dependencies
         working-directory: template
         run: pnpm install --frozen-lockfile
@@ -379,6 +419,10 @@ jobs:
         uses: actions/setup-node@v6.4.0
         with:
           node-version: ${{ env.NODE_VERSION }}
+
+      - name: Build integrations
+        working-directory: integrations
+        run: yarn install --frozen-lockfile && yarn run process
 
       - name: Install dependencies
         working-directory: template
@@ -581,6 +625,10 @@ jobs:
         with:
           bun-version: ${{ env.BUN_VERSION }}
 
+      - name: Build integrations
+        working-directory: integrations
+        run: bun install --frozen-lockfile && bun run process
+
       - name: Install dependencies
         working-directory: template
         run: bun install --frozen-lockfile
@@ -600,6 +648,10 @@ jobs:
         uses: denoland/setup-deno@v2.0.4
         with:
           deno-version: ${{ env.DENO_VERSION }}
+
+      - name: Build integrations
+        working-directory: integrations
+        run:  deno install --frozen && deno run process
 
       - name: Install dependencies
         working-directory: template
@@ -639,6 +691,10 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
+      - name: Build integrations
+        working-directory: integrations
+        run: npm ci && npm run process
+
       - name: Install dependencies
         working-directory: template
         run: npm ci
@@ -664,6 +720,10 @@ jobs:
         with:
           version: ${{ env.PNPM_VERSION }}
 
+      - name: Build integrations
+        working-directory: integrations
+        run: pnpm install --frozen-lockfile && pnpm run process
+
       - name: Install dependencies
         working-directory: template
         run: pnpm install --frozen-lockfile
@@ -683,6 +743,10 @@ jobs:
         uses: actions/setup-node@v6.4.0
         with:
           node-version: ${{ env.NODE_VERSION }}
+
+      - name: Build integrations
+        working-directory: integrations
+        run: yarn install --frozen-lockfile && yarn run process
 
       - name: Install dependencies
         working-directory: template
@@ -704,6 +768,10 @@ jobs:
         with:
           bun-version: ${{ env.BUN_VERSION }}
 
+      - name: Build integrations
+        working-directory: integrations
+        run: bun install --frozen-lockfile && bun run process
+
       - name: Install dependencies
         working-directory: template
         run: bun install --frozen-lockfile
@@ -724,6 +792,10 @@ jobs:
         with:
           deno-version: ${{ env.DENO_VERSION }}
 
+      - name: Build integrations
+        working-directory: integrations
+        run:  deno install --frozen && deno run process
+
       - name: Install dependencies
         working-directory: template
         run: deno install --frozen && deno run postinstall
@@ -743,6 +815,10 @@ jobs:
         uses: actions/setup-node@v6.4.0
         with:
           node-version: ${{ env.NODE_VERSION }}
+
+      - name: Build integrations
+        working-directory: integrations
+        run: npm ci && npm run process
 
       - name: Install dependencies
         working-directory: template
@@ -769,6 +845,10 @@ jobs:
         with:
           version: ${{ env.PNPM_VERSION }}
 
+      - name: Build integrations
+        working-directory: integrations
+        run: pnpm install --frozen-lockfile && pnpm run process
+
       - name: Install dependencies
         working-directory: template
         run: pnpm install --frozen-lockfile
@@ -789,6 +869,10 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
+      - name: Build integrations
+        working-directory: integrations
+        run: yarn install --frozen-lockfile && yarn run process
+
       - name: Install dependencies
         working-directory: template
         run: yarn install --frozen-lockfile
@@ -808,6 +892,10 @@ jobs:
         uses: oven-sh/setup-bun@v2.2.0
         with:
           bun-version: ${{ env.BUN_VERSION }}
+
+      - name: Build integrations
+        working-directory: integrations
+        run: bun install --frozen-lockfile && bun run process
 
       - name: Install dependencies
         working-directory: template
@@ -833,6 +921,10 @@ jobs:
         with:
           deno-version: ${{ env.DENO_VERSION }}
 
+      - name: Build integrations
+        working-directory: integrations
+        run:  deno install --frozen && deno run process
+
       - name: Install dependencies
         working-directory: template
         run: deno install --frozen && deno run postinstall
@@ -856,6 +948,10 @@ jobs:
         uses: actions/setup-node@v6.4.0
         with:
           node-version: ${{ env.NODE_VERSION }}
+
+      - name: Build integrations
+        working-directory: integrations
+        run: npm ci && npm run process
 
       - name: Install dependencies
         working-directory: template
@@ -886,6 +982,10 @@ jobs:
         with:
           version: ${{ env.PNPM_VERSION }}
 
+      - name: Build integrations
+        working-directory: integrations
+        run: pnpm install --frozen-lockfile && pnpm run process
+
       - name: Install dependencies
         working-directory: template
         run: pnpm install --frozen-lockfile
@@ -909,6 +1009,10 @@ jobs:
         uses: actions/setup-node@v6.4.0
         with:
           node-version: ${{ env.NODE_VERSION }}
+
+      - name: Build integrations
+        working-directory: integrations
+        run: yarn install --frozen-lockfile && yarn run process
 
       - name: Install dependencies
         working-directory: template
@@ -934,6 +1038,10 @@ jobs:
         with:
           bun-version: ${{ env.BUN_VERSION }}
 
+      - name: Build integrations
+        working-directory: integrations
+        run: bun install --frozen-lockfile && bun run process
+
       - name: Install dependencies
         working-directory: template
         run: bun install --frozen-lockfile
@@ -954,6 +1062,10 @@ jobs:
         with:
           deno-version: ${{ env.DENO_VERSION }}
 
+      - name: Build integrations
+        working-directory: integrations
+        run: deno install --frozen && deno run process
+
       - name: Install dependencies
         working-directory: template
         run: deno install --frozen && deno run postinstall
@@ -973,6 +1085,10 @@ jobs:
         uses: actions/setup-node@v6.4.0
         with:
           node-version: ${{ env.NODE_VERSION }}
+
+      - name: Build integrations
+        working-directory: integrations
+        run: npm ci && npm run process
 
       - name: Install dependencies
         working-directory: template
@@ -999,6 +1115,10 @@ jobs:
         with:
           version: ${{ env.PNPM_VERSION }}
 
+      - name: Build integrations
+        working-directory: integrations
+        run: pnpm install --frozen-lockfile && pnpm run process
+
       - name: Install dependencies
         working-directory: template
         run: pnpm install --frozen-lockfile
@@ -1018,6 +1138,10 @@ jobs:
         uses: actions/setup-node@v6.4.0
         with:
           node-version: ${{ env.NODE_VERSION }}
+
+      - name: Build integrations
+        working-directory: integrations
+        run: yarn install --frozen-lockfile && yarn run process
 
       - name: Install dependencies
         working-directory: template

@@ -10,7 +10,7 @@
     "process": "tsc && mv dist ../template/.integrations && cp package.json ../template/.integrations/package.json"
   },
   "devDependencies": {
-    "astro": "^6.3.3",
-    "typescript": "^5.9.3"
+    "astro": "6.3.3",
+    "typescript": "5.9.3"
   }
 }

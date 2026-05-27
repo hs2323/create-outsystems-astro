@@ -25,12 +25,10 @@ export default function MyComponent({
   children = "",
   header = "",
   initialCount = 0,
-  showMessage = "",
 }: {
   children?: string;
   header?: string;
   initialCount?: number;
-  showMessage?: string;
 }): string {
   return `
     ${header}
@@ -128,7 +126,7 @@ In the `.astro` page, pass slots using the `slot` attribute:
 The HTML integration does not use a Nano Stores binding library. Instead, the component sets up a compatible store directly on `window.Stores` inside its `<script>` tag. The store implements the same `get`, `set`, and `subscribe` interface as a nanostores atom, so it works alongside stores from other framework islands on the same page.
 
 ```ts
-export default function MyComponent({ ... }): string {
+export default function MyComponent(): string {
   return `
     <div class="my-component">
       <div class="store-value"></div>
@@ -222,10 +220,15 @@ import MyComponent from "../../../src/framework/html/MyComponent";
 function renderComponent(props = {}) {
   document.body.innerHTML = MyComponent(props);
   document.body.querySelectorAll("script").forEach((script) => {
-     
     new Function(script.textContent ?? "")();
   });
 }
+
+test("increments counter", () => {
+  renderComponent({ initialCount: 5 });
+  fireEvent.click(screen.getByRole("button"));
+  expect(document.querySelector(".count")?.textContent).toBe("6");
+});
 ```
 
 > `new Function` is required because `innerHTML` does not execute `<script>` tags, and `replaceChild` does not execute scripts in happy-dom.
@@ -236,7 +239,7 @@ Mock `window.Stores` before rendering so the test controls store updates:
 beforeEach(() => {
   let storeValue = "Initial value";
   let capturedListener;
-  (window as any).Stores = {
+  (window as { Stores: Record<string, unknown> } & Window).Stores = {
     myStore: {
       get: vi.fn(() => storeValue),
       set: vi.fn((v) => { storeValue = v; capturedListener?.(v); }),

@@ -87,16 +87,16 @@ Svelte:
 ```
 
 Vanilla JS
-```js
+```html
+<div id="nanostore-value"></div>
 <script>
-const nanostoreEl = container.querySelector('#nanostore-value');
+const nanostoreEl = document.querySelector('#nanostore-value');
 const store = window.Stores['htmlStore'];
 nanostoreEl.textContent = store.get();
 store.subscribe(function (value) {
   nanostoreEl.textContent = value;
 });
 </script>
-<div id="nanostore-value'"></div> 
 ```
 
 Vue:
