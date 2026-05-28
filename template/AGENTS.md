@@ -92,30 +92,7 @@ Angular does not support the use of slots. Any use of slots with Angular should 
 
 ##### HTML
 
-The HTML integration will pass in the slot as a parameter.
-
-```js
-<div slot="header">Header content</div>
-```
-
-wiill have the following parameter named header.
-
-```js
-export default function Counter({
-	children,
-	header,
-}: {
-	children: string
-	header: string;
-}) {
-	return `
-    ${header}
-    <div>
-			${children}
-		</div>
-  `;
-}
-```
+The HTML integration does not support the use of slots. Any use of slots with the HTML integration should be discouraged.
 
 ##### Preact
 

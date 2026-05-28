@@ -82,8 +82,6 @@ const showMessage = "showMessage";
       initialCount={initialCount}
       showMessage={showMessage}
     >
-      <div slot="header">My Component</div>
-      <p>Slot content here.</p>
     </MyComponent>
   </body>
 </html>
@@ -93,33 +91,7 @@ const showMessage = "showMessage";
 
 ## Slots
 
-Slots arrive as plain HTML strings. Declare them as `string` parameters with a default of `""`.
-
-```ts
-export default function MyComponent({
-  children = "",
-  header = "",
-}: {
-  children?: string;
-  header?: string;
-}): string {
-  return `
-    <div class="my-component">
-      ${header}
-      <div class="content">${children}</div>
-    </div>
-  `;
-}
-```
-
-In the `.astro` page, pass slots using the `slot` attribute:
-
-```astro
-<MyComponent client:load>
-  <div slot="header">Header content</div>
-  <p>Default slot content</p>
-</MyComponent>
-```
+Slots are not supported in the HTML integration.
 
 ## Nano Stores
 
