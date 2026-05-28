@@ -1,7 +1,7 @@
 {
   "extends": "astro/tsconfigs/strict",
   "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist"],
+  "exclude": [".integrations","dist", "output"],
   "compilerOptions": {
     "jsx": "preserve",
     "types": ["node", "vitest/globals"]
