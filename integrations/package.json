@@ -5,12 +5,28 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
+    "audit": "better-npm-audit audit",
     "build": "tsc",
+    "format": "prettier . --check",
+    "format:write": "prettier  --write .",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
     "prepublish": "tsc",
-    "process": "tsc && mv dist ../template/.integrations && cp package.json ../template/.integrations/package.json"
+    "process": "tsc && mv dist ../template/.integrations && cp package.json ../template/.integrations/package.json",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
+    "@eslint/compat": "^2.1.0",
     "astro": "6.3.3",
-    "typescript": "5.9.3"
+    "better-npm-audit": "^3.11.0",
+    "eslint": "^9.39.4",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-astro": "^1.7.0",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-perfectionist": "^5.9.0",
+    "globals": "^17.6.0",
+    "prettier": "^3.8.3",
+    "typescript": "5.9.3",
+    "typescript-eslint": "^8.60.0"
   }
 }

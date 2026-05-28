@@ -18,8 +18,8 @@ async function renderToStaticMarkup(): Promise<{ html: string }> {
 }
 
 const renderer: NamedSSRLoadedRendererValue = {
-  name: "islands/html",
   check,
+  name: "islands/html",
   renderToStaticMarkup,
   supportsAstroStaticSlot: true,
 };
