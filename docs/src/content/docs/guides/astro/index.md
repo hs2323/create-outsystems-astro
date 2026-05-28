@@ -8,6 +8,7 @@ description: Setup Astro JavaScript project
 ## Current supported frameworks
 
 - [Angular](https://analogjs.org/docs/packages/astro-angular/overview)
+- [HTML](../../integrations/html/index.md)
 - [Preact](https://docs.astro.build/en/guides/integrations-guide/preact/)
 - [React](https://docs.astro.build/en/guides/integrations-guide/react/)
 - [SolidJS](https://docs.astro.build/en/guides/integrations-guide/solid-js/)
@@ -414,12 +415,14 @@ The generator comes with unit, integration and testing built in. You can use the
 ### Integration Testing
 
 - [Angular Testing Library](https://testing-library.com/docs/angular-testing-library/intro/)
+- [DOM Testing Library](https://testing-library.com/docs/dom-testing-library/intro)
 - [Preact Testing Library](https://testing-library.com/docs/preact-testing-library/intro/)
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 - [SolidJS Testing Library](https://testing-library.com/docs/solid-testing-library/intro/)
 - [Svelte Testing Library](https://testing-library.com/docs/svelte-testing-library/intro/)
 - [Vue Testing Library](https://testing-library.com/docs/vue-testing-library/intro/)
-  The integration tests are placed in the `test/integration` folder. This tests the interaction between the components as a whole.
+  
+The integration tests are placed in the `test/integration` folder. This tests the interaction between the components as a whole.
 
 ### End-to-End
 

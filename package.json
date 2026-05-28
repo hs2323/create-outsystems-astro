@@ -12,6 +12,8 @@
   },
   "files": [
     "bin",
+    "integrations",
+    "integrations/package.json",
     "template",
     "template/.gitignore"
   ],

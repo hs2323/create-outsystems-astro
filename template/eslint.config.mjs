@@ -36,6 +36,7 @@ export default [
   {
     ignores: [
       ".astro/*",
+      ".integrations/",
       "dist/*",
       "node_modules/*",
       "output/*",

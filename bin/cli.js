@@ -16,6 +16,7 @@ const __dirname = path.dirname(__filename);
 
 const FRAMEWORKS = [
   { title: "Angular", value: "angular" },
+  { title: "HTML", value: "html" },
   { title: "Preact", value: "preact" },
   { title: "React", value: "react" },
   { title: "SolidJS", value: "solid" },
@@ -48,6 +49,8 @@ async function main() {
   // Copy files
   console.log("📦 Copying template...");
   copyDir(templateDir, targetDir);
+
+  buildIntegrations();
 
   const packageManager = packageInstall(targetDir);
 
@@ -91,6 +94,35 @@ Next steps:
   cd ${response.projectName}
   ${packageManager} run dev
 `);
+}
+
+function buildIntegrations() {
+  const integrationsDir = path.join(__dirname, "..", "integrations");
+  const packageManager = detectPackageManager();
+
+  const installCmd = {
+    npm: "npm install",
+    yarn: "yarn install",
+    pnpm: "pnpm install",
+    bun: "bun install",
+    deno: "deno install",
+    unknown: "npm install",
+  }[packageManager];
+
+  const buildCmd = {
+    npm: "npm run process",
+    yarn: "yarn process",
+    pnpm: "pnpm run process",
+    bun: "bun run process",
+    deno: "deno task process",
+    unknown: "npm run process",
+  }[packageManager];
+
+  console.log("📦 Installing integration dependencies...");
+  execSync(installCmd, { cwd: integrationsDir, stdio: "inherit" });
+
+  console.log("🔨 Building integrations...");
+  execSync(buildCmd, { cwd: integrationsDir, stdio: "inherit" });
 }
 
 // Simple recursive copy
@@ -220,6 +252,10 @@ function updateMultiAstroPage(projectDir, selectedFrameworks) {
     angular: {
       import: /import\s+AngularStore\s+from\s+['"].*?angular\/Store\.component['"];?\s*\n?/g,
       component: /<AngularStore\s+client:load\s*\/>\s*\n?/g
+    },
+    html: {
+      import: /import\s+HTMLStore\s+from\s+['"].*?html\/Store['"];?\s*\n?/g,
+      component: /<HTMLStore\s+client:load\s*\/>\s*\n?/g,
     },
     preact: {
       import: /import\s+PreactStore\s+from\s+['"].*?preact\/Store['"];?\s*\n?/g,

@@ -6,6 +6,7 @@
 - The output generation will be only client side. No server side rendering or server side components will be used.
 - The Astro Islands can be used generated with the following frameworks:
   - Angular - Documentation available at https://analogjs.org/docs/packages/astro-angular/overview
+  - HTML - Documentation available at https://hs2323.github.io/create-outsystems-astro/guides/integrations/html/
   - Preact - Documentation available at https://docs.astro.build/en/guides/integrations-guide/preact/
   - React - Documentation available at https://docs.astro.build/en/guides/integrations-guide/react/
   - SolidJS - Documentation available at https://docs.astro.build/en/guides/integrations-guide/solid-js/
@@ -38,6 +39,7 @@ In OutSystems Developer Cloud, the Islands library is available at https://www.o
 - The files in src/pages/\*.astro are used as a starting point and holds the components for generation. They can be tested by running `npm run dev`. That will show what the component looks like as rendered. The sample example pages are broken out by framework name (src/pages/react, src/pages/vue, etc). This page will house the component(s) entry points.
 - When importing a component, the component must have the attribute of the client:only= + the framework name.\
   - Angular: `client:load`
+  - HTML: `client:load`
   - Preact: `client:only="preact"`
   - React: `client:only="react"`
   - SolidJS: `client:only="solid-js"`
@@ -88,6 +90,33 @@ Astro slots can be sent in. A slot can be either the default one or the named on
 
 Angular does not support the use of slots. Any use of slots with Angular should be discouraged.
 
+##### HTML
+
+The HTML integration will pass in the slot as a parameter.
+
+```js
+<div slot="header">Header content</div>
+```
+
+wiill have the following parameter named header.
+
+```js
+export default function Counter({
+	children,
+	header,
+}: {
+	children: string
+	header: string;
+}) {
+	return `
+    ${header}
+    <div>
+			${children}
+		</div>
+  `;
+}
+```
+
 ##### Preact
 
 - In Preact, slots are handled as props. The default slot is the `children` prop. A named slot will have the name of its slot as the parameter. For example, a slot with the following:
@@ -98,7 +127,7 @@ Angular does not support the use of slots. Any use of slots with Angular should 
 
 will have the parameter named header.
 
-- The slots are then rendered using the regular React rendering parameter method. With the following Astro component:
+- The slots are then rendered using the regular Preact rendering parameter method. With the following Astro component:
 
 ```js
 ---
@@ -299,6 +328,45 @@ The OutSystems Developer Cloud library is called Lightweight State Manager and i
 Nano Stores are currently supported for only Preact - https://github.com/nanostores/preact, React - https://github.com/nanostores/react and Vue - https://github.com/nanostores/vue. The Angular 21 library does not yet support them.
 
 In OutSystems, the store will be on the Window object. The Islands component will then have to access it from there.
+
+#### HTML
+
+```html
+<div class="nanostore-value"></div>
+<script>
+  const nanostoreEl = container.querySelector(".nanostore-value");
+
+  if (!window.Stores) window.Stores = {};
+  if (!window.Stores["htmlStore"]) {
+    let _value = "Test Value";
+    const _subs = [];
+    window.Stores["htmlStore"] = {
+      get: function () {
+        return _value;
+      },
+      set: function (v) {
+        _value = v;
+        _subs.forEach(function (fn) {
+          fn(v);
+        });
+      },
+      subscribe: function (fn) {
+        fn(_value);
+        _subs.push(fn);
+        return function () {
+          _subs.splice(_subs.indexOf(fn), 1);
+        };
+      },
+    };
+  }
+
+  const store = window.Stores["htmlStore"];
+  nanostoreEl.textContent = store.get();
+  store.subscribe(function (value) {
+    nanostoreEl.textContent = value;
+  });
+</script>
+```
 
 #### Preact
 
