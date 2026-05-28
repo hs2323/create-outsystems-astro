@@ -8,6 +8,7 @@ overrides:
   devalue: ^5.8.1
   js-cookie: ^3.0.7
   qs: ^6.15.2
+  tmp: ^0.2.6
 
 importers:
 
@@ -6089,8 +6090,8 @@ packages:
     resolution: {integrity: sha512-Bf+ILmBgretUrdJxzXM0SgXLZ3XfiaUuOj/IKQHuTXip+05Xn+uyEYdVg0kYDipTBcLrCVyUzAPz7QmArb0mmw==}
     engines: {node: '>=14.0.0'}
 
-  tmp@0.2.5:
-    resolution: {integrity: sha512-voyz6MApa1rQGUxT3E+BK7/ROe8itEx7vD8/HEvt4xwXucvQ5G5oeEiHkmHZJuBO21RpOf+YYm9MOivj709jow==}
+  tmp@0.2.6:
+    resolution: {integrity: sha512-5sJPdPjfI5Kx+qbrDesxkglRBxW//g7hCsqspEjwkewGvBMGIKMOTKzLt1hFVJzyadba3lDUN20O9qhvbQUSTA==}
     engines: {node: '>=14.14'}
 
   to-regex-range@5.0.1:
@@ -12461,7 +12462,7 @@ snapshots:
       open: 7.4.2
       semver: 7.8.0
       slash: 2.0.0
-      tmp: 0.2.5
+      tmp: 0.2.6
       yaml: 2.9.0
 
   path-browserify@1.0.1: {}
@@ -13358,7 +13359,7 @@ snapshots:
 
   tinyrainbow@3.1.0: {}
 
-  tmp@0.2.5: {}
+  tmp@0.2.6: {}
 
   to-regex-range@5.0.1:
     dependencies:
