@@ -3,7 +3,6 @@ const client_default =
   (
     Component: unknown,
     props: Record<string, unknown>,
-    { default: children = "", ...slots }: Record<string, string> = {},
     { client }: { client: string },
   ) => {
     if (client !== "only" && !element.hasAttribute("ssr")) return;
@@ -14,8 +13,6 @@ const client_default =
     } else if (typeof Component === "function") {
       html = (Component as (p: Record<string, unknown>) => string)({
         ...props,
-        children,
-        ...slots,
       });
     } else {
       html = "";
