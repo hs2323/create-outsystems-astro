@@ -1,28 +1,55 @@
 import type { AstroIntegration, AstroRenderer } from "astro";
 
-function getRenderer(): AstroRenderer {
+const VIRTUAL_SERVER_ID = "virtual:islands/html/server-with-filter";
+const RESOLVED_VIRTUAL_SERVER_ID = `\0${VIRTUAL_SERVER_ID}`;
+
+function getRenderer(filtered: boolean): AstroRenderer {
   return {
     clientEntrypoint: "islands-integrations/html/client",
     name: "islands/html",
-    serverEntrypoint: "islands-integrations/html/server",
+    serverEntrypoint: filtered
+      ? VIRTUAL_SERVER_ID
+      : "islands-integrations/html/server",
   };
 }
 
-export const getContainerRenderer = (): AstroRenderer => getRenderer();
+export const getContainerRenderer = (): AstroRenderer => getRenderer(false);
 
 export interface Options {
-  compat?: boolean;
-  devtools?: boolean;
   exclude?: string[];
   include?: string[];
 }
 
-export default function (): AstroIntegration {
+export default function (options: Options = {}): AstroIntegration {
+  const { exclude, include } = options;
+  const filtered = !!(include?.length || exclude?.length);
+
   return {
     hooks: {
       "astro:config:setup": ({ addRenderer, updateConfig }) => {
-        addRenderer(getRenderer());
-        updateConfig({ vite: {} });
+        addRenderer(getRenderer(filtered));
+        updateConfig({
+          vite: filtered
+            ? {
+                plugins: [
+                  {
+                    load(id: string) {
+                      if (id !== RESOLVED_VIRTUAL_SERVER_ID) return;
+                      return [
+                        `import { createRenderer } from "islands-integrations/html/server";`,
+                        `export default createRenderer(${JSON.stringify(include)}, ${JSON.stringify(exclude)});`,
+                      ].join("\n");
+                    },
+                    name: "islands/html/filter",
+                    resolveId(id: string) {
+                      if (id === VIRTUAL_SERVER_ID)
+                        return RESOLVED_VIRTUAL_SERVER_ID;
+                    },
+                  },
+                ],
+              }
+            : {},
+        });
       },
     },
     name: "islands/html",

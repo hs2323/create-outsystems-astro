@@ -1,6 +1,33 @@
-import type { NamedSSRLoadedRendererValue } from "astro";
+import type {
+  AstroComponentMetadata,
+  NamedSSRLoadedRendererValue,
+} from "astro";
 
-async function check(Component: unknown): Promise<boolean> {
+export function createRenderer(
+  include?: string[],
+  exclude?: string[],
+): NamedSSRLoadedRendererValue {
+  return {
+    check: async (
+      Component: unknown,
+      _props: unknown,
+      _slots: unknown,
+      metadata?: AstroComponentMetadata,
+    ) => {
+      const url = metadata?.componentUrl;
+      if (url) {
+        if (include && !matchesPatterns(url, include)) return false;
+        if (exclude && matchesPatterns(url, exclude)) return false;
+      }
+      return checkComponent(Component);
+    },
+    name: "islands/html",
+    renderToStaticMarkup,
+    supportsAstroStaticSlot: true,
+  };
+}
+
+async function checkComponent(Component: unknown): Promise<boolean> {
   if (typeof Component === "string") return true;
   if (typeof Component === "function") {
     try {
@@ -13,15 +40,15 @@ async function check(Component: unknown): Promise<boolean> {
   return false;
 }
 
+function matchesPatterns(url: string, patterns: string[]): boolean {
+  return patterns.some((pattern) => {
+    const prefix = pattern.replace(/\/?\*+$/, "");
+    return url.includes(prefix);
+  });
+}
+
 async function renderToStaticMarkup(): Promise<{ html: string }> {
   return { html: "" };
 }
 
-const renderer: NamedSSRLoadedRendererValue = {
-  check,
-  name: "islands/html",
-  renderToStaticMarkup,
-  supportsAstroStaticSlot: true,
-};
-
-export default renderer;
+export default createRenderer();
