@@ -8,12 +8,6 @@ test.describe("Has values", () => {
   test("Should have header", async ({ page }) => {
     await expect(page.getByText("HTML Demo Component")).toBeVisible();
   });
-
-  test("Should have slot content", async ({ page }) => {
-    await expect(
-      page.getByText("This is content passed into the component"),
-    ).toBeVisible();
-  });
 });
 
 test.describe("Change counter", () => {

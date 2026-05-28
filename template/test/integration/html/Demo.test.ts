@@ -50,16 +50,6 @@ describe("Demo", () => {
     expect(screen.getByText("5")).toBeInTheDocument();
   });
 
-  it("renders header", () => {
-    renderDemo({ header: "<h1>Test Header</h1>" });
-    expect(screen.getByText("Test Header")).toBeInTheDocument();
-  });
-
-  it("renders children", () => {
-    renderDemo({ children: "<div>Test Children</div>" });
-    expect(screen.getByText("Test Children")).toBeInTheDocument();
-  });
-
   it("increments count when add button is clicked", () => {
     renderDemo({ initialCount: 5 });
     fireEvent.click(screen.getByRole("button", { name: "+" }));

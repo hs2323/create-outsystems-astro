@@ -23,7 +23,7 @@ export function createRenderer(
     },
     name: "islands/html",
     renderToStaticMarkup,
-    supportsAstroStaticSlot: true,
+    supportsAstroStaticSlot: false,
   };
 }
 

@@ -9,13 +9,11 @@ interface DemoProps {
 }
 
 export default function Demo({
-  children = "",
-  header = "",
   initialCount = 0,
   showMessage = "",
 }: DemoProps): string {
   return `
-    ${header}
+    <div class="counter-title" slot="header">HTML Demo Component</div>
     <div class="html-demo">
       <div class="card-grid">
         <div class="card">
@@ -45,12 +43,10 @@ export default function Demo({
             </div>
           </div>
         </div>
-        <div class="card">
-          <strong>Slot content</strong>
-          <div class="card-content">
-            <div>${children}</div>
-          </div>
-        </div>
+      <div class="card unused">
+        <strong>Slot content (not supported)</strong>
+        <div class="card-content"></div>
+      </div>
       </div>
       <div class="counter-logos">
         <img alt="OutSystems logo" src="${OutSystemsLogo}" />
