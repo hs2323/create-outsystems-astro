@@ -17,7 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
-- Updated sub-dependency tmp to 0.2.6 due to CVE-2026-44705.
+- Updated sub-dependency tmp to 0.2.7 due to CVE-2026-44705.
 - Updated sub-dependency qs to 6.15.2 due to CVE-2026-8723.
 - Updated sub-dependency js-cookie to 3.0.7 due to CVE-2026-46625.
 
