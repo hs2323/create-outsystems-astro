@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Updated Yarn to v4.
 - Moved pnpm overrides from package.json to pnpm-workspace.yaml.
 
 ### Security
