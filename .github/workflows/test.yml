@@ -12,6 +12,7 @@ env:
   DENO_VERSION: '2.7.14'
   NODE_VERSION: '24.15.0'
   PNPM_VERSION: '11.1.1'
+  YARN_VERSION: '4.15.0'
 
 jobs:
 
@@ -29,7 +30,7 @@ jobs:
 
       - name: Build integrations
         working-directory: integrations
-        run: bun install --frozen-lockfile && bun run process
+        run: bun install --immutable && bun run process
 
       - name: Install dependencies
         run: bun install
@@ -112,7 +113,7 @@ jobs:
 
       - name: Build integrations
         working-directory: integrations
-        run: pnpm install --frozen-lockfile && pnpm run process
+        run: pnpm install --immutable && pnpm run process
 
       - name: Install dependencies
         run: pnpm install
@@ -122,7 +123,7 @@ jobs:
 
       - name: Run output
         working-directory: test-islands
-        run: pnpm install --frozen-lockfile && pnpm run output
+        run: pnpm install --immutable && pnpm run output
 
   cli-yarn:
     runs-on: ubuntu-latest
@@ -138,25 +139,19 @@ jobs:
 
       - name: Build integrations
         working-directory: integrations
-        run: yarn install --frozen-lockfile && yarn run process
+        run: yarn install --immutable && yarn run process
 
       - name: Install dependencies
         run: yarn install
 
-      - name: Link
-        run: yarn link
-
-      - name: Link package
-        run: yarn link create-outsystems-astro
-
       - name: Run CLI
         run: |
           yarn add file:$GITHUB_WORKSPACE
-          yarn create-outsystems-astro --projectName test-islands --frameworks react
+          yarn exec create-outsystems-astro --projectName test-islands --frameworks react
 
       - name: Run output
         working-directory: test-islands
-        run: yarn install --frozen-lockfile && yarn run output
+        run: yarn install --immutable && yarn run output
 
   format-bun:
     runs-on: ubuntu-latest
@@ -172,11 +167,11 @@ jobs:
 
       - name: Build integrations
         working-directory: integrations
-        run: bun install --frozen-lockfile && bun run process
+        run: bun install --immutable && bun run process
 
       - name: Install dependencies
         working-directory: template
-        run: bun install --frozen-lockfile
+        run: bun install --immutable
 
       - name: Run format
         working-directory: template
@@ -293,11 +288,11 @@ jobs:
 
       - name: Build integrations
         working-directory: integrations
-        run: pnpm install --frozen-lockfile && pnpm run process
+        run: pnpm install --immutable && pnpm run process
 
       - name: Install dependencies
         working-directory: template
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --immutable
       
       - name: Run format
         working-directory: template
@@ -317,11 +312,11 @@ jobs:
 
       - name: Build integrations
         working-directory: integrations
-        run: yarn install --frozen-lockfile && yarn run process
+        run: yarn install --immutable && yarn run process
 
       - name: Install dependencies
         working-directory: template
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
 
       - name: Run format
         working-directory: template
@@ -341,11 +336,11 @@ jobs:
 
       - name: Build integrations
         working-directory: integrations
-        run: bun install --frozen-lockfile && bun run process
+        run: bun install --immutable && bun run process
 
       - name: Install dependencies
         working-directory: template
-        run: bun install --frozen-lockfile
+        run: bun install --immutable
 
       - name: Run lint
         working-directory: template
@@ -458,11 +453,11 @@ jobs:
 
       - name: Build integrations
         working-directory: integrations
-        run: pnpm install --frozen-lockfile && pnpm run process
+        run: pnpm install --immutable && pnpm run process
 
       - name: Install dependencies
         working-directory: template
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --immutable
       
       - name: Run lint
         working-directory: template
@@ -482,11 +477,11 @@ jobs:
 
       - name: Build integrations
         working-directory: integrations
-        run: yarn install --frozen-lockfile && yarn run process
+        run: yarn install --immutable && yarn run process
 
       - name: Install dependencies
         working-directory: template
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
 
       - name: Run lint
         working-directory: template
@@ -695,11 +690,11 @@ jobs:
 
       - name: Build integrations
         working-directory: integrations
-        run: bun install --frozen-lockfile && bun run process
+        run: bun install --immutable && bun run process
 
       - name: Install dependencies
         working-directory: template
-        run: bun install --frozen-lockfile
+        run: bun install --immutable
 
       - name: Run security check
         working-directory: template
@@ -830,11 +825,11 @@ jobs:
 
       - name: Build integrations
         working-directory: integrations
-        run: pnpm install --frozen-lockfile && pnpm run process
+        run: pnpm install --immutable && pnpm run process
 
       - name: Install dependencies
         working-directory: template
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --immutable
 
       - name: Run security check
         working-directory: template
@@ -854,11 +849,11 @@ jobs:
 
       - name: Build integrations
         working-directory: integrations
-        run: yarn install --frozen-lockfile && yarn run process
+        run: yarn install --immutable && yarn run process
 
       - name: Install dependencies
         working-directory: template
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
 
       - name: Run security check
         working-directory: template
@@ -878,11 +873,11 @@ jobs:
 
       - name: Build integrations
         working-directory: integrations
-        run: bun install --frozen-lockfile && bun run process
+        run: bun install --immutable && bun run process
 
       - name: Install dependencies
         working-directory: template
-        run: bun install --frozen-lockfile
+        run: bun install --immutable
 
       - name: Run CLI
         working-directory: template
@@ -955,11 +950,11 @@ jobs:
 
       - name: Build integrations
         working-directory: integrations
-        run: pnpm install --frozen-lockfile && pnpm run process
+        run: pnpm install --immutable && pnpm run process
 
       - name: Install dependencies
         working-directory: template
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --immutable
       
       - name: Run tests
         working-directory: template
@@ -979,11 +974,11 @@ jobs:
 
       - name: Build integrations
         working-directory: integrations
-        run: yarn install --frozen-lockfile && yarn run process
+        run: yarn install --immutable && yarn run process
 
       - name: Install dependencies
         working-directory: template
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
 
       - name: Run tests
         working-directory: template
@@ -1003,11 +998,11 @@ jobs:
 
       - name: Build integrations
         working-directory: integrations
-        run: bun install --frozen-lockfile && bun run process
+        run: bun install --immutable && bun run process
 
       - name: Install dependencies
         working-directory: template
-        run: bun install --frozen-lockfile
+        run: bun install --immutable
 
       - name: Install Playwright
         working-directory: template
@@ -1092,11 +1087,11 @@ jobs:
 
       - name: Build integrations
         working-directory: integrations
-        run: pnpm install --frozen-lockfile && pnpm run process
+        run: pnpm install --immutable && pnpm run process
 
       - name: Install dependencies
         working-directory: template
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --immutable
 
       - name: Install Playwright
         working-directory: template
@@ -1120,11 +1115,11 @@ jobs:
 
       - name: Build integrations
         working-directory: integrations
-        run: yarn install --frozen-lockfile && yarn run process
+        run: yarn install --immutable && yarn run process
 
       - name: Install dependencies
         working-directory: template
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
 
       - name: Install Playwright
         working-directory: template
@@ -1148,11 +1143,11 @@ jobs:
 
       - name: Build integrations
         working-directory: integrations
-        run: bun install --frozen-lockfile && bun run process
+        run: bun install --immutable && bun run process
 
       - name: Install dependencies
         working-directory: template
-        run: bun install --frozen-lockfile
+        run: bun install --immutable
 
       - name: Run type check
         working-directory: template
@@ -1225,11 +1220,11 @@ jobs:
 
       - name: Build integrations
         working-directory: integrations
-        run: pnpm install --frozen-lockfile && pnpm run process
+        run: pnpm install --immutable && pnpm run process
 
       - name: Install dependencies
         working-directory: template
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --immutable
       
       - name: Run type check
         working-directory: template
@@ -1249,11 +1244,11 @@ jobs:
 
       - name: Build integrations
         working-directory: integrations
-        run: yarn install --frozen-lockfile && yarn run process
+        run: yarn install --immutable && yarn run process
 
       - name: Install dependencies
         working-directory: template
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
 
       - name: Run type check
         working-directory: template
