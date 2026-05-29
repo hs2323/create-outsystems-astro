@@ -9,6 +9,7 @@ on:
 
 env:
   NODE_VERSION: '24.15.0'
+  YARN_VERSION: '4.15.0'
 
 jobs:
 
@@ -24,8 +25,10 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      - name: Enable Corepack
-        run: corepack enable
+      - name: Enable Corepack and Set Yarn Version
+        run: |
+          corepack enable
+          corepack prepare yarn@${{ env.YARN_VERSION }}
 
       - name: Install dependencies
         working-directory: template
@@ -46,8 +49,10 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      - name: Enable Corepack
-        run: corepack enable
+      - name: Enable Corepack and Set Yarn Version
+        run: |
+          corepack enable
+          corepack prepare yarn@${{ env.YARN_VERSION }}
 
       - name: Install dependencies
         working-directory: template
@@ -68,8 +73,10 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      - name: Enable Corepack
-        run: corepack enable
+      - name: Enable Corepack and Set Yarn Version
+        run: |
+          corepack enable
+          corepack prepare yarn@${{ env.YARN_VERSION }}
 
       - name: Install dependencies
         working-directory: template
@@ -90,8 +97,10 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      - name: Enable Corepack
-        run: corepack enable
+      - name: Enable Corepack and Set Yarn Version
+        run: |
+          corepack enable
+          corepack prepare yarn@${{ env.YARN_VERSION }}
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
@@ -111,8 +120,10 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      - name: Enable Corepack
-        run: corepack enable
+      - name: Enable Corepack and Set Yarn Version
+        run: |
+          corepack enable
+          corepack prepare yarn@${{ env.YARN_VERSION }}
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
@@ -135,8 +146,10 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      - name: Enable Corepack
-        run: corepack enable
+      - name: Enable Corepack and Set Yarn Version
+        run: |
+          corepack enable
+          corepack prepare yarn@${{ env.YARN_VERSION }}
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile

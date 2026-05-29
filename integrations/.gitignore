@@ -1,0 +1,7 @@
+# build output
+dist/
+# generated types
+.astro/
+
+.yarn/cache
+.yarn/install-state.gz

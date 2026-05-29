@@ -12,6 +12,7 @@ env:
   DENO_VERSION: '2.7.14'
   NODE_VERSION: '24.15.0'
   PNPM_VERSION: '11.1.1'
+  YARN_VERSION: '4.15.0'
 
 jobs:
 
@@ -29,7 +30,7 @@ jobs:
 
       - name: Build integrations
         working-directory: integrations
-        run: bun install --frozen-lockfile && bun run process
+        run: bun install --immutable && bun run process
 
       - name: Install dependencies
         run: bun install
@@ -130,33 +131,30 @@ jobs:
     steps:  
       - name: Checkout code
         uses: actions/checkout@v6.0.2
-
+    
       - name: Use Node.js
         uses: actions/setup-node@v6.4.0
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      - name: Build integrations
-        working-directory: integrations
-        run: yarn install --frozen-lockfile && yarn run process
+      - name: Enable Corepack and Set Yarn Version
+        run: |
+          corepack enable
+          corepack prepare yarn@${{ env.YARN_VERSION }}
 
       - name: Install dependencies
         run: yarn install
 
-      - name: Link
-        run: yarn link
-
-      - name: Link package
-        run: yarn link create-outsystems-astro
-
       - name: Run CLI
         run: |
           yarn add file:$GITHUB_WORKSPACE
-          yarn create-outsystems-astro --projectName test-islands --frameworks react
+          yarn dlx create-outsystems-astro --projectName test-islands --frameworks react
 
       - name: Run output
         working-directory: test-islands
-        run: yarn install --frozen-lockfile && yarn run output
+        run: |
+          yarn install --immutable 
+          yarn run output
 
   format-bun:
     runs-on: ubuntu-latest
@@ -172,11 +170,11 @@ jobs:
 
       - name: Build integrations
         working-directory: integrations
-        run: bun install --frozen-lockfile && bun run process
+        run: bun install --immutable && bun run process
 
       - name: Install dependencies
         working-directory: template
-        run: bun install --frozen-lockfile
+        run: bun install --immutable
 
       - name: Run format
         working-directory: template
@@ -306,22 +304,30 @@ jobs:
   format-yarn:
     runs-on: ubuntu-latest
 
-    steps:  
+    steps:
       - name: Checkout code
         uses: actions/checkout@v6.0.2
+
+      - name: Enable Corepack
+        run: corepack enable
 
       - name: Use Node.js
         uses: actions/setup-node@v6.4.0
         with:
           node-version: ${{ env.NODE_VERSION }}
+      
+      - name: Enable Corepack and Set Yarn Version
+        run: |
+          corepack enable
+          corepack prepare yarn@${{ env.YARN_VERSION }}
 
       - name: Build integrations
         working-directory: integrations
-        run: yarn install --frozen-lockfile && yarn run process
+        run: yarn install --immutable && yarn run process
 
       - name: Install dependencies
         working-directory: template
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
 
       - name: Run format
         working-directory: template
@@ -341,11 +347,11 @@ jobs:
 
       - name: Build integrations
         working-directory: integrations
-        run: bun install --frozen-lockfile && bun run process
+        run: bun install --immutable && bun run process
 
       - name: Install dependencies
         working-directory: template
-        run: bun install --frozen-lockfile
+        run: bun install --immutable
 
       - name: Run lint
         working-directory: template
@@ -471,22 +477,30 @@ jobs:
   lint-yarn:
     runs-on: ubuntu-latest
 
-    steps:  
+    steps:
       - name: Checkout code
         uses: actions/checkout@v6.0.2
+
+      - name: Enable Corepack
+        run: corepack enable
 
       - name: Use Node.js
         uses: actions/setup-node@v6.4.0
         with:
           node-version: ${{ env.NODE_VERSION }}
 
+      - name: Enable Corepack and Set Yarn Version
+        run: |
+          corepack enable
+          corepack prepare yarn@${{ env.YARN_VERSION }}
+
       - name: Build integrations
         working-directory: integrations
-        run: yarn install --frozen-lockfile && yarn run process
+        run: yarn install --immutable && yarn run process
 
       - name: Install dependencies
         working-directory: template
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
 
       - name: Run lint
         working-directory: template
@@ -695,11 +709,11 @@ jobs:
 
       - name: Build integrations
         working-directory: integrations
-        run: bun install --frozen-lockfile && bun run process
+        run: bun install --immutable && bun run process
 
       - name: Install dependencies
         working-directory: template
-        run: bun install --frozen-lockfile
+        run: bun install --immutable
 
       - name: Run security check
         working-directory: template
@@ -843,22 +857,30 @@ jobs:
   security-yarn:
     runs-on: ubuntu-latest
 
-    steps:  
+    steps:
       - name: Checkout code
         uses: actions/checkout@v6.0.2
+
+      - name: Enable Corepack
+        run: corepack enable
 
       - name: Use Node.js
         uses: actions/setup-node@v6.4.0
         with:
           node-version: ${{ env.NODE_VERSION }}
+      
+      - name: Enable Corepack and Set Yarn Version
+        run: |
+          corepack enable
+          corepack prepare yarn@${{ env.YARN_VERSION }}
 
       - name: Build integrations
         working-directory: integrations
-        run: yarn install --frozen-lockfile && yarn run process
+        run: yarn install --immutable && yarn run process
 
       - name: Install dependencies
         working-directory: template
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
 
       - name: Run security check
         working-directory: template
@@ -878,11 +900,11 @@ jobs:
 
       - name: Build integrations
         working-directory: integrations
-        run: bun install --frozen-lockfile && bun run process
+        run: bun install --immutable && bun run process
 
       - name: Install dependencies
         working-directory: template
-        run: bun install --frozen-lockfile
+        run: bun install --immutable
 
       - name: Run CLI
         working-directory: template
@@ -968,22 +990,28 @@ jobs:
   test-yarn:
     runs-on: ubuntu-latest
 
-    steps:  
+    steps:
       - name: Checkout code
         uses: actions/checkout@v6.0.2
+
 
       - name: Use Node.js
         uses: actions/setup-node@v6.4.0
         with:
           node-version: ${{ env.NODE_VERSION }}
+                
+      - name: Enable Corepack and Set Yarn Version
+        run: |
+          corepack enable
+          corepack prepare yarn@${{ env.YARN_VERSION }}
 
       - name: Build integrations
         working-directory: integrations
-        run: yarn install --frozen-lockfile && yarn run process
+        run: yarn install --immutable && yarn run process
 
       - name: Install dependencies
         working-directory: template
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
 
       - name: Run tests
         working-directory: template
@@ -1003,11 +1031,11 @@ jobs:
 
       - name: Build integrations
         working-directory: integrations
-        run: bun install --frozen-lockfile && bun run process
+        run: bun install --immutable && bun run process
 
       - name: Install dependencies
         working-directory: template
-        run: bun install --frozen-lockfile
+        run: bun install --immutable
 
       - name: Install Playwright
         working-directory: template
@@ -1109,22 +1137,30 @@ jobs:
   teste2e-yarn:
     runs-on: ubuntu-latest
 
-    steps:  
+    steps:
       - name: Checkout code
         uses: actions/checkout@v6.0.2
+
+      - name: Enable Corepack
+        run: corepack enable
 
       - name: Use Node.js
         uses: actions/setup-node@v6.4.0
         with:
           node-version: ${{ env.NODE_VERSION }}
 
+      - name: Enable Corepack and Set Yarn Version
+        run: |
+          corepack enable
+          corepack prepare yarn@${{ env.YARN_VERSION }}
+
       - name: Build integrations
         working-directory: integrations
-        run: yarn install --frozen-lockfile && yarn run process
+        run: yarn install --immutable && yarn run process
 
       - name: Install dependencies
         working-directory: template
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
 
       - name: Install Playwright
         working-directory: template
@@ -1148,11 +1184,11 @@ jobs:
 
       - name: Build integrations
         working-directory: integrations
-        run: bun install --frozen-lockfile && bun run process
+        run: bun install --immutable && bun run process
 
       - name: Install dependencies
         working-directory: template
-        run: bun install --frozen-lockfile
+        run: bun install --immutable
 
       - name: Run type check
         working-directory: template
@@ -1238,22 +1274,30 @@ jobs:
   typecheck-yarn:
     runs-on: ubuntu-latest
 
-    steps:  
+    steps:
       - name: Checkout code
         uses: actions/checkout@v6.0.2
+
+      - name: Enable Corepack
+        run: corepack enable
 
       - name: Use Node.js
         uses: actions/setup-node@v6.4.0
         with:
           node-version: ${{ env.NODE_VERSION }}
 
+      - name: Enable Corepack and Set Yarn Version
+        run: |
+          corepack enable
+          corepack prepare yarn@${{ env.YARN_VERSION }}
+
       - name: Build integrations
         working-directory: integrations
-        run: yarn install --frozen-lockfile && yarn run process
+        run: yarn install --immutable && yarn run process
 
       - name: Install dependencies
         working-directory: template
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
 
       - name: Run type check
         working-directory: template

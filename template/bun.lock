@@ -88,7 +88,6 @@
         "eslint-plugin-vue": "^10.9.1",
         "globals": "^17.6.0",
         "happy-dom": "^20.9.0",
-        "improved-yarn-audit": "^3.0.4",
         "js-beautify": "^1.15.4",
         "patch-package": "^8.0.1",
         "prettier": "^3.8.3",
@@ -1555,8 +1554,6 @@
     "immutable": ["immutable@5.1.5", "", {}, "sha512-t7xcm2siw+hlUM68I+UEOK+z84RzmN59as9DZ7P1l0994DKUWV7UXBMQZVxaoMSRQ+PBZbHCOoBt7a2wxOMt+A=="],
 
     "import-fresh": ["import-fresh@3.3.1", "", { "dependencies": { "parent-module": "^1.0.0", "resolve-from": "^4.0.0" } }, "sha512-TR3KfrTZTYLPB6jUjfx6MF9WcWrHL9su5TObK4ZkYgBdWKPOFoSoQIdEuTuR82pmtxH2spWG9h6etwfr1pLBqQ=="],
-
-    "improved-yarn-audit": ["improved-yarn-audit@3.0.4", "", { "bin": { "improved-yarn-audit": "bin/improved-yarn-audit" } }, "sha512-secfgreRqLYmnp4qzaxxICpOC/RJxcfQSrDSVvkMTXS8bssjqMSuJiueqr07PVP87OlyfTytxDR2SkzIeoTfLQ=="],
 
     "imurmurhash": ["imurmurhash@0.1.4", "", {}, "sha512-JmXMZ6wuvDmLiHEml9ykzqO6lwFbof0GG4IkcGaENdCRDDmMVnny7s5HsIgHCbaq0w2MyPhDqkhTUgS2LU2PHA=="],
 
