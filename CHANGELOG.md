@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 - Removed dependency improved-yarn-audit.
+- Removed Yarn v1 support.
 
 ### Security
 
