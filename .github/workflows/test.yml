@@ -132,10 +132,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v6.0.2
 
+      - name: Enable Corepack
+        run: corepack enable
+    
       - name: Use Node.js
         uses: actions/setup-node@v6.4.0
         with:
           node-version: ${{ env.NODE_VERSION }}
+          cache: 'yarn'
 
       - name: Build integrations
         working-directory: integrations
@@ -301,14 +305,18 @@ jobs:
   format-yarn:
     runs-on: ubuntu-latest
 
-    steps:  
+    steps:
       - name: Checkout code
         uses: actions/checkout@v6.0.2
+
+      - name: Enable Corepack
+        run: corepack enable
 
       - name: Use Node.js
         uses: actions/setup-node@v6.4.0
         with:
           node-version: ${{ env.NODE_VERSION }}
+          cache: 'yarn'
 
       - name: Build integrations
         working-directory: integrations
@@ -466,14 +474,18 @@ jobs:
   lint-yarn:
     runs-on: ubuntu-latest
 
-    steps:  
+    steps:
       - name: Checkout code
         uses: actions/checkout@v6.0.2
+
+      - name: Enable Corepack
+        run: corepack enable
 
       - name: Use Node.js
         uses: actions/setup-node@v6.4.0
         with:
           node-version: ${{ env.NODE_VERSION }}
+          cache: 'yarn'
 
       - name: Build integrations
         working-directory: integrations
@@ -838,14 +850,18 @@ jobs:
   security-yarn:
     runs-on: ubuntu-latest
 
-    steps:  
+    steps:
       - name: Checkout code
         uses: actions/checkout@v6.0.2
+
+      - name: Enable Corepack
+        run: corepack enable
 
       - name: Use Node.js
         uses: actions/setup-node@v6.4.0
         with:
           node-version: ${{ env.NODE_VERSION }}
+          cache: 'yarn'
 
       - name: Build integrations
         working-directory: integrations
@@ -963,14 +979,18 @@ jobs:
   test-yarn:
     runs-on: ubuntu-latest
 
-    steps:  
+    steps:
       - name: Checkout code
         uses: actions/checkout@v6.0.2
+
+      - name: Enable Corepack
+        run: corepack enable
 
       - name: Use Node.js
         uses: actions/setup-node@v6.4.0
         with:
           node-version: ${{ env.NODE_VERSION }}
+          cache: 'yarn'
 
       - name: Build integrations
         working-directory: integrations
@@ -1104,14 +1124,18 @@ jobs:
   teste2e-yarn:
     runs-on: ubuntu-latest
 
-    steps:  
+    steps:
       - name: Checkout code
         uses: actions/checkout@v6.0.2
+
+      - name: Enable Corepack
+        run: corepack enable
 
       - name: Use Node.js
         uses: actions/setup-node@v6.4.0
         with:
           node-version: ${{ env.NODE_VERSION }}
+          cache: 'yarn'
 
       - name: Build integrations
         working-directory: integrations
@@ -1233,14 +1257,18 @@ jobs:
   typecheck-yarn:
     runs-on: ubuntu-latest
 
-    steps:  
+    steps:
       - name: Checkout code
         uses: actions/checkout@v6.0.2
+
+      - name: Enable Corepack
+        run: corepack enable
 
       - name: Use Node.js
         uses: actions/setup-node@v6.4.0
         with:
           node-version: ${{ env.NODE_VERSION }}
+          cache: 'yarn'
 
       - name: Build integrations
         working-directory: integrations

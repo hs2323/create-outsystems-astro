@@ -12,8 +12,8 @@
     "dev": "astro dev",
     "format": "prettier . --check",
     "format:write": "prettier  --write .",
-    "lint": "eslint",
-    "lint:fix": "eslint --fix",
+    "lint": "cross-env NODE_OPTIONS=--max-old-space-size=4096 eslint",
+    "lint:fix": "cross-env NODE_OPTIONS=--max-old-space-size=4096 eslint --fix",
     "output": "cross-env NODE_ENV=production astro build && ts-node ./output.ts",
     "output:bun": "cross-env NODE_ENV=production bun run --bun astro build && bun run ./output.ts",
     "output:deno": "cross-env NODE_ENV=production deno run -A npm:astro build && deno run -A ./output.ts",
@@ -139,6 +139,5 @@
     "js-cookie": "^3.0.7",
     "qs": "^6.15.2",
     "tmp": "^0.2.6"
-  },
-  "packageManager": "yarn@4.15.0"
+  }
 }

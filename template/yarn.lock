@@ -9149,8 +9149,8 @@ __metadata:
 
 "islands-integrations@file:./.integrations::locator=create-outsystems-astro%40workspace%3A.":
   version: 0.9.0
-  resolution: "islands-integrations@file:./.integrations#./.integrations::hash=0d04ae&locator=create-outsystems-astro%40workspace%3A."
-  checksum: 10c0/809f153d1b984c850efef496008346175b576bdc05604bf0ddb77021c2594d3e02cb40cefedcc9edc1a31f09e547618e9a6c2df66401f4b4cfaf3b5cb81bcd0b
+  resolution: "islands-integrations@file:./.integrations#./.integrations::hash=99320a&locator=create-outsystems-astro%40workspace%3A."
+  checksum: 10c0/4163cd0d999858a2bade012b052832feeced72c7e0c833842698a33c0cc0e41fec0b06c7f17d0cc78430db0e00e737cdd87c5a955781c84d3f3421190b0930c6
   languageName: node
   linkType: hard
 

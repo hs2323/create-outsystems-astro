@@ -16,6 +16,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated Yarn to v4.
 - Moved pnpm overrides from package.json to pnpm-workspace.yaml.
 
+### Removed
+
+- Removed dependency improved-yarn-audit.
+
 ### Security
 
 - Updated sub-dependency tmp to 0.2.7 due to CVE-2026-44705.

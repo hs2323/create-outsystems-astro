@@ -359,7 +359,7 @@ function packageInstall(targetDir) {
 
       const installCmd = {
         npm: "npm install",
-        yarn: "yarn",
+        yarn: "yarn install",
         pnpm: "pnpm install",
         bun: "bun install",
         deno: "deno install && deno run postinsall:deno",

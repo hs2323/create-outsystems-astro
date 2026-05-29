@@ -258,9 +258,6 @@ importers:
       happy-dom:
         specifier: ^20.9.0
         version: 20.9.0
-      improved-yarn-audit:
-        specifier: ^3.0.4
-        version: 3.0.4
       js-beautify:
         specifier: ^1.15.4
         version: 1.15.4
@@ -4409,10 +4406,6 @@ packages:
   import-fresh@3.3.1:
     resolution: {integrity: sha512-TR3KfrTZTYLPB6jUjfx6MF9WcWrHL9su5TObK4ZkYgBdWKPOFoSoQIdEuTuR82pmtxH2spWG9h6etwfr1pLBqQ==}
     engines: {node: '>=6'}
-
-  improved-yarn-audit@3.0.4:
-    resolution: {integrity: sha512-secfgreRqLYmnp4qzaxxICpOC/RJxcfQSrDSVvkMTXS8bssjqMSuJiueqr07PVP87OlyfTytxDR2SkzIeoTfLQ==}
-    hasBin: true
 
   imurmurhash@0.1.4:
     resolution: {integrity: sha512-JmXMZ6wuvDmLiHEml9ykzqO6lwFbof0GG4IkcGaENdCRDDmMVnny7s5HsIgHCbaq0w2MyPhDqkhTUgS2LU2PHA==}
@@ -11194,8 +11187,6 @@ snapshots:
     dependencies:
       parent-module: 1.0.1
       resolve-from: 4.0.0
-
-  improved-yarn-audit@3.0.4: {}
 
   imurmurhash@0.1.4: {}
 
