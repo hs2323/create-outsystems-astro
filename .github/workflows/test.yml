@@ -152,7 +152,9 @@ jobs:
 
       - name: Run output
         working-directory: test-islands
-        run: yarn install --immutable && yarn run output
+        run: |
+          yarn install --immutable 
+          yarn run output
 
   format-bun:
     runs-on: ubuntu-latest
