@@ -5,7 +5,11 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "audit": "better-npm-audit audit",
+    "audit:bun": "bun audit",
+    "audit:deno": "deno audit",
+    "audit:npm": "better-npm-audit audit",
+    "audit:pnpm": "pnpm audit",
+    "audit:yarn": "yarn npm audit",
     "build": "tsc",
     "format": "prettier . --check",
     "format:write": "prettier  --write .",
