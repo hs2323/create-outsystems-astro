@@ -2,10 +2,10 @@ import { fireEvent, screen } from "@testing-library/dom";
 import Twig from "twig";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
-import Demo from "../../../src/framework/twig/Demo";
+import template from "../../../src/framework/twig/Demo.twig?raw";
 
 function renderDemo(props: Record<string, unknown> = {}) {
-  document.body.innerHTML = Twig.twig({ data: Demo() }).render(props);
+  document.body.innerHTML = Twig.twig({ data: template }).render(props);
   document.body.querySelectorAll("script").forEach((script) => {
     new Function(script.textContent ?? "")();
   });

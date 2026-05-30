@@ -3,7 +3,7 @@ title: Twig Integration
 description: Twig integration for Create OutSystems Astro
 ---
 
-The Twig integration lets you build Astro Islands using [Twig.js](https://github.com/twigjs/twig.js/) templates — the JavaScript implementation of the [Twig templating language](https://twig.symfony.com/). A component is a TypeScript file that returns a Twig template string. The component's props are passed to the template as the render context, so `{{ variables }}` and Twig filters/tags are resolved on the client.
+The Twig integration lets you build Astro Islands using [Twig.js](https://github.com/twigjs/twig.js/) templates — the JavaScript implementation of the [Twig templating language](https://twig.symfony.com/). A component is a native `.twig` file that you import directly into an Astro page. The island's props are passed to the template as the render context, so `{{ variables }}` and Twig filters/tags are resolved on the client.
 
 ## When to use
 
@@ -16,44 +16,66 @@ The integration is registered automatically when you scaffold with `create-outsy
 
 ## Component structure
 
-A Twig component is a TypeScript function that returns a Twig template string. Props passed on the island become the render context, so reference them with `{{ }}`:
+A Twig component is a native `.twig` file. The integration registers a Vite loader, so you can import a `.twig` file directly as an Astro Island component. Props passed on the island become the render context, so reference them with `{{ }}`:
 
-```ts
-// src/framework/twig/MyComponent.ts
+```twig
+{# src/framework/twig/MyComponent.twig #}
 
-export default function MyComponent(): string {
-  return `
-    <div class="my-component">
-      <pre class="count">{{ initialCount|default(0) }}</pre>
-      <button class="add">+</button>
-      <script>
-        (function () {
-          const container = (document.currentScript && document.currentScript.parentElement)
-            || document.querySelector('.my-component');
-          let count = {{ initialCount|default(0) }};
-          const countEl = container.querySelector('.count');
-          container.querySelector('.add').addEventListener('click', function () {
-            count += 1;
-            countEl.textContent = count;
-          });
-        })();
-      </script>
-    </div>
-  `;
-}
+{% set count = initialCount|default(0) %}
+
+<div class="my-component">
+  <pre class="count">{{ count }}</pre>
+  <button class="add">+</button>
+  <script>
+    (function () {
+      const container = (document.currentScript && document.currentScript.parentElement)
+        || document.querySelector('.my-component');
+      let count = {{ count }};
+      const countEl = container.querySelector('.count');
+      container.querySelector('.add').addEventListener('click', function () {
+        count += 1;
+        countEl.textContent = count;
+      });
+    })();
+  </script>
+</div>
 ```
 
-The renderer compiles the returned string with `Twig.twig({ data })` and calls `.render(props)`, so anything Twig understands — `{{ value }}`, `{% if %}`, `{% for %}`, filters like `|default` or `|upper` — works against the props you pass on the island.
+The renderer reads the `.twig` file's contents, compiles it with `Twig.twig({ data })`, and calls `.render(props)` on the client. Anything Twig.js understands — `{{ value }}`, `{% set %}`, `{% if %}`, `{% for %}`, comments (`{# … #}`), and filters like `|default`, `|merge`, or `|upper` — works against the props you pass on the island.
 
 \*\*\* Note \*\*\*: Use Twig's `|default(...)` filter for any value that may be missing so the rendered markup (and any inline script) stays valid when a prop is omitted. As with the HTML integration, be careful with global variables in the script tag so nothing leaks out of the island.
 
+### Importing assets
+
+Because a `.twig` file cannot run TypeScript `import`s, resolve build-time assets (such as image URLs) in the `.astro` page and pass them in as props:
+
+```twig
+{% if logo %}<img alt="Logo" src="{{ logo }}" />{% endif %}
+```
+
+### TypeScript function alternative
+
+The renderer also accepts a `.ts` file that exports a function returning a Twig template string, which is useful when you need TypeScript to build the template:
+
+```ts
+// src/framework/twig/MyComponent.ts
+export default function MyComponent(): string {
+  return `<div class="my-component">{{ initialCount|default(0) }}</div>`;
+}
+```
+
+### Includes and namespaces
+
+Cross-file tags such as `{% include %}`, `{% import %}`, and Twig namespaces (for example `@atoms/...`) rely on a template loader that resolves other templates by name. Since islands render in the browser, those referenced templates are not available, so keep each `.twig` island self-contained and pass data in through props instead.
+
 ## Page setup
 
-Use `client:load` on the component in your `.astro` page and pass props as attributes. Those attributes become the Twig render context:
+Import the `.twig` file, use `client:load` on the component in your `.astro` page, and pass props as attributes. Those attributes become the Twig render context (including any assets you resolve in the page):
 
 ```astro
 ---
-import MyComponent from "../../framework/twig/MyComponent";
+import Logo from "../../images/logo.png?url";
+import MyComponent from "../../framework/twig/MyComponent.twig";
 import styles from "../../styles/index.css?url";
 const initialCount = 5;
 const showMessage = "showMessage";
@@ -71,6 +93,7 @@ const showMessage = "showMessage";
     <MyComponent
       client:load
       initialCount={initialCount}
+      logo={Logo}
       showMessage={showMessage}
     >
     </MyComponent>
@@ -168,15 +191,15 @@ export default function MyComponent(): string {
 
 ### Integration tests
 
-Use `@testing-library/dom` directly. Because the component returns a Twig template, render it with `Twig.twig({ data }).render(props)` before setting `document.body.innerHTML`, then execute the scripts using `new Function` so they run in the test's global context:
+Use `@testing-library/dom` directly. Import the raw template with Vite's `?raw` suffix, render it with `Twig.twig({ data }).render(props)` before setting `document.body.innerHTML`, then execute the scripts using `new Function` so they run in the test's global context:
 
 ```ts
 import { fireEvent, screen } from "@testing-library/dom";
 import Twig from "twig";
-import MyComponent from "../../../src/framework/twig/MyComponent";
+import template from "../../../src/framework/twig/MyComponent.twig?raw";
 
 function renderComponent(props: Record<string, unknown> = {}) {
-  document.body.innerHTML = Twig.twig({ data: MyComponent() }).render(props);
+  document.body.innerHTML = Twig.twig({ data: template }).render(props);
   document.body.querySelectorAll("script").forEach((script) => {
     new Function(script.textContent ?? "")();
   });
