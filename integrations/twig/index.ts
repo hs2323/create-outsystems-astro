@@ -17,23 +17,9 @@ function getRenderer(filtered: boolean): AstroRenderer {
 
 export const getContainerRenderer = (): AstroRenderer => getRenderer(false);
 
-// Loads native `.twig` files as modules whose default export is the raw
-// template string. The client renderer then compiles and renders it with the
-// island's props as the Twig context.
-function twigLoaderPlugin() {
-  return {
-    enforce: "pre" as const,
-    load(id: string) {
-      const filepath = id.split("?")[0];
-      if (!filepath.endsWith(".twig")) return;
-      const source = fs.readFileSync(filepath, "utf-8");
-      return {
-        code: `export default ${JSON.stringify(source)};`,
-        map: null,
-      };
-    },
-    name: "islands/twig/loader",
-  };
+export interface Options {
+  exclude?: string[];
+  include?: string[];
 }
 
 function twigFilterPlugin(include?: string[], exclude?: string[]) {
@@ -52,9 +38,23 @@ function twigFilterPlugin(include?: string[], exclude?: string[]) {
   };
 }
 
-export interface Options {
-  exclude?: string[];
-  include?: string[];
+// Loads native `.twig` files as modules whose default export is the raw
+// template string. The client renderer then compiles and renders it with the
+// island's props as the Twig context.
+function twigLoaderPlugin() {
+  return {
+    enforce: "pre" as const,
+    load(id: string) {
+      const filepath = id.split("?")[0];
+      if (!filepath.endsWith(".twig")) return;
+      const source = fs.readFileSync(filepath, "utf-8");
+      return {
+        code: `export default ${JSON.stringify(source)};`,
+        map: null,
+      };
+    },
+    name: "islands/twig/loader",
+  };
 }
 
 export default function (options: Options = {}): AstroIntegration {
