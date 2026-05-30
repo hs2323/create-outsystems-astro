@@ -1,4 +1,5 @@
 import { fixupPluginRules } from "@eslint/compat";
+import pluginJs from "@eslint/js";
 import eslintConfigPrettier from "eslint-config-prettier";
 import eslintPluginAstro from "eslint-plugin-astro";
 import importPlugin from "eslint-plugin-import";
@@ -19,6 +20,7 @@ export default [
     ignores: [".astro/*", "dist/*", "node_modules/*"],
   },
   { languageOptions: { globals: { ...globals.browser, ...globals.node } } },
+  pluginJs.configs.recommended,
   ...tseslint.configs.recommended.map((config) => ({
     ...config,
     files: ["**/*.{ts,tsx}"],

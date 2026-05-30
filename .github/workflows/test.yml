@@ -9,9 +9,9 @@ on:
 
 env:
   BUN_VERSION: '1.3.14'
-  DENO_VERSION: '2.7.14'
-  NODE_VERSION: '24.15.0'
-  PNPM_VERSION: '11.1.1'
+  DENO_VERSION: '2.8.1'
+  NODE_VERSION: '24.16.0'
+  PNPM_VERSION: '11.5.0'
   YARN_VERSION: '4.15.0'
 
 jobs:
@@ -529,6 +529,7 @@ jobs:
         run: npx create-outsystems-astro
           --projectName test-islands
           --frameworks angular
+          --frameworks html
           --frameworks preact
           --frameworks react
           --frameworks solid
@@ -560,6 +561,33 @@ jobs:
 
       - name: Run CLI
         run: npx create-outsystems-astro --projectName test-islands --frameworks angular
+
+      - name: Run output
+        working-directory: test-islands
+        run: npm ci && npm run output
+
+
+  framework-html:
+    runs-on: ubuntu-latest
+
+    steps:  
+      - name: Checkout code
+        uses: actions/checkout@v6.0.2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v6.4.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      
+      - name: Build integrations
+        working-directory: integrations
+        run: npm ci && npm run process
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run CLI
+        run: npx create-outsystems-astro --projectName test-islands --frameworks html
 
       - name: Run output
         working-directory: test-islands
@@ -695,7 +723,158 @@ jobs:
         working-directory: test-islands
         run: npm ci && npm run output
 
-  security-bun:
+  security-docs:
+    runs-on: ubuntu-latest
+
+    steps:  
+      - name: Checkout code
+        uses: actions/checkout@v6.0.2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v6.4.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install dependencies
+        working-directory: docs
+        run: npm ci
+
+      - name: Run security check
+        working-directory: docs
+        run: npm run audit
+
+  security-integrations-bun:
+    runs-on: ubuntu-latest
+
+    steps:  
+      - name: Checkout code
+        uses: actions/checkout@v6.0.2
+
+      - name: Install Bun
+        uses: oven-sh/setup-bun@v2.2.0
+        with:
+          bun-version: ${{ env.BUN_VERSION }}
+
+      - name: Build integrations
+        working-directory: integrations
+        run: bun install --immutable
+
+      - name: Run security check
+        working-directory: integrations
+        run: bun run audit:bun
+
+  security-integrations-deno:
+    runs-on: ubuntu-latest
+
+    steps:  
+      - name: Checkout code
+        uses: actions/checkout@v6.0.2
+
+      - name: Install Deno
+        uses: denoland/setup-deno@v2.0.4
+        with:
+          deno-version: ${{ env.DENO_VERSION }}
+
+      - name: Build integrations
+        working-directory: integrations
+        run:  deno install --frozen
+
+      - name: Run security check
+        working-directory: integrations
+        run: deno run audit:deno
+
+  security-integrations-npm:
+    runs-on: ubuntu-latest
+
+    steps:  
+      - name: Checkout code
+        uses: actions/checkout@v6.0.2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v6.4.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install dependencies
+        working-directory: integrations
+        run: npm ci
+
+      - name: Run security check
+        working-directory: integrations
+        run: npm run audit:npm
+
+  security-integrations-pnpm:
+    runs-on: ubuntu-latest
+
+    steps:  
+      - name: Checkout code
+        uses: actions/checkout@v6.0.2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v6.4.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v6.0.8
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
+      - name: Build integrations
+        working-directory: integrations
+        run: pnpm install --frozen-lockfile
+
+      - name: Run security check
+        working-directory: integrations
+        run: pnpm run audit:pnpm
+
+  security-integrations-yarn:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6.0.2
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Use Node.js
+        uses: actions/setup-node@v6.4.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      
+      - name: Enable Corepack and Set Yarn Version
+        run: |
+          corepack enable
+          corepack prepare yarn@${{ env.YARN_VERSION }}
+
+      - name: Build integrations
+        working-directory: integrations
+        run: yarn install --immutable
+
+      - name: Run security check
+        working-directory: integrations
+        run: yarn run audit:yarn
+
+  security-main:
+    runs-on: ubuntu-latest
+
+    steps:  
+      - name: Checkout code
+        uses: actions/checkout@v6.0.2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v6.4.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+        
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run security check
+        run: npm audit
+
+  security-template-bun:
     runs-on: ubuntu-latest
 
     steps:  
@@ -719,7 +898,7 @@ jobs:
         working-directory: template
         run: bun run audit:bun
 
-  security-deno:
+  security-template-deno:
     runs-on: ubuntu-latest
 
     steps:  
@@ -743,65 +922,7 @@ jobs:
         working-directory: template
         run: deno run audit:deno
 
-  security-docs:
-    runs-on: ubuntu-latest
-
-    steps:  
-      - name: Checkout code
-        uses: actions/checkout@v6.0.2
-
-      - name: Use Node.js
-        uses: actions/setup-node@v6.4.0
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-
-      - name: Install dependencies
-        working-directory: docs
-        run: npm ci
-
-      - name: Run security check
-        working-directory: docs
-        run: npm run audit
-
-  security-integrations:
-    runs-on: ubuntu-latest
-
-    steps:  
-      - name: Checkout code
-        uses: actions/checkout@v6.0.2
-
-      - name: Use Node.js
-        uses: actions/setup-node@v6.4.0
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-
-      - name: Install dependencies
-        working-directory: integrations
-        run: npm ci
-
-      - name: Run security check
-        working-directory: integrations
-        run: npm run audit
-
-  security-main:
-    runs-on: ubuntu-latest
-
-    steps:  
-      - name: Checkout code
-        uses: actions/checkout@v6.0.2
-
-      - name: Use Node.js
-        uses: actions/setup-node@v6.4.0
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-        
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Run security check
-        run: npm audit
-
-  security-npm:
+  security-template-npm:
     runs-on: ubuntu-latest
 
     steps:  
@@ -825,7 +946,7 @@ jobs:
         working-directory: template
         run: npm run audit:npm
 
-  security-pnpm:
+  security-template-pnpm:
     runs-on: ubuntu-latest
 
     steps:  
@@ -854,7 +975,7 @@ jobs:
         working-directory: template
         run: pnpm run audit:pnpm
 
-  security-yarn:
+  security-template-yarn:
     runs-on: ubuntu-latest
 
     steps:
