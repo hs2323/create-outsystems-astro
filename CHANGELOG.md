@@ -13,6 +13,36 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Updated dependency vitest to 4.1.7.
+- Updated dependency vite to 8.0.14.
+- Updated dependency typescript-eslint to 8.59.4.
+- Updated dependency svelte to 5.55.9.
+- Updated dependency solid-js to 1.9.13.
+- Updated dependency prettier-plugin-svelte to 4.0.1.
+- Updated dependency preact to 10.29.2.
+- Updated dependency eslint-plugin-playwright to 2.10.4.
+- Updated dependency astro to 6.3.7.
+- Updated dependency @types/react to 19.2.15.
+- Updated dependency @types/node to 25.9.1.
+- Updated dependency @testing-library/angular to 19.3.0.
+- Updated dependency @oxc-project/runtime to 0.132.0.
+- Updated dependency @eslint/markdown to 8.0.2.
+- Updated dependency @angular/router to 21.2.14.
+- Updated dependency @angular/platform-server to 21.2.14.
+- Updated dependency @angular/platform-browser to 21.2.14.
+- Updated dependency @angular/language-service to 21.2.14.
+- Updated dependency @angular/core to 21.2.14.
+- Updated dependency @angular/compiler-cli to 21.2.14.
+- Updated dependency @angular/compiler to 21.2.14.
+- Updated dependency @angular/common to 21.2.14.
+- Updated dependency @angular/cli to 21.2.12.
+- Updated dependency @angular/build to 21.2.12.
+- Updated dependency @angular/animations to 21.2.14.
+- Updated dependency @angular-devkit/schematics to 21.2.12.
+- Updated dependency @angular-devkit/architect to 0.2102.12.
+- Updated dependency @analogjs/vitest-angular to 2.5.2.
+- Updated dependency @analogjs/vite-plugin-angular to 2.5.2.
+- Updated dependency @analogjs/astro-angular to 2.5.2.
 - Updated Yarn to v4.
 - Moved pnpm overrides from package.json to pnpm-workspace.yaml.
 
@@ -24,8 +54,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 
 - Updated sub-dependency tmp to 0.2.7 due to CVE-2026-44705.
-- Updated sub-dependency qs to 6.15.2 due to CVE-2026-8723.
-- Updated sub-dependency js-cookie to 3.0.7 due to CVE-2026-46625.
 
 ## [0.9.0] - 2026-05-18
 

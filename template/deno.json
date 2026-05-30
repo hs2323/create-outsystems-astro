@@ -1,17 +1,6 @@
 {
+  "allowScripts": ["npm:@parcel/watcher@2.5.6", "npm:esbuild@0.27.3", "npm:fsevents@2.3.2", "npm:fsevents@2.3.3", "npm:lmdb@3.5.1", "npm:msgpackr-extract@3.0.3", "npm:msgpackr-extract@3.0.4", "npm:sharp@0.34.5"],
   "imports": {
-    "devalue": "npm:devalue@^5.8.1",
-    "js-cookie": "npm:js-cookie@^3.0.7",
-    "qs": "npm:qs@^6.15.2",
     "tmp": "npm:tmp@^0.2.6"
-  },
-  "allowScripts": [
-    "npm:@parcel/watcher@2.5.6",
-    "npm:esbuild@0.27.3",
-    "npm:fsevents@2.3.2",
-    "npm:fsevents@2.3.3",
-    "npm:lmdb@3.5.1",
-    "npm:msgpackr-extract@3.0.3",
-    "npm:sharp@0.34.5"
-  ]
+  }
 }

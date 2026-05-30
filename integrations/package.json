@@ -15,9 +15,12 @@
     "process": "tsc && mv dist ../template/.integrations && cp package.json ../template/.integrations/package.json",
     "typecheck": "tsc --noEmit"
   },
+  "dependencies": {
+    "astro": "^6.3.7"
+  },
   "devDependencies": {
     "@eslint/compat": "^2.1.0",
-    "astro": "6.3.3",
+    "@eslint/js": "^9.39.4",
     "better-npm-audit": "^3.11.0",
     "eslint": "^9.39.4",
     "eslint-config-prettier": "^10.1.8",
@@ -26,7 +29,7 @@
     "eslint-plugin-perfectionist": "^5.9.0",
     "globals": "^17.6.0",
     "prettier": "^3.8.3",
-    "typescript": "5.9.3",
-    "typescript-eslint": "^8.60.0"
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.59.4"
   }
 }

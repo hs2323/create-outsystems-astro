@@ -4,9 +4,8 @@ allowBuilds:
   lmdb: true
   msgpackr-extract: true
   sharp: true
-overrides:
-  devalue: ^5.8.1
-  js-cookie: ^3.0.7
-  qs: ^6.15.2
-  tmp: ^0.2.6
 minimumReleaseAge: 10080
+minimumReleaseAgeExclude:
+  - tmp@0.2.6
+overrides:
+  tmp: ^0.2.6
