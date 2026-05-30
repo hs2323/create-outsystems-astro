@@ -275,8 +275,8 @@ function updateMultiAstroPage(projectDir, selectedFrameworks) {
       component: /<SvelteStore\s+client:only="svelte"\s*\/>\s*\n?/g
     },
     twig: {
-      import: /import\s+TwigStore\s+from\s+['"].*?twig\/Store['"];?\s*\n?/g,
-      component: /<TwigStore\s+client:load\s*\/>\s*\n?/g,
+      import: /import\s+(?:TwigStore\s+from\s+['"].*?twig\/Store\.twig['"]|TwigLogo\s+from\s+['"].*?twig\.png\?url['"]);?\s*\n?/g,
+      component: /<TwigStore\b[^>]*\/>\s*\n?/g,
     },
     vue: {
       import: /import\s+VueStore\s+from\s+['"].*?vue\/Store\.vue['"];?\s*\n?/g,

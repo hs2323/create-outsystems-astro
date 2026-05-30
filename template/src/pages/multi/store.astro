@@ -5,13 +5,21 @@ import PreactStore from "../../framework/preact/Store";
 import ReactStore from "../../framework/react/Store";
 import SolidStore from "../../framework/solid/Store";
 import SvelteStore from "../../framework/svelte/Store.svelte";
-import TwigStore from "../../framework/twig/Store";
+import TwigStore from "../../framework/twig/Store.twig";
 import VueStore from "../../framework/vue/Store.vue";
+import TwigLogo from "../../images/twig.png?url";
 import styles from "../../styles/index.css?url";
 ---
 <html lang="en">
     <head>
         <link href={styles} rel="stylesheet" />
+        <script>
+            // Expose the shared framework Nano Store so string-rendered islands
+            // (such as the Twig store) can subscribe to it before they hydrate.
+            import { framework } from "../../stores/framework";
+            window.Stores = window.Stores || {};
+            window.Stores["framework"] = framework;
+        </script>
     </head>
     <body>
         <div class="card-grid">
@@ -21,7 +29,7 @@ import styles from "../../styles/index.css?url";
             <ReactStore client:only="react" />
             <SolidStore client:only="solid-js" />
             <SvelteStore client:only="svelte" />
-            <TwigStore client:load />
+            <TwigStore client:load logo={TwigLogo} />
             <VueStore client:only="vue" />
         </div>
     </body>
