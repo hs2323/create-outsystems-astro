@@ -1,3 +1,4 @@
 {
-  "allowScripts": ["npm:esbuild@0.27.7", "npm:fsevents@2.3.3", "npm:sharp@0.34.5"]
+  "allowScripts": ["npm:esbuild@0.27.7", "npm:fsevents@2.3.3", "npm:sharp@0.34.5"],
+  "minimumDependencyAge": 10080
 }
