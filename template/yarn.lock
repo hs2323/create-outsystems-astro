@@ -9159,10 +9159,10 @@ __metadata:
 
 "islands-integrations@file:./.integrations::locator=create-outsystems-astro%40workspace%3A.":
   version: 0.9.0
-  resolution: "islands-integrations@file:./.integrations#./.integrations::hash=3fd768&locator=create-outsystems-astro%40workspace%3A."
+  resolution: "islands-integrations@file:./.integrations#./.integrations::hash=0985c5&locator=create-outsystems-astro%40workspace%3A."
   dependencies:
     astro: "npm:^6.3.7"
-  checksum: 10c0/7ecdfc076e01f76584e507084834510c389a547d72999e3967455f853c042a5e91c4cefc806845585f6e5ae57234a666c3d16b72eddca5b57c205f742bd9d33c
+  checksum: 10c0/ac0a2850f12754ed941707787b4c9a5518a2eb1c9f267d9cda0a287ee932b6507122b40a1672df13e1bce5921c3d5ba2aa64297df2985f113b61fe5e7efc66bc
   languageName: node
   linkType: hard
 
