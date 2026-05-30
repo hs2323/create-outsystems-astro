@@ -1160,7 +1160,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.16.3, @babel/runtime@npm:^7.23.2":
+"@babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.16.3, @babel/runtime@npm:^7.23.2, @babel/runtime@npm:^7.8.4":
   version: 7.29.2
   resolution: "@babel/runtime@npm:7.29.2"
   checksum: 10c0/30b80a0140d16467792e1bbeb06f655b0dab70407da38dfac7fedae9c859f9ae9d846ef14ad77bd3814c064295fe9b1bc551f1541ea14646ae9f22b71a8bc17a
@@ -4464,6 +4464,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/twig@npm:^1.12.17":
+  version: 1.12.17
+  resolution: "@types/twig@npm:1.12.17"
+  checksum: 10c0/a54d62abb979ecc81707c7da9ffe641cdbb12c5e73d782c5fbed69c41123d7c2142c8c79fe7a92295bc13eea7abbafd68863e5f0eb3f54094a26b179e3a2d653
+  languageName: node
+  linkType: hard
+
 "@types/unist@npm:*, @types/unist@npm:^3.0.0":
   version: 3.0.3
   resolution: "@types/unist@npm:3.0.3"
@@ -6179,6 +6186,7 @@ __metadata:
     "@types/node": "npm:^25.9.1"
     "@types/react": "npm:^19.2.15"
     "@types/react-dom": "npm:^19.2.3"
+    "@types/twig": "npm:^1.12.17"
     "@vitejs/plugin-react": "npm:^6.0.2"
     "@vitejs/plugin-vue": "npm:^6.0.7"
     angular-eslint: "npm:^21.4.0"
@@ -6219,6 +6227,7 @@ __metadata:
     svelte-eslint-parser: "npm:^1.6.1"
     ts-node: "npm:^10.9.2"
     tslib: "npm:^2.8.1"
+    twig: "npm:^3.0.0"
     typescript: "npm:^5.9.3"
     typescript-eslint: "npm:^8.59.4"
     vite: "npm:^8.0.14"
@@ -7985,6 +7994,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"foreachasync@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "foreachasync@npm:3.0.0"
+  checksum: 10c0/8ad877008da351fa78939e850c6014e94b8b9c6de3d12751b2b906ef96f8c80945310d998b2a704854e126c508237dc9951f6900685ccc42c93db15b09a0c4b3
+  languageName: node
+  linkType: hard
+
 "foreground-child@npm:^3.1.0":
   version: 3.3.1
   resolution: "foreground-child@npm:3.3.1"
@@ -9159,10 +9175,11 @@ __metadata:
 
 "islands-integrations@file:./.integrations::locator=create-outsystems-astro%40workspace%3A.":
   version: 0.10.0
-  resolution: "islands-integrations@file:./.integrations#./.integrations::hash=0a3fe0&locator=create-outsystems-astro%40workspace%3A."
+  resolution: "islands-integrations@file:./.integrations#./.integrations::hash=cdd28b&locator=create-outsystems-astro%40workspace%3A."
   dependencies:
     astro: "npm:^6.3.7"
-  checksum: 10c0/033cce28aac04f7d5e45dca37281f17731b7f2ae63db0dbdb4577775a4dc5eb26602c8abd1307b54f2585496961ade795ed372fbe0c1235bfe8400b27b215816
+    twig: "npm:^3.0.0"
+  checksum: 10c0/212f1ca24a32a2f3ba90ae2c75152852ea18987a768f9b6311bf33f95e202f1becfe7afd3bc5ce194b277e7c4d85202ab96d6a7032e5f9889f0ec68630d898cf
   languageName: node
   linkType: hard
 
@@ -9652,6 +9669,13 @@ __metadata:
   dependencies:
     p-locate: "npm:^5.0.0"
   checksum: 10c0/d3972ab70dfe58ce620e64265f90162d247e87159b6126b01314dd67be43d50e96a50b517bce2d9452a79409c7614054c277b5232377de50416564a77ac7aad3
+  languageName: node
+  linkType: hard
+
+"locutus@npm:^3.0.9":
+  version: 3.0.36
+  resolution: "locutus@npm:3.0.36"
+  checksum: 10c0/54a04ecddeaeadd924f2362c31d888e333bb717bd48dd9d40ac6ddccb352a924791223e09b782d03196808c1404a1f74210a388ce4475c3650dcb8d7b0a75730
   languageName: node
   linkType: hard
 
@@ -10459,7 +10483,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimatch@npm:^10.0.3, minimatch@npm:^10.1.1, minimatch@npm:^10.2.2":
+"minimatch@npm:^10, minimatch@npm:^10.0.3, minimatch@npm:^10.1.1, minimatch@npm:^10.2.2":
   version: 10.2.5
   resolution: "minimatch@npm:10.2.5"
   dependencies:
@@ -13491,6 +13515,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"twig@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "twig@npm:3.0.0"
+  dependencies:
+    "@babel/runtime": "npm:^7.8.4"
+    locutus: "npm:^3.0.9"
+    minimatch: "npm:^10"
+    walk: "npm:2.3.x"
+  bin:
+    twigjs: bin/twigjs
+  checksum: 10c0/a727b665d34c9b7db9cf5fa99072472ef1dd9291d6f29a4b1de88ca95493d16c667f47d7e87f4aaea05275ea184f6550dc3c32cb42026b819d154690f48cff76
+  languageName: node
+  linkType: hard
+
 "type-check@npm:^0.4.0, type-check@npm:~0.4.0":
   version: 0.4.0
   resolution: "type-check@npm:0.4.0"
@@ -14346,6 +14384,15 @@ __metadata:
     typescript:
       optional: true
   checksum: 10c0/f7384bff61e23405fb8d14cf766b3cd78c821f50b673a5bb1b7eb7b4e67dcab1fc90ffccaa688979f9900e1ca30de4112d3b1468f82900f076c5bd9e80bbe028
+  languageName: node
+  linkType: hard
+
+"walk@npm:2.3.x":
+  version: 2.3.15
+  resolution: "walk@npm:2.3.15"
+  dependencies:
+    foreachasync: "npm:^3.0.0"
+  checksum: 10c0/c390221ff6fdb8e95f9b03d90fa9980edc2c01ce9efac44c0ade2036ee2823bf2bc9abfae388bdf64ab59e9262610e7cf6634ad54acac018e62621b85edad2cf
   languageName: node
   linkType: hard
 
