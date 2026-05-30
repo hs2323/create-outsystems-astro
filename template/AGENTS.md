@@ -11,6 +11,7 @@
   - React - Documentation available at https://docs.astro.build/en/guides/integrations-guide/react/
   - SolidJS - Documentation available at https://docs.astro.build/en/guides/integrations-guide/solid-js/
   - Svelte - Documentation availabe at https://docs.astro.build/en/guides/integrations-guide/svelte/
+  - Twig - Documentation available at https://hs2323.github.io/create-outsystems-astro/guides/integrations/twig/
   - Vue - Documentation available at https://docs.astro.build/en/guides/integrations-guide/vue/
 - Prefer to use TypeScript when possible.
 
@@ -44,6 +45,7 @@ In OutSystems Developer Cloud, the Islands library is available at https://www.o
   - React: `client:only="react"`
   - SolidJS: `client:only="solid-js"`
   - Svelte: `client:only="svelte"`
+  - Twig: `client:load`
   - Vue: `client:only="vue"`
 
 ### Components
@@ -93,6 +95,10 @@ Angular does not support the use of slots. Any use of slots with Angular should 
 ##### HTML
 
 The HTML integration does not support the use of slots. Any use of slots with the HTML integration should be discouraged.
+
+##### Twig
+
+The Twig integration does not support the use of slots. Any use of slots with the Twig integration should be discouraged. Pass content in as props and render it with `{{ }}` instead.
 
 ##### Preact
 
@@ -404,6 +410,47 @@ export default function Counter({}) {
 </script>
 
 <div>{$nanoStoreValue}</div>
+```
+
+#### Twig
+
+Like the HTML integration, Twig does not use a Nano Stores binding library. Set up a compatible store on `window.Stores` inside the component's `<script>` tag and subscribe to it directly.
+
+```html
+<div class="nanostore-value"></div>
+<script>
+  const nanostoreEl = container.querySelector(".nanostore-value");
+
+  if (!window.Stores) window.Stores = {};
+  if (!window.Stores["twigStore"]) {
+    let _value = "Test Value";
+    const _subs = [];
+    window.Stores["twigStore"] = {
+      get: function () {
+        return _value;
+      },
+      set: function (v) {
+        _value = v;
+        _subs.forEach(function (fn) {
+          fn(v);
+        });
+      },
+      subscribe: function (fn) {
+        fn(_value);
+        _subs.push(fn);
+        return function () {
+          _subs.splice(_subs.indexOf(fn), 1);
+        };
+      },
+    };
+  }
+
+  const store = window.Stores["twigStore"];
+  nanostoreEl.textContent = store.get();
+  store.subscribe(function (value) {
+    nanostoreEl.textContent = value;
+  });
+</script>
 ```
 
 #### Vue

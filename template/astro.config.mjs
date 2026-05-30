@@ -7,6 +7,7 @@ import svelte from "@astrojs/svelte";
 import vue from "@astrojs/vue";
 import { defineConfig } from "astro/config";
 import html from "islands-integrations/html";
+import twig from "islands-integrations/twig";
 
 // https://astro.build/config
 export default defineConfig({
@@ -38,6 +39,9 @@ export default defineConfig({
     }),
     svelte({
       include: ["src/framework/svelte/*"],
+    }),
+    twig({
+      include: ["src/framework/twig/*"],
     }),
     vue({
       include: ["src/framework/vue/*"],

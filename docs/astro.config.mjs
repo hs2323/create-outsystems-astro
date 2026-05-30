@@ -56,6 +56,7 @@ export default defineConfig({
                   label: "Svelte",
                   link: "https://svelte.dev/",
                 },
+                { label: "Twig", slug: "guides/integrations/twig" },
                 {
                   attrs: externalLinkAttributes,
                   label: "Vue",

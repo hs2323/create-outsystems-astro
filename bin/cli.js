@@ -21,6 +21,7 @@ const FRAMEWORKS = [
   { title: "React", value: "react" },
   { title: "SolidJS", value: "solid" },
   { title: "Svelte", value: "svelte" },
+  { title: "Twig", value: "twig" },
   { title: "Vue", value: "vue" }
 ];
 
@@ -272,6 +273,10 @@ function updateMultiAstroPage(projectDir, selectedFrameworks) {
     svelte: {
       import: /import\s+SvelteStore\s+from\s+['"].*?svelte\/Store\.svelte['"];?\s*\n?/g,
       component: /<SvelteStore\s+client:only="svelte"\s*\/>\s*\n?/g
+    },
+    twig: {
+      import: /import\s+TwigStore\s+from\s+['"].*?twig\/Store['"];?\s*\n?/g,
+      component: /<TwigStore\s+client:load\s*\/>\s*\n?/g,
     },
     vue: {
       import: /import\s+VueStore\s+from\s+['"].*?vue\/Store\.vue['"];?\s*\n?/g,

@@ -5,6 +5,7 @@ import PreactStore from "../../framework/preact/Store";
 import ReactStore from "../../framework/react/Store";
 import SolidStore from "../../framework/solid/Store";
 import SvelteStore from "../../framework/svelte/Store.svelte";
+import TwigStore from "../../framework/twig/Store";
 import VueStore from "../../framework/vue/Store.vue";
 import styles from "../../styles/index.css?url";
 ---
@@ -20,6 +21,7 @@ import styles from "../../styles/index.css?url";
             <ReactStore client:only="react" />
             <SolidStore client:only="solid-js" />
             <SvelteStore client:only="svelte" />
+            <TwigStore client:load />
             <VueStore client:only="vue" />
         </div>
     </body>

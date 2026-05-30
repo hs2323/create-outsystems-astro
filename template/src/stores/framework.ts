@@ -7,6 +7,7 @@ export type CurrentSelectedFramework =
   | "React"
   | "Solid"
   | "Svelte"
+  | "Twig"
   | "Vue";
 
 export const framework = atom<CurrentSelectedFramework>("");
