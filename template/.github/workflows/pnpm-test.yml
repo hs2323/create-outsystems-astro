@@ -8,8 +8,8 @@ on:
     - cron: '0 12 * * *'
 
 env:
-  NODE_VERSION: '24.15.0'
-  PNPM_VERSION: '11.1.1'
+  NODE_VERSION: '24.16.0'
+  PNPM_VERSION: '11.5.0'
 
 jobs:
 
