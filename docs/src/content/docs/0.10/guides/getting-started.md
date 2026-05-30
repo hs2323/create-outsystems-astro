@@ -1,7 +1,7 @@
 ---
 title: Getting Started
 description: How to get started with OutSystems Astro Islands
-slug: 0.7/guides/getting-started
+slug: 0.10/guides/getting-started
 ---
 
 Generates [Astro Islands](https://docs.astro.build/en/concepts/islands/) for use in OutSystems that can create self contained interactive code elements from different frameworks. It allows an extension of the front-end with these dynamic libraries.

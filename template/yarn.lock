@@ -9158,11 +9158,11 @@ __metadata:
   linkType: hard
 
 "islands-integrations@file:./.integrations::locator=create-outsystems-astro%40workspace%3A.":
-  version: 0.9.0
-  resolution: "islands-integrations@file:./.integrations#./.integrations::hash=0985c5&locator=create-outsystems-astro%40workspace%3A."
+  version: 0.10.0
+  resolution: "islands-integrations@file:./.integrations#./.integrations::hash=0a3fe0&locator=create-outsystems-astro%40workspace%3A."
   dependencies:
     astro: "npm:^6.3.7"
-  checksum: 10c0/ac0a2850f12754ed941707787b4c9a5518a2eb1c9f267d9cda0a287ee932b6507122b40a1672df13e1bce5921c3d5ba2aa64297df2985f113b61fe5e7efc66bc
+  checksum: 10c0/033cce28aac04f7d5e45dca37281f17731b7f2ae63db0dbdb4577775a4dc5eb26602c8abd1307b54f2585496961ade795ed372fbe0c1235bfe8400b27b215816
   languageName: node
   linkType: hard
 
