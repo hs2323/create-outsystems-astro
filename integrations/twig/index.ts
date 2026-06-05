@@ -1,4 +1,5 @@
 import fs from "node:fs";
+import path from "node:path";
 
 import type { AstroIntegration, AstroRenderer } from "astro";
 
@@ -38,16 +39,60 @@ function twigFilterPlugin(include?: string[], exclude?: string[]) {
   };
 }
 
-// Loads native `.twig` files as modules whose default export is the raw
-// template string. The client renderer then compiles and renders it with the
-// island's props as the Twig context.
+// Matches a `{% include "path" %}` tag (including the `{%- … -%}` whitespace
+// trim and `ignore missing` variants) that uses a static, quoted path. Dynamic
+// includes such as `{% include someVar %}` are intentionally left untouched.
+const INCLUDE_TAG = /\{%-?\s*include\s+(['"])([^'"]+)\1([^%]*?)-?%\}/g;
+
+// Recursively replaces `{% include %}` tags with the contents of the referenced
+// template. Islands render in the browser, where Twig.js has no filesystem
+// loader, so includes are resolved here at build time and inlined to keep each
+// island self-contained. Paths resolve relative to the including file, and the
+// inlined markup still sees the island's props as its render context.
+function inlineIncludes(
+  filepath: string,
+  ancestors: string[],
+  onInclude?: (target: string) => void,
+): string {
+  const resolved = path.resolve(filepath);
+  if (ancestors.includes(resolved)) {
+    throw new Error(
+      `Twig include cycle detected: ${[...ancestors, resolved].join(" -> ")}`,
+    );
+  }
+
+  const source = fs.readFileSync(resolved, "utf-8");
+  const dir = path.dirname(resolved);
+  const trail = [...ancestors, resolved];
+
+  return source.replace(
+    INCLUDE_TAG,
+    (_match, _quote, includePath, modifiers) => {
+      const target = path.resolve(dir, includePath);
+      if (!fs.existsSync(target)) {
+        if (/\bignore missing\b/.test(modifiers)) return "";
+        throw new Error(
+          `Twig include "${includePath}" not found (referenced from ${resolved}).`,
+        );
+      }
+      onInclude?.(target);
+      return inlineIncludes(target, trail, onInclude);
+    },
+  );
+}
+
+// Loads native `.twig` files as modules whose default export is the template
+// string, with `{% include %}` tags already inlined. The client renderer then
+// compiles and renders it with the island's props as the Twig context.
 function twigLoaderPlugin() {
   return {
     enforce: "pre" as const,
-    load(id: string) {
+    load(this: { addWatchFile?: (id: string) => void }, id: string) {
       const filepath = id.split("?")[0];
       if (!filepath.endsWith(".twig")) return;
-      const source = fs.readFileSync(filepath, "utf-8");
+      const source = inlineIncludes(filepath, [], (target) =>
+        this.addWatchFile?.(target),
+      );
       return {
         code: `export default ${JSON.stringify(source)};`,
         map: null,

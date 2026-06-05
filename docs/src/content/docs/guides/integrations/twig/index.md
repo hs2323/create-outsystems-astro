@@ -64,9 +64,23 @@ export default function MyComponent(): string {
 }
 ```
 
-### Includes and namespaces
+### Includes
 
-Cross-file tags such as `{% include %}`, `{% import %}`, and Twig namespaces (for example `@atoms/...`) rely on a template loader that resolves other templates by name. Since islands render in the browser, those referenced templates are not available, so keep each `.twig` island self-contained and pass data in through props instead.
+`{% include %}` works across files. Because islands render in the browser — where Twig.js has no filesystem loader — the integration resolves includes at build time and inlines the referenced template into the island. Paths resolve relative to the including file, and the inlined markup shares the island's props as its render context:
+
+```twig
+{# src/framework/twig/Card.twig #}
+{% include "./partials/header.twig" %}
+<div class="card-body">{{ body }}</div>
+```
+
+Includes may be nested, and `{% include "…" ignore missing %}` is honored when the target file does not exist. An include that forms a cycle, or that points at a missing file without `ignore missing`, fails the build with an error.
+
+Some Twig features still rely on a runtime loader and are **not** supported, so keep those self-contained:
+
+* Dynamic include paths (`{% include someVariable %}`) — only static, quoted paths are inlined.
+* Macros (`{% import %}` / `{% from %}`), template inheritance (`{% extends %}` / `{% block %}`), and namespaces (for example `@atoms/...`).
+* The `with { … }` and `only` context modifiers on `include` — the inlined markup always sees the full island context.
 
 ## Page setup
 
