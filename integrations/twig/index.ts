@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 
 import type { AstroIntegration, AstroRenderer } from "astro";
 
@@ -21,6 +22,41 @@ export const getContainerRenderer = (): AstroRenderer => getRenderer(false);
 export interface Options {
   exclude?: string[];
   include?: string[];
+  namespaces?: Record<string, string>;
+}
+
+type Namespaces = Record<string, string>;
+
+
+function normalizeNamespaces(
+  namespaces: Record<string, string> | undefined,
+  root: string,
+): Namespaces {
+  const normalized: Namespaces = {};
+  for (const [name, dir] of Object.entries(namespaces ?? {})) {
+    normalized[name.replace(/^@/, "")] = path.resolve(root, dir);
+  }
+  return normalized;
+}
+
+const NAMESPACE_PATH = /^@([^/]+)\/(.*)$/;
+
+function resolveIncludePath(
+  includePath: string,
+  dir: string,
+  namespaces: Namespaces,
+): string {
+  const match = NAMESPACE_PATH.exec(includePath);
+  if (!match) return path.resolve(dir, includePath);
+
+  const [, name, rest] = match;
+  const base = namespaces[name];
+  if (!base) {
+    throw new Error(
+      `Twig namespace "@${name}" is not configured. Add it to the \`namespaces\` option of the twig() integration.`,
+    );
+  }
+  return path.resolve(base, rest);
 }
 
 function twigFilterPlugin(include?: string[], exclude?: string[]) {
@@ -39,19 +75,28 @@ function twigFilterPlugin(include?: string[], exclude?: string[]) {
   };
 }
 
-// Matches a `{% include "path" %}` tag (including the `{%- … -%}` whitespace
-// trim and `ignore missing` variants) that uses a static, quoted path. Dynamic
-// includes such as `{% include someVar %}` are intentionally left untouched.
 const INCLUDE_TAG = /\{%-?\s*include\s+(['"])([^'"]+)\1([^%]*?)-?%\}/g;
 
-// Recursively replaces `{% include %}` tags with the contents of the referenced
-// template. Islands render in the browser, where Twig.js has no filesystem
-// loader, so includes are resolved here at build time and inlined to keep each
-// island self-contained. Paths resolve relative to the including file, and the
-// inlined markup still sees the island's props as its render context.
+interface IncludeModifiers {
+  ignoreMissing: boolean;
+  only: boolean;
+  withExpr?: string;
+}
+
+function applyContextScope(
+  body: string,
+  { only, withExpr }: IncludeModifiers,
+): string {
+  if (!withExpr && !only) return body;
+  const vars = withExpr ?? "{}";
+  const onlyFlag = only ? " only" : "";
+  return `{% with ${vars}${onlyFlag} %}${body}{% endwith %}`;
+}
+
 function inlineIncludes(
   filepath: string,
   ancestors: string[],
+  namespaces: Namespaces,
   onInclude?: (target: string) => void,
 ): string {
   const resolved = path.resolve(filepath);
@@ -68,29 +113,41 @@ function inlineIncludes(
   return source.replace(
     INCLUDE_TAG,
     (_match, _quote, includePath, modifiers) => {
-      const target = path.resolve(dir, includePath);
+      const parsed = parseModifiers(modifiers);
+      const target = resolveIncludePath(includePath, dir, namespaces);
       if (!fs.existsSync(target)) {
-        if (/\bignore missing\b/.test(modifiers)) return "";
+        if (parsed.ignoreMissing) return "";
         throw new Error(
           `Twig include "${includePath}" not found (referenced from ${resolved}).`,
         );
       }
       onInclude?.(target);
-      return inlineIncludes(target, trail, onInclude);
+      const body = inlineIncludes(target, trail, namespaces, onInclude);
+      return applyContextScope(body, parsed);
     },
   );
 }
 
-// Loads native `.twig` files as modules whose default export is the template
-// string, with `{% include %}` tags already inlined. The client renderer then
-// compiles and renders it with the island's props as the Twig context.
-function twigLoaderPlugin() {
+function parseModifiers(modifiers: string): IncludeModifiers {
+  const ignoreMissing = /\bignore\s+missing\b/.test(modifiers);
+  let rest = modifiers.replace(/\bignore\s+missing\b/, " ");
+
+  const only = /\bonly\s*$/.test(rest);
+  rest = rest.replace(/\bonly\s*$/, " ");
+
+  const withMatch = /\bwith\b([\s\S]*)$/.exec(rest);
+  const withExpr = withMatch ? withMatch[1].trim() : undefined;
+
+  return { ignoreMissing, only, withExpr: withExpr || undefined };
+}
+
+function twigLoaderPlugin(namespaces: Namespaces) {
   return {
     enforce: "pre" as const,
     load(this: { addWatchFile?: (id: string) => void }, id: string) {
       const filepath = id.split("?")[0];
       if (!filepath.endsWith(".twig")) return;
-      const source = inlineIncludes(filepath, [], (target) =>
+      const source = inlineIncludes(filepath, [], namespaces, (target) =>
         this.addWatchFile?.(target),
       );
       return {
@@ -103,18 +160,23 @@ function twigLoaderPlugin() {
 }
 
 export default function (options: Options = {}): AstroIntegration {
-  const { exclude, include } = options;
+  const { exclude, include, namespaces } = options;
   const filtered = !!(include?.length || exclude?.length);
 
   return {
     hooks: {
-      "astro:config:setup": ({ addRenderer, updateConfig }) => {
+      "astro:config:setup": ({ addRenderer, config, updateConfig }) => {
         addRenderer(getRenderer(filtered));
+        const resolvedNamespaces = normalizeNamespaces(
+          namespaces,
+          fileURLToPath(config.root),
+        );
+        const loader = twigLoaderPlugin(resolvedNamespaces);
         updateConfig({
           vite: {
             plugins: filtered
-              ? [twigLoaderPlugin(), twigFilterPlugin(include, exclude)]
-              : [twigLoaderPlugin()],
+              ? [loader, twigFilterPlugin(include, exclude)]
+              : [loader],
           },
         });
       },

@@ -76,11 +76,48 @@ export default function MyComponent(): string {
 
 Includes may be nested, and `{% include "…" ignore missing %}` is honored when the target file does not exist. An include that forms a cycle, or that points at a missing file without `ignore missing`, fails the build with an error.
 
+#### Namespaces
+
+Includes can also use Twig namespaces (`@name/...`) so templates reference a shared library by an alias instead of a long relative path. Map each namespace to a base directory with the `namespaces` option in `astro.config.mjs`:
+
+```js
+// astro.config.mjs
+import twig from "islands-integrations/twig";
+
+export default defineConfig({
+  integrations: [
+    twig({
+      include: ["src/framework/twig/*"],
+      namespaces: {
+        "@items": "./src/framework/twig/items",
+      },
+    }),
+  ],
+});
+```
+
+A namespaced include then resolves `@items` to its configured directory:
+
+```twig
+{% include "@items/components/element.twig" %}
+```
+
+Namespace keys may be written with or without the leading `@` (`"@items"` and `"items"` are equivalent), and relative base directories resolve from the project root. An include that uses a namespace with no matching entry fails the build with an error.
+
+#### Passing context with `with` and `only`
+
+The `with { … }` and `only` modifiers on an include are honored. Use `with { … }` to remap or supply variables for the included template, and add `only` to isolate it from the surrounding context so it sees just the variables you pass:
+
+```twig
+{% include "@items/components/element.twig" with {
+  content: content,
+} %}
+```
+
 Some Twig features still rely on a runtime loader and are **not** supported, so keep those self-contained:
 
 * Dynamic include paths (`{% include someVariable %}`) — only static, quoted paths are inlined.
-* Macros (`{% import %}` / `{% from %}`), template inheritance (`{% extends %}` / `{% block %}`), and namespaces (for example `@atoms/...`).
-* The `with { … }` and `only` context modifiers on `include` — the inlined markup always sees the full island context.
+* Macros (`{% import %}` / `{% from %}`) and template inheritance (`{% extends %}` / `{% block %}`).
 
 ## Page setup
 
