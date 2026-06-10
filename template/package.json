@@ -7,7 +7,7 @@
     "audit:deno": "deno audit",
     "audit:npm": "better-npm-audit audit",
     "audit:pnpm": "pnpm audit",
-    "audit:yarn": "yarn npm audit",
+    "audit:yarn": "yarn npm audit --no-deprecations",
     "build": "astro build",
     "dev": "astro dev",
     "format": "prettier . --check",
