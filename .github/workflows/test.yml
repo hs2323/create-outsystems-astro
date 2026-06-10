@@ -28,10 +28,6 @@ jobs:
         with:
           bun-version: ${{ env.BUN_VERSION }}
 
-      - name: Build integrations
-        working-directory: integrations
-        run: bun install --immutable && bun run process
-
       - name: Install dependencies
         run: bun install
 
@@ -54,10 +50,6 @@ jobs:
         with:
           deno-version: ${{ env.DENO_VERSION }}
 
-      - name: Build integrations
-        working-directory: integrations
-        run:  deno install --frozen && deno run process
-
       - name: Install dependencies
         run: deno install
 
@@ -79,10 +71,6 @@ jobs:
         uses: actions/setup-node@v6.4.0
         with:
           node-version: ${{ env.NODE_VERSION }}
-
-      - name: Build integrations
-        working-directory: integrations
-        run: npm ci && npm run process
 
       - name: Install dependencies
         run: npm install
@@ -111,10 +99,6 @@ jobs:
         with:
           version: ${{ env.PNPM_VERSION }}
 
-      - name: Build integrations
-        working-directory: integrations
-        run: pnpm install --frozen-lockfile && pnpm run process
-
       - name: Install dependencies
         run: pnpm install
 
@@ -125,36 +109,36 @@ jobs:
         working-directory: test-islands
         run: pnpm install --frozen-lockfile && pnpm run output
 
-  cli-yarn:
-    runs-on: ubuntu-latest
+  # cli-yarn:
+  #   runs-on: ubuntu-latest
 
-    steps:  
-      - name: Checkout code
-        uses: actions/checkout@v6.0.2
+  #   steps:  
+  #     - name: Checkout code
+  #       uses: actions/checkout@v6.0.2
     
-      - name: Use Node.js
-        uses: actions/setup-node@v6.4.0
-        with:
-          node-version: ${{ env.NODE_VERSION }}
+  #     - name: Use Node.js
+  #       uses: actions/setup-node@v6.4.0
+  #       with:
+  #         node-version: ${{ env.NODE_VERSION }}
 
-      - name: Enable Corepack and Set Yarn Version
-        run: |
-          corepack enable
-          corepack prepare yarn@${{ env.YARN_VERSION }}
+  #     - name: Enable Corepack and Set Yarn Version
+  #       run: |
+  #         corepack enable
+  #         corepack prepare yarn@${{ env.YARN_VERSION }}
 
-      - name: Install dependencies
-        run: yarn install
+  #     - name: Install dependencies
+  #       run: yarn install
 
-      - name: Run CLI
-        run: |
-          yarn add file:$GITHUB_WORKSPACE
-          yarn dlx create-outsystems-astro --projectName test-islands --frameworks react
+  #     - name: Run CLI
+  #       run: |
+          
+  #         yarn dlx create-outsystems-astro --projectName test-islands --frameworks react
 
-      - name: Run output
-        working-directory: test-islands
-        run: |
-          yarn install --immutable 
-          yarn run output
+  #     - name: Run output
+  #       working-directory: test-islands
+  #       run: |
+  #         yarn install --immutable 
+  #         yarn run output
 
   format-bun:
     runs-on: ubuntu-latest

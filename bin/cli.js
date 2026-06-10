@@ -44,14 +44,14 @@ async function main() {
     initial: "outsystems-astro-app"
   });
 
+  await buildIntegrations();
+
   const targetDir = path.resolve(process.cwd(), response.projectName);
   const templateDir = path.join(__dirname, "..", "template");
 
   // Copy files
   console.log("📦 Copying template...");
   copyDir(templateDir, targetDir);
-
-  buildIntegrations();
 
   const packageManager = packageInstall(targetDir);
 
