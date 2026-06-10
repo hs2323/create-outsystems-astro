@@ -27,7 +27,6 @@ export interface Options {
 
 type Namespaces = Record<string, string>;
 
-
 function normalizeNamespaces(
   namespaces: Record<string, string> | undefined,
   root: string,
