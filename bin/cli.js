@@ -21,6 +21,7 @@ const FRAMEWORKS = [
   { title: "React", value: "react" },
   { title: "SolidJS", value: "solid" },
   { title: "Svelte", value: "svelte" },
+  { title: "Twig", value: "twig" },
   { title: "Vue", value: "vue" }
 ];
 
@@ -43,14 +44,14 @@ async function main() {
     initial: "outsystems-astro-app"
   });
 
+  await buildIntegrations();
+
   const targetDir = path.resolve(process.cwd(), response.projectName);
   const templateDir = path.join(__dirname, "..", "template");
 
   // Copy files
   console.log("📦 Copying template...");
   copyDir(templateDir, targetDir);
-
-  buildIntegrations();
 
   const packageManager = packageInstall(targetDir);
 
@@ -272,6 +273,10 @@ function updateMultiAstroPage(projectDir, selectedFrameworks) {
     svelte: {
       import: /import\s+SvelteStore\s+from\s+['"].*?svelte\/Store\.svelte['"];?\s*\n?/g,
       component: /<SvelteStore\s+client:only="svelte"\s*\/>\s*\n?/g
+    },
+    twig: {
+      import: /import\s+(?:TwigStore\s+from\s+['"].*?twig\/Store\.twig['"]|TwigLogo\s+from\s+['"].*?twig\.png\?url['"]);?\s*\n?/g,
+      component: /<TwigStore\b[^>]*\/>\s*\n?/g,
     },
     vue: {
       import: /import\s+VueStore\s+from\s+['"].*?vue\/Store\.vue['"];?\s*\n?/g,

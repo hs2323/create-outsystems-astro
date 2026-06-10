@@ -20,11 +20,14 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "astro": "^6.3.7"
+    "astro": "^6.3.7",
+    "twig": "^3.0.0"
   },
   "devDependencies": {
     "@eslint/compat": "^2.1.0",
     "@eslint/js": "^9.39.4",
+    "@types/node": "^25.9.1",
+    "@types/twig": "^1.12.17",
     "better-npm-audit": "^3.11.0",
     "eslint": "^9.39.4",
     "eslint-config-prettier": "^10.1.8",

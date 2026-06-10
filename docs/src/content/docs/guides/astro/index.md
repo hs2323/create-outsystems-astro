@@ -13,6 +13,7 @@ description: Setup Astro JavaScript project
 - [React](https://docs.astro.build/en/guides/integrations-guide/react/)
 - [SolidJS](https://docs.astro.build/en/guides/integrations-guide/solid-js/)
 - [Svelte](https://docs.astro.build/en/guides/integrations-guide/svelte/)
+- [Twig](../../integrations/twig/index.md)
 - [Vue](https://docs.astro.build/en/guides/integrations-guide/vue/)
 
 ## Getting started
