@@ -14,7 +14,7 @@ export default defineConfig({
       favicon: "/favicon.ico",
       plugins: [
         starlightVersions({
-          versions: [{ slug: "0.10" }, { slug: "0.9" }, { slug: "0.8" }],
+          versions: [{ slug: "0.11" }, { slug: "0.10" }, { slug: "0.9" }],
         }),
       ],
       sidebar: [
