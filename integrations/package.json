@@ -15,7 +15,7 @@
     "format:write": "prettier  --write .",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
-    "prepublishOnly": "tsc",
+    "prepublish": "tsc",
     "process": "tsc && mv dist ../template/.integrations && cp package.json ../template/.integrations/package.json",
     "typecheck": "tsc --noEmit"
   },

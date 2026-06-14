@@ -5296,7 +5296,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:^6.3.7, astro@npm:^6.4.4":
+"astro@npm:^6.4.4":
   version: 6.4.4
   resolution: "astro@npm:6.4.4"
   dependencies:
@@ -8956,11 +8956,11 @@ __metadata:
 
 "islands-integrations@file:./.integrations::locator=create-outsystems-astro%40workspace%3A.":
   version: 0.11.0
-  resolution: "islands-integrations@file:./.integrations#./.integrations::hash=cbce13&locator=create-outsystems-astro%40workspace%3A."
+  resolution: "islands-integrations@file:./.integrations#./.integrations::hash=d2a06c&locator=create-outsystems-astro%40workspace%3A."
   dependencies:
-    astro: "npm:^6.3.7"
+    astro: "npm:^6.4.4"
     twig: "npm:^3.0.0"
-  checksum: 10c0/c8805fc45dec341a19040f555081a61aecf00bf5d4feb60491f012aef96d912f90eb4197afceef3ef11c1c2b44576a34db925b94c435a71bf70c5e4ed6af254e
+  checksum: 10c0/079210d78f319f8f08a92bac2597758609e2427af09f0ec327d2f497e71f578a36b074bee4f1326472d92c9ca75bca96a887d54389beb6968626f9fe27741822
   languageName: node
   linkType: hard
 
