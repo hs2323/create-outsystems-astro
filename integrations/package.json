@@ -20,13 +20,13 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "astro": "^6.3.7",
+    "astro": "^6.4.4",
     "twig": "^3.0.0"
   },
   "devDependencies": {
     "@eslint/compat": "^2.1.0",
     "@eslint/js": "^9.39.4",
-    "@types/node": "^25.9.1",
+    "@types/node": "^25.9.2",
     "@types/twig": "^1.12.17",
     "better-npm-audit": "^3.11.0",
     "eslint": "^9.39.4",
@@ -37,6 +37,12 @@
     "globals": "^17.6.0",
     "prettier": "^3.8.3",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.59.4"
+    "typescript-eslint": "^8.60.1"
+  },
+  "overrides": {
+    "esbuild": "^0.28.1"
+  },
+  "resolutions": {
+    "esbuild": "^0.28.1"
   }
 }
