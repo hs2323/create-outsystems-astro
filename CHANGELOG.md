@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [0.11.1] - 2026-06-14
 
 ### Changed
 
@@ -47,10 +47,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated dependency @analogjs/vitest-angular to 2.5.2.
 - Updated dependency @analogjs/vite-plugin-angular to 2.5.2.
 - Updated dependency @analogjs/astro-angular to 2.6.0.
-
-### Removed
-
-- Removed dependency @angular/animations.
 
 ### Security
 
