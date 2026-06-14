@@ -5,6 +5,57 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Changed
+
+- Updated dependency vue-eslint-parser to 10.4.1.
+- Updated dependency vue to 3.5.35.
+- Updated dependency vitest to 4.1.8.
+- Updated dependency vite to 8.0.16.
+- Updated dependency typescript-eslint to 8.60.1.
+- Updated dependency svelte-eslint-parser to 1.8.0.
+- Updated dependency svelte to 5.56.2.
+- Updated dependency react-dom to 19.2.7.
+- Updated dependency react to 19.2.7.
+- Updated dependency prettier-plugin-svelte to 4.1.0.
+- Updated dependency happy-dom to 20.10.2.
+- Updated dependency eslint-plugin-vue to 10.9.2.
+- Updated dependency eslint-plugin-svelte to 3.19.0.
+- Updated dependency astro to 6.4.4.
+- Updated dependency angular-eslint to 22.0.0.
+- Updated dependency @types/react to 19.2.17.
+- Updated dependency @types/node to 25.9.2.
+- Updated dependency @testing-library/angular to 19.4.1.
+- Updated dependency @oxc-project/runtime to 1.134.0.
+- Updated dependency @babel/core to 7.29.7.
+- Updated dependency @astrojs/svelte to 8.1.2.
+- Updated dependency @astrojs/react to 5.0.7.
+- Updated dependency @astrojs/preact to 5.1.5.
+- Updated dependency @angular/router to 21.2.14.
+- Updated dependency @angular/platform-server to 21.2.14.
+- Updated dependency @angular/platform-browser to 21.2.14.
+- Updated dependency @angular/language-service to 21.2.14.
+- Updated dependency @angular/core to 21.2.14.
+- Updated dependency @angular/compiler-cli to 21.2.14.
+- Updated dependency @angular/compiler to 21.2.14.
+- Updated dependency @angular/common to 21.2.14.
+- Updated dependency @angular/cli to 21.2.14.
+- Updated dependency @angular/build to 21.2.14.
+- Updated dependency @angular-devkit/schematics to 21.2.14.
+- Updated dependency @angular-devkit/architect to 0.2102.14.
+- Updated dependency @analogjs/vitest-angular to 2.5.2.
+- Updated dependency @analogjs/vite-plugin-angular to 2.5.2.
+- Updated dependency @analogjs/astro-angular to 2.6.0.
+
+### Removed
+
+- Removed dependency @angular/animations.
+
+### Security
+
+- Updated esbuild to 0.28.1 due to GHSA-gv7w-rqvm-qjhr and GHSA-g7r4-m6w7-qqqr.
+
 ## [0.11.0] - 2026-06-10
 
 ### Added
