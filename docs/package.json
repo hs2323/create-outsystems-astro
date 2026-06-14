@@ -1,7 +1,7 @@
 {
   "name": "create-outsystems-astro-docs",
   "type": "module",
-  "version": "0.10.0",
+  "version": "0.11.1",
   "scripts": {
     "astro": "astro",
     "audit": "better-npm-audit audit --exclude GHSA-j687-52p2-xcff",
