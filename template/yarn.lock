@@ -8969,12 +8969,12 @@ __metadata:
   linkType: hard
 
 "islands-integrations@file:./.integrations::locator=create-outsystems-astro%40workspace%3A.":
-  version: 0.11.1
-  resolution: "islands-integrations@file:./.integrations#./.integrations::hash=65a1b2&locator=create-outsystems-astro%40workspace%3A."
+  version: 0.11.2
+  resolution: "islands-integrations@file:./.integrations#./.integrations::hash=7df90c&locator=create-outsystems-astro%40workspace%3A."
   dependencies:
     astro: "npm:^6.4.6"
     twig: "npm:^3.0.0"
-  checksum: 10c0/6ae4e11c52625f58f28ebba5dd48ee15c90ac63fba6324fc9255e80ef51ba7615a81c1bd8c06621b8e1a9ce021100641c89bb3f438e7e5e392442e5d3dc5133e
+  checksum: 10c0/b429d2c361687560f336f2164c53041dc6cb902ee8dc872d4d816f116aa77a53705b566783192122fd96e735adc110d504d7065e564ea9b910bfb69a180f5d05
   languageName: node
   linkType: hard
 

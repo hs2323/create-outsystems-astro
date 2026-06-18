@@ -1,6 +1,6 @@
 {
   "name": "islands-integrations",
-  "version": "0.11.1",
+  "version": "0.11.2",
   "description": "Integrations for OutSystems Astro Islands",
   "type": "module",
   "main": "index.js",
