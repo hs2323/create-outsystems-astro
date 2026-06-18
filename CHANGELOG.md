@@ -9,6 +9,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+- Updated sub-dependency vite@7 to 7.3.5 due to CVE-2026-53632 and CVE-2026-53571.
+- Updated sub-dependency tar to 7.5.16 due to CVE-2026-53655.
+- Updated sub-dependency js-yaml to 4.2.0 due to CVE-2026-53550.
+- Updated sub-dependency hono to 4.12.25 due to  CVE-2026-54286, CVE-2026-54287, CVE-2026-54290, CVE-2026-54288 and CVE-2026-54289.
+- Updated dependency astro to 6.4.7 due to CVE-2026-54298 and CVE-2026-54299.
+- Updated sub-dependency @babel/core to 7.29.6.
+- Updated dependency @angular/platform-server to 21.2.17 due to CVE-2026-54268, CVE-2026-54266 and GHSA-58w9-8g37-x9v5.
+- Updated dependency @angular/platform-browser to 21.2.17 due to CVE-2026-54268, CVE-2026-54266 and GHSA-58w9-8g37-x9v5.
+- Updated dependency @angular/language-service to 21.2.17 due to CVE-2026-54268, CVE-2026-54266 and GHSA-58w9-8g37-x9v5.
+- Updated dependency @angular/core to 21.2.17 due to CVE-2026-54268, CVE-2026-54266 and GHSA-58w9-8g37-x9v5.
+- Updated dependency @angular/compiler-cli to 21.2.17 due to CVE-2026-54268, CVE-2026-54266 and GHSA-58w9-8g37-x9v5.
+- Updated dependency @angular/compiler to 21.2.17 due to CVE-2026-54268, CVE-2026-54266 and GHSA-58w9-8g37-x9v5.
+- Updated dependency @angular/common to 21.2.17 due to CVE-2026-54268, CVE-2026-54266 and GHSA-58w9-8g37-x9v5.
+- Updated dependency @angular/cli to 21.2.15 due to CVE-2026-54268, CVE-2026-54266 and GHSA-58w9-8g37-x9v5.
+- Updated dependency @angular/build to 21.2.15 due to CVE-2026-54268, CVE-2026-54266 and GHSA-58w9-8g37-x9v5.
+- Updated dependency @angular-devkit/schematics to 21.2.15 due to CVE-2026-54268, CVE-2026-54266 and GHSA-58w9-8g37-x9v5.
+- Updated dependency @angular-devkit/architect to 0.2102.15 due to CVE-2026-54268, CVE-2026-54266 and GHSA-58w9-8g37-x9v5.
 - Updated integration sub-dependency vite to 7.3.5 due to CVE-2026-53632 and CVE-2026-53571.
 - Updated integration sub-dependency js-yaml to 4.2.0 due to CVE-2026-53550.
 - Updated integration dependency astro to 6.4.7 due to CVE-2026-54298 and CVE-2026-54299.
