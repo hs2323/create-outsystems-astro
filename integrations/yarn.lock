@@ -1492,9 +1492,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:^6.4.4":
-  version: 6.4.4
-  resolution: "astro@npm:6.4.4"
+"astro@npm:^6.4.6":
+  version: 6.4.7
+  resolution: "astro@npm:6.4.7"
   dependencies:
     "@astrojs/compiler": "npm:^4.0.0"
     "@astrojs/internal-helpers": "npm:0.10.0"
@@ -1557,7 +1557,7 @@ __metadata:
       optional: true
   bin:
     astro: ./bin/astro.mjs
-  checksum: 10c0/bccd986af688b087fbf6e70c064e8b2ee5d820853bcc6a97b5b6afae20de58d8999e6c7de1c88e3a5f4e53f7bb53bb267481afc62223cfe271ae5b2eb7becd86
+  checksum: 10c0/92b44a1a93c68a0be3d6fae198593382b577c4e402e2a3a6af87a26759142cc95a0890e8cfb0b7c5091d33184361fd2ca086b2877fb68d24851233de21468f16
   languageName: node
   linkType: hard
 
@@ -3598,7 +3598,7 @@ __metadata:
     "@eslint/js": "npm:^9.39.4"
     "@types/node": "npm:^25.9.2"
     "@types/twig": "npm:^1.12.17"
-    astro: "npm:^6.4.4"
+    astro: "npm:^6.4.6"
     better-npm-audit: "npm:^3.11.0"
     eslint: "npm:^9.39.4"
     eslint-config-prettier: "npm:^10.1.8"
@@ -3613,7 +3613,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"js-yaml@npm:^4.1.1":
+"js-yaml@npm:^4.2.0":
   version: 4.2.0
   resolution: "js-yaml@npm:4.2.0"
   dependencies:
@@ -6142,7 +6142,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^7.3.2":
+"vite@npm:^7.3.5":
   version: 7.3.5
   resolution: "vite@npm:7.3.5"
   dependencies:
