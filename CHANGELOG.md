@@ -5,7 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-### [0.11.2] - 2026-06-17
+## [Unreleased]
+
+### Changed
+
+- Updated integrations dependency typescript-eslint to 8.61.0.
+- Updated integrations dependency typescript tp 10.0.1.
+- Updated integrations dependency prettier to 3.8.4.
+- Updated integrations dependency esint to 10.4.1.
+- Updated integrations dependency @types/node to 25.9.3.
+- Updated integrations dependency @eslint/js to 10.0.1.
+
+## [0.11.2] - 2026-06-17
 
 ### Security
 
