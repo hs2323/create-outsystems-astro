@@ -9,12 +9,37 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Updated dependency typescript to 10.0.1.
+- Updated dependency @angular-eslint to 22.0.0.
+- Updated dependency @angular/router to 22.0.1.
+- Updated dependency @angular/platform-server to 22.0.1.
+- Updated dependency @angular/platform-browser to 22.0.1.
+- Updated dependency @angular/language-service to 22.0.1.
+- Updated dependency @angular/core to 22.0.1.
+- Updated dependency @angular/compiler-cli to 22.0.1.
+- Updated dependency @angular/compiler to 22.0.1.
+- Updated dependency @angular/common to 22.0.1.
+- Updated dependency @angular/cli to 22.0.1.
+- Updated dependency @angular/build to 22.0.1.
+- Updated dependency @angular-devkit/schematics to 22.0.1.
+- Updated dependency @angular-devkit/architect to 0.2200.1.
+- Updated dependency @analogjs/vitest-angular to 2.6.1.
+- Updated dependency @analogjs/vite-plugin-angular to 2.6.1.
+- Updated dependency @analogjs/astro-angular to 2.6.1.
 - Updated integrations dependency typescript-eslint to 8.61.0.
-- Updated integrations dependency typescript tp 10.0.1.
+- Updated integrations dependency typescript to 10.0.1.
 - Updated integrations dependency prettier to 3.8.4.
 - Updated integrations dependency esint to 10.4.1.
 - Updated integrations dependency @types/node to 25.9.3.
 - Updated integrations dependency @eslint/js to 10.0.1.
+
+### Removed
+
+- Removed dependency @oxc-project/runtime.
+
+### Security
+
+- Updated sub-dependency piscina to 5.2.0 due to CVE-2026-55388.
 
 ## [0.11.2] - 2026-06-17
 
