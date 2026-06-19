@@ -11,12 +11,15 @@
   "imports": {
     "@babel/core": "npm:@babel/core@^7.29.7",
     "esbuild": "npm:esbuild@^0.28.1",
-    "piscina": "npm:piscina@^5.2.0"
+    "piscina": "npm:piscina@^5.2.0",
+    "undici@6": "npm:undici@^6.27.0"
+
   },
   "minimumDependencyAge": {
     "age": "P7D",
     "exclude": [
-      "npm:piscina"
+      "npm:piscina",
+      "npm:undici"
     ]
   }
 }

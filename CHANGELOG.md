@@ -39,6 +39,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+- Updated sub-dependency undici to 6.27.0 due to CVE-2026-9679, CVE-2026-12151, CVE-2026-6733 and CVE-2026-11525.
 - Updated sub-dependency piscina to 5.2.0 due to CVE-2026-55388.
 
 ## [0.11.2] - 2026-06-17
