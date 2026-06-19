@@ -13,9 +13,11 @@
   "files": [
     "bin",
     "integrations",
+    "integrations/.npmrc",
     "integrations/package.json",
     "template",
-    "template/.gitignore"
+    "template/.gitignore",
+    "template/.npmrc"
   ],
   "publishConfig": {
     "access": "public"
