@@ -124,7 +124,7 @@ jobs:
       - name: Enable Corepack and Set Yarn Version
         run: |
           corepack enable
-          corepack prepare yarn@${{ env.YARN_VERSION }}
+          corepack prepare yarn@${{ env.YARN_VERSION }} --activate
 
       - name: Install dependencies
         run: yarn install
@@ -302,7 +302,7 @@ jobs:
       - name: Enable Corepack and Set Yarn Version
         run: |
           corepack enable
-          corepack prepare yarn@${{ env.YARN_VERSION }}
+          corepack prepare yarn@${{ env.YARN_VERSION }} --activate
 
       - name: Build integrations
         working-directory: integrations
@@ -475,7 +475,7 @@ jobs:
       - name: Enable Corepack and Set Yarn Version
         run: |
           corepack enable
-          corepack prepare yarn@${{ env.YARN_VERSION }}
+          corepack prepare yarn@${{ env.YARN_VERSION }} --activate
 
       - name: Build integrations
         working-directory: integrations
@@ -829,7 +829,7 @@ jobs:
       - name: Enable Corepack and Set Yarn Version
         run: |
           corepack enable
-          corepack prepare yarn@${{ env.YARN_VERSION }}
+          corepack prepare yarn@${{ env.YARN_VERSION }} --activate
 
       - name: Build integrations
         working-directory: integrations
@@ -976,7 +976,7 @@ jobs:
       - name: Enable Corepack and Set Yarn Version
         run: |
           corepack enable
-          corepack prepare yarn@${{ env.YARN_VERSION }}
+          corepack prepare yarn@${{ env.YARN_VERSION }} --activate
 
       - name: Build integrations
         working-directory: integrations
@@ -1107,7 +1107,7 @@ jobs:
       - name: Enable Corepack and Set Yarn Version
         run: |
           corepack enable
-          corepack prepare yarn@${{ env.YARN_VERSION }}
+          corepack prepare yarn@${{ env.YARN_VERSION }} --activate
 
       - name: Build integrations
         working-directory: integrations
@@ -1256,7 +1256,7 @@ jobs:
       - name: Enable Corepack and Set Yarn Version
         run: |
           corepack enable
-          corepack prepare yarn@${{ env.YARN_VERSION }}
+          corepack prepare yarn@${{ env.YARN_VERSION }} --activate
 
       - name: Build integrations
         working-directory: integrations
@@ -1393,7 +1393,7 @@ jobs:
       - name: Enable Corepack and Set Yarn Version
         run: |
           corepack enable
-          corepack prepare yarn@${{ env.YARN_VERSION }}
+          corepack prepare yarn@${{ env.YARN_VERSION }} --activate
 
       - name: Build integrations
         working-directory: integrations

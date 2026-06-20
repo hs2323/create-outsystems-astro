@@ -1,8 +1,8 @@
 diff --git a/node_modules/@angular/build/src/tools/esbuild/javascript-transformer-worker.js b/node_modules/@angular/build/src/tools/esbuild/javascript-transformer-worker.js
-index 2c055e6..079cb93 100755
+index c8bec9f..8884304 100755
 --- a/node_modules/@angular/build/src/tools/esbuild/javascript-transformer-worker.js
 +++ b/node_modules/@angular/build/src/tools/esbuild/javascript-transformer-worker.js
-@@ -122,30 +122,21 @@ async function requiresLinking(path, source) {
+@@ -141,30 +141,21 @@ async function requiresLinking(path, source) {
      return source.includes(LINKER_DECLARATION_PREFIX);
  }
  async function createLinkerPlugin(options) {
