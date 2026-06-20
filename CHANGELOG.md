@@ -29,9 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated integrations dependency typescript-eslint to 8.61.0.
 - Updated integrations dependency typescript to 10.0.1.
 - Updated integrations dependency prettier to 3.8.4.
-- Updated integrations dependency esint to 10.4.1.
 - Updated integrations dependency @types/node to 25.9.3.
-- Updated integrations dependency @eslint/js to 10.0.1.
 
 ### Removed
 
