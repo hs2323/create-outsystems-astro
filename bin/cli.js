@@ -33,6 +33,28 @@ const LOCKFILES = {
   deno: ["deno.lock", "deno.json"]
 };
 
+// Reject names that would escape the current directory (path traversal),
+// resolve to an absolute path, or contain path separators / unsafe chars.
+function validateProjectName(name) {
+  if (typeof name !== "string" || name.trim().length === 0) {
+    return "Project name cannot be empty.";
+  }
+  const trimmed = name.trim();
+  if (trimmed === "." || trimmed === "..") {
+    return "Project name cannot be '.' or '..'.";
+  }
+  if (path.isAbsolute(trimmed) || trimmed.startsWith("~")) {
+    return "Project name must be a relative folder name, not an absolute path.";
+  }
+  if (/[\\/]/.test(trimmed) || trimmed.split(/[\\/]/).includes("..")) {
+    return "Project name must be a single folder name (no slashes or '..').";
+  }
+  if (/[\x00-\x1f<>:"|?*]/.test(trimmed)) {
+    return "Project name contains invalid characters.";
+  }
+  return true;
+}
+
 async function main() {
   console.log("🚀 Welcome to create-outsystems-astro!");
 
@@ -41,13 +63,29 @@ async function main() {
     type: "text",
     name: "projectName",
     message: "What should we name your project?",
-    initial: "outsystems-astro-app"
+    initial: "outsystems-astro-app",
+    validate: validateProjectName
   });
+
+  // When prompts are overridden via CLI args, `validate` is bypassed, so
+  // re-check here. Also guards against a cancelled prompt (undefined).
+  const nameCheck = validateProjectName(response.projectName);
+  if (nameCheck !== true) {
+    console.error(`❌ ${nameCheck || "No project name provided."}`);
+    process.exit(1);
+  }
 
   await buildIntegrations();
 
   const targetDir = path.resolve(process.cwd(), response.projectName);
   const templateDir = path.join(__dirname, "..", "template");
+
+  // Refuse to scaffold into an existing, non-empty directory to avoid
+  // clobbering files the user already has.
+  if (fs.existsSync(targetDir) && fs.readdirSync(targetDir).length > 0) {
+    console.error(`❌ Target directory "${response.projectName}" already exists and is not empty.`);
+    process.exit(1);
+  }
 
   // Copy files
   console.log("📦 Copying template...");
@@ -367,7 +405,7 @@ function packageInstall(targetDir) {
         yarn: "yarn install",
         pnpm: "pnpm install",
         bun: "bun install",
-        deno: "deno install && deno run postinsall:deno",
+        deno: "deno install && deno run postinstall:deno",
         unknown: "npm install"
       }[packageManager];
 
