@@ -5,6 +5,7 @@
 .github
 .idea/
 .vscode/
+.yarn
 CHANGELOG.md
 docs/
 node_modules/

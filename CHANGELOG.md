@@ -9,36 +9,77 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Updated dependency typescript to 10.0.1.
+- Updated dependency vue to 3.5.40.
+- Updated dependency vitest to 4.1.10.
+- Updated dependency vite to 8.1.5.
+- Updated dependency typescript-eslint to 8.64.0.
+- Updated dependency typescript to 6.0.3.
+- Updated dependency svelte to 5.56.6.
+- Updated dependency solid-js to 1.9.14.
+- Updated dependency prettier-plugin-svelte to 4.1.1.
+- Updated dependency prettier to 3.9.5.
+- Updated dependency preact to 10.29.7.
+- Updated dependency nanostores to 1.4.0.
+- Updated dependency js-beautify to 2.0.3.
+- Updated dependency happy-dom to 20.10.6.
+- Updated dependency globals to 17.7.0.
+- Updated dependency eslint-plugin-svelte to 3.20.0.
+- Updated dependency eslint-plugin-playwright to 2.10.5
+- Updated dependency eslint-plugin-perfectionist to 5.10.0.
+- Updated dependency eslint-plugin-jest to 29.15.4.
+- Updated dependency eslint to 9.39.5.
+- Updated dependency astro to 7.1.1.
+- Updated dependency angular-eslint to 22.1.0.
+- Updated dependency @vitejs/plugin-vue to 6.0.8.
+- Updated dependency @vitejs/plugin-react to 6.0.3.
+- Updated dependency @types/node to 26.1.1.
+- Updated dependency @testing-library/svelte to 5.4.2.
+- Updated dependency @sveltejs/vite-plugin-svelte to 7.2.0.
+- Updated dependency @playwright/test to 1.61.1.
+- Updated dependency @eslint/markdown to 8.0.3.
+- Updated dependency @eslint/js to 9.39.5.
+- Updated dependency @eslint/eslintrc to 3.3.6.
+- Updated dependency @astrojs/vue to 7.0.1.
+- Updated dependency @astrojs/svelte to 9.0.1.
+- Updated dependency @astrojs/solid-js to 7.0.1.
+- Updated dependency @astrojs/react to 6.0.1.
+- Updated dependency @astrojs/preact to 6.0.1.
 - Updated dependency @angular-eslint to 22.0.0.
-- Updated dependency @angular/router to 22.0.1.
-- Updated dependency @angular/platform-server to 22.0.1.
-- Updated dependency @angular/platform-browser to 22.0.1.
-- Updated dependency @angular/language-service to 22.0.1.
-- Updated dependency @angular/core to 22.0.1.
-- Updated dependency @angular/compiler-cli to 22.0.1.
-- Updated dependency @angular/compiler to 22.0.1.
-- Updated dependency @angular/common to 22.0.1.
-- Updated dependency @angular/cli to 22.0.1.
-- Updated dependency @angular/build to 22.0.1.
-- Updated dependency @angular-devkit/schematics to 22.0.1.
-- Updated dependency @angular-devkit/architect to 0.2200.1.
-- Updated dependency @analogjs/vitest-angular to 2.6.1.
-- Updated dependency @analogjs/vite-plugin-angular to 2.6.1.
-- Updated dependency @analogjs/astro-angular to 2.6.1.
-- Updated integrations dependency typescript-eslint to 8.61.0.
-- Updated integrations dependency typescript to 10.0.1.
-- Updated integrations dependency prettier to 3.8.4.
-- Updated integrations dependency @types/node to 25.9.3.
+- Updated dependency @angular/router to 22.0.7.
+- Updated dependency @angular/platform-server to 22.0.7.
+- Updated dependency @angular/platform-browser to 22.0.7.
+- Updated dependency @angular/language-service to 22.0.7.
+- Updated dependency @angular/core to 22.0.7.
+- Updated dependency @angular/compiler-cli to 22.0.7.
+- Updated dependency @angular/compiler to 22.0.7.
+- Updated dependency @angular/common to 22.0.7.
+- Updated dependency @angular/cli to 22.0.7.
+- Updated dependency @angular/build to 22.0.7.
+- Updated dependency @angular-devkit/schematics to 22.0.7.
+- Updated dependency @angular-devkit/architect to 0.2200.7.
+- Updated dependency @analogjs/vitest-angular to 2.6.3.
+- Updated dependency @analogjs/vite-plugin-angular to 2.6.3.
+- Updated dependency @analogjs/astro-angular to 2.6.3.
+- Updated integrations dependency typescript-eslint to 8.64.0.
+- Updated integrations dependency typescript to 6.0.3.
+- Updated integrations dependency prettier to 3.9.5.
+- Updated integrations dependency globals to 17.7.0.
+- Updated integrations dependency eslint to 9.39.5.
+- Updated integrations dependency astro to 7.1.1.
+- Updated integrations dependency @types/node to 26.1.1.
+- Updated integrations dependency @eslint/js to 9.39.5.
 
 ### Removed
 
+- Removed dependency @babel/core.
 - Removed dependency @oxc-project/runtime.
 
 ### Security
 
-- Updated sub-dependency undici to 6.27.0 due to CVE-2026-9679, CVE-2026-12151, CVE-2026-6733 and CVE-2026-11525.
-- Updated sub-dependency piscina to 5.2.0 due to CVE-2026-55388.
+- Updated sub-dependency tar to 7.5.21 due to GHSA-r292-9mhp-454m.
+- Updated sub-dependency @hono/node-server to 2.0.5 due to GHSA-frvp-7c67-39w9.
+- Updated sub-dependency fast-uri to 3.1.4 due to CVE-2026-16221.
+- Updated integrations sub-dependency fast-uri to 3.1.4 due to CVE-2026-16221.
 
 ## [0.11.2] - 2026-06-17
 
