@@ -7,7 +7,6 @@
     "npm:@types/twig@^1.12.17": "1.12.17",
     "npm:astro@^7.1.1": "7.1.1_@emnapi+core@1.11.1_@emnapi+runtime@1.11.1_@types+node@26.1.1",
     "npm:better-npm-audit@^3.11.0": "3.11.0",
-    "npm:brace-expansion@^5.0.8": "5.0.8",
     "npm:eslint-config-prettier@^10.1.8": "10.1.8_eslint@9.39.5",
     "npm:eslint-plugin-astro@^1.7.0": "1.7.0_eslint@9.39.5",
     "npm:eslint-plugin-import@^2.32.0": "2.32.0_eslint@9.39.5",
@@ -3571,7 +3570,6 @@
   },
   "workspace": {
     "dependencies": [
-      "npm:brace-expansion@^5.0.8",
       "npm:fast-uri@^3.1.4"
     ],
     "packageJson": {
@@ -3594,7 +3592,6 @@
         "npm:typescript@^6.0.3"
       ],
       "overrides": {
-        "brace-expansion": "^5.0.8",
         "fast-uri": "^3.1.4"
       }
     }

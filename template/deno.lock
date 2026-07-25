@@ -53,7 +53,6 @@
     "npm:angular-eslint@^22.1.0": "22.1.0_@angular+cli@22.0.7__@types+node@26.1.1_eslint@9.39.5_typescript@6.0.3_typescript-eslint@8.64.0__eslint@9.39.5__typescript@6.0.3_@types+node@26.1.1",
     "npm:astro@^7.1.1": "7.1.1_@emnapi+core@1.11.1_@emnapi+runtime@1.11.1_@types+node@26.1.1",
     "npm:better-npm-audit@^3.11.0": "3.11.0",
-    "npm:brace-expansion@^5.0.8": "5.0.8",
     "npm:cross-env@^10.1.0": "10.1.0",
     "npm:dotenv@^17.4.2": "17.4.2",
     "npm:esbuild@~0.28.1": "0.28.1",
@@ -9089,7 +9088,6 @@
   "workspace": {
     "dependencies": [
       "npm:@hono/node-server@^2.0.5",
-      "npm:brace-expansion@^5.0.8",
       "npm:esbuild@~0.28.1",
       "npm:fast-uri@^3.1.4",
       "npm:tar@^7.5.21"
@@ -9192,7 +9190,6 @@
       ],
       "overrides": {
         "@hono/node-server": "^2.0.5",
-        "brace-expansion": "^5.0.8",
         "esbuild": "^0.28.1",
         "fast-uri": "^3.1.4",
         "tar": "^7.5.21"

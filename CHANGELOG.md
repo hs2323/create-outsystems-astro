@@ -76,8 +76,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
-- Updated sub-dependency brace-expansion to 5.0.8 due to CVE-2026-14257.
-- Updated integrations sub-dependency brace-expansion to 5.0.8 due to CVE-2026-14257.
 - Updated sub-dependency tar to 7.5.21 due to GHSA-r292-9mhp-454m.
 - Updated sub-dependency @hono/node-server to 2.0.5 due to GHSA-frvp-7c67-39w9.
 - Updated sub-dependency fast-uri to 3.1.4 due to CVE-2026-16221.

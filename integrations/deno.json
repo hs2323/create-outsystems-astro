@@ -5,7 +5,6 @@
     "npm:sharp@0.34.5"
   ],
   "imports": {
-    "brace-expansion": "npm:brace-expansion@^5.0.8",
     "fast-uri": "npm:fast-uri@^3.1.4"
   },
   "minimumDependencyAge": {

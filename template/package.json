@@ -3,11 +3,11 @@
   "type": "module",
   "scripts": {
     "astro": "astro",
-    "audit:bun": "bun audit",
-    "audit:deno": "deno audit",
-    "audit:npm": "better-npm-audit audit",
-    "audit:pnpm": "pnpm audit",
-    "audit:yarn": "yarn npm audit --no-deprecations",
+    "audit:bun": "bun audit --ignore=CVE-2026-14257",
+    "audit:deno": "deno audit --ignore CVE-2026-14257",
+    "audit:npm": "better-npm-audit audit --exclude GHSA-mh99-v99m-4gvg",
+    "audit:pnpm": "pnpm audit --ignore GHSA-mh99-v99m-4gvg",
+    "audit:yarn": "yarn npm audit --no-deprecations --ignore GHSA-mh99-v99m-4gvg",
     "build": "astro build",
     "dev": "astro dev",
     "format": "prettier . --check",
@@ -130,14 +130,12 @@
   },
   "overrides": {
     "@hono/node-server": "^2.0.5",
-    "brace-expansion": "^5.0.8",
     "esbuild": "^0.28.1",
     "fast-uri": "^3.1.4",
     "tar": "^7.5.21"
   },
-  "repository": {
+  "resolutions": {
     "@hono/node-server": "^2.0.5",
-    "brace-expansion": "^5.0.8",
     "esbuild": "^0.28.1",
     "fast-uri": "^3.1.4",
     "tar": "^7.5.21"

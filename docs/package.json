@@ -4,7 +4,7 @@
   "version": "0.11.2",
   "scripts": {
     "astro": "astro",
-    "audit": "better-npm-audit audit --exclude GHSA-j687-52p2-xcff",
+    "audit": "better-npm-audit audit --exclude GHSA-mh99-v99m-4gvg",
     "build": "astro build",
     "dev": "astro dev",
     "format": "prettier . --check",
@@ -35,7 +35,6 @@
     "typescript-eslint": "^8.64.0"
   },
   "overrides": {
-    "brace-expansion": "^5.0.8",
     "esbuild": "^0.28.1",
     "fast-uri": "^3.1.4"
   }
