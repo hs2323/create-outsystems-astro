@@ -3,6 +3,7 @@ allowBuilds:
   sharp: true
 minimumReleaseAge: 10080
 minimumReleaseAgeExclude:
+  - brace-expansion@5.0.8
   - fast-uri@3.1.4
 overrides:
   'fast-uri': 3.1.4

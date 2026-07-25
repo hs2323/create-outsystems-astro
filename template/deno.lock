@@ -53,6 +53,7 @@
     "npm:angular-eslint@^22.1.0": "22.1.0_@angular+cli@22.0.7__@types+node@26.1.1_eslint@9.39.5_typescript@6.0.3_typescript-eslint@8.64.0__eslint@9.39.5__typescript@6.0.3_@types+node@26.1.1",
     "npm:astro@^7.1.1": "7.1.1_@emnapi+core@1.11.1_@emnapi+runtime@1.11.1_@types+node@26.1.1",
     "npm:better-npm-audit@^3.11.0": "3.11.0",
+    "npm:brace-expansion@^5.0.8": "5.0.8",
     "npm:cross-env@^10.1.0": "10.1.0",
     "npm:dotenv@^17.4.2": "17.4.2",
     "npm:esbuild@~0.28.1": "0.28.1",
@@ -3104,10 +3105,7 @@
       "integrity": "sha512-60YRaenCQcVjYEKOcG824+DRGGIQ3VKErcBoAEDJZz5bKIs2ZG+X/H9Nk+Q6EVkwJk5QNApxbrc5QtBSwtrXAg=="
     },
     "@vitejs/plugin-basic-ssl@2.3.0_vite@7.3.5__@types+node@26.1.1__sass@1.99.0_@types+node@26.1.1_sass@1.99.0": {
-      "integrity": "sha512-bdyo8rB3NnQbikdMpHaML9Z1OZPBu6fFOBo+OtxsBlvMJtysWskmBcnbIDhUqgC8tcxNv/a+BcV5U+2nQMm1OQ==",
-      "dependencies": [
-        "vite@7.3.5_@types+node@26.1.1_sass@1.99.0"
-      ]
+      "integrity": "sha512-bdyo8rB3NnQbikdMpHaML9Z1OZPBu6fFOBo+OtxsBlvMJtysWskmBcnbIDhUqgC8tcxNv/a+BcV5U+2nQMm1OQ=="
     },
     "@vitejs/plugin-react@5.2.0_vite@8.1.5__@types+node@26.1.1__esbuild@0.28.1_@types+node@26.1.1_esbuild@0.28.1": {
       "integrity": "sha512-YmKkfhOAi3wsB1PhJq5Scj3GXMn3WvtQ/JC0xoopuHoXSdmtdStOpFrYaT1kie2YgFBcIe64ROzMYRjCrYOdYw==",
@@ -3164,11 +3162,7 @@
       "dependencies": [
         "@vitest/spy",
         "estree-walker@3.0.3",
-        "magic-string",
-        "vite@7.3.5_@types+node@26.1.1_sass@1.99.0"
-      ],
-      "optionalPeers": [
-        "vite@7.3.5_@types+node@26.1.1_sass@1.99.0"
+        "magic-string"
       ]
     },
     "@vitest/mocker@4.1.10_vite@8.1.5__@types+node@26.1.1__esbuild@0.28.1_@types+node@26.1.1_esbuild@0.28.1": {
@@ -3845,8 +3839,8 @@
         "balanced-match@1.0.2"
       ]
     },
-    "brace-expansion@5.0.7": {
-      "integrity": "sha512-7oFy703dxfY3/NLxC1fh2SUCQ0H9rmAY+5EpDVfXjUTTs+HEwR2nYaqLv+GWcTsumwxPfiz6CzCNkwXwBUwqCA==",
+    "brace-expansion@5.0.8": {
+      "integrity": "sha512-JZyDyq3D4AUifKTPOB7DELf6XsB3WdPuNxCtob1vFXPsSXhdAiHBWJ/tJ8HAc9aH84BK+5JFZLNkJKx3G9kzQg==",
       "dependencies": [
         "balanced-match@4.0.4"
       ]
@@ -6672,7 +6666,7 @@
     "minimatch@10.2.5": {
       "integrity": "sha512-MULkVLfKGYDFYejP07QOurDLLQpcjk7Fw+7jXS2R2czRQzR56yHRveU5NDJEOviH+hETZKSkIk5c+T23GjFUMg==",
       "dependencies": [
-        "brace-expansion@5.0.7"
+        "brace-expansion@5.0.8"
       ]
     },
     "minimatch@3.1.5": {
@@ -8806,7 +8800,6 @@
         "tinyexec",
         "tinyglobby@0.2.17",
         "tinyrainbow",
-        "vite@7.3.5_@types+node@26.1.1_sass@1.99.0",
         "why-is-node-running"
       ],
       "optionalPeers": [
@@ -9096,6 +9089,7 @@
   "workspace": {
     "dependencies": [
       "npm:@hono/node-server@^2.0.5",
+      "npm:brace-expansion@^5.0.8",
       "npm:esbuild@~0.28.1",
       "npm:fast-uri@^3.1.4",
       "npm:tar@^7.5.21"
@@ -9198,6 +9192,7 @@
       ],
       "overrides": {
         "@hono/node-server": "^2.0.5",
+        "brace-expansion": "^5.0.8",
         "esbuild": "^0.28.1",
         "fast-uri": "^3.1.4",
         "tar": "^7.5.21"
