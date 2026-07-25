@@ -20,8 +20,6 @@ import globals from "globals";
 import svelteParser from "svelte-eslint-parser";
 import tseslint from "typescript-eslint";
 
-// 1. Import the Preact config normally
-
 import svelteConfig from "./svelte.config.js";
 
 // Fix for Bun and eslint-plugin-perfectionist.

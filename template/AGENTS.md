@@ -37,7 +37,7 @@ In OutSystems Developer Cloud, the Islands library is available at https://www.o
 
 ### Pages
 
-- The files in src/pages/\*.astro are used as a starting point and holds the components for generation. They can be tested by running `npm run dev`. That will show what the component looks like as rendered. The sample example pages are broken out by framework name (src/pages/react, src/pages/vue, etc). This page will house the component(s) entry points.
+- The files in src/pages/\*.astro are used as a starting point and holds the components for generation. They can be tested by running `npm run dev`. That will show what the component looks like as rendered. The sample example pages are broken out by framework name (src/pages/{FRAMEWORK}). This page will house the component(s) entry points.
 - When importing a component, the component must have the attribute of the client:only= + the framework name.\
   - Angular: `client:load`
   - HTML: `client:load`
@@ -58,7 +58,9 @@ In OutSystems Developer Cloud, the Islands library is available at https://www.o
   - Svelte: src/framework/svelte
   - Vue: src/framework/vue
 
-The framework folder should stay in place as the components will be rendered from there. The Angular components will only be transformed by Astro if they are in the framework/angular folder.
+The framework folder should stay in place as the components will be rendered from there.
+
+- Angular: components will only be transformed by Astro if they are in the framework/angular folder.
 
 - For any JSX based libraries, the @jsxImportSource directive must be at the top of the file.
   - Preact:
@@ -308,7 +310,12 @@ The OutSystems 11 library is called Lightweight State Manager - https://www.outs
 
 The OutSystems Developer Cloud library is called Lightweight State Manager and is available in the ODC Forge.
 
-Nano Stores are currently supported for only Preact - https://github.com/nanostores/preact, React - https://github.com/nanostores/react and Vue - https://github.com/nanostores/vue. The Angular 21 library does not yet support them.
+Nano Stores are currently supported by a binding library for only some of the frameworks:
+
+- Angular: not supported, the Angular 22 library does not yet have a binding library.
+- Preact: https://github.com/nanostores/preact
+- React: https://github.com/nanostores/react
+- Vue: https://github.com/nanostores/vue
 
 In OutSystems, the store will be on the Window object. The Islands component will then have to access it from there.
 

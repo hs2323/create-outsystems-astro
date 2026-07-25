@@ -74,6 +74,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed dependency @babel/core.
 - Removed dependency @oxc-project/runtime.
 
+### Fixed
+
+- Unselected frameworks are now removed from every reference in the generated project, not just from the page, component and test folders.
+
 ### Security
 
 - Updated sub-dependency tar to 7.5.21 due to GHSA-r292-9mhp-454m.
