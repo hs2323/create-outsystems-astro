@@ -8,7 +8,7 @@ on:
     - cron: '0 12 * * *'
 
 env:
-  DENO_VERSION: '2.8.0'
+  DENO_VERSION: '2.9.4'
 
 jobs:
 
@@ -17,10 +17,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v6.0.2
+        uses: actions/checkout@v7.0.1
 
       - name: Install Deno
-        uses: denoland/setup-deno@v2.0.4
+        uses: denoland/setup-deno@v2.0.5
         with:
           deno-version: ${{ env.DENO_VERSION }}
 
@@ -36,10 +36,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v6.0.2
+        uses: actions/checkout@v7.0.1
 
       - name: Install Deno
-        uses: denoland/setup-deno@v2.0.4
+        uses: denoland/setup-deno@v2.0.5
         with:
           deno-version: ${{ env.DENO_VERSION }}
 
@@ -55,12 +55,13 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v6.0.2
+        uses: actions/checkout@v7.0.1
 
       - name: Install Deno
-        uses: denoland/setup-deno@v2.0.4
+        uses: denoland/setup-deno@v2.0.5
         with:
-          deno-version: ${{ env.DENO_VERSION }}
+          # The newer versions of Deno break the audit functionality
+          deno-version: 2.7.5
 
       - name: Install dependencies
         working-directory: template
@@ -74,10 +75,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v6.0.2
+        uses: actions/checkout@v7.0.1
 
       - name: Install Deno
-        uses: denoland/setup-deno@v2.0.4
+        uses: denoland/setup-deno@v2.0.5
         with:
           deno-version: ${{ env.DENO_VERSION }}
 
@@ -92,10 +93,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v6.0.2
+        uses: actions/checkout@v7.0.1
 
       - name: Install Deno
-        uses: denoland/setup-deno@v2.0.4
+        uses: denoland/setup-deno@v2.0.5
         with:
           deno-version: ${{ env.DENO_VERSION }}
 
@@ -113,10 +114,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v6.0.2
+        uses: actions/checkout@v7.0.1
 
       - name: Install Deno
-        uses: denoland/setup-deno@v2.0.4
+        uses: denoland/setup-deno@v2.0.5
         with:
           deno-version: ${{ env.DENO_VERSION }}
 

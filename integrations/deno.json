@@ -5,7 +5,7 @@
     "npm:sharp@0.34.5"
   ],
   "imports": {
-    "esbuild": "npm:esbuild@^0.28.1"
+    "fast-uri": "npm:fast-uri@^3.1.4"
   },
   "minimumDependencyAge": {
     "age": "P7D"
