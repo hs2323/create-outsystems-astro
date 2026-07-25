@@ -4,6 +4,9 @@ allowBuilds:
   lmdb: true
   msgpackr-extract: true
   sharp: true
+auditConfig:
+  ignoreGhsas:
+    - GHSA-mh99-v99m-4gvg
 minimumReleaseAge: 10080
 minimumReleaseAgeExclude:
   - fast-uri@3.1.4

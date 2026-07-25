@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "audit:bun": "bun audit --ignore=GHSA-mh99-v99m-4gvg",
-    "audit:deno": "deno audit --ignore CVE-2026-14257",
+    "audit:deno": "deno audit --ignore=CVE-2026-14257",
     "audit:npm": "better-npm-audit audit --exclude GHSA-mh99-v99m-4gvg",
     "audit:pnpm": "pnpm audit --ignore GHSA-mh99-v99m-4gvg",
     "audit:yarn": "yarn npm audit --ignore 1124334",
