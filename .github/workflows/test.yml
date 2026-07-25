@@ -756,7 +756,8 @@ jobs:
       - name: Install Deno
         uses: denoland/setup-deno@v2.0.5
         with:
-          deno-version: ${{ env.DENO_VERSION }}
+          # The newer versions of Deno break the audit functionality
+          deno-version: 2.7.5
 
       - name: Build integrations
         working-directory: integrations
@@ -891,7 +892,8 @@ jobs:
       - name: Install Deno
         uses: denoland/setup-deno@v2.0.5
         with:
-          deno-version: ${{ env.DENO_VERSION }}
+          # The newer versions of Deno break the audit functionality
+          deno-version: 2.7.5
 
       - name: Build integrations
         working-directory: integrations
