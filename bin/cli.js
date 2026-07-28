@@ -233,6 +233,10 @@ function updateAstroConfig(projectDir, selectedFrameworks) {
       import: /import\s+angular\s+from\s+['"]@analogjs\/astro-angular['"];\s*\n?/,
       integration: /angular\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
     },
+    html: {
+      import: /import\s+html\s+from\s+['"]islands-integrations\/html['"];\s*\n?/,
+      integration: /html\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
+    },
     preact: {
       import: /import\s+preact\s+from\s+['"]@astrojs\/preact['"];\s*\n?/,
       integration: /preact\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
@@ -248,6 +252,10 @@ function updateAstroConfig(projectDir, selectedFrameworks) {
     svelte: {
       import: /import\s+svelte\s+from\s+['"]@astrojs\/svelte['"];\s*\n?/,
       integration: /svelte\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
+    },
+    twig: {
+      import: /import\s+twig\s+from\s+['"]islands-integrations\/twig['"];\s*\n?/,
+      integration: /twig\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
     },
     vue: {
       import: /import\s+vue\s+from\s+['"]@astrojs\/vue['"];\s*\n?/,
