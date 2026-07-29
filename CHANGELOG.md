@@ -74,6 +74,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed dependency @babel/core.
 - Removed dependency @oxc-project/runtime.
 
+### Fixed
+
+- Fixed HTML and Twig integrations pulled into Astro config when not selected.
+
 ### Security
 
 - Updated sub-dependency tar to 7.5.21 due to GHSA-r292-9mhp-454m.
@@ -564,7 +568,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Updated temlate dependency astro to 5.16.9.
+- Updated dependency astro to 5.16.9.
 - Updated dependency @types/react to 19.2.8.
 - Updated dependency @types/node to 25.0.8.
 - Updated dependency @astrojs/vue to 5.1.4.
