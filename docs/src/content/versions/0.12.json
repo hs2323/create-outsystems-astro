@@ -1,0 +1,100 @@
+{
+  "sidebar": [
+    {
+      "items": [
+        {
+          "label": "Getting Started",
+          "slug": "guides/getting-started"
+        },
+        {
+          "items": [
+            {
+              "label": "Astro",
+              "slug": "guides/astro"
+            },
+            {
+              "label": "Nano Stores",
+              "slug": "guides/nanostores"
+            }
+          ],
+          "label": "Client"
+        },
+        {
+          "items": [
+            {
+              "attrs": {
+                "rel": "noopener noreferrer",
+                "target": "_blank"
+              },
+              "label": "Angular",
+              "link": "https://angular.dev/"
+            },
+            {
+              "label": "HTML",
+              "slug": "guides/integrations/html"
+            },
+            {
+              "attrs": {
+                "rel": "noopener noreferrer",
+                "target": "_blank"
+              },
+              "label": "Preact",
+              "link": "https://preactjs.com/"
+            },
+            {
+              "attrs": {
+                "rel": "noopener noreferrer",
+                "target": "_blank"
+              },
+              "label": "React",
+              "link": "https://react.dev/"
+            },
+            {
+              "attrs": {
+                "rel": "noopener noreferrer",
+                "target": "_blank"
+              },
+              "label": "Solid",
+              "link": "https://www.solidjs.com/"
+            },
+            {
+              "attrs": {
+                "rel": "noopener noreferrer",
+                "target": "_blank"
+              },
+              "label": "Svelte",
+              "link": "https://svelte.dev/"
+            },
+            {
+              "label": "Twig",
+              "slug": "guides/integrations/twig"
+            },
+            {
+              "attrs": {
+                "rel": "noopener noreferrer",
+                "target": "_blank"
+              },
+              "label": "Vue",
+              "link": "https://vuejs.org/"
+            }
+          ],
+          "label": "Integrations"
+        },
+        {
+          "items": [
+            {
+              "label": "O11",
+              "slug": "guides/outsystems/o11"
+            },
+            {
+              "label": "ODC",
+              "slug": "guides/outsystems/odc"
+            }
+          ],
+          "label": "OutSystems"
+        }
+      ],
+      "label": "Guides"
+    }
+  ]
+}
