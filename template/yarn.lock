@@ -6026,6 +6026,7 @@ __metadata:
     angular-eslint: "npm:^22.2.0"
     astro: "npm:^7.1.1"
     better-npm-audit: "npm:^3.11.0"
+    cookie: "npm:^2.0.1"
     cross-env: "npm:^10.1.0"
     dotenv: "npm:^17.4.2"
     eslint: "npm:^9.39.5"

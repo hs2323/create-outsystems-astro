@@ -53,6 +53,7 @@
     "npm:angular-eslint@^22.2.0": "22.2.0_eslint@9.39.5_typescript@6.0.3_typescript-eslint@8.69.0__eslint@9.39.5__typescript@6.0.3",
     "npm:astro@^7.1.1": "7.2.10_@emnapi+core@1.11.3_@emnapi+runtime@1.11.3_@types+node@26.4.0",
     "npm:better-npm-audit@^3.11.0": "3.11.0",
+    "npm:cookie@^2.0.1": "2.0.1",
     "npm:cross-env@^10.1.0": "10.1.0",
     "npm:dotenv@^17.4.2": "17.4.2",
     "npm:eslint-config-preact@2": "2.0.0_eslint@9.39.5",
@@ -3149,10 +3150,7 @@
       "integrity": "sha512-1mEZtMKPM09vDmQt5y7YvmN2+DFTP7Tg0EWXdic8/C6VRnpb33e4ghisCIE3WZjsE2N8mf+QV1Zqh7ZFYLWInQ=="
     },
     "@vitejs/plugin-basic-ssl@2.3.0_vite@8.1.5__@types+node@26.4.0__esbuild@0.28.2__sass@1.101.0_@types+node@26.4.0_esbuild@0.28.2_sass@1.101.0": {
-      "integrity": "sha512-bdyo8rB3NnQbikdMpHaML9Z1OZPBu6fFOBo+OtxsBlvMJtysWskmBcnbIDhUqgC8tcxNv/a+BcV5U+2nQMm1OQ==",
-      "dependencies": [
-        "vite@8.1.5_@types+node@26.4.0_esbuild@0.28.2_sass@1.101.0"
-      ]
+      "integrity": "sha512-bdyo8rB3NnQbikdMpHaML9Z1OZPBu6fFOBo+OtxsBlvMJtysWskmBcnbIDhUqgC8tcxNv/a+BcV5U+2nQMm1OQ=="
     },
     "@vitejs/plugin-react@5.2.0_vite@8.2.2__@types+node@26.4.0__esbuild@0.28.2_@types+node@26.4.0": {
       "integrity": "sha512-YmKkfhOAi3wsB1PhJq5Scj3GXMn3WvtQ/JC0xoopuHoXSdmtdStOpFrYaT1kie2YgFBcIe64ROzMYRjCrYOdYw==",
@@ -3209,11 +3207,7 @@
       "dependencies": [
         "@vitest/spy",
         "estree-walker@3.0.3",
-        "magic-string@0.30.21",
-        "vite@8.1.5_@types+node@26.4.0_esbuild@0.28.2_sass@1.101.0"
-      ],
-      "optionalPeers": [
-        "vite@8.1.5_@types+node@26.4.0_esbuild@0.28.2_sass@1.101.0"
+        "magic-string@0.30.21"
       ]
     },
     "@vitest/mocker@4.1.11_vite@8.2.2__@types+node@26.4.0__esbuild@0.28.2_@types+node@26.4.0": {
@@ -8456,7 +8450,6 @@
         "tinyexec",
         "tinyglobby",
         "tinyrainbow",
-        "vite@8.1.5_@types+node@26.4.0_esbuild@0.28.2_sass@1.101.0",
         "why-is-node-running"
       ],
       "optionalPeers": [
@@ -8767,6 +8760,7 @@
         "npm:angular-eslint@^22.2.0",
         "npm:astro@^7.1.1",
         "npm:better-npm-audit@^3.11.0",
+        "npm:cookie@^2.0.1",
         "npm:cross-env@^10.1.0",
         "npm:dotenv@^17.4.2",
         "npm:eslint-config-preact@2",

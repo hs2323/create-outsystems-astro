@@ -48,6 +48,7 @@
     "@nanostores/solid": "^1.1.1",
     "@nanostores/vue": "^1.1.0",
     "astro": "^7.1.1",
+    "cookie": "^2.0.1",
     "islands-integrations": "file:./.integrations",
     "nanostores": "^1.5.2",
     "preact": "^10.29.8",

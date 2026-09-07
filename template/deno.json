@@ -1,5 +1,6 @@
 {
   "minimumDependencyAge": {
     "age": "P7D"
-  }
+  },
+  "allowScripts": ["npm:@parcel/watcher@2.6.0", "npm:esbuild@0.28.2", "npm:fsevents@2.3.2", "npm:fsevents@2.3.3", "npm:lmdb@3.5.6", "npm:msgpackr-extract@3.0.4"]
 }
