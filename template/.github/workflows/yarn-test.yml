@@ -8,8 +8,8 @@ on:
     - cron: '0 12 * * *'
 
 env:
-  NODE_VERSION: '24.18.0'
-  YARN_VERSION: '4.17.1'
+  NODE_VERSION: '24.20.0'
+  YARN_VERSION: '4.18.1'
 
 jobs:
 
