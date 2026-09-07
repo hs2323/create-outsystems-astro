@@ -7,8 +7,67 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Added dependency @babel/core
+
 ### Changed
 
+- Updated dependency vue to 3.5.42.
+- Updated dependency vitest to 4.1.11.
+- Updated dependency vite-plugin-solid to 2.11.14.
+- Updated dependency vite to 8.2.2.
+- Updated dependency typescript-eslint to 8.69.0.
+- Updated dependency svelte-eslint-parser to 1.8.1.
+- Updated dependency svelte to 5.57.0.
+- Updated dependency solid-js to 1.9.15.
+- Updated dependency react-dom to 19.2.8.
+- Updated dependency react to 19.2.8.
+- Updated dependency prettier-plugin-solidity to 2.4.1.
+- Updated dependency prettier to 3.9.6.
+- Updated dependency preact to 10.29.8.
+- Updated dependency nanostores to 1.5.2.
+- Updated dependency happy-dom to 20.12.0.
+- Updated dependency globals to 17.11.0.
+- Updated dependency eslint-plugin-vue to 10.10.0.
+- Updated dependency eslint-plugin-svelte to 3.23.0.
+- Updated dependency eslint-plugin-solid to 0.17.0
+- Updated dependency eslint-plugin-playwright to 2.11.0.
+- Updated dependency eslint-plugin-perfectionist to 5.11.0.
+- Updated dependency eslint-plugin-jest-dom to 5.10.1.
+- Updated dependency eslint-plugin-jest to 29.16.6.
+- Updated dependency angular-eslint to 22.2.0.
+- Updated dependency @vitejs/plugin-react to 6.1.1.
+- Updated dependency @types/react-dom to 19.2.5.
+- Updated dependency @types/react to 19.2.18.
+- Updated dependency @types/node to 26.4.0.
+- Updated dependency @testing-library/user-event to 14.6.6.
+- Updated dependency @testing-library/react to 16.3.3.
+- Updated dependency @testing-library/jest-dom to 7.0.1.
+- Updated dependency @testing-library/angular to 19.4.2.
+- Updated dependency @sveltejs/vite-plugin-svelte to 7.3.0.
+- Updated dependency @preact/preset-vite to 1.62.1.
+- Updated dependency @playwright/test to 1.62.1.
+- Updated dependency @astrojs/vue to 7.0.2.
+- Updated dependency @astrojs/solid-js to 7.0.2.
+- Updated dependency @astrojs/react to 6.0.5.
+- Updated dependency @astrojs/preact to 6.0.5.
+- Updated dependency @angular/router to 22.1.4.
+- Updated dependency @angular/platform-server to 22.1.4.
+- Updated dependency @angular/platform-browser to 22.1.4.
+- Updated dependency @angular/language-service to 22.1.4.
+- Updated dependency @angular/core to 22.1.4.
+- Updated dependency @angular/compiler-cli to 22.1.4.
+- Updated dependency @angular/compiler to 22.1.4.
+- Updated dependency @angular/common to 22.1.4.
+- Updated dependency @angular/cli to 22.1.6.
+- Updated dependency @angular/build to 22.1.6.
+- Updated dependency @angular/animations to 22.1.4.
+- Updated dependency @angular-devkit/schematics to 22.1.6.
+- Updated dependency @angular-devkit/architect to 0.2201.6.
+- Updated dependency @analogjs/vitest-angular to 2.7.1.
+- Updated dependency @analogjs/vite-plugin-angular to 2.7.1.
+- Updated dependency @analogjs/astro-angular to 2.7.1.
 - Updated integrations dependency typescript-eslint to 8.69.0.
 - Updated integrations dependency prettier to 3.9.6.
 - Updated integrations dependency globals to 17.11.0.

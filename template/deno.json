@@ -1,19 +1,4 @@
 {
-  "allowScripts": [
-    "npm:@parcel/watcher@2.5.6",
-    "npm:esbuild@0.28.1",
-    "npm:fsevents@2.3.2",
-    "npm:fsevents@2.3.3",
-    "npm:lmdb@3.5.4",
-    "npm:msgpackr-extract@3.0.4",
-    "npm:sharp@0.34.5"
-  ],
-  "imports": {
-    "@hono/node-server": "npm:@hono/node-server@^2.0.5",
-    "esbuild": "npm:esbuild@^0.28.1",
-    "fast-uri": "npm:fast-uri@^3.1.4",
-    "tar": "npm:tar@^7.5.21"
-  },
   "minimumDependencyAge": {
     "age": "P7D"
   }
