@@ -95,9 +95,17 @@ Slots are not supported in the HTML integration.
 
 ## Nano Stores
 
-The HTML integration does not use a Nano Stores binding library. Instead, the component sets up a compatible store directly on `window.Stores` inside its `<script>` tag. The store implements the same `get`, `set`, and `subscribe` interface as a nanostores atom, so it works alongside stores from other framework islands on the same page.
+There is no Nano Stores binding library for the HTML integration the way there is for React or Vue, so the component uses the [vanilla JS API](https://github.com/nanostores/nanostores#vanilla-js) against a real atom.
+
+Register the atom from the component module. The module runs in the browser, so it can import from your stores folder, but the renderer also imports it during the build — guard the call so it only runs client side:
 
 ```ts
+import { setupStore } from "../../stores/demo";
+
+if (typeof window !== "undefined") {
+  setupStore("myStore");
+}
+
 export default function MyComponent(): string {
   return `
     <div class="my-component">
@@ -108,26 +116,13 @@ export default function MyComponent(): string {
             || document.querySelector('.my-component');
           const valueEl = container.querySelector('.store-value');
 
-          if (!window.Stores) window.Stores = {};
-          if (!window.Stores['myStore']) {
-            let _value = 'Initial value';
-            const _subs = [];
-            window.Stores['myStore'] = {
-              get: function () { return _value; },
-              set: function (v) { _value = v; _subs.forEach(function (fn) { fn(v); }); },
-              subscribe: function (fn) {
-                fn(_value);
-                _subs.push(fn);
-                return function () { _subs.splice(_subs.indexOf(fn), 1); };
-              },
-            };
-          }
+          const store = window.Stores && window.Stores['myStore'];
 
-          const store = window.Stores['myStore'];
-          valueEl.textContent = store.get();
-          store.subscribe(function (value) {
-            valueEl.textContent = value;
-          });
+          if (store) {
+            store.subscribe(function (value) {
+              valueEl.textContent = value;
+            });
+          }
         })();
       </script>
     </div>
@@ -135,15 +130,14 @@ export default function MyComponent(): string {
 }
 ```
 
-If the store has already been created by the page script or another island, the `if (!window.Stores['myStore'])` check prevents overwriting it. Initialize the store in the page's `<script>` tag to ensure it exists before `DOMContentLoaded`:
+The inline `<script>` is re-created as a classic script when the island hydrates, so it cannot `import` — it reads the atom from `window.Stores` instead. `subscribe` fires immediately with the current value, so there is no need to read `.get()` first, and the guard keeps the island from throwing when no store has been registered.
+
+The page can register the same store instead of, or as well as, the component. `setupStore` returns the atom that is already registered under that name:
 
 ```astro
 <script>
   import { setupStore } from "../../stores/demo";
   setupStore("myStore");
-  document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("store-input").value = window.Stores["myStore"].get();
-  });
 </script>
 ```
 
@@ -205,23 +199,30 @@ test("increments counter", () => {
 
 > `new Function` is required because `innerHTML` does not execute `<script>` tags, and `replaceChild` does not execute scripts in happy-dom.
 
-Mock `window.Stores` before rendering so the test controls store updates:
+Register a real atom on `window.Stores` before rendering, then drive it with `set` to assert the island updates:
 
 ```ts
+import { atom } from "nanostores";
+
+let store = atom("Initial value");
+
 beforeEach(() => {
-  let storeValue = "Initial value";
-  let capturedListener;
+  store = atom("Initial value");
   (window as { Stores: Record<string, unknown> } & Window).Stores = {
-    myStore: {
-      get: vi.fn(() => storeValue),
-      set: vi.fn((v) => { storeValue = v; capturedListener?.(v); }),
-      subscribe: vi.fn((fn) => {
-        capturedListener = fn;
-        fn(storeValue);
-        return () => {};
-      }),
-    },
+    myStore: store,
   };
+});
+
+test("reflects store updates", () => {
+  renderComponent();
+  expect(document.querySelector(".store-value")?.textContent).toBe(
+    "Initial value",
+  );
+
+  store.set("Updated value");
+  expect(document.querySelector(".store-value")?.textContent).toBe(
+    "Updated value",
+  );
 });
 ```
 

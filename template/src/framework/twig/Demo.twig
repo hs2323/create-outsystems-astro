@@ -75,26 +75,13 @@
         }
       });
 
-      if (!window.Stores) window.Stores = {};
-      if (!window.Stores['twigStore']) {
-        let _value = 'Test Value';
-        const _subs = [];
-        window.Stores['twigStore'] = {
-          get: function () { return _value; },
-          set: function (v) { _value = v; _subs.forEach(function (fn) { fn(v); }); },
-          subscribe: function (fn) {
-            fn(_value);
-            _subs.push(fn);
-            return function () { _subs.splice(_subs.indexOf(fn), 1); };
-          },
-        };
-      }
+      const store = window.Stores && window.Stores['twigStore'];
 
-      const store = window.Stores['twigStore'];
-      nanostoreEl.textContent = store.get();
-      store.subscribe(function (value) {
-        nanostoreEl.textContent = value;
-      });
+      if (store) {
+        store.subscribe(function (value) {
+          nanostoreEl.textContent = value;
+        });
+      }
     })();
   </script>
 </div>

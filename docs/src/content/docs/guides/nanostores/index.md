@@ -91,11 +91,13 @@ Vanilla JS
 <div id="nanostore-value"></div>
 <script>
 const nanostoreEl = document.querySelector('#nanostore-value');
-const store = window.Stores['htmlStore'];
-nanostoreEl.textContent = store.get();
-store.subscribe(function (value) {
-  nanostoreEl.textContent = value;
-});
+const store = window.Stores && window.Stores['htmlStore'];
+
+if (store) {
+  store.subscribe(function (value) {
+    nanostoreEl.textContent = value;
+  });
+}
 </script>
 ```
 
