@@ -4,9 +4,6 @@
     "npm:fsevents@2.3.3", 
     "npm:sharp@0.34.5"
   ],
-  "imports": {
-    "fast-uri": "npm:fast-uri@^3.1.4"
-  },
   "minimumDependencyAge": {
     "age": "P7D"
   }
