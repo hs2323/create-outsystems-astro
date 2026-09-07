@@ -95,57 +95,7 @@ Slots are not supported in the HTML integration.
 
 ## Nano Stores
 
-The HTML integration does not use a Nano Stores binding library. Instead, the component sets up a compatible store directly on `window.Stores` inside its `<script>` tag. The store implements the same `get`, `set`, and `subscribe` interface as a nanostores atom, so it works alongside stores from other framework islands on the same page.
-
-```ts
-export default function MyComponent(): string {
-  return `
-    <div class="my-component">
-      <div class="store-value"></div>
-      <script>
-        (function () {
-          const container = (document.currentScript && document.currentScript.parentElement)
-            || document.querySelector('.my-component');
-          const valueEl = container.querySelector('.store-value');
-
-          if (!window.Stores) window.Stores = {};
-          if (!window.Stores['myStore']) {
-            let _value = 'Initial value';
-            const _subs = [];
-            window.Stores['myStore'] = {
-              get: function () { return _value; },
-              set: function (v) { _value = v; _subs.forEach(function (fn) { fn(v); }); },
-              subscribe: function (fn) {
-                fn(_value);
-                _subs.push(fn);
-                return function () { _subs.splice(_subs.indexOf(fn), 1); };
-              },
-            };
-          }
-
-          const store = window.Stores['myStore'];
-          valueEl.textContent = store.get();
-          store.subscribe(function (value) {
-            valueEl.textContent = value;
-          });
-        })();
-      </script>
-    </div>
-  `;
-}
-```
-
-If the store has already been created by the page script or another island, the `if (!window.Stores['myStore'])` check prevents overwriting it. Initialize the store in the page's `<script>` tag to ensure it exists before `DOMContentLoaded`:
-
-```astro
-<script>
-  import { setupStore } from "../../stores/demo";
-  setupStore("myStore");
-  document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("store-input").value = window.Stores["myStore"].get();
-  });
-</script>
-```
+Nano Stores are not supported in the HTML integration.
 
 ## Using OutSystems handlers
 
@@ -204,26 +154,6 @@ test("increments counter", () => {
 ```
 
 > `new Function` is required because `innerHTML` does not execute `<script>` tags, and `replaceChild` does not execute scripts in happy-dom.
-
-Mock `window.Stores` before rendering so the test controls store updates:
-
-```ts
-beforeEach(() => {
-  let storeValue = "Initial value";
-  let capturedListener;
-  (window as { Stores: Record<string, unknown> } & Window).Stores = {
-    myStore: {
-      get: vi.fn(() => storeValue),
-      set: vi.fn((v) => { storeValue = v; capturedListener?.(v); }),
-      subscribe: vi.fn((fn) => {
-        capturedListener = fn;
-        fn(storeValue);
-        return () => {};
-      }),
-    },
-  };
-});
-```
 
 ### End-to-end tests
 

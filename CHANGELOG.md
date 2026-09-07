@@ -76,6 +76,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated integrations dependency astro to 7.2.10.
 - Updated integrations dependency @types/node to 26.4.0.
 
+### Removed
+
+- Removed the unofficial Nano Stores implementations from the HTML and Twig integrations.
+
 ## [0.12.0] - 2026-08-01
 
 ### Changed

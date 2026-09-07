@@ -308,48 +308,9 @@ The OutSystems 11 library is called Lightweight State Manager - https://www.outs
 
 The OutSystems Developer Cloud library is called Lightweight State Manager and is available in the ODC Forge.
 
-Nano Stores are currently supported for only Preact - https://github.com/nanostores/preact, React - https://github.com/nanostores/react and Vue - https://github.com/nanostores/vue. The Angular 21 library does not yet support them.
+Nano Stores are currently supported for only Preact - https://github.com/nanostores/preact, React - https://github.com/nanostores/react, SolidJS - https://github.com/nanostores/solid, Svelte - https://svelte.dev/docs/svelte/svelte-files#script-4-prefix-stores-with-$-to-access-their-values and Vue - https://github.com/nanostores/vue. Angular, the HTML integration and the Twig integration do not support them.
 
 In OutSystems, the store will be on the Window object. The Islands component will then have to access it from there.
-
-#### HTML
-
-```html
-<div class="nanostore-value"></div>
-<script>
-  const nanostoreEl = container.querySelector(".nanostore-value");
-
-  if (!window.Stores) window.Stores = {};
-  if (!window.Stores["htmlStore"]) {
-    let _value = "Test Value";
-    const _subs = [];
-    window.Stores["htmlStore"] = {
-      get: function () {
-        return _value;
-      },
-      set: function (v) {
-        _value = v;
-        _subs.forEach(function (fn) {
-          fn(v);
-        });
-      },
-      subscribe: function (fn) {
-        fn(_value);
-        _subs.push(fn);
-        return function () {
-          _subs.splice(_subs.indexOf(fn), 1);
-        };
-      },
-    };
-  }
-
-  const store = window.Stores["htmlStore"];
-  nanostoreEl.textContent = store.get();
-  store.subscribe(function (value) {
-    nanostoreEl.textContent = value;
-  });
-</script>
-```
 
 #### Preact
 
@@ -410,47 +371,6 @@ export default function Counter({}) {
 </script>
 
 <div>{$nanoStoreValue}</div>
-```
-
-#### Twig
-
-Like the HTML integration, Twig does not use a Nano Stores binding library. Set up a compatible store on `window.Stores` inside the component's `<script>` tag and subscribe to it directly.
-
-```html
-<div class="nanostore-value"></div>
-<script>
-  const nanostoreEl = container.querySelector(".nanostore-value");
-
-  if (!window.Stores) window.Stores = {};
-  if (!window.Stores["twigStore"]) {
-    let _value = "Test Value";
-    const _subs = [];
-    window.Stores["twigStore"] = {
-      get: function () {
-        return _value;
-      },
-      set: function (v) {
-        _value = v;
-        _subs.forEach(function (fn) {
-          fn(v);
-        });
-      },
-      subscribe: function (fn) {
-        fn(_value);
-        _subs.push(fn);
-        return function () {
-          _subs.splice(_subs.indexOf(fn), 1);
-        };
-      },
-    };
-  }
-
-  const store = window.Stores["twigStore"];
-  nanostoreEl.textContent = store.get();
-  store.subscribe(function (value) {
-    nanostoreEl.textContent = value;
-  });
-</script>
 ```
 
 #### Vue

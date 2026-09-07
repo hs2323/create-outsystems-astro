@@ -13,13 +13,6 @@ import styles from "../../styles/index.css?url";
 <html lang="en">
     <head>
         <link href={styles} rel="stylesheet" />
-        <script>
-            // Expose the shared framework Nano Store so string-rendered islands
-            // (such as the Twig store) can subscribe to it before they hydrate.
-            import { framework } from "../../stores/framework";
-            window.Stores = window.Stores || {};
-            window.Stores["framework"] = framework;
-        </script>
     </head>
     <body>
         <div class="card-grid">

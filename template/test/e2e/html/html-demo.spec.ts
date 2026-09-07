@@ -26,11 +26,3 @@ test.describe("Change counter", () => {
     await expect(page.locator("span#counter")).toContainText("5");
   });
 });
-
-test.describe("Update Nano Store", () => {
-  test("Should update Nano Store", async ({ page }) => {
-    await page.locator("#store").fill("Updated Value");
-    await page.getByRole("button", { name: "Update Store" }).click();
-    await expect(page.locator(".nanostore-value")).toHaveText("Updated Value");
-  });
-});

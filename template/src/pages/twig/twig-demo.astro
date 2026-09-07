@@ -10,15 +10,9 @@ const showMessage = "showMessage";
     <head>
         <link href={styles} rel="stylesheet" />
         <script>
-            import { setupStore } from "../../stores/demo";
-            setupStore("twigStore");
             window["showMessage"] = (count) => {
                 document.getElementById("counter").textContent = count;
             };
-            document.addEventListener("DOMContentLoaded", function () {
-                const input = document.getElementById("store");
-                input.value = window.Stores["twigStore"].get();
-            });
         </script>
     </head>
     <body>
@@ -35,19 +29,10 @@ const showMessage = "showMessage";
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <strong>Nano Stores</strong>
+            <div class="card unused">
+                <strong>Nano Stores (not supported)</strong>
                 <div class="card-content">
                     <div style="text-align: center; margin-top: 30px;">
-                        <input
-                            id="store"
-                            placeholder="Type something..."
-                            type="text"
-                        /><button
-                            class="card-btn"
-                            onclick="window.Stores['twigStore'].set(document.getElementById('store').value)"
-                            >Update Store</button
-                        >
                     </div>
                 </div>
             </div>

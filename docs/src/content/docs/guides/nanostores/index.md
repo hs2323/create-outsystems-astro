@@ -15,10 +15,9 @@ Nano Stores are currently supported for the following libraries:
 - [React](https://github.com/nanostores/react)
 - [SolidJS](https://github.com/nanostores/solid)
 - [Svelte](https://svelte.dev/docs/svelte/svelte-files#script-4-prefix-stores-with-$-to-access-their-values)
-- [Vanilla JS](https://github.com/nanostores/nanostores#vanilla-js)
 - [Vue](https://github.com/nanostores/vue)
 
-Nano Stores for Angular is not currently supported.
+Nano Stores are not currently supported for Angular, the HTML integration or the Twig integration.
 
 ## Sharing state between Astro Islands
 Create the objects inside of the stores folder (or other preferred structure). You can create a store and then have your components subscribe and update the stores. Refer to each libraries documentation on how to listen, subscribe and update.
@@ -84,19 +83,6 @@ Svelte:
 </script>
 
 <div>{$nanoStoreValue}</div>
-```
-
-Vanilla JS
-```html
-<div id="nanostore-value"></div>
-<script>
-const nanostoreEl = document.querySelector('#nanostore-value');
-const store = window.Stores['htmlStore'];
-nanostoreEl.textContent = store.get();
-store.subscribe(function (value) {
-  nanostoreEl.textContent = value;
-});
-</script>
 ```
 
 Vue:

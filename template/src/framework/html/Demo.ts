@@ -34,19 +34,14 @@ export default function Demo({
             </div>
           </div>
         </div>
-        <div class="card">
-          <strong>Nano Stores</strong>
-          <div class="card-content">
-            <div>
-              <strong>Value:</strong>
-              <div class="nanostore-value"></div>
-            </div>
-          </div>
+        <div class="card unused">
+          <strong>Nano Stores (not supported)</strong>
+          <div class="card-content"></div>
         </div>
-      <div class="card unused">
-        <strong>Slot content (not supported)</strong>
-        <div class="card-content"></div>
-      </div>
+        <div class="card unused">
+          <strong>Slot content (not supported)</strong>
+          <div class="card-content"></div>
+        </div>
       </div>
       <div class="counter-logos">
         <img alt="OutSystems logo" src="${OutSystemsLogo}" />
@@ -60,7 +55,6 @@ export default function Demo({
           const addBtn = container.querySelector('.add');
           const subtractBtn = container.querySelector('.subtract');
           const sendBtn = container.querySelector('.send');
-          const nanostoreEl = container.querySelector('.nanostore-value');
 
           addBtn.addEventListener('click', function () {
             count += 1;
@@ -76,27 +70,6 @@ export default function Demo({
             if ('${showMessage}' && window['${showMessage}']) {
               window['${showMessage}'](count);
             }
-          });
-
-          if (!window.Stores) window.Stores = {};
-          if (!window.Stores['htmlStore']) {
-            let _value = 'Test Value';
-            const _subs = [];
-            window.Stores['htmlStore'] = {
-              get: function () { return _value; },
-              set: function (v) { _value = v; _subs.forEach(function (fn) { fn(v); }); },
-              subscribe: function (fn) {
-                fn(_value);
-                _subs.push(fn);
-                return function () { _subs.splice(_subs.indexOf(fn), 1); };
-              },
-            };
-          }
-
-          const store = window.Stores['htmlStore'];
-          nanostoreEl.textContent = store.get();
-          store.subscribe(function (value) {
-            nanostoreEl.textContent = value;
           });
         })();
       </script>

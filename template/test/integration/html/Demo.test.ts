@@ -11,38 +11,15 @@ function renderDemo(props: Parameters<typeof Demo>[0] = {}) {
 }
 
 describe("Demo", () => {
-  let capturedListener: ((val: string) => void) | undefined;
-  let storeValue = "Mocked Nano Value";
-
   beforeEach(() => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (window as any).mockFunction = vi.fn();
-
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (window as any).Stores = {
-      htmlStore: {
-        get: vi.fn(() => storeValue),
-        set: vi.fn((v: string) => {
-          storeValue = v;
-          capturedListener?.(v);
-        }),
-        subscribe: vi.fn((fn: (val: string) => void) => {
-          capturedListener = fn;
-          fn(storeValue);
-          return () => {};
-        }),
-      },
-    };
   });
 
   afterEach(() => {
     vi.clearAllMocks();
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     delete (window as any).mockFunction;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    delete (window as any).Stores;
-    capturedListener = undefined;
-    storeValue = "Mocked Nano Value";
   });
 
   it("renders the initial count", () => {
@@ -67,17 +44,5 @@ describe("Demo", () => {
     fireEvent.click(screen.getByRole("button", { name: "Send value" }));
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     expect((window as any).mockFunction).toHaveBeenCalledWith(5);
-  });
-
-  it("displays the initial nanostore value", () => {
-    renderDemo({});
-    expect(screen.getByText("Mocked Nano Value")).toBeInTheDocument();
-  });
-
-  it("updates the display when the nanostore value changes", () => {
-    renderDemo({});
-    expect(screen.getByText("Mocked Nano Value")).toBeInTheDocument();
-    capturedListener?.("Updated Value");
-    expect(screen.getByText("Updated Value")).toBeInTheDocument();
   });
 });
