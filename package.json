@@ -7,9 +7,7 @@
     "type": "git",
     "url": "git+https://github.com/hs2323/create-outsystems-astro.git"
   },
-  "bin": {
-    "create-outsystems-astro": "bin/cli.js"
-  },
+  "bin": "bin/cli.js",
   "files": [
     "bin",
     "integrations",
@@ -32,6 +30,6 @@
   "license": "MIT",
   "dependencies": {
     "prompts": "^2.4.2",
-    "yargs": "^18.0.0"
+    "yargs": "^18.1.0"
   }
 }

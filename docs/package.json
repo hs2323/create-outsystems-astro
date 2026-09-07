@@ -4,7 +4,7 @@
   "version": "0.11.2",
   "scripts": {
     "astro": "astro",
-    "audit": "better-npm-audit audit --exclude GHSA-mh99-v99m-4gvg",
+    "audit": "better-npm-audit audit",
     "build": "astro build",
     "dev": "astro dev",
     "format": "prettier . --check",
@@ -15,10 +15,10 @@
     "start": "astro dev"
   },
   "dependencies": {
-    "@astrojs/starlight": "^0.41.3",
-    "astro": "^7.1.1",
+    "@astrojs/starlight": "^0.41.10",
+    "astro": "^7.2.10",
     "sharp": "^0.35.3",
-    "starlight-versions": "^0.9.1"
+    "starlight-versions": "^0.10.1"
   },
   "devDependencies": {
     "@eslint/compat": "^2.1.0",
@@ -28,14 +28,13 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-astro": "^1.7.0",
     "eslint-plugin-import": "^2.32.0",
-    "eslint-plugin-perfectionist": "^5.10.0",
+    "eslint-plugin-perfectionist": "^5.11.0",
     "globals": "^17.7.0",
     "patch-package": "^8.0.1",
-    "prettier": "^3.8.3",
-    "typescript-eslint": "^8.64.0"
+    "prettier": "^3.9.6",
+    "typescript-eslint": "^8.69.0"
   },
-  "overrides": {
-    "esbuild": "^0.28.1",
-    "fast-uri": "^3.1.4"
+  "allowScripts": {
+    "esbuild@0.28.2": true
   }
 }

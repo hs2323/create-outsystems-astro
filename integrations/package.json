@@ -5,11 +5,11 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "audit:bun": "bun audit --ignore=GHSA-mh99-v99m-4gvg",
-    "audit:deno": "deno audit --ignore=CVE-2026-14257",
-    "audit:npm": "better-npm-audit audit --exclude GHSA-mh99-v99m-4gvg",
-    "audit:pnpm": "pnpm audit --ignore GHSA-mh99-v99m-4gvg",
-    "audit:yarn": "yarn npm audit --ignore 1124334",
+    "audit:bun": "bun audit",
+    "audit:deno": "deno audit",
+    "audit:npm": "better-npm-audit audit",
+    "audit:pnpm": "pnpm audit",
+    "audit:yarn": "yarn npm audit --no-deprecations",
     "build": "tsc",
     "format": "prettier . --check",
     "format:write": "prettier  --write .",
@@ -20,29 +20,26 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "astro": "^7.1.1",
+    "astro": "^7.2.10",
     "twig": "^3.0.0"
   },
   "devDependencies": {
     "@eslint/compat": "^2.1.0",
     "@eslint/js": "^9.39.4",
-    "@types/node": "^26.1.1",
+    "@types/node": "^26.4.0",
     "@types/twig": "^1.12.17",
     "better-npm-audit": "^3.11.0",
     "eslint": "^9.39.5",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-astro": "^1.7.0",
     "eslint-plugin-import": "^2.32.0",
-    "eslint-plugin-perfectionist": "^5.10.0",
-    "globals": "^17.7.0",
-    "prettier": "^3.9.5",
+    "eslint-plugin-perfectionist": "^5.11.0",
+    "globals": "^17.11.0",
+    "prettier": "^3.9.6",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.64.0"
+    "typescript-eslint": "^8.69.0"
   },
-  "overrides": {
-    "fast-uri": "^3.1.4"
-  },
-  "resolutions": {
-    "fast-uri": "^3.1.4"
+  "allowScripts": {
+    "esbuild@0.28.2": true
   }
 }
