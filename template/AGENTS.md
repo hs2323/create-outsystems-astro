@@ -308,7 +308,7 @@ The OutSystems 11 library is called Lightweight State Manager - https://www.outs
 
 The OutSystems Developer Cloud library is called Lightweight State Manager and is available in the ODC Forge.
 
-Nano Stores are supported for Preact - https://github.com/nanostores/preact, React - https://github.com/nanostores/react, SolidJS - https://github.com/nanostores/solid, Svelte - https://svelte.dev/docs/svelte/svelte-files#script-4-prefix-stores-with-$-to-access-their-values and Vue - https://github.com/nanostores/vue. The HTML and Twig integrations have no binding library and use the vanilla JS API through `window.Stores`. The Angular 21 library does not yet support them.
+Nano Stores are supported for Preact - https://github.com/nanostores/preact, React - https://github.com/nanostores/react, SolidJS - https://github.com/nanostores/solid, Svelte - https://svelte.dev/docs/svelte/svelte-files#script-4-prefix-stores-with-$-to-access-their-values and Vue - https://github.com/nanostores/vue. The HTML integration has no binding library and uses the vanilla JS API through `window.Stores`. Nano Stores are not supported for Angular 21, nor for the Twig integration, where a `.twig` file and its inline classic script cannot run imports.
 
 In OutSystems, the store will be on the Window object. The Islands component will then have to access it from there.
 
@@ -397,24 +397,6 @@ export default function Counter({}) {
 </script>
 
 <div>{$nanoStoreValue}</div>
-```
-
-#### Twig
-
-A `.twig` file cannot run imports, so the `.astro` page registers the atom with `setupStore` and the template subscribes to it through `window.Stores`. The inline script is a classic script and cannot import either.
-
-```html
-<div class="nanostore-value"></div>
-<script>
-  const nanostoreEl = container.querySelector(".nanostore-value");
-  const store = window.Stores && window.Stores["twigStore"];
-
-  if (store) {
-    store.subscribe(function (value) {
-      nanostoreEl.textContent = value;
-    });
-  }
-</script>
 ```
 
 #### Vue

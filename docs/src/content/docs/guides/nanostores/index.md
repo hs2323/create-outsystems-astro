@@ -18,7 +18,7 @@ Nano Stores are currently supported for the following libraries:
 - [Vanilla JS](https://github.com/nanostores/nanostores#vanilla-js)
 - [Vue](https://github.com/nanostores/vue)
 
-Nano Stores for Angular is not currently supported.
+Nano Stores for Angular and for the Twig integration are not currently supported.
 
 ## Sharing state between Astro Islands
 Create the objects inside of the stores folder (or other preferred structure). You can create a store and then have your components subscribe and update the stores. Refer to each libraries documentation on how to listen, subscribe and update.

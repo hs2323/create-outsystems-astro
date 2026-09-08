@@ -5,36 +5,12 @@
   - logo: the Twig logo URL, passed in from the .astro page
 #}
 
-<div class="card twig-store">
+<div class="card unused">
   <strong>Twig Store</strong>
   <div class="card-content">
     {% if logo %}<img alt="Twig logo" height="150" src="{{ logo }}" />{% endif %}
     <div>
-      <strong>Value:</strong>
-      <div class="framework-value"></div>
-    </div>
-    <div>
-      <button class="card-btn select-btn">Select Twig</button>
+      <strong>Twig does not currently support Nano Stores.</strong>
     </div>
   </div>
-  <script>
-    (function () {
-      const container = (document.currentScript && document.currentScript.parentElement)
-        || document.querySelector('.twig-store');
-      const valueEl = container.querySelector('.framework-value');
-      const btn = container.querySelector('.select-btn');
-
-      const store = window.Stores && window.Stores['framework'];
-
-      if (store) {
-        store.subscribe(function (value) {
-          valueEl.textContent = value;
-        });
-      }
-
-      btn.addEventListener('click', function () {
-        if (store) store.set('Twig');
-      });
-    })();
-  </script>
 </div>

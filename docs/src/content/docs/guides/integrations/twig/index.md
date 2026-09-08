@@ -160,41 +160,9 @@ Slots are not supported in the Twig integration. Pass content in as props and re
 
 ## Nano Stores
 
-There is no Nano Stores binding library for the Twig integration the way there is for React or Vue, so the component uses the [vanilla JS API](https://github.com/nanostores/nanostores#vanilla-js) against a real atom.
+Nano Stores are not supported in the Twig integration. There is no binding library for Twig, and a `.twig` file cannot run `import`s — neither the template itself nor its inline `<script>`, which is re-created as a classic script when the island hydrates — so a store can never be created or read from within the component.
 
-A `.twig` file cannot run `import`s, so the atom has to be registered by something that can — usually the `.astro` page:
-
-```astro
-<script>
-  import { setupStore } from "../../stores/demo";
-  setupStore("myStore");
-</script>
-```
-
-The template then reads that atom from `window.Stores` and subscribes to it:
-
-```twig
-<div class="my-component">
-  <div class="store-value"></div>
-  <script>
-    (function () {
-      const container = (document.currentScript && document.currentScript.parentElement)
-        || document.querySelector('.my-component');
-      const valueEl = container.querySelector('.store-value');
-
-      const store = window.Stores && window.Stores['myStore'];
-
-      if (store) {
-        store.subscribe(function (value) {
-          valueEl.textContent = value;
-        });
-      }
-    })();
-  </script>
-</div>
-```
-
-The inline `<script>` is re-created as a classic script when the island hydrates, so it cannot `import` either. `subscribe` fires immediately with the current value, so there is no need to read `.get()` first, and the guard keeps the island from throwing when no store has been registered.
+Pass the values a Twig island needs in as props instead. If a component has to share state with other islands or with OutSystems, build it with an integration that supports Nano Stores, such as the [HTML integration](../html/index.md) or one of the framework integrations.
 
 ## Using OutSystems handlers
 
@@ -248,33 +216,6 @@ test("increments counter", () => {
 ```
 
 > `new Function` is required because `innerHTML` does not execute `<script>` tags, and `replaceChild` does not execute scripts in happy-dom.
-
-Register a real atom on `window.Stores` before rendering, then drive it with `set` to assert the island updates:
-
-```ts
-import { atom } from "nanostores";
-
-let store = atom("Initial value");
-
-beforeEach(() => {
-  store = atom("Initial value");
-  (window as { Stores: Record<string, unknown> } & Window).Stores = {
-    myStore: store,
-  };
-});
-
-test("reflects store updates", () => {
-  renderComponent();
-  expect(document.querySelector(".store-value")?.textContent).toBe(
-    "Initial value",
-  );
-
-  store.set("Updated value");
-  expect(document.querySelector(".store-value")?.textContent).toBe(
-    "Updated value",
-  );
-});
-```
 
 ### End-to-end tests
 

@@ -1,5 +1,4 @@
 import { fireEvent, screen } from "@testing-library/dom";
-import { atom } from "nanostores";
 import Twig from "twig";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
@@ -13,23 +12,15 @@ function renderDemo(props: Record<string, unknown> = {}) {
 }
 
 describe("Demo", () => {
-  let store = atom("Mocked Nano Value");
-
   beforeEach(() => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (window as any).mockFunction = vi.fn();
-
-    store = atom("Mocked Nano Value");
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (window as any).Stores = { twigStore: store };
   });
 
   afterEach(() => {
     vi.clearAllMocks();
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     delete (window as any).mockFunction;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    delete (window as any).Stores;
   });
 
   it("renders the initial count", () => {
@@ -54,17 +45,5 @@ describe("Demo", () => {
     fireEvent.click(screen.getByRole("button", { name: "Send value" }));
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     expect((window as any).mockFunction).toHaveBeenCalledWith(5);
-  });
-
-  it("displays the initial nanostore value", () => {
-    renderDemo({});
-    expect(screen.getByText("Mocked Nano Value")).toBeInTheDocument();
-  });
-
-  it("updates the display when the nanostore value changes", () => {
-    renderDemo({});
-    expect(screen.getByText("Mocked Nano Value")).toBeInTheDocument();
-    store.set("Updated Value");
-    expect(screen.getByText("Updated Value")).toBeInTheDocument();
   });
 });

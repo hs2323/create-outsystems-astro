@@ -31,14 +31,9 @@
         </div>
       </div>
     </div>
-    <div class="card">
-      <strong>Nano Stores</strong>
-      <div class="card-content">
-        <div>
-          <strong>Value:</strong>
-          <div class="nanostore-value"></div>
-        </div>
-      </div>
+    <div class="card unused">
+      <strong>Nano Stores (not supported)</strong>
+      <div class="card-content"></div>
     </div>
     <div class="card unused">
       <strong>Slot content (not supported)</strong>
@@ -57,7 +52,6 @@
       const addBtn = container.querySelector('.add');
       const subtractBtn = container.querySelector('.subtract');
       const sendBtn = container.querySelector('.send');
-      const nanostoreEl = container.querySelector('.nanostore-value');
 
       addBtn.addEventListener('click', function () {
         count += 1;
@@ -74,14 +68,6 @@
           window['{{ handler }}'](count);
         }
       });
-
-      const store = window.Stores && window.Stores['twigStore'];
-
-      if (store) {
-        store.subscribe(function (value) {
-          nanostoreEl.textContent = value;
-        });
-      }
     })();
   </script>
 </div>
