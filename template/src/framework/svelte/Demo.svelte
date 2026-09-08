@@ -1,13 +1,21 @@
 <script lang="ts">
+  import { useStore } from "@nanostores/svelte-runes";
+
   import AstroLogo from "../../images/astro.png?url";
   import OutSystemsLogo from "../../images/outsystems.png?url";
   import { Operation, setCounterCount } from "../../lib/setCounterCount";
   import { setupStore } from "../../stores/demo";
 
-  export let initialCount: number;
-  export let showMessage: string;
+  interface Props {
+    children?: import("svelte").Snippet;
+    header?: import("svelte").Snippet;
+    initialCount: number;
+    showMessage: string;
+  }
 
-  let count = initialCount;
+  let { children, header, initialCount, showMessage }: Props = $props();
+
+  let count = $state(initialCount);
 
   const add = () => {
     count = setCounterCount(count, Operation.Add);
@@ -22,10 +30,13 @@
     (window as any)[showMessage](count);
   };
 
-  const nanoStoreValue = setupStore("svelteStore");
+  const store = setupStore("svelteStore");
+  const nanoStoreValue = useStore(store);
 </script>
 
-<slot name="header" />
+{#if header}
+  {@render header()}
+{/if}
 
 <div class="card-grid">
   <div class="card">
@@ -33,15 +44,15 @@
     <div class="card-content">
       Internal counter controls. It keeps state within the component.
       <div class="counter-controls">
-        <button on:click={subtract}>-</button>
+        <button onclick={subtract}>-</button>
         <pre>{count}</pre>
-        <button on:click={add}>+</button>
+        <button onclick={add}>+</button>
       </div>
     </div>
     The button sends the current count value to a function in the parent component.
     <div class="card-content">
       <div>
-        <button class="card-btn" on:click={showParentMessage}>
+        <button class="card-btn" onclick={showParentMessage}>
           Send value
         </button>
       </div>
@@ -53,7 +64,7 @@
     <div class="card-content">
       <div>
         <strong>Value:</strong>
-        <div id="nanostore">{$nanoStoreValue}</div>
+        <div id="nanostore">{nanoStoreValue.current}</div>
       </div>
     </div>
   </div>
@@ -62,7 +73,7 @@
     <strong>Slot content</strong>
     <div class="card-content">
       <div>
-        <slot />
+        {@render children?.()}
       </div>
     </div>
   </div>

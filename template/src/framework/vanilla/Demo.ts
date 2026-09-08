@@ -18,11 +18,11 @@ export default function Demo({
   showMessage = "",
 }: DemoProps): string {
   return `
-    <div class="counter-title" slot="header">VanillaJS Demo Component</div>
+    <div class="counter-title" slot="header">Vanilla JS Demo Component</div>
     <div class="vanilla-demo">
       <div class="card-grid">
         <div class="card">
-          <strong>VanillaJS counter component</strong>
+          <strong>Vanilla JS counter component</strong>
           <div class="card-content">
             Internal counter controls. It keeps state within the component.
             <div class="counter-controls">

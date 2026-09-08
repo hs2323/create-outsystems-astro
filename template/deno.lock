@@ -30,6 +30,7 @@
     "npm:@nanostores/preact@^1.1.0": "1.1.0_nanostores@1.5.2_preact@10.29.8__preact-render-to-string@6.7.0",
     "npm:@nanostores/react@^1.1.0": "1.1.0_nanostores@1.5.2_react@19.2.8",
     "npm:@nanostores/solid@^1.1.1": "1.1.1_nanostores@1.5.2_solid-js@1.9.15",
+    "npm:@nanostores/svelte-runes@^1.0.1": "1.0.1_nanostores@1.5.2_svelte@5.57.0__@typescript-eslint+types@8.69.0",
     "npm:@nanostores/vue@^1.1.0": "1.1.0_nanostores@1.5.2_vue@3.5.42__typescript@6.0.3_typescript@6.0.3",
     "npm:@playwright/test@1.62.1": "1.62.1",
     "npm:@preact/preset-vite@^2.10.6": "2.10.6_@babel+core@7.29.7_vite@8.2.2__@types+node@26.4.0__esbuild@0.28.2_@types+node@26.4.0_preact@10.29.8__preact-render-to-string@6.7.0_preact-render-to-string@6.7.0__preact@10.29.8",
@@ -1880,6 +1881,13 @@
       "dependencies": [
         "nanostores",
         "solid-js"
+      ]
+    },
+    "@nanostores/svelte-runes@1.0.1_nanostores@1.5.2_svelte@5.57.0__@typescript-eslint+types@8.69.0": {
+      "integrity": "sha512-ZdO+qJpGAe6RD2uIRoe4uGcrW60xLFDPH5bNhy8KA3fUiCQLVUJVWAcUe9ioO9kmMmfJminj9CWC3eW9R6XWQg==",
+      "dependencies": [
+        "nanostores",
+        "svelte"
       ]
     },
     "@nanostores/vue@1.1.0_nanostores@1.5.2_vue@3.5.42__typescript@6.0.3_typescript@6.0.3": {
@@ -8737,6 +8745,7 @@
         "npm:@nanostores/preact@^1.1.0",
         "npm:@nanostores/react@^1.1.0",
         "npm:@nanostores/solid@^1.1.1",
+        "npm:@nanostores/svelte-runes@^1.0.1",
         "npm:@nanostores/vue@^1.1.0",
         "npm:@playwright/test@1.62.1",
         "npm:@preact/preset-vite@^2.10.6",

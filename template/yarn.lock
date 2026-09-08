@@ -2606,6 +2606,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@nanostores/svelte-runes@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@nanostores/svelte-runes@npm:1.0.1"
+  peerDependencies:
+    nanostores: ^1.2.0
+    svelte: ">=5.7.0"
+  checksum: 10c0/ada78db90b89f8bb83dd53b395050ada28cc66b678feb527eb308a9f3e0a25dbcadd3f83ccdfeb3f5a8120b1fdae22a6886e96b4ae4e3240a8dea2ccbd2fe067
+  languageName: node
+  linkType: hard
+
 "@nanostores/vue@npm:^1.1.0":
   version: 1.1.0
   resolution: "@nanostores/vue@npm:1.1.0"
@@ -5981,6 +5991,7 @@ __metadata:
     "@nanostores/preact": "npm:^1.1.0"
     "@nanostores/react": "npm:^1.1.0"
     "@nanostores/solid": "npm:^1.1.1"
+    "@nanostores/svelte-runes": "npm:^1.0.1"
     "@nanostores/vue": "npm:^1.1.0"
     "@playwright/test": "npm:1.62.1"
     "@preact/preset-vite": "npm:^2.10.6"

@@ -9,11 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Added dependency @nanostores/svelte-runes.
 - Added dependency cookie.
 - Added dependency @babel/core.
 
 ### Changed
 
+- Changed Svelte NanoStores to use Svelte Runes.
 - Renamed HTML to Vanilla JS.
 - Updated dependency vue to 3.5.42.
 - Updated dependency vitest to 4.1.11.

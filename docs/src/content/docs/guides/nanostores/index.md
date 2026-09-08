@@ -14,7 +14,7 @@ Nano Stores are currently supported for the following libraries:
 - [Preact](https://github.com/nanostores/preact)
 - [React](https://github.com/nanostores/react)
 - [SolidJS](https://github.com/nanostores/solid)
-- [Svelte](https://svelte.dev/docs/svelte/svelte-files#script-4-prefix-stores-with-$-to-access-their-values)
+- [Svelte](https://github.com/nanostores/svelte)
 - [Vanilla JS](https://github.com/nanostores/nanostores#vanilla-js)
 - [Vue](https://github.com/nanostores/vue)
 
@@ -80,10 +80,12 @@ export default function Counter({}) {
 Svelte:
 ```svelte
 <script lang="ts">
-  const nanoStoreValue = (window as any).Stores["svelteStore"];
+  import { useStore } from "@nanostores/svelte";
+
+  const nanoStoreValue = useStore((window as any).Stores["svelteStore"]);
 </script>
 
-<div>{$nanoStoreValue}</div>
+<div>{nanoStoreValue.current}</div>
 ```
 
 Vanilla JS
@@ -113,5 +115,4 @@ const nanoStoreValue = useStore(window.Stores["MyGreatStore"]);
           <div>{{ nanoStoreValue }}</div>
     </div>
 </template>
-
 ```
