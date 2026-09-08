@@ -53,6 +53,9 @@ importers:
       '@nanostores/solid':
         specifier: ^1.1.1
         version: 1.1.1(nanostores@1.5.2)(solid-js@1.9.15)
+      '@nanostores/svelte-runes':
+        specifier: ^1.0.1
+        version: 1.0.1(nanostores@1.5.2)(svelte@5.57.0(@typescript-eslint/types@8.69.0))
       '@nanostores/vue':
         specifier: ^1.1.0
         version: 1.1.0(nanostores@1.5.2)(vue@3.5.42(typescript@6.0.3))
@@ -1684,6 +1687,13 @@ packages:
     peerDependencies:
       nanostores: '>=0.9.0 <2.0.0'
       solid-js: ^1.6.0
+
+  '@nanostores/svelte-runes@1.0.1':
+    resolution: {integrity: sha512-ZdO+qJpGAe6RD2uIRoe4uGcrW60xLFDPH5bNhy8KA3fUiCQLVUJVWAcUe9ioO9kmMmfJminj9CWC3eW9R6XWQg==}
+    engines: {node: '>=22.0.0'}
+    peerDependencies:
+      nanostores: ^1.2.0
+      svelte: '>=5.7.0'
 
   '@nanostores/vue@1.1.0':
     resolution: {integrity: sha512-14eY8/YA0AbtWkAjk8zHKxbjcuPubF+M7y9afQzg2b5VqRJcashwA0100vprau13BTBSynUmU6ZsU6x03YidjA==}
@@ -7860,6 +7870,11 @@ snapshots:
     dependencies:
       nanostores: 1.5.2
       solid-js: 1.9.15
+
+  '@nanostores/svelte-runes@1.0.1(nanostores@1.5.2)(svelte@5.57.0(@typescript-eslint/types@8.69.0))':
+    dependencies:
+      nanostores: 1.5.2
+      svelte: 5.57.0(@typescript-eslint/types@8.69.0)
 
   '@nanostores/vue@1.1.0(nanostores@1.5.2)(vue@3.5.42(typescript@6.0.3))':
     dependencies:

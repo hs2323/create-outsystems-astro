@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Added dependency @nanostores/svelte-runes.
 - Added dependency cookie.
 - Added dependency @babel/core.
 
