@@ -3,7 +3,7 @@ import OutSystemsLogo from "../../images/outsystems.png?url";
 import { setupStore } from "../../stores/demo";
 
 if (typeof window !== "undefined") {
-  setupStore("htmlStore");
+  setupStore("vanillaStore");
 }
 
 interface DemoProps {
@@ -18,11 +18,11 @@ export default function Demo({
   showMessage = "",
 }: DemoProps): string {
   return `
-    <div class="counter-title" slot="header">HTML Demo Component</div>
-    <div class="html-demo">
+    <div class="counter-title" slot="header">VanillaJS Demo Component</div>
+    <div class="vanilla-demo">
       <div class="card-grid">
         <div class="card">
-          <strong>HTML counter component</strong>
+          <strong>VanillaJS counter component</strong>
           <div class="card-content">
             Internal counter controls. It keeps state within the component.
             <div class="counter-controls">
@@ -59,7 +59,7 @@ export default function Demo({
       </div>
       <script>
         (function () {
-          const container = (document.currentScript && document.currentScript.parentElement) || document.querySelector('.html-demo');
+          const container = (document.currentScript && document.currentScript.parentElement) || document.querySelector('.vanilla-demo');
           let count = ${initialCount};
           const countEl = container.querySelector('.count');
           const addBtn = container.querySelector('.add');
@@ -83,7 +83,7 @@ export default function Demo({
             }
           });
 
-          const store = window.Stores && window.Stores['htmlStore'];
+          const store = window.Stores && window.Stores['vanillaStore'];
 
           if (store) {
             store.subscribe(function (value) {

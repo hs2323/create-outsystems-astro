@@ -1,15 +1,15 @@
 import type { AstroIntegration, AstroRenderer } from "astro";
 
-const VIRTUAL_SERVER_ID = "virtual:islands/html/server-with-filter";
+const VIRTUAL_SERVER_ID = "virtual:islands/vanilla/server-with-filter";
 const RESOLVED_VIRTUAL_SERVER_ID = `\0${VIRTUAL_SERVER_ID}`;
 
 function getRenderer(filtered: boolean): AstroRenderer {
   return {
-    clientEntrypoint: "islands-integrations/html/client",
-    name: "islands/html",
+    clientEntrypoint: "islands-integrations/vanilla/client",
+    name: "islands/vanilla",
     serverEntrypoint: filtered
       ? VIRTUAL_SERVER_ID
-      : "islands-integrations/html/server",
+      : "islands-integrations/vanilla/server",
   };
 }
 
@@ -36,11 +36,11 @@ export default function (options: Options = {}): AstroIntegration {
                     load(id: string) {
                       if (id !== RESOLVED_VIRTUAL_SERVER_ID) return;
                       return [
-                        `import { createRenderer } from "islands-integrations/html/server";`,
+                        `import { createRenderer } from "islands-integrations/vanilla/server";`,
                         `export default createRenderer(${JSON.stringify(include)}, ${JSON.stringify(exclude)});`,
                       ].join("\n");
                     },
-                    name: "islands/html/filter",
+                    name: "islands/vanilla/filter",
                     resolveId(id: string) {
                       if (id === VIRTUAL_SERVER_ID)
                         return RESOLVED_VIRTUAL_SERVER_ID;
@@ -52,6 +52,6 @@ export default function (options: Options = {}): AstroIntegration {
         });
       },
     },
-    name: "islands/html",
+    name: "islands/vanilla",
   };
 }

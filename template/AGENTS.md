@@ -6,12 +6,12 @@
 - The output generation will be only client side. No server side rendering or server side components will be used.
 - The Astro Islands can be used generated with the following frameworks:
   - Angular - Documentation available at https://analogjs.org/docs/packages/astro-angular/overview
-  - HTML - Documentation available at https://hs2323.github.io/create-outsystems-astro/guides/integrations/html/
   - Preact - Documentation available at https://docs.astro.build/en/guides/integrations-guide/preact/
   - React - Documentation available at https://docs.astro.build/en/guides/integrations-guide/react/
   - SolidJS - Documentation available at https://docs.astro.build/en/guides/integrations-guide/solid-js/
   - Svelte - Documentation availabe at https://docs.astro.build/en/guides/integrations-guide/svelte/
   - Twig - Documentation available at https://hs2323.github.io/create-outsystems-astro/guides/integrations/twig/
+  - Vanilla JS - Documentation available at https://hs2323.github.io/create-outsystems-astro/guides/integrations/vanilla/
   - Vue - Documentation available at https://docs.astro.build/en/guides/integrations-guide/vue/
 - Prefer to use TypeScript when possible.
 
@@ -40,12 +40,12 @@ In OutSystems Developer Cloud, the Islands library is available at https://www.o
 - The files in src/pages/\*.astro are used as a starting point and holds the components for generation. They can be tested by running `npm run dev`. That will show what the component looks like as rendered. The sample example pages are broken out by framework name (src/pages/react, src/pages/vue, etc). This page will house the component(s) entry points.
 - When importing a component, the component must have the attribute of the client:only= + the framework name.\
   - Angular: `client:load`
-  - HTML: `client:load`
   - Preact: `client:only="preact"`
   - React: `client:only="react"`
   - SolidJS: `client:only="solid-js"`
   - Svelte: `client:only="svelte"`
   - Twig: `client:load`
+  - Vanilla JS: `client:load`
   - Vue: `client:only="vue"`
 
 ### Components
@@ -92,13 +92,13 @@ Astro slots can be sent in. A slot can be either the default one or the named on
 
 Angular does not support the use of slots. Any use of slots with Angular should be discouraged.
 
-##### HTML
-
-The HTML integration does not support the use of slots. Any use of slots with the HTML integration should be discouraged.
-
 ##### Twig
 
 The Twig integration does not support the use of slots. Any use of slots with the Twig integration should be discouraged. Pass content in as props and render it with `{{ }}` instead.
+
+##### Vanilla JS
+
+The Vanilla JS integration does not support the use of slots. Any use of slots with the Vanilla JS integration should be discouraged.
 
 ##### Preact
 
@@ -308,35 +308,9 @@ The OutSystems 11 library is called Lightweight State Manager - https://www.outs
 
 The OutSystems Developer Cloud library is called Lightweight State Manager and is available in the ODC Forge.
 
-Nano Stores are supported for Preact - https://github.com/nanostores/preact, React - https://github.com/nanostores/react, SolidJS - https://github.com/nanostores/solid, Svelte - https://svelte.dev/docs/svelte/svelte-files#script-4-prefix-stores-with-$-to-access-their-values and Vue - https://github.com/nanostores/vue. The HTML integration has no binding library and uses the vanilla JS API through `window.Stores`. Nano Stores are not supported for Angular 21, nor for the Twig integration, where a `.twig` file and its inline classic script cannot run imports.
+Nano Stores are supported for Preact - https://github.com/nanostores/preact, React - https://github.com/nanostores/react, SolidJS - https://github.com/nanostores/solid, Svelte - https://svelte.dev/docs/svelte/svelte-files#script-4-prefix-stores-with-$-to-access-their-values and Vue - https://github.com/nanostores/vue. The Vanilla JS integration has no binding library and uses the vanilla JS API through `window.Stores`. Nano Stores are not supported for Angular 21, nor for the Twig integration, where a `.twig` file and its inline classic script cannot run imports.
 
 In OutSystems, the store will be on the Window object. The Islands component will then have to access it from there.
-
-#### HTML
-
-The HTML integration has no binding library, so it uses the vanilla JS API against a real atom. Register the atom from the component module, guarded because the renderer also imports the module during the build, then subscribe from the inline script:
-
-```ts
-import { setupStore } from "../../stores/demo";
-
-if (typeof window !== "undefined") {
-  setupStore("htmlStore");
-}
-```
-
-```html
-<div class="nanostore-value"></div>
-<script>
-  const nanostoreEl = container.querySelector(".nanostore-value");
-  const store = window.Stores && window.Stores["htmlStore"];
-
-  if (store) {
-    store.subscribe(function (value) {
-      nanostoreEl.textContent = value;
-    });
-  }
-</script>
-```
 
 #### Preact
 
@@ -397,6 +371,32 @@ export default function Counter({}) {
 </script>
 
 <div>{$nanoStoreValue}</div>
+```
+
+#### Vanilla JS
+
+The Vanilla JS integration has no binding library, so it uses the vanilla JS API against a real atom. Register the atom from the component module, guarded because the renderer also imports the module during the build, then subscribe from the inline script:
+
+```ts
+import { setupStore } from "../../stores/demo";
+
+if (typeof window !== "undefined") {
+  setupStore("vanillaStore");
+}
+```
+
+```html
+<div class="nanostore-value"></div>
+<script>
+  const nanostoreEl = container.querySelector(".nanostore-value");
+  const store = window.Stores && window.Stores["vanillaStore"];
+
+  if (store) {
+    store.subscribe(function (value) {
+      nanostoreEl.textContent = value;
+    });
+  }
+</script>
 ```
 
 #### Vue

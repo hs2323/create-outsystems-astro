@@ -6,8 +6,8 @@ import solid from "@astrojs/solid-js";
 import svelte from "@astrojs/svelte";
 import vue from "@astrojs/vue";
 import { defineConfig } from "astro/config";
-import html from "islands-integrations/html";
 import twig from "islands-integrations/twig";
+import vanilla from "islands-integrations/vanilla";
 
 // https://astro.build/config
 export default defineConfig({
@@ -23,8 +23,8 @@ export default defineConfig({
         },
       },
     }),
-    html({
-      include: ["src/framework/html/*"],
+    vanilla({
+      include: ["src/framework/vanilla/*"],
     }),
     preact({
       compat: true,

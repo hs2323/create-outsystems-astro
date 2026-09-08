@@ -1,11 +1,11 @@
 ---
 import AngularStore from "../../framework/angular/Store.component";
-import HTMLStore from "../../framework/html/Store";
 import PreactStore from "../../framework/preact/Store";
 import ReactStore from "../../framework/react/Store";
 import SolidStore from "../../framework/solid/Store";
 import SvelteStore from "../../framework/svelte/Store.svelte";
 import TwigStore from "../../framework/twig/Store.twig";
+import VanillaStore from "../../framework/vanilla/Store";
 import VueStore from "../../framework/vue/Store.vue";
 import TwigLogo from "../../images/twig.png?url";
 import styles from "../../styles/index.css?url";
@@ -15,7 +15,7 @@ import styles from "../../styles/index.css?url";
         <link href={styles} rel="stylesheet" />
         <script>
             // Expose the shared framework Nano Store so string-rendered islands
-            // (such as the HTML store) can subscribe to it before they hydrate.
+            // (such as the VanillaJS store) can subscribe to it before they hydrate.
             import { framework } from "../../stores/framework";
             window.Stores = window.Stores || {};
             window.Stores["framework"] = framework;
@@ -24,12 +24,12 @@ import styles from "../../styles/index.css?url";
     <body>
         <div class="card-grid">
             <AngularStore client:load />
-            <HTMLStore client:load />
             <PreactStore client:only="preact" />
             <ReactStore client:only="react" />
             <SolidStore client:only="solid-js" />
             <SvelteStore client:only="svelte" />
             <TwigStore client:load logo={TwigLogo} />
+            <VanillaStore client:load />
             <VueStore client:only="vue" />
         </div>
     </body>

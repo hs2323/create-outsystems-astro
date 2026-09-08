@@ -23,15 +23,6 @@ export default defineConfig(({ mode }) => ({
         },
       },
       {
-        test: {
-          environment: "happy-dom",
-          globals: true,
-          include: ["test/integration/html/**/*.test.ts"],
-          name: "html",
-          setupFiles: ["test/setup-test-env.ts"],
-        },
-      },
-      {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         plugins: [preact() as any],
         test: {
@@ -84,6 +75,15 @@ export default defineConfig(({ mode }) => ({
           globals: true,
           include: ["test/integration/twig/**/*.test.ts"],
           name: "twig",
+          setupFiles: ["test/setup-test-env.ts"],
+        },
+      },
+      {
+        test: {
+          environment: "happy-dom",
+          globals: true,
+          include: ["test/integration/vanilla/**/*.test.ts"],
+          name: "vanilla",
           setupFiles: ["test/setup-test-env.ts"],
         },
       },

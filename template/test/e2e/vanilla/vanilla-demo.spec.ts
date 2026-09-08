@@ -1,12 +1,12 @@
 import { expect, test } from "@playwright/test";
 
 test.beforeEach(async ({ page }) => {
-  await page.goto("/html/html-demo");
+  await page.goto("/vanilla/vanilla-demo");
 });
 
 test.describe("Has values", () => {
   test("Should have header", async ({ page }) => {
-    await expect(page.getByText("HTML Demo Component")).toBeVisible();
+    await expect(page.getByText("VanillaJS Demo Component")).toBeVisible();
   });
 });
 

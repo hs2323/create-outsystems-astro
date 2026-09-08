@@ -11,6 +11,6 @@
     "strict": true,
     "skipLibCheck": true
   },
-  "include": ["html/**/*.ts", "twig/**/*.ts"],
+  "include": ["twig/**/*.ts", "vanilla/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }

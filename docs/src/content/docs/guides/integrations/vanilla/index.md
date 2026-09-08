@@ -1,9 +1,9 @@
 ---
-title: HTML Integration
-description: HTML integration for Create OutSystems Astro
+title: Vanilla JS Integration
+description: Vanilla JS integration for Create OutSystems Astro
 ---
 
-The HTML integration lets you build Astro Islands using plain HTML and JavaScript — no framework required. A component is a TypeScript file that returns an HTML string, with interactivity handled via inline `<script>` tags.
+The Vanilla JS integration lets you build Astro Islands using plain HTML and JavaScript — no framework required. A component is a TypeScript file that returns an HTML string, with interactivity handled via inline `<script>` tags.
 
 ## When to use
 
@@ -16,10 +16,10 @@ The integration is registered automatically when you scaffold with `create-outsy
 
 ## Component structure
 
-An HTML component is a TypeScript function that accepts props and returns an HTML string.
+A Vanilla JS component is a TypeScript function that accepts props and returns an HTML string.
 
 ```ts
-// src/framework/html/MyComponent.ts
+// src/framework/vanilla/MyComponent.ts
 
 export default function MyComponent({
   children = "",
@@ -62,7 +62,7 @@ Use `client:load` on the component in your `.astro` page:
 
 ```astro
 ---
-import MyComponent from "../../framework/html/MyComponent";
+import MyComponent from "../../framework/vanilla/MyComponent";
 import styles from "../../styles/index.css?url";
 const initialCount = 5;
 const showMessage = "showMessage";
@@ -87,15 +87,15 @@ const showMessage = "showMessage";
 </html>
 ```
 
-`client:load` is used instead of `client:only` because the HTML renderer uses it to associate the client entrypoint with the island. The server rendering step intentionally returns empty HTML so the output only contains the slot templates and props — identical to how `client:only` frameworks like React behave.
+`client:load` is used instead of `client:only` because the Vanilla JS renderer uses it to associate the client entrypoint with the island. The server rendering step intentionally returns empty HTML so the output only contains the slot templates and props — identical to how `client:only` frameworks like React behave.
 
 ## Slots
 
-Slots are not supported in the HTML integration.
+Slots are not supported in the Vanilla JS integration.
 
 ## Nano Stores
 
-There is no Nano Stores binding library for the HTML integration the way there is for React or Vue, so the component uses the [vanilla JS API](https://github.com/nanostores/nanostores#vanilla-js) against a real atom.
+There is no Nano Stores binding library for the Vanilla JS integration the way there is for React or Vue, so the component uses the [vanilla JS API](https://github.com/nanostores/nanostores#vanilla-js) against a real atom.
 
 Register the atom from the component module. The module runs in the browser, so it can import from your stores folder, but the renderer also imports it during the build — guard the call so it only runs client side:
 
@@ -181,7 +181,7 @@ Use `@testing-library/dom` directly. Render the component by calling the functio
 
 ```ts
 import { fireEvent, screen } from "@testing-library/dom";
-import MyComponent from "../../../src/framework/html/MyComponent";
+import MyComponent from "../../../src/framework/vanilla/MyComponent";
 
 function renderComponent(props = {}) {
   document.body.innerHTML = MyComponent(props);
@@ -234,7 +234,7 @@ Use Playwright as with any other framework. Navigate to the page and interact wi
 import { expect, test } from "@playwright/test";
 
 test.beforeEach(async ({ page }) => {
-  await page.goto("/html/my-component");
+  await page.goto("/vanilla/my-component");
 });
 
 test("increments counter", async ({ page }) => {

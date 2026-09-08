@@ -43,7 +43,7 @@ A Twig component is a native `.twig` file. The integration registers a Vite load
 
 The renderer reads the `.twig` file's contents, compiles it with `Twig.twig({ data })`, and calls `.render(props)` on the client. Anything Twig.js understands — `{{ value }}`, `{% set %}`, `{% if %}`, `{% for %}`, comments (`{# … #}`), and filters like `|default`, `|merge`, or `|upper` — works against the props you pass on the island.
 
-\*\*\* Note \*\*\*: Use Twig's `|default(...)` filter for any value that may be missing so the rendered markup (and any inline script) stays valid when a prop is omitted. As with the HTML integration, be careful with global variables in the script tag so nothing leaks out of the island.
+\*\*\* Note \*\*\*: Use Twig's `|default(...)` filter for any value that may be missing so the rendered markup (and any inline script) stays valid when a prop is omitted. As with the Vanilla JS integration, be careful with global variables in the script tag so nothing leaks out of the island.
 
 ### Importing assets
 
@@ -162,7 +162,7 @@ Slots are not supported in the Twig integration. Pass content in as props and re
 
 Nano Stores are not supported in the Twig integration. There is no binding library for Twig, and a `.twig` file cannot run `import`s — neither the template itself nor its inline `<script>`, which is re-created as a classic script when the island hydrates — so a store can never be created or read from within the component.
 
-Pass the values a Twig island needs in as props instead. If a component has to share state with other islands or with OutSystems, build it with an integration that supports Nano Stores, such as the [HTML integration](../html/index.md) or one of the framework integrations.
+Pass the values a Twig island needs in as props instead. If a component has to share state with other islands or with OutSystems, build it with an integration that supports Nano Stores, such as the [Vanilla JS integration](../vanilla/index.md) or one of the framework integrations.
 
 ## Using OutSystems handlers
 
