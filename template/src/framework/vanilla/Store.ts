@@ -1,4 +1,4 @@
-import HTMLLogo from "../../images/html.png?url";
+import VanillaJSLogo from "../../images/vanilla.png?url";
 import { framework } from "../../stores/framework";
 
 if (typeof window !== "undefined") {
@@ -11,21 +11,21 @@ if (typeof window !== "undefined") {
 export default function Store(): string {
   return `
     <div class="card">
-      <strong>HTML Store</strong>
+      <strong>VanillaJS Store</strong>
       <div class="card-content">
-        <img alt="HTML logo" height="150" src="${HTMLLogo}" />
+        <img alt="VanillaJS logo" height="150" src="${VanillaJSLogo}" />
         <div>
           <strong>Value:</strong>
           <div class="framework-value"></div>
         </div>
         <div>
-          <button class="card-btn select-btn">Select HTML</button>
+          <button class="card-btn select-btn">Select VanillaJS</button>
         </div>
       </div>
       <script>
         (function () {
           const container = (document.currentScript && document.currentScript.parentElement)
-            || document.querySelector('.html-store');
+            || document.querySelector('.vanilla-store');
           const valueEl = container.querySelector('.framework-value');
           const btn = container.querySelector('.select-btn');
 
@@ -38,7 +38,7 @@ export default function Store(): string {
           }
 
           btn.addEventListener('click', function () {
-            if (store) store.set('HTML');
+            if (store) store.set('VanillaJS');
           });
         })();
       </script>

@@ -35,7 +35,6 @@ export default defineConfig({
                   label: "Angular",
                   link: "https://angular.dev/",
                 },
-                { label: "HTML", slug: "guides/integrations/html" },
                 {
                   attrs: externalLinkAttributes,
                   label: "Preact",
@@ -57,6 +56,10 @@ export default defineConfig({
                   link: "https://svelte.dev/",
                 },
                 { label: "Twig", slug: "guides/integrations/twig" },
+                {
+                  label: "Vanilla JS",
+                  slug: "guides/integrations/vanilla",
+                },
                 {
                   attrs: externalLinkAttributes,
                   label: "Vue",

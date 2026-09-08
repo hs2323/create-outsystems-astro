@@ -1,5 +1,5 @@
 ---
-import DemoComponent from "../../framework/html/Demo";
+import DemoComponent from "../../framework/vanilla/Demo";
 import styles from "../../styles/index.css?url";
 const initialCount = 5;
 const showMessage = "showMessage";
@@ -9,13 +9,13 @@ const showMessage = "showMessage";
         <link href={styles} rel="stylesheet" />
         <script>
             import { setupStore } from "../../stores/demo";
-            setupStore("htmlStore");
+            setupStore("vanillaStore");
             window["showMessage"] = (count) => {
                 document.getElementById("counter").textContent = count;
             };
             document.addEventListener("DOMContentLoaded", function () {
                 const input = document.getElementById("store");
-                input.value = window.Stores["htmlStore"].get();
+                input.value = window.Stores["vanillaStore"].get();
             });
         </script>
     </head>
@@ -43,7 +43,7 @@ const showMessage = "showMessage";
                             type="text"
                         /><button
                             class="card-btn"
-                            onclick="window.Stores['htmlStore'].set(document.getElementById('store').value)"
+                            onclick="window.Stores['vanillaStore'].set(document.getElementById('store').value)"
                             >Update Store</button
                         >
                     </div>

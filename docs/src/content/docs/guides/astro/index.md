@@ -8,12 +8,12 @@ description: Setup Astro JavaScript project
 ## Current supported frameworks
 
 - [Angular](https://analogjs.org/docs/packages/astro-angular/overview)
-- [HTML](../../integrations/html/index.md)
 - [Preact](https://docs.astro.build/en/guides/integrations-guide/preact/)
 - [React](https://docs.astro.build/en/guides/integrations-guide/react/)
 - [SolidJS](https://docs.astro.build/en/guides/integrations-guide/solid-js/)
 - [Svelte](https://docs.astro.build/en/guides/integrations-guide/svelte/)
 - [Twig](../../integrations/twig/index.md)
+- [Vanilla JS](../../integrations/vanilla/index.md)
 - [Vue](https://docs.astro.build/en/guides/integrations-guide/vue/)
 
 ## Getting started

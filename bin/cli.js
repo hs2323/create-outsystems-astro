@@ -16,12 +16,12 @@ const __dirname = path.dirname(__filename);
 
 const FRAMEWORKS = [
   { title: "Angular", value: "angular" },
-  { title: "HTML", value: "html" },
   { title: "Preact", value: "preact" },
   { title: "React", value: "react" },
   { title: "SolidJS", value: "solid" },
   { title: "Svelte", value: "svelte" },
   { title: "Twig", value: "twig" },
+  { title: "VanillaJS", value: "vanilla" },
   { title: "Vue", value: "vue" }
 ];
 
@@ -233,10 +233,6 @@ function updateAstroConfig(projectDir, selectedFrameworks) {
       import: /import\s+angular\s+from\s+['"]@analogjs\/astro-angular['"];\s*\n?/,
       integration: /angular\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
     },
-    html: {
-      import: /import\s+html\s+from\s+['"]islands-integrations\/html['"];\s*\n?/,
-      integration: /html\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
-    },
     preact: {
       import: /import\s+preact\s+from\s+['"]@astrojs\/preact['"];\s*\n?/,
       integration: /preact\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
@@ -256,6 +252,10 @@ function updateAstroConfig(projectDir, selectedFrameworks) {
     twig: {
       import: /import\s+twig\s+from\s+['"]islands-integrations\/twig['"];\s*\n?/,
       integration: /twig\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
+    },
+    vanilla: {
+      import: /import\s+vanilla\s+from\s+['"]islands-integrations\/vanilla['"];\s*\n?/,
+      integration: /vanilla\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
     },
     vue: {
       import: /import\s+vue\s+from\s+['"]@astrojs\/vue['"];\s*\n?/,
@@ -300,10 +300,6 @@ function updateMultiAstroPage(projectDir, selectedFrameworks) {
       import: /import\s+AngularStore\s+from\s+['"].*?angular\/Store\.component['"];?\s*\n?/g,
       component: /<AngularStore\s+client:load\s*\/>\s*\n?/g
     },
-    html: {
-      import: /import\s+HTMLStore\s+from\s+['"].*?html\/Store['"];?\s*\n?/g,
-      component: /<HTMLStore\s+client:load\s*\/>\s*\n?/g,
-    },
     preact: {
       import: /import\s+PreactStore\s+from\s+['"].*?preact\/Store['"];?\s*\n?/g,
       component: /<PreactStore\s+client:only="preact"\s*\/>\s*\n?/g
@@ -323,6 +319,10 @@ function updateMultiAstroPage(projectDir, selectedFrameworks) {
     twig: {
       import: /import\s+(?:TwigStore\s+from\s+['"].*?twig\/Store\.twig['"]|TwigLogo\s+from\s+['"].*?twig\.png\?url['"]);?\s*\n?/g,
       component: /<TwigStore\b[^>]*\/>\s*\n?/g,
+    },
+    vanilla: {
+      import: /import\s+VanillaStore\s+from\s+['"].*?vanilla\/Store['"];?\s*\n?/g,
+      component: /<VanillaStore\s+client:load\s*\/>\s*\n?/g,
     },
     vue: {
       import: /import\s+VueStore\s+from\s+['"].*?vue\/Store\.vue['"];?\s*\n?/g,

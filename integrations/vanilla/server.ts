@@ -21,7 +21,7 @@ export function createRenderer(
       }
       return checkComponent(Component);
     },
-    name: "islands/html",
+    name: "islands/vanilla",
     renderToStaticMarkup,
     supportsAstroStaticSlot: false,
   };

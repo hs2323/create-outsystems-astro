@@ -2,7 +2,7 @@ import { fireEvent, screen } from "@testing-library/dom";
 import { atom } from "nanostores";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
-import Demo from "../../../src/framework/html/Demo";
+import Demo from "../../../src/framework/vanilla/Demo";
 
 function renderDemo(props: Parameters<typeof Demo>[0] = {}) {
   document.body.innerHTML = Demo(props);
@@ -20,7 +20,7 @@ describe("Demo", () => {
 
     store = atom("Mocked Nano Value");
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (window as any).Stores = { htmlStore: store };
+    (window as any).Stores = { vanillaStore: store };
   });
 
   afterEach(() => {
