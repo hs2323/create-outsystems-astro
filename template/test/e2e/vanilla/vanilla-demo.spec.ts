@@ -6,7 +6,7 @@ test.beforeEach(async ({ page }) => {
 
 test.describe("Has values", () => {
   test("Should have header", async ({ page }) => {
-    await expect(page.getByText("VanillaJS Demo Component")).toBeVisible();
+    await expect(page.getByText("Vanilla JS Demo Component")).toBeVisible();
   });
 });
 
