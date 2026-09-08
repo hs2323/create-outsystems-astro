@@ -3441,6 +3441,46 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@qwik.dev/astro@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@qwik.dev/astro@npm:1.1.0"
+  peerDependencies:
+    "@qwik.dev/core": ">=2.0.0-beta.40 <3.0.0"
+    astro: ^7.0.0
+  checksum: 10c0/d6e6be4b9773d58c7200e194eda6e50fe7c8b15d7473327d5c9d8410df430907946fdcc5810e3641a9f6634b8f00199d1b4083bac1a538b0227ca65437895ab2
+  languageName: node
+  linkType: hard
+
+"@qwik.dev/core@npm:^2.0.0-beta.42":
+  version: 2.0.0-beta.42
+  resolution: "@qwik.dev/core@npm:2.0.0-beta.42"
+  dependencies:
+    "@qwik.dev/optimizer": "npm:2.1.0-beta.7"
+    csstype: "npm:^3.2.3"
+    launch-editor: "npm:^2.14.1"
+    magic-string: "npm:0.30.21"
+  peerDependencies:
+    prettier: "*"
+    vite: ">=8 <9"
+    vitest: ">=2 <5"
+  peerDependenciesMeta:
+    prettier:
+      optional: true
+    vitest:
+      optional: true
+  bin:
+    qwik: qwik-cli.mjs
+  checksum: 10c0/bebd602c3e5e837168fa8461931671f275352e737cb4032085bc55f4e40bc1bfcbb3f700cc9d1f7f099dcbb538965180e48916e38f50c585b81bc052ea68ccbc
+  languageName: node
+  linkType: hard
+
+"@qwik.dev/optimizer@npm:2.1.0-beta.7":
+  version: 2.1.0-beta.7
+  resolution: "@qwik.dev/optimizer@npm:2.1.0-beta.7"
+  checksum: 10c0/2fe2c257081b6a5743e01316855406adcebff44e6dd82c3800b5ecfd4cbce7af6e8c78fcd9a6a6204ef52f4aac331d0816e2c911eeff398880322ab96714ac04
+  languageName: node
+  linkType: hard
+
 "@rolldown/binding-android-arm-eabi@npm:1.2.6":
   version: 1.2.6
   resolution: "@rolldown/binding-android-arm-eabi@npm:1.2.6"
@@ -5995,6 +6035,8 @@ __metadata:
     "@nanostores/vue": "npm:^1.1.0"
     "@playwright/test": "npm:1.62.1"
     "@preact/preset-vite": "npm:^2.10.6"
+    "@qwik.dev/astro": "npm:^1.1.0"
+    "@qwik.dev/core": "npm:^2.0.0-beta.42"
     "@solidjs/testing-library": "npm:^0.8.10"
     "@sveltejs/vite-plugin-svelte": "npm:^7.3.0"
     "@testing-library/angular": "npm:^19.4.2"
@@ -9065,6 +9107,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"launch-editor@npm:^2.14.1":
+  version: 2.14.1
+  resolution: "launch-editor@npm:2.14.1"
+  dependencies:
+    picocolors: "npm:^1.1.1"
+    shell-quote: "npm:^1.8.4"
+  checksum: 10c0/bb0ab182086afaf1c391abd38d6fc9d5391cb43d0c2da1d96176f79e9995635cdf34dcfd8df3f756bb82d7bbbb7d37014d5eb312f337350889c0cff92db53dab
+  languageName: node
+  linkType: hard
+
 "levn@npm:^0.4.1":
   version: 0.4.1
   resolution: "levn@npm:0.4.1"
@@ -9370,7 +9422,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"magic-string@npm:0.x >= 0.26.0, magic-string@npm:^0.30.11, magic-string@npm:^0.30.21, magic-string@npm:^0.30.4":
+"magic-string@npm:0.30.21, magic-string@npm:0.x >= 0.26.0, magic-string@npm:^0.30.11, magic-string@npm:^0.30.21, magic-string@npm:^0.30.4":
   version: 0.30.21
   resolution: "magic-string@npm:0.30.21"
   dependencies:
@@ -12037,6 +12089,13 @@ __metadata:
   version: 3.0.0
   resolution: "shebang-regex@npm:3.0.0"
   checksum: 10c0/1dbed0726dd0e1152a92696c76c7f06084eb32a90f0528d11acd764043aacf76994b2fb30aa1291a21bd019d6699164d048286309a278855ee7bec06cf6fb690
+  languageName: node
+  linkType: hard
+
+"shell-quote@npm:^1.8.4":
+  version: 1.10.0
+  resolution: "shell-quote@npm:1.10.0"
+  checksum: 10c0/46ee59bfd972ce6a45500c44ed130dff2d0a7d6fbac9841e59d548518cad8060a06393c9a5dcbc0cede294ad80b2a2cd8c904679e09265f53efc0a0879f30961
   languageName: node
   linkType: hard
 
