@@ -1,5 +1,10 @@
 import AstroLogo from "../../images/astro.png?url";
 import OutSystemsLogo from "../../images/outsystems.png?url";
+import { setupStore } from "../../stores/demo";
+
+if (typeof window !== "undefined") {
+  setupStore("htmlStore");
+}
 
 interface DemoProps {
   children?: string;
@@ -78,26 +83,13 @@ export default function Demo({
             }
           });
 
-          if (!window.Stores) window.Stores = {};
-          if (!window.Stores['htmlStore']) {
-            let _value = 'Test Value';
-            const _subs = [];
-            window.Stores['htmlStore'] = {
-              get: function () { return _value; },
-              set: function (v) { _value = v; _subs.forEach(function (fn) { fn(v); }); },
-              subscribe: function (fn) {
-                fn(_value);
-                _subs.push(fn);
-                return function () { _subs.splice(_subs.indexOf(fn), 1); };
-              },
-            };
-          }
+          const store = window.Stores && window.Stores['htmlStore'];
 
-          const store = window.Stores['htmlStore'];
-          nanostoreEl.textContent = store.get();
-          store.subscribe(function (value) {
-            nanostoreEl.textContent = value;
-          });
+          if (store) {
+            store.subscribe(function (value) {
+              nanostoreEl.textContent = value;
+            });
+          }
         })();
       </script>
     </div>

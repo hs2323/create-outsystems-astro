@@ -6,11 +6,13 @@
 - The output generation will be only client side. No server side rendering or server side components will be used.
 - The Astro Islands can be used generated with the following frameworks:
     - Angular
+    - HTML
     - Preact
     - React
     - SolidJS
     - Vue
     - Svelte
+    - Twig
 - While unique and custom functionality may be developed, a general use case will be for wrappers around pre-existing modules/libraries/components.
 
 ## Generator

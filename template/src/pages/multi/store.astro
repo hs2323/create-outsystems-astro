@@ -15,7 +15,7 @@ import styles from "../../styles/index.css?url";
         <link href={styles} rel="stylesheet" />
         <script>
             // Expose the shared framework Nano Store so string-rendered islands
-            // (such as the Twig store) can subscribe to it before they hydrate.
+            // (such as the HTML store) can subscribe to it before they hydrate.
             import { framework } from "../../stores/framework";
             window.Stores = window.Stores || {};
             window.Stores["framework"] = framework;
