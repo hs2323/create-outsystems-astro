@@ -7,6 +7,7 @@
 - The Astro Islands can be used generated with the following frameworks:
   - Angular - Documentation available at https://analogjs.org/docs/packages/astro-angular/overview
   - Preact - Documentation available at https://docs.astro.build/en/guides/integrations-guide/preact/
+  - Qwik - Documentation available at https://hs2323.github.io/create-outsystems-astro/guides/integrations/qwik/
   - React - Documentation available at https://docs.astro.build/en/guides/integrations-guide/react/
   - SolidJS - Documentation available at https://docs.astro.build/en/guides/integrations-guide/solid-js/
   - Svelte - Documentation availabe at https://docs.astro.build/en/guides/integrations-guide/svelte/
@@ -41,6 +42,7 @@ In OutSystems Developer Cloud, the Islands library is available at https://www.o
 - When importing a component, the component must have the attribute of the client:only= + the framework name.\
   - Angular: `client:load`
   - Preact: `client:only="preact"`
+  - Qwik: no directive. Qwik resumes rather than hydrates, so a `client:*` directive must not be added.
   - React: `client:only="react"`
   - SolidJS: `client:only="solid-js"`
   - Svelte: `client:only="svelte"`
@@ -53,6 +55,7 @@ In OutSystems Developer Cloud, the Islands library is available at https://www.o
 - The components live in the folder framework/{NAME}/:
   - Angular: src/framework/angular
   - Preact: src/framework/react
+  - Qwik: src/framework/qwik
   - React: src/framework/react
   - SolidJS: src/framework/solid
   - Svelte: src/framework/svelte
@@ -65,6 +68,12 @@ The framework folder should stay in place as the components will be rendered fro
 
 ```js
 /** @jsxImportSource preact */
+```
+
+- Qwik:
+
+```js
+/** @jsxImportSource @qwik.dev/core */
 ```
 
 - React:
@@ -146,6 +155,42 @@ export default function Counter({
 		</>
 	);
 }
+```
+
+##### Qwik
+
+- In Qwik, slots are handled with the `<Slot />` component. The default slot is `<Slot />` and a named slot is `<Slot name="header" />`. In the `.astro` page the content is still marked with the regular `slot` attribute, not `q:slot`.
+
+```js
+---
+import CounterComponent from '../../framework/qwik/Counter';
+---
+<CounterComponent>
+    <div slot="header">
+        Counter Component
+    </div>
+    <div style="text-align: center;">
+        <p>This is content passed into the component.</p>
+    </div>
+</CounterComponent>
+```
+
+the slots can be used as:
+
+```tsx
+/** @jsxImportSource @qwik.dev/core */
+import { component$, Slot } from "@qwik.dev/core";
+
+export default component$(() => {
+  return (
+    <>
+      <Slot name="header" />
+      <div>
+        <Slot />
+      </div>
+    </>
+  );
+});
 ```
 
 ##### React
@@ -308,7 +353,7 @@ The OutSystems 11 library is called Lightweight State Manager - https://www.outs
 
 The OutSystems Developer Cloud library is called Lightweight State Manager and is available in the ODC Forge.
 
-Nano Stores are supported for Preact - https://github.com/nanostores/preact, React - https://github.com/nanostores/react, SolidJS - https://github.com/nanostores/solid, Svelte - https://svelte.dev/docs/svelte/svelte-files#script-4-prefix-stores-with-$-to-access-their-values and Vue - https://github.com/nanostores/vue. The Vanilla JS integration has no binding library and uses the vanilla JS API through `window.Stores`. Nano Stores are not supported for Angular 21, nor for the Twig integration, where a `.twig` file and its inline classic script cannot run imports.
+Nano Stores are supported for Preact - https://github.com/nanostores/preact, React - https://github.com/nanostores/react, SolidJS - https://github.com/nanostores/solid, Svelte - https://svelte.dev/docs/svelte/svelte-files#script-4-prefix-stores-with-$-to-access-their-values and Vue - https://github.com/nanostores/vue. The Vanilla JS integration has no binding library and uses the vanilla JS API through `window.Stores`. Nano Stores are not supported for Angular 21, for the Twig integration, where a `.twig` file and its inline classic script cannot run imports, nor for Qwik, which has no binding library and whose maintainers recommend against global stores in favour of custom events - https://github.com/QwikDev/astro#communicating-across-containers.
 
 In OutSystems, the store will be on the Window object. The Islands component will then have to access it from there.
 
@@ -437,6 +482,7 @@ const nanoStoreValue = useStore(window.Stores["MyGreatStore"]);
 - The `.env.template` must be copied over to `.env`.
 - The name of the module/library/application where the component will live must be set in the `ASSET_URL` variable of the `.env` file.
 - Run the command `PM run output`. This will run the Astro build and then run an additional step to generate the output necessary for importing into OutSystems.
+- Qwik does not render an `<astro-island>`. It renders a Qwik container (a `<div q:container>`), which Astro treats as static data. The output step only keeps `<astro-island>` elements, so a Qwik page produces an empty `.html` file and Qwik components cannot currently be imported into OutSystems through the Islands module. Use the Qwik demo for local Astro development and pick another framework for components destined for OutSystems.
 - The output will be in the output/ folder. The contents are:
   - HTML file(s) \*.html:
     - This will contain only the `<astro-island>` component. It will be necessary for the users to copy over the `component-url`, `renderer-url` and `opts`. The rest will either be custom built in OutSystems or not needed. The `uid` will be generated by OutSystems. The `component-export`, `client`, `ssr` and `await-children` will be automatically added in the OutSystems Islands module.

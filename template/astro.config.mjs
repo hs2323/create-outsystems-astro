@@ -48,7 +48,7 @@ export default defineConfig({
       include: ["src/framework/vue/*"],
     }),
     qwik({
-       include: ["src/framework/qwik/*"],
+      include: ["src/framework/qwik/*"],
     }),
   ],
   server: {
@@ -69,6 +69,14 @@ export default defineConfig({
           },
         },
       },
+    },
+    // @qwik.dev/astro only defines __EXPERIMENTAL__.suspense, so Astro's
+    // prerender environment throws on Qwik's other compile-time feature flags.
+    // These are opt-in experimental features and stay disabled here.
+    define: {
+      "__EXPERIMENTAL__.each": "false",
+      "__EXPERIMENTAL__.errorBoundary": "false",
+      "__EXPERIMENTAL__.show": "false",
     },
     resolve: {
       alias: {

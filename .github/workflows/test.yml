@@ -513,6 +513,7 @@ jobs:
           --projectName test-islands
           --frameworks angular
           --frameworks preact
+          --frameworks qwik
           --frameworks react
           --frameworks solid
           --frameworks svelte
@@ -571,6 +572,32 @@ jobs:
 
       - name: Run CLI
         run: npx create-outsystems-astro --projectName test-islands --frameworks preact
+
+      - name: Run output
+        working-directory: test-islands
+        run: npm ci && npm run output
+
+  framework-qwik:
+    runs-on: ubuntu-latest
+
+    steps:  
+      - name: Checkout code
+        uses: actions/checkout@v7.0.1
+
+      - name: Use Node.js
+        uses: actions/setup-node@v7.0.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      
+      - name: Build integrations
+        working-directory: integrations
+        run: npm ci && npm run process
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run CLI
+        run: npx create-outsystems-astro --projectName test-islands --frameworks qwik
 
       - name: Run output
         working-directory: test-islands

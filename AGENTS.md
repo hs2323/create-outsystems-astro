@@ -7,6 +7,7 @@
 - The Astro Islands can be used generated with the following frameworks:
     - Angular
     - Preact
+    - Qwik
     - React
     - SolidJS
     - Svelte

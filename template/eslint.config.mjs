@@ -218,4 +218,18 @@ export default [
     ...solid.configs["flat/recommended"],
     files: ["src/framework/solid/**/*.{js,ts,jsx,tsx}"],
   },
+  {
+    files: [
+      "src/framework/qwik/**/*.{js,ts,jsx,tsx}",
+      "test/integration/qwik/**/*.{js,ts,jsx,tsx}",
+    ],
+    rules: {
+      // Qwik's `useSignal` and friends look like React hooks, but they are
+      // called inside a `component$()` callback.
+      "react-hooks/rules-of-hooks": "off",
+      // Qwik's `createDOM()` test helper hands back a host element to query
+      // instead of Testing Library queries.
+      "testing-library/no-node-access": "off",
+    },
+  },
 ];

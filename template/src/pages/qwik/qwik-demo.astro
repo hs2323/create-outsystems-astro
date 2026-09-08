@@ -1,0 +1,46 @@
+---
+import DemoComponent from "../../framework/qwik/Demo";
+import styles from "../../styles/index.css?url";
+const initialCount = 5;
+const showMessage = "showMessage";
+---
+<html lang="en">
+    <head>
+        <link href={styles} rel="stylesheet" />
+        <script>
+            window["showMessage"] = (count) => {
+                document.getElementById("counter").textContent = count;
+            };
+        </script>
+    </head>
+    <body>
+        <div class="counter-title">Astro Page</div>
+        <div class="card-grid">
+            <div class="card">
+                <strong>Counter component</strong>
+                <div class="card-content">
+                    <div style="text-align: center; margin-top: 30px;">
+                        Counter value:
+                        <div>
+                            <span id="counter"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card unused">
+                <strong>Nano Stores (not supported)</strong>
+                <div class="card-content">
+                    <div style="text-align: center; margin-top: 30px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <DemoComponent initialCount={initialCount} showMessage={showMessage}>
+            <div class="counter-title" slot="header">Qwik Demo Component</div>
+            <div style="text-align: center;">
+                <p><em>This is content passed into the component.</em></p>
+            </div>
+        </DemoComponent>
+    </body>
+</html>
