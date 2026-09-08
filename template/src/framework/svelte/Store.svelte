@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { useStore } from '@nanostores/svelte-runes';
+  import { useStore } from "@nanostores/svelte-runes";
 
   import SvelteLogo from "../../images/svelte.png?url";
   import { framework } from "../../stores/framework";

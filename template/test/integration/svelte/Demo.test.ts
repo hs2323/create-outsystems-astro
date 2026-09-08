@@ -4,6 +4,20 @@ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import Demo from "../../../src/framework/svelte/Demo.svelte";
 import DemoWrapper from "./Demo.wrapper.svelte";
 
+function toNanoStore<T>(svelteStore: ReturnType<typeof writable<T>>) {
+  return {
+    get: () => {
+      let value: T;
+      svelteStore.subscribe((v) => (value = v))();
+      return value!;
+    },
+    listen: (fn: (value: T) => void) => {
+      return svelteStore.subscribe(fn);
+    },
+    subscribe: svelteStore.subscribe,
+  };
+}
+
 describe("Demo", () => {
   const defaultProps = {
     initialCount: 5,
@@ -11,17 +25,17 @@ describe("Demo", () => {
   };
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  let mockStore: any;
+  let rawStore: any;
 
   beforeEach(() => {
-    mockStore = writable("Mocked Nano Value");
+    rawStore = writable("Mocked Nano Value");
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (window as any).mockFunction = vi.fn();
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (window as any).Stores = {
-      svelteStore: mockStore,
+      svelteStore: toNanoStore(rawStore),
     };
   });
 
@@ -71,9 +85,9 @@ describe("Demo", () => {
 
     expect(screen.getByText(/Mocked Nano Value/i)).toBeInTheDocument();
 
-    // Update the Svelte store
+    // Update the underlying store value
     await act(() => {
-      mockStore.set("Updated Nano Value");
+      rawStore.set("Updated Nano Value");
     });
 
     expect(screen.getByText(/Updated Nano Value/i)).toBeInTheDocument();

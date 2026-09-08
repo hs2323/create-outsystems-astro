@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { useStore } from '@nanostores/svelte-runes';
+  import { useStore } from "@nanostores/svelte-runes";
 
   import AstroLogo from "../../images/astro.png?url";
   import OutSystemsLogo from "../../images/outsystems.png?url";
@@ -7,13 +7,13 @@
   import { setupStore } from "../../stores/demo";
 
   interface Props {
+    children?: import("svelte").Snippet;
+    header?: import("svelte").Snippet;
     initialCount: number;
     showMessage: string;
-    header?: import('svelte').Snippet;
-    children?: import('svelte').Snippet;
   }
 
-  let { initialCount, showMessage, header, children }: Props = $props();
+  let { children, header, initialCount, showMessage }: Props = $props();
 
   let count = $state(initialCount);
 
