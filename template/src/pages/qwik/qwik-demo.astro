@@ -36,7 +36,11 @@ const showMessage = "showMessage";
             </div>
         </div>
         <hr />
-        <DemoComponent initialCount={initialCount} showMessage={showMessage}>
+        <DemoComponent
+            client:load
+            initialCount={initialCount}
+            showMessage={showMessage}
+        >
             <div class="counter-title" slot="header">Qwik Demo Component</div>
             <div style="text-align: center;">
                 <p><em>This is content passed into the component.</em></p>

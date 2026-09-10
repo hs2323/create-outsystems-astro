@@ -5,8 +5,9 @@ import react from "@astrojs/react";
 import solid from "@astrojs/solid-js";
 import svelte from "@astrojs/svelte";
 import vue from "@astrojs/vue";
-import qwik from "@qwik.dev/astro";
+import qwikAstro from "@qwik.dev/astro";
 import { defineConfig } from "astro/config";
+import qwik from "islands-integrations/qwik";
 import twig from "islands-integrations/twig";
 import vanilla from "islands-integrations/vanilla";
 
@@ -47,9 +48,11 @@ export default defineConfig({
     vue({
       include: ["src/framework/vue/*"],
     }),
-    qwik({
-      include: ["src/framework/qwik/*"],
-    }),
+    qwik(
+      qwikAstro({
+        include: ["src/framework/qwik/*"],
+      }),
+    ),
   ],
   server: {
     host: true,

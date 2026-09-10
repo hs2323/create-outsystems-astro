@@ -20,6 +20,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@qwik.dev/core": "^2.0.0-beta.42",
     "astro": "^7.2.10",
     "twig": "^3.0.0"
   },

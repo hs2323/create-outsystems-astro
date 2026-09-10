@@ -7,46 +7,57 @@ The Qwik integration uses [`@qwik.dev/astro`](https://qwik.dev/docs/integrations
 
 ## When to use
 
-- You want the smallest possible amount of JavaScript executed on load — Qwik resumes rather than hydrates, so the framework itself is not run until an interaction needs it.
+- You want the smallest possible amount of JavaScript executed on load — Qwik resumes rather than hydrates, so the framework itself is not run until an interaction needs it. Note that the `client:load` directive the demo uses to produce an island claws some of that back; see [The renderer needs a client entrypoint](#the-renderer-needs-a-client-entrypoint).
 - You are already writing Qwik components elsewhere and want to reuse them.
 
 ## Before you start
 
 Qwik behaves differently to the other supported frameworks in ways that matter for this project.
 
-### Qwik renders a container, not an island
+### Qwik renders a container inside the island
 
-Astro's other frameworks render an `<astro-island>` custom element. Qwik instead renders a [Qwik container](https://qwik.dev/docs/advanced/containers/) — a `<div q:container="paused">` — which Astro treats as static data.
+Astro's other frameworks render an `<astro-island>` custom element wrapping markup that the framework then hydrates. Qwik instead renders a [Qwik container](https://qwik.dev/docs/advanced/containers/) — a `<div q:container="paused">` — that resumes on its own.
 
-The `output` step only keeps `<astro-island>` elements, so **a Qwik page produces an empty `.html` file and a Qwik component cannot currently be imported into OutSystems through the Islands module**. Use Qwik for local Astro development and comparison, and choose another framework for components that need to ship to OutSystems.
+The two are not exclusive. With a `client:load` directive, Astro wraps the Qwik container in an `<astro-island>`, which is what the `output` step keeps.
 
-### No client directive
+Which of the two actually renders the component depends on what is inside the island:
 
-Qwik does not hydrate, so it does not take a `client:*` directive. Adding one is an error:
+- **The island arrives with server markup inside it.** Qwik resumes that container, exactly as it would without Astro. Nothing is re-rendered and resumability is preserved.
+- **The island arrives empty**, because it was imported into OutSystems or declared `client:only`. There is nothing to resume, so the component is rendered on the client instead.
+- **The island's `props` attribute changes.** The resumed container is replaced by a client render using the new props.
 
-```astro
----
-import DemoComponent from "../../framework/qwik/Demo";
----
-<!-- Correct: no directive -->
-<DemoComponent initialCount={5} />
-```
+### The renderer needs a client entrypoint
+
+`@qwik.dev/astro` registers its renderer with a `serverEntrypoint` only, and Astro adds `renderer-url`, `component-export` and the serialized `props` attribute to an island **only** when its renderer has a `clientEntrypoint`. Without one, the island is emitted with none of them and its runtime falls back to a no-op hydrator: props never reach the component, and an empty island stays empty for good, silently.
+
+This template therefore wraps the upstream integration in `islands-integrations/qwik`, which supplies that client entrypoint. The last two cases above work because of it.
+
+One cost remains on the server-rendered path. Astro emits a `component-url` pointing at its own client build of the component, and the island runtime imports it on load. That is a second copy of Qwik core alongside the one Qwik's own build ships, which Qwik reports as [error Q30](https://qwik.dev/docs/errors/) ("Qwik version already imported"), and it takes the demo page from ~117 KB of JavaScript to ~655 KB. An island declared `client:only` avoids both, because Qwik's own build never runs for it.
+
+### Choosing a directive
+
+Use `client:load` to keep server rendering and resumability. Use `client:only="@qwik.dev/astro"` to skip server rendering and have the component rendered entirely on the client, the way the React, Preact, Solid, Svelte and Vue demos do.
 
 ## Setup
 
-The integration is registered automatically when you scaffold with `create-outsystems-astro` and select Qwik. It is added to `astro.config.mjs` scoped to the Qwik framework folder:
+The integration is registered automatically when you scaffold with `create-outsystems-astro` and select Qwik. The upstream integration is wrapped so its renderer gains a client entrypoint, and scoped to the Qwik framework folder:
 
 ```js
-import qwik from "@qwik.dev/astro";
+import qwikAstro from "@qwik.dev/astro";
+import qwik from "islands-integrations/qwik";
 
 export default defineConfig({
   integrations: [
-    qwik({
-      include: ["src/framework/qwik/*"],
-    }),
+    qwik(
+      qwikAstro({
+        include: ["src/framework/qwik/*"],
+      }),
+    ),
   ],
 });
 ```
+
+`islands-integrations/qwik` only intercepts the `addRenderer` call that `@qwik.dev/astro` makes during setup and adds `clientEntrypoint` to the renderer. The standalone Qwik client build, the manifest and the Vite plugins are all still the upstream integration's.
 
 The generated `astro.config.mjs` also disables Qwik's experimental compile-time feature flags:
 
@@ -89,7 +100,7 @@ State is held in a signal from `useSignal`, and event handlers use the `$` suffi
 
 ## Page setup
 
-Import the component and use it with no client directive:
+Import the component and add `client:load` so the container is wrapped in an island:
 
 ```astro
 ---
@@ -102,10 +113,16 @@ const initialCount = 5;
     <link href={styles} rel="stylesheet" />
   </head>
   <body>
-    <MyComponent initialCount={initialCount} />
+    <MyComponent client:load initialCount={initialCount} />
   </body>
 </html>
 ```
+
+## Props
+
+Props are serialized onto the island and re-applied when they change, so a component imported into OutSystems reacts to parameter changes the same way the other frameworks do. A change replaces the resumed container with a client render; slot content is preserved across that render.
+
+Props set before the island has hydrated are ignored — Astro's island runtime has no hydrator to call yet. The island drops its `ssr` attribute once it has hydrated, which is the signal that it is ready to accept them.
 
 ## Slots
 
@@ -114,7 +131,7 @@ Slots are supported. Render them with Qwik's `Slot` component — the default sl
 - Astro example:
 
 ```astro
-  <MyComponent>
+  <MyComponent client:load>
       <div slot="header">
           <p>Slot header</p>
       </div>

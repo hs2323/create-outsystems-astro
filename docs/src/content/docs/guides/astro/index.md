@@ -110,7 +110,7 @@ Each page inside of the pages file should represent an Island that will be impor
 #### Client loading
 For any of the official frameworks (react, preact, solid-js, vue and svelte) you should pass client:only="[FRAMEWORK]". See [Astro documentation](https://docs.astro.build/en/reference/directives-reference/) for client:only. For other fameworks, such as Angular, it should pass client:load or any other non specific famework.
 
-Qwik is the exception: it resumes instead of hydrating, so a Qwik component takes no client directive at all. See the [Qwik integration guide](../integrations/qwik/).
+Qwik takes either `client:load`, which keeps server rendering and lets Qwik resume the container it emitted, or `client:only="@qwik.dev/astro"`, which renders it entirely on the client like the other JSX frameworks. See the [Qwik integration guide](../integrations/qwik/).
 
 ### Framework
 
