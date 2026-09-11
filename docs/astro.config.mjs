@@ -40,6 +40,7 @@ export default defineConfig({
                   label: "Preact",
                   link: "https://preactjs.com/",
                 },
+                { label: "Qwik", slug: "guides/integrations/qwik" },
                 {
                   attrs: externalLinkAttributes,
                   label: "React",

@@ -3,6 +3,7 @@
   "specifiers": {
     "npm:@eslint/compat@^2.1.0": "2.1.0_eslint@9.39.5",
     "npm:@eslint/js@^9.39.4": "9.39.5",
+    "npm:@qwik.dev/core@^2.0.0-beta.42": "2.0.0-beta.43_prettier@3.9.6_vite@8.2.2__@types+node@26.4.0__esbuild@0.28.2_@types+node@26.4.0",
     "npm:@types/node@^26.4.0": "26.4.0",
     "npm:@types/twig@^1.12.17": "1.12.17",
     "npm:astro@^7.2.10": "7.2.10_@emnapi+core@1.11.1_@emnapi+runtime@1.11.3_@types+node@26.4.0",
@@ -646,7 +647,6 @@
       "integrity": "sha512-UMduMbqO5s5zF2NkNacMT/yK5Y5QiKvWr2+50bzIIxFDwVJ2h49b+oyjaCGPhJxd2/gC2x39EHv/gHVuu36x2Q==",
       "dependencies": [
         "@emnapi/core",
-        "@emnapi/runtime@1.11.1",
         "@tybys/wasm-util"
       ]
     },
@@ -683,6 +683,24 @@
     },
     "@pkgr/core@0.3.6": {
       "integrity": "sha512-SEeaJLb3qBNF/OaXnaR1NmmBbFYk1zC0ZH/52fATcRPLFg/p791YrcyFFy44Bo9sLaGuSuLp5Q6axbb/O+v/RA=="
+    },
+    "@qwik.dev/core@2.0.0-beta.43_prettier@3.9.6_vite@8.2.2__@types+node@26.4.0__esbuild@0.28.2_@types+node@26.4.0": {
+      "integrity": "sha512-B/l74Cosp/t4F+pYeQO+sszd1YUn1lqSjE5nDg2C/2e7s0pYs9ofhU/WL3K2gfSGAlQxjxWle20lWWg0PZqeng==",
+      "dependencies": [
+        "@qwik.dev/optimizer",
+        "csstype",
+        "launch-editor",
+        "magic-string@0.30.21",
+        "prettier",
+        "vite"
+      ],
+      "optionalPeers": [
+        "prettier"
+      ],
+      "bin": true
+    },
+    "@qwik.dev/optimizer@2.1.0-beta.8": {
+      "integrity": "sha512-UlxnV+sARxYCV+nKxHVRQpyRTrVn2g+Q4yRkxrGd75hmZG9R2aFiDUgmXpynwa0WnPK2tAg1Lu3ws6Ss7ej68w=="
     },
     "@rolldown/binding-android-arm-eabi@1.2.6": {
       "integrity": "sha512-b+jTcARdTiFLI6jB4a5XjTm0RWd6KcRfQj/I2356fxUZemiho9zQLxo0RtCuMDAyKcLo6cEltkgbQp6d1+sjjQ==",
@@ -1142,7 +1160,7 @@
         "http-cache-semantics",
         "js-yaml",
         "jsonc-parser",
-        "magic-string",
+        "magic-string@1.2.3",
         "magicast",
         "mrmime",
         "neotraverse",
@@ -1368,6 +1386,9 @@
       "dependencies": [
         "css-tree@2.2.1"
       ]
+    },
+    "csstype@3.2.3": {
+      "integrity": "sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ=="
     },
     "data-view-buffer@1.0.2": {
       "integrity": "sha512-EmKO5V3OLXh1rtK2wgXRansaK1/mtVdTUEiEI0W8RkvgT05kfxaH29PliLnpLP73yYO6142Q72QNa8Wx/A5CqQ==",
@@ -2330,6 +2351,13 @@
         "json-buffer"
       ]
     },
+    "launch-editor@2.14.1": {
+      "integrity": "sha512-QWBrQsMpH7gPr965dsKD/3cKWiNoTjpATQf++Xq63N6sKRGMwlVXz41O1IZTMfZQgBctD/K5Zt06+/I6pP6+HA==",
+      "dependencies": [
+        "picocolors",
+        "shell-quote"
+      ]
+    },
     "levn@0.4.1": {
       "integrity": "sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==",
       "dependencies": [
@@ -2432,6 +2460,12 @@
     },
     "lru-cache@11.5.2": {
       "integrity": "sha512-4pfM1Ff0x50o0tQwb5ucw/RzNyD0/YJME6IVcStalZuMWxdt3sR3huStTtxz4PUmvZfRguvDejasvQ2kifR11g=="
+    },
+    "magic-string@0.30.21": {
+      "integrity": "sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==",
+      "dependencies": [
+        "@jridgewell/sourcemap-codec"
+      ]
     },
     "magic-string@1.2.3": {
       "integrity": "sha512-Bpb0W2TbLKOZ7vJnOUnVRGq3WL2p+ISV29M6hYPL1AFCpyKZpdr5ytiXoTSSxRVhg8YW7f65+6gbG8WG6PCa/g==",
@@ -2999,6 +3033,9 @@
     "shebang-regex@3.0.0": {
       "integrity": "sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A=="
     },
+    "shell-quote@1.10.0": {
+      "integrity": "sha512-w1aiOKwKuRgtwAReIIj89puqg+I7GvX4IbLrvmhXbzQsj1+Zwi4VO3+fa6ZF91TWSjIxoEkKnMeHcLEODK5ZXA=="
+    },
     "shiki@4.4.3": {
       "integrity": "sha512-Mb/GvXPHBAXdgGIcnfU5L3ldpn1XcxrGkPHwqgRx17/I2XRfqlFKk2vGkHWINn1kdXvzJZeuO3is6I9KLPFm0g==",
       "dependencies": [
@@ -3519,6 +3556,7 @@
       "dependencies": [
         "npm:@eslint/compat@^2.1.0",
         "npm:@eslint/js@^9.39.4",
+        "npm:@qwik.dev/core@^2.0.0-beta.42",
         "npm:@types/node@^26.4.0",
         "npm:@types/twig@^1.12.17",
         "npm:astro@^7.2.10",

@@ -17,6 +17,7 @@ const __dirname = path.dirname(__filename);
 const FRAMEWORKS = [
   { title: "Angular", value: "angular" },
   { title: "Preact", value: "preact" },
+  { title: "Qwik", value: "qwik" },
   { title: "React", value: "react" },
   { title: "SolidJS", value: "solid" },
   { title: "Svelte", value: "svelte" },
@@ -237,6 +238,12 @@ function updateAstroConfig(projectDir, selectedFrameworks) {
       import: /import\s+preact\s+from\s+['"]@astrojs\/preact['"];\s*\n?/,
       integration: /preact\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
     },
+    qwik: {
+      define: /[ \t]*\/\/ @qwik\.dev\/astro only defines[\s\S]*?define:\s*\{[\s\S]*?\},\n/,
+      // Qwik needs two imports: the Astro integration and our wrapper around it.
+      import: /import\s+(?:qwikAstro\s+from\s+['"]@qwik\.dev\/astro['"]|qwik\s+from\s+['"]islands-integrations\/qwik['"]);\s*\n?/g,
+      integration: /\bqwik\s*\(\s*qwikAstro\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*\)\s*,?\s*/
+    },
     react: {
       import: /import\s+react\s+from\s+['"]@astrojs\/react['"];\s*\n?/,
       integration: /react\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
@@ -267,6 +274,11 @@ function updateAstroConfig(projectDir, selectedFrameworks) {
     if (!selectedFrameworks.includes(framework)) {
       content = content.replace(patterns.import, "");
       content = content.replace(patterns.integration, "");
+
+      // Some frameworks also add config outside of the integrations array.
+      if (patterns.define) {
+        content = content.replace(patterns.define, "");
+      }
     }
   }
 
@@ -303,6 +315,10 @@ function updateMultiAstroPage(projectDir, selectedFrameworks) {
     preact: {
       import: /import\s+PreactStore\s+from\s+['"].*?preact\/Store['"];?\s*\n?/g,
       component: /<PreactStore\s+client:only="preact"\s*\/>\s*\n?/g
+    },
+    qwik: {
+      import: /import\s+QwikStore\s+from\s+['"].*?qwik\/Store['"];?\s*\n?/g,
+      component: /<QwikStore\s*\/>\s*\n?/g
     },
     react: {
       import: /import\s+ReactStore\s+from\s+['"].*?react\/Store['"];?\s*\n?/g,

@@ -1,6 +1,7 @@
 ---
 import AngularStore from "../../framework/angular/Store.component";
 import PreactStore from "../../framework/preact/Store";
+import QwikStore from "../../framework/qwik/Store";
 import ReactStore from "../../framework/react/Store";
 import SolidStore from "../../framework/solid/Store";
 import SvelteStore from "../../framework/svelte/Store.svelte";
@@ -25,6 +26,7 @@ import styles from "../../styles/index.css?url";
         <div class="card-grid">
             <AngularStore client:load />
             <PreactStore client:only="preact" />
+            <QwikStore />
             <ReactStore client:only="react" />
             <SolidStore client:only="solid-js" />
             <SvelteStore client:only="svelte" />

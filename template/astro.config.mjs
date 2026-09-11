@@ -5,7 +5,9 @@ import react from "@astrojs/react";
 import solid from "@astrojs/solid-js";
 import svelte from "@astrojs/svelte";
 import vue from "@astrojs/vue";
+import qwikAstro from "@qwik.dev/astro";
 import { defineConfig } from "astro/config";
+import qwik from "islands-integrations/qwik";
 import twig from "islands-integrations/twig";
 import vanilla from "islands-integrations/vanilla";
 
@@ -46,6 +48,11 @@ export default defineConfig({
     vue({
       include: ["src/framework/vue/*"],
     }),
+    qwik(
+      qwikAstro({
+        include: ["src/framework/qwik/*"],
+      }),
+    ),
   ],
   server: {
     host: true,
@@ -65,6 +72,14 @@ export default defineConfig({
           },
         },
       },
+    },
+    // @qwik.dev/astro only defines __EXPERIMENTAL__.suspense, so Astro's
+    // prerender environment throws on Qwik's other compile-time feature flags.
+    // These are opt-in experimental features and stay disabled here.
+    define: {
+      "__EXPERIMENTAL__.each": "false",
+      "__EXPERIMENTAL__.errorBoundary": "false",
+      "__EXPERIMENTAL__.show": "false",
     },
     resolve: {
       alias: {

@@ -34,6 +34,8 @@
     "npm:@nanostores/vue@^1.1.0": "1.1.0_nanostores@1.5.2_vue@3.5.42__typescript@6.0.3_typescript@6.0.3",
     "npm:@playwright/test@1.62.1": "1.62.1",
     "npm:@preact/preset-vite@^2.10.6": "2.10.6_@babel+core@7.29.7_vite@8.2.2__@types+node@26.4.0__esbuild@0.28.2_@types+node@26.4.0_preact@10.29.8__preact-render-to-string@6.7.0_preact-render-to-string@6.7.0__preact@10.29.8",
+    "npm:@qwik.dev/astro@^1.1.0": "1.1.0_@qwik.dev+core@2.0.0-beta.42__prettier@3.9.6__vite@8.2.2___@types+node@26.4.0___esbuild@0.28.2__vitest@4.1.11___@types+node@26.4.0___happy-dom@20.12.0___vite@8.2.2____@types+node@26.4.0____esbuild@0.28.2_astro@7.2.10__@emnapi+core@1.11.3__@emnapi+runtime@1.11.3__@types+node@26.4.0_prettier@3.9.6_vite@8.2.2__@types+node@26.4.0__esbuild@0.28.2_vitest@4.1.11__@types+node@26.4.0__happy-dom@20.12.0__vite@8.2.2___@types+node@26.4.0___esbuild@0.28.2",
+    "npm:@qwik.dev/core@^2.0.0-beta.42": "2.0.0-beta.42_prettier@3.9.6_vite@8.2.2__@types+node@26.4.0__esbuild@0.28.2_vitest@4.1.11__@types+node@26.4.0__happy-dom@20.12.0__vite@8.2.2___@types+node@26.4.0___esbuild@0.28.2",
     "npm:@solidjs/testing-library@~0.8.10": "0.8.10_solid-js@1.9.15",
     "npm:@sveltejs/vite-plugin-svelte@^7.3.0": "7.3.0_svelte@5.57.0__@typescript-eslint+types@8.69.0_vite@8.2.2__@types+node@26.4.0__esbuild@0.28.2_@types+node@26.4.0_@typescript-eslint+types@8.69.0",
     "npm:@testing-library/angular@^19.4.2": "19.4.2_@angular+common@22.1.4__@angular+core@22.1.4___@angular+compiler@22.1.4___rxjs@7.8.2__rxjs@7.8.2__@angular+compiler@22.1.4_@angular+core@22.1.4__@angular+compiler@22.1.4__rxjs@7.8.2_@angular+platform-browser@22.1.4__@angular+animations@22.1.4___@angular+core@22.1.4____@angular+compiler@22.1.4____rxjs@7.8.2___@angular+compiler@22.1.4___rxjs@7.8.2__@angular+common@22.1.4___@angular+core@22.1.4____@angular+compiler@22.1.4____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@22.1.4__@angular+core@22.1.4___@angular+compiler@22.1.4___rxjs@7.8.2__@angular+compiler@22.1.4__rxjs@7.8.2_@angular+router@22.1.4__@angular+common@22.1.4___@angular+core@22.1.4____@angular+compiler@22.1.4____rxjs@7.8.2___rxjs@7.8.2___@angular+compiler@22.1.4__@angular+core@22.1.4___@angular+compiler@22.1.4___rxjs@7.8.2__@angular+platform-browser@22.1.4___@angular+animations@22.1.4____@angular+core@22.1.4_____@angular+compiler@22.1.4_____rxjs@7.8.2____@angular+compiler@22.1.4____rxjs@7.8.2___@angular+common@22.1.4____@angular+core@22.1.4_____@angular+compiler@22.1.4_____rxjs@7.8.2____rxjs@7.8.2____@angular+compiler@22.1.4___@angular+core@22.1.4____@angular+compiler@22.1.4____rxjs@7.8.2___@angular+compiler@22.1.4___rxjs@7.8.2__rxjs@7.8.2__@angular+animations@22.1.4___@angular+core@22.1.4____@angular+compiler@22.1.4____rxjs@7.8.2___@angular+compiler@22.1.4___rxjs@7.8.2__@angular+compiler@22.1.4_@testing-library+dom@10.4.1_@angular+animations@22.1.4__@angular+core@22.1.4___@angular+compiler@22.1.4___rxjs@7.8.2__@angular+compiler@22.1.4__rxjs@7.8.2_@angular+compiler@22.1.4_rxjs@7.8.2",
@@ -2431,6 +2433,33 @@
         "preact",
         "vite@8.2.2_@types+node@26.4.0_esbuild@0.28.2"
       ]
+    },
+    "@qwik.dev/astro@1.1.0_@qwik.dev+core@2.0.0-beta.42__prettier@3.9.6__vite@8.2.2___@types+node@26.4.0___esbuild@0.28.2__vitest@4.1.11___@types+node@26.4.0___happy-dom@20.12.0___vite@8.2.2____@types+node@26.4.0____esbuild@0.28.2_astro@7.2.10__@emnapi+core@1.11.3__@emnapi+runtime@1.11.3__@types+node@26.4.0_prettier@3.9.6_vite@8.2.2__@types+node@26.4.0__esbuild@0.28.2_vitest@4.1.11__@types+node@26.4.0__happy-dom@20.12.0__vite@8.2.2___@types+node@26.4.0___esbuild@0.28.2": {
+      "integrity": "sha512-LABx9febuhc5tm2yesoa0aK1USQOuiGi0l2oRff+RA6LpBFETcAX6bDMaFfPzvQF5QIcAm9AqilLMZz7Ok295w==",
+      "dependencies": [
+        "@qwik.dev/core",
+        "astro"
+      ]
+    },
+    "@qwik.dev/core@2.0.0-beta.42_prettier@3.9.6_vite@8.2.2__@types+node@26.4.0__esbuild@0.28.2_vitest@4.1.11__@types+node@26.4.0__happy-dom@20.12.0__vite@8.2.2___@types+node@26.4.0___esbuild@0.28.2": {
+      "integrity": "sha512-6IAANMo8CL+GWS3VPTWdSxYFeqjwLLCIEhcTWdTeg0Z9l/ycUvu3Q+Fy2Ppkv7QwtNBXgG/efnlICCqGUK+/4w==",
+      "dependencies": [
+        "@qwik.dev/optimizer",
+        "csstype",
+        "launch-editor",
+        "magic-string@0.30.21",
+        "prettier",
+        "vite@8.2.2_@types+node@26.4.0_esbuild@0.28.2",
+        "vitest@4.1.11_@types+node@26.4.0_happy-dom@20.12.0_vite@8.2.2__@types+node@26.4.0__esbuild@0.28.2"
+      ],
+      "optionalPeers": [
+        "prettier",
+        "vitest@4.1.11_@types+node@26.4.0_happy-dom@20.12.0_vite@8.2.2__@types+node@26.4.0__esbuild@0.28.2"
+      ],
+      "bin": true
+    },
+    "@qwik.dev/optimizer@2.1.0-beta.7": {
+      "integrity": "sha512-hF2dIRohnhX7V/GZc+OJYAB6DBbasGMVqY6MmfRPh0FfKlFsnLlhSkPw2OCiF4+CxpKj2CVBI6PjvtP9gD8CJg=="
     },
     "@rolldown/binding-android-arm-eabi@1.2.6": {
       "integrity": "sha512-b+jTcARdTiFLI6jB4a5XjTm0RWd6KcRfQj/I2356fxUZemiho9zQLxo0RtCuMDAyKcLo6cEltkgbQp6d1+sjjQ==",
@@ -5883,6 +5912,13 @@
     "kolorist@1.8.0": {
       "integrity": "sha512-Y+60/zizpJ3HRH8DCss+q95yr6145JXZo46OTpFvDZWLfRCE4qChOyk1b26nMaNpfHHgxagk9dXT5OP0Tfe+dQ=="
     },
+    "launch-editor@2.14.1": {
+      "integrity": "sha512-QWBrQsMpH7gPr965dsKD/3cKWiNoTjpATQf++Xq63N6sKRGMwlVXz41O1IZTMfZQgBctD/K5Zt06+/I6pP6+HA==",
+      "dependencies": [
+        "picocolors",
+        "shell-quote"
+      ]
+    },
     "levn@0.4.1": {
       "integrity": "sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==",
       "dependencies": [
@@ -7630,6 +7666,9 @@
     "shebang-regex@3.0.0": {
       "integrity": "sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A=="
     },
+    "shell-quote@1.10.0": {
+      "integrity": "sha512-w1aiOKwKuRgtwAReIIj89puqg+I7GvX4IbLrvmhXbzQsj1+Zwi4VO3+fa6ZF91TWSjIxoEkKnMeHcLEODK5ZXA=="
+    },
     "shiki@4.4.3": {
       "integrity": "sha512-Mb/GvXPHBAXdgGIcnfU5L3ldpn1XcxrGkPHwqgRx17/I2XRfqlFKk2vGkHWINn1kdXvzJZeuO3is6I9KLPFm0g==",
       "dependencies": [
@@ -8749,6 +8788,8 @@
         "npm:@nanostores/vue@^1.1.0",
         "npm:@playwright/test@1.62.1",
         "npm:@preact/preset-vite@^2.10.6",
+        "npm:@qwik.dev/astro@^1.1.0",
+        "npm:@qwik.dev/core@^2.0.0-beta.42",
         "npm:@solidjs/testing-library@~0.8.10",
         "npm:@sveltejs/vite-plugin-svelte@^7.3.0",
         "npm:@testing-library/angular@^19.4.2",
