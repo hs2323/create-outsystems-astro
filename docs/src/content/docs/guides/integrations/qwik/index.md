@@ -224,7 +224,7 @@ describe("MyComponent", () => {
 
 > `createDOM` renders into a document it creates itself rather than the test environment's document, so the `@testing-library/jest-dom` matchers used by the other frameworks do not apply. Assert on `textContent` instead.
 
-The Vitest project for Qwik registers Qwik's own Vite plugin so that `$` closures are transformed:
+The Vitest project for Qwik registers Qwik's own Vite plugin so that `$` closures are transformed. Its environment is happy-dom, wrapped in a thin custom environment so that the tests also run under Deno (see below):
 
 ```ts
 import { qwikVite } from "@qwik.dev/core/optimizer";
@@ -236,7 +236,7 @@ export default defineConfig({
       {
         plugins: [qwikVite()],
         test: {
-          environment: "happy-dom",
+          environment: "./test/environment-qwik.ts",
           globals: true,
           include: ["test/integration/qwik/**/*.test.tsx"],
           name: "qwik",
@@ -246,6 +246,33 @@ export default defineConfig({
     ],
   },
 });
+```
+
+Qwik's scheduler queues macro tasks through a `MessageChannel` and closes both ports when it tears that channel down. Under Deno the channel comes from the `node:worker_threads` polyfill, which dispatches its `close` event with whatever `Event` constructor is on `globalThis` — and happy-dom replaces that global. Deno then rejects its own event, and the Vitest worker dies mid-run with `Cannot set properties of undefined (setting 'target')`, taking the Qwik tests with it.
+
+`test/environment-qwik.ts` runs the happy-dom environment exactly as Vitest ships it and then puts the runtime's own `Event` back. Qwik renders into the document `createDOM()` creates for itself, so nothing in these tests needs happy-dom's `Event`:
+
+```ts
+import type { Environment } from "vitest/runtime";
+
+import { builtinEnvironments } from "vitest/runtime";
+
+const happyDom = builtinEnvironments["happy-dom"];
+
+const environment: Environment = {
+  name: "happy-dom-deno",
+  async setup(global, options) {
+    const NativeEvent = global.Event;
+    const { teardown } = await happyDom.setup(global, options);
+
+    global.Event = NativeEvent;
+
+    return { teardown };
+  },
+  viteEnvironment: "client",
+};
+
+export default environment;
 ```
 
 ### End-to-end tests

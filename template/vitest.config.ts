@@ -38,7 +38,7 @@ export default defineConfig(({ mode }) => ({
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         plugins: [qwikVite() as any],
         test: {
-          environment: "happy-dom",
+          environment: "./test/environment-qwik.ts",
           globals: true,
           include: ["test/integration/qwik/**/*.test.tsx"],
           name: "qwik",
