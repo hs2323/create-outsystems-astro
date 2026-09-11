@@ -240,8 +240,9 @@ function updateAstroConfig(projectDir, selectedFrameworks) {
     },
     qwik: {
       define: /[ \t]*\/\/ @qwik\.dev\/astro only defines[\s\S]*?define:\s*\{[\s\S]*?\},\n/,
-      import: /import\s+qwik\s+from\s+['"]@qwik\.dev\/astro['"];\s*\n?/,
-      integration: /\bqwik\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
+      // Qwik needs two imports: the Astro integration and our wrapper around it.
+      import: /import\s+(?:qwikAstro\s+from\s+['"]@qwik\.dev\/astro['"]|qwik\s+from\s+['"]islands-integrations\/qwik['"]);\s*\n?/g,
+      integration: /\bqwik\s*\(\s*qwikAstro\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*\)\s*,?\s*/
     },
     react: {
       import: /import\s+react\s+from\s+['"]@astrojs\/react['"];\s*\n?/,
