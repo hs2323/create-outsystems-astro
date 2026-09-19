@@ -19,7 +19,14 @@ function getRenderer(filtered: boolean): AstroRenderer {
 
 export const getContainerRenderer = (): AstroRenderer => getRenderer(false);
 
+export interface LoaderOptions {
+  assets?: string;
+  namespaces?: Record<string, string>;
+  root?: string;
+}
+
 export interface Options {
+  assets?: string;
   exclude?: string[];
   include?: string[];
   namespaces?: Record<string, string>;
@@ -49,13 +56,17 @@ function resolveIncludePath(
   if (!match) return path.resolve(dir, includePath);
 
   const [, name, rest] = match;
+  return path.resolve(resolveNamespace(name, namespaces), rest);
+}
+
+function resolveNamespace(name: string, namespaces: Namespaces): string {
   const base = namespaces[name];
   if (!base) {
     throw new Error(
       `Twig namespace "@${name}" is not configured. Add it to the \`namespaces\` option of the twig() integration.`,
     );
   }
-  return path.resolve(base, rest);
+  return base;
 }
 
 function twigFilterPlugin(include?: string[], exclude?: string[]) {
@@ -92,11 +103,57 @@ function applyContextScope(
   return `{% with ${vars}${onlyFlag} %}${body}{% endwith %}`;
 }
 
-function inlineIncludes(
+const ASSET_CALL = /\basset\(\s*(['"])([^'"]+)\1\s*\)/g;
+const ASSET_FUNCTION = /\basset\s*\(/;
+const ASSET_PLACEHOLDER = /@@islands-twig-asset:(\d+)@@/;
+const ASSET_VARIABLE = "__islandsTwigAsset";
+const RELATIVE_PATH = /^\.\.?\//;
+const TWIG_TAG = /\{\{[\s\S]*?\}\}|\{%[\s\S]*?%\}/g;
+
+interface TemplateContext {
+  assets: string[];
+  assetsDir: string;
+  namespaces: Namespaces;
+  onDependency?: (file: string) => void;
+}
+
+export function twigLoader(options: LoaderOptions = {}) {
+  const root = path.resolve(options.root ?? process.cwd());
+  const assetsDir = path.resolve(root, options.assets ?? "src");
+  const namespaces = normalizeNamespaces(options.namespaces, root);
+
+  return {
+    enforce: "pre" as const,
+    load(this: { addWatchFile?: (id: string) => void }, id: string) {
+      const filepath = id.split("?")[0];
+      if (!filepath.endsWith(".twig")) return;
+
+      const assets: string[] = [];
+      const source = compileTemplate(filepath, [], {
+        assets,
+        assetsDir,
+        namespaces,
+        onDependency: (target) => this.addWatchFile?.(target),
+      });
+      assets.forEach((asset) => this.addWatchFile?.(asset));
+
+      return {
+        code: createTemplateModule(
+          source,
+          assets,
+          path.dirname(path.resolve(filepath)),
+        ),
+        map: null,
+      };
+    },
+    name: "islands/twig/loader",
+  };
+}
+
+function compileTemplate(
   filepath: string,
   ancestors: string[],
-  namespaces: Namespaces,
-  onInclude?: (target: string) => void,
+  context: TemplateContext,
 ): string {
   const resolved = path.resolve(filepath);
   if (ancestors.includes(resolved)) {
@@ -109,22 +166,74 @@ function inlineIncludes(
   const dir = path.dirname(resolved);
   const trail = [...ancestors, resolved];
 
-  return source.replace(
+  const inlined = source.replace(
     INCLUDE_TAG,
     (_match, _quote, includePath, modifiers) => {
       const parsed = parseModifiers(modifiers);
-      const target = resolveIncludePath(includePath, dir, namespaces);
+      const target = resolveIncludePath(includePath, dir, context.namespaces);
       if (!fs.existsSync(target)) {
         if (parsed.ignoreMissing) return "";
         throw new Error(
           `Twig include "${includePath}" not found (referenced from ${resolved}).`,
         );
       }
-      onInclude?.(target);
-      const body = inlineIncludes(target, trail, namespaces, onInclude);
+      context.onDependency?.(target);
+      const body = compileTemplate(target, trail, context);
       return applyContextScope(body, parsed);
     },
   );
+
+  return inlineAssets(inlined, resolved, context);
+}
+
+function createTemplateModule(
+  source: string,
+  assets: string[],
+  dir: string,
+): string {
+  const imports = assets.map(
+    (asset, index) =>
+      `import ${ASSET_VARIABLE}${index} from ${JSON.stringify(toImportSpecifier(dir, asset))};`,
+  );
+  const template = source
+    .split(ASSET_PLACEHOLDER)
+    .map((part, index) =>
+      index % 2 === 0
+        ? JSON.stringify(part)
+        : `JSON.stringify(${ASSET_VARIABLE}${part})`,
+    )
+    .join(" + ");
+
+  return [...imports, `export default ${template};`].join("\n");
+}
+
+function inlineAssets(
+  source: string,
+  filepath: string,
+  context: TemplateContext,
+): string {
+  const dir = path.dirname(filepath);
+
+  return source.replace(TWIG_TAG, (tag) => {
+    const inlined = tag.replace(ASSET_CALL, (_match, _quote, assetPath) => {
+      const target = resolveAssetPath(assetPath, dir, context);
+      if (!fs.existsSync(target)) {
+        throw new Error(
+          `Twig asset "${assetPath}" not found (referenced from ${filepath}).`,
+        );
+      }
+      let index = context.assets.indexOf(target);
+      if (index === -1) index = context.assets.push(target) - 1;
+      return `@@islands-twig-asset:${index}@@`;
+    });
+
+    if (ASSET_FUNCTION.test(inlined)) {
+      throw new Error(
+        `Twig asset() only accepts a static quoted path (referenced from ${filepath}).`,
+      );
+    }
+    return inlined;
+  });
 }
 
 function parseModifiers(modifiers: string): IncludeModifiers {
@@ -140,37 +249,38 @@ function parseModifiers(modifiers: string): IncludeModifiers {
   return { ignoreMissing, only, withExpr: withExpr || undefined };
 }
 
-function twigLoaderPlugin(namespaces: Namespaces) {
-  return {
-    enforce: "pre" as const,
-    load(this: { addWatchFile?: (id: string) => void }, id: string) {
-      const filepath = id.split("?")[0];
-      if (!filepath.endsWith(".twig")) return;
-      const source = inlineIncludes(filepath, [], namespaces, (target) =>
-        this.addWatchFile?.(target),
-      );
-      return {
-        code: `export default ${JSON.stringify(source)};`,
-        map: null,
-      };
-    },
-    name: "islands/twig/loader",
-  };
+function resolveAssetPath(
+  assetPath: string,
+  dir: string,
+  { assetsDir, namespaces }: TemplateContext,
+): string {
+  const match = NAMESPACE_PATH.exec(assetPath);
+  if (match) {
+    const [, name, rest] = match;
+    return path.resolve(resolveNamespace(name, namespaces), rest);
+  }
+  if (RELATIVE_PATH.test(assetPath)) return path.resolve(dir, assetPath);
+  return path.resolve(assetsDir, assetPath.replace(/^\/+/, ""));
+}
+
+function toImportSpecifier(dir: string, target: string): string {
+  const relative = path.relative(dir, target).split(path.sep).join("/");
+  return `${relative.startsWith(".") ? relative : `./${relative}`}?url`;
 }
 
 export default function (options: Options = {}): AstroIntegration {
-  const { exclude, include, namespaces } = options;
+  const { assets, exclude, include, namespaces } = options;
   const filtered = !!(include?.length || exclude?.length);
 
   return {
     hooks: {
       "astro:config:setup": ({ addRenderer, config, updateConfig }) => {
         addRenderer(getRenderer(filtered));
-        const resolvedNamespaces = normalizeNamespaces(
+        const loader = twigLoader({
+          assets: assets ?? fileURLToPath(config.srcDir),
           namespaces,
-          fileURLToPath(config.root),
-        );
-        const loader = twigLoaderPlugin(resolvedNamespaces);
+          root: fileURLToPath(config.root),
+        });
         updateConfig({
           vite: {
             plugins: filtered

@@ -88,6 +88,17 @@ The framework folder should stay in place as the components will be rendered fro
 /** @jsxImportSource solid-js */
 ```
 
+#### Twig assets
+
+- A `.twig` component cannot run `import`s, so build-time assets are referenced with Twig's `asset()` function, the same one PHP's Twig provides:
+
+```twig
+<img alt="Logo" src="{{ asset('images/logo.png') }}" />
+```
+
+- The integration resolves each `asset()` call when the template is loaded and replaces it with the bundled asset URL, so the file is emitted and hashed like an asset imported from a framework component.
+- A plain path resolves from `src`, a `./` or `../` path resolves from the template that uses it, and an `@name/...` path resolves through the `namespaces` option of the `twig()` integration. The path must be a static, quoted string, so `asset(someVariable)` fails the build. Assets only known at runtime are still passed in as props.
+
 ### Parameters
 
 - Parameters are assigned as attributes on the component. Each framework will then handle them as incoming parameters.

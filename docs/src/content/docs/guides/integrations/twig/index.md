@@ -47,7 +47,37 @@ The renderer reads the `.twig` file's contents, compiles it with `Twig.twig({ da
 
 ### Importing assets
 
-Because a `.twig` file cannot run TypeScript `import`s, resolve build-time assets (such as image URLs) in the `.astro` page and pass them in as props:
+Twig's `asset()` function — the same one the Symfony Twig bridge provides in PHP — is supported. A `.twig` file cannot run TypeScript `import`s, so the integration resolves each `asset()` call at build time and replaces it with the bundled asset URL. The referenced file is emitted and hashed by Vite just like an asset imported from a framework component:
+
+```twig
+<img alt="Logo" src="{{ asset('images/logo.png') }}" />
+```
+
+Paths resolve like this:
+
+* A plain path (`images/logo.png`) resolves from the project's `src` directory, the way PHP's `asset()` resolves from the public directory. A leading `/` is optional, so `asset('/images/logo.png')` is the same path.
+* A relative path (`./logo.png`, `../images/logo.png`) resolves from the template that uses it, including when that template was pulled in by an `{% include %}`.
+* A namespaced path (`@name/logo.png`) resolves through the [`namespaces`](#namespaces) option, exactly as an include does.
+
+Change the base directory used for plain paths with the `assets` option:
+
+```js
+// astro.config.mjs
+import twig from "islands-integrations/twig";
+
+export default defineConfig({
+  integrations: [
+    twig({
+      assets: "./src/images",
+      include: ["src/framework/twig/*"],
+    }),
+  ],
+});
+```
+
+The resolved URL is substituted as a Twig string, so it can be used anywhere an expression is allowed — in `{{ }}`, in `{% set logo = asset('images/logo.png') %}`, or with a filter applied.
+
+Because the call is resolved at build time, the path has to be a static, quoted string. A dynamic path such as `asset(logoVariable)` fails the build, as does a path that points at a file that does not exist. Assets that are only known at runtime can still be resolved in the `.astro` page and passed in as props:
 
 ```twig
 {% if logo %}<img alt="Logo" src="{{ logo }}" />{% endif %}
@@ -63,6 +93,8 @@ export default function MyComponent(): string {
   return `<div class="my-component">{{ initialCount|default(0) }}</div>`;
 }
 ```
+
+`asset()` is not available in that case: the template string is built at runtime, after the build-time pass over `.twig` files has run. Import the asset in the `.ts` file and interpolate it into the template string instead.
 
 ### Includes
 
@@ -125,7 +157,6 @@ Import the `.twig` file, use `client:load` on the component in your `.astro` pag
 
 ```astro
 ---
-import Logo from "../../images/logo.png?url";
 import MyComponent from "../../framework/twig/MyComponent.twig";
 import styles from "../../styles/index.css?url";
 const initialCount = 5;
@@ -144,7 +175,6 @@ const showMessage = "showMessage";
     <MyComponent
       client:load
       initialCount={initialCount}
-      logo={Logo}
       showMessage={showMessage}
     >
     </MyComponent>
@@ -194,7 +224,34 @@ export default function MyComponent(): string {
 
 ### Integration tests
 
-Use `@testing-library/dom` directly. Import the raw template with Vite's `?raw` suffix, render it with `Twig.twig({ data }).render(props)` before setting `document.body.innerHTML`, then execute the scripts using `new Function` so they run in the test's global context:
+Register the integration's Vite loader on the Twig project in `vitest.config.ts` so tests see the same template the island renders, with `{% include %}` tags inlined and `asset()` paths resolved:
+
+```ts
+// vitest.config.ts
+import { twigLoader } from "islands-integrations/twig";
+import { defineConfig } from "vitest/config";
+
+export default defineConfig({
+  test: {
+    projects: [
+      {
+        plugins: [twigLoader()],
+        test: {
+          environment: "happy-dom",
+          globals: true,
+          include: ["test/integration/twig/**/*.test.ts"],
+          name: "twig",
+          setupFiles: ["test/setup-test-env.ts"],
+        },
+      },
+    ],
+  },
+});
+```
+
+`twigLoader()` takes the same `assets` and `namespaces` options as the integration, and resolves them from the directory Vitest runs in. The scaffolded `vitest.config.ts` casts the plugin with `as any`, as it does for the other framework plugins, because Vitest and Vite can resolve to different copies of the plugin types.
+
+Then use `@testing-library/dom` directly. Import the template with Vite's `?raw` suffix, render it with `Twig.twig({ data }).render(props)` before setting `document.body.innerHTML`, then execute the scripts using `new Function` so they run in the test's global context:
 
 ```ts
 import { fireEvent, screen } from "@testing-library/dom";

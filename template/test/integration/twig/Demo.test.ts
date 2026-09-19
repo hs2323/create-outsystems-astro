@@ -40,6 +40,18 @@ describe("Demo", () => {
     expect(screen.getByText("4")).toBeInTheDocument();
   });
 
+  it("renders the logos from the build time asset() paths", () => {
+    renderDemo({ initialCount: 5 });
+    expect(screen.getByAltText("OutSystems logo")).toHaveAttribute(
+      "src",
+      expect.stringMatching(/\/outsystems.*\.png$/),
+    );
+    expect(screen.getByAltText("Astro logo")).toHaveAttribute(
+      "src",
+      expect.stringMatching(/\/astro.*\.png$/),
+    );
+  });
+
   it("calls the show message function with the current count", () => {
     renderDemo({ initialCount: 5, showMessage: "mockFunction" });
     fireEvent.click(screen.getByRole("button", { name: "Send value" }));

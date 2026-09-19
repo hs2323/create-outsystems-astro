@@ -4,7 +4,9 @@
   Available props (passed as island attributes and used as the Twig context):
   - initialCount: starting counter value (default 0)
   - showMessage: name of a window handler to call with the current count
-  - outSystemsLogo / astroLogo: image URLs, passed in from the .astro page
+
+  Images are resolved at build time with Twig's `asset()` function, so the
+  template references them directly instead of taking them in as props.
 #}
 
 {% set count = initialCount|default(0) %}
@@ -41,8 +43,8 @@
     </div>
   </div>
   <div class="counter-logos">
-    {% if outSystemsLogo %}<img alt="OutSystems logo" src="{{ outSystemsLogo }}" />{% endif %}
-    {% if astroLogo %}<img alt="Astro logo" src="{{ astroLogo }}" />{% endif %}
+    <img alt="OutSystems logo" src="{{ asset('images/outsystems.png') }}" />
+    <img alt="Astro logo" src="{{ asset('images/astro.png') }}" />
   </div>
   <script>
     (function () {
