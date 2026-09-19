@@ -318,7 +318,7 @@ function updateMultiAstroPage(projectDir, selectedFrameworks) {
     },
     qwik: {
       import: /import\s+QwikStore\s+from\s+['"].*?qwik\/Store['"];?\s*\n?/g,
-      component: /<QwikStore\s*\/>\s*\n?/g
+      component: /<QwikStore\b[^>]*\/>\s*\n?/g
     },
     react: {
       import: /import\s+ReactStore\s+from\s+['"].*?react\/Store['"];?\s*\n?/g,
