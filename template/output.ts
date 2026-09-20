@@ -6,6 +6,9 @@ dotenv.config();
 
 const { html: beautifyHtml } = beautify;
 
+/** The output files whose contents can carry an asset path. */
+const ASSET_PATH_EXTENSIONS = [".html", ".js"];
+
 /**
  * Recursively deletes a directory.
  */
@@ -155,16 +158,32 @@ function keepAstroIslands(html: string): string {
   return islands.join("\n");
 }
 
-function prefixAssetPathsInFile(filePath: string) {
-  const ASSET_PATH = process.env.ASSET_PATH || "";
+function prefixAssetPathsInFile(filePath: string, assetPath: string) {
   let content = fs.readFileSync(filePath, "utf-8");
 
-  // Replace "/assets/..." inside string literals with prefixed path
-  // Match quotes + /assets/ at start of string
-  content = content.replace(/(["'`])\/assets\//g, `$1/${ASSET_PATH}/`);
+  // Replace "/assets/..." inside string literals and island attributes with
+  // the prefixed path. Match quotes + /assets/ at start of string
+  content = content.replace(/(["'`])\/assets\//g, `$1/${assetPath}/`);
 
   fs.writeFileSync(filePath, content, "utf-8");
   console.log(`Prefixed asset paths in ${filePath}`);
+}
+
+/**
+ * Rewrites the asset paths in everything that carries one: the island markup
+ * as well as the JavaScript it loads.
+ */
+function processAllAssetPaths(dir: string, assetPath: string) {
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+
+  for (const entry of entries) {
+    const fullPath = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      processAllAssetPaths(fullPath, assetPath);
+    } else if (ASSET_PATH_EXTENSIONS.some((ext) => entry.name.endsWith(ext))) {
+      prefixAssetPathsInFile(fullPath, assetPath);
+    }
+  }
 }
 
 /**
@@ -209,19 +228,6 @@ function processAllHTML(inputDir: string, outputDir: string): void {
   }
 }
 
-function processAllJsFiles(dir: string) {
-  const entries = fs.readdirSync(dir, { withFileTypes: true });
-
-  for (const entry of entries) {
-    const fullPath = path.join(dir, entry.name);
-    if (entry.isDirectory()) {
-      processAllJsFiles(fullPath);
-    } else if (entry.name.endsWith(".js")) {
-      prefixAssetPathsInFile(fullPath);
-    }
-  }
-}
-
 /**
  * Main function
  */
@@ -253,8 +259,13 @@ function processOutput() {
   console.log("📜 Copying JavaScript files...");
   copyAllJSFiles(inputDir, outputDir);
 
-  console.log("📜 Processing asset paths...");
-  processAllJsFiles("output");
+  const assetPath = process.env.ASSET_PATH || "";
+  if (assetPath) {
+    console.log("📜 Processing asset paths...");
+    processAllAssetPaths(outputDir, assetPath);
+  } else {
+    console.log("⏭️ Skipping asset paths: ASSET_PATH is not set in .env");
+  }
 
   console.log("✅ Done!");
 }
