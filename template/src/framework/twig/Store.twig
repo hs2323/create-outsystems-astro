@@ -1,14 +1,14 @@
 {#
   Twig store demo component, authored as a native .twig file.
 
-  Props:
-  - logo: the Twig logo URL, passed in from the .astro page
+  The logo is resolved at build time with Twig's `asset()` function, so no
+  props are needed.
 #}
 
 <div class="card unused">
   <strong>Twig Store</strong>
   <div class="card-content">
-    {% if logo %}<img alt="Twig logo" height="150" src="{{ logo }}" />{% endif %}
+    <img alt="Twig logo" height="150" src="{{ asset('images/twig.png') }}" />
     <div>
       <strong>Twig does not currently support Nano Stores.</strong>
     </div>

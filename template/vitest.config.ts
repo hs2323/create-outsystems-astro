@@ -5,6 +5,7 @@ import { qwikVite } from "@qwik.dev/core/optimizer";
 import { svelte } from "@sveltejs/vite-plugin-svelte";
 import react from "@vitejs/plugin-react";
 import vue from "@vitejs/plugin-vue";
+import { twigLoader } from "islands-integrations/twig";
 import solid from "vite-plugin-solid";
 import { defineConfig } from "vitest/config";
 
@@ -82,6 +83,10 @@ export default defineConfig(({ mode }) => ({
         },
       },
       {
+        // The Twig loader inlines `{% include %}` tags and resolves `asset()`
+        // paths, so tests see the same template the island renders.
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        plugins: [twigLoader() as any],
         test: {
           environment: "happy-dom",
           globals: true,

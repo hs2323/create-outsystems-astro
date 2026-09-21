@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Added Twig `asset()` support to resolve build-time asset paths in `.twig` templates.
 - Added Qwik integration.
 - Added dependency @nanostores/svelte-runes.
 - Added dependency cookie.
