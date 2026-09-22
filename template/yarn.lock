@@ -8855,13 +8855,13 @@ __metadata:
   linkType: hard
 
 "islands-integrations@file:./.integrations::locator=create-outsystems-astro%40workspace%3A.":
-  version: 0.12.0
-  resolution: "islands-integrations@file:./.integrations#./.integrations::hash=5d5eef&locator=create-outsystems-astro%40workspace%3A."
+  version: 0.13.0
+  resolution: "islands-integrations@file:./.integrations#./.integrations::hash=5961f4&locator=create-outsystems-astro%40workspace%3A."
   dependencies:
     "@qwik.dev/core": "npm:^2.0.0-beta.42"
     astro: "npm:^7.2.10"
     twig: "npm:^3.0.0"
-  checksum: 10c0/d67495411886fe3a6ed9fe9e2359426dc868ca0a816f5c18dfbd9a720d9d2bb5d05212e223be664eb5c3cb2a2c15719eda4a1a2d04ae1bece95f4e6a552fd016
+  checksum: 10c0/047791e1a084081ee50f04030c6eb74f64a90822fdd804f21b1f1ac31385016d7483ebd8cce375e34937afbd3eddfdccf0c4e9f591583aff98791e7f86ca9b32
   languageName: node
   linkType: hard
 

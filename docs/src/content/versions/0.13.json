@@ -30,16 +30,16 @@
               "link": "https://angular.dev/"
             },
             {
-              "label": "HTML",
-              "slug": "guides/integrations/html"
-            },
-            {
               "attrs": {
                 "rel": "noopener noreferrer",
                 "target": "_blank"
               },
               "label": "Preact",
               "link": "https://preactjs.com/"
+            },
+            {
+              "label": "Qwik",
+              "slug": "guides/integrations/qwik"
             },
             {
               "attrs": {
@@ -64,6 +64,14 @@
               },
               "label": "Svelte",
               "link": "https://svelte.dev/"
+            },
+            {
+              "label": "Twig",
+              "slug": "guides/integrations/twig"
+            },
+            {
+              "label": "Vanilla JS",
+              "slug": "guides/integrations/vanilla"
             },
             {
               "attrs": {
@@ -92,5 +100,6 @@
       ],
       "label": "Guides"
     }
-  ]
+  ],
+  "excluded": []
 }

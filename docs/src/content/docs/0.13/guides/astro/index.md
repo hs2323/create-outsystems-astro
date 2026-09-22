@@ -1,7 +1,7 @@
 ---
 title: Astro setup
 description: Setup Astro JavaScript project
-slug: 0.10/guides/astro
+slug: 0.13/guides/astro
 ---
 
 # Setup
@@ -9,11 +9,13 @@ slug: 0.10/guides/astro
 ## Current supported frameworks
 
 * [Angular](https://analogjs.org/docs/packages/astro-angular/overview)
-* [HTML](../../integrations/html/index.md)
 * [Preact](https://docs.astro.build/en/guides/integrations-guide/preact/)
+* [Qwik](../integrations/qwik/)
 * [React](https://docs.astro.build/en/guides/integrations-guide/react/)
 * [SolidJS](https://docs.astro.build/en/guides/integrations-guide/solid-js/)
 * [Svelte](https://docs.astro.build/en/guides/integrations-guide/svelte/)
+* [Twig](../../integrations/twig/index.md)
+* [Vanilla JS](../../integrations/vanilla/index.md)
 * [Vue](https://docs.astro.build/en/guides/integrations-guide/vue/)
 
 ## Getting started
@@ -66,6 +68,8 @@ This will create the generated files as well as an example component. You can de
 │           └── Counter.component.ts
 │       └── preact/
 │           └── Counter.tsx
+│       └── qwik/
+│           └── Counter.tsx
 │       └── react/
 │           └── Counter.tsx
 │       └── solid/
@@ -81,6 +85,8 @@ This will create the generated files as well as an example component. You can de
 │           └── angular-counter.astro
 │       └── preact/
 │           └── Counter.tsx
+│       └── qwik/
+│           └── qwik-counter.astro
 │       └── react/
 │           └── react-counter.astro
 │       └── solid/
@@ -106,6 +112,8 @@ Each page inside of the pages file should represent an Island that will be impor
 
 For any of the official frameworks (react, preact, solid-js, vue and svelte) you should pass client:only="\[FRAMEWORK]". See [Astro documentation](https://docs.astro.build/en/reference/directives-reference/) for client:only. For other fameworks, such as Angular, it should pass client:load or any other non specific famework.
 
+Qwik takes either `client:load`, which keeps server rendering and lets Qwik resume the container it emitted, or `client:only="@qwik.dev/astro"`, which renders it entirely on the client like the other JSX frameworks. See the [Qwik integration guide](../integrations/qwik/).
+
 ### Framework
 
 The location of the component code.
@@ -118,6 +126,12 @@ For JSX based frameworks, you must use the jsxImportSource header at the top of 
 
 ```js
 /** @jsxImportSource preact */
+```
+
+##### Qwik
+
+```js
+/** @jsxImportSource @qwik.dev/core */
 ```
 
 ##### React
@@ -433,6 +447,7 @@ The generator comes with unit, integration and testing built in. You can use the
 * [Angular Testing Library](https://testing-library.com/docs/angular-testing-library/intro/)
 * [DOM Testing Library](https://testing-library.com/docs/dom-testing-library/intro)
 * [Preact Testing Library](https://testing-library.com/docs/preact-testing-library/intro/)
+* [Qwik testing helpers](https://qwik.dev/docs/) (`createDOM` from `@qwik.dev/core/testing`)
 * [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 * [SolidJS Testing Library](https://testing-library.com/docs/solid-testing-library/intro/)
 * [Svelte Testing Library](https://testing-library.com/docs/svelte-testing-library/intro/)
