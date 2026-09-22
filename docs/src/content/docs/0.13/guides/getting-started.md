@@ -1,7 +1,7 @@
 ---
 title: Getting Started
 description: How to get started with OutSystems Astro Islands
-slug: 0.10/guides/getting-started
+slug: 0.13/guides/getting-started
 ---
 
 Generates [Astro Islands](https://docs.astro.build/en/concepts/islands/) for use in OutSystems that can create self contained interactive code elements from different frameworks. It allows an extension of the front-end with these dynamic libraries.
@@ -38,6 +38,7 @@ The following frameworks are currently compatible with the OutSystems Astro Isla
 
 * [Angular](https://analogjs.org/docs/packages/astro-angular/overview)
 * [Preact](https://docs.astro.build/en/guides/integrations-guide/preact/)
+* [Qwik](../integrations/qwik/)
 * [React](https://docs.astro.build/en/guides/integrations-guide/react/)
 * [Svelte](https://docs.astro.build/en/guides/integrations-guide/svelte/)
 * [Vue](https://docs.astro.build/en/guides/integrations-guide/vue/)
