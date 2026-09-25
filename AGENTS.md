@@ -17,17 +17,5 @@
 - While unique and custom functionality may be developed, a general use case will be for wrappers around pre-existing modules/libraries/components.
 
 ## Generator
-- The following other package managers/runtimes are supported:
-    - npm
-    - Yarn
-    - pnpm
-    - Bun
-    - Deno
-- The command to create a project in each
-    - npm: ```npx create-outsystems-astro```.
-    - Yarn: ```yarn create outsystems-astro```.
-    - pnpm: ```pnpm dlx create-outsystems-astro```.
-    - Bun: ```bunx create-outsystems-astro```.
-    - Deno (only available in Deno 2.6 and up): ```dx create-outsystems-astro```.
-- During setup, the startup script will determine which package manager was calling it and remove the other lock files.
+- npm is the only supported package manager. Create a project with ```npx create-outsystems-astro```.
 - During setup, the startup script will ask for which frameworks should be added. While many frameworks can be used/added, the recommendation is to use only one framework per project.

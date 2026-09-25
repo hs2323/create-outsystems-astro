@@ -7,13 +7,6 @@ import perfectionist from "eslint-plugin-perfectionist";
 import globals from "globals";
 import tseslint from "typescript-eslint";
 
-// Fix for Bun and eslint-plugin-perfectionist.
-if (!Array.prototype.toSorted) {
-  Array.prototype.toSorted = function (compareFn) {
-    return [...this].sort(compareFn);
-  };
-}
-
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   {

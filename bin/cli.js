@@ -26,14 +26,6 @@ const FRAMEWORKS = [
   { title: "Vue", value: "vue" }
 ];
 
-const LOCKFILES = {
-  npm: ["package-lock.json"],
-  yarn: ["yarn.lock"],
-  pnpm: ["pnpm-lock.yaml", "pnpm-workspace.yaml"],
-  bun: ["bun.lock"],
-  deno: ["deno.lock", "deno.json"]
-};
-
 // Reject names that would escape the current directory (path traversal),
 // resolve to an absolute path, or contain path separators / unsafe chars.
 function validateProjectName(name) {
@@ -92,9 +84,7 @@ async function main() {
   console.log("📦 Copying template...");
   copyDir(templateDir, targetDir);
 
-  const packageManager = packageInstall(targetDir);
-
-  selectWorkflowTestCI(targetDir, packageManager);
+  packageInstall(targetDir);
 
   let selectedFrameworks = [];
 
@@ -132,37 +122,18 @@ async function main() {
 
 Next steps:
   cd ${response.projectName}
-  ${packageManager} run dev
+  npm run dev
 `);
 }
 
 function buildIntegrations() {
   const integrationsDir = path.join(__dirname, "..", "integrations");
-  const packageManager = detectPackageManager();
-
-  const installCmd = {
-    npm: "npm install",
-    yarn: "yarn install",
-    pnpm: "pnpm install",
-    bun: "bun install",
-    deno: "deno install",
-    unknown: "npm install",
-  }[packageManager];
-
-  const buildCmd = {
-    npm: "npm run process",
-    yarn: "yarn process",
-    pnpm: "pnpm run process",
-    bun: "bun run process",
-    deno: "deno task process",
-    unknown: "npm run process",
-  }[packageManager];
 
   console.log("📦 Installing integration dependencies...");
-  execSync(installCmd, { cwd: integrationsDir, stdio: "inherit" });
+  execSync("npm install", { cwd: integrationsDir, stdio: "inherit" });
 
   console.log("🔨 Building integrations...");
-  execSync(buildCmd, { cwd: integrationsDir, stdio: "inherit" });
+  execSync("npm run process", { cwd: integrationsDir, stdio: "inherit" });
 }
 
 // Simple recursive copy
@@ -363,86 +334,16 @@ function updateMultiAstroPage(projectDir, selectedFrameworks) {
   console.log(`✨ Cleaned up components in ${path.relative(projectDir, pagePath)}`);
 }
 
-function selectWorkflowTestCI(projectDir, packageManager) {
-  const workflowDir = path.join(projectDir, '.github', 'workflows');
-  if (!fs.existsSync(workflowDir)) return;
-
-  const allPMs = ['npm', 'yarn', 'pnpm', 'bun', 'deno'];
-  const activePM = allPMs.includes(packageManager) ? packageManager : 'npm';
-
-  for (const pm of allPMs) {
-    if (pm === activePM) continue;
-    const file = path.join(workflowDir, `${pm}-test.yml`);
-    if (fs.existsSync(file)) {
-      fs.rmSync(file, { force: true });
-    }
-  }
-
-  const src = path.join(workflowDir, `${activePM}-test.yml`);
-  const dest = path.join(workflowDir, 'test.yml');
-  if (fs.existsSync(src)) {
-    fs.renameSync(src, dest);
-    console.log(`✅ Added .github/workflows/test.yml for ${activePM}`);
-  }
-}
-
-function detectPackageManager() {
-  if (typeof Deno !== "undefined") return "deno";
-
-  const ua = process.env.npm_config_user_agent || "";
-
-  if (ua.startsWith("npm/")) return "npm";
-  if (ua.startsWith("yarn/")) return "yarn";
-  if (ua.startsWith("pnpm/")) return "pnpm";
-  if (ua.startsWith("bun/")) return "bun";
-
-  return "unknown";
-}
-
-function cleanupLockfiles(projectDir, activePackageManager) {
-  for (const [packageManager, files] of Object.entries(LOCKFILES)) {
-    if (packageManager === activePackageManager) continue;
-
-    for (const file of files) {
-      const filePath = path.join(projectDir, file);
-      if (fs.existsSync(filePath)) {
-        fs.rmSync(filePath, { force: true });
-        console.log(`🗑️ Removed ${file}`);
-      }
-    }
-  }
-}
-
 function packageInstall(targetDir) {
-   try {
-      const packageManager = detectPackageManager();
-      console.log(`🧰 Detected package manager: ${packageManager}`);
-      
-      if (packageManager === "unknown") {
-        console.warn("⚠️ Could not detect package manager — keeping all lockfiles.");
-      } else {
-        cleanupLockfiles(targetDir, packageManager);
-      }
-
-      const installCmd = {
-        npm: "npm install",
-        yarn: "yarn install",
-        pnpm: "pnpm install",
-        bun: "bun install",
-        deno: "deno install && deno run postinstall:deno",
-        unknown: "npm install"
-      }[packageManager];
-
-      console.log(`📦 Installing dependencies using ${packageManager}...`);
-      execSync(installCmd, {
-        cwd: targetDir,
-        stdio: "inherit"
-      });
-
-      return packageManager
-   } catch {
-      console.warn("⚠️ Failed to automatically install dependencies.");
-    }
+  try {
+    console.log("📦 Installing dependencies using npm...");
+    execSync("npm install", {
+      cwd: targetDir,
+      stdio: "inherit"
+    });
+  } catch {
+    console.warn("⚠️ Failed to automatically install dependencies.");
+  }
 }
 
 main().catch(err => {
