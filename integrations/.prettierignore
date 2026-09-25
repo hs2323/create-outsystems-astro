@@ -1,15 +1,9 @@
 .github/
 .integrations/
 .prettierrc
-bun.lock
-deno.json
-deno.lock
 dist/
 node_modules/
 output/
 package-lock.json
 package.json
 patches/
-pnpm-lock.yaml
-pnpm-workspace.yaml
-yarn.lock

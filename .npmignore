@@ -5,13 +5,9 @@
 .github
 .idea/
 .vscode/
-.yarn
 CHANGELOG.md
 docs/
 node_modules/
 npm-debug.log*
-pnpm-debug.log*
 template/dist/
 template/output/
-yarn-debug.log*
-yarn-error.log*

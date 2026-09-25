@@ -21,36 +21,8 @@ description: Setup Astro JavaScript project
 
 Run the Create OutSystems Astro generator:
 
-### npm
-
 ```bash
 npx create-outsystems-astro
-```
-
-### Yarn
-
-```bash
-yarn create outsystems-astro
-```
-
-### pnpm
-
-```bash
-pnpm dlx create-outsystems-astro
-```
-
-### Bun
-
-```bash
-bunx create-outsystems-astro
-```
-
-### Deno
-
-The Deno DX command is available in [Deno 2.6](https://deno.com/blog/v2.6).
-
-```bash
-dx create-outsystems-astro
 ```
 
 Select the framework(s) that you would like to include as part of your project.
@@ -152,8 +124,6 @@ Stylesheets that may apply to the component.
 
 All commands are run from the root of the project, from a terminal, based on your package manager:
 
-### npm
-
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
 | `npm install`             | Installs dependencies                            |
@@ -163,54 +133,6 @@ All commands are run from the root of the project, from a terminal, based on you
 | `npm run preview`         | Preview build locally, before creating output    |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-### Yarn
-
-| Command                    | Action                                           |
-| :------------------------- | :----------------------------------------------- |
-| `yarn install`             | Installs dependencies                            |
-| `yarn run dev`             | Starts local dev server at `localhost:4321`      |
-| `yarn run build`           | Build distribution to `./dist/`                  |
-| `yarn run output`          | Build OutSystems production site to `./output/`  |
-| `yarn run preview`         | Preview build locally, before creating output    |
-| `yarn run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `yarn run astro -- --help` | Get help using the Astro CLI                     |
-
-### pnpm
-
-| Command                    | Action                                           |
-| :------------------------- | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm run dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm run build`           | Build distribution to `./dist/`                  |
-| `pnpm run output`          | Build OutSystems production site to `./output/`  |
-| `pnpm run preview`         | Preview build locally, before creating output    |
-| `pnpm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm run astro -- --help` | Get help using the Astro CLI                     |
-
-### Bun
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
-| `bun run dev`             | Starts local dev server at `localhost:4321`      |
-| `bun run build`           | Build distribution to `./dist/`                  |
-| `bun run output:bun`      | Build OutSystems production site to `./output/`  |
-| `bun run preview`         | Preview build locally, before creating output    |
-| `bun run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun run astro -- --help` | Get help using the Astro CLI                     |
-
-### Deno
-
-| Command                               | Action                                           |
-| :------------------------------------ | :----------------------------------------------- |
-| `deno install && deno run postinstall` | Installs dependencies                            |
-| `deno run dev`                        | Starts local dev server at `localhost:4321`      |
-| `deno run build`                      | Build distribution to `./dist/`                  |
-| `deno run output:deno`                | Build OutSystems production site to `./output/`  |
-| `deno run preview`                    | Preview build locally, before creating output    |
-| `deno run astro ...`                  | Run CLI commands like `astro add`, `astro check` |
-| `deno run astro -- --help`            | Get help using the Astro CLI                     |
 
 ## Parameters
 
@@ -443,8 +365,6 @@ The integration tests are placed in the `test/integration` folder. This tests th
 - [Playwright](https://playwright.dev/)
   The end-to-end tests are placed in the `test/e2e` folder. This tests build the project and then runs a server preview. Playwright will launch a browser and test the page and components. To get started, install the Playwright browsers and necessary dependencies.
 
-### npm
-
 | Command                    | Action                                       |
 | :------------------------- | :------------------------------------------- |
 | `npm run test`             | Run unit and integration tests               |
@@ -452,119 +372,22 @@ The integration tests are placed in the `test/integration` folder. This tests th
 | `npm run test:e2e`         | Run the end-to-end tests                     |
 | `npm run test:e2e:ui`      | Run the end-to-end tests in UI mode          |
 
-### Yarn
-
-| Command                     | Action                                       |
-| :-------------------------- | :------------------------------------------- |
-| `yarn run test`             | Run unit and integration tests               |
-| `yarn run test:e2e:install` | Install Playwright browsers and dependencies |
-| `yarn run test:e2e`         | Run the end-to-end tests                     |
-| `yarn run test:e2e:ui`      | Run the end-to-end tests in UI mode          |
-
-### pnpm
-
-| Command                     | Action                                       |
-| :-------------------------- | :------------------------------------------- |
-| `pnpm run test`             | Run unit and integration tests               |
-| `pnpm run test:e2e:install` | Install Playwright browsers and dependencies |
-| `pnpm run test:e2e`         | Run the end-to-end tests                     |
-| `pnpm run test:e2e:ui`      | Run the end-to-end tests in UI mode          |
-
-### Bun
-
-For end-to-end tests, the Bun Playwright configuration is currently not working.
-| Command | Action |
-| :------------------------ | :----------------------------------------------- |
-| `bun run test` | Run unit and integration tests |
-| `bun run test:e2e:install`| Install Playwright browsers and dependencies |
-| `bun run test:e2e:bun` | Run the end-to-end tests |
-| `bun run test:e2e:ui:bun` | Run the end-to-end tests in UI mode |
-
-### Deno
-
-| Command                     | Action                                       |
-| :-------------------------- | :------------------------------------------- |
-| `deno run test`             | Run unit and integration tests               |
-| `deno run test:e2e:install` | Install Playwright browsers and dependencies |
-| `deno run test:e2e:deno`    | Run the end-to-end tests                     |
-| `deno run test:e2e:ui:deno` | Run the end-to-end tests in UI mode          |
-
 ## Format
 
 - [Prettier](https://prettier.io/)
   Formatting sets the guidelines for the code styles. The rules are able to be updated in the `.prettierrc` file.
-
-### npm
 
 | Command                | Action                          |
 | :--------------------- | :------------------------------ |
 | `npm run format`       | Run format check                |
 | `npm run format:write` | Run format check and fix issues |
 
-### Yarn
-
-| Command                 | Action                          |
-| :---------------------- | :------------------------------ |
-| `yarn run format`       | Run format check                |
-| `yarn run format:write` | Run format check and fix issues |
-
-### pnpm
-
-| Command                 | Action                          |
-| :---------------------- | :------------------------------ |
-| `pnpm run format`       | Run format check                |
-| `pnpm run format:write` | Run format check and fix issues |
-
-### Bun
-
-| Command                | Action                          |
-| :--------------------- | :------------------------------ |
-| `bun run format`       | Run format check                |
-| `bun run format:write` | Run format check and fix issues |
-
-### Deno
-
-| Command                 | Action                          |
-| :---------------------- | :------------------------------ |
-| `deno run format`       | Run format check                |
-| `deno run format:write` | Run format check and fix issues |
-
 ## Lint
 
 - [ESLint](https://prettier.io/)
   Linting sets the guidelines and finds errors, bugs and issues. The configuration is set in `eslint.config.mjs`.
 
-### npm
-
 | Command            | Action                    |
 | :----------------- | :------------------------ |
 | `npm run lint`     | Run linter                |
 | `npm run lint:fix` | Run linter and fix issues |
-
-### Yarn
-
-| Command             | Action                    |
-| :------------------ | :------------------------ |
-| `yarn run lint`     | Run linter                |
-| `yarn run lint:fix` | Run linter and fix issues |
-
-### pnpm
-
-| Command             | Action                    |
-| :------------------ | :------------------------ |
-| `pnpm run lint`     | Run linter                |
-| `pnpm run lint:fix` | Run linter and fix issues |
-
-### Bun
-
-| Command            | Action                    |
-| :----------------- | :------------------------ |
-| `bun run lint`     | Run linter                |
-| `bun run lint:fix` | Run linter and fix issues |
-
-### Deno
-
-| Command             | Action                    |
-| :------------------ | :------------------------ |
-| `deno run lint`     | Run linter                |
-| `deno run lint:fix` | Run linter and fix issues |

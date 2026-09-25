@@ -24,13 +24,6 @@ import tseslint from "typescript-eslint";
 
 import svelteConfig from "./svelte.config.js";
 
-// Fix for Bun and eslint-plugin-perfectionist.
-if (!Array.prototype.toSorted) {
-  Array.prototype.toSorted = function (compareFn) {
-    return [...this].sort(compareFn);
-  };
-}
-
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   {
