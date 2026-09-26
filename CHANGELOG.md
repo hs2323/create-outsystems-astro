@@ -7,6 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Added @typescript/native for TypeScript 7 support.
+
+### Changed
+- Updated integrations dependency typescript-eslint to 8.70.0.
+- Changes integrations dependency typescript to point to @typescript/typescript6 for TypeScript 6 compatibility.
+- Updated integrations dependency prettier to 3.9.8.
+- Updated integrations dependency globals to 17.12.0.
+- Updated integrations dependency eslint-plugin-perfectionist to 5.11.1.
+- Changed from eslint-plugin-import to estlint-plugin-import-x due to ESLint 10 compatibility.
+- Updated integrations dependency eslint-plugin-astro to 3.2.1.
+- Updated integrations dependency eslint to 10.11.0.
+- Updated integrations dependency astro to 7.3.3.
+- Updated integrations dependency @types/node to 26.6.2.
+- Updated integrations dependency @eslint/js to 10.0.1.
+- Updated integrations dependency @eslint/compat to 2.1.1.
+
 ### Removed
 - Removed Deno package manager support.
 - Removed Bun package manager support.
