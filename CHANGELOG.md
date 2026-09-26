@@ -7,7 +7,79 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Added dependency eslint-plugin-qwik.
+- Added dependency @typescript/native for TypeScript 7 support.
+- Added integrations dependency @typescript/native for TypeScript 7 support.
+
+### Changed
+- Updated dependency vue to 3.5.43.
+- Updated dependency vite to 8.3.0.
+- Updated dependency typescript-eslint to 8.70.0.
+- Changed dependency typescript to point to @typescript/typescript6 for TypeScript 6 compatibility.
+- Updated dependency svelte to 5.57.1.
+- Updated dependency react-dom to 19.3.0.
+- Updated dependency react to 19.3.0.
+- Updated dependency prettier to 3.9.8.
+- Updated dependency nanostores to 1.5.3.
+- Updated dependency happy-dom to 20.14.5.
+- Updated dependency globals to 17.12.0.
+- Updated dependency eslint-plugin-vue to 10.11.0.
+- Updated dependency eslint-plugin-solid to 0.18.0.
+- Updated dependency eslint-plugin-playwright to 2.12.0.
+- Changed dependency eslint-plugin-import to eslint-plugin-import-x due to ESLint 10 compatibility.
+- Updated dependency eslint-plugin-astro to 3.2.1.
+- Updated dependency eslint to 10.11.0.
+- Updated dependency dotenv to 18.0.1.
+- Updated dependency astro to 7.3.3.
+- Updated dependency angular-eslint to 22.5.0.
+- Updated dependency @vitejs/plugin-vue to 6.0.9.
+- Updated dependency @types/react-dom to 19.3.0.
+- Updated dependency @types/react to 19.3.0.
+- Updated dependency @types/node to 26.6.2.
+- Updated dependency @testing-library/user-event to 14.6.7.
+- Updated dependency @testing-library/dom to 10.4.2.
+- Updated dependency @testing-library/angular to 19.5.0.
+- Updated dependency @qwik.dev/core to 2.0.0-beta.43.
+- Updated dependency @qwik.dev/astro to 1.2.0.
+- Updated dependency @playwright/test to 1.63.0.
+- Updated dependency @nanostores/react to 2.0.1.
+- Updated dependency @eslint/js to 10.0.1.
+- Updated dependency @eslint/eslintrc to 3.3.7.
+- Updated dependency @eslint/compat to 2.1.1.
+- Updated dependency @astrojs/react to 6.0.6.
+- Updated dependency @angular/router to 22.1.7.
+- Updated dependency @angular/platform-server to 22.1.7.
+- Updated dependency @angular/platform-browser to 22.1.7.
+- Updated dependency @angular/language-service to 22.1.7.
+- Updated dependency @angular/core to 22.1.7.
+- Updated dependency @angular/compiler-cli to 22.1.7.
+- Updated dependency @angular/compiler to 22.1.7.
+- Updated dependency @angular/common to 22.1.7.
+- Updated dependency @angular/cli to 22.1.8.
+- Updated dependency @angular/build to 22.1.8.
+- Updated dependency @angular/animations to 22.1.7.
+- Updated dependency @angular-devkit/schematics to 22.1.8.
+- Updated dependency @angular-devkit/architect to 0.2201.8.
+- Updated dependency @analogjs/vitest-angular to 2.7.2.
+- Updated dependency @analogjs/vite-plugin-angular to 2.7.2.
+- Updated dependency @analogjs/astro-angular to 2.7.2.
+- Updated integrations dependency typescript-eslint to 8.70.0.
+- Changes integrations dependency typescript to point to @typescript/typescript6 for TypeScript 6 compatibility.
+- Updated integrations dependency prettier to 3.9.8.
+- Updated integrations dependency globals to 17.12.0.
+- Updated integrations dependency eslint-plugin-perfectionist to 5.11.1.
+- Changed from eslint-plugin-import to estlint-plugin-import-x due to ESLint 10 compatibility.
+- Updated integrations dependency eslint-plugin-astro to 3.2.1.
+- Updated integrations dependency eslint to 10.11.0.
+- Updated integrations dependency astro to 7.3.3.
+- Updated integrations dependency @types/node to 26.6.2.
+- Updated integrations dependency @eslint/js to 10.0.1.
+- Updated integrations dependency @eslint/compat to 2.1.1.
+
 ### Removed
+- Removed dependency eslint-plugin-react due to ESLint 10 incompatibility.
+- Removed dependency eslint-config-preact due to ESLint 10 incompatibility.
 - Removed Deno package manager support.
 - Removed Bun package manager support.
 - Removed pnpm package manager support.

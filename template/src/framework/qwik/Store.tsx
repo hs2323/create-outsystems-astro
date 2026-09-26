@@ -8,7 +8,7 @@ export default component$(() => {
     <div class="card unused">
       <strong>Qwik Store</strong>
       <div class="card-content">
-        <img alt="Qwik logo" height={150} src={QwikLogo} />
+        <img alt="Qwik logo" height={150} src={QwikLogo} width={146} />
         <div>
           <strong>Qwik does not currently support Nano Stores.</strong>
         </div>

@@ -1,6 +1,6 @@
 /** @jsxImportSource react */
 import { act, fireEvent, render, screen } from "@testing-library/react";
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 import React from "react";
 import { it, vi } from "vitest";
 

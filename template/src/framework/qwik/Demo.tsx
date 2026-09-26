@@ -76,8 +76,13 @@ export default component$<DemoProps>(({ initialCount, showMessage }) => {
         </div>
       </div>
       <div class="counter-logos">
-        <img alt="OutSystems logo" src={OutSystemsLogo} />
-        <img alt="Astro logo" src={AstroLogo} />
+        <img
+          alt="OutSystems logo"
+          height={100}
+          src={OutSystemsLogo}
+          width={400}
+        />
+        <img alt="Astro logo" height={220} src={AstroLogo} width={784} />
       </div>
     </>
   );

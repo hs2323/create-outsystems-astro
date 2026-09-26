@@ -2,15 +2,16 @@ import { fixupPluginRules } from "@eslint/compat";
 import pluginJs from "@eslint/js";
 import markdown from "@eslint/markdown";
 import angular from "angular-eslint";
-import preactConfig from "eslint-config-preact";
+// import preactConfig from "eslint-config-preact";
 import eslintConfigPrettier from "eslint-config-prettier";
 import eslintPluginAstro from "eslint-plugin-astro";
-import importPlugin from "eslint-plugin-import";
+import importPlugin from "eslint-plugin-import-x";
 import pluginJest from "eslint-plugin-jest";
 import pluginJestDom from "eslint-plugin-jest-dom";
 import perfectionist from "eslint-plugin-perfectionist";
 import playwright from "eslint-plugin-playwright";
-import pluginReact from "eslint-plugin-react";
+import { qwikEslint9Plugin } from "eslint-plugin-qwik";
+// import pluginReact from "eslint-plugin-react";
 import pluginReactHooks from "eslint-plugin-react-hooks";
 import solid from "eslint-plugin-solid";
 import svelte from "eslint-plugin-svelte";
@@ -19,8 +20,6 @@ import pluginVue from "eslint-plugin-vue";
 import globals from "globals";
 import svelteParser from "svelte-eslint-parser";
 import tseslint from "typescript-eslint";
-
-// 1. Import the Preact config normally
 
 import svelteConfig from "./svelte.config.js";
 
@@ -43,24 +42,30 @@ export default [
     ...playwright.configs["flat/recommended"],
     files: ["test/e2e/**/*.{js,mjs,cjs,ts,jsx,tsx,md}"],
   },
-  { languageOptions: { globals: { ...globals.browser, ...globals.node } } },
-  pluginJs.configs.recommended,
-  ...tseslint.configs.recommended,
-  ...eslintPluginAstro.configs.recommended,
   {
-    ...pluginReact.configs.flat.recommended,
-    ...pluginReact.configs.flat["jsx-runtime"],
-    files: [
-      "src/framework/react/**/*.{js,ts,jsx,tsx}",
-      "test/integration/react/**/*.{js,ts,jsx,tsx}",
-    ],
-    settings: {
-      react: {
-        version: "detect",
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.node,
       },
     },
   },
-  // ... rest of your config remains identical
+  pluginJs.configs.recommended,
+  ...tseslint.configs.recommended,
+  ...eslintPluginAstro.configs.recommended,
+  // {
+  //   ...pluginReact.configs.flat.recommended,
+  //   ...pluginReact.configs.flat["jsx-runtime"],
+  //   files: [
+  //     "src/framework/react/**/*.{js,ts,jsx,tsx}",
+  //     "test/integration/react/**/*.{js,ts,jsx,tsx}",
+  //   ],
+  //   settings: {
+  //     react: {
+  //       version: "detect",
+  //     },
+  //   },
+  // },
   {
     files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
     plugins: {
@@ -186,42 +191,51 @@ export default [
       },
     },
   })),
-  {
-    files: ["src/framework/preact/**/*.{js,ts,jsx,tsx}"],
-    languageOptions: {
-      globals: {
-        ...globals.browser,
-      },
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-    },
-    rules: {
-      ...preactConfig.rules,
-    },
-    settings: {
-      react: {
-        version: "19.0",
-      },
-    },
-  },
+  // {
+  //   files: ["src/framework/preact/**/*.{js,ts,jsx,tsx}"],
+  //   languageOptions: {
+  //     globals: {
+  //       ...globals.browser,
+  //     },
+  //     parserOptions: {
+  //       ecmaFeatures: {
+  //         jsx: true,
+  //       },
+  //     },
+  //   },
+  //   rules: {
+  //     ...preactConfig.rules,
+  //   },
+  //   settings: {
+  //     react: {
+  //       version: "19.0",
+  //     },
+  //   },
+  // },
   {
     ...solid.configs["flat/recommended"],
     files: ["src/framework/solid/**/*.{js,ts,jsx,tsx}"],
   },
+  ...qwikEslint9Plugin.configs.recommended.map((config) => ({
+    ...config,
+    files: [
+      "src/framework/qwik/**/*.{js,ts,jsx,tsx}",
+      "test/integration/qwik/**/*.{js,ts,jsx,tsx}",
+    ],
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
+  })),
   {
     files: [
       "src/framework/qwik/**/*.{js,ts,jsx,tsx}",
       "test/integration/qwik/**/*.{js,ts,jsx,tsx}",
     ],
     rules: {
-      // Qwik's `useSignal` and friends look like React hooks, but they are
-      // called inside a `component$()` callback.
       "react-hooks/rules-of-hooks": "off",
-      // Qwik's `createDOM()` test helper hands back a host element to query
-      // instead of Testing Library queries.
       "testing-library/no-node-access": "off",
     },
   },
