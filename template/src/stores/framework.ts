@@ -1,6 +1,13 @@
 import { atom } from "nanostores";
 
 export type CurrentSelectedFramework =
-  "" | "Preact" | "React" | "Solid" | "Svelte" | "VanillaJS" | "Vue";
+  | ""
+  | "Alpine.js"
+  | "Preact"
+  | "React"
+  | "Solid"
+  | "Svelte"
+  | "VanillaJS"
+  | "Vue";
 
 export const framework = atom<CurrentSelectedFramework>("");

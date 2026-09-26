@@ -13,6 +13,15 @@ export default defineConfig(({ mode }) => ({
   test: {
     projects: [
       {
+        test: {
+          environment: "happy-dom",
+          globals: true,
+          include: ["test/integration/alpine/**/*.test.ts"],
+          name: "alpine",
+          setupFiles: ["test/setup-test-env.ts"],
+        },
+      },
+      {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         plugins: [angular({ tsconfig: "tsconfig.spec.json" }) as any],
         test: {

@@ -30,6 +30,7 @@ export default defineConfig({
             },
             {
               items: [
+                { label: "Alpine.js", slug: "guides/integrations/alpine" },
                 {
                   attrs: externalLinkAttributes,
                   label: "Angular",
