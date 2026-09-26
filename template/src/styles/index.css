@@ -29,6 +29,7 @@
 
 .counter-logos img {
   width: 150px;
+  height: auto;
 }
 
 .card {
