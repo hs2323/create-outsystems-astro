@@ -15,6 +15,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const FRAMEWORKS = [
+  { title: "Alpine.js", value: "alpine" },
   { title: "Angular", value: "angular" },
   { title: "Preact", value: "preact" },
   { title: "Qwik", value: "qwik" },
@@ -201,6 +202,10 @@ function updateAstroConfig(projectDir, selectedFrameworks) {
   let content = fs.readFileSync(configPath, "utf-8");
 
   const allFrameworks = {
+    alpine: {
+      import: /import\s+alpine\s+from\s+['"]islands-integrations\/alpine['"];\s*\n?/,
+      integration: /\balpine\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
+    },
     angular: {
       import: /import\s+angular\s+from\s+['"]@analogjs\/astro-angular['"];\s*\n?/,
       integration: /angular\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
@@ -279,6 +284,10 @@ function updateMultiAstroPage(projectDir, selectedFrameworks) {
 
   // Map each framework to its specific Import and Component tag patterns
   const frameworkMap = {
+    alpine: {
+      import: /import\s+AlpineStore\s+from\s+['"].*?alpine\/Store['"];?\s*\n?/g,
+      component: /<AlpineStore\s+client:load\s*\/>\s*\n?/g
+    },
     angular: {
       import: /import\s+AngularStore\s+from\s+['"].*?angular\/Store\.component['"];?\s*\n?/g,
       component: /<AngularStore\s+client:load\s*\/>\s*\n?/g

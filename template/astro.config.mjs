@@ -7,6 +7,7 @@ import svelte from "@astrojs/svelte";
 import vue from "@astrojs/vue";
 import qwikAstro from "@qwik.dev/astro";
 import { defineConfig } from "astro/config";
+import alpine from "islands-integrations/alpine";
 import qwik from "islands-integrations/qwik";
 import twig from "islands-integrations/twig";
 import vanilla from "islands-integrations/vanilla";
@@ -18,6 +19,9 @@ export default defineConfig({
     inlineStylesheets: "always",
   },
   integrations: [
+    alpine({
+      include: ["src/framework/alpine/*"],
+    }),
     angular({
       vite: {
         transformFilter: (_code, id) => {

@@ -12,6 +12,7 @@ Generates [Astro Islands](https://docs.astro.build/en/concepts/islands/) for use
 - Loading performance of component must be instant. The Astro Island will load after the page/screen has loaded since the initializer and tag will be loaded after.
 
 ## Current supported frameworks
+- [Alpine.js](https://hs2323.github.io/create-outsystems-astro/guides/integrations/alpine/)
 - [Angular](https://analogjs.org/docs/packages/astro-angular/overview)
 - [Preact](https://docs.astro.build/en/guides/integrations-guide/preact/)
 - [Qwik](https://qwik.dev/docs/integrations/astro/)

@@ -17,12 +17,14 @@
   },
   "dependencies": {
     "@qwik.dev/core": "^2.0.0-beta.43",
+    "alpinejs": "^3.17.3",
     "astro": "^7.3.3",
     "twig": "^3.0.0"
   },
   "devDependencies": {
     "@eslint/compat": "^2.1.1",
     "@eslint/js": "^10.0.1",
+    "@types/alpinejs": "^3.13.11",
     "@types/node": "^26.6.2",
     "@types/twig": "^1.12.17",
     "@typescript/native": "npm:typescript@^7.0.2",

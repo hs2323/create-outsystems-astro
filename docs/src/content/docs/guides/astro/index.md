@@ -7,6 +7,7 @@ description: Setup Astro JavaScript project
 
 ## Current supported frameworks
 
+- [Alpine.js](../integrations/alpine/)
 - [Angular](https://analogjs.org/docs/packages/astro-angular/overview)
 - [Preact](https://docs.astro.build/en/guides/integrations-guide/preact/)
 - [Qwik](../integrations/qwik/)
@@ -35,6 +36,8 @@ This will create the generated files as well as an example component. You can de
 /
 ├── src/
 │   └── framework/
+│       └── alpine/
+│           └── Counter.ts
 │       └── angular/
 │           └── Counter.component.ts
 │       └── preact/
@@ -52,6 +55,8 @@ This will create the generated files as well as an example component. You can de
 │   └── images/
 │       └── image.png
 │   └── pages/
+│       └── alpine/
+│           └── alpine-counter.astro
 │       └── angular/
 │           └── angular-counter.astro
 │       └── preact/
@@ -83,6 +88,8 @@ Each page inside of the pages file should represent an Island that will be impor
 For any of the official frameworks (react, preact, solid-js, vue and svelte) you should pass client:only="[FRAMEWORK]". See [Astro documentation](https://docs.astro.build/en/reference/directives-reference/) for client:only. For other fameworks, such as Angular, it should pass client:load or any other non specific famework.
 
 Qwik takes either `client:load`, which keeps server rendering and lets Qwik resume the container it emitted, or `client:only="@qwik.dev/astro"`, which renders it entirely on the client like the other JSX frameworks. See the [Qwik integration guide](../integrations/qwik/).
+
+Alpine.js takes `client:load`. Its renderer returns no server markup, so the island is rendered entirely on the client. See the [Alpine.js integration guide](../integrations/alpine/).
 
 ### Framework
 

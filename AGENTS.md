@@ -5,6 +5,7 @@
 - This is not an Astro project that will be deployed on its own. It is only used for the output generation.
 - The output generation will be only client side. No server side rendering or server side components will be used.
 - The Astro Islands can be used generated with the following frameworks:
+    - Alpine.js
     - Angular
     - Preact
     - Qwik

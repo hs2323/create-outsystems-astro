@@ -5,6 +5,7 @@
 - This is not an Astro project that will be deployed on its own. It is only used for the output generation.
 - The output generation will be only client side. No server side rendering or server side components will be used.
 - The Astro Islands can be used generated with the following frameworks:
+  - Alpine.js - Documentation available at https://hs2323.github.io/create-outsystems-astro/guides/integrations/alpine/
   - Angular - Documentation available at https://analogjs.org/docs/packages/astro-angular/overview
   - Preact - Documentation available at https://docs.astro.build/en/guides/integrations-guide/preact/
   - Qwik - Documentation available at https://hs2323.github.io/create-outsystems-astro/guides/integrations/qwik/
@@ -40,6 +41,7 @@ In OutSystems Developer Cloud, the Islands library is available at https://www.o
 
 - The files in src/pages/\*.astro are used as a starting point and holds the components for generation. They can be tested by running `npm run dev`. That will show what the component looks like as rendered. The sample example pages are broken out by framework name (src/pages/react, src/pages/vue, etc). This page will house the component(s) entry points.
 - When importing a component, the component must have the attribute of the client:only= + the framework name.\
+  - Alpine.js: `client:load`
   - Angular: `client:load`
   - Preact: `client:only="preact"`
   - Qwik: `client:load` to keep server rendering, so Qwik resumes the container it emitted, or `client:only="@qwik.dev/astro"` to render entirely on the client.
@@ -53,6 +55,7 @@ In OutSystems Developer Cloud, the Islands library is available at https://www.o
 ### Components
 
 - The components live in the folder framework/{NAME}/:
+  - Alpine.js: src/framework/alpine
   - Angular: src/framework/angular
   - Preact: src/framework/react
   - Qwik: src/framework/qwik
@@ -88,6 +91,24 @@ The framework folder should stay in place as the components will be rendered fro
 /** @jsxImportSource solid-js */
 ```
 
+#### Alpine.js components
+
+- An Alpine.js component is a TypeScript module whose default export is a function that returns Alpine markup as a string. A plain string export does not work, because Astro renders a string component as an HTML tag.
+- The island renders only while it has the `ssr` attribute, on the first render and whenever the Islands module sets `ssr` again with new props. It renders the markup once, then Alpine initializes it. Alpine is started by the renderer unless the page already has one on `window.Alpine`.
+- The island's props are in scope for every Alpine expression, as if they were declared on an `x-data` around the component, and they are reactive. When the Islands module changes the props, bindings that read them update and component state is kept. Values interpolated into the string with `${}` are only the initial values.
+
+```ts
+export default function Counter(): string {
+  return `
+    <div x-data="{ count: initialCount }">
+      <pre x-text="count"></pre>
+      <button x-on:click="count++">+</button>
+      <button x-on:click="window[showMessage](count)">Send value</button>
+    </div>
+  `;
+}
+```
+
 #### Twig assets
 
 - A `.twig` component cannot run `import`s, so build-time assets are referenced with Twig's `asset()` function, the same one PHP's Twig provides:
@@ -107,6 +128,37 @@ The framework folder should stay in place as the components will be rendered fro
 #### Slots
 
 Astro slots can be sent in. A slot can be either the default one or the named one. Each framework handles slots differently. Slots can only be HTML elements and cannot be components of a framework.
+
+##### Alpine.js
+
+- In Alpine.js, slots are handled with `<slot>` elements in the markup. The default slot is `<slot></slot>` and a named slot is `<slot name="header"></slot>`. Each one is replaced with the matching slot content before Alpine initializes the island; a `<slot>` with no matching content keeps its children as the fallback.
+
+```js
+---
+import CounterComponent from '../../framework/alpine/Counter';
+---
+<CounterComponent client:load>
+    <div slot="header">
+        Counter Component
+    </div>
+    <div style="text-align: center;">
+        <p>This is content passed into the component.</p>
+    </div>
+</CounterComponent>
+```
+
+the slots can be used as:
+
+```ts
+export default function Counter(): string {
+  return `
+    <slot name="header"></slot>
+    <div>
+      <slot></slot>
+    </div>
+  `;
+}
+```
 
 ##### Angular
 
@@ -364,7 +416,7 @@ The OutSystems 11 library is called Lightweight State Manager - https://www.outs
 
 The OutSystems Developer Cloud library is called Lightweight State Manager and is available in the ODC Forge.
 
-Nano Stores are supported for Preact - https://github.com/nanostores/preact, React - https://github.com/nanostores/react, SolidJS - https://github.com/nanostores/solid, Svelte - https://svelte.dev/docs/svelte/svelte-files#script-4-prefix-stores-with-$-to-access-their-values and Vue - https://github.com/nanostores/vue. The Vanilla JS integration has no binding library and uses the vanilla JS API through `window.Stores`. Nano Stores are not supported for Angular 21, for the Twig integration, where a `.twig` file and its inline classic script cannot run imports, nor for Qwik, which has no binding library and whose maintainers recommend against global stores in favour of custom events - https://github.com/QwikDev/astro#communicating-across-containers.
+Nano Stores are supported for Alpine.js - https://github.com/nanostores/alpine, Preact - https://github.com/nanostores/preact, React - https://github.com/nanostores/react, SolidJS - https://github.com/nanostores/solid, Svelte - https://svelte.dev/docs/svelte/svelte-files#script-4-prefix-stores-with-$-to-access-their-values and Vue - https://github.com/nanostores/vue. The Vanilla JS integration has no binding library and uses the vanilla JS API through `window.Stores`. Nano Stores are not supported for Angular 21, for the Twig integration, where a `.twig` file and its inline classic script cannot run imports, nor for Qwik, which has no binding library and whose maintainers recommend against global stores in favour of custom events - https://github.com/QwikDev/astro#communicating-across-containers.
 
 In OutSystems, the store will be on the Window object. The Islands component will then have to access it from there.
 
@@ -427,6 +479,26 @@ export default function Counter({}) {
 </script>
 
 <div>{$nanoStoreValue}</div>
+```
+
+#### Alpine.js
+
+The Alpine.js integration uses `@nanostores/alpine`, following https://github.com/nanostores/nanostores#alpinejs. The integration does not install the plugin. Each component module that uses stores calls `registerNanoStores()` from `src/framework/alpine/nanostores.ts`, which runs `Alpine.plugin(NanoStores)` on `window.Alpine`, or on `alpine:init` if Alpine has not been created yet. That provides the `x-nano` and `x-nano-model` directives and the `$nano` magic. Do not import `alpinejs` in a component module: it uses browser globals when it loads, and the renderer imports component modules during the build. Bind the store from `window.Stores` with `x-nano:NAME`, where `NAME` is a single lowercase word (Alpine does not camelCase it) that becomes a variable in scope. `x-nano` reads the store when Alpine initializes, so register the atom from the component module first, guarded because the renderer also imports the module during the build:
+
+```ts
+import { setupStore } from "../../stores/demo";
+import { registerNanoStores } from "./nanostores";
+
+if (typeof window !== "undefined") {
+  setupStore("alpineStore");
+  registerNanoStores();
+}
+```
+
+```html
+<div x-data x-nano:value="window.Stores['alpineStore']">
+  <div x-text="value"></div>
+</div>
 ```
 
 #### Vanilla JS
@@ -493,6 +565,7 @@ const nanoStoreValue = useStore(window.Stores["MyGreatStore"]);
 - The `.env.template` must be copied over to `.env`.
 - The name of the module/library/application where the component will live must be set in the `ASSET_URL` variable of the `.env` file.
 - Run the command `PM run output`. This will run the Astro build and then run an additional step to generate the output necessary for importing into OutSystems.
+- The official `@astrojs/alpinejs` integration does not register a renderer, it only starts Alpine over the whole page, so Alpine markup would never be wrapped in an `<astro-island>` and there would be nothing for the output step to keep. The template uses `islands-integrations/alpine` instead, which registers a renderer with a `clientEntrypoint`, so the island carries `component-url`, `renderer-url` and `props` like any other framework.
 - Qwik renders a Qwik container (a `<div q:container>`) rather than markup Astro hydrates. Given a `client:load` directive, Astro wraps that container in an `<astro-island>`, so the output step has something to keep. `@qwik.dev/astro` registers its renderer without a `clientEntrypoint`, which would make Astro omit `renderer-url`, `component-export` and the serialized `props` attribute and leave the island inert; the template wraps it in `islands-integrations/qwik` to supply one. With that in place the island resumes the server markup when it has any, renders on the client when it does not, and re-renders when the Islands module changes `props`.
 - The output will be in the output/ folder. The contents are:
   - HTML file(s) \*.html:

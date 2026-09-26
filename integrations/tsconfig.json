@@ -11,6 +11,11 @@
     "strict": true,
     "skipLibCheck": true
   },
-  "include": ["qwik/**/*.ts", "twig/**/*.ts", "vanilla/**/*.ts"],
+  "include": [
+    "alpine/**/*.ts",
+    "qwik/**/*.ts",
+    "twig/**/*.ts",
+    "vanilla/**/*.ts"
+  ],
   "exclude": ["node_modules", "dist"]
 }
