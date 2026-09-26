@@ -5,15 +5,6 @@ description: Twig integration for Create OutSystems Astro
 
 The Twig integration lets you build Astro Islands using [Twig.js](https://github.com/twigjs/twig.js/) templates — the JavaScript implementation of the [Twig templating language](https://twig.symfony.com/). A component is a native `.twig` file that you import directly into an Astro page. The island's props are passed to the template as the render context, so `{{ variables }}` and Twig filters/tags are resolved on the client.
 
-## When to use
-
-* You already author markup with Twig (for example, coming from a Symfony or Craft CMS background) and want to reuse those templates as islands.
-* You want declarative, logic-light templates with Twig's `{{ }}` interpolation, filters, and control tags instead of writing a full framework component.
-
-## Setup
-
-The integration is registered automatically when you scaffold with `create-outsystems-astro`. No additional configuration is needed.
-
 ## Component structure
 
 A Twig component is a native `.twig` file. The integration registers a Vite loader, so you can import a `.twig` file directly as an Astro Island component. Props passed on the island become the render context, so reference them with `{{ }}`:
@@ -83,18 +74,6 @@ Because the call is resolved at build time, the path has to be a static, quoted 
 {% if logo %}<img alt="Logo" src="{{ logo }}" />{% endif %}
 ```
 
-### TypeScript function alternative
-
-The renderer also accepts a `.ts` file that exports a function returning a Twig template string, which is useful when you need TypeScript to build the template:
-
-```ts
-// src/framework/twig/MyComponent.ts
-export default function MyComponent(): string {
-  return `<div class="my-component">{{ initialCount|default(0) }}</div>`;
-}
-```
-
-`asset()` is not available in that case: the template string is built at runtime, after the build-time pass over `.twig` files has run. Import the asset in the `.ts` file and interpolate it into the template string instead.
 
 ### Includes
 
@@ -151,38 +130,6 @@ Some Twig features still rely on a runtime loader and are **not** supported, so 
 * Dynamic include paths (`{% include someVariable %}`) — only static, quoted paths are inlined.
 * Macros (`{% import %}` / `{% from %}`) and template inheritance (`{% extends %}` / `{% block %}`).
 
-## Page setup
-
-Import the `.twig` file, use `client:load` on the component in your `.astro` page, and pass props as attributes. Those attributes become the Twig render context (including any assets you resolve in the page):
-
-```astro
----
-import MyComponent from "../../framework/twig/MyComponent.twig";
-import styles from "../../styles/index.css?url";
-const initialCount = 5;
-const showMessage = "showMessage";
----
-<html lang="en">
-  <head>
-    <link href={styles} rel="stylesheet" />
-    <script>
-      window["showMessage"] = (count) => {
-        document.getElementById("counter").textContent = count;
-      };
-    </script>
-  </head>
-  <body>
-    <MyComponent
-      client:load
-      initialCount={initialCount}
-      showMessage={showMessage}
-    >
-    </MyComponent>
-  </body>
-</html>
-```
-
-`client:load` is used instead of `client:only` because the Twig renderer uses it to associate the client entrypoint with the island. The server rendering step intentionally returns empty HTML, so the output only contains the island props — identical to how `client:only` frameworks like React behave. The Twig compilation and rendering happen on the client.
 
 ## Slots
 
@@ -194,31 +141,6 @@ Nano Stores are not supported in the Twig integration. There is no binding libra
 
 Pass the values a Twig island needs in as props instead. If a component has to share state with other islands or with OutSystems, build it with an integration that supports Nano Stores, such as the [Vanilla JS integration](../vanilla/index.md) or one of the framework integrations.
 
-## Using OutSystems handlers
-
-Pass the handler name as a string prop and call it via `window`. Render the name into the script with Twig:
-
-```ts
-export default function MyComponent(): string {
-  return `
-    <div class="my-component">
-      <button class="send">Send value</button>
-      <script>
-        (function () {
-          const container = (document.currentScript && document.currentScript.parentElement)
-            || document.querySelector('.my-component');
-          let count = {{ initialCount|default(0) }};
-          container.querySelector('.send').addEventListener('click', function () {
-            if ('{{ showMessage|default('') }}' && window['{{ showMessage|default('') }}']) {
-              window['{{ showMessage|default('') }}'](count);
-            }
-          });
-        })();
-      </script>
-    </div>
-  `;
-}
-```
 
 ## Testing
 
