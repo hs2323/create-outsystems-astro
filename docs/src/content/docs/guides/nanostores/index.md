@@ -12,6 +12,7 @@ Refer to the full [Nano Stores documentation](https://github.com/nanostores/nano
 Nano Stores are currently supported for the following libraries:
 
 - [Alpine.js](https://github.com/nanostores/alpine)
+- [Lit](https://github.com/nanostores/lit)
 - [Preact](https://github.com/nanostores/preact)
 - [React](https://github.com/nanostores/react)
 - [SolidJS](https://github.com/nanostores/solid)
@@ -48,6 +49,17 @@ Alpine.js:
 <div x-data x-nano:value="window.Stores['alpineStore']">
   <div x-text="value"></div>
 </div>
+```
+
+Lit:
+```ts
+import { StoreController } from "@nanostores/lit";
+
+private store = new StoreController(this, window.Stores["litStore"]);
+
+render() {
+  return html`<div>${this.store.value}</div>`;
+}
 ```
 
 Preact:

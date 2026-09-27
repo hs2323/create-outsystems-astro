@@ -7,6 +7,7 @@
 - The Astro Islands can be used generated with the following frameworks:
   - Alpine.js - Documentation available at https://hs2323.github.io/create-outsystems-astro/guides/integrations/alpine/
   - Angular - Documentation available at https://analogjs.org/docs/packages/astro-angular/overview
+  - Lit - Documentation available at https://hs2323.github.io/create-outsystems-astro/guides/integrations/lit/
   - Preact - Documentation available at https://docs.astro.build/en/guides/integrations-guide/preact/
   - Qwik - Documentation available at https://hs2323.github.io/create-outsystems-astro/guides/integrations/qwik/
   - React - Documentation available at https://docs.astro.build/en/guides/integrations-guide/react/
@@ -43,6 +44,7 @@ In OutSystems Developer Cloud, the Islands library is available at https://www.o
 - When importing a component, the component must have the attribute of the client:only= + the framework name.\
   - Alpine.js: `client:load`
   - Angular: `client:load`
+  - Lit: `client:load`
   - Preact: `client:only="preact"`
   - Qwik: `client:load` to keep server rendering, so Qwik resumes the container it emitted, or `client:only="@qwik.dev/astro"` to render entirely on the client.
   - React: `client:only="react"`
@@ -57,6 +59,7 @@ In OutSystems Developer Cloud, the Islands library is available at https://www.o
 - The components live in the folder framework/{NAME}/:
   - Alpine.js: src/framework/alpine
   - Angular: src/framework/angular
+  - Lit: src/framework/lit
   - Preact: src/framework/react
   - Qwik: src/framework/qwik
   - React: src/framework/react
@@ -109,6 +112,50 @@ export default function Counter(): string {
 }
 ```
 
+#### Lit components
+
+- A Lit component is a TypeScript module whose default export is a `LitElement` class. Register it with `customElements.define` in the module, guarded because the renderer also imports the module during the build. A class that is never registered gets a generated tag name.
+- Declare reactive properties with `static properties` and `declare` fields rather than decorators or class field initializers, which would shadow Lit's accessors. Set defaults in the constructor.
+- The island renders only while it has the `ssr` attribute, on the first render and whenever the Islands module sets `ssr` again with new props. The element is created once and the props are set as element properties. When the Islands module changes the props, the same element gets the new values and Lit re-renders, so internal state is kept.
+- The element renders into a shadow root, so the page stylesheet does not reach it. Adopt it with `static styles = unsafeCSS(styles)`, importing the stylesheet with `?inline`.
+
+```ts
+import { html, LitElement } from "lit";
+
+export default class Counter extends LitElement {
+  static override properties = {
+    count: { state: true },
+    initialCount: { type: Number },
+    showMessage: { type: String },
+  };
+
+  declare count: number | undefined;
+  declare initialCount: number;
+  declare showMessage: string;
+
+  constructor() {
+    super();
+    this.initialCount = 0;
+    this.showMessage = "";
+  }
+
+  override render() {
+    const count = this.count ?? this.initialCount;
+    return html`
+      <pre>${count}</pre>
+      <button @click=${() => (this.count = count + 1)}>+</button>
+      <button @click=${() => (window as any)[this.showMessage](count)}>
+        Send value
+      </button>
+    `;
+  }
+}
+
+if (typeof window !== "undefined" && !customElements.get("lit-counter")) {
+  customElements.define("lit-counter", Counter);
+}
+```
+
 #### Twig assets
 
 - A `.twig` component cannot run `import`s, so build-time assets are referenced with Twig's `asset()` function, the same one PHP's Twig provides:
@@ -152,6 +199,37 @@ the slots can be used as:
 ```ts
 export default function Counter(): string {
   return `
+    <slot name="header"></slot>
+    <div>
+      <slot></slot>
+    </div>
+  `;
+}
+```
+
+##### Lit
+
+- In Lit, slots are handled with native shadow DOM `<slot>` elements. The default slot is `<slot></slot>` and a named slot is `<slot name="header"></slot>`. The renderer moves each Astro slot into the element's light DOM, wrapped in an `<astro-slot>` with the matching `slot` attribute, so the shadow `<slot>` shows it. Slot content stays in the light DOM and is styled by the page stylesheet.
+
+```js
+---
+import CounterComponent from '../../framework/lit/Counter';
+---
+<CounterComponent client:load>
+    <div slot="header">
+        Counter Component
+    </div>
+    <div style="text-align: center;">
+        <p>This is content passed into the component.</p>
+    </div>
+</CounterComponent>
+```
+
+the slots can be used as:
+
+```ts
+render() {
+  return html`
     <slot name="header"></slot>
     <div>
       <slot></slot>
@@ -416,7 +494,7 @@ The OutSystems 11 library is called Lightweight State Manager - https://www.outs
 
 The OutSystems Developer Cloud library is called Lightweight State Manager and is available in the ODC Forge.
 
-Nano Stores are supported for Alpine.js - https://github.com/nanostores/alpine, Preact - https://github.com/nanostores/preact, React - https://github.com/nanostores/react, SolidJS - https://github.com/nanostores/solid, Svelte - https://svelte.dev/docs/svelte/svelte-files#script-4-prefix-stores-with-$-to-access-their-values and Vue - https://github.com/nanostores/vue. The Vanilla JS integration has no binding library and uses the vanilla JS API through `window.Stores`. Nano Stores are not supported for Angular 21, for the Twig integration, where a `.twig` file and its inline classic script cannot run imports, nor for Qwik, which has no binding library and whose maintainers recommend against global stores in favour of custom events - https://github.com/QwikDev/astro#communicating-across-containers.
+Nano Stores are supported for Alpine.js - https://github.com/nanostores/alpine, Lit - https://github.com/nanostores/lit, Preact - https://github.com/nanostores/preact, React - https://github.com/nanostores/react, SolidJS - https://github.com/nanostores/solid, Svelte - https://svelte.dev/docs/svelte/svelte-files#script-4-prefix-stores-with-$-to-access-their-values and Vue - https://github.com/nanostores/vue. The Vanilla JS integration has no binding library and uses the vanilla JS API through `window.Stores`. Nano Stores are not supported for Angular 21, for the Twig integration, where a `.twig` file and its inline classic script cannot run imports, nor for Qwik, which has no binding library and whose maintainers recommend against global stores in favour of custom events - https://github.com/QwikDev/astro#communicating-across-containers.
 
 In OutSystems, the store will be on the Window object. The Islands component will then have to access it from there.
 
@@ -501,6 +579,25 @@ if (typeof window !== "undefined") {
 </div>
 ```
 
+#### Lit
+
+The Lit integration uses `@nanostores/lit`. The integration itself does not depend on Nano Stores; the component adds a `StoreController`, which subscribes while the element is connected and re-renders it when the store changes. The controller is created in the constructor, which only runs in the browser, so reading `window.Stores` there is safe.
+
+```ts
+import { StoreController } from "@nanostores/lit";
+import { html, LitElement } from "lit";
+
+import { setupStore } from "../../stores/demo";
+
+export default class MyComponent extends LitElement {
+  private store = new StoreController(this, setupStore("litStore"));
+
+  override render() {
+    return html`<div>${this.store.value}</div>`;
+  }
+}
+```
+
 #### Vanilla JS
 
 The Vanilla JS integration has no binding library, so it uses the vanilla JS API against a real atom. Register the atom from the component module, guarded because the renderer also imports the module during the build, then subscribe from the inline script:
@@ -566,6 +663,7 @@ const nanoStoreValue = useStore(window.Stores["MyGreatStore"]);
 - The name of the module/library/application where the component will live must be set in the `ASSET_URL` variable of the `.env` file.
 - Run the command `PM run output`. This will run the Astro build and then run an additional step to generate the output necessary for importing into OutSystems.
 - The official `@astrojs/alpinejs` integration does not register a renderer, it only starts Alpine over the whole page, so Alpine markup would never be wrapped in an `<astro-island>` and there would be nothing for the output step to keep. The template uses `islands-integrations/alpine` instead, which registers a renderer with a `clientEntrypoint`, so the island carries `component-url`, `renderer-url` and `props` like any other framework.
+- The official `@astrojs/lit` integration was deprecated in Astro 5 and is no longer maintained. It rendered through `@lit-labs/ssr`, which needs a server. The template uses `islands-integrations/lit` instead, which registers a client-only renderer with a `clientEntrypoint`, so the island carries `component-url`, `renderer-url` and `props` like any other framework.
 - Qwik renders a Qwik container (a `<div q:container>`) rather than markup Astro hydrates. Given a `client:load` directive, Astro wraps that container in an `<astro-island>`, so the output step has something to keep. `@qwik.dev/astro` registers its renderer without a `clientEntrypoint`, which would make Astro omit `renderer-url`, `component-export` and the serialized `props` attribute and leave the island inert; the template wraps it in `islands-integrations/qwik` to supply one. With that in place the island resumes the server markup when it has any, renders on the client when it does not, and re-renders when the Islands module changes `props`.
 - The output will be in the output/ folder. The contents are:
   - HTML file(s) \*.html:

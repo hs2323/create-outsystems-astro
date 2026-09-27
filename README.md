@@ -14,6 +14,7 @@ Generates [Astro Islands](https://docs.astro.build/en/concepts/islands/) for use
 ## Current supported frameworks
 - [Alpine.js](https://hs2323.github.io/create-outsystems-astro/guides/integrations/alpine/)
 - [Angular](https://analogjs.org/docs/packages/astro-angular/overview)
+- [Lit](https://hs2323.github.io/create-outsystems-astro/guides/integrations/lit/)
 - [Preact](https://docs.astro.build/en/guides/integrations-guide/preact/)
 - [Qwik](https://qwik.dev/docs/integrations/astro/)
 - [React](https://docs.astro.build/en/guides/integrations-guide/react/)

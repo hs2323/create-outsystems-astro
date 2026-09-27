@@ -9,6 +9,7 @@ description: Setup Astro JavaScript project
 
 - [Alpine.js](../integrations/alpine/)
 - [Angular](https://analogjs.org/docs/packages/astro-angular/overview)
+- [Lit](../integrations/lit/)
 - [Preact](https://docs.astro.build/en/guides/integrations-guide/preact/)
 - [Qwik](../integrations/qwik/)
 - [React](https://docs.astro.build/en/guides/integrations-guide/react/)
@@ -40,6 +41,8 @@ This will create the generated files as well as an example component. You can de
 │           └── Counter.ts
 │       └── angular/
 │           └── Counter.component.ts
+│       └── lit/
+│           └── Counter.ts
 │       └── preact/
 │           └── Counter.tsx
 │       └── qwik/
@@ -59,6 +62,8 @@ This will create the generated files as well as an example component. You can de
 │           └── alpine-counter.astro
 │       └── angular/
 │           └── angular-counter.astro
+│       └── lit/
+│           └── lit-counter.astro
 │       └── preact/
 │           └── Counter.tsx
 │       └── qwik/
@@ -90,6 +95,8 @@ For any of the official frameworks (react, preact, solid-js, vue and svelte) you
 Qwik takes either `client:load`, which keeps server rendering and lets Qwik resume the container it emitted, or `client:only="@qwik.dev/astro"`, which renders it entirely on the client like the other JSX frameworks. See the [Qwik integration guide](../integrations/qwik/).
 
 Alpine.js takes `client:load`. Its renderer returns no server markup, so the island is rendered entirely on the client. See the [Alpine.js integration guide](../integrations/alpine/).
+
+Lit takes `client:load`. Its renderer returns no server markup, so the element is created entirely on the client. See the [Lit integration guide](../integrations/lit/).
 
 ### Framework
 
