@@ -55,10 +55,12 @@ Lit:
 ```ts
 import { StoreController } from "@nanostores/lit";
 
-private store = new StoreController(this, window.Stores["litStore"]);
+export default class MyComponent extends LitElement {
+  private store = new StoreController(this, window.Stores["litStore"]);
 
-render() {
-  return html`<div>${this.store.value}</div>`;
+  override render() {
+    return html`<div>${this.store.value}</div>`;
+  }
 }
 ```
 

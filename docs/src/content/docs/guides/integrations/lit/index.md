@@ -103,9 +103,15 @@ The controller is created in the constructor, which only runs in the browser, so
 Pass the handler name as a string prop and call it via `window`:
 
 ```ts
-private showParentMessage() {
-  const handler = (window as any)[this.showMessage];
-  if (typeof handler === "function") handler(this.count);
+export default class Counter extends LitElement {
+  declare showMessage: string;
+
+  private showParentMessage() {
+    const handler = (window as unknown as Record<string, unknown>)[
+      this.showMessage
+    ];
+    if (typeof handler === "function") handler(this.count);
+  }
 }
 ```
 
