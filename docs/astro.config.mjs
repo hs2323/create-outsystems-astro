@@ -36,6 +36,7 @@ export default defineConfig({
                   label: "Angular",
                   link: "https://angular.dev/",
                 },
+                { label: "jQuery", slug: "guides/integrations/jquery" },
                 { label: "Lit", slug: "guides/integrations/lit" },
                 {
                   attrs: externalLinkAttributes,

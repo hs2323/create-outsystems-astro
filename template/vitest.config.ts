@@ -37,6 +37,15 @@ export default defineConfig(({ mode }) => ({
         test: {
           environment: "happy-dom",
           globals: true,
+          include: ["test/integration/jquery/**/*.test.ts"],
+          name: "jquery",
+          setupFiles: ["test/setup-test-env.ts"],
+        },
+      },
+      {
+        test: {
+          environment: "happy-dom",
+          globals: true,
           include: ["test/integration/lit/**/*.test.ts"],
           name: "lit",
           setupFiles: ["test/setup-test-env.ts"],

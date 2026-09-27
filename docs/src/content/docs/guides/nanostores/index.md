@@ -12,6 +12,7 @@ Refer to the full [Nano Stores documentation](https://github.com/nanostores/nano
 Nano Stores are currently supported for the following libraries:
 
 - [Alpine.js](https://github.com/nanostores/alpine)
+- [jQuery](https://github.com/nanostores/nanostores#vanilla-js) (vanilla JS API)
 - [Lit](https://github.com/nanostores/lit)
 - [Preact](https://github.com/nanostores/preact)
 - [React](https://github.com/nanostores/react)
@@ -48,6 +49,27 @@ Alpine.js:
 ```html
 <div x-data x-nano:value="window.Stores['alpineStore']">
   <div x-text="value"></div>
+</div>
+```
+
+jQuery:
+```html
+<div class="my-component">
+  <script>
+    (function ($) {
+      const $container = $(document.currentScript).parent();
+      $container.append('<div class="nanostore-value"></div>');
+
+      const store = window.Stores && window.Stores["jqueryStore"];
+
+      if (store) {
+        const unsubscribe = store.subscribe(function (value) {
+          $container.find(".nanostore-value").text(value);
+        });
+        $container.closest("astro-island").one("islands:unmount", unsubscribe);
+      }
+    })(jQuery);
+  </script>
 </div>
 ```
 
