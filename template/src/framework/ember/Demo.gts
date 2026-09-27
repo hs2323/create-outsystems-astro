@@ -23,8 +23,14 @@ interface DemoSignature {
 }
 
 export default class Demo extends Component<DemoSignature> {
-  @tracked count = this.args.props.initialCount;
   @tracked nanoStoreValue: string;
+
+  get count(): number {
+    return this.changedCount ?? this.args.props.initialCount;
+  }
+
+  // The count starts from `initialCount` and is kept once the user changes it.
+  @tracked private changedCount: number | undefined;
 
   constructor(owner: unknown, args: DemoSignature["Args"]) {
     super(owner, args);
@@ -39,17 +45,17 @@ export default class Demo extends Component<DemoSignature> {
   }
 
   add = () => {
-    this.count = setCounterCount(this.count, Operation.Add);
-  };
-
-  subtract = () => {
-    this.count = setCounterCount(this.count, Operation.Subtract);
+    this.changedCount = setCounterCount(this.count, Operation.Add);
   };
 
   showParentMessage = () => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const handler = (window as any)[this.args.props.showMessage];
     if (typeof handler === "function") handler(this.count);
+  };
+
+  subtract = () => {
+    this.changedCount = setCounterCount(this.count, Operation.Subtract);
   };
 
   <template>

@@ -169,7 +169,8 @@ export default function Counter({
 - An Ember component is a `.gts` (or `.gjs`) template-tag file whose default export is a Glimmer component. The `ember-astro` integration compiles it. See https://github.com/ember-tooling/ember-astro.
 - Astro props arrive in the `@props` argument (`@props.initialCount`), not as individual `@` arguments, and slots arrive as HTML strings in `@slots`.
 - The island renders only while it has the `ssr` attribute. `ember-astro` renders the component once and ignores later prop changes from the Islands module, so the component keeps its first props until the island is recreated.
-- Keep internal state in `@tracked` fields and bind events with the `on` modifier.
+- Keep internal state in `@tracked` fields and bind events with the `on` modifier. Do not initialize a `@tracked` field from `this.args` (the `ember/no-tracked-properties-from-args` lint rule); keep a tracked override and read the argument through a getter, as below.
+- `.gts` and `.gjs` files are linted with `eslint-plugin-ember`, using `ember-eslint-parser`.
 
 ```gts
 import { on } from "@ember/modifier";
@@ -184,10 +185,15 @@ interface CounterSignature {
 }
 
 export default class Counter extends Component<CounterSignature> {
-  @tracked count = this.args.props.initialCount;
+  // The count starts from `initialCount` and is kept once the user changes it.
+  @tracked private changedCount: number | undefined;
+
+  get count(): number {
+    return this.changedCount ?? this.args.props.initialCount;
+  }
 
   add = () => {
-    this.count += 1;
+    this.changedCount = this.count + 1;
   };
 
   showParentMessage = () => {

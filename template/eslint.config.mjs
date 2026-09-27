@@ -5,6 +5,7 @@ import angular from "angular-eslint";
 // import preactConfig from "eslint-config-preact";
 import eslintConfigPrettier from "eslint-config-prettier";
 import eslintPluginAstro from "eslint-plugin-astro";
+import * as emberESLint from "eslint-plugin-ember/recommended";
 import importPlugin from "eslint-plugin-import-x";
 import pluginJest from "eslint-plugin-jest";
 import pluginJestDom from "eslint-plugin-jest-dom";
@@ -241,4 +242,13 @@ export default [
     },
   },
   litConfigs["flat/recommended"],
+  {
+    ...emberESLint.base,
+    files: [
+      "src/framework/ember/**/*.{js,ts,gjs,gts}",
+      "test/integration/ember/**/*.{js,ts,gjs,gts}",
+    ],
+  },
+  emberESLint.gjs,
+  emberESLint.gts,
 ];
