@@ -4,7 +4,10 @@ import Component from "@glimmer/component";
 import { tracked } from "@glimmer/tracking";
 
 import EmberLogo from "../../images/ember.png?url";
-import { type CurrentSelectedFramework, framework } from "../../stores/framework";
+import {
+  type CurrentSelectedFramework,
+  framework,
+} from "../../stores/framework";
 
 export default class Store extends Component {
   // Nano Stores has no Ember binding, so the store value is copied into a

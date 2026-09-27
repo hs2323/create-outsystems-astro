@@ -124,6 +124,7 @@
     "js-beautify": "^2.0.3",
     "patch-package": "^8.0.1",
     "prettier": "^3.9.8",
+    "prettier-plugin-ember-template-tag": "^2.1.8",
     "prettier-plugin-solidity": "^2.4.1",
     "prettier-plugin-svelte": "^4.1.1",
     "svelte-eslint-parser": "^1.8.1",

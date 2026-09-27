@@ -1,4 +1,4 @@
 {
-    "plugins": ["prettier-plugin-solidity", "prettier-plugin-svelte"],
+    "plugins": ["prettier-plugin-solidity", "prettier-plugin-svelte", "prettier-plugin-ember-template-tag"],
     "overrides": [{ "files": "*.svelte", "options": { "parser": "svelte" } }]
 }

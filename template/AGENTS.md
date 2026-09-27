@@ -729,9 +729,12 @@ export default class MyComponent extends Component {
 
     const store = setupStore("emberStore");
     this.value = store.get();
-    registerDestructor(this, store.subscribe((value: string) => {
-      this.value = value;
-    }));
+    registerDestructor(
+      this,
+      store.subscribe((value: string) => {
+        this.value = value;
+      }),
+    );
   }
 
   <template>
