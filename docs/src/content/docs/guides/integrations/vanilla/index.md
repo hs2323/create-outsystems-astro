@@ -5,15 +5,6 @@ description: Vanilla JS integration for Create OutSystems Astro
 
 The Vanilla JS integration lets you build Astro Islands using plain HTML and JavaScript — no framework required. A component is a TypeScript file that returns an HTML string, with interactivity handled via inline `<script>` tags.
 
-## When to use
-
-- You need a simple interactive component and don't want to pull in a full framework.
-- You are migrating existing vanilla JS/HTML code into an island.
-
-## Setup
-
-The integration is registered automatically when you scaffold with `create-outsystems-astro`. No additional configuration is needed.
-
 ## Component structure
 
 A Vanilla JS component is a TypeScript function that accepts props and returns an HTML string.
@@ -139,38 +130,6 @@ The page can register the same store instead of, or as well as, the component. `
   import { setupStore } from "../../stores/demo";
   setupStore("myStore");
 </script>
-```
-
-## Using OutSystems handlers
-
-Pass the handler name as a string prop and call it via `window`:
-
-```ts
-export default function MyComponent({
-  initialCount = 0,
-  showMessage = "",
-}: {
-  initialCount?: number;
-  showMessage?: string;
-}): string {
-  return `
-    <div class="my-component">
-      <button class="send">Send value</button>
-      <script>
-        (function () {
-          const container = (document.currentScript && document.currentScript.parentElement)
-            || document.querySelector('.my-component');
-          let count = ${initialCount};
-          container.querySelector('.send').addEventListener('click', function () {
-            if ('${showMessage}' && window['${showMessage}']) {
-              window['${showMessage}'](count);
-            }
-          });
-        })();
-      </script>
-    </div>
-  `;
-}
 ```
 
 ## Testing
