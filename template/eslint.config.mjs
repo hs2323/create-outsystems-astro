@@ -8,6 +8,7 @@ import eslintPluginAstro from "eslint-plugin-astro";
 import importPlugin from "eslint-plugin-import-x";
 import pluginJest from "eslint-plugin-jest";
 import pluginJestDom from "eslint-plugin-jest-dom";
+import { configs as litConfigs } from "eslint-plugin-lit";
 import perfectionist from "eslint-plugin-perfectionist";
 import playwright from "eslint-plugin-playwright";
 import { qwikEslint9Plugin } from "eslint-plugin-qwik";
@@ -239,4 +240,5 @@ export default [
       "testing-library/no-node-access": "off",
     },
   },
+  litConfigs["flat/recommended"],
 ];

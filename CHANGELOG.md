@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Added Lit integration.
 - Added Alpine.js integration.
 - Added dependency eslint-plugin-qwik.
 - Added dependency @typescript/native for TypeScript 7 support.
