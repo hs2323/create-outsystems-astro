@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added integrations dependency @typescript/native for TypeScript 7 support.
 
 ### Changed
+- Split the shared `app` chunk into one chunk per framework (`app-react`, `app-vue`, ...), so an island only loads its own framework's runtime.
 - Updated dependency vue to 3.5.43.
 - Updated dependency vite to 8.3.0.
 - Updated dependency typescript-eslint to 8.70.0.

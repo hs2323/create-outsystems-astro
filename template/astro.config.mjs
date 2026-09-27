@@ -15,6 +15,59 @@ import qwik from "islands-integrations/qwik";
 import twig from "islands-integrations/twig";
 import vanilla from "islands-integrations/vanilla";
 
+// Each framework's runtime gets its own chunk, so an island only loads the
+// framework it uses. Packages that are not listed, such as astro and
+// nanostores, go to the shared "app" chunk.
+/** @type {Record<string, (string | RegExp)[]>} */
+const frameworkChunks = {
+  alpine: ["alpinejs", "@nanostores/alpine"],
+  angular: [/^@angular\//, /^@analogjs\//, "rxjs", "zone.js"],
+  ember: [
+    "ember-astro",
+    "ember-source",
+    "decorator-transforms",
+    /^@ember\//,
+    /^@embroider\//,
+    /^@glimmer\//,
+  ],
+  jquery: ["jquery"],
+  lit: ["lit", "lit-element", "lit-html", /^@lit\//, "@nanostores/lit"],
+  preact: ["preact", /^@preact\//, "@astrojs/preact", "@nanostores/preact"],
+  qwik: [/^@qwik\.dev\//],
+  react: [
+    "react",
+    "react-dom",
+    "scheduler",
+    "@astrojs/react",
+    "@nanostores/react",
+  ],
+  solid: ["solid-js", "@astrojs/solid-js", "@nanostores/solid"],
+  svelte: ["svelte", "@astrojs/svelte", "@nanostores/svelte-runes"],
+  twig: ["twig", "locutus"],
+  vue: [/^@vue\//, "vue", "@astrojs/vue", "@nanostores/vue"],
+};
+
+/**
+ * @param {string} id
+ * @returns {string | undefined}
+ */
+function getChunkName(id) {
+  // Vite's preload helper is used by every framework. Left alone, the bundler
+  // puts it in whichever framework chunk it sees first.
+  if (id.startsWith("\0vite/")) return "app";
+  const match = id.match(/.*node_modules\/((?:@[^/]+\/)?[^/]+)/);
+  if (!match) return;
+  const pkg = match[1];
+  for (const [framework, patterns] of Object.entries(frameworkChunks)) {
+    if (
+      patterns.some((p) => (typeof p === "string" ? p === pkg : p.test(pkg)))
+    ) {
+      return `app-${framework}`;
+    }
+  }
+  return "app";
+}
+
 // https://astro.build/config
 export default defineConfig({
   build: {
@@ -80,11 +133,7 @@ export default defineConfig({
           assetFileNames: `assets/[name].[hash].[ext]`,
           chunkFileNames: `[name].[hash].js`,
           entryFileNames: `[name].[hash].js`,
-          manualChunks: (id) => {
-            if (id.includes("node_modules")) {
-              return "app";
-            }
-          },
+          manualChunks: getChunkName,
         },
       },
     },
