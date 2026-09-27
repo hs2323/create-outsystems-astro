@@ -7,6 +7,7 @@
 - The Astro Islands can be used generated with the following frameworks:
   - Alpine.js - Documentation available at https://hs2323.github.io/create-outsystems-astro/guides/integrations/alpine/
   - Angular - Documentation available at https://analogjs.org/docs/packages/astro-angular/overview
+  - Ember - Documentation available at https://github.com/ember-tooling/ember-astro
   - jQuery - Documentation available at https://hs2323.github.io/create-outsystems-astro/guides/integrations/jquery/
   - Lit - Documentation available at https://hs2323.github.io/create-outsystems-astro/guides/integrations/lit/
   - Preact - Documentation available at https://docs.astro.build/en/guides/integrations-guide/preact/
@@ -45,6 +46,7 @@ In OutSystems Developer Cloud, the Islands library is available at https://www.o
 - When importing a component, the component must have the attribute of the client:only= + the framework name.\
   - Alpine.js: `client:load`
   - Angular: `client:load`
+  - Ember: `client:only="ember-astro"` (the renderer's registered name; `client:only="ember"` fails)
   - jQuery: `client:load`
   - Lit: `client:load`
   - Preact: `client:only="preact"`
@@ -61,6 +63,7 @@ In OutSystems Developer Cloud, the Islands library is available at https://www.o
 - The components live in the folder framework/{NAME}/:
   - Alpine.js: src/framework/alpine
   - Angular: src/framework/angular
+  - Ember: src/framework/ember
   - jQuery: src/framework/jquery
   - Lit: src/framework/lit
   - Preact: src/framework/react
@@ -158,6 +161,52 @@ export default function Counter({
       </script>
     </div>
   `;
+}
+```
+
+#### Ember components
+
+- An Ember component is a `.gts` (or `.gjs`) template-tag file whose default export is a Glimmer component. The `ember-astro` integration compiles it. See https://github.com/ember-tooling/ember-astro.
+- Astro props arrive in the `@props` argument (`@props.initialCount`), not as individual `@` arguments, and slots arrive as HTML strings in `@slots`.
+- The island renders only while it has the `ssr` attribute. `ember-astro` renders the component once and ignores later prop changes from the Islands module, so the component keeps its first props until the island is recreated.
+- Keep internal state in `@tracked` fields and bind events with the `on` modifier. Do not initialize a `@tracked` field from `this.args` (the `ember/no-tracked-properties-from-args` lint rule); keep a tracked override and read the argument through a getter, as below.
+- `.gts` and `.gjs` files are linted with `eslint-plugin-ember`, using `ember-eslint-parser`.
+
+```gts
+import { on } from "@ember/modifier";
+import Component from "@glimmer/component";
+import { tracked } from "@glimmer/tracking";
+
+interface CounterSignature {
+  Args: {
+    props: { initialCount: number; showMessage: string };
+    slots: { default?: string; header?: string };
+  };
+}
+
+export default class Counter extends Component<CounterSignature> {
+  // The count starts from `initialCount` and is kept once the user changes it.
+  @tracked private changedCount: number | undefined;
+
+  get count(): number {
+    return this.changedCount ?? this.args.props.initialCount;
+  }
+
+  add = () => {
+    this.changedCount = this.count + 1;
+  };
+
+  showParentMessage = () => {
+    (window as any)[this.args.props.showMessage](this.count);
+  };
+
+  <template>
+    <pre>{{this.count}}</pre>
+    <button type="button" {{on "click" this.add}}>+</button>
+    <button type="button" {{on "click" this.showParentMessage}}>
+      Send value
+    </button>
+  </template>
 }
 ```
 
@@ -285,6 +334,35 @@ render() {
     </div>
   `;
 }
+```
+
+##### Ember
+
+- In Ember, Astro slots are HTML strings in the `@slots` argument, keyed by slot name. Insert them with triple curlies so they are not escaped: `{{{@slots.default}}}` and `{{{@slots.header}}}`. `{{yield}}` and block params are not available from Astro.
+
+```js
+---
+import CounterComponent from '../../framework/ember/Counter.gts';
+---
+<CounterComponent client:only="ember-astro">
+    <div slot="header">
+        Counter Component
+    </div>
+    <div style="text-align: center;">
+        <p>This is content passed into the component.</p>
+    </div>
+</CounterComponent>
+```
+
+the slots can be used as:
+
+```gts
+<template>
+  {{{@slots.header}}}
+  <div>
+    {{{@slots.default}}}
+  </div>
+</template>
 ```
 
 ##### Angular
@@ -547,7 +625,7 @@ The OutSystems 11 library is called Lightweight State Manager - https://www.outs
 
 The OutSystems Developer Cloud library is called Lightweight State Manager and is available in the ODC Forge.
 
-Nano Stores are supported for Alpine.js - https://github.com/nanostores/alpine, Lit - https://github.com/nanostores/lit, Preact - https://github.com/nanostores/preact, React - https://github.com/nanostores/react, SolidJS - https://github.com/nanostores/solid, Svelte - https://svelte.dev/docs/svelte/svelte-files#script-4-prefix-stores-with-$-to-access-their-values and Vue - https://github.com/nanostores/vue. The Vanilla JS and jQuery integrations have no binding library and use the vanilla JS API through `window.Stores`. Nano Stores are not supported for Angular 21, for the Twig integration, where a `.twig` file and its inline classic script cannot run imports, nor for Qwik, which has no binding library and whose maintainers recommend against global stores in favour of custom events - https://github.com/QwikDev/astro#communicating-across-containers.
+Nano Stores are supported for Alpine.js - https://github.com/nanostores/alpine, Lit - https://github.com/nanostores/lit, Preact - https://github.com/nanostores/preact, React - https://github.com/nanostores/react, SolidJS - https://github.com/nanostores/solid, Svelte - https://svelte.dev/docs/svelte/svelte-files#script-4-prefix-stores-with-$-to-access-their-values and Vue - https://github.com/nanostores/vue. The Vanilla JS and jQuery integrations have no binding library and use the vanilla JS API through `window.Stores`. Ember has no binding library either; it subscribes with the vanilla JS API and copies the value into a `@tracked` field. Nano Stores are not supported for Angular 21, for the Twig integration, where a `.twig` file and its inline classic script cannot run imports, nor for Qwik, which has no binding library and whose maintainers recommend against global stores in favour of custom events - https://github.com/QwikDev/astro#communicating-across-containers.
 
 In OutSystems, the store will be on the Window object. The Islands component will then have to access it from there.
 
@@ -630,6 +708,39 @@ if (typeof window !== "undefined") {
 <div x-data x-nano:value="window.Stores['alpineStore']">
   <div x-text="value"></div>
 </div>
+```
+
+#### Ember
+
+Nano Stores has no Ember binding. Subscribe with the vanilla JS API in the constructor, copy each value into a `@tracked` field so the template re-renders, and unsubscribe with `registerDestructor` when the component is destroyed:
+
+```gts
+import { registerDestructor } from "@ember/destroyable";
+import Component from "@glimmer/component";
+import { tracked } from "@glimmer/tracking";
+
+import { setupStore } from "../../stores/demo";
+
+export default class MyComponent extends Component {
+  @tracked value: string;
+
+  constructor(owner: unknown, args: object) {
+    super(owner, args);
+
+    const store = setupStore("emberStore");
+    this.value = store.get();
+    registerDestructor(
+      this,
+      store.subscribe((value: string) => {
+        this.value = value;
+      }),
+    );
+  }
+
+  <template>
+    <div>{{this.value}}</div>
+  </template>
+}
 ```
 
 #### jQuery
@@ -748,6 +859,7 @@ const nanoStoreValue = useStore(window.Stores["MyGreatStore"]);
 - The name of the module/library/application where the component will live must be set in the `ASSET_URL` variable of the `.env` file.
 - Run the command `PM run output`. This will run the Astro build and then run an additional step to generate the output necessary for importing into OutSystems.
 - The official `@astrojs/alpinejs` integration does not register a renderer, it only starts Alpine over the whole page, so Alpine markup would never be wrapped in an `<astro-island>` and there would be nothing for the output step to keep. The template uses `islands-integrations/alpine` instead, which registers a renderer with a `clientEntrypoint`, so the island carries `component-url`, `renderer-url` and `props` like any other framework.
+- Ember uses the community `ember-astro` integration (https://github.com/ember-tooling/ember-astro), which registers its renderer as `ember-astro` with a `clientEntrypoint`, so the island carries `component-url`, `renderer-url` and `props` like any other framework. It takes no options and compiles `.gts`/`.gjs` files wherever they are. It renders the component once and does not re-render when the Islands module changes the props.
 - There is no official Astro integration for jQuery. The template uses `islands-integrations/jquery`, which registers a client-only renderer with a `clientEntrypoint`, so the island carries `component-url`, `renderer-url` and `props` like any other framework. A component returns markup with inline scripts, as with Vanilla JS, and the renderer provides the global `jQuery` those scripts use.
 - The official `@astrojs/lit` integration was deprecated in Astro 5 and is no longer maintained. It rendered through `@lit-labs/ssr`, which needs a server. The template uses `islands-integrations/lit` instead, which registers a client-only renderer with a `clientEntrypoint`, so the island carries `component-url`, `renderer-url` and `props` like any other framework.
 - Qwik renders a Qwik container (a `<div q:container>`) rather than markup Astro hydrates. Given a `client:load` directive, Astro wraps that container in an `<astro-island>`, so the output step has something to keep. `@qwik.dev/astro` registers its renderer without a `clientEntrypoint`, which would make Astro omit `renderer-url`, `component-export` and the serialized `props` attribute and leave the island inert; the template wraps it in `islands-integrations/qwik` to supply one. With that in place the island resumes the server markup when it has any, renders on the client when it does not, and re-renders when the Islands module changes `props`.

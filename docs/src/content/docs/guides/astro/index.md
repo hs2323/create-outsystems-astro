@@ -9,6 +9,7 @@ description: Setup Astro JavaScript project
 
 - [Alpine.js](../integrations/alpine/)
 - [Angular](https://analogjs.org/docs/packages/astro-angular/overview)
+- [Ember](https://github.com/ember-tooling/ember-astro)
 - [jQuery](../integrations/jquery/)
 - [Lit](../integrations/lit/)
 - [Preact](https://docs.astro.build/en/guides/integrations-guide/preact/)
@@ -42,6 +43,8 @@ This will create the generated files as well as an example component. You can de
 │           └── Counter.ts
 │       └── angular/
 │           └── Counter.component.ts
+│       └── ember/
+│           └── Counter.gts
 │       └── jquery/
 │           └── Counter.ts
 │       └── lit/
@@ -65,6 +68,8 @@ This will create the generated files as well as an example component. You can de
 │           └── alpine-counter.astro
 │       └── angular/
 │           └── angular-counter.astro
+│       └── ember/
+│           └── ember-counter.astro
 │       └── jquery/
 │           └── jquery-counter.astro
 │       └── lit/
@@ -100,6 +105,8 @@ For any of the official frameworks (react, preact, solid-js, vue and svelte) you
 Qwik takes either `client:load`, which keeps server rendering and lets Qwik resume the container it emitted, or `client:only="@qwik.dev/astro"`, which renders it entirely on the client like the other JSX frameworks. See the [Qwik integration guide](../integrations/qwik/).
 
 Alpine.js takes `client:load`. Its renderer returns no server markup, so the island is rendered entirely on the client. See the [Alpine.js integration guide](../integrations/alpine/).
+
+Ember takes `client:only="ember-astro"`, the name the `ember-astro` renderer registers. `client:only="ember"` fails with a missing hint error. See the [ember-astro documentation](https://github.com/ember-tooling/ember-astro).
 
 jQuery takes `client:load`. Its renderer returns no server markup, so the component renders into the island entirely on the client. See the [jQuery integration guide](../integrations/jquery/).
 
@@ -166,6 +173,32 @@ Since OutSystems does not have a concept of [NULL](https://success.outsystems.co
 #### Angular
 
 Angular does not support the use of slots.
+
+#### Ember
+
+Astro passes slots to an Ember component as HTML strings in the `@slots` argument, keyed by slot name, and passes the props in `@props`. Insert a slot with triple curlies so it is not escaped. See [slots in ember-astro](https://github.com/ember-tooling/ember-astro#slots).
+
+- Astro example:
+```astro
+  <CounterComponent client:only="ember-astro">
+      <div slot="header">
+          <p>Slot header</p>
+      </div>
+      <div>
+          <p>Slot content</p>
+      </div>
+  </CounterComponent>
+```
+
+- Ember example:
+```gts
+  <template>
+    {{{@slots.header}}}
+    <div>
+      {{{@slots.default}}}
+    </div>
+  </template>
+```
 
 #### Preact
 

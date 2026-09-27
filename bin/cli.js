@@ -17,6 +17,7 @@ const __dirname = path.dirname(__filename);
 const FRAMEWORKS = [
   { title: "Alpine.js", value: "alpine" },
   { title: "Angular", value: "angular" },
+  { title: "Ember", value: "ember" },
   { title: "jQuery", value: "jquery" },
   { title: "Lit", value: "lit" },
   { title: "Preact", value: "preact" },
@@ -212,6 +213,13 @@ function updateAstroConfig(projectDir, selectedFrameworks) {
       import: /import\s+angular\s+from\s+['"]@analogjs\/astro-angular['"];\s*\n?/,
       integration: /angular\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
     },
+    ember: {
+      // The extensions list only exists to undo @embroider/vite's override.
+      define: /[ \t]*\/\/ @embroider\/vite replaces[\s\S]*?extensions:\s*\[[\s\S]*?\],\n/,
+      import: /import\s+\{\s*ember\s*\}\s+from\s+['"]ember-astro['"];\s*\n?/,
+      // The integration is wrapped in a JSDoc type cast with a comment above it.
+      integration: /(?:[ \t]*\/\/ ember-astro types[^\n]*\n)?[ \t]*(?:\/\*\*[^*]*\*\/\s*)?\(?\s*\bember\s*\(\s*\)\s*\)?\s*,?\s*/
+    },
     jquery: {
       import: /import\s+jquery\s+from\s+['"]islands-integrations\/jquery['"];\s*\n?/,
       integration: /\bjquery\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
@@ -301,6 +309,10 @@ function updateMultiAstroPage(projectDir, selectedFrameworks) {
     angular: {
       import: /import\s+AngularStore\s+from\s+['"].*?angular\/Store\.component['"];?\s*\n?/g,
       component: /<AngularStore\s+client:load\s*\/>\s*\n?/g
+    },
+    ember: {
+      import: /import\s+EmberStore\s+from\s+['"].*?ember\/Store\.gts['"];?\s*\n?/g,
+      component: /<EmberStore\s+client:only="ember-astro"\s*\/>\s*\n?/g
     },
     jquery: {
       import: /import\s+JQueryStore\s+from\s+['"].*?jquery\/Store['"];?\s*\n?/g,

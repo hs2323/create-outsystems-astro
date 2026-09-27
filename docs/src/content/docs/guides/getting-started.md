@@ -37,6 +37,7 @@ The following frameworks are currently compatible with the OutSystems Astro Isla
 
 - [Alpine.js](../integrations/alpine/)
 - [Angular](https://analogjs.org/docs/packages/astro-angular/overview)
+- [Ember](https://github.com/ember-tooling/ember-astro)
 - [jQuery](../integrations/jquery/)
 - [Lit](../integrations/lit/)
 - [Preact](https://docs.astro.build/en/guides/integrations-guide/preact/)
