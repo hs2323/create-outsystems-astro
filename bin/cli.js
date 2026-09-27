@@ -17,6 +17,7 @@ const __dirname = path.dirname(__filename);
 const FRAMEWORKS = [
   { title: "Alpine.js", value: "alpine" },
   { title: "Angular", value: "angular" },
+  { title: "jQuery", value: "jquery" },
   { title: "Lit", value: "lit" },
   { title: "Preact", value: "preact" },
   { title: "Qwik", value: "qwik" },
@@ -211,6 +212,10 @@ function updateAstroConfig(projectDir, selectedFrameworks) {
       import: /import\s+angular\s+from\s+['"]@analogjs\/astro-angular['"];\s*\n?/,
       integration: /angular\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
     },
+    jquery: {
+      import: /import\s+jquery\s+from\s+['"]islands-integrations\/jquery['"];\s*\n?/,
+      integration: /\bjquery\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
+    },
     lit: {
       import: /import\s+lit\s+from\s+['"]islands-integrations\/lit['"];\s*\n?/,
       integration: /\blit\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
@@ -296,6 +301,10 @@ function updateMultiAstroPage(projectDir, selectedFrameworks) {
     angular: {
       import: /import\s+AngularStore\s+from\s+['"].*?angular\/Store\.component['"];?\s*\n?/g,
       component: /<AngularStore\s+client:load\s*\/>\s*\n?/g
+    },
+    jquery: {
+      import: /import\s+JQueryStore\s+from\s+['"].*?jquery\/Store['"];?\s*\n?/g,
+      component: /<JQueryStore\s+client:load\s*\/>\s*\n?/g
     },
     lit: {
       import: /import\s+LitStore\s+from\s+['"].*?lit\/Store['"];?\s*\n?/g,

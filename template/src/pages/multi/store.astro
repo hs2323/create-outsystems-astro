@@ -1,6 +1,7 @@
 ---
 import AlpineStore from "../../framework/alpine/Store";
 import AngularStore from "../../framework/angular/Store.component";
+import JQueryStore from "../../framework/jquery/Store";
 import LitStore from "../../framework/lit/Store";
 import PreactStore from "../../framework/preact/Store";
 import QwikStore from "../../framework/qwik/Store";
@@ -17,7 +18,7 @@ import styles from "../../styles/index.css?url";
         <link href={styles} rel="stylesheet" />
         <script>
             // Expose the shared framework Nano Store so string-rendered islands
-            // (such as the VanillaJS store) can subscribe to it before they hydrate.
+            // (such as the VanillaJS and jQuery stores) can subscribe to it before they hydrate.
             import { framework } from "../../stores/framework";
             window.Stores = window.Stores || {};
             window.Stores["framework"] = framework;
@@ -27,6 +28,7 @@ import styles from "../../styles/index.css?url";
         <div class="card-grid">
             <AlpineStore client:load />
             <AngularStore client:load />
+            <JQueryStore client:load />
             <LitStore client:load />
             <PreactStore client:only="preact" />
             <QwikStore client:load />

@@ -8,6 +8,7 @@ import vue from "@astrojs/vue";
 import qwikAstro from "@qwik.dev/astro";
 import { defineConfig } from "astro/config";
 import alpine from "islands-integrations/alpine";
+import jquery from "islands-integrations/jquery";
 import lit from "islands-integrations/lit";
 import qwik from "islands-integrations/qwik";
 import twig from "islands-integrations/twig";
@@ -29,6 +30,9 @@ export default defineConfig({
           return id.includes("src/framework/angular");
         },
       },
+    }),
+    jquery({
+      include: ["src/framework/jquery/*"],
     }),
     lit({
       include: ["src/framework/lit/*"],

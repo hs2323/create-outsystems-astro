@@ -7,6 +7,7 @@
 - The Astro Islands can be used generated with the following frameworks:
   - Alpine.js - Documentation available at https://hs2323.github.io/create-outsystems-astro/guides/integrations/alpine/
   - Angular - Documentation available at https://analogjs.org/docs/packages/astro-angular/overview
+  - jQuery - Documentation available at https://hs2323.github.io/create-outsystems-astro/guides/integrations/jquery/
   - Lit - Documentation available at https://hs2323.github.io/create-outsystems-astro/guides/integrations/lit/
   - Preact - Documentation available at https://docs.astro.build/en/guides/integrations-guide/preact/
   - Qwik - Documentation available at https://hs2323.github.io/create-outsystems-astro/guides/integrations/qwik/
@@ -44,6 +45,7 @@ In OutSystems Developer Cloud, the Islands library is available at https://www.o
 - When importing a component, the component must have the attribute of the client:only= + the framework name.\
   - Alpine.js: `client:load`
   - Angular: `client:load`
+  - jQuery: `client:load`
   - Lit: `client:load`
   - Preact: `client:only="preact"`
   - Qwik: `client:load` to keep server rendering, so Qwik resumes the container it emitted, or `client:only="@qwik.dev/astro"` to render entirely on the client.
@@ -59,6 +61,7 @@ In OutSystems Developer Cloud, the Islands library is available at https://www.o
 - The components live in the folder framework/{NAME}/:
   - Alpine.js: src/framework/alpine
   - Angular: src/framework/angular
+  - jQuery: src/framework/jquery
   - Lit: src/framework/lit
   - Preact: src/framework/react
   - Qwik: src/framework/qwik
@@ -107,6 +110,52 @@ export default function Counter(): string {
       <pre x-text="count"></pre>
       <button x-on:click="count++">+</button>
       <button x-on:click="window[showMessage](count)">Send value</button>
+    </div>
+  `;
+}
+```
+
+#### jQuery components
+
+- A jQuery component works like a Vanilla JS one: a TypeScript function that returns an HTML string with an inline `<script>`. The script does the work with jQuery: it outputs the HTML, binds the events and subscribes to stores. Keep the returned markup to a container and the script.
+- The script is a classic script and cannot `import`. It uses the global `jQuery`, wrapped as `(function ($) { ... })(jQuery)`. The renderer uses the page's `window.jQuery` if there is one, so plugins registered on it are available; otherwise it sets `window.jQuery` to the bundled jQuery before the script runs.
+- Serialize values interpolated into the script with `JSON.stringify` (strings) or `Number` (numbers).
+- The island renders only while it has the `ssr` attribute, on the first render and whenever the Islands module sets `ssr` again with new props. On a props update the component renders again from the new props. Before that, the renderer triggers an `islands:unmount` jQuery event on the island and empties it; listen for `islands:unmount` to undo anything else, such as a Nano Store subscription.
+
+```ts
+export default function Counter({
+  initialCount = 0,
+  showMessage = "",
+}: {
+  initialCount?: number;
+  showMessage?: string;
+}): string {
+  return `
+    <div class="counter">
+      <script>
+        (function ($) {
+          const $container = document.currentScript
+            ? $(document.currentScript).parent()
+            : $(".counter");
+          const showMessage = ${JSON.stringify(showMessage)};
+          let count = ${Number(initialCount)};
+
+          $container.append(
+            '<pre class="count"></pre>' +
+            '<button class="add">+</button>' +
+            '<button class="send">Send value</button>'
+          );
+
+          const $count = $container.find(".count").text(count);
+
+          $container.on("click", ".add", function () {
+            $count.text(++count);
+          });
+          $container.on("click", ".send", function () {
+            window[showMessage](count);
+          });
+        })(jQuery);
+      </script>
     </div>
   `;
 }
@@ -245,6 +294,10 @@ Angular does not support the use of slots. Any use of slots with Angular should 
 ##### Twig
 
 The Twig integration does not support the use of slots. Any use of slots with the Twig integration should be discouraged. Pass content in as props and render it with `{{ }}` instead.
+
+##### jQuery
+
+The jQuery integration does not support the use of slots. Any use of slots with the jQuery integration should be discouraged. Pass content in as props instead.
 
 ##### Vanilla JS
 
@@ -494,7 +547,7 @@ The OutSystems 11 library is called Lightweight State Manager - https://www.outs
 
 The OutSystems Developer Cloud library is called Lightweight State Manager and is available in the ODC Forge.
 
-Nano Stores are supported for Alpine.js - https://github.com/nanostores/alpine, Lit - https://github.com/nanostores/lit, Preact - https://github.com/nanostores/preact, React - https://github.com/nanostores/react, SolidJS - https://github.com/nanostores/solid, Svelte - https://svelte.dev/docs/svelte/svelte-files#script-4-prefix-stores-with-$-to-access-their-values and Vue - https://github.com/nanostores/vue. The Vanilla JS integration has no binding library and uses the vanilla JS API through `window.Stores`. Nano Stores are not supported for Angular 21, for the Twig integration, where a `.twig` file and its inline classic script cannot run imports, nor for Qwik, which has no binding library and whose maintainers recommend against global stores in favour of custom events - https://github.com/QwikDev/astro#communicating-across-containers.
+Nano Stores are supported for Alpine.js - https://github.com/nanostores/alpine, Lit - https://github.com/nanostores/lit, Preact - https://github.com/nanostores/preact, React - https://github.com/nanostores/react, SolidJS - https://github.com/nanostores/solid, Svelte - https://svelte.dev/docs/svelte/svelte-files#script-4-prefix-stores-with-$-to-access-their-values and Vue - https://github.com/nanostores/vue. The Vanilla JS and jQuery integrations have no binding library and use the vanilla JS API through `window.Stores`. Nano Stores are not supported for Angular 21, for the Twig integration, where a `.twig` file and its inline classic script cannot run imports, nor for Qwik, which has no binding library and whose maintainers recommend against global stores in favour of custom events - https://github.com/QwikDev/astro#communicating-across-containers.
 
 In OutSystems, the store will be on the Window object. The Islands component will then have to access it from there.
 
@@ -576,6 +629,38 @@ if (typeof window !== "undefined") {
 ```html
 <div x-data x-nano:value="window.Stores['alpineStore']">
   <div x-text="value"></div>
+</div>
+```
+
+#### jQuery
+
+The jQuery integration has no binding library, so it uses the vanilla JS API against a real atom, like the Vanilla JS integration. Register the atom from the component module, guarded because the renderer also imports the module during the build, then subscribe from the inline script and unsubscribe on `islands:unmount`:
+
+```ts
+import { setupStore } from "../../stores/demo";
+
+if (typeof window !== "undefined") {
+  setupStore("jqueryStore");
+}
+```
+
+```html
+<div class="my-component">
+  <script>
+    (function ($) {
+      const $container = $(document.currentScript).parent();
+      $container.append('<div class="nanostore-value"></div>');
+
+      const store = window.Stores && window.Stores["jqueryStore"];
+
+      if (store) {
+        const unsubscribe = store.subscribe(function (value) {
+          $container.find(".nanostore-value").text(value);
+        });
+        $container.closest("astro-island").one("islands:unmount", unsubscribe);
+      }
+    })(jQuery);
+  </script>
 </div>
 ```
 
@@ -663,6 +748,7 @@ const nanoStoreValue = useStore(window.Stores["MyGreatStore"]);
 - The name of the module/library/application where the component will live must be set in the `ASSET_URL` variable of the `.env` file.
 - Run the command `PM run output`. This will run the Astro build and then run an additional step to generate the output necessary for importing into OutSystems.
 - The official `@astrojs/alpinejs` integration does not register a renderer, it only starts Alpine over the whole page, so Alpine markup would never be wrapped in an `<astro-island>` and there would be nothing for the output step to keep. The template uses `islands-integrations/alpine` instead, which registers a renderer with a `clientEntrypoint`, so the island carries `component-url`, `renderer-url` and `props` like any other framework.
+- There is no official Astro integration for jQuery. The template uses `islands-integrations/jquery`, which registers a client-only renderer with a `clientEntrypoint`, so the island carries `component-url`, `renderer-url` and `props` like any other framework. A component returns markup with inline scripts, as with Vanilla JS, and the renderer provides the global `jQuery` those scripts use.
 - The official `@astrojs/lit` integration was deprecated in Astro 5 and is no longer maintained. It rendered through `@lit-labs/ssr`, which needs a server. The template uses `islands-integrations/lit` instead, which registers a client-only renderer with a `clientEntrypoint`, so the island carries `component-url`, `renderer-url` and `props` like any other framework.
 - Qwik renders a Qwik container (a `<div q:container>`) rather than markup Astro hydrates. Given a `client:load` directive, Astro wraps that container in an `<astro-island>`, so the output step has something to keep. `@qwik.dev/astro` registers its renderer without a `clientEntrypoint`, which would make Astro omit `renderer-url`, `component-export` and the serialized `props` attribute and leave the island inert; the template wraps it in `islands-integrations/qwik` to supply one. With that in place the island resumes the server markup when it has any, renders on the client when it does not, and re-renders when the Islands module changes `props`.
 - The output will be in the output/ folder. The contents are:
