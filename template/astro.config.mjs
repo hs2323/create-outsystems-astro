@@ -118,6 +118,10 @@ export default defineConfig({
     }),
     qwik(
       qwikAstro({
+        // Qwik's default ("smart") emits a chunk per event handler. "single"
+        // puts them all in one, so there are fewer files to carry into
+        // OutSystems; the first interaction loads every handler at once.
+        entryStrategy: { type: "single" },
         include: ["src/framework/qwik/*"],
       }),
     ),
@@ -156,8 +160,7 @@ export default defineConfig({
       },
       // @embroider/vite replaces an unset extensions list with Ember's own,
       // which drops .jsx and .tsx, so extensionless imports of JSX components
-      // (such as Qwik's during server rendering) fail to resolve. Keep Vite's
-      // defaults and add the Ember ones.
+      // fail to resolve. Keep Vite's defaults and add the Ember ones.
       extensions: [
         ".mjs",
         ".js",
