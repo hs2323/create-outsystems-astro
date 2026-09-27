@@ -1,5 +1,27 @@
+diff --git a/node_modules/@qwik.dev/astro/src/index.ts b/node_modules/@qwik.dev/astro/src/index.ts
+index a3ce8ac..e181b57 100644
+--- a/node_modules/@qwik.dev/astro/src/index.ts
++++ b/node_modules/@qwik.dev/astro/src/index.ts
+@@ -98,6 +98,9 @@ type Options = {
+ 
+   /** Enable SPA-style navigation support with Astro's ClientRouter. */
+   clientRouter?: boolean;
++
++  /** How the client build groups segments into chunks. Defaults to Qwik's `smart`. */
++  entryStrategy?: QwikVitePluginOptions["entryStrategy"];
+ };
+ 
+ export default function qwik(options?: Options): AstroIntegration {
+@@ -201,6 +204,7 @@ export default function qwik(options?: Options): AstroIntegration {
+               serverDir,
+               finalDir,
+               debug: options?.debug ?? false,
++              entryStrategy: options?.entryStrategy,
+               onManifest: (manifest) => {
+                 qwikManifest = manifest;
+               },
 diff --git a/node_modules/@qwik.dev/astro/src/plugins.ts b/node_modules/@qwik.dev/astro/src/plugins.ts
-index f07cd9b..97e90e3 100644
+index f07cd9b..fecafc5 100644
 --- a/node_modules/@qwik.dev/astro/src/plugins.ts
 +++ b/node_modules/@qwik.dev/astro/src/plugins.ts
 @@ -13,7 +13,7 @@ import { SERVER_ENTRYPOINT } from "./constants";
@@ -11,3 +33,19 @@ index f07cd9b..97e90e3 100644
      if ("outputOptions" in plugin) delete plugin.outputOptions;
      if (plugin.name === "vite-plugin-qwik-post" && "generateBundle" in plugin)
        delete plugin.generateBundle;
+@@ -62,6 +62,7 @@ export async function runQwikClientBuild(opts: {
+   serverDir: string;
+   finalDir: string;
+   debug: boolean;
++  entryStrategy?: QwikVitePluginOptions["entryStrategy"];
+   onManifest: (manifest: QwikManifest) => void;
+   astroViteConfig: InlineConfig;
+ }) {
+@@ -76,6 +77,7 @@ export async function runQwikClientBuild(opts: {
+       outDir: opts.finalDir,
+       manifestOutput: opts.onManifest
+     },
++    entryStrategy: opts.entryStrategy,
+     debug: opts.debug
+   };
+ 

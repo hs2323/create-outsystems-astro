@@ -273,6 +273,12 @@ function updateAstroConfig(projectDir, selectedFrameworks) {
       if (patterns.define) {
         content = content.replace(patterns.define, "");
       }
+
+      // Remove the framework's entry from frameworkChunks.
+      content = content.replace(
+        new RegExp(`^[ \\t]*${framework}: \\[[\\s\\S]*?\\],\\n`, "m"),
+        ""
+      );
     }
   }
 
