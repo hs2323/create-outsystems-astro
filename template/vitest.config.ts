@@ -5,11 +5,28 @@ import { qwikVite } from "@qwik.dev/core/optimizer";
 import { svelte } from "@sveltejs/vite-plugin-svelte";
 import react from "@vitejs/plugin-react";
 import vue from "@vitejs/plugin-vue";
+import { ember } from "ember-astro";
 import { twigLoader } from "islands-integrations/twig";
 import solid from "vite-plugin-solid";
 import { defineConfig } from "vitest/config";
 
-export default defineConfig(({ mode }) => ({
+// ember-astro only exposes its Vite plugins (Embroider and the template-tag
+// Babel transform) through its Astro hook, so collect them from there.
+async function emberVitePlugins() {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  let plugins: any[] = [];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  await (ember() as any).hooks["astro:config:setup"]({
+    addRenderer: () => {},
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    updateConfig: (config: any) => {
+      plugins = config.vite.plugins;
+    },
+  });
+  return plugins;
+}
+
+export default defineConfig(async ({ mode }) => ({
   test: {
     projects: [
       {
@@ -31,6 +48,19 @@ export default defineConfig(({ mode }) => ({
           name: "angular",
           pool: "forks",
           setupFiles: ["test/setup-test-env-angular.ts"],
+        },
+      },
+      {
+        plugins: await emberVitePlugins(),
+        test: {
+          environment: "happy-dom",
+          globals: true,
+          include: ["test/integration/ember/**/*.test.ts"],
+          name: "ember",
+          // The client entrypoint imports `@ember/*` modules, which only the
+          // Embroider resolver can find, so it has to go through Vite.
+          server: { deps: { inline: ["ember-astro"] } },
+          setupFiles: ["test/setup-test-env.ts"],
         },
       },
       {

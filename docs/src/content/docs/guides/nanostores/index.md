@@ -12,6 +12,7 @@ Refer to the full [Nano Stores documentation](https://github.com/nanostores/nano
 Nano Stores are currently supported for the following libraries:
 
 - [Alpine.js](https://github.com/nanostores/alpine)
+- [Ember](https://github.com/nanostores/nanostores#vanilla-js) (vanilla JS API)
 - [jQuery](https://github.com/nanostores/nanostores#vanilla-js) (vanilla JS API)
 - [Lit](https://github.com/nanostores/lit)
 - [Preact](https://github.com/nanostores/preact)
@@ -50,6 +51,29 @@ Alpine.js:
 <div x-data x-nano:value="window.Stores['alpineStore']">
   <div x-text="value"></div>
 </div>
+```
+
+Ember:
+```gts
+import { registerDestructor } from "@ember/destroyable";
+import Component from "@glimmer/component";
+import { tracked } from "@glimmer/tracking";
+
+export default class MyComponent extends Component {
+  @tracked value = window.Stores["emberStore"].get();
+
+  constructor(owner: unknown, args: object) {
+    super(owner, args);
+    const unsubscribe = window.Stores["emberStore"].subscribe((value) => {
+      this.value = value;
+    });
+    registerDestructor(this, unsubscribe);
+  }
+
+  <template>
+    <div>{{this.value}}</div>
+  </template>
+}
 ```
 
 jQuery:

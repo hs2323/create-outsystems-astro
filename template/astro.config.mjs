@@ -7,6 +7,7 @@ import svelte from "@astrojs/svelte";
 import vue from "@astrojs/vue";
 import qwikAstro from "@qwik.dev/astro";
 import { defineConfig } from "astro/config";
+import { ember } from "ember-astro";
 import alpine from "islands-integrations/alpine";
 import jquery from "islands-integrations/jquery";
 import lit from "islands-integrations/lit";
@@ -31,6 +32,8 @@ export default defineConfig({
         },
       },
     }),
+    // ember-astro types its integration as `unknown`.
+    /** @type {import("astro").AstroIntegration} */ (ember()),
     jquery({
       include: ["src/framework/jquery/*"],
     }),
@@ -102,6 +105,22 @@ export default defineConfig({
         path: "node:path",
         url: "node:url",
       },
+      // @embroider/vite replaces an unset extensions list with Ember's own,
+      // which drops .jsx and .tsx, so extensionless imports of JSX components
+      // (such as Qwik's during server rendering) fail to resolve. Keep Vite's
+      // defaults and add the Ember ones.
+      extensions: [
+        ".mjs",
+        ".js",
+        ".mts",
+        ".ts",
+        ".jsx",
+        ".tsx",
+        ".json",
+        ".gjs",
+        ".gts",
+        ".hbs",
+      ],
     },
   },
 });

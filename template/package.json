@@ -45,6 +45,8 @@
     "alpinejs": "^3.17.3",
     "astro": "^7.3.3",
     "cookie": "^2.0.1",
+    "ember-astro": "^0.2.0",
+    "ember-source": "^7.3.0",
     "islands-integrations": "file:./.integrations",
     "jquery": "^4.0.0",
     "lit": "^3.3.3",
