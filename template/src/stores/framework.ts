@@ -9,6 +9,7 @@ export type CurrentSelectedFramework =
   | "Preact"
   | "React"
   | "Solid"
+  | "Stencil"
   | "Svelte"
   | "VanillaJS"
   | "Vue";

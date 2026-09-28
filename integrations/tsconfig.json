@@ -16,6 +16,7 @@
     "jquery/**/*.ts",
     "lit/**/*.ts",
     "qwik/**/*.ts",
+    "stencil/**/*.ts",
     "twig/**/*.ts",
     "vanilla/**/*.ts"
   ],

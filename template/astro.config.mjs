@@ -12,6 +12,7 @@ import alpine from "islands-integrations/alpine";
 import jquery from "islands-integrations/jquery";
 import lit from "islands-integrations/lit";
 import qwik from "islands-integrations/qwik";
+import stencil from "islands-integrations/stencil";
 import twig from "islands-integrations/twig";
 import vanilla from "islands-integrations/vanilla";
 
@@ -42,6 +43,7 @@ const frameworkChunks = {
     "@nanostores/react",
   ],
   solid: ["solid-js", "@astrojs/solid-js", "@nanostores/solid"],
+  stencil: [/^@stencil\//],
   svelte: ["svelte", "@astrojs/svelte", "@nanostores/svelte-runes"],
   twig: ["twig", "locutus"],
   vue: [/^@vue\//, "vue", "@astrojs/vue", "@nanostores/vue"],
@@ -93,6 +95,9 @@ export default defineConfig({
     lit({
       include: ["src/framework/lit/*"],
     }),
+    stencil({
+      include: ["src/framework/stencil/*"],
+    }),
     vanilla({
       include: ["src/framework/vanilla/*"],
     }),
@@ -104,7 +109,6 @@ export default defineConfig({
       include: ["src/framework/react/*"],
     }),
     solid({
-      devtools: true,
       include: ["src/framework/solid/*"],
     }),
     svelte({

@@ -59,6 +59,7 @@ export default defineConfig({
                   label: "Solid",
                   link: "https://www.solidjs.com/",
                 },
+                { label: "Stencil", slug: "guides/integrations/stencil" },
                 {
                   attrs: externalLinkAttributes,
                   label: "Svelte",

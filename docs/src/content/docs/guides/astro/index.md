@@ -16,6 +16,7 @@ description: Setup Astro JavaScript project
 - [Qwik](../integrations/qwik/)
 - [React](https://docs.astro.build/en/guides/integrations-guide/react/)
 - [SolidJS](https://docs.astro.build/en/guides/integrations-guide/solid-js/)
+- [Stencil](../integrations/stencil/)
 - [Svelte](https://docs.astro.build/en/guides/integrations-guide/svelte/)
 - [Twig](../../integrations/twig/index.md)
 - [Vanilla JS](../../integrations/vanilla/index.md)
@@ -57,6 +58,8 @@ This will create the generated files as well as an example component. You can de
 │           └── Counter.tsx
 │       └── solid/
 │           └── Counter.tsx
+│       └── stencil/
+│           └── Counter.tsx
 │       └── svelte/
 │           └── Counter.svelte
 │       └── vue/
@@ -82,6 +85,8 @@ This will create the generated files as well as an example component. You can de
 │           └── react-counter.astro
 │       └── solid/
 │           └── solid-counter.astro
+│       └── stencil/
+│           └── stencil-counter.astro
 │       └── svelte/
 │           └── svelte-counter.astro
 │       └── vue/
@@ -112,6 +117,8 @@ jQuery takes `client:load`. Its renderer returns no server markup, so the compon
 
 Lit takes `client:load`. Its renderer returns no server markup, so the element is created entirely on the client. See the [Lit integration guide](../integrations/lit/).
 
+Stencil takes `client:load`. Its renderer returns no server markup, so the element is created entirely on the client. See the [Stencil integration guide](../integrations/stencil/).
+
 ### Framework
 
 The location of the component code.
@@ -138,6 +145,11 @@ For JSX based frameworks, you must use the jsxImportSource header at the top of 
 ##### SolidJS
 ```js
 /** @jsxImportSource solid-js */
+```
+
+##### Stencil
+```js
+/** @jsxImportSource @stencil/core */
 ```
 
 ### Images

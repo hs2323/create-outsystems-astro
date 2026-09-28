@@ -21,3 +21,13 @@ declare module "ember-astro/client.js" {
     slots: Record<string, string>,
   ) => Promise<void>;
 }
+
+// @stencil/core declares a global `jest.Matchers.toHaveAttribute` that takes
+// only the attribute name. Vitest's `expect` extends `jest.Matchers`, so that
+// declaration hides jest-dom's, which also takes the expected value. Declaring
+// jest-dom's signature here merges it back in as an overload.
+declare namespace jest {
+  interface Matchers<R, T> {
+    toHaveAttribute(attr: string, value?: unknown): R;
+  }
+}

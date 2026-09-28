@@ -21,7 +21,10 @@ Generates [Astro Islands](https://docs.astro.build/en/concepts/islands/) for use
 - [Qwik](https://qwik.dev/docs/integrations/astro/)
 - [React](https://docs.astro.build/en/guides/integrations-guide/react/)
 - [SolidJS](https://docs.astro.build/en/guides/integrations-guide/solid-js/)
+- [Stencil](https://hs2323.github.io/create-outsystems-astro/guides/integrations/stencil/)
 - [Svelte](https://docs.astro.build/en/guides/integrations-guide/svelte/)
+- [Twig](https://hs2323.github.io/create-outsystems-astro/guides/integrations/twig)
+- [Vanilla JS](https://hs2323.github.io/create-outsystems-astro/guides/integrations/vanilla)
 - [Vue](https://docs.astro.build/en/guides/integrations-guide/vue/)
 
 ## Getting started
