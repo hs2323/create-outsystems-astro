@@ -97,9 +97,10 @@ describe("Demo", () => {
       { default: "<p>Default slot</p>", header: "<h1>Header slot</h1>" },
     );
     const view = within(element);
-    expect(
-      view.getByText("Header slot").parentElement?.getAttribute("slot"),
-    ).toBe("header");
+    expect(view.getByText("Header slot").parentElement).toHaveAttribute(
+      "slot",
+      "header",
+    );
     expect(view.getByText("Default slot").parentElement).not.toHaveAttribute(
       "slot",
     );
