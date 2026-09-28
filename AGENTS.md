@@ -14,6 +14,7 @@
     - Qwik
     - React
     - SolidJS
+    - Stencil
     - Svelte
     - Twig
     - VanillaJS

@@ -43,6 +43,7 @@ The following frameworks are currently compatible with the OutSystems Astro Isla
 - [Preact](https://docs.astro.build/en/guides/integrations-guide/preact/)
 - [Qwik](../integrations/qwik/)
 - [React](https://docs.astro.build/en/guides/integrations-guide/react/)
+- [Stencil](../integrations/stencil/)
 - [Svelte](https://docs.astro.build/en/guides/integrations-guide/svelte/)
 - [Vue](https://docs.astro.build/en/guides/integrations-guide/vue/)
 

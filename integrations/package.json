@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@qwik.dev/core": "^2.0.0-beta.43",
+    "@stencil/core": "^4.45.0",
     "alpinejs": "^3.17.3",
     "astro": "^7.3.3",
     "jquery": "^4.0.0",

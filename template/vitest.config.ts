@@ -6,6 +6,7 @@ import { svelte } from "@sveltejs/vite-plugin-svelte";
 import react from "@vitejs/plugin-react";
 import vue from "@vitejs/plugin-vue";
 import { ember } from "ember-astro";
+import { stencilLoader } from "islands-integrations/stencil";
 import { twigLoader } from "islands-integrations/twig";
 import solid from "vite-plugin-solid";
 import { defineConfig } from "vitest/config";
@@ -122,6 +123,25 @@ export default defineConfig(async ({ mode }) => ({
           globals: true,
           include: ["test/integration/solid/**/*.test.tsx"],
           name: "solid",
+          setupFiles: ["test/setup-test-env.ts"],
+        },
+      },
+      {
+        // The loader compiles the components with Stencil, as it does in the
+        // Astro build.
+        plugins: [
+          stencilLoader({
+            include: [
+              "src/framework/stencil/*",
+              "test/integration/stencil/fixtures/*",
+            ],
+          }),
+        ],
+        test: {
+          environment: "happy-dom",
+          globals: true,
+          include: ["test/integration/stencil/**/*.test.ts"],
+          name: "stencil",
           setupFiles: ["test/setup-test-env.ts"],
         },
       },

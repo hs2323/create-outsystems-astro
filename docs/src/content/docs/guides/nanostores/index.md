@@ -18,6 +18,7 @@ Nano Stores are currently supported for the following libraries:
 - [Preact](https://github.com/nanostores/preact)
 - [React](https://github.com/nanostores/react)
 - [SolidJS](https://github.com/nanostores/solid)
+- [Stencil](https://github.com/nanostores/nanostores#vanilla-js) (vanilla JS API)
 - [Svelte](https://github.com/nanostores/svelte)
 - [Vanilla JS](https://github.com/nanostores/nanostores#vanilla-js)
 - [Vue](https://github.com/nanostores/vue)
@@ -106,6 +107,33 @@ export default class MyComponent extends LitElement {
 
   override render() {
     return html`<div>${this.store.value}</div>`;
+  }
+}
+```
+
+Stencil:
+```tsx
+/** @jsxImportSource @stencil/core */
+import { Component, State } from "@stencil/core";
+
+@Component({ shadow: true, tag: "my-component" })
+export default class MyComponent {
+  @State() value = "";
+
+  private unsubscribe?: () => void;
+
+  connectedCallback() {
+    this.unsubscribe = window.Stores["stencilStore"].subscribe(
+      (value: string) => (this.value = value),
+    );
+  }
+
+  disconnectedCallback() {
+    this.unsubscribe?.();
+  }
+
+  render() {
+    return <div>{this.value}</div>;
   }
 }
 ```

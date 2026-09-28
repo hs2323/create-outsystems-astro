@@ -14,6 +14,7 @@
   - Qwik - Documentation available at https://hs2323.github.io/create-outsystems-astro/guides/integrations/qwik/
   - React - Documentation available at https://docs.astro.build/en/guides/integrations-guide/react/
   - SolidJS - Documentation available at https://docs.astro.build/en/guides/integrations-guide/solid-js/
+  - Stencil - Documentation available at https://hs2323.github.io/create-outsystems-astro/guides/integrations/stencil/
   - Svelte - Documentation availabe at https://docs.astro.build/en/guides/integrations-guide/svelte/
   - Twig - Documentation available at https://hs2323.github.io/create-outsystems-astro/guides/integrations/twig/
   - Vanilla JS - Documentation available at https://hs2323.github.io/create-outsystems-astro/guides/integrations/vanilla/
@@ -53,6 +54,7 @@ In OutSystems Developer Cloud, the Islands library is available at https://www.o
   - Qwik: `client:load` to keep server rendering, so Qwik resumes the container it emitted, or `client:only="@qwik.dev/astro"` to render entirely on the client.
   - React: `client:only="react"`
   - SolidJS: `client:only="solid-js"`
+  - Stencil: `client:load`
   - Svelte: `client:only="svelte"`
   - Twig: `client:load`
   - Vanilla JS: `client:load`
@@ -70,6 +72,7 @@ In OutSystems Developer Cloud, the Islands library is available at https://www.o
   - Qwik: src/framework/qwik
   - React: src/framework/react
   - SolidJS: src/framework/solid
+  - Stencil: src/framework/stencil
   - Svelte: src/framework/svelte
   - Vue: src/framework/vue
 
@@ -98,6 +101,12 @@ The framework folder should stay in place as the components will be rendered fro
 
 ```js
 /** @jsxImportSource solid-js */
+```
+
+- Stencil:
+
+```js
+/** @jsxImportSource @stencil/core */
 ```
 
 #### Alpine.js components
@@ -254,6 +263,37 @@ if (typeof window !== "undefined" && !customElements.get("lit-counter")) {
 }
 ```
 
+#### Stencil components
+
+- A Stencil component is a `.tsx` module whose default export is a class decorated with `@Component`, with one component per module. The integration compiles it with Stencil's compiler and registers the element under the `tag` from `@Component` when the module is imported in the browser, so the module does not call `customElements.define`. To render one Stencil component inside another, import the child's module and use its tag.
+- Use `export default class`, not Stencil's usual named export: the OutSystems Islands module loads an island's default export. Stencil's compiler cannot compile a default export class itself, so the integration compiles it as a named export and adds the default export back.
+- Stencil's decorators need `experimentalDecorators`, which `tsconfig.json` enables.
+- The island renders only while it has the `ssr` attribute, on the first render and whenever the Islands module sets `ssr` again with new props. The element is created once and the props are set as element properties. When the Islands module changes the props, the same element gets the new values and Stencil re-renders, so `@State` is kept.
+- With `shadow: true` the element renders into a shadow root, so the page stylesheet does not reach it. Pass it to `@Component` as `styles`, importing the stylesheet with `?inline`.
+
+```tsx
+/** @jsxImportSource @stencil/core */
+import { Component, Prop, State } from "@stencil/core";
+
+@Component({ shadow: true, tag: "stencil-counter" })
+export default class Counter {
+  @State() count: number | undefined;
+  @Prop() initialCount = 0;
+  @Prop() showMessage = "";
+
+  render() {
+    const count = this.count ?? this.initialCount;
+    return [
+      <pre>{count}</pre>,
+      <button onClick={() => (this.count = count + 1)}>+</button>,
+      <button onClick={() => (window as any)[this.showMessage](count)}>
+        Send value
+      </button>,
+    ];
+  }
+}
+```
+
 #### Twig assets
 
 - A `.twig` component cannot run `import`s, so build-time assets are referenced with Twig's `asset()` function, the same one PHP's Twig provides:
@@ -333,6 +373,37 @@ render() {
       <slot></slot>
     </div>
   `;
+}
+```
+
+##### Stencil
+
+- In Stencil, slots are handled with `<slot>` elements in `render()`. The default slot is `<slot />` and a named slot is `<slot name="header" />`. The renderer moves each Astro slot into the element's light DOM, wrapped in an `<astro-slot>` with the matching `slot` attribute, so the `<slot>` shows it. This also works for a `scoped: true` component without a shadow root. Slot content stays in the light DOM and is styled by the page stylesheet.
+
+```js
+---
+import CounterComponent from '../../framework/stencil/Counter';
+---
+<CounterComponent client:load>
+    <div slot="header">
+        Counter Component
+    </div>
+    <div style="text-align: center;">
+        <p>This is content passed into the component.</p>
+    </div>
+</CounterComponent>
+```
+
+the slots can be used as:
+
+```tsx
+render() {
+  return [
+    <slot name="header" />,
+    <div>
+      <slot />
+    </div>,
+  ];
 }
 ```
 
@@ -625,7 +696,7 @@ The OutSystems 11 library is called Lightweight State Manager - https://www.outs
 
 The OutSystems Developer Cloud library is called Lightweight State Manager and is available in the ODC Forge.
 
-Nano Stores are supported for Alpine.js - https://github.com/nanostores/alpine, Lit - https://github.com/nanostores/lit, Preact - https://github.com/nanostores/preact, React - https://github.com/nanostores/react, SolidJS - https://github.com/nanostores/solid, Svelte - https://svelte.dev/docs/svelte/svelte-files#script-4-prefix-stores-with-$-to-access-their-values and Vue - https://github.com/nanostores/vue. The Vanilla JS and jQuery integrations have no binding library and use the vanilla JS API through `window.Stores`. Ember has no binding library either; it subscribes with the vanilla JS API and copies the value into a `@tracked` field. Nano Stores are not supported for Angular 21, for the Twig integration, where a `.twig` file and its inline classic script cannot run imports, nor for Qwik, which has no binding library and whose maintainers recommend against global stores in favour of custom events - https://github.com/QwikDev/astro#communicating-across-containers.
+Nano Stores are supported for Alpine.js - https://github.com/nanostores/alpine, Lit - https://github.com/nanostores/lit, Preact - https://github.com/nanostores/preact, React - https://github.com/nanostores/react, SolidJS - https://github.com/nanostores/solid, Svelte - https://svelte.dev/docs/svelte/svelte-files#script-4-prefix-stores-with-$-to-access-their-values and Vue - https://github.com/nanostores/vue. The Vanilla JS and jQuery integrations have no binding library and use the vanilla JS API through `window.Stores`. Ember has no binding library either; it subscribes with the vanilla JS API and copies the value into a `@tracked` field. Stencil has no binding library either; it subscribes with the vanilla JS API in `connectedCallback` and copies the value into a `@State` field. Nano Stores are not supported for Angular 21, for the Twig integration, where a `.twig` file and its inline classic script cannot run imports, nor for Qwik, which has no binding library and whose maintainers recommend against global stores in favour of custom events - https://github.com/QwikDev/astro#communicating-across-containers.
 
 In OutSystems, the store will be on the Window object. The Islands component will then have to access it from there.
 
@@ -794,6 +865,38 @@ export default class MyComponent extends LitElement {
 }
 ```
 
+#### Stencil
+
+The Stencil integration has no binding library, so the component subscribes with the vanilla JS API in `connectedCallback`, copies the value into a `@State` field, which re-renders it, and unsubscribes in `disconnectedCallback`. `connectedCallback` only runs in the browser, so reading `window.Stores` there is safe.
+
+```tsx
+/** @jsxImportSource @stencil/core */
+import { Component, State } from "@stencil/core";
+
+import { setupStore } from "../../stores/demo";
+
+@Component({ shadow: true, tag: "my-component" })
+export default class MyComponent {
+  @State() value = "";
+
+  private unsubscribe?: () => void;
+
+  connectedCallback() {
+    this.unsubscribe = setupStore("stencilStore").subscribe(
+      (value: string) => (this.value = value),
+    );
+  }
+
+  disconnectedCallback() {
+    this.unsubscribe?.();
+  }
+
+  render() {
+    return <div>{this.value}</div>;
+  }
+}
+```
+
 #### Vanilla JS
 
 The Vanilla JS integration has no binding library, so it uses the vanilla JS API against a real atom. Register the atom from the component module, guarded because the renderer also imports the module during the build, then subscribe from the inline script:
@@ -862,6 +965,7 @@ const nanoStoreValue = useStore(window.Stores["MyGreatStore"]);
 - Ember uses the community `ember-astro` integration (https://github.com/ember-tooling/ember-astro), which registers its renderer as `ember-astro` with a `clientEntrypoint`, so the island carries `component-url`, `renderer-url` and `props` like any other framework. It takes no options and compiles `.gts`/`.gjs` files wherever they are. It renders the component once and does not re-render when the Islands module changes the props.
 - There is no official Astro integration for jQuery. The template uses `islands-integrations/jquery`, which registers a client-only renderer with a `clientEntrypoint`, so the island carries `component-url`, `renderer-url` and `props` like any other framework. A component returns markup with inline scripts, as with Vanilla JS, and the renderer provides the global `jQuery` those scripts use.
 - The official `@astrojs/lit` integration was deprecated in Astro 5 and is no longer maintained. It rendered through `@lit-labs/ssr`, which needs a server. The template uses `islands-integrations/lit` instead, which registers a client-only renderer with a `clientEntrypoint`, so the island carries `component-url`, `renderer-url` and `props` like any other framework.
+- There is no official Astro integration for Stencil, and Stencil's own build emits a component library rather than modules Astro can import. The template uses `islands-integrations/stencil`, which compiles each component module with Stencil's `transpile` API in the Vite build and registers a client-only renderer with a `clientEntrypoint`, so the island carries `component-url`, `renderer-url` and `props` like any other framework.
 - Qwik renders a Qwik container (a `<div q:container>`) rather than markup Astro hydrates. Given a `client:load` directive, Astro wraps that container in an `<astro-island>`, so the output step has something to keep. `@qwik.dev/astro` registers its renderer without a `clientEntrypoint`, which would make Astro omit `renderer-url`, `component-export` and the serialized `props` attribute and leave the island inert; the template wraps it in `islands-integrations/qwik` to supply one. With that in place the island resumes the server markup when it has any, renders on the client when it does not, and re-renders when the Islands module changes `props`.
 - The output will be in the output/ folder. The contents are:
   - HTML file(s) \*.html:

@@ -3,6 +3,7 @@
   "include": [".astro/types.d.ts", "**/*"],
   "exclude": [".integrations", "dist", "output"],
   "compilerOptions": {
+    "experimentalDecorators": true,
     "jsx": "preserve",
     "types": ["node", "vitest/globals"]
   }

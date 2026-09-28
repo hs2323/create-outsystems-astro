@@ -24,6 +24,7 @@ const FRAMEWORKS = [
   { title: "Qwik", value: "qwik" },
   { title: "React", value: "react" },
   { title: "SolidJS", value: "solid" },
+  { title: "Stencil", value: "stencil" },
   { title: "Svelte", value: "svelte" },
   { title: "Twig", value: "twig" },
   { title: "VanillaJS", value: "vanilla" },
@@ -246,6 +247,10 @@ function updateAstroConfig(projectDir, selectedFrameworks) {
       import: /import\s+solid\s+from\s+['"]@astrojs\/solid-js['"];\s*\n?/,
       integration: /solid\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
     },
+    stencil: {
+      import: /import\s+stencil\s+from\s+['"]islands-integrations\/stencil['"];\s*\n?/,
+      integration: /\bstencil\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
+    },
     svelte: {
       import: /import\s+svelte\s+from\s+['"]@astrojs\/svelte['"];\s*\n?/,
       integration: /svelte\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
@@ -343,6 +348,10 @@ function updateMultiAstroPage(projectDir, selectedFrameworks) {
     solid: {
       import: /import\s+SolidStore\s+from\s+['"].*?solid\/Store['"];?\s*\n?/g,
       component: /<SolidStore\s+client:only="solid-js"\s*\/>\s*\n?/g
+    },
+    stencil: {
+      import: /import\s+StencilStore\s+from\s+['"].*?stencil\/Store['"];?\s*\n?/g,
+      component: /<StencilStore\s+client:load\s*\/>\s*\n?/g
     },
     svelte: {
       import: /import\s+SvelteStore\s+from\s+['"].*?svelte\/Store\.svelte['"];?\s*\n?/g,
