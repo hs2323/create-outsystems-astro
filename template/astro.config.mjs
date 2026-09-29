@@ -11,6 +11,7 @@ import { ember } from "ember-astro";
 import alpine from "islands-integrations/alpine";
 import jquery from "islands-integrations/jquery";
 import lit from "islands-integrations/lit";
+import marko from "islands-integrations/marko";
 import qwik from "islands-integrations/qwik";
 import stencil from "islands-integrations/stencil";
 import twig from "islands-integrations/twig";
@@ -33,6 +34,7 @@ const frameworkChunks = {
   ],
   jquery: ["jquery"],
   lit: ["lit", "lit-element", "lit-html", /^@lit\//, "@nanostores/lit"],
+  marko: ["marko"],
   preact: ["preact", /^@preact\//, "@astrojs/preact", "@nanostores/preact"],
   qwik: [/^@qwik\.dev\//],
   react: [
@@ -94,6 +96,9 @@ export default defineConfig({
     }),
     lit({
       include: ["src/framework/lit/*"],
+    }),
+    marko({
+      include: ["src/framework/marko/*"],
     }),
     stencil({
       include: ["src/framework/stencil/*"],

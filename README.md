@@ -17,6 +17,7 @@ Generates [Astro Islands](https://docs.astro.build/en/concepts/islands/) for use
 - [Ember](https://github.com/ember-tooling/ember-astro)
 - [jQuery](https://hs2323.github.io/create-outsystems-astro/guides/integrations/jquery/)
 - [Lit](https://hs2323.github.io/create-outsystems-astro/guides/integrations/lit/)
+- [Marko](https://hs2323.github.io/create-outsystems-astro/guides/integrations/marko/)
 - [Preact](https://docs.astro.build/en/guides/integrations-guide/preact/)
 - [Qwik](https://qwik.dev/docs/integrations/astro/)
 - [React](https://docs.astro.build/en/guides/integrations-guide/react/)

@@ -4,6 +4,7 @@ import AngularStore from "../../framework/angular/Store.component";
 import EmberStore from "../../framework/ember/Store.gts";
 import JQueryStore from "../../framework/jquery/Store";
 import LitStore from "../../framework/lit/Store";
+import MarkoStore from "../../framework/marko/Store.marko";
 import PreactStore from "../../framework/preact/Store";
 import QwikStore from "../../framework/qwik/Store";
 import ReactStore from "../../framework/react/Store";
@@ -33,6 +34,7 @@ import styles from "../../styles/index.css?url";
             <EmberStore client:only="ember-astro" />
             <JQueryStore client:load />
             <LitStore client:load />
+            <MarkoStore client:load />
             <PreactStore client:only="preact" />
             <QwikStore client:load />
             <ReactStore client:only="react" />

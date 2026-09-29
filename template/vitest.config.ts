@@ -6,6 +6,7 @@ import { svelte } from "@sveltejs/vite-plugin-svelte";
 import react from "@vitejs/plugin-react";
 import vue from "@vitejs/plugin-vue";
 import { ember } from "ember-astro";
+import { markoLoader } from "islands-integrations/marko";
 import { stencilLoader } from "islands-integrations/stencil";
 import { twigLoader } from "islands-integrations/twig";
 import solid from "vite-plugin-solid";
@@ -79,6 +80,30 @@ export default defineConfig(async ({ mode }) => ({
           globals: true,
           include: ["test/integration/lit/**/*.test.ts"],
           name: "lit",
+          setupFiles: ["test/setup-test-env.ts"],
+        },
+      },
+      {
+        // The loader compiles the components with Marko, as it does in the
+        // Astro build.
+        plugins: [
+          markoLoader({
+            include: [
+              "src/framework/marko/*",
+              "test/integration/marko/fixtures/*",
+            ],
+          }),
+        ],
+        // Marko Testing Library's browser build mounts the templates in the
+        // DOM; its default build renders them to a string.
+        resolve: {
+          conditions: ["browser"],
+        },
+        test: {
+          environment: "happy-dom",
+          globals: true,
+          include: ["test/integration/marko/**/*.test.ts"],
+          name: "marko",
           setupFiles: ["test/setup-test-env.ts"],
         },
       },

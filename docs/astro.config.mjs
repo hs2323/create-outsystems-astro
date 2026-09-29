@@ -43,6 +43,7 @@ export default defineConfig({
                 },
                 { label: "jQuery", slug: "guides/integrations/jquery" },
                 { label: "Lit", slug: "guides/integrations/lit" },
+                { label: "Marko", slug: "guides/integrations/marko" },
                 {
                   attrs: externalLinkAttributes,
                   label: "Preact",

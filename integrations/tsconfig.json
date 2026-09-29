@@ -15,6 +15,7 @@
     "alpine/**/*.ts",
     "jquery/**/*.ts",
     "lit/**/*.ts",
+    "marko/**/*.ts",
     "qwik/**/*.ts",
     "stencil/**/*.ts",
     "twig/**/*.ts",

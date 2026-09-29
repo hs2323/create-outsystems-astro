@@ -1,0 +1,16 @@
+import Child from "./Child.marko";
+
+export interface Input {
+  label: string;
+}
+
+// A `<style>` block is split out into a CSS module by the compiler.
+<style>
+  .child {
+    font-weight: bold;
+  }
+</style>
+
+<div class="parent">
+  <Child label=input.label/>
+</div>

@@ -20,6 +20,7 @@ const FRAMEWORKS = [
   { title: "Ember", value: "ember" },
   { title: "jQuery", value: "jquery" },
   { title: "Lit", value: "lit" },
+  { title: "Marko", value: "marko" },
   { title: "Preact", value: "preact" },
   { title: "Qwik", value: "qwik" },
   { title: "React", value: "react" },
@@ -229,6 +230,10 @@ function updateAstroConfig(projectDir, selectedFrameworks) {
       import: /import\s+lit\s+from\s+['"]islands-integrations\/lit['"];\s*\n?/,
       integration: /\blit\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
     },
+    marko: {
+      import: /import\s+marko\s+from\s+['"]islands-integrations\/marko['"];\s*\n?/,
+      integration: /\bmarko\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
+    },
     preact: {
       import: /import\s+preact\s+from\s+['"]@astrojs\/preact['"];\s*\n?/,
       integration: /preact\s*\(\s*\{[\s\S]*?\}\s*\)\s*,?\s*/
@@ -332,6 +337,10 @@ function updateMultiAstroPage(projectDir, selectedFrameworks) {
     lit: {
       import: /import\s+LitStore\s+from\s+['"].*?lit\/Store['"];?\s*\n?/g,
       component: /<LitStore\s+client:load\s*\/>\s*\n?/g
+    },
+    marko: {
+      import: /import\s+MarkoStore\s+from\s+['"].*?marko\/Store\.marko['"];?\s*\n?/g,
+      component: /<MarkoStore\s+client:load\s*\/>\s*\n?/g
     },
     preact: {
       import: /import\s+PreactStore\s+from\s+['"].*?preact\/Store['"];?\s*\n?/g,
