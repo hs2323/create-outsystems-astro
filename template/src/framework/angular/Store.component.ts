@@ -14,8 +14,8 @@ import AngularLogo from "../../images/angular.png?url";
         <img [src]="angularLogo" alt="Angular logo" height="150" />
         <div>
           <strong
-            >Angular 21 does not have an official Nano Stores
-            implementation.</strong
+            >Angular's official Nano Stores implementation does not support Nano
+            Stores 1.x.</strong
           >
         </div>
       </div>

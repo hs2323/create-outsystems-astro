@@ -22,7 +22,7 @@ Nano Stores are currently supported for the following libraries:
 
 Nano Stores are not currently supported for Angular, Ember, jQuery, Marko, Stencil, the Twig integration, or Qwik.
 
-Ember, jQuery and Stencil have no official Nano Stores binding library.
+Angular's official [Nano Stores binding](https://github.com/nanostores/angular) does not support Nano Stores 1.x. Ember, jQuery and Stencil have no official Nano Stores binding library.
 
 Marko has no Nano Stores binding library. See the [Marko integration guide](../integrations/marko/).
 
