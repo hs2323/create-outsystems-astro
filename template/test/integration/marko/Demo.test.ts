@@ -123,7 +123,7 @@ describe("Island renderer", () => {
     expect(
       screen.getByText("Slot content (not supported)"),
     ).toBeInTheDocument();
-     
+
     expect(island.querySelector("astro-slot")).toBeNull();
   });
 

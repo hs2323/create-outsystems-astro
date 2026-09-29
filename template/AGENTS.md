@@ -281,12 +281,18 @@ export interface Input {
   showMessage: string;
 }
 
-<let/changedCount=(undefined as number | undefined)>
+<let/changedCount=undefined as number | undefined>
 <const/count=changedCount ?? input.initialCount>
 
 <pre>${count}</pre>
-<button onClick() { changedCount = count + 1 }>+</button>
-<button onClick() { (window as any)[input.showMessage](count) }>
+<button onClick() {
+  changedCount = count + 1;
+}>
+  +
+</button>
+<button onClick() {
+  (window as any)[input.showMessage](count);
+}>
   Send value
 </button>
 ```
