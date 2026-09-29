@@ -1,10 +1,5 @@
 import AstroLogo from "../../images/astro.png?url";
 import OutSystemsLogo from "../../images/outsystems.png?url";
-import { setupStore } from "../../stores/demo";
-
-if (typeof window !== "undefined") {
-  setupStore("jqueryStore");
-}
 
 interface DemoProps {
   initialCount?: number;
@@ -43,11 +38,9 @@ export default function Demo({
                   '<div><button class="card-btn send">Send value</button></div>' +
                 '</div>' +
               '</div>' +
-              '<div class="card">' +
-                '<strong>Nano Stores</strong>' +
-                '<div class="card-content">' +
-                  '<div><strong>Value:</strong><div class="nanostore-value"></div></div>' +
-                '</div>' +
+              '<div class="card unused">' +
+                '<strong>Nano Stores (not supported)</strong>' +
+                '<div class="card-content"></div>' +
               '</div>' +
               '<div class="card unused">' +
                 '<strong>Slot content (not supported)</strong>' +
@@ -77,17 +70,6 @@ export default function Demo({
               window[showMessage](count);
             }
           });
-
-          const store = window.Stores && window.Stores["jqueryStore"];
-
-          if (store) {
-            const $value = $container.find(".nanostore-value");
-            const unsubscribe = store.subscribe(function (value) {
-              $value.text(value);
-            });
-            // The island triggers this before it renders again.
-            $container.closest("astro-island").one("islands:unmount", unsubscribe);
-          }
         })(jQuery);
       </script>
     </div>

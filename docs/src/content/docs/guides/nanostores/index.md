@@ -12,18 +12,17 @@ Refer to the full [Nano Stores documentation](https://github.com/nanostores/nano
 Nano Stores are currently supported for the following libraries:
 
 - [Alpine.js](https://github.com/nanostores/alpine)
-- [Ember](https://github.com/nanostores/nanostores#vanilla-js) (vanilla JS API)
-- [jQuery](https://github.com/nanostores/nanostores#vanilla-js) (vanilla JS API)
 - [Lit](https://github.com/nanostores/lit)
 - [Preact](https://github.com/nanostores/preact)
 - [React](https://github.com/nanostores/react)
 - [SolidJS](https://github.com/nanostores/solid)
-- [Stencil](https://github.com/nanostores/nanostores#vanilla-js) (vanilla JS API)
 - [Svelte](https://github.com/nanostores/svelte)
 - [Vanilla JS](https://github.com/nanostores/nanostores#vanilla-js)
 - [Vue](https://github.com/nanostores/vue)
 
-Nano Stores are not currently supported for Angular, for Marko, for the Twig integration, or for Qwik.
+Nano Stores are not currently supported for Angular, Ember, jQuery, Marko, Stencil, the Twig integration, or Qwik.
+
+Ember, jQuery and Stencil have no official Nano Stores binding library.
 
 Marko has no Nano Stores binding library. See the [Marko integration guide](../integrations/marko/).
 
@@ -56,50 +55,6 @@ Alpine.js:
 </div>
 ```
 
-Ember:
-```gts
-import { registerDestructor } from "@ember/destroyable";
-import Component from "@glimmer/component";
-import { tracked } from "@glimmer/tracking";
-
-export default class MyComponent extends Component {
-  @tracked value = window.Stores["emberStore"].get();
-
-  constructor(owner: unknown, args: object) {
-    super(owner, args);
-    const unsubscribe = window.Stores["emberStore"].subscribe((value) => {
-      this.value = value;
-    });
-    registerDestructor(this, unsubscribe);
-  }
-
-  <template>
-    <div>{{this.value}}</div>
-  </template>
-}
-```
-
-jQuery:
-```html
-<div class="my-component">
-  <script>
-    (function ($) {
-      const $container = $(document.currentScript).parent();
-      $container.append('<div class="nanostore-value"></div>');
-
-      const store = window.Stores && window.Stores["jqueryStore"];
-
-      if (store) {
-        const unsubscribe = store.subscribe(function (value) {
-          $container.find(".nanostore-value").text(value);
-        });
-        $container.closest("astro-island").one("islands:unmount", unsubscribe);
-      }
-    })(jQuery);
-  </script>
-</div>
-```
-
 Lit:
 ```ts
 import { StoreController } from "@nanostores/lit";
@@ -109,33 +64,6 @@ export default class MyComponent extends LitElement {
 
   override render() {
     return html`<div>${this.store.value}</div>`;
-  }
-}
-```
-
-Stencil:
-```tsx
-/** @jsxImportSource @stencil/core */
-import { Component, State } from "@stencil/core";
-
-@Component({ shadow: true, tag: "my-component" })
-export default class MyComponent {
-  @State() value = "";
-
-  private unsubscribe?: () => void;
-
-  connectedCallback() {
-    this.unsubscribe = window.Stores["stencilStore"].subscribe(
-      (value: string) => (this.value = value),
-    );
-  }
-
-  disconnectedCallback() {
-    this.unsubscribe?.();
-  }
-
-  render() {
-    return <div>{this.value}</div>;
   }
 }
 ```

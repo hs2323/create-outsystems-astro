@@ -1,6 +1,5 @@
 import { fireEvent, waitFor, within } from "@testing-library/dom";
 import stencilClient from "islands-integrations/stencil/client";
-import { atom } from "nanostores";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
 import Demo from "../../../src/framework/stencil/Demo";
@@ -41,15 +40,9 @@ function renderDemo(
 }
 
 describe("Demo", () => {
-  let store = atom("Mocked Nano Value");
-
   beforeEach(() => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (window as any).mockFunction = vi.fn();
-
-    store = atom("Mocked Nano Value");
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (window as any).Stores = { stencilStore: store };
   });
 
   afterEach(() => {
@@ -57,8 +50,6 @@ describe("Demo", () => {
     vi.clearAllMocks();
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     delete (window as any).mockFunction;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    delete (window as any).Stores;
   });
 
   it("registers the element under the tag from @Component", () => {
@@ -104,18 +95,6 @@ describe("Demo", () => {
     expect(view.getByText("Default slot").parentElement).not.toHaveAttribute(
       "slot",
     );
-  });
-
-  it("displays the initial nanostore value", async () => {
-    const { shadow } = renderDemo();
-    expect(await shadow.findByText("Mocked Nano Value")).toBeInTheDocument();
-  });
-
-  it("updates the display when the nanostore value changes", async () => {
-    const { shadow } = renderDemo();
-    expect(await shadow.findByText("Mocked Nano Value")).toBeInTheDocument();
-    store.set("Updated Value");
-    expect(await shadow.findByText("Updated Value")).toBeInTheDocument();
   });
 
   it("does not render without the ssr attribute", () => {

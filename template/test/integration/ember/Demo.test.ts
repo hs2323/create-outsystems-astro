@@ -1,6 +1,5 @@
 import { fireEvent, within } from "@testing-library/dom";
 import emberClient from "ember-astro/client.js";
-import { atom } from "nanostores";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
 import Demo from "../../../src/framework/ember/Demo.gts";
@@ -28,15 +27,9 @@ async function renderDemo(
 }
 
 describe("Demo", () => {
-  let store = atom("Mocked Nano Value");
-
   beforeEach(() => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (window as any).mockFunction = vi.fn();
-
-    store = atom("Mocked Nano Value");
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (window as any).Stores = { emberStore: store };
   });
 
   afterEach(() => {
@@ -49,8 +42,6 @@ describe("Demo", () => {
     vi.clearAllMocks();
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     delete (window as any).mockFunction;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    delete (window as any).Stores;
   });
 
   it("renders the initial count", async () => {
@@ -86,29 +77,6 @@ describe("Demo", () => {
       await view.findByRole("heading", { name: "Header slot" }),
     ).toBeInTheDocument();
     expect(view.getByText("Default slot").tagName).toBe("P");
-  });
-
-  it("displays the initial nanostore value", async () => {
-    const { view } = await renderDemo();
-    expect(await view.findByText("Mocked Nano Value")).toBeInTheDocument();
-  });
-
-  it("updates the display when the nanostore value changes", async () => {
-    const { view } = await renderDemo();
-    expect(await view.findByText("Mocked Nano Value")).toBeInTheDocument();
-    store.set("Updated Value");
-    expect(await view.findByText("Updated Value")).toBeInTheDocument();
-  });
-
-  it("unsubscribes from the nanostore when the island unmounts", async () => {
-    const { island, view } = await renderDemo();
-    expect(await view.findByText("Mocked Nano Value")).toBeInTheDocument();
-    expect(store.lc).toBe(1);
-
-    island.dispatchEvent(new Event("astro:unmount"));
-
-    // Ember runs destructors asynchronously.
-    await vi.waitFor(() => expect(store.lc).toBe(0));
   });
 
   it("does not render without the ssr attribute", async () => {

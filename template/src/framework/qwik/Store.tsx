@@ -10,7 +10,9 @@ export default component$(() => {
       <div class="card-content">
         <img alt="Qwik logo" height={150} src={QwikLogo} width={146} />
         <div>
-          <strong>Qwik does not currently support Nano Stores.</strong>
+          <strong>
+            Qwik does not have an official Nano Stores implementation.
+          </strong>
         </div>
       </div>
     </div>

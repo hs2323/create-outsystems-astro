@@ -4,7 +4,6 @@ import { Component, Prop, State } from "@stencil/core";
 import AstroLogo from "../../images/astro.png?url";
 import OutSystemsLogo from "../../images/outsystems.png?url";
 import { Operation, setCounterCount } from "../../lib/setCounterCount";
-import { setupStore } from "../../stores/demo";
 import styles from "../../styles/index.css?inline";
 
 // The page stylesheet does not reach into the shadow root, so the component
@@ -14,23 +13,10 @@ export default class Demo {
   @State() count: number | undefined;
   @Prop() initialCount = 0;
   @Prop() showMessage = "";
-  @State() storeValue = "";
-
-  private unsubscribe?: () => void;
 
   // The count starts from `initialCount` and is kept once the user changes it.
   private get currentCount(): number {
     return this.count ?? this.initialCount;
-  }
-
-  connectedCallback() {
-    this.unsubscribe = setupStore("stencilStore").subscribe(
-      (value: string) => (this.storeValue = value),
-    );
-  }
-
-  disconnectedCallback() {
-    this.unsubscribe?.();
   }
 
   render() {
@@ -59,14 +45,9 @@ export default class Demo {
             </div>
           </div>
         </div>
-        <div class="card">
-          <strong>Nano Stores</strong>
-          <div class="card-content">
-            <div>
-              <strong>Value:</strong>
-              <div class="nanostore-value">{this.storeValue}</div>
-            </div>
-          </div>
+        <div class="card unused">
+          <strong>Nano Stores (not supported)</strong>
+          <div class="card-content" />
         </div>
         <div class="card">
           <strong>Slot content</strong>
