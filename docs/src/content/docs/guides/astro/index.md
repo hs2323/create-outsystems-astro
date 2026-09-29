@@ -12,6 +12,7 @@ description: Setup Astro JavaScript project
 - [Ember](https://github.com/ember-tooling/ember-astro)
 - [jQuery](../integrations/jquery/)
 - [Lit](../integrations/lit/)
+- [Marko](../integrations/marko/)
 - [Preact](https://docs.astro.build/en/guides/integrations-guide/preact/)
 - [Qwik](../integrations/qwik/)
 - [React](https://docs.astro.build/en/guides/integrations-guide/react/)
@@ -50,6 +51,8 @@ This will create the generated files as well as an example component. You can de
 │           └── Counter.ts
 │       └── lit/
 │           └── Counter.ts
+│       └── marko/
+│           └── Counter.marko
 │       └── preact/
 │           └── Counter.tsx
 │       └── qwik/
@@ -77,6 +80,8 @@ This will create the generated files as well as an example component. You can de
 │           └── jquery-counter.astro
 │       └── lit/
 │           └── lit-counter.astro
+│       └── marko/
+│           └── marko-counter.astro
 │       └── preact/
 │           └── Counter.tsx
 │       └── qwik/
@@ -116,6 +121,8 @@ Ember takes `client:only="ember-astro"`, the name the `ember-astro` renderer reg
 jQuery takes `client:load`. Its renderer returns no server markup, so the component renders into the island entirely on the client. See the [jQuery integration guide](../integrations/jquery/).
 
 Lit takes `client:load`. Its renderer returns no server markup, so the element is created entirely on the client. See the [Lit integration guide](../integrations/lit/).
+
+Marko takes `client:load`. Its renderer returns no server markup, so the template is mounted entirely on the client. See the [Marko integration guide](../integrations/marko/).
 
 Stencil takes `client:load`. Its renderer returns no server markup, so the element is created entirely on the client. See the [Stencil integration guide](../integrations/stencil/).
 

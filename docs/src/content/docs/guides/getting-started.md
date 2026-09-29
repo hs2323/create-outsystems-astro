@@ -40,6 +40,7 @@ The following frameworks are currently compatible with the OutSystems Astro Isla
 - [Ember](https://github.com/ember-tooling/ember-astro)
 - [jQuery](../integrations/jquery/)
 - [Lit](../integrations/lit/)
+- [Marko](../integrations/marko/)
 - [Preact](https://docs.astro.build/en/guides/integrations-guide/preact/)
 - [Qwik](../integrations/qwik/)
 - [React](https://docs.astro.build/en/guides/integrations-guide/react/)

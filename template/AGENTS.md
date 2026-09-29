@@ -10,6 +10,7 @@
   - Ember - Documentation available at https://github.com/ember-tooling/ember-astro
   - jQuery - Documentation available at https://hs2323.github.io/create-outsystems-astro/guides/integrations/jquery/
   - Lit - Documentation available at https://hs2323.github.io/create-outsystems-astro/guides/integrations/lit/
+  - Marko - Documentation available at https://hs2323.github.io/create-outsystems-astro/guides/integrations/marko/
   - Preact - Documentation available at https://docs.astro.build/en/guides/integrations-guide/preact/
   - Qwik - Documentation available at https://hs2323.github.io/create-outsystems-astro/guides/integrations/qwik/
   - React - Documentation available at https://docs.astro.build/en/guides/integrations-guide/react/
@@ -50,6 +51,7 @@ In OutSystems Developer Cloud, the Islands library is available at https://www.o
   - Ember: `client:only="ember-astro"` (the renderer's registered name; `client:only="ember"` fails)
   - jQuery: `client:load`
   - Lit: `client:load`
+  - Marko: `client:load`
   - Preact: `client:only="preact"`
   - Qwik: `client:load` to keep server rendering, so Qwik resumes the container it emitted, or `client:only="@qwik.dev/astro"` to render entirely on the client.
   - React: `client:only="react"`
@@ -68,6 +70,7 @@ In OutSystems Developer Cloud, the Islands library is available at https://www.o
   - Ember: src/framework/ember
   - jQuery: src/framework/jquery
   - Lit: src/framework/lit
+  - Marko: src/framework/marko
   - Preact: src/framework/react
   - Qwik: src/framework/qwik
   - React: src/framework/react
@@ -263,6 +266,31 @@ if (typeof window !== "undefined" && !customElements.get("lit-counter")) {
 }
 ```
 
+#### Marko components
+
+- A Marko component is a `.marko` file written with Marko 6's Tags API. The integration compiles it with Marko's compiler for the browser, and the template the file exports is mounted in the island. Import it in the page with the extension: `import Counter from "../../framework/marko/Counter.marko";`.
+- The island's props arrive as `input`. Declare them with `export interface Input` so the file is type-checked as TypeScript.
+- The island renders only while it has the `ssr` attribute, on the first render and whenever the Islands module sets `ssr` again with new props. The template is mounted once. When the Islands module changes the props, the same instance is updated with the new `input`, so `<let>` state is kept.
+- Marko has no Nano Stores binding library, and Nano Stores are not supported for Marko.
+- Astro slots are not supported. Pass content in as props instead.
+- A `<style>` block is global CSS, bundled with the page's CSS. The template renders into the light DOM, so the page stylesheet also applies.
+
+```marko
+export interface Input {
+  initialCount: number;
+  showMessage: string;
+}
+
+<let/changedCount=(undefined as number | undefined)>
+<const/count=changedCount ?? input.initialCount>
+
+<pre>${count}</pre>
+<button onClick() { changedCount = count + 1 }>+</button>
+<button onClick() { (window as any)[input.showMessage](count) }>
+  Send value
+</button>
+```
+
 #### Stencil components
 
 - A Stencil component is a `.tsx` module whose default export is a class decorated with `@Component`, with one component per module. The integration compiles it with Stencil's compiler and registers the element under the `tag` from `@Component` when the module is imported in the browser, so the module does not call `customElements.define`. To render one Stencil component inside another, import the child's module and use its tag.
@@ -375,6 +403,10 @@ render() {
   `;
 }
 ```
+
+##### Marko
+
+The Marko integration does not support the use of slots. Any use of slots with the Marko integration should be discouraged. Pass content in as props instead.
 
 ##### Stencil
 
@@ -696,7 +728,7 @@ The OutSystems 11 library is called Lightweight State Manager - https://www.outs
 
 The OutSystems Developer Cloud library is called Lightweight State Manager and is available in the ODC Forge.
 
-Nano Stores are supported for Alpine.js - https://github.com/nanostores/alpine, Lit - https://github.com/nanostores/lit, Preact - https://github.com/nanostores/preact, React - https://github.com/nanostores/react, SolidJS - https://github.com/nanostores/solid, Svelte - https://svelte.dev/docs/svelte/svelte-files#script-4-prefix-stores-with-$-to-access-their-values and Vue - https://github.com/nanostores/vue. The Vanilla JS and jQuery integrations have no binding library and use the vanilla JS API through `window.Stores`. Ember has no binding library either; it subscribes with the vanilla JS API and copies the value into a `@tracked` field. Stencil has no binding library either; it subscribes with the vanilla JS API in `connectedCallback` and copies the value into a `@State` field. Nano Stores are not supported for Angular 21, for the Twig integration, where a `.twig` file and its inline classic script cannot run imports, nor for Qwik, which has no binding library and whose maintainers recommend against global stores in favour of custom events - https://github.com/QwikDev/astro#communicating-across-containers.
+Nano Stores are supported for Alpine.js - https://github.com/nanostores/alpine, Lit - https://github.com/nanostores/lit, Preact - https://github.com/nanostores/preact, React - https://github.com/nanostores/react, SolidJS - https://github.com/nanostores/solid, Svelte - https://svelte.dev/docs/svelte/svelte-files#script-4-prefix-stores-with-$-to-access-their-values and Vue - https://github.com/nanostores/vue. The Vanilla JS and jQuery integrations have no binding library and use the vanilla JS API through `window.Stores`. Ember has no binding library either; it subscribes with the vanilla JS API and copies the value into a `@tracked` field. Stencil has no binding library either; it subscribes with the vanilla JS API in `connectedCallback` and copies the value into a `@State` field. Nano Stores are not supported for Angular 21, for Marko, which has no binding library, for the Twig integration, where a `.twig` file and its inline classic script cannot run imports, nor for Qwik, which has no binding library and whose maintainers recommend against global stores in favour of custom events - https://github.com/QwikDev/astro#communicating-across-containers.
 
 In OutSystems, the store will be on the Window object. The Islands component will then have to access it from there.
 
@@ -941,6 +973,7 @@ const nanoStoreValue = useStore(window.Stores["MyGreatStore"]);
 - There is a preset set of testing tools, but can be changed after generation.
 - The unit testing library setup is Vitest. The unit tests are located in `test/unit` folder.
 - The integration testing library is Testing Library with an equivalent library per framework. Each framework is in its own folder in `test/integration/{FRAMEWORK}`.
+  - Marko uses Marko Testing Library (`@marko/testing-library`), https://testing-library.com/docs/marko-testing-library/intro. Its `render` mounts the template with the input as given. The Vitest project resolves the `browser` export condition, which is the build of the library that mounts templates in the DOM.
 - The end-to-end testing library is Playwright. Each framework is in its own folder in `test/e2e/{FRAMEWORK}`.
 
 ### Linting and formatting
@@ -965,6 +998,7 @@ const nanoStoreValue = useStore(window.Stores["MyGreatStore"]);
 - Ember uses the community `ember-astro` integration (https://github.com/ember-tooling/ember-astro), which registers its renderer as `ember-astro` with a `clientEntrypoint`, so the island carries `component-url`, `renderer-url` and `props` like any other framework. It takes no options and compiles `.gts`/`.gjs` files wherever they are. It renders the component once and does not re-render when the Islands module changes the props.
 - There is no official Astro integration for jQuery. The template uses `islands-integrations/jquery`, which registers a client-only renderer with a `clientEntrypoint`, so the island carries `component-url`, `renderer-url` and `props` like any other framework. A component returns markup with inline scripts, as with Vanilla JS, and the renderer provides the global `jQuery` those scripts use.
 - The official `@astrojs/lit` integration was deprecated in Astro 5 and is no longer maintained. It rendered through `@lit-labs/ssr`, which needs a server. The template uses `islands-integrations/lit` instead, which registers a client-only renderer with a `clientEntrypoint`, so the island carries `component-url`, `renderer-url` and `props` like any other framework.
+- There is no official Astro integration for Marko, and `@marko/vite` builds whole Marko pages rather than components Astro can place. The template uses `islands-integrations/marko`, which compiles each `.marko` file with Marko's compiler in the Vite build and registers a client-only renderer with a `clientEntrypoint`, so the island carries `component-url`, `renderer-url` and `props` like any other framework.
 - There is no official Astro integration for Stencil, and Stencil's own build emits a component library rather than modules Astro can import. The template uses `islands-integrations/stencil`, which compiles each component module with Stencil's `transpile` API in the Vite build and registers a client-only renderer with a `clientEntrypoint`, so the island carries `component-url`, `renderer-url` and `props` like any other framework.
 - Qwik renders a Qwik container (a `<div q:container>`) rather than markup Astro hydrates. Given a `client:load` directive, Astro wraps that container in an `<astro-island>`, so the output step has something to keep. `@qwik.dev/astro` registers its renderer without a `clientEntrypoint`, which would make Astro omit `renderer-url`, `component-export` and the serialized `props` attribute and leave the island inert; the template wraps it in `islands-integrations/qwik` to supply one. With that in place the island resumes the server markup when it has any, renders on the client when it does not, and re-renders when the Islands module changes `props`.
 - The output will be in the output/ folder. The contents are:

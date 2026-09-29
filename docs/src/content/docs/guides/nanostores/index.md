@@ -23,7 +23,9 @@ Nano Stores are currently supported for the following libraries:
 - [Vanilla JS](https://github.com/nanostores/nanostores#vanilla-js)
 - [Vue](https://github.com/nanostores/vue)
 
-Nano Stores are not currently supported for Angular, for the Twig integration, or for Qwik.
+Nano Stores are not currently supported for Angular, for Marko, for the Twig integration, or for Qwik.
+
+Marko has no Nano Stores binding library. See the [Marko integration guide](../integrations/marko/).
 
 Qwik has no Nano Stores binding library, and the Qwik maintainers [recommend against global stores](https://github.com/QwikDev/astro#communicating-across-containers) in a server-rendered context, suggesting custom events for communicating across Qwik containers instead. See the [Qwik integration guide](../integrations/qwik/).
 

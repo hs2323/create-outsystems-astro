@@ -10,6 +10,7 @@
     - Ember
     - jQuery
     - Lit
+    - Marko
     - Preact
     - Qwik
     - React
