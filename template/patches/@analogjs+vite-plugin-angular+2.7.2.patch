@@ -1,5 +1,5 @@
 diff --git a/node_modules/@analogjs/vite-plugin-angular/src/lib/utils/devkit.js b/node_modules/@analogjs/vite-plugin-angular/src/lib/utils/devkit.js
-index 5760b63..a916f76 100644
+index 5760b63..f52fccb 100644
 --- a/node_modules/@analogjs/vite-plugin-angular/src/lib/utils/devkit.js
 +++ b/node_modules/@analogjs/vite-plugin-angular/src/lib/utils/devkit.js
 @@ -1,5 +1,6 @@
@@ -9,13 +9,17 @@ index 5760b63..a916f76 100644
  import * as sfc from './source-file-cache.js';
  const require = createRequire(import.meta.url);
  const angularMajor = Number(VERSION.major);
-@@ -31,7 +32,8 @@ else if (angularMajor >= 17 && angularMajor < 18) {
+@@ -31,8 +32,11 @@ else if (angularMajor >= 17 && angularMajor < 18) {
      jt = JavaScriptTransformer;
  }
  else {
 -    const { createJitResourceTransformer, JavaScriptTransformer, SourceFileCache, createAngularCompilation: createAngularCompilationFn, } = require('@angular/build/private');
+-    sourceFileCache = SourceFileCache;
 +    await import(pathToFileURL(createRequire(require.resolve('@angular/build/package.json')).resolve('@babel/core')).href);
 +    const { createJitResourceTransformer, JavaScriptTransformer, SourceFileCache, createAngularCompilation: createAngularCompilationFn, } = await import('@angular/build/private');
-     sourceFileCache = SourceFileCache;
++    const angularBuildHash = require(require.resolve('@angular/build/package.json').replace(/package\.json$/, 'src/utils/hash.js'));
++    await angularBuildHash.initializeHash?.();
++    sourceFileCache = SourceFileCache.prototype instanceof Map ? SourceFileCache : sfc.SourceFileCache;
      cjt = createJitResourceTransformer;
      jt = JavaScriptTransformer;
+     createAngularCompilation = createAngularCompilationFn;
