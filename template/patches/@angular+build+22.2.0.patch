@@ -1,0 +1,16 @@
+diff --git a/node_modules/@angular/build/src/tools/javascript-transformer/javascript-transformer-worker.js b/node_modules/@angular/build/src/tools/javascript-transformer/javascript-transformer-worker.js
+index 401b27f..6764388 100755
+--- a/node_modules/@angular/build/src/tools/javascript-transformer/javascript-transformer-worker.js
++++ b/node_modules/@angular/build/src/tools/javascript-transformer/javascript-transformer-worker.js
+@@ -154,8 +154,9 @@ async function transformJavaScriptImpl(filename, data, options) {
+     }
+     if (shouldLink && environment_options_js_1.useBabelLinker) {
+         babelLinkerDeps ??= Promise.all([
+-            Promise.resolve().then(() => __importStar(require('@angular/compiler-cli/linker/babel'))),
+-            Promise.resolve().then(() => __importStar(require('@angular/compiler-cli'))),
++            // CHANGE: Replace __importStar(require(...)) with native dynamic import() for ESM-only compiler-cli
++            import('@angular/compiler-cli/linker/babel'),
++            import('@angular/compiler-cli'),
+             Promise.resolve().then(() => __importStar(require('@babel/core'))),
+         ]);
+         const [{ createEs2015LinkerPlugin }, { ConsoleLogger, LogLevel }, { transformAsync }] = await babelLinkerDeps;
