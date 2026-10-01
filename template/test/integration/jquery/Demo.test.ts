@@ -1,6 +1,5 @@
 import { fireEvent, screen } from "@testing-library/dom";
 import jqueryClient from "islands-integrations/jquery/client";
-import { atom } from "nanostores";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
 import Demo from "../../../src/framework/jquery/Demo";
@@ -28,15 +27,9 @@ function renderDemo(props: Record<string, unknown> = {}) {
 }
 
 describe("Demo", () => {
-  let store = atom("Mocked Nano Value");
-
   beforeEach(() => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (window as any).mockFunction = vi.fn();
-
-    store = atom("Mocked Nano Value");
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (window as any).Stores = { jqueryStore: store };
   });
 
   afterEach(() => {
@@ -44,8 +37,6 @@ describe("Demo", () => {
     vi.clearAllMocks();
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     delete (window as any).mockFunction;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    delete (window as any).Stores;
   });
 
   it("renders the header with jQuery", () => {
@@ -77,17 +68,6 @@ describe("Demo", () => {
     expect((window as any).mockFunction).toHaveBeenCalledWith(5);
   });
 
-  it("displays the initial nanostore value", () => {
-    renderDemo();
-    expect(screen.getByText("Mocked Nano Value")).toBeInTheDocument();
-  });
-
-  it("updates the display when the nanostore value changes", () => {
-    renderDemo();
-    store.set("Updated Value");
-    expect(screen.getByText("Updated Value")).toBeInTheDocument();
-  });
-
   it("does not render without the ssr attribute", () => {
     const island = document.createElement("astro-island");
     document.body.appendChild(island);
@@ -110,13 +90,5 @@ describe("Demo", () => {
     expect((window as any).otherFunction).toHaveBeenCalledWith(43);
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     expect((window as any).mockFunction).not.toHaveBeenCalled();
-  });
-
-  it("unsubscribes from the store before rendering again", () => {
-    const island = renderDemo();
-    expect(store.lc).toBe(1);
-
-    hydrate(island, { initialCount: 5, showMessage: "mockFunction" });
-    expect(store.lc).toBe(1);
   });
 });

@@ -1,4 +1,3 @@
-import { registerDestructor } from "@ember/destroyable";
 import { on } from "@ember/modifier";
 import Component from "@glimmer/component";
 import { tracked } from "@glimmer/tracking";
@@ -6,7 +5,6 @@ import { tracked } from "@glimmer/tracking";
 import AstroLogo from "../../images/astro.png?url";
 import OutSystemsLogo from "../../images/outsystems.png?url";
 import { Operation, setCounterCount } from "../../lib/setCounterCount";
-import { setupStore } from "../../stores/demo";
 
 interface DemoSignature {
   Args: {
@@ -23,26 +21,12 @@ interface DemoSignature {
 }
 
 export default class Demo extends Component<DemoSignature> {
-  @tracked nanoStoreValue: string;
-
   get count(): number {
     return this.changedCount ?? this.args.props.initialCount;
   }
 
   // The count starts from `initialCount` and is kept once the user changes it.
   @tracked private changedCount: number | undefined;
-
-  constructor(owner: unknown, args: DemoSignature["Args"]) {
-    super(owner, args);
-
-    const store = setupStore("emberStore");
-    this.nanoStoreValue = store.get();
-
-    const unsubscribe = store.subscribe((value: string) => {
-      this.nanoStoreValue = value;
-    });
-    registerDestructor(this, unsubscribe);
-  }
 
   add = () => {
     this.changedCount = setCounterCount(this.count, Operation.Add);
@@ -86,14 +70,9 @@ export default class Demo extends Component<DemoSignature> {
           </div>
         </div>
       </div>
-      <div class="card">
-        <strong>Nano Stores</strong>
-        <div class="card-content">
-          <div>
-            <strong>Value:</strong>
-            <div id="nanostore">{{this.nanoStoreValue}}</div>
-          </div>
-        </div>
+      <div class="card unused">
+        <strong>Nano Stores (not supported)</strong>
+        <div class="card-content"></div>
       </div>
       <div class="card">
         <strong>Slot content</strong>

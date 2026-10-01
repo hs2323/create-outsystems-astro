@@ -734,7 +734,7 @@ The OutSystems 11 library is called Lightweight State Manager - https://www.outs
 
 The OutSystems Developer Cloud library is called Lightweight State Manager and is available in the ODC Forge.
 
-Nano Stores are supported for Alpine.js - https://github.com/nanostores/alpine, Lit - https://github.com/nanostores/lit, Preact - https://github.com/nanostores/preact, React - https://github.com/nanostores/react, SolidJS - https://github.com/nanostores/solid, Svelte - https://svelte.dev/docs/svelte/svelte-files#script-4-prefix-stores-with-$-to-access-their-values and Vue - https://github.com/nanostores/vue. The Vanilla JS and jQuery integrations have no binding library and use the vanilla JS API through `window.Stores`. Ember has no binding library either; it subscribes with the vanilla JS API and copies the value into a `@tracked` field. Stencil has no binding library either; it subscribes with the vanilla JS API in `connectedCallback` and copies the value into a `@State` field. Nano Stores are not supported for Angular 21, for Marko, which has no binding library, for the Twig integration, where a `.twig` file and its inline classic script cannot run imports, nor for Qwik, which has no binding library and whose maintainers recommend against global stores in favour of custom events - https://github.com/QwikDev/astro#communicating-across-containers.
+Nano Stores are supported for Alpine.js - https://github.com/nanostores/alpine, Lit - https://github.com/nanostores/lit, Preact - https://github.com/nanostores/preact, React - https://github.com/nanostores/react, SolidJS - https://github.com/nanostores/solid, Svelte - https://svelte.dev/docs/svelte/svelte-files#script-4-prefix-stores-with-$-to-access-their-values and Vue - https://github.com/nanostores/vue. The Vanilla JS integration has no binding library and uses the vanilla JS API through `window.Stores`. Nano Stores are not supported for Angular, whose official binding - https://github.com/nanostores/angular - does not support Nano Stores 1.x, for Ember, jQuery and Stencil, which have no official binding library, for Marko, which has no binding library, for the Twig integration, where a `.twig` file and its inline classic script cannot run imports, nor for Qwik, which has no binding library and whose maintainers recommend against global stores in favour of custom events - https://github.com/QwikDev/astro#communicating-across-containers.
 
 In OutSystems, the store will be on the Window object. The Islands component will then have to access it from there.
 
@@ -819,71 +819,6 @@ if (typeof window !== "undefined") {
 </div>
 ```
 
-#### Ember
-
-Nano Stores has no Ember binding. Subscribe with the vanilla JS API in the constructor, copy each value into a `@tracked` field so the template re-renders, and unsubscribe with `registerDestructor` when the component is destroyed:
-
-```gts
-import { registerDestructor } from "@ember/destroyable";
-import Component from "@glimmer/component";
-import { tracked } from "@glimmer/tracking";
-
-import { setupStore } from "../../stores/demo";
-
-export default class MyComponent extends Component {
-  @tracked value: string;
-
-  constructor(owner: unknown, args: object) {
-    super(owner, args);
-
-    const store = setupStore("emberStore");
-    this.value = store.get();
-    registerDestructor(
-      this,
-      store.subscribe((value: string) => {
-        this.value = value;
-      }),
-    );
-  }
-
-  <template>
-    <div>{{this.value}}</div>
-  </template>
-}
-```
-
-#### jQuery
-
-The jQuery integration has no binding library, so it uses the vanilla JS API against a real atom, like the Vanilla JS integration. Register the atom from the component module, guarded because the renderer also imports the module during the build, then subscribe from the inline script and unsubscribe on `islands:unmount`:
-
-```ts
-import { setupStore } from "../../stores/demo";
-
-if (typeof window !== "undefined") {
-  setupStore("jqueryStore");
-}
-```
-
-```html
-<div class="my-component">
-  <script>
-    (function ($) {
-      const $container = $(document.currentScript).parent();
-      $container.append('<div class="nanostore-value"></div>');
-
-      const store = window.Stores && window.Stores["jqueryStore"];
-
-      if (store) {
-        const unsubscribe = store.subscribe(function (value) {
-          $container.find(".nanostore-value").text(value);
-        });
-        $container.closest("astro-island").one("islands:unmount", unsubscribe);
-      }
-    })(jQuery);
-  </script>
-</div>
-```
-
 #### Lit
 
 The Lit integration uses `@nanostores/lit`. The integration itself does not depend on Nano Stores; the component adds a `StoreController`, which subscribes while the element is connected and re-renders it when the store changes. The controller is created in the constructor, which only runs in the browser, so reading `window.Stores` there is safe.
@@ -899,38 +834,6 @@ export default class MyComponent extends LitElement {
 
   override render() {
     return html`<div>${this.store.value}</div>`;
-  }
-}
-```
-
-#### Stencil
-
-The Stencil integration has no binding library, so the component subscribes with the vanilla JS API in `connectedCallback`, copies the value into a `@State` field, which re-renders it, and unsubscribes in `disconnectedCallback`. `connectedCallback` only runs in the browser, so reading `window.Stores` there is safe.
-
-```tsx
-/** @jsxImportSource @stencil/core */
-import { Component, State } from "@stencil/core";
-
-import { setupStore } from "../../stores/demo";
-
-@Component({ shadow: true, tag: "my-component" })
-export default class MyComponent {
-  @State() value = "";
-
-  private unsubscribe?: () => void;
-
-  connectedCallback() {
-    this.unsubscribe = setupStore("stencilStore").subscribe(
-      (value: string) => (this.value = value),
-    );
-  }
-
-  disconnectedCallback() {
-    this.unsubscribe?.();
-  }
-
-  render() {
-    return <div>{this.value}</div>;
   }
 }
 ```

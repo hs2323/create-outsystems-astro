@@ -3,13 +3,10 @@ import { atom } from "nanostores";
 export type CurrentSelectedFramework =
   | ""
   | "Alpine.js"
-  | "Ember"
-  | "jQuery"
   | "Lit"
   | "Preact"
   | "React"
   | "Solid"
-  | "Stencil"
   | "Svelte"
   | "VanillaJS"
   | "Vue";

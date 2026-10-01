@@ -86,36 +86,7 @@ A component with `scoped: true` or without a shadow root works the same way: the
 
 ## Nano Stores
 
-Stencil has no Nano Stores binding library, so subscribe with the vanilla JS API in `connectedCallback` and copy the value into a `@State` field, which re-renders the component. Unsubscribe in `disconnectedCallback`:
-
-```tsx
-import { Component, State } from "@stencil/core";
-
-import { setupStore } from "../../stores/demo";
-
-@Component({ shadow: true, tag: "my-component" })
-export default class MyComponent {
-  @State() value = "";
-
-  private unsubscribe?: () => void;
-
-  connectedCallback() {
-    this.unsubscribe = setupStore("myStore").subscribe(
-      (value: string) => (this.value = value),
-    );
-  }
-
-  disconnectedCallback() {
-    this.unsubscribe?.();
-  }
-
-  render() {
-    return <div>{this.value}</div>;
-  }
-}
-```
-
-`connectedCallback` only runs in the browser, so reading `window.Stores` there is safe.
+Stencil has no official Nano Stores binding library, and Nano Stores are not supported for the Stencil integration.
 
 ## Using OutSystems handlers
 

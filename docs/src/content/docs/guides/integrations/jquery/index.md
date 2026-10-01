@@ -77,7 +77,7 @@ const initialCount = 5;
 
 The island renders only while it has the `ssr` attribute: Astro sets it on the first render, and the OutSystems Islands module sets it again when it changes the props. When the props change, the component renders again from the new props.
 
-Before it renders again, the renderer triggers an `islands:unmount` jQuery event on the island and then empties it, which removes the rendered elements with their jQuery handlers and data. Listen for `islands:unmount` to undo anything else, such as a Nano Store subscription:
+Before it renders again, the renderer triggers an `islands:unmount` jQuery event on the island and then empties it, which removes the rendered elements with their jQuery handlers and data. Listen for `islands:unmount` to undo anything else, such as a subscription:
 
 ```js
 $container.closest("astro-island").one("islands:unmount", unsubscribe);
@@ -89,45 +89,7 @@ Slots are not supported in the jQuery integration. Pass content in as props inst
 
 ## Nano Stores
 
-There is no Nano Stores binding library for jQuery, so the component uses the [vanilla JS API](https://github.com/nanostores/nanostores#vanilla-js), the same way as the [Vanilla JS integration](../vanilla/).
-
-Register the atom from the component module, guarded because the renderer also imports the module during the build. Then subscribe from the inline script:
-
-```ts
-import { setupStore } from "../../stores/demo";
-
-if (typeof window !== "undefined") {
-  setupStore("myStore");
-}
-
-export default function MyComponent(): string {
-  return `
-    <div class="my-component">
-      <script>
-        (function ($) {
-          const $container = document.currentScript
-            ? $(document.currentScript).parent()
-            : $(".my-component");
-
-          $container.append('<div class="store-value"></div>');
-
-          const store = window.Stores && window.Stores["myStore"];
-
-          if (store) {
-            const $value = $container.find(".store-value");
-            const unsubscribe = store.subscribe(function (value) {
-              $value.text(value);
-            });
-            $container.closest("astro-island").one("islands:unmount", unsubscribe);
-          }
-        })(jQuery);
-      </script>
-    </div>
-  `;
-}
-```
-
-`subscribe` fires immediately with the current value, so there is no need to read `.get()` first.
+jQuery has no official Nano Stores binding library, and Nano Stores are not supported for the jQuery integration.
 
 ## Using OutSystems handlers
 
