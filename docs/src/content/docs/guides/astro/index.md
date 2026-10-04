@@ -409,6 +409,8 @@ You cannot send Union types (such as either an array or object) due to OutSystem
 
 This will create a set of files that will then need to be converted to OutSystems components.
 
+It also creates `output/resources.txt`, the list of the OutSystems resource URLs for every file in `output/assets`. Paste it into the assign before the `Deploy Resource` action so all of the resources are deployed. See Deploy JavaScript files to target for [O11](../outsystems/o11.md#deploy-javascript-files-to-target) or [ODC](../outsystems/odc.md#deploy-javascript-files-to-target).
+
 If using a directive for the component of anything other than ```client:only```, you may need to delete the interior contents of the rendered island (since it will have done some static generation).
 
 ## Testing

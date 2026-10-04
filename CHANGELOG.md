@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Added `output/resources.txt` to the output, listing the resource URLs of all assets for the `Deploy Resource` action.
 - Added Marko integration.
 - Added Stencil integration.
 - Added Ember integration.
