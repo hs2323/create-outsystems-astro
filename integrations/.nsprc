@@ -1,0 +1,7 @@
+{
+    "1240991": {
+        "active": true,
+        "expiry": "2026-10-11",
+        "notes": "CVE-2026-93748 (http-cache-semantics). Patched in 4.3.0, blocked by minimum release age until 2026-10-11."
+    }
+}
