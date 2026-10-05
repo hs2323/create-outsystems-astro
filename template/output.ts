@@ -274,6 +274,38 @@ function processOutput() {
 }
 
 /**
+ * Stringifies the inner contents of astro-islands for exporting to OutSystems.
+ * @param html
+ * @returns
+ */
+function stringifyAstroIslandContents(html: string): string {
+  return html.replace(
+    /(<astro-island\b[^>]*>)([\s\S]*?)(<\/astro-island>)/gi,
+    (_match, openTag, inner, closeTag) => {
+      const cleanedInner = inner.replace(/<!--\s*astro:end\s*-->/gi, "");
+
+      // Trim leading/trailing newlines
+      const trimmed = cleanedInner.replace(/^\s+|\s+$/g, "");
+
+      const lines = trimmed.split(/\r?\n/);
+
+      const stringified = lines
+        .map((line: string, index: number) => {
+          const escaped = line
+            .replace(/\\/g, "\\\\") // escape backslashes first
+            .replace(/"/g, '""'); // escape quotes
+
+          // No trailing + on the last line
+          return index === lines.length - 1 ? `"${escaped}"` : `"${escaped}" +`;
+        })
+        .join("\n");
+
+      return `${openTag}\n${stringified}\n${closeTag}`;
+    },
+  );
+}
+
+/**
  * Converts an asset file name to the name OutSystems gives it once imported
  * as a resource: the first 50 characters, with dots turned into underscores,
  * other invalid characters removed and no leading underscore.
@@ -324,38 +356,6 @@ function writeResourcesList(assetsDir: string, outputFile: string): void {
   fs.writeFileSync(outputFile, `${expression}\n`, "utf-8");
   console.log(
     `📝 Wrote ${resourceNames.length} resources to ${path.basename(outputFile)}`,
-  );
-}
-
-/**
- * Stringifies the inner contents of astro-islands for exporting to OutSystems.
- * @param html
- * @returns
- */
-function stringifyAstroIslandContents(html: string): string {
-  return html.replace(
-    /(<astro-island\b[^>]*>)([\s\S]*?)(<\/astro-island>)/gi,
-    (_match, openTag, inner, closeTag) => {
-      const cleanedInner = inner.replace(/<!--\s*astro:end\s*-->/gi, "");
-
-      // Trim leading/trailing newlines
-      const trimmed = cleanedInner.replace(/^\s+|\s+$/g, "");
-
-      const lines = trimmed.split(/\r?\n/);
-
-      const stringified = lines
-        .map((line: string, index: number) => {
-          const escaped = line
-            .replace(/\\/g, "\\\\") // escape backslashes first
-            .replace(/"/g, '""'); // escape quotes
-
-          // No trailing + on the last line
-          return index === lines.length - 1 ? `"${escaped}"` : `"${escaped}" +`;
-        })
-        .join("\n");
-
-      return `${openTag}\n${stringified}\n${closeTag}`;
-    },
   );
 }
 
