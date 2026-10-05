@@ -30,7 +30,7 @@ State is held in a signal from `useSignal`, and event handlers use the `$` suffi
 
 ## Props
 
-Props are serialized onto the island and re-applied when they change, so a component imported into OutSystems reacts to parameter changes the same way the other frameworks do. A change replaces the resumed container with a client render; slot content is preserved across that render.
+Props are serialized onto the island and re-applied when they change, so a component imported into OutSystems reacts to parameter changes the same way the other frameworks do. A change re-renders the component on the client; slot content is preserved across that render.
 
 Props set before the island has hydrated are ignored — Astro's island runtime has no hydrator to call yet. The island drops its `ssr` attribute once it has hydrated, which is the signal that it is ready to accept them.
 
@@ -41,7 +41,7 @@ Slots are supported. Render them with Qwik's `Slot` component — the default sl
 - Astro example:
 
 ```astro
-  <MyComponent client:load>
+  <MyComponent client:only="@qwik.dev/astro">
       <div slot="header">
           <p>Slot header</p>
       </div>

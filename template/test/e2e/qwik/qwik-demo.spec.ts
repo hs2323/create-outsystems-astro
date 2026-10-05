@@ -5,12 +5,12 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe("Renders as an island", () => {
-  test("Should wrap the Qwik container in an astro-island", async ({
+  test("Should render the component inside an astro-island", async ({
     page,
   }) => {
     const island = page.locator("astro-island");
     await expect(island).toHaveCount(1);
-    await expect(island.locator("[q\\:container]")).toHaveCount(1);
+    await expect(island.locator("pre")).toContainText("5");
   });
 
   test("Should carry the attributes a client render needs", async ({
@@ -25,15 +25,14 @@ test.describe("Renders as an island", () => {
     expect(await island.getAttribute("props")).not.toBeNull();
   });
 
-  test("Should resume the server markup instead of re-rendering it", async ({
-    page,
-  }) => {
-    // Qwik resumes what the server sent, so the container stays "paused"
-    // rather than being replaced by a client render.
-    await expect(page.locator("[q\\:container]")).toHaveAttribute(
-      "q:container",
-      "paused",
-    );
+  test("Should not be server rendered", async ({ page }) => {
+    // The island is client:only, so the markup carried into OutSystems holds
+    // only the slot templates. Server-rendered Qwik markup would depend on
+    // scripts that never run once OutSystems injects it.
+    const response = await page.request.get("/qwik/qwik-demo");
+    const html = await response.text();
+    expect(html).toContain('client="only"');
+    expect(html).not.toContain("q:container");
   });
 });
 
@@ -81,8 +80,8 @@ test.describe("Client rendering", () => {
   test("Should render an island whose contents were removed", async ({
     page,
   }) => {
-    // Nothing left to resume, so the component has to be rendered on the
-    // client. Without a clientEntrypoint this island stays empty for good.
+    // The component has to be rendered on the client from scratch. Without a
+    // clientEntrypoint this island stays empty for good.
     await page.locator("astro-island:not([ssr])").waitFor({
       state: "attached",
     });

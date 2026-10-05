@@ -3,26 +3,18 @@
  *
  * `@qwik.dev/astro` ships a server entrypoint only, so Astro emits an
  * `<astro-island>` with no `renderer-url` and no serialized `props`, and the
- * island runtime falls back to a no-op hydrator. That is enough for a page
- * Astro rendered itself — Qwik resumes the container in the markup — but an
- * island whose contents are supplied later (the OutSystems Islands module) or
- * not at all has nothing to resume and stays empty.
- *
- * This entrypoint fills that gap. It leaves server-rendered markup alone so
- * resumability is preserved, and client-renders whenever there is no container
- * to resume or the props have changed.
+ * island runtime falls back to a no-op hydrator. Qwik islands are used with
+ * `client:only`, so there is no server-rendered container to resume: this
+ * entrypoint renders the component on the client, and again whenever the
+ * props change.
  */
 import { jsx, type JSXNode, render } from "@qwik.dev/core";
 import { QWIK_LOADER } from "@qwik.dev/core/loader";
-
-/** Marks an island this hydrator has already handled, so a second call is a props update. */
-const HANDLED = Symbol.for("islands/qwik/handled");
 
 /** Holds the slot content, which Astro's island runtime hands over only once. */
 const SLOTS = Symbol.for("islands/qwik/slots");
 
 type IslandElement = {
-  [HANDLED]?: boolean;
   [SLOTS]?: Record<string, string>;
 } & HTMLElement;
 
@@ -70,18 +62,9 @@ const client_default =
     // render — a props update, say — would drop the slot content.
     if (Object.keys(slotted).length > 0) element[SLOTS] = slotted;
 
-    // First pass over markup Astro server-rendered: the Qwik container is
-    // already there and the qwikloader resumes it. Rendering over it would
-    // throw away resumability for no gain.
-    if (!element[HANDLED] && element.querySelector("[q\\:container]")) {
-      element[HANDLED] = true;
-      return;
-    }
-
     if (typeof Component !== "function") return;
 
-    // Either the island arrived empty, or its props changed and the resumed
-    // container has to be replaced. Both cases are a fresh client render.
+    // A props update replaces the previous render.
     element.innerHTML = "";
     element.removeAttribute("q:container");
     ensureQwikLoader();
@@ -94,8 +77,6 @@ const client_default =
       }),
       { serverData: props },
     );
-
-    element[HANDLED] = true;
   };
 
 export default client_default;
