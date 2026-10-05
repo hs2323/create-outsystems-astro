@@ -160,6 +160,34 @@ Astro Islands can take input parameters and functions, but they must first seria
 - Set the Deploy Action to **Deploy to Target Directory**.
   ![Set the JavaScript property and Deploy Action](../../../../assets/odc/js-resource-properties.png)
 
+#### Deploy JavaScript files to target.
+
+For any files that are not either the ```renderer-url``` or ```component-url```, you must use the deploy resource functionality from `AstroIsland_Lib`. OutSystems deploys a resource as long as it is referenced once, so all of the resources can be referenced in a single list and deployed with one ```Deploy Resource``` action.
+
+The [output script](../astro/index.md#converting-to-outsystems) generates this list in `output/resources.txt`. It contains the URL of every file in `output/assets`, joined by spaces:
+
+```
+Resources.alpinedemo_astro_astro_type_script_index_0_lang_9.URL + " " +
+Resources.alpine_SVlCmNEF_png.URL + " " +
+...
+Resources.vuedemo_astro_astro_type_script_index_0_lang_CKj.URL
+```
+
+- In the Interface Elements tab, select the OnInitialize function.
+
+- Add a local variable named ```Assets``` with the type **Text**.
+
+- Drag an ```Assign``` onto the flow and assign ```Assets```. Open the expression editor for the value, paste the full contents of `output/resources.txt` and click the **Close** button. The expression editor should show `The expression is ok (Type: Text)`.
+  ![Assign the resources list to Assets](../../../../assets/odc/assets-deployment.png)
+
+- Select the Logic tab and drag the ```Deploy Resource``` after the assign.
+
+- Click the Deploy Resource action on the screen and select the ```Resource``` dropdown.  The select ```Expression Editor```.
+
+- Double click the ```Assets``` local variable so it populates the window, then click the **Close** button.
+
+The resource names in `resources.txt` include the build hashes, so paste the new list into the assign every time you re-import the output files.
+
 ### Importing Images
 
 - Follow the same process as the JavaScript. You will get a prompt asking if want to add the resource as an Image or a Resource. Click **Add as Resource**.

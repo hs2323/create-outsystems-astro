@@ -256,6 +256,9 @@ function processOutput() {
   console.log("📦 Copying assets...");
   copyDirectory(assetsSrc, assetsDest);
 
+  console.log("📝 Listing resources...");
+  writeResourcesList(assetsDest, path.join(outputDir, "resources.txt"));
+
   console.log("📜 Copying JavaScript files...");
   copyAllJSFiles(inputDir, outputDir);
 
@@ -299,6 +302,60 @@ function stringifyAstroIslandContents(html: string): string {
 
       return `${openTag}\n${stringified}\n${closeTag}`;
     },
+  );
+}
+
+/**
+ * Converts an asset file name to the name OutSystems gives it once imported
+ * as a resource: the first 50 characters, with dots turned into underscores,
+ * other invalid characters removed and no leading underscore.
+ * For example, app-vue.CS9Gc-aT.js → appvue_CS9GcaT_js
+ */
+function toResourceName(fileName: string): string {
+  return fileName
+    .slice(0, 50)
+    .replace(/\./g, "_")
+    .replace(/[^A-Za-z0-9_]/g, "")
+    .replace(/^_+/, "");
+}
+
+/**
+ * Writes the URL expression of every asset, joined by spaces, to the
+ * resources.txt file for the DeployResources action in OutSystems.
+ */
+function writeResourcesList(assetsDir: string, outputFile: string): void {
+  if (!fs.existsSync(assetsDir)) {
+    console.warn(`⚠️ Assets directory not found: ${assetsDir}`);
+    return;
+  }
+
+  // Sorted the way OutSystems lists resources: ignoring case and underscores
+  const sortKey = (name: string) => name.replace(/_/g, "").toLowerCase();
+  const resourceNames = fs
+    .readdirSync(assetsDir, { withFileTypes: true })
+    .filter((entry) => entry.isFile())
+    .map((entry) => toResourceName(entry.name))
+    .sort(
+      (a, b) =>
+        sortKey(a).localeCompare(sortKey(b), "en") || a.localeCompare(b, "en"),
+    );
+
+  const duplicates = resourceNames.filter(
+    (name, index) => resourceNames.indexOf(name) !== index,
+  );
+  if (duplicates.length > 0) {
+    console.warn(
+      `⚠️ Assets share a resource name: ${[...new Set(duplicates)].join(", ")}`,
+    );
+  }
+
+  const expression = resourceNames
+    .map((name) => `Resources.${name}.URL`)
+    .join(' + " " +\n');
+
+  fs.writeFileSync(outputFile, `${expression}\n`, "utf-8");
+  console.log(
+    `📝 Wrote ${resourceNames.length} resources to ${path.basename(outputFile)}`,
   );
 }
 
