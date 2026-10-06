@@ -99,9 +99,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated sub-dependency http-cache-semantics to 4.3.0 due to CVE-2026-93748.
 - Updated sub-dependency katex to 0.18.10 due to CVE-2026-103923.
 - Updated sub-dependency seroval to 1.6.8 due to CVE-2026-104846 and CVE-2026-104845.
+- Updated sub-dependency sharp to 0.35.5 due to GHSA-wq5f-xc86-pv6w.
+- Updated sub-dependency shell-quote to 1.11.0 due to CVE-2026-102422.
 - Updated sub-dependency smol-toml to 1.9.0 due to GHSA-r4xh-jqrq-34v2.
 - Updated sub-dependency source-map-js to 1.2.2 due to CVE-2026-93749.
 - Updated integrations sub-dependency http-cache-semantics to 4.3.0 due to CVE-2026-93748.
+- Updated integrations sub-dependency sharp to 0.35.5 due to GHSA-wq5f-xc86-pv6w.
+- Updated integrations sub-dependency shell-quote to 1.11.0 due to CVE-2026-102422.
 - Updated integrations sub-dependency smol-toml to 1.9.0 due to GHSA-r4xh-jqrq-34v2.
 - Updated integrations sub-dependency source-map-js to 1.2.2 due to CVE-2026-93749.
 - Ignored CVE-2026-93687 in sub-dependency braces as no patched version is available.
