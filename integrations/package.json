@@ -44,6 +44,11 @@
     "typescript": "npm:@typescript/typescript6@^6.0.2",
     "typescript-eslint": "^8.70.0"
   },
+  "overrides": {
+    "http-cache-semantics": "^4.3.0",
+    "smol-toml": "^1.9.0",
+    "source-map-js": "^1.2.2"
+  },
   "allowScripts": {
     "esbuild@0.28.2": true,
     "fsevents@2.3.3": true,
