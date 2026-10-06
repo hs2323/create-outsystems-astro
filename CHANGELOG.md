@@ -20,7 +20,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added integrations dependency @typescript/native for TypeScript 7 support.
 
 ### Changed
-- Changed the Qwik client build to the `single` entry strategy, so all event handlers are bundled into one chunk instead of one per handler.- Split the shared `app` chunk into one chunk per framework so an island only loads its own framework's runtime.
+- Changed the Qwik islands to `client:only`, so no server-rendered Qwik markup is carried into OutSystems.
+- Changed the Qwik client build to the `single` entry strategy, so all event handlers are bundled into one chunk instead of one per handler.
+- Split the shared `app` chunk into one chunk per framework so an island only loads its own framework's runtime.
 - Updated dependency vue to 3.5.43.
 - Updated dependency vite to 8.3.0.
 - Updated dependency typescript-eslint to 8.70.0.
@@ -92,6 +94,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed Bun package manager support.
 - Removed pnpm package manager support.
 - Removed Yarn package manager support.
+
+### Security
+- Updated sub-dependency http-cache-semantics to 4.3.0 due to CVE-2026-93748.
+- Updated sub-dependency katex to 0.18.10 due to CVE-2026-103923.
+- Updated sub-dependency seroval to 1.6.8 due to CVE-2026-104846 and CVE-2026-104845.
+- Updated sub-dependency sharp to 0.35.5 due to GHSA-wq5f-xc86-pv6w.
+- Updated sub-dependency shell-quote to 1.11.0 due to CVE-2026-102422.
+- Updated sub-dependency smol-toml to 1.9.0 due to GHSA-r4xh-jqrq-34v2.
+- Updated sub-dependency source-map-js to 1.2.2 due to CVE-2026-93749.
+- Updated integrations sub-dependency http-cache-semantics to 4.3.0 due to CVE-2026-93748.
+- Updated integrations sub-dependency sharp to 0.35.5 due to GHSA-wq5f-xc86-pv6w.
+- Updated integrations sub-dependency shell-quote to 1.11.0 due to CVE-2026-102422.
+- Updated integrations sub-dependency smol-toml to 1.9.0 due to GHSA-r4xh-jqrq-34v2.
+- Updated integrations sub-dependency source-map-js to 1.2.2 due to CVE-2026-93749.
+- Ignored CVE-2026-93687 in sub-dependency braces as no patched version is available.
+- Ignored CVE-2026-97058 in sub-dependency sprintf-js as no patched version is available.
 
 ## [0.13.0] - 2026-09-22
 
