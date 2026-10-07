@@ -22,6 +22,10 @@
         {
           "items": [
             {
+              "label": "Alpine.js",
+              "slug": "guides/integrations/alpine"
+            },
+            {
               "attrs": {
                 "rel": "noopener noreferrer",
                 "target": "_blank"
@@ -30,8 +34,24 @@
               "link": "https://angular.dev/"
             },
             {
-              "label": "HTML",
-              "slug": "guides/integrations/html"
+              "attrs": {
+                "rel": "noopener noreferrer",
+                "target": "_blank"
+              },
+              "label": "Ember",
+              "link": "https://emberjs.com/"
+            },
+            {
+              "label": "jQuery",
+              "slug": "guides/integrations/jquery"
+            },
+            {
+              "label": "Lit",
+              "slug": "guides/integrations/lit"
+            },
+            {
+              "label": "Marko",
+              "slug": "guides/integrations/marko"
             },
             {
               "attrs": {
@@ -40,6 +60,10 @@
               },
               "label": "Preact",
               "link": "https://preactjs.com/"
+            },
+            {
+              "label": "Qwik",
+              "slug": "guides/integrations/qwik"
             },
             {
               "attrs": {
@@ -58,6 +82,10 @@
               "link": "https://www.solidjs.com/"
             },
             {
+              "label": "Stencil",
+              "slug": "guides/integrations/stencil"
+            },
+            {
               "attrs": {
                 "rel": "noopener noreferrer",
                 "target": "_blank"
@@ -68,6 +96,10 @@
             {
               "label": "Twig",
               "slug": "guides/integrations/twig"
+            },
+            {
+              "label": "Vanilla JS",
+              "slug": "guides/integrations/vanilla"
             },
             {
               "attrs": {
@@ -96,5 +128,6 @@
       ],
       "label": "Guides"
     }
-  ]
+  ],
+  "excluded": []
 }
