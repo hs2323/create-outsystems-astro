@@ -1,7 +1,7 @@
 ---
 title: HTML Integration
 description: HTML integration for Create OutSystems Astro
-slug: 0.11/guides/integrations/html
+slug: 0.14/0.11/guides/integrations/html
 ---
 
 The HTML integration lets you build Astro Islands using plain HTML and JavaScript — no framework required. A component is a TypeScript file that returns an HTML string, with interactivity handled via inline `<script>` tags.

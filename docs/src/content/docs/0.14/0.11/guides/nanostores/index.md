@@ -1,7 +1,7 @@
 ---
 title: Nano Stores
 description: Using Nano Stores for state management.
-slug: 0.11/guides/nanostores
+slug: 0.14/0.11/guides/nanostores
 ---
 
 [Nano Stores](https://github.com/nanostores/nanostores) is a state library that allows for communication between Island components and OutSystems components.
@@ -39,7 +39,7 @@ OutSystem currently supports the following structures:
 
 In OutSystems, you need to use the Nano Stores component and pull in blocks for either Listen/Subscribe to an Atom or Map.  The imported block will require a store name and a handler for changes that happen to the store value/map.
 
-![Import Nano Store](../../../../../assets/nanostores/0.11/import.png)
+![Import Nano Store](../../../../../../assets/nanostores/0.11/0.14/import.png)
 
 You can reference the Nano Store Atom or Map from the window inside of your component.
 

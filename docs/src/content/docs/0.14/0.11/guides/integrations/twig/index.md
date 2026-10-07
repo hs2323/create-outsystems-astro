@@ -1,7 +1,7 @@
 ---
 title: Twig Integration
 description: Twig integration for Create OutSystems Astro
-slug: 0.11/guides/integrations/twig
+slug: 0.14/0.11/guides/integrations/twig
 ---
 
 The Twig integration lets you build Astro Islands using [Twig.js](https://github.com/twigjs/twig.js/) templates — the JavaScript implementation of the [Twig templating language](https://twig.symfony.com/). A component is a native `.twig` file that you import directly into an Astro page. The island's props are passed to the template as the render context, so `{{ variables }}` and Twig filters/tags are resolved on the client.

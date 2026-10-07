@@ -1,56 +1,35 @@
 ---
 title: Astro setup
 description: Setup Astro JavaScript project
-slug: 0.11/guides/astro
+slug: 0.14/guides/astro
 ---
 
 # Setup
 
 ## Current supported frameworks
 
+* [Alpine.js](../integrations/alpine/)
 * [Angular](https://analogjs.org/docs/packages/astro-angular/overview)
-* [HTML](../../integrations/html/index.md)
+* [Ember](https://github.com/ember-tooling/ember-astro)
+* [jQuery](../integrations/jquery/)
+* [Lit](../integrations/lit/)
+* [Marko](../integrations/marko/)
 * [Preact](https://docs.astro.build/en/guides/integrations-guide/preact/)
+* [Qwik](../integrations/qwik/)
 * [React](https://docs.astro.build/en/guides/integrations-guide/react/)
 * [SolidJS](https://docs.astro.build/en/guides/integrations-guide/solid-js/)
+* [Stencil](../integrations/stencil/)
 * [Svelte](https://docs.astro.build/en/guides/integrations-guide/svelte/)
 * [Twig](../../integrations/twig/index.md)
+* [Vanilla JS](../../integrations/vanilla/index.md)
 * [Vue](https://docs.astro.build/en/guides/integrations-guide/vue/)
 
 ## Getting started
 
 Run the Create OutSystems Astro generator:
 
-### npm
-
 ```bash
 npx create-outsystems-astro
-```
-
-### Yarn
-
-```bash
-yarn create outsystems-astro
-```
-
-### pnpm
-
-```bash
-pnpm dlx create-outsystems-astro
-```
-
-### Bun
-
-```bash
-bunx create-outsystems-astro
-```
-
-### Deno
-
-The Deno DX command is available in [Deno 2.6](https://deno.com/blog/v2.6).
-
-```bash
-dx create-outsystems-astro
 ```
 
 Select the framework(s) that you would like to include as part of your project.
@@ -63,13 +42,27 @@ This will create the generated files as well as an example component. You can de
 /
 ├── src/
 │   └── framework/
+│       └── alpine/
+│           └── Counter.ts
 │       └── angular/
 │           └── Counter.component.ts
+│       └── ember/
+│           └── Counter.gts
+│       └── jquery/
+│           └── Counter.ts
+│       └── lit/
+│           └── Counter.ts
+│       └── marko/
+│           └── Counter.marko
 │       └── preact/
+│           └── Counter.tsx
+│       └── qwik/
 │           └── Counter.tsx
 │       └── react/
 │           └── Counter.tsx
 │       └── solid/
+│           └── Counter.tsx
+│       └── stencil/
 │           └── Counter.tsx
 │       └── svelte/
 │           └── Counter.svelte
@@ -78,14 +71,28 @@ This will create the generated files as well as an example component. You can de
 │   └── images/
 │       └── image.png
 │   └── pages/
+│       └── alpine/
+│           └── alpine-counter.astro
 │       └── angular/
 │           └── angular-counter.astro
+│       └── ember/
+│           └── ember-counter.astro
+│       └── jquery/
+│           └── jquery-counter.astro
+│       └── lit/
+│           └── lit-counter.astro
+│       └── marko/
+│           └── marko-counter.astro
 │       └── preact/
 │           └── Counter.tsx
+│       └── qwik/
+│           └── qwik-counter.astro
 │       └── react/
 │           └── react-counter.astro
 │       └── solid/
 │           └── solid-counter.astro
+│       └── stencil/
+│           └── stencil-counter.astro
 │       └── svelte/
 │           └── svelte-counter.astro
 │       └── vue/
@@ -107,6 +114,20 @@ Each page inside of the pages file should represent an Island that will be impor
 
 For any of the official frameworks (react, preact, solid-js, vue and svelte) you should pass client:only="\[FRAMEWORK]". See [Astro documentation](https://docs.astro.build/en/reference/directives-reference/) for client:only. For other fameworks, such as Angular, it should pass client:load or any other non specific famework.
 
+Qwik takes either `client:load`, which keeps server rendering and lets Qwik resume the container it emitted, or `client:only="@qwik.dev/astro"`, which renders it entirely on the client like the other JSX frameworks. See the [Qwik integration guide](../integrations/qwik/).
+
+Alpine.js takes `client:load`. Its renderer returns no server markup, so the island is rendered entirely on the client. See the [Alpine.js integration guide](../integrations/alpine/).
+
+Ember takes `client:only="ember-astro"`, the name the `ember-astro` renderer registers. `client:only="ember"` fails with a missing hint error. See the [ember-astro documentation](https://github.com/ember-tooling/ember-astro).
+
+jQuery takes `client:load`. Its renderer returns no server markup, so the component renders into the island entirely on the client. See the [jQuery integration guide](../integrations/jquery/).
+
+Lit takes `client:load`. Its renderer returns no server markup, so the element is created entirely on the client. See the [Lit integration guide](../integrations/lit/).
+
+Marko takes `client:load`. Its renderer returns no server markup, so the template is mounted entirely on the client. See the [Marko integration guide](../integrations/marko/).
+
+Stencil takes `client:load`. Its renderer returns no server markup, so the element is created entirely on the client. See the [Stencil integration guide](../integrations/stencil/).
+
 ### Framework
 
 The location of the component code.
@@ -121,6 +142,12 @@ For JSX based frameworks, you must use the jsxImportSource header at the top of 
 /** @jsxImportSource preact */
 ```
 
+##### Qwik
+
+```js
+/** @jsxImportSource @qwik.dev/core */
+```
+
 ##### React
 
 ```js
@@ -131,6 +158,12 @@ For JSX based frameworks, you must use the jsxImportSource header at the top of 
 
 ```js
 /** @jsxImportSource solid-js */
+```
+
+##### Stencil
+
+```js
+/** @jsxImportSource @stencil/core */
 ```
 
 ### Images
@@ -145,8 +178,6 @@ Stylesheets that may apply to the component.
 
 All commands are run from the root of the project, from a terminal, based on your package manager:
 
-### npm
-
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
 | `npm install`             | Installs dependencies                            |
@@ -156,54 +187,6 @@ All commands are run from the root of the project, from a terminal, based on you
 | `npm run preview`         | Preview build locally, before creating output    |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-### Yarn
-
-| Command                    | Action                                           |
-| :------------------------- | :----------------------------------------------- |
-| `yarn install`             | Installs dependencies                            |
-| `yarn run dev`             | Starts local dev server at `localhost:4321`      |
-| `yarn run build`           | Build distribution to `./dist/`                  |
-| `yarn run output`          | Build OutSystems production site to `./output/`  |
-| `yarn run preview`         | Preview build locally, before creating output    |
-| `yarn run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `yarn run astro -- --help` | Get help using the Astro CLI                     |
-
-### pnpm
-
-| Command                    | Action                                           |
-| :------------------------- | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm run dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm run build`           | Build distribution to `./dist/`                  |
-| `pnpm run output`          | Build OutSystems production site to `./output/`  |
-| `pnpm run preview`         | Preview build locally, before creating output    |
-| `pnpm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm run astro -- --help` | Get help using the Astro CLI                     |
-
-### Bun
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
-| `bun run dev`             | Starts local dev server at `localhost:4321`      |
-| `bun run build`           | Build distribution to `./dist/`                  |
-| `bun run output:bun`      | Build OutSystems production site to `./output/`  |
-| `bun run preview`         | Preview build locally, before creating output    |
-| `bun run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun run astro -- --help` | Get help using the Astro CLI                     |
-
-### Deno
-
-| Command                               | Action                                           |
-| :------------------------------------ | :----------------------------------------------- |
-| `deno install && deno run postinstall` | Installs dependencies                            |
-| `deno run dev`                        | Starts local dev server at `localhost:4321`      |
-| `deno run build`                      | Build distribution to `./dist/`                  |
-| `deno run output:deno`                | Build OutSystems production site to `./output/`  |
-| `deno run preview`                    | Preview build locally, before creating output    |
-| `deno run astro ...`                  | Run CLI commands like `astro add`, `astro check` |
-| `deno run astro -- --help`            | Get help using the Astro CLI                     |
 
 ## Parameters
 
@@ -216,6 +199,34 @@ Since OutSystems does not have a concept of [NULL](https://success.outsystems.co
 #### Angular
 
 Angular does not support the use of slots.
+
+#### Ember
+
+Astro passes slots to an Ember component as HTML strings in the `@slots` argument, keyed by slot name, and passes the props in `@props`. Insert a slot with triple curlies so it is not escaped. See [slots in ember-astro](https://github.com/ember-tooling/ember-astro#slots).
+
+* Astro example:
+
+```astro
+  <CounterComponent client:only="ember-astro">
+      <div slot="header">
+          <p>Slot header</p>
+      </div>
+      <div>
+          <p>Slot content</p>
+      </div>
+  </CounterComponent>
+```
+
+* Ember example:
+
+```gts
+  <template>
+    {{{@slots.header}}}
+    <div>
+      {{{@slots.default}}}
+    </div>
+  </template>
+```
 
 #### Preact
 
@@ -418,6 +429,8 @@ You cannot send Union types (such as either an array or object) due to OutSystem
 
 This will create a set of files that will then need to be converted to OutSystems components.
 
+It also creates `output/resources.txt`, the list of the OutSystems resource URLs for every file in `output/assets`. Paste it into the assign before the `Deploy Resource` action so all of the resources are deployed. See Deploy JavaScript files to target for [O11](../outsystems/o11.md#deploy-javascript-files-to-target) or [ODC](../outsystems/odc.md#deploy-javascript-files-to-target).
+
 If using a directive for the component of anything other than `client:only`, you may need to delete the interior contents of the rendered island (since it will have done some static generation).
 
 ## Testing
@@ -434,6 +447,7 @@ The generator comes with unit, integration and testing built in. You can use the
 * [Angular Testing Library](https://testing-library.com/docs/angular-testing-library/intro/)
 * [DOM Testing Library](https://testing-library.com/docs/dom-testing-library/intro)
 * [Preact Testing Library](https://testing-library.com/docs/preact-testing-library/intro/)
+* [Qwik testing helpers](https://qwik.dev/docs/) (`createDOM` from `@qwik.dev/core/testing`)
 * [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 * [SolidJS Testing Library](https://testing-library.com/docs/solid-testing-library/intro/)
 * [Svelte Testing Library](https://testing-library.com/docs/svelte-testing-library/intro/)
@@ -446,8 +460,6 @@ The integration tests are placed in the `test/integration` folder. This tests th
 * [Playwright](https://playwright.dev/)
   The end-to-end tests are placed in the `test/e2e` folder. This tests build the project and then runs a server preview. Playwright will launch a browser and test the page and components. To get started, install the Playwright browsers and necessary dependencies.
 
-### npm
-
 | Command                    | Action                                       |
 | :------------------------- | :------------------------------------------- |
 | `npm run test`             | Run unit and integration tests               |
@@ -455,119 +467,22 @@ The integration tests are placed in the `test/integration` folder. This tests th
 | `npm run test:e2e`         | Run the end-to-end tests                     |
 | `npm run test:e2e:ui`      | Run the end-to-end tests in UI mode          |
 
-### Yarn
-
-| Command                     | Action                                       |
-| :-------------------------- | :------------------------------------------- |
-| `yarn run test`             | Run unit and integration tests               |
-| `yarn run test:e2e:install` | Install Playwright browsers and dependencies |
-| `yarn run test:e2e`         | Run the end-to-end tests                     |
-| `yarn run test:e2e:ui`      | Run the end-to-end tests in UI mode          |
-
-### pnpm
-
-| Command                     | Action                                       |
-| :-------------------------- | :------------------------------------------- |
-| `pnpm run test`             | Run unit and integration tests               |
-| `pnpm run test:e2e:install` | Install Playwright browsers and dependencies |
-| `pnpm run test:e2e`         | Run the end-to-end tests                     |
-| `pnpm run test:e2e:ui`      | Run the end-to-end tests in UI mode          |
-
-### Bun
-
-For end-to-end tests, the Bun Playwright configuration is currently not working.
-| Command | Action |
-| :------------------------ | :----------------------------------------------- |
-| `bun run test` | Run unit and integration tests |
-| `bun run test:e2e:install`| Install Playwright browsers and dependencies |
-| `bun run test:e2e:bun` | Run the end-to-end tests |
-| `bun run test:e2e:ui:bun` | Run the end-to-end tests in UI mode |
-
-### Deno
-
-| Command                     | Action                                       |
-| :-------------------------- | :------------------------------------------- |
-| `deno run test`             | Run unit and integration tests               |
-| `deno run test:e2e:install` | Install Playwright browsers and dependencies |
-| `deno run test:e2e:deno`    | Run the end-to-end tests                     |
-| `deno run test:e2e:ui:deno` | Run the end-to-end tests in UI mode          |
-
 ## Format
 
 * [Prettier](https://prettier.io/)
   Formatting sets the guidelines for the code styles. The rules are able to be updated in the `.prettierrc` file.
-
-### npm
 
 | Command                | Action                          |
 | :--------------------- | :------------------------------ |
 | `npm run format`       | Run format check                |
 | `npm run format:write` | Run format check and fix issues |
 
-### Yarn
-
-| Command                 | Action                          |
-| :---------------------- | :------------------------------ |
-| `yarn run format`       | Run format check                |
-| `yarn run format:write` | Run format check and fix issues |
-
-### pnpm
-
-| Command                 | Action                          |
-| :---------------------- | :------------------------------ |
-| `pnpm run format`       | Run format check                |
-| `pnpm run format:write` | Run format check and fix issues |
-
-### Bun
-
-| Command                | Action                          |
-| :--------------------- | :------------------------------ |
-| `bun run format`       | Run format check                |
-| `bun run format:write` | Run format check and fix issues |
-
-### Deno
-
-| Command                 | Action                          |
-| :---------------------- | :------------------------------ |
-| `deno run format`       | Run format check                |
-| `deno run format:write` | Run format check and fix issues |
-
 ## Lint
 
 * [ESLint](https://prettier.io/)
   Linting sets the guidelines and finds errors, bugs and issues. The configuration is set in `eslint.config.mjs`.
 
-### npm
-
 | Command            | Action                    |
 | :----------------- | :------------------------ |
 | `npm run lint`     | Run linter                |
 | `npm run lint:fix` | Run linter and fix issues |
-
-### Yarn
-
-| Command             | Action                    |
-| :------------------ | :------------------------ |
-| `yarn run lint`     | Run linter                |
-| `yarn run lint:fix` | Run linter and fix issues |
-
-### pnpm
-
-| Command             | Action                    |
-| :------------------ | :------------------------ |
-| `pnpm run lint`     | Run linter                |
-| `pnpm run lint:fix` | Run linter and fix issues |
-
-### Bun
-
-| Command            | Action                    |
-| :----------------- | :------------------------ |
-| `bun run lint`     | Run linter                |
-| `bun run lint:fix` | Run linter and fix issues |
-
-### Deno
-
-| Command             | Action                    |
-| :------------------ | :------------------------ |
-| `deno run lint`     | Run linter                |
-| `deno run lint:fix` | Run linter and fix issues |

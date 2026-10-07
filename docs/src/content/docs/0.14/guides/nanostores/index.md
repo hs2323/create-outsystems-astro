@@ -1,0 +1,156 @@
+---
+title: Nano Stores
+description: Using Nano Stores for state management.
+slug: 0.14/guides/nanostores
+---
+
+[Nano Stores](https://github.com/nanostores/nanostores) is a state library that allows for communication between Island components and OutSystems components.
+
+## Documentation
+
+Refer to the full [Nano Stores documentation](https://github.com/nanostores/nanostores#table-of-contents) for implementation of the library.
+
+Nano Stores are currently supported for the following libraries:
+
+* [Alpine.js](https://github.com/nanostores/alpine)
+* [Lit](https://github.com/nanostores/lit)
+* [Preact](https://github.com/nanostores/preact)
+* [React](https://github.com/nanostores/react)
+* [SolidJS](https://github.com/nanostores/solid)
+* [Svelte](https://github.com/nanostores/svelte)
+* [Vanilla JS](https://github.com/nanostores/nanostores#vanilla-js)
+* [Vue](https://github.com/nanostores/vue)
+
+Nano Stores are not currently supported for Angular, Ember, jQuery, Marko, Stencil, the Twig integration, or Qwik.
+
+Angular's official [Nano Stores binding](https://github.com/nanostores/angular) does not support Nano Stores 1.x. Ember, jQuery and Stencil have no official Nano Stores binding library.
+
+Marko has no Nano Stores binding library. See the [Marko integration guide](../integrations/marko/).
+
+Qwik has no Nano Stores binding library, and the Qwik maintainers [recommend against global stores](https://github.com/QwikDev/astro#communicating-across-containers) in a server-rendered context, suggesting custom events for communicating across Qwik containers instead. See the [Qwik integration guide](../integrations/qwik/).
+
+## Sharing state between Astro Islands
+
+Create the objects inside of the stores folder (or other preferred structure). You can create a store and then have your components subscribe and update the stores. Refer to each libraries documentation on how to listen, subscribe and update.
+
+## Sharing state between OutSystems and Astro Islands
+
+The OutSystems module, Lightweight State Manager, is available for both the O11 and ODC platforms.
+
+* [O11](https://www.outsystems.com/forge/component-overview/23528/lightweight-state-manager-o11)
+* [ODC](https://www.outsystems.com/forge/component-overview/23576/lightweight-state-manager-odc)
+
+OutSystem currently supports the following structures:
+
+* [Atoms](https://github.com/nanostores/nanostores#atoms)
+* [Maps](https://github.com/nanostores/nanostores#maps)
+
+In OutSystems, you need to use the Nano Stores component and pull in blocks for either Listen/Subscribe to an Atom or Map.  The imported block will require a store name and a handler for changes that happen to the store value/map.
+
+![Import Nano Store](../../../../../assets/nanostores/0.14/import.png)
+
+You can reference the Nano Store Atom or Map from the window inside of your component.
+
+Alpine.js:
+
+```html
+<div x-data x-nano:value="window.Stores['alpineStore']">
+  <div x-text="value"></div>
+</div>
+```
+
+Lit:
+
+```ts
+import { StoreController } from "@nanostores/lit";
+
+export default class MyComponent extends LitElement {
+  private store = new StoreController(this, window.Stores["litStore"]);
+
+  override render() {
+    return html`<div>${this.store.value}</div>`;
+  }
+}
+```
+
+Preact:
+
+```jsx
+import { useStore } from "@nanostores/preact";
+
+export default function Counter({}) {
+  const nanoStoreValue = useStore(window.Stores["MyGreatStore"]);
+
+  return (
+    <>
+        <div>
+            <strong>Nano Store value:</strong>
+            <div>{nanoStoreValue}</div>
+        </div>
+    </>
+  );
+}
+```
+
+React:
+
+```jsx
+import { useStore } from "@nanostores/react";
+
+
+export default function Counter({}) {
+  const nanoStoreValue = useStore(window.Stores["MyGreatStore"]);
+
+  return (
+    <>
+        <div>
+            <strong>Nano Store value:</strong>
+            <div>{nanoStoreValue}</div>
+        </div>
+    </>
+  );
+}
+```
+
+Svelte:
+
+```svelte
+<script lang="ts">
+  import { useStore } from "@nanostores/svelte";
+
+  const nanoStoreValue = useStore((window as any).Stores["svelteStore"]);
+</script>
+
+<div>{nanoStoreValue.current}</div>
+```
+
+Vanilla JS
+
+```html
+<div id="nanostore-value"></div>
+<script>
+const nanostoreEl = document.querySelector('#nanostore-value');
+const store = window.Stores && window.Stores['vanillaStore'];
+
+if (store) {
+  store.subscribe(function (value) {
+    nanostoreEl.textContent = value;
+  });
+}
+</script>
+```
+
+Vue:
+
+```vue
+<script setup lang="ts">
+import { useStore } from "@nanostores/vue";
+const nanoStoreValue = useStore(window.Stores["MyGreatStore"]);
+</script>
+
+<template>
+    <div>
+          <div>{{ nanoStoreValue }}</div>
+    </div>
+</template>
+```
