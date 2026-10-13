@@ -54,7 +54,11 @@ If a chain goes wrong, `omlReset` discards it so the next call starts from the l
 
 Follow the O11 guide for each block. The pieces, and where they come from in `output/`:
 
-- **Resources**: every `.js` file in `output/` and every file in `output/assets/` is a module resource with Public = Yes and Deploy Action = Deploy to Target Directory. Images are added as resources, not images. The build hashes change on every build, so compare file names against `getResourceNames` and replace stale ones rather than adding duplicates. If the Model API cannot upload a file's content, list the files for the user to import from the Data tab and continue once they confirm.
+- **Resources**: every `.js` file in `output/` and every file in `output/assets/` is a module resource with Public = Yes and Deploy Action = Deploy to Target Directory. Images are added as resources, not images. The user imports resource files by hand: `applyModelApiCode` rejects file access (`System.IO.File` and similar), and pasting file contents inline as base64 is not practical for bundles of this size. So:
+  - Work out which files the island needs: start from its `component-url` and `renderer-url` files and follow their relative imports (`./name.hash.js`). Don't import the whole folder; most of it belongs to other islands.
+  - List those files, with their `output/assets/` paths, for the user to import from the Data tab (Resources > Import Resource), and wait for them to confirm.
+  - Then check `getResourceNames` and set Public and Deploy Action through the Model API.
+  - The build hashes change on every build, so compare file names against `getResourceNames` and tell the user which stale resources to replace rather than adding duplicates.
 - **Props structure**: in the Data tab, a structure named `<Block>Props` with one attribute per prop. Function handler props are Text attributes holding the generated function name.
 - **Block**: in a UI Flow, Public = Yes when consumed by other modules. Input parameters per prop, and local variables `Props` (the props structure) and `PropsSerialized` (Text).
 - **PrepareProps client action**: for each function handler, a JavaScript node `SetFunctionProps` that binds the handler to `window` and outputs its name:
@@ -81,6 +85,6 @@ Follow the O11 guide for each block. The pieces, and where they come from in `ou
 
 1. Token, `listApps`, confirm the target module and that `AstroIsland_Lib` is referenced (`omlRefreshReferences` if the user updated the Forge component).
 2. Read `output/` and the current state of the block, structure, actions and resources.
-3. Summarise to the user what will be created or changed before writing.
-4. Apply in small steps: resources, structure, block parameters and locals, `PrepareProps`, lifecycle handlers, the `AstroIsland` instance, CSS. Merge and check validation after each step.
+3. Summarise to the user what will be created or changed before writing, including the resource files they need to import by hand.
+4. Once the user confirms the resources are imported, apply in small steps: resource properties, structure, block parameters and locals, `PrepareProps`, lifecycle handlers, the `AstroIsland` instance, CSS. Merge and check validation after each step.
 5. Report what changed, any manual steps left, and offer to publish.
