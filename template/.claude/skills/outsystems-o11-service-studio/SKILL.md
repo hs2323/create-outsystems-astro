@@ -13,7 +13,7 @@ Only O11 Reactive modules are supported. If the target module is Traditional (th
 
 - Service Studio is running with the target module open, and its MCP server is connected (the `mcp__servicestudio__*` tools are available). If the tools are missing, ask the user to enable the MCP server in Service Studio and add it to Claude Code.
 - The module references `AstroIsland_Lib` from the Islands O11 Forge component (https://www.outsystems.com/forge/component-overview/22857/islands-o11). Check with `listApps`: it lists the open module and its references.
-- `.env` has `ASSET_URL` set to the module name, and `PM run output` has been run so `output/` is current. Re-run it if the components changed since the last build.
+- `.env` has `ASSET_PATH` set to the module name, and `PM run output` has been run so `output/` is current. Re-run it if the components changed since the last build.
 
 ## Session token
 
