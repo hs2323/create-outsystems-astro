@@ -80,11 +80,19 @@ Follow the O11 guide for each block. The pieces, and where they come from in `ou
   - `Slots`: the quoted text between the tags when there is slot content. Warn the user to sanitize any user input that reaches a slot.
   - Ignore `uid`, `component-export`, `ssr`, `client` and `await-children`; the Islands module supplies them.
 - **CSS**: contents of any `.css` file in `output/assets/` go in the block's Stylesheet.
+- **Design-time preview**: an island renders nothing in Service Studio, so wrap it in a preview the developer can see on the canvas:
+  - An If widget named `IfInBrowser` as the block's top-level widget, with Condition `False`.
+  - False branch: the `AstroIsland` instance. It is the only branch that runs in the browser.
+  - True branch: a static mock-up of the component's initial state, built from HTML Element widgets (`IAdvancedHtml`, with `Tag` and a `class` extended property) and Text widgets. Mirror the component's markup and class names, and show the initial prop values (for example the starting count). Use `astro-slot` for slot content, and Image widgets for images the component shows.
+  - Style the mock-up with the block's Stylesheet. If the component uses inline styles or CSS that isn't in the output, add preview-only classes (for example `<block>-preview`) that copy its look.
+  - Build the mock-up's repeated elements with a loop in the Model API code rather than one statement per element.
+  - The demo blocks in the `IslandsDemo_Lib` module are reference examples. If it is open in Service Studio, read one with `getWebBlock` and `includeJson: "Never"` to copy the exact shape.
+  - Ask before skipping the preview. Update it when the component's markup changes.
 
 ## Working order
 
 1. Token, `listApps`, confirm the target module and that `AstroIsland_Lib` is referenced (`omlRefreshReferences` if the user updated the Forge component).
 2. Read `output/` and the current state of the block, structure, actions and resources.
 3. Summarise to the user what will be created or changed before writing, including the resource files they need to import by hand.
-4. Once the user confirms the resources are imported, apply in small steps: resource properties, structure, block parameters and locals, `PrepareProps`, lifecycle handlers, the `AstroIsland` instance, CSS. Merge and check validation after each step.
+4. Once the user confirms the resources are imported, apply in small steps: resource properties, structure, block parameters and locals, `PrepareProps`, lifecycle handlers, the `IfInBrowser` widget with the `AstroIsland` instance and the preview, CSS. Merge and check validation after each step.
 5. Report what changed, any manual steps left, and offer to publish.
