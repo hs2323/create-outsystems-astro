@@ -901,7 +901,7 @@ const nanoStoreValue = useStore(window.Stores["MyGreatStore"]);
 ## Generating output
 
 - The `.env.template` must be copied over to `.env`.
-- The name of the module/library/application where the component will live must be set in the `ASSET_URL` variable of the `.env` file.
+- The name of the module/library/application where the component will live must be set in the `ASSET_PATH` variable of the `.env` file.
 - Run the command `PM run output`. This will run the Astro build and then run an additional step to generate the output necessary for importing into OutSystems.
 - The official `@astrojs/alpinejs` integration does not register a renderer, it only starts Alpine over the whole page, so Alpine markup would never be wrapped in an `<astro-island>` and there would be nothing for the output step to keep. The template uses `islands-integrations/alpine` instead, which registers a renderer with a `clientEntrypoint`, so the island carries `component-url`, `renderer-url` and `props` like any other framework.
 - Ember uses the community `ember-astro` integration (https://github.com/ember-tooling/ember-astro), which registers its renderer as `ember-astro` with a `clientEntrypoint`, so the island carries `component-url`, `renderer-url` and `props` like any other framework. It takes no options and compiles `.gts`/`.gjs` files wherever they are. It renders the component once and does not re-render when the Islands module changes the props.
