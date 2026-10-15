@@ -22,7 +22,7 @@ export default function Store() {
         </div>
         <div>
           <button class="card-btn" onClick={setFramework}>
-            Select React
+            Select Solid
           </button>
         </div>
       </div>
