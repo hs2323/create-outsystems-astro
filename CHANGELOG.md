@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Added OutSystems ODC skill.
+- Added OutSystems O11 Service Studio skill.
+
 ### Security
 - Updated sub-dependency handlebars to 4.7.10.
 
