@@ -3,6 +3,10 @@ title: OutSystems Developer Cloud (ODC)
 description: How to get started with Islands in OutSystems Developer Cloud
 ---
 
+:::tip
+If you use Claude Code, it can do most of these steps for you through the OutSystems MCP server and Mentor. See [Claude Code with ODC](../../claude-code/odc/).
+:::
+
 ## Forge component
 
 In ODC Studio, install the OutSystems [Islands Forge component](https://www.outsystems.com/forge/component-overview/22960/islands-odc). It is recommended to install and review the [demo application](https://www.outsystems.com/forge/component-overview/22961/islands-demo-odc) alongside the documentation.

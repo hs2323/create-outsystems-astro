@@ -87,7 +87,10 @@ export default defineConfig({
               label: "OutSystems",
             },
             {
-              items: [{ label: "O11", slug: "guides/claude-code/o11" }],
+              items: [
+                { label: "O11", slug: "guides/claude-code/o11" },
+                { label: "ODC", slug: "guides/claude-code/odc" },
+              ],
               label: "Claude Code",
             },
           ],
