@@ -152,10 +152,13 @@ export default defineConfig({
     },
     // @qwik.dev/astro only defines __EXPERIMENTAL__.suspense, so Astro's
     // prerender environment throws on Qwik's other compile-time feature flags.
-    // These are opt-in experimental features and stay disabled here.
+    // These are opt-in experimental features and stay disabled here. Left
+    // undefined in the client build, they throw a ReferenceError the first time
+    // the island renders.
     define: {
+      "__EXPERIMENTAL__.catchBoundary": "false",
       "__EXPERIMENTAL__.each": "false",
-      "__EXPERIMENTAL__.errorBoundary": "false",
+      "__EXPERIMENTAL__.pendingBoundary": "false",
       "__EXPERIMENTAL__.show": "false",
     },
     resolve: {
