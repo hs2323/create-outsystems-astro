@@ -11,9 +11,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added OutSystems ODC skill.
 - Added OutSystems O11 Service Studio skill.
 
+### Changed
+- Updated integrations dependency typescript-eslint to 8.72.2.
+- Updated integrations dependency prettier to 3.10.1.
+- Updated integrations dependency marko to 6.4.13.
+- Updated integrations dependency globals to 17.14.0.
+- Updated integrations dependency eslint-plugin-perfectionist to 5.13.0.
+- Updated integrations dependency eslint-plugin-import-x to 4.18.1.
+- Updated integrations dependency eslint to 10.14.0.
+- Updated integrations dependency better-npm-audit to 4.2.1.
+- Updated integrations dependency astro to 7.4.11.
+- Updated integrations dependency alpinejs to 3.17.5.
+- Updated integrations dependency @types/node to 26.6.6.
+- Updated integrations dependency @types/alpinejs to 3.17.0.
+- Updated integrations dependency @stencil/core to 4.45.3.
+- Updated integrations dependency @qwik.dev/core to 2.0.0-rc.5.
+- Updated integrations dependency @marko/compiler to 5.43.2.
+
 ### Security
+- Updated integrations sub-dependency minimatch to 11.0.8.
 - Updated dependency @qwik.dev/core to 2.0.0-rc.2 due to CVE-2026-84994.
-- Updated integrations dependency @qwik.dev/core to 2.0.0-rc.2 due to CVE-2026-84994.
 - Updated sub-dependency handlebars to 4.7.10 due to CVE-2026-106446.
 
 ## [0.14.0] - 2026-10-06
