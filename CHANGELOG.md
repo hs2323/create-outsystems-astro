@@ -33,6 +33,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated dependency @qwik.dev/core to 2.0.0-rc.2 due to CVE-2026-84994.
 - Updated sub-dependency handlebars to 4.7.10 due to CVE-2026-106446.
 
+### Removed
+
+- Removed dependency prettier-plugin-solidity.
+
 ## [0.14.0] - 2026-10-06
 
 ### Added

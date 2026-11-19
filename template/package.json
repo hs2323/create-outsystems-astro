@@ -129,7 +129,6 @@
     "prettier": "^3.9.8",
     "prettier-plugin-ember-template-tag": "^2.1.8",
     "prettier-plugin-marko": "^4.1.0",
-    "prettier-plugin-solidity": "^2.4.1",
     "prettier-plugin-svelte": "^4.1.1",
     "svelte-eslint-parser": "^1.8.1",
     "ts-node": "^10.9.2",
