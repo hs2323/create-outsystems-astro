@@ -146,6 +146,10 @@ export default defineConfig({
           assetFileNames: `assets/[name].[hash].[ext]`,
           chunkFileNames: `[name].[hash].js`,
           entryFileNames: `[name].[hash].js`,
+          // The default base64 hash can end in "_" or "-", and ODC drops a
+          // trailing "_" from a resource's URL, so the file 404s. base36 keeps
+          // hashes to 0-9 and a-z.
+          hashCharacters: "base36",
           manualChunks: getChunkName,
         },
       },
