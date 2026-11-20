@@ -80,7 +80,7 @@ export function markoLoader(options: LoaderOptions = {}) {
       this: { addWatchFile?: (id: string) => void },
       code: string,
       id: string,
-    ): Promise<undefined | { code: string; map: unknown }> {
+    ): Promise<{ code: string; map: unknown } | undefined> {
       if (id.includes("?") || id.includes("\0")) return;
       if (!id.endsWith(".marko") || id.includes("/node_modules/")) return;
       if (include?.length && !matchesPatterns(id, include)) return;
