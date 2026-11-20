@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added OutSystems O11 Service Studio skill.
 
 ### Changed
+- Changed build config to only use alphanumeric characters.
 - Updated dependency vue-eslint-parser to 10.4.2.
 - Updated dependency vue to 3.5.45.
 - Updated dependency vitest to 4.1.12.
