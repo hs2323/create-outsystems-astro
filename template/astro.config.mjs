@@ -161,6 +161,19 @@ export default defineConfig({
       "__EXPERIMENTAL__.pendingBoundary": "false",
       "__EXPERIMENTAL__.show": "false",
     },
+    plugins: [
+      // The default base64 hash can end in "_" or "-", and ODC drops a trailing
+      // "_" from a resource's URL, so the file 404s. base36 keeps hashes
+      // alphanumeric. It is set from a plugin rather than rollupOptions because
+      // @qwik.dev/astro builds the q-*.js chunks in a separate Vite build that
+      // keeps the plugins but not the rest of this config.
+      {
+        name: "islands:alphanumeric-hashes",
+        outputOptions(options) {
+          return { ...options, hashCharacters: "base36" };
+        },
+      },
+    ],
     resolve: {
       alias: {
         fs: "node:fs",

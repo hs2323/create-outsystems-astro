@@ -1,15 +1,15 @@
 diff --git a/node_modules/@analogjs/vite-plugin-angular/src/lib/utils/devkit.js b/node_modules/@analogjs/vite-plugin-angular/src/lib/utils/devkit.js
-index 5760b63..f52fccb 100644
+index e4d95a5..14274d3 100644
 --- a/node_modules/@analogjs/vite-plugin-angular/src/lib/utils/devkit.js
 +++ b/node_modules/@analogjs/vite-plugin-angular/src/lib/utils/devkit.js
 @@ -1,5 +1,6 @@
  import { VERSION } from '@angular/compiler-cli';
  import { createRequire } from 'node:module';
 +import { pathToFileURL } from 'node:url';
+ import { dirname, join } from 'node:path';
  import * as sfc from './source-file-cache.js';
  const require = createRequire(import.meta.url);
- const angularMajor = Number(VERSION.major);
-@@ -31,8 +32,11 @@ else if (angularMajor >= 17 && angularMajor < 18) {
+@@ -34,8 +35,11 @@ else if (angularMajor >= 17 && angularMajor < 18) {
      jt = JavaScriptTransformer;
  }
  else {
@@ -22,4 +22,4 @@ index 5760b63..f52fccb 100644
 +    sourceFileCache = SourceFileCache.prototype instanceof Map ? SourceFileCache : sfc.SourceFileCache;
      cjt = createJitResourceTransformer;
      jt = JavaScriptTransformer;
-     createAngularCompilation = createAngularCompilationFn;
+     createAngularCompilation = async (...args) => {

@@ -309,7 +309,7 @@ function stringifyAstroIslandContents(html: string): string {
  * Converts an asset file name to the name OutSystems gives it once imported
  * as a resource: the first 50 characters, with dots turned into underscores,
  * other invalid characters removed and no leading underscore.
- * For example, app-vue.CS9Gc-aT.js → appvue_CS9GcaT_js
+ * For example, app-vue.3k9xq2mz.js → appvue_3k9xq2mz_js
  */
 function toResourceName(fileName: string): string {
   return fileName

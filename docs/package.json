@@ -15,35 +15,30 @@
     "start": "astro dev"
   },
   "dependencies": {
-    "@astrojs/starlight": "^0.42.2",
-    "astro": "^7.2.10",
+    "@astrojs/starlight": "^0.42.11",
+    "astro": "^7.4.11",
     "sharp": "^0.35.5",
-    "starlight-versions": "^0.10.1"
+    "starlight-versions": "^0.10.2"
   },
   "devDependencies": {
     "@eslint/compat": "^2.1.0",
     "@eslint/markdown": "^8.0.3",
-    "better-npm-audit": "^3.11.0",
-    "eslint": "^10.11.0",
+    "better-npm-audit": "^4.2.1",
+    "eslint": "^10.14.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-astro": "^3.2.1",
-    "eslint-plugin-import-x": "^4.17.1",
-    "eslint-plugin-perfectionist": "^5.11.0",
-    "globals": "^17.7.0",
+    "eslint-plugin-import-x": "^4.18.1",
+    "eslint-plugin-perfectionist": "^5.13.0",
+    "globals": "^17.14.0",
     "patch-package": "^8.0.1",
-    "prettier": "^3.9.6",
-    "typescript-eslint": "^8.69.0"
+    "prettier": "^3.10.1",
+    "typescript-eslint": "^8.72.2"
   },
   "overrides": {
-    "http-cache-semantics": "^4.3.0",
     "katex": "^0.18.2",
-    "postcss-selector-parser": "^7.1.6",
-    "smol-toml": "^1.9.0",
-    "source-map-js": "^1.2.2"
+    "minimatch": "^11.0.1"
   },
   "allowScripts": {
-    "esbuild@0.28.2": true,
-    "fsevents@2.3.3": true,
-    "unrs-resolver@1.12.2": true
+    "fsevents@2.3.3": true
   }
 }
