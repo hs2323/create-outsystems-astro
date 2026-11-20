@@ -5,13 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Fixed
+
+- Fixed issue with Marko breaking install build from npm.
+
 ## [1.0.0] - 2026-11-20
 
 ### Added
+
 - Added OutSystems ODC skill.
 - Added OutSystems O11 Service Studio skill.
 
 ### Changed
+
 - Changed build config to only use alphanumeric characters.
 - Updated dependency vue-eslint-parser to 10.4.2.
 - Updated dependency vue to 3.5.45.
@@ -99,6 +107,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated integrations dependency @marko/compiler to 5.43.2.
 
 ### Security
+
 - Updated sub-dependency minimatch to 11.0.8.
 - Updated sub-dependency glob to 14.0.6.
 - Updated sub-dependency minimatch to 11.0.8.
@@ -111,6 +120,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.14.0] - 2026-10-06
 
 ### Added
+
 - Added `output/resources.txt` to the output, listing the resource URLs of all assets for the `Deploy Resource` action.
 - Added Marko integration.
 - Added Stencil integration.
@@ -123,6 +133,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added integrations dependency @typescript/native for TypeScript 7 support.
 
 ### Changed
+
 - Changed the Qwik islands to `client:only`, so no server-rendered Qwik markup is carried into OutSystems.
 - Changed the Qwik client build to the `single` entry strategy, so all event handlers are bundled into one chunk instead of one per handler.
 - Split the shared `app` chunk into one chunk per framework so an island only loads its own framework's runtime.
@@ -191,6 +202,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated integrations dependency @eslint/compat to 2.1.1.
 
 ### Removed
+
 - Removed dependency eslint-plugin-react due to ESLint 10 incompatibility.
 - Removed dependency eslint-config-preact due to ESLint 10 incompatibility.
 - Removed Deno package manager support.
@@ -199,6 +211,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed Yarn package manager support.
 
 ### Security
+
 - Updated sub-dependency http-cache-semantics to 4.3.0 due to CVE-2026-93748.
 - Updated sub-dependency katex to 0.18.10 due to CVE-2026-103923.
 - Updated sub-dependency seroval to 1.6.8 due to CVE-2026-104846 and CVE-2026-104845.
