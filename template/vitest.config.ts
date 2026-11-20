@@ -59,9 +59,10 @@ export default defineConfig(async ({ mode }) => ({
           globals: true,
           include: ["test/integration/ember/**/*.test.ts"],
           name: "ember",
-          // The client entrypoint imports `@ember/*` modules, which only the
-          // Embroider resolver can find, so it has to go through Vite.
-          server: { deps: { inline: ["ember-astro"] } },
+          // The client entrypoint and Glimmer components import `@ember/*`
+          // modules, which only the Embroider resolver can find, so they have
+          // to go through Vite.
+          server: { deps: { inline: ["ember-astro", "@glimmer/component"] } },
           setupFiles: ["test/setup-test-env.ts"],
         },
       },
