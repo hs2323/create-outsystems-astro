@@ -12,6 +12,72 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added OutSystems O11 Service Studio skill.
 
 ### Changed
+- Updated dependency vue-eslint-parser to 10.4.2.
+- Updated dependency vue to 3.5.45.
+- Updated dependency vitest to 4.1.12.
+- Updated dependency vite-plugin-solid to 2.11.16.
+- Updated dependency vite to 8.3.8.
+- Updated dependency typescript-eslint to 8.72.2.
+- Updated dependency tslib to 2.9.1.
+- Updated dependency svelte-eslint-parser to 1.10.1.
+- Updated dependency svelte to 5.57.3.
+- Updated dependency solid-js to 1.9.19.
+- Updated dependency react-dom to 19.3.1.
+- Updated dependency react to 19.3.1.
+- Updated dependency prettier-plugin-marko to 4.1.3.
+- Updated dependency preact to 11.2.0.
+- Updated dependency nanostores to 1.5.5.
+- Updated dependency marko to 6.4.15.
+- Updated dependency happy-dom to 21.0.4.
+- Updated dependency eslint-plugin-vue to 10.12.1.
+- Updated dependency eslint-plugin-svelte to 3.24.1.
+- Updated dependency eslint-plugin-solid to 0.19.0.
+- Updated dependency eslint-plugin-qwik to 2.0.0-rc.5.
+- Updated dependency eslint-plugin-playwright to 2.12.2.
+- Updated dependency eslint-plugin-perfectionist to 5.13.0.
+- Updated dependency eslint-plugin-jest-dom to 5.10.2.
+- Updated dependency eslint-plugin-jest to 29.17.0.
+- Updated dependency eslint-plugin-import-x to 4.18.1.
+- Updated dependency eslint-plugin-ember to 13.10.0.
+- Updated dependency eslint to 10.14.0.
+- Updated dependency ember-source to 7.4.0.
+- Updated dependency ember-eslint-parser to 0.16.1.
+- Updated dependency dotenv to 18.0.10.
+- Updated dependency better-npm-audit to 4.2.1.
+- Updated dependency astro to 7.4.11.
+- Updated dependency angular-eslint to 22.6.0.
+- Updated dependency alpinejs to 3.17.5.
+- Updated dependency @vitejs/plugin-vue to 6.0.11.
+- Updated dependency @vitejs/plugin-react to 6.3.0.
+- Updated dependency @types/node to 26.6.6.
+- Updated dependency @testing-library/user-event to 14.6.10.
+- Updated dependency @testing-library/preact to 3.2.6.
+- Updated dependency @testing-library/angular to 19.6.0.
+- Updated dependency @sveltejs/vite-plugin-svelte to 7.3.1.
+- Updated dependency @stencil/core to 4.45.3.
+- Updated dependency @qwik.dev/core to 2.0.0-rc.5.
+- Updated dependency @playwright/test to 1.65.0.
+- Updated dependency @nanostores/preact to 1.1.1.
+- Updated dependency @babel/core to 7.29.13.
+- Updated dependency @astrojs/vue to 7.1.5.
+- Updated dependency @astrojs/svelte to 9.1.5.
+- Updated dependency @astrojs/solid-js to 7.1.5.
+- Updated dependency @astrojs/react to 7.1.8.
+- Updated dependency @astrojs/preact to 6.1.5.
+- Updated dependency @angular/router to 22.2.6.
+- Updated dependency @angular/platform-server to 22.2.6.
+- Updated dependency @angular/platform-browser to 22.2.6.
+- Updated dependency @angular/language-service to 22.2.6.
+- Updated dependency @angular/compiler-cli to 22.2.6.
+- Updated dependency @angular/compiler to 22.2.6.
+- Updated dependency @angular/cli to 22.2.7.
+- Updated dependency @angular/build to 22.2.7.
+- Updated dependency @angular/animations to 22.2.6.
+- Updated dependency @angular-devkit/schematics to 22.2.7.
+- Updated dependency @angular-devkit/architect to 0.2202.7.
+- Updated dependency @analogjs/vitest-angular to 2.9.7.
+- Updated dependency @analogjs/vite-plugin-angular to 2.9.7.
+- Updated dependency @analogjs/astro-angular to 2.9.7.
 - Updated integrations dependency typescript-eslint to 8.72.2.
 - Updated integrations dependency prettier to 3.10.1.
 - Updated integrations dependency marko to 6.4.13.
@@ -29,9 +95,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated integrations dependency @marko/compiler to 5.43.2.
 
 ### Security
+- Updated sub-dependency minimatch to 11.0.8.
+- Updated sub-dependency glob to 14.0.6.
+- Updated sub-dependency minimatch to 11.0.8.
 - Updated integrations sub-dependency minimatch to 11.0.8.
-- Updated dependency @qwik.dev/core to 2.0.0-rc.2 due to CVE-2026-84994.
-- Updated sub-dependency handlebars to 4.7.10 due to CVE-2026-106446.
 
 ### Removed
 
