@@ -12,7 +12,7 @@
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "prepublish": "tsc",
-    "process": "tsc && mv dist ../template/.integrations && cp package.json ../template/.integrations/package.json",
+    "process": "tsc && rm -rf ../template/.integrations && mv dist ../template/.integrations && cp package.json ../template/.integrations/package.json",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

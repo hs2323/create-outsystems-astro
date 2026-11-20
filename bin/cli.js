@@ -142,10 +142,29 @@ function buildIntegrations() {
   execSync("npm run process", { cwd: integrationsDir, stdio: "inherit" });
 }
 
+// Local build, test and secret files that template/.gitignore keeps out of the
+// published package. A linked or cloned checkout can still have them, so they
+// are skipped here to keep local runs the same as the published CLI.
+const TEMPLATE_SKIP = new Set([
+  ".astro",
+  ".DS_Store",
+  ".env",
+  ".env.production",
+  ".idea",
+  "blob-report",
+  "dist",
+  "node_modules",
+  "output",
+  "playwright-report",
+  "test-results"
+]);
+
 // Simple recursive copy
 function copyDir(src, dest) {
   fs.mkdirSync(dest, { recursive: true });
   for (const entry of fs.readdirSync(src, { withFileTypes: true })) {
+    if (TEMPLATE_SKIP.has(entry.name) || entry.isSymbolicLink()) continue;
+
     const srcPath = path.join(src, entry.name);
     
     // Check if the file is our renamed gitignore
