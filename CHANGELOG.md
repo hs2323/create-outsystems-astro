@@ -26,10 +26,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated dependency react-dom to 19.3.1.
 - Updated dependency react to 19.3.1.
 - Updated dependency prettier-plugin-marko to 4.1.3.
+- Updated dependency prettier to 3.10.1.
 - Updated dependency preact to 11.2.0.
 - Updated dependency nanostores to 1.5.5.
 - Updated dependency marko to 6.4.15.
 - Updated dependency happy-dom to 21.0.4.
+- Updated dependency globals to 17.14.0.
 - Updated dependency eslint-plugin-vue to 10.12.1.
 - Updated dependency eslint-plugin-svelte to 3.24.1.
 - Updated dependency eslint-plugin-solid to 0.19.0.
@@ -39,7 +41,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated dependency eslint-plugin-jest-dom to 5.10.2.
 - Updated dependency eslint-plugin-jest to 29.17.0.
 - Updated dependency eslint-plugin-import-x to 4.18.1.
-- Updated dependency eslint-plugin-ember to 13.10.0.
+- Updated dependency eslint-plugin-ember to 13.10.1.
 - Updated dependency eslint to 10.14.0.
 - Updated dependency ember-source to 7.4.0.
 - Updated dependency ember-eslint-parser to 0.16.1.
@@ -51,6 +53,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated dependency @vitejs/plugin-vue to 6.0.11.
 - Updated dependency @vitejs/plugin-react to 6.3.0.
 - Updated dependency @types/node to 26.6.6.
+- Updated dependency @types/alpinejs to 3.17.0.
 - Updated dependency @testing-library/user-event to 14.6.10.
 - Updated dependency @testing-library/preact to 3.2.6.
 - Updated dependency @testing-library/angular to 19.6.0.
