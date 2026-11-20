@@ -48,7 +48,7 @@ function matchesPatterns(url: string, patterns: string[]): boolean {
 }
 
 async function renderToStaticMarkup(): Promise<{ html: string }> {
-  return { html: "" };
+  return { html: "<!--islands/vanilla-->" };
 }
 
 export default createRenderer();

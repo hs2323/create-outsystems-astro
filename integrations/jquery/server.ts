@@ -52,7 +52,7 @@ function matchesPatterns(url: string, patterns: string[]): boolean {
 }
 
 async function renderToStaticMarkup(): Promise<{ html: string }> {
-  return { html: "" };
+  return { html: "<!--islands/jquery-->" };
 }
 
 export default createRenderer();
