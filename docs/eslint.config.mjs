@@ -10,7 +10,7 @@ import tseslint from "typescript-eslint";
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   {
-    ignores: [".astro/*", "node_modules/*"],
+    ignores: [".astro/*", "dist/*", "node_modules/*"],
   },
   { languageOptions: { globals: { ...globals.browser, ...globals.node } } },
   ...tseslint.configs.recommended.map((config) => ({
